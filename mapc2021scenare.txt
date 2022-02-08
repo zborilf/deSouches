@@ -1,0 +1,39 @@
+
+
+Instalace
+... podle instrukci V. Uhlire na GITu
+
+Spusteni serveru
+... spustit server
+... massim_2022-main/server/run.bat  (java -jar target\server-2020-2.0-jar-with-dependencies.jar \ --monitor 8000)
+
+Napojeni se na server v java
+... Spustit deSouches (projekt na GITu), vyvijime v Idea
+... spousti se jako jade, tedy jade musi byt nalinkovan jako knihovna, pak jade klasicky java spusteni
+...	jade.Boot -nomtp -gui general:dsAgents.DeSouches 
+... pokud jede Server (volba scenare, at to jede po iteracich), tak by se mely objevovat vypisy, co ma na senzorech za data
+... agenti nic nedelaj, protoze je to stare pro predminuly rocnik, ale zaklad by tam mel byt
+... tymy agentu pracuji na spolecne veci, ktera je koordinovana automatem
+... pokud agent plni ulohu, plni, dokud neskonci, nebo neselze, v obou pripadech referuje deSouches, jak dopadl, ten pak na zaklade automatu dava dalsi pokyny
+
+
+
+Vycisti goal area
+Skupinovy ... vyres deadlock s ...
+
+AntiMLFC strategie
+
+
+Zanerad goal area
+
+Zautoc na nepritele co stoji a drzi !! (ofenzivni)
+   role pozorovatel (i skupinky)
+	Hlida, zdali stojici a cekajici agent / rikejme mu aukl. Pokud se nehybe, je treba k nemu poslat utocnika, at jej propleskava
+	Muze jich hlidat vic, v cyklu kontrolovat, ze jsou na svych mistech
+   role utocnik
+
+Seber, toulej se a cekej na prilezitost  (vrstvena reaktivni)
+
+Tymovy ... de Souches skladani bloku
+
+... jinak pro strycka prihodu najit automaticke rozdeleni roli, kolik jich pravdepodobne kdy je potreba
