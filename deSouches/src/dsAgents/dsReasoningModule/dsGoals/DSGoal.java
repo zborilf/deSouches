@@ -1,8 +1,10 @@
+
 package dsAgents.dsReasoningModule.dsGoals;
 
 import dsAgents.DSAgent;
-import dsAgents.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsBeliefs.dsEnvironment.DSMap;
+import dsAgents.dsPerceptionModule.DSStatusIndexes;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsExecutionModule.dsActions.DSMove;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStar;
@@ -27,8 +29,8 @@ public abstract class DSGoal {
 
     static final int __AStarSteps=2500;
 
-    HashMap<String,DSPlan> PPlans;      // vytvorene prioritni plany pro cil (OR-plany, jeden uspesne vykonany -> cil splnen)
-    DSPlan PRecentPlan;             // naposledy vykonavany plan
+    HashMap<String,DSPlan> PPlans;    	  // vytvorene prioritni plany pro cil (OR-plany, jeden uspesne vykonany -> cil splnen)
+    DSPlan PRecentPlan;          	   // naposledy vykonavany plan
     DSGoal PSubGoal;
     boolean PHasPlan;
     int PLastStatus=__DSGExecutionSucceeded;
@@ -39,7 +41,7 @@ public abstract class DSGoal {
         DSMap map=agent.getMap();
         Point agentPosition=agent.getPosition();
         return(new DSAStar().computePath(
-                planName,priority,map,agentPosition,destination,body, __AStarSteps, agent));
+                planName, priority, map, agentPosition, destination, body, __AStarSteps, agent));
     }
 
 
@@ -56,7 +58,9 @@ public abstract class DSGoal {
         PPlans.put("OKPlan",plan);
     }
 
+
     public abstract String getGoalName();
+
 
     public DSPlan hasPlan() { // vrati plan s nejvyssi prioritou, pokud zadny neni -> null
         DSPlan hpPlan=null;
@@ -69,6 +73,7 @@ public abstract class DSGoal {
         return (hpPlan);
     }
 
+
     public abstract boolean revisePlans(DSAgent agent);
 
     // PPlan = new DSAStar().computePath(agent.getMap(), agent.getMap().getAgentPos(), PLocation, agent.getBody(),300, agent);
@@ -77,11 +82,12 @@ public abstract class DSGoal {
         return(PSubGoal);
     }
 
-    public int executionFeedback(String result, DSAgent agent){
+
+    public int executionFeedback(int result, DSAgent agent){
         if(PRecentPlan==null)
             return(__DSGNoPlan);
 
-        if (result.contentEquals("success")) {
+        if (result== DSStatusIndexes.__action_success) {
             System.out.println( "executionFeedback: " + "Agent " + agent.getEntityName() + " action " +
                     PRecentPlan.getAction().actionText() + " for goal " + this.getGoalName() + " succeeded! Body " +
                         agent.getBody().bodyToString());//+ " Plan was "+PPlan.plan2text());
@@ -90,14 +96,14 @@ public abstract class DSGoal {
             return (PLastStatus);
         }
 
-        if (result.contentEquals("failed_random")) {
+        if (result== DSStatusIndexes.__action_failed_random) {
                 PRecentPlan.externalActionFailed(agent);
                 PLastStatus = __DSGExecutionSucceeded;
       //      System.out.println( "executionFeedback: " + "Agent " + agent.getEntityName() + " action randomly failed!! ");
                 return (PLastStatus);
         }
 
-        if (result.contentEquals("failed_target")) {
+        if (result== DSStatusIndexes.__action_failed_target) {
             PRecentPlan.externalActionFailed(agent);
             PLastStatus = __DSGExecutionSucceeded;;
             PPlans.remove(PRecentPlan.getName());
@@ -105,7 +111,7 @@ public abstract class DSGoal {
             return (PLastStatus);
         }
 
-        if (result.contentEquals("failed_path")) {
+        if (result== DSStatusIndexes.__action_failed_path) {
             PRecentPlan.externalActionFailed(agent);
             PLastStatus = __DSGMovePathFailed;
             PPlans.remove(PRecentPlan.getName());
@@ -113,23 +119,6 @@ public abstract class DSGoal {
             return (PLastStatus);
         }
 
-        if (result.contentEquals("failed_forbidden")) {
-            PLastStatus = __DSGMoveBorderFailed;
-            PRecentPlan.externalActionFailed(agent);
-            PPlans.remove(PRecentPlan.getName()); // na forbidden se plan odstrani z planu pro dosazeni cile
-
-            if (PRecentPlan != null && PRecentPlan.getAction() instanceof DSMove) {
-                Point myPos = agent.getPosition();
-                agent.getGroup().getMap().setBorder(myPos, ((DSMove) PRecentPlan.getAction()).getPlannedDirection());
-            }
-
-
-               System.out.println( "executionFeedback: " + "Agent " + agent.getEntityName() + " action forbidden failed!! ");
-                // TODO viz nize, ale az bude po upgrade mapy s agenty na spolecnou mapu
-                //       agent.getGroup().getGroupMap().setBorder(agent,PPlan);
-
-            return (PLastStatus);
-        }
 
         // a ted vsechny ostatni ...
         System.out.println( "executionFeedback: " + "Agent " + agent.getEntityName() + "result: "+result);
@@ -184,7 +173,7 @@ public abstract class DSGoal {
             PPlans.remove(chosenPlan);      // plan byl neuspesny, bude odstranen
             PLastStatus = __DSGExecutionFailed;
         }
-        else {
+        else {                                // execution was OK, execution result may be 1, waiting feetback 2, demands subgoal (zatim neni) 3, succeeded
             PRecentPlan=chosenPlan;
             PLastStatus = __DSGExecutionSucceeded;
             if (chosenPlan.waitingForFeedback()) {

@@ -10,7 +10,7 @@
  */
 
 
-package dsAgents.dsBeliefs.dsEnvironment;
+package dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment;
 
 import deSouches.utils.HorseRider;
 import dsAgents.DSAgent;

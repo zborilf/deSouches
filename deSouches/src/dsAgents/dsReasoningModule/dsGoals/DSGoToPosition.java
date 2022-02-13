@@ -1,7 +1,7 @@
 package dsAgents.dsReasoningModule.dsGoals;
 
 import dsAgents.DSAgent;
-import dsAgents.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 
 import java.awt.*;
@@ -28,7 +28,7 @@ public class DSGoToPosition extends DSGoal {
         if(PBody==null)
                 PBody=agent.getBody();
 
-        Point agentPos=agent.getPosition();
+        Point agentPos=agent.getPosition();     // asi zbytecne
         //    PPlan = new DSAStar().
         //    computePath(agent.getGroup().getGroupMap(), agent.getMap().getAgentPos(), PPosition, PBody,100, agent);
 

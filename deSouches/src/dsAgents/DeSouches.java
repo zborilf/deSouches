@@ -1,7 +1,7 @@
 package dsAgents;
 
 import deSouches.utils.HorseRider;
-import dsAgents.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsMultiagent.dsScenarios.*;
 import dsMultiagent.DSGroup;
 import dsMultiagent.DSGroupPool;
@@ -56,11 +56,11 @@ public class DeSouches extends Agent{
     }
 
     /*
-    *       BARRIER
+    *       BARRIER   - of agents. True, if all the agents are in the list
      */
 
     public synchronized boolean barrier(int step, int phase, DSAgent agent){
-        int id=step*10+phase;
+        int id=step*10+phase;            // TODO 10 should be a system constant ... number of agents
         LinkedList<DSAgent> agentList;
         agentList=PBarriers.get(id);
         if(agentList==null)
@@ -285,7 +285,7 @@ public class DeSouches extends Agent{
         PScenariosActive=new LinkedList<DSScenario>();
         PBarriers=new HashMap<Integer,LinkedList<DSAgent>>();
         try {
-            PEI = new EnvironmentInterface("C:\\Users\\zbori\\_%_%_EDEN\\GIT_REPOSITORY\\MAPC\\eismassimconfig.json");
+            PEI = new EnvironmentInterface("C:\\Users\\zbori\\_%_%_EDEN\\GIT_REPOSITORY\\deSouches\\eismassimconfig.json");
             PEI.start();
         } catch (ManagementException e) {
             HorseRider.warn(TAG, "DeSouches: Something failed!", e);

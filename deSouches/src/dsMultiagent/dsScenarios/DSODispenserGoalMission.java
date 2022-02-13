@@ -1,8 +1,8 @@
 package dsMultiagent.dsScenarios;
 
 import dsAgents.DSAgent;
-import dsAgents.dsBeliefs.dsEnvironment.DSCell;
-import dsAgents.dsBeliefs.dsEnvironment.DSMap;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 
 import java.awt.*;
 
@@ -41,9 +41,9 @@ public class DSODispenserGoalMission {
     }
 
     public DSODispenserGoalMission(DSAgent agent,Point dPosition,Point goalPosition, int dispenserType) {
-    PAgent=agent;
-    PDispenserType=dispenserType;
-    PDispenserPosition=dPosition;
-    PGoalPosition=goalPosition;
+	PAgent=agent;
+    	PDispenserType=dispenserType;
+    	PDispenserPosition=dPosition;
+    	PGoalPosition=goalPosition;
     }
 }

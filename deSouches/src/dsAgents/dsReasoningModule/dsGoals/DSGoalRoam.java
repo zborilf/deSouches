@@ -16,7 +16,7 @@ public class DSGoalRoam extends DSGoal {
 
 
     public String getGoalName(){
-        return("goRandomly");
+        return("Roam");
     }
 
     public boolean revisePlans(DSAgent agent){
@@ -55,6 +55,6 @@ public class DSGoalRoam extends DSGoal {
     }
 
     public DSGoalRoam(int distance){
-        PDistance=15;//distance;
+        PDistance=4;//distance;
     }
 }

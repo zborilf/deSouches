@@ -1,7 +1,7 @@
 package dsMultiagent.dsTasks;
 
-import dsAgents.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 
 import java.util.LinkedList;
 

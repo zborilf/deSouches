@@ -2,9 +2,10 @@ package dsAgents;
 
 
 import deSouches.utils.HorseRider;
-import dsAgents.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsBeliefs.dsEnvironment.DSMap;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsPerceptionModule.DSPerceptor;
+import dsAgents.dsReasoningModule.dsBeliefBase.DSBeliefBase;
 import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsIntention.DSIntention;
 import dsAgents.dsReasoningModule.dsIntention.DSIntentionPool;
@@ -20,7 +21,9 @@ import jade.core.behaviours.CyclicBehaviour;
 
 import java.awt.*;
 import java.io.IOException;
-import java.util.*;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 import static deSouches.utils.HorseRider.makeLogFor;
 
@@ -193,6 +196,36 @@ public class DSAgent extends Agent {
     */
 
 
+    public void intiBeliefBase(DSPerceptor perceptor, Collection<Percept> newPercepts){
+        PBeliefBase.setName(perceptor.getNameFromPercepts(newPercepts));
+        PBeliefBase.setTeamName(perceptor.getTeamFromPercepts(newPercepts));
+        PBeliefBase.setStepsTotal(perceptor.getStepsTotalFromPercepts(newPercepts));
+        PBeliefBase.setTeamSize(perceptor.getTeamSizeFromPercepts(newPercepts));
+        PBeliefBase.setRoles(perceptor.getRolesFromPercepts(newPercepts));
+
+        try {
+            makeLogFor(PBeliefBase.getName());
+        } catch (IOException e) {
+            HorseRider.yell(TAG, "action: " + PBeliefBase.getName() +
+                    " Failed to make logfile.", e);
+        }
+        PBeliefBase.setStep(1);
+        PBeliefBase.inicialized();
+    }
+
+
+    public void propagateFeedback(DSPerceptor perceptor, Collection<Percept> newPercepts,
+                                    DSIntention recentIntentionExecuted){
+
+        int actionResult= PBeliefBase.getActionResult();
+
+        if (recentIntentionExecuted != null){
+                System.out.println("\nResult je "+actionResult);
+                recentIntentionExecuted.intentionExecutionFeedback(actionResult, (DSAgent) this);
+        }
+    }
+
+
     public class controlLoop extends CyclicBehaviour {
 
         DSIntention recentIntentionExecuted=null;
@@ -207,43 +240,34 @@ public class DSAgent extends Agent {
                 perceptsCol=PEI.getPercepts(PName,PEntity);
                 percepts = perceptsCol.get(PEntity);
                 if (!(percepts.isEmpty())) {
-                    System.out.println("Agent "+PBeliefBase.getName()+" is in group "+
+                    /*          System.out.println("Agent "+PBeliefBase.getName()+" is in group "+
                             PBeliefBase.getGroup().getMaster()+" at "+PBeliefBase.getPosition()+
-                            " body "+PBeliefBase.getBody().bodyToString());
+                            " body "+PBeliefBase.getBody().bodyToString());*/
 
                     // SENSING
 
+
+                                PBeliefBase.processPercepts(percepts);
+
+                    Collection<Percept> newPercepts=percepts.getAddList();
+
                     System.out.println(percepts);
+
                     if (PBeliefBase.needsInit()) {
-
-                        ArrayList<Percept> padd=new ArrayList<Percept>();
-                        padd= (ArrayList<Percept>) percepts.getAddList();
-
-                        PBeliefBase.setVision(perceptor.getVisionFromPercepts(percepts.getAddList()));
-                        PBeliefBase.setName(perceptor.getNameFromPercepts(percepts.getAddList()));
-                        PBeliefBase.setTeamName(perceptor.getTeamFromPercepts(percepts.getAddList()));
-
-                        try {
-                            makeLogFor(PBeliefBase.getName());
-                        } catch (IOException e) {
-                            HorseRider.yell(TAG, "action: " + PBeliefBase.getName() +
-                                    " Failed to make logfile.", e);
-                        }
-                        PBeliefBase.inicialized();
+                        intiBeliefBase(perceptor, newPercepts);
                     }
-
-                    PBeliefBase.setStep(perceptor.getStepFromPercepts(percepts.getAddList()));
+                    else
+                        PBeliefBase.setStep(perceptor.getStepFromPercepts(newPercepts));
 
                     // FEEDBACK
-                    if (recentIntentionExecuted != null)
-                        recentIntentionExecuted.intentionExecutionFeedback(
-                                perceptor.actionResult(percepts.getAddList()), (DSAgent) this.getAgent());
+
+                    propagateFeedback(perceptor, newPercepts, recentIntentionExecuted);
 
                     // MAP UPDATE
                     Point myPos = PBeliefBase.getPosition();
 
-
                     PBeliefBase.getMap().clearArea(PBeliefBase.getVision(), myPos, PBeliefBase.getStep());
+
                     // barriera pro vycisteni mapy v dohledu
                     // while(!PCommander.barrier(PStep,1,(DSAgent)this.getAgent())){}
                     perceptor.actualizeMap(getMap(), percepts.getAddList(), getMap().getAgentPos((DSAgent) (this.getAgent())),
@@ -263,10 +287,12 @@ public class DSAgent extends Agent {
 
                     perceptor.getBodyFromPercepts(percepts.getAddList());
 
+                    // tady nechapu, o co jde
                     if(!perceptor.seesBlocksInBody(percepts.getAddList()))
                         if(PBeliefBase.getScenario()!=null)
                             PBeliefBase.getScenario().checkEvent((DSAgent) (this.getAgent()),DSScenario._noBlockEvent);
 
+                        // not moving period ++
                     if((myPos.x==PLastPosition.x)&&(myPos.y==PLastPosition.y))
                         PIdleSteps++;
                     else{
@@ -274,6 +300,7 @@ public class DSAgent extends Agent {
                         PLastPosition=(Point)myPos.clone();
                     }
 
+                        // pokud se nehybou dlouho, zlikvidujem scenar a nahlasime generalovi
                     if(getScenario()!=null)
                     if(getScenario().checkDeadlock()){
                                 // vsichni clenove tymu se nehybou dele, nez je stanoveny deadlock limit
@@ -283,9 +310,12 @@ public class DSAgent extends Agent {
                                     " group members "+
                                         getScenario().getAgentsAllocatedText());
                             }
+
                     // agent disabled? Inform and dont execute
-                    if (perceptor.disabled(percepts.getAddList()))
+                    if (perceptor.disabled(newPercepts))
                         PBeliefBase.getCommander().agentDisabled((DSAgent) this.getAgent());
+
+
                     else
                     {
                         // EXECUTION
@@ -347,21 +377,22 @@ public class DSAgent extends Agent {
                    int number, boolean leutnant){
         super();
 
-            PLeutnant=leutnant;
-            PNumber=number;
-            PEI=ei;
+            PLeutnant=leutnant;					// in 2020 there will be little bit more roles
+            PNumber=number;                   			// but unique number remains
+            PEI=ei;                             		// handle to ei (environment to connect the server)
             PName=name;
             PEntity=entity;
-            PIntentionPool=new DSIntentionPool();
-            PSynchronized=new HashMap<DSAgent, Point>();
+            PIntentionPool=new DSIntentionPool();               // set of intentions
+            PSynchronized=new HashMap<DSAgent, Point>();        // ???
 
-            PBeliefBase=new DSBeliefBase(this);
+            PBeliefBase=new DSBeliefBase(this);                 // new BB for the agent
 
-            PBeliefBase.setName(this.getEntityName());
-            PBeliefBase.setJADEName(name);
-            PBeliefBase.setIsLeutnant(leutnant);
-            PBeliefBase.setCommander(commander);
-            PBeliefBase.setBody(new DSBody());
+            PBeliefBase.setName(this.getEntityName());          // initial BB setings   name
+            PBeliefBase.setJADEName(name);                                           // jade name
+            PBeliefBase.setIsLeutnant(leutnant);                                     // TODO should be general role in 2020
+            PBeliefBase.setCommander(commander);                                     // commander of this agent (deSouches)
+            PBeliefBase.setBody(new DSBody());                                       // shape of the agene (one element for agent, later more complex with boxes attached)
+										     // TODO - recet connection -> agent should check its shape, could carry some boxes
 
             if(group==null){
                 group = new DSGroup(this);

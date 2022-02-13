@@ -5,8 +5,8 @@ import java.util.LinkedList;
 import java.util.ListIterator;
 
 import dsAgents.DSAgent;
-import dsAgents.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsBeliefs.dsEnvironment.DSMap;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsExecutionModule.dsActions.*;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 

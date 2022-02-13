@@ -2,7 +2,7 @@ package dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods;
 
 import java.awt.Point;
 
-import dsAgents.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsExecutionModule.dsActions.DSAction;
 
 public class DSAStarItem {

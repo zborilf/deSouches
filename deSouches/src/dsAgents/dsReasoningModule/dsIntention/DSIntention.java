@@ -7,6 +7,18 @@ import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 
 public class DSIntention {
 
+        // spravuje hierarchii cilu, pokud nejaky(!) plan je vykonavan a vyzaduje podcil, je puvodni cil
+	// zablokovan vcetne vsech jeho planu (tohle ale nevypada pekne, to by asi melo byt blokovano
+	// podcile ale stajne nejsou doposud vubec uvazovany, takze mozna je to vse zbytecne
+	// 
+        // osetri pripojeni pozadovaneho subgoalu
+        // vesmes jenom propaguje vykonani akce, 
+	// odstrani podcile, pokud jsou dosazeny
+        // vraci Goal, pokud je potreba zpetne vazby
+
+
+
+
     private static final String TAG = "DSIntention";
     LinkedList<DSGoal> PIntentionStack=new LinkedList<DSGoal>();
     public static int __Intention_NoPlan=0;
@@ -35,7 +47,7 @@ public class DSIntention {
     }
 
 
-    public boolean intentionExecutionFeedback(String actionResult, DSAgent agent){
+    public boolean intentionExecutionFeedback(int actionResult, DSAgent agent){
        // System.out.println("intentionExecutionFeedback: "+"Feeedback result in step "+agent.getStep()+
        //             " for "+agent.getEntityName()+" is "+actionResult);
         if(PIntentionStack.getFirst().goalStatus()==DSGoal.__DSGFeedbackNeeded) {
@@ -48,10 +60,6 @@ public class DSIntention {
 
 
     public DSGoal executeIntention(DSAgent agent) {
-
-        // vesmes jenom propaguje vykonani akce, osetri pripojeni pozadovaneho subgoalu
-        // odstrani podcile, pokud jsou dosazeny
-        // vraci Goal, pokud je potreba zpetne vazby
 
 
         // needs a subgoal? insert subgoal and go on

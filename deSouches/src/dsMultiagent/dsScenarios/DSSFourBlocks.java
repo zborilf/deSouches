@@ -2,7 +2,7 @@ package dsMultiagent.dsScenarios;
 
 import dsAgents.DSAgent;
 import dsAgents.DeSouches;
-import dsAgents.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsReasoningModule.dsGoals.*;
 import dsMultiagent.DSGroup;
 import dsMultiagent.dsTasks.DSTask;

@@ -8,6 +8,11 @@ import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsExecutionModule.dsActions.DSAction;
 
 
+/*
+%	Plan is a sequence of actions
+%	Goal when created makes a plan / instance of this and fills it up with actions, may use also A* algorithm and others ...
+*/
+
 public class DSPlan {
 
 
@@ -118,8 +123,8 @@ public class DSPlan {
         if(!PLinearPlan.isEmpty()) {
 
             if(waitingForFeedback() || demandsSubgoal()) {
-             HorseRider.warn(TAG, "executeOneStep: "+agent.getEntityName()+" step "+ agent.getStep()+
-                        "exe of "+PLinearPlan.getFirst() + "failed, "+waitingForFeedback() + demandsSubgoal() + PLinearPlan.isEmpty());
+     //        HorseRider.warn(TAG, "executeOneStep: "+agent.getEntityName()+" step "+ agent.getStep()+
+     //                   "exe of "+PLinearPlan.getFirst() + "failed, "+waitingForFeedback() + demandsSubgoal() + PLinearPlan.isEmpty());
                 return (false);
             }
 
@@ -137,7 +142,7 @@ public class DSPlan {
                 return(false);
             }
             if(!subgoal.getGoalName().contentEquals("true")) {
-                // TODO, tak gde se uspesna akce popne z planu?
+                // TODO, tak kde se uspesna akce popne z planu?
                 PSubGoal = subgoal;
                 return(true);
             }

@@ -1,8 +1,8 @@
 package dsMultiagent.dsTasks;
 
 import dsAgents.DSAgent;
-import dsAgents.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsExecutionModule.dsActions.*;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 

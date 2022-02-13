@@ -3,7 +3,7 @@ package dsMultiagent.dsScenarios;
 import deSouches.utils.HorseRider;
 import dsAgents.*;
 import dsAgents.DeSouches;
-import dsAgents.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsReasoningModule.dsGoals.*;
 import dsMultiagent.DSGroup;
 import dsMultiagent.dsTasks.DSTask;

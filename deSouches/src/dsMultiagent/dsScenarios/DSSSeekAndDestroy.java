@@ -1,12 +1,13 @@
 package dsMultiagent.dsScenarios;
 
 import dsAgents.DSAgent;
-import dsAgents.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsReasoningModule.dsGoals.DSClearGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoToPosition;
 import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 
 import java.awt.*;
+
 
 public class DSSSeekAndDestroy extends DSScenario {
 

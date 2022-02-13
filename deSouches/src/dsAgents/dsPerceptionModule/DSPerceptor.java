@@ -1,20 +1,17 @@
 package dsAgents.dsPerceptionModule;
 
-import dsAgents.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsBeliefs.dsEnvironment.DSCell;
-import dsAgents.dsBeliefs.dsEnvironment.DSMap;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.DSRole;
 import dsMultiagent.dsTasks.DSTask;
 import dsAgents.dsPerceptionModule.dsSyntax.DSPercepts;
-import eis.iilang.Function;
-import eis.iilang.Parameter;
-import eis.iilang.ParameterList;
-import eis.iilang.Percept;
+import eis.iilang.*;
 
 import java.awt.*;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedList;
-
 
 
 public class DSPerceptor {
@@ -23,17 +20,31 @@ public class DSPerceptor {
     LinkedList<Point> PFriendsSeen;
     DSPercepts PPercepts;
 
-    public int getVisionFromPercepts(Collection<Percept> percepts) {
+    public int getStepsTotalFromPercepts(Collection<Percept> percepts) {
             return (DSPercepts.perceptParam2Int(
-                    percepts.stream().filter(prc -> prc.getName().equals("vision")).iterator().next(),0));
+                    percepts.stream().filter(prc -> prc.getName().equals("steps")).iterator().next(),0));
     }
 
+    public int getTeamSizeFromPercepts(Collection<Percept> percepts) {
+        return (DSPercepts.perceptParam2Int(
+                percepts.stream().filter(prc -> prc.getName().equals("teamSize")).iterator().next(),0));
+    }
 
     public String getNameFromPercepts(Collection<Percept> percepts) {
         return(percepts.stream().filter(prc -> prc.getName().equals("name")).
                 iterator().next().getParameters().get(0).toString());
     }
 
+    public LinkedList<DSRole> getRolesFromPercepts(Collection<Percept> percepts) {
+        LinkedList<DSRole> roles=new LinkedList();
+        Percept percept;
+        Iterator iterator=percepts.stream().filter(prc -> prc.getName().equals("role")).iterator();
+        while(iterator.hasNext()){
+                percept=(Percept)iterator.next();
+                roles.add(new DSRole(percept));
+        }
+        return(roles);
+    }
 
     public String getTeamFromPercepts(Collection<Percept> percepts) {
         return(percepts.stream().filter(prc -> prc.getName().equals("team")).
@@ -48,15 +59,20 @@ public class DSPerceptor {
 
 
     public String actionResult(Collection<Percept> percepts) {
-        return(percepts.stream().filter(prc -> prc.getName().equals("lastActionResult")).iterator().
-                        next().getParameters().get(0).toString());
+        try {
+            return (percepts.stream().filter(prc -> prc.getName().equals("lastActionResult")).iterator().
+                    next().getParameters().get(0).toString());
+        }catch(Exception e){};
+        return(null);
     }
 
 
     public boolean disabled(Collection<Percept> percepts){
-        if(percepts.stream().filter(prc -> prc.getName().equals("disabled")).iterator().
-                next().getParameters().get(0).toString().contentEquals("true"))
-                return(true);
+        try {
+            if (percepts.stream().filter(prc -> prc.getName().equals("deactivated")).iterator().
+                    next().getParameters().get(0).toString().contentEquals("true"))
+                return (true);
+        }catch(Exception e){};
         return(false);
     }
 

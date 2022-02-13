@@ -1,90 +1,124 @@
-package dsAgents;
+package dsAgents.dsReasoningModule.dsBeliefBase;
 
 /*
  Vše, co deSouches ví, vjemy => pozice na mapě, objekty na mapách, úkoly, krok, energie, skore
                     sociální => generál, příslušnost ke skupině, master skupiny, který scénář vykonává
  */
 
-import dsAgents.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsBeliefs.dsEnvironment.DSCell;
-import dsAgents.dsBeliefs.dsEnvironment.DSMap;
+import dsAgents.DSAgent;
+import dsAgents.DeSouches;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.DSBeliefsIndexes;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.DSRole;
+import dsAgents.dsPerceptionModule.DSStatusIndexes;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsMultiagent.DSGroup;
 import dsMultiagent.dsScenarios.DSScenario;
+import eis.PerceptUpdate;
+import eis.iilang.Parameter;
+import eis.iilang.Percept;
 
 import java.awt.*;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class DSBeliefBase {
+
+
+
     private DSMap PMap;
     private DSAgent PAgent;
     private DSGroup PGroup=null;
+    private int PStepsTotal;
+    private int PTeamSize;
     private int PScore=0;
     private int PStep=0;
-    private int PVision=0;
-    private boolean PIsLeutnant=false;
+    LinkedList<DSRole> PRoles=null;
+    private int PVision=0;     // obsolete in 2022
+    private boolean PIsLeutnant=false;  // obsolete in 2022
     private int PEnergy=0;
     private DeSouches PCommander;
     private String PName="unknown";
     private String PJADEName="unknown";
     private String PTeamName="unknown";
-    private DSScenario PScenario;
+    private DSScenario PScenario;       // active scenario
     private DSBody PBody=null;
     private boolean inicialized=false;
     private int PHoldsBlockType;
 
+    private int PLastActionResult=DSStatusIndexes.__action_unknown_action;
+    private String PLastAction="unknown";
+    private String PLastActionParams="success";
+
+
+
     // INIT
 
-    protected void inicialized(){
+    public void inicialized(){
         inicialized=true;
     }
 
-    protected boolean needsInit(){
+    public boolean needsInit(){
         return(!inicialized);
     }
 
     // JMENO
 
-    protected void setName(String name){
+    public void setName(String name){
         PName=name;
     }
 
-    protected String getName(){
+    public String getName(){
         return(PName);
     }
 
-    protected void setJADEName(String name){
+    public void setJADEName(String name){
         PJADEName=name;
     }
 
-    protected String getJADEName(){
+    public String getJADEName(){
         return(PJADEName);
     }
 
-    protected void setTeamName(String teamName){
+    public void setTeamName(String teamName){
         PTeamName=teamName;
     }
 
-    protected String getTeamName(){
+    public String getTeamName(){
         return(PTeamName);
     }
 
+    // TEAM SIZE
+
+    public void setTeamSize(int teamSize) {PTeamSize=teamSize;}
+
+    protected int getTeamSize() {return(PTeamSize);}
+
+    // TOTAL NUMBER OF STEMS
+
+    public void setStepsTotal(int stepsTotal) {PStepsTotal=stepsTotal;}
+
+    protected int getPStepsTotal() {return(PStepsTotal);}
+
     // POZICE
 
-    protected Point getPosition() {      // vráti pozici na (skupinové) mapě pro agenta
+    public Point getPosition() {      // vráti pozici na (skupinové) mapě pro agenta
         return(PMap.getAgentPos(PAgent));
     }
 
-    protected void moveBy(int PDx, int PDy) {
+    public void moveBy(int PDx, int PDy) {
         PMap.moveBy(PAgent,PDx,PDy);
     }
 
     // KROK
 
-    protected void setStep(int step){
+    public void setStep(int step){
         PStep=step;
     }
 
-    protected int getStep(){
+    public int getStep(){
         return(PStep);
     }
 
@@ -110,11 +144,11 @@ public class DSBeliefBase {
 
     // IS LEUTNANT?
 
-    protected void setIsLeutnant(boolean isLeutnant){
+    public void setIsLeutnant(boolean isLeutnant){
         PIsLeutnant=isLeutnant;
     }
 
-    protected boolean isLeutnant(){
+    public boolean isLeutnant(){
         return(PIsLeutnant);
     }
 
@@ -127,6 +161,13 @@ public class DSBeliefBase {
     public DeSouches getCommander(){
         return(PCommander);
     }
+
+    // ROLES
+
+    public void setRoles(LinkedList<DSRole> roles){
+        Percept p;
+        PRoles = roles;
+    };
 
     // DOHLED
 
@@ -192,7 +233,19 @@ public class DSBeliefBase {
         return PHoldsBlockType;
     }
 
-    // FUNKCNI PREDSTAVY (vypoctove)
+    void setLastActionResult(Collection<Parameter> parameters){
+        String actionResult=parameters.iterator().next().toString();
+        PLastActionResult=DSStatusIndexes.getIndex(actionResult);
+        System.out.println("LAR LAR LAR "+PLastActionResult);
+    }
+
+    public int getActionResult(){
+        return(PLastActionResult);
+    }
+
+    /*
+                FUNKCNI PREDSTAVY (vypoctove)
+     */
 
 
     boolean isNeighbour(Point point1, Point point2)
@@ -228,28 +281,47 @@ public class DSBeliefBase {
     }
 
 
-    protected Point nearestObject(DSAgent agent, int type) {
+    public Point nearestObject(DSAgent agent, int type) {
         return(getMap().nearestObject(type,agent.getPosition()));
     }
 
-    protected Point nearestDispenser(int type){
+    public Point nearestDispenser(int type){
         return(nearestObject(PAgent, DSCell.__DSDispenser+type));
         // return(PMap.nearestObject(DSCell.__DSDispenser+type,PMap.getAgentPos())); // for this agent 0,0
     }
 
-    protected Point nearestFreeBlock(int type){
+    public Point nearestFreeBlock(int type){
         Point blockAt=getMap().nearestFreeBlock(type, PAgent.getPosition());
         if(blockAt!=null)
                 return(blockAt);
             return(null);
     }
 
-    protected Point nearestGoal(){
+    public Point nearestGoal(){
         return(nearestObject(PAgent,DSCell.__DSGoal));
         //        return(PMap.nearestObject(DSCell.__DSGoal,new Point(0,0)));
     }
 
 
+    public void processPercepts(PerceptUpdate percepts){
+        Iterator<Percept> newPercepts;
+        newPercepts=percepts.getAddList().iterator();
+        String perceptName;
+        Collection<Parameter> perceptParams;
+        while(newPercepts.hasNext()) {
+            Percept percept=newPercepts.next();
+            perceptName=percept.getName();
+            perceptParams=percept.getParameters();
+            System.out.print(DSBeliefsIndexes.getIndex(perceptName)+" : ");
+            System.out.println(perceptName);
+            switch(DSBeliefsIndexes.getIndex(perceptName)){
+                case DSBeliefsIndexes.__lastActionResult:
+                    setLastActionResult(perceptParams);
+                    break;
+            }
+        }
+        System.out.println("========\n\n");
+    }
 
 
     public DSBeliefBase(DSAgent agent){

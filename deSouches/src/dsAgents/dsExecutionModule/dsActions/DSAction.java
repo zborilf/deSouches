@@ -1,15 +1,38 @@
 package dsAgents.dsExecutionModule.dsActions;
 
 import dsAgents.DSAgent;
-import dsAgents.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsBeliefs.dsEnvironment.DSMap;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
 import eis.EnvironmentInterfaceStandard;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public abstract class DSAction {
 
+    static Map<String, Class> _actionMap =  new HashMap<String, Class>(){{
+        put("skip", DSSkip.class);
+        put("move", DSMove.class);
+        put("attach",DSAttach.class);
+        put("detach", DSDetach.class);
+        put("rotate", DSRotate.class);
+        put("connect",DSConnect .class);
+        put("disconnect",DSDisconnect.class);
+        put("request",DSRequest .class);
+        put("submit", DSSubmit.class);
+        put("clear", DSClear.class);
+        put("adopt",DSAdopt.class);
+        put("survey", DSSurvey.class);}
+    };
+
+
     EnvironmentInterfaceStandard PEI;
+
+    public static Class getActionClass(String action){
+        return(_actionMap.get(action));
+    }
 
     public abstract DSGoal execute(DSAgent agent);
 

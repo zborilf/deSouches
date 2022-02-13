@@ -1,6 +1,6 @@
 package dsAgents.dsPerceptionModule.dsSyntax;
 
-import dsAgents.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import eis.iilang.Percept;
 
 import java.util.HashMap;

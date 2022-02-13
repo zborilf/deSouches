@@ -1,8 +1,8 @@
 package dsAgents.dsExecutionModule.dsActions;
 
 import dsAgents.DSAgent;
-import dsAgents.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsBeliefs.dsEnvironment.DSMap;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsPerceptionModule.DSPerceptor;
 import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;

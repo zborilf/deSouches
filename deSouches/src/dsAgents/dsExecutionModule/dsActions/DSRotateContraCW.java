@@ -6,8 +6,8 @@ import eis.iilang.Action;
 import java.awt.Point;
 
 import dsAgents.DSAgent;
-import dsAgents.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsBeliefs.dsEnvironment.DSMap;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;

@@ -1,19 +1,17 @@
 {
-  "scenario": "assemble2020",
-  "host": "localhost",
+  "scenario": "assemble2021",
+  "host": "massimserver",
   "port": 12300,
-  "scheduling": true,
-  "only-once": false,
-  "timeout": 3000,
-  "times": false,
+  "scheduling": false,
+  "timeout": 100000,
   "notifications": false,
-  "queued": false,
+  "exceptions": false,
 
   "entities" : {},
   
   "multi-entities": [
     {
-      "name-prefix": "connectionA",
+      "name-prefix": "entityA",
       "username-prefix": "agentA",
       "password": "1",
       "print-iilang": false,
@@ -21,9 +19,5 @@
       "start-index": 1,
       "count": -1
     }
-  ],
-
-  "status-entity": {
-    "name": "statusConnection"
-  }
+  ]
 }
