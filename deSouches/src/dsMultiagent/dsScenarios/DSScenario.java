@@ -33,6 +33,10 @@ public abstract class DSScenario {
         return(PAgentsAllocated);
     }
 
+    public String getName(){
+        return("No name scenario");
+    }
+
     public String getAgentsAllocatedText(){
         String agents="";
         for(Iterator i = PAgentsAllocated.iterator();i.hasNext();){

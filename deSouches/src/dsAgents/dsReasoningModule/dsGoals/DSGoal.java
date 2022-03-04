@@ -150,15 +150,14 @@ public abstract class DSGoal {
                 return (PLastStatus);
             }
 
-        if (PSubGoal!=null){ // TODO ?????
+        if (PSubGoal!=null){ // TODO ????? , existuje subgoal, ale ten se nevykonava ... aktualne nevyuzivane
             PLastStatus = __DSGPlanningFailed;
             return (PLastStatus);
         }
 
-        revisePlans(agent);
+        revisePlans(agent);     //
 
         DSPlan chosenPlan=hasPlan();
-
 
         if (chosenPlan == null) {       // plan nebyl a ani se makePlanem nevytvoril -> gol spadl
             PLastStatus = __DSGPlanningFailed;

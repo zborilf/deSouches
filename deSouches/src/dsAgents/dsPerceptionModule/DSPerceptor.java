@@ -1,11 +1,14 @@
 package dsAgents.dsPerceptionModule;
 
+import dsAgents.dsReasoningModule.dsBeliefBase.DSBeliefBase;
+import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.DSBeliefsIndexes;
 import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.DSRole;
 import dsMultiagent.dsTasks.DSTask;
 import dsAgents.dsPerceptionModule.dsSyntax.DSPercepts;
+import eis.PerceptUpdate;
 import eis.iilang.*;
 
 import java.awt.*;
@@ -239,6 +242,54 @@ Point pp=new Point(Integer.parseInt(percept.getParameters().get(0).toString()),
         }
         return(true);
     }
+
+
+    /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    *
+    *       Update BB for percepts
+    */
+
+
+    public static void processPercepts(DSBeliefBase BB, PerceptUpdate percepts){
+        Iterator<Percept> newPercepts;
+        newPercepts=percepts.getAddList().iterator();
+        String perceptName;
+        Collection<Parameter> perceptParams;
+        while(newPercepts.hasNext()) {
+            Percept percept=newPercepts.next();
+            perceptName=percept.getName();
+            perceptParams=percept.getParameters();
+            System.out.print("new ... "+DSBeliefsIndexes.getIndex(perceptName)+" : ");
+            System.out.println(perceptName);
+            switch(DSBeliefsIndexes.getIndex(perceptName)){
+
+
+                case DSBeliefsIndexes.__name:
+
+                case DSBeliefsIndexes.__team:
+
+                case DSBeliefsIndexes.__teamSize:
+
+                case DSBeliefsIndexes.__steps:
+
+                case DSBeliefsIndexes.__step:
+
+
+                    case DSBeliefsIndexes.__lastActionResult:
+                        BB.setLastActionResult(perceptParams);
+                        break;
+
+                case DSBeliefsIndexes.__score:
+
+                    case DSBeliefsIndexes.__energy:
+                        BB.setEnergy(perceptParams);
+                        break;
+            }
+        }
+        System.out.println("========\n\n");
+    }
+
+
 
     public DSPerceptor(){
         PPercepts=new DSPercepts();

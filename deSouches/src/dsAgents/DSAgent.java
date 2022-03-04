@@ -196,28 +196,11 @@ public class DSAgent extends Agent {
     */
 
 
-    public void intiBeliefBase(DSPerceptor perceptor, Collection<Percept> newPercepts){
-        PBeliefBase.setName(perceptor.getNameFromPercepts(newPercepts));
-        PBeliefBase.setTeamName(perceptor.getTeamFromPercepts(newPercepts));
-        PBeliefBase.setStepsTotal(perceptor.getStepsTotalFromPercepts(newPercepts));
-        PBeliefBase.setTeamSize(perceptor.getTeamSizeFromPercepts(newPercepts));
-        PBeliefBase.setRoles(perceptor.getRolesFromPercepts(newPercepts));
-
-        try {
-            makeLogFor(PBeliefBase.getName());
-        } catch (IOException e) {
-            HorseRider.yell(TAG, "action: " + PBeliefBase.getName() +
-                    " Failed to make logfile.", e);
-        }
-        PBeliefBase.setStep(1);
-        PBeliefBase.inicialized();
-    }
-
 
     public void propagateFeedback(DSPerceptor perceptor, Collection<Percept> newPercepts,
                                     DSIntention recentIntentionExecuted){
 
-        int actionResult= PBeliefBase.getActionResult();
+        int actionResult= PBeliefBase.getLastActionResult();
 
         if (recentIntentionExecuted != null){
                 System.out.println("\nResult je "+actionResult);
@@ -247,17 +230,17 @@ public class DSAgent extends Agent {
                     // SENSING
 
 
-                                PBeliefBase.processPercepts(percepts);
+                    DSPerceptor.processPercepts(PBeliefBase, percepts);
 
-                    Collection<Percept> newPercepts=percepts.getAddList();
+
+
+                    Collection<Percept> newPercepts=percepts.getAddList();  // TODO ??
 
                     System.out.println(percepts);
 
-                    if (PBeliefBase.needsInit()) {
-                        intiBeliefBase(perceptor, newPercepts);
-                    }
-                    else
-                        PBeliefBase.setStep(perceptor.getStepFromPercepts(newPercepts));
+
+                    DSPerceptor.processPercepts(PBeliefBase,percepts);
+
 
                     // FEEDBACK
 
@@ -323,6 +306,16 @@ public class DSAgent extends Agent {
                         // vykonani zameru
                         // report uspesneho/neuspesneho ukonceni nasledovani zameru
 
+                        if(PBeliefBase.getScenario()==null)
+                            System.out.println("Scenario: No scenario");
+                        else
+                            System.out.println("Scenario: "+PBeliefBase.getScenario().getName());
+
+                        if(PIntentionPool.getIntention()==null)
+                            System.out.println("Intention: No intention");
+                        else
+                            System.out.println("Intention: "+PIntentionPool.getIntention().description());
+
                         PBeliefBase.getCommander().friendsReport(
                                 (DSAgent) this.getAgent(), perceptor.getFriendsSeen(), PBeliefBase.getStep());
                         if((PIntentionPool.getIntention()==null)&&(getScenario()==null))
@@ -387,7 +380,6 @@ public class DSAgent extends Agent {
 
             PBeliefBase=new DSBeliefBase(this);                 // new BB for the agent
 
-            PBeliefBase.setName(this.getEntityName());          // initial BB setings   name
             PBeliefBase.setJADEName(name);                                           // jade name
             PBeliefBase.setIsLeutnant(leutnant);                                     // TODO should be general role in 2020
             PBeliefBase.setCommander(commander);                                     // commander of this agent (deSouches)

@@ -20,7 +20,7 @@ public class DSGDetachAll extends DSGoal{
         if (PPlans.containsKey("detachAllGoal")) {
             return false;
         }
-        if(directions.size()==0){
+        if(directions.size()==0){           // nothing to detach -> immedieate success
             setPlansToSuccess();
             return (true);
         }

@@ -32,6 +32,10 @@ public class DSIntention {
     }
 
     public String description(){
+
+        if(PIntentionStack.isEmpty())
+            return("no intention");
+
         return(PIntentionStack.getFirst().getGoalName());
     }
 

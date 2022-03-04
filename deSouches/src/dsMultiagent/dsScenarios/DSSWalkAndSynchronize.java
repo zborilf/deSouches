@@ -15,6 +15,12 @@ public class DSSWalkAndSynchronize extends DSScenario {
     int PRadius;
     DSAgent PAgent;
 
+
+    @Override
+    public String getName(){
+        return("Walk and Synchronize Scenario");
+    }
+
     @Override
     public void goalCompleted(DSAgent agent, DSGoal goal) {
 

@@ -53,7 +53,7 @@ public class DSBeliefBase {
     private String PLastActionParams="success";
 
 
-
+    // 0 : __simStart
     // INIT
 
     public void inicialized(){
@@ -64,15 +64,190 @@ public class DSBeliefBase {
         return(!inicialized);
     }
 
-    // JMENO
 
-    public void setName(String name){
-        PName=name;
+    // 1 : __name
+
+    public void setName(Collection<Parameter> parameters){
+        String name=parameters.iterator().next().toString();
+        PName = name;
     }
 
     public String getName(){
         return(PName);
     }
+
+    // 2 : __team
+
+    public void setTeamName(Collection<Parameter> parameters){
+        String teamName=parameters.iterator().next().toString();
+        PTeamName=teamName;
+    }
+
+    public String getTeamName(){
+        return(PTeamName);
+    }
+
+    // 3 : __teamSize
+
+    public void setTeamSize(Collection<Parameter> parameters) {
+        int teamSize=Integer.valueOf(parameters.iterator().next().toString());
+        PTeamSize=teamSize;
+    }
+
+    protected int getTeamSize() {return(PTeamSize);}
+
+    // 4 : __steps
+
+    public void setStepsTotal(Collection<Parameter> parameters) {
+        int stepsTotal=Integer.valueOf(parameters.iterator().next().toString());
+        PStepsTotal=stepsTotal;
+    }
+
+    protected int getPStepsTotal() {return(PStepsTotal);}
+
+    // 5 : __role
+
+    // TODO
+
+
+    // 6 : __actionID
+
+    // TODO
+
+
+    // 7 : __timestamp
+
+    // TODO
+
+
+    // 8 : __deadLine
+
+    // TODO
+
+
+    // 9 : __step
+
+    public void setStep(Collection<Parameter> parameters) {
+        int step=Integer.valueOf(parameters.iterator().next().toString());
+        PStep=step;
+    }
+
+    public int getStep(){
+        return(PStep);
+    }
+
+
+    // 10 : __lastAction
+
+    // TODO
+
+
+
+    // 11 : __lastActionParams
+
+    // TODO
+
+
+    // 12 : __lastActionResult
+
+    public void setLastActionResult(Collection<Parameter> parameters){
+        String actionResult=parameters.iterator().next().toString();
+        PLastActionResult=DSStatusIndexes.getIndex(actionResult);
+        System.out.println("LAR LAR LAR "+PLastActionResult);
+    }
+
+    public int getLastActionResult(){
+        return(PLastActionResult);
+    }
+
+
+    // 13 : __score
+
+    public void setScore(Collection<Parameter> parameters){
+        int score=Integer.valueOf(parameters.iterator().next().toString());
+        PScore=score;
+    }
+
+    public int getScore(){
+        return(PScore);
+    }
+
+
+    // 14 : __thing
+
+    // TODO
+
+
+    // 15 : __task
+
+    // TODO
+
+
+    // 16 : __attached
+
+    // TODO
+
+
+    // 17 : __energy
+
+    public void setEnergy(Collection<Parameter> parameters){
+        String energy=parameters.iterator().next().toString();
+        PEnergy=Integer.parseInt(energy);
+    }
+
+    public int getEnergy(){
+        return(PEnergy);
+    }
+
+
+    // 18 : __deactivated
+
+    // TODO
+
+
+    // 19 : __roleZone
+
+    // TODO
+
+
+    // 20 : __goalZone
+
+    // TODO
+
+
+    // 21 : __violation
+
+    // TODO
+
+
+    // 22 : __norm
+
+    // TODO
+
+
+    // 23 : __surveyed
+
+    // TODO
+
+
+    // 24 : __hit
+
+    // TODO
+
+
+    // 25 : __ranking
+
+    // TODO
+
+
+/*
+
+        Internal beliefs
+
+ */
+
+
+    // JMENO
 
     public void setJADEName(String name){
         PJADEName=name;
@@ -82,25 +257,9 @@ public class DSBeliefBase {
         return(PJADEName);
     }
 
-    public void setTeamName(String teamName){
-        PTeamName=teamName;
-    }
 
-    public String getTeamName(){
-        return(PTeamName);
-    }
 
-    // TEAM SIZE
 
-    public void setTeamSize(int teamSize) {PTeamSize=teamSize;}
-
-    protected int getTeamSize() {return(PTeamSize);}
-
-    // TOTAL NUMBER OF STEMS
-
-    public void setStepsTotal(int stepsTotal) {PStepsTotal=stepsTotal;}
-
-    protected int getPStepsTotal() {return(PStepsTotal);}
 
     // POZICE
 
@@ -112,35 +271,11 @@ public class DSBeliefBase {
         PMap.moveBy(PAgent,PDx,PDy);
     }
 
-    // KROK
 
-    public void setStep(int step){
-        PStep=step;
-    }
+    // LastActionResult
 
-    public int getStep(){
-        return(PStep);
-    }
 
-    // ENERGIE
 
-    protected void setEnergy(int energy){
-        PEnergy=energy;
-    }
-
-    protected int getEnergy(){
-        return(PEnergy);
-    }
-
-    // SKORE
-
-    protected void setScore(int score){
-        PScore=score;
-    }
-
-    protected int getScore(){
-        return(PScore);
-    }
 
     // IS LEUTNANT?
 
@@ -169,7 +304,7 @@ public class DSBeliefBase {
         PRoles = roles;
     };
 
-    // DOHLED
+    // DOHLED - zastarale 2022, vytahuje se z role
 
     public void setVision(int range){
         PVision=range;
@@ -233,15 +368,7 @@ public class DSBeliefBase {
         return PHoldsBlockType;
     }
 
-    void setLastActionResult(Collection<Parameter> parameters){
-        String actionResult=parameters.iterator().next().toString();
-        PLastActionResult=DSStatusIndexes.getIndex(actionResult);
-        System.out.println("LAR LAR LAR "+PLastActionResult);
-    }
 
-    public int getActionResult(){
-        return(PLastActionResult);
-    }
 
     /*
                 FUNKCNI PREDSTAVY (vypoctove)
@@ -303,25 +430,7 @@ public class DSBeliefBase {
     }
 
 
-    public void processPercepts(PerceptUpdate percepts){
-        Iterator<Percept> newPercepts;
-        newPercepts=percepts.getAddList().iterator();
-        String perceptName;
-        Collection<Parameter> perceptParams;
-        while(newPercepts.hasNext()) {
-            Percept percept=newPercepts.next();
-            perceptName=percept.getName();
-            perceptParams=percept.getParameters();
-            System.out.print(DSBeliefsIndexes.getIndex(perceptName)+" : ");
-            System.out.println(perceptName);
-            switch(DSBeliefsIndexes.getIndex(perceptName)){
-                case DSBeliefsIndexes.__lastActionResult:
-                    setLastActionResult(perceptParams);
-                    break;
-            }
-        }
-        System.out.println("========\n\n");
-    }
+
 
 
     public DSBeliefBase(DSAgent agent){
