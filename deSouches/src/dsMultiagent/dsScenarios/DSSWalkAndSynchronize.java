@@ -31,16 +31,17 @@ public class DSSWalkAndSynchronize extends DSScenario {
             DSGoal newGoal = new DSGoalRoam(PRadius);//DSGoalRoam();
             agent.hearOrder(newGoal);
         }
-        if(goal.getGoalName().contentEquals("goRandomly")) {
+        if(goal.getGoalName().contentEquals("dsRoam")) {
             DSGoal newGoal = new DSGoalRoam(PRadius); //TODO tohle pryc
             agent.hearOrder(newGoal);
-            PCommander.scenarioCompleted(this);
+//            PCommander.scenarioCompleted(this);
         }
     }
 
     @Override
     public void goalFailed(DSAgent agent, DSGoal goal) {
-        if(goal.getGoalName().contentEquals("goRandomly")
+        System.out.println(goal.getGoalName());
+        if(goal.getGoalName().contentEquals("dsRoam")
                     ||goal.getGoalName().contentEquals("detachAllGoal")) {
             DSGoal newGoal = new DSGoalRoam(PRadius);//DSGoalRoam();
             agent.hearOrder(newGoal);

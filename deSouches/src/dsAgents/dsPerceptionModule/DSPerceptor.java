@@ -259,8 +259,11 @@ Point pp=new Point(Integer.parseInt(percept.getParameters().get(0).toString()),
             Percept percept=newPercepts.next();
             perceptName=percept.getName();
             perceptParams=percept.getParameters();
+
             System.out.print("new ... "+DSBeliefsIndexes.getIndex(perceptName)+" : ");
-            System.out.println(perceptName);
+            System.out.println(perceptName+" / "+perceptParams);
+
+
             switch(DSBeliefsIndexes.getIndex(perceptName)){
 
 
@@ -274,6 +277,7 @@ Point pp=new Point(Integer.parseInt(percept.getParameters().get(0).toString()),
 
                 case DSBeliefsIndexes.__step:
 
+                        break;
 
                     case DSBeliefsIndexes.__lastActionResult:
                         BB.setLastActionResult(perceptParams);

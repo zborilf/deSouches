@@ -124,7 +124,7 @@ public class DeSouches extends Agent{
             scenario.initScenario(agent.getStep());
         }
         else {
-            DSSWalkAndSynchronize scenario = new DSSWalkAndSynchronize(agent, 8);
+            DSSWalkAndSynchronize scenario = new DSSWalkAndSynchronize(agent, 10);  // 10 je max delka prochazky
             agent.setScenario(scenario);
             scenario.initScenario(agent.getStep());
         }

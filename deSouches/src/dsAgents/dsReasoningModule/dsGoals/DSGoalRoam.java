@@ -16,13 +16,16 @@ public class DSGoalRoam extends DSGoal {
 
 
     public String getGoalName(){
-        return("Roam");
+        return("dsRoam");
     }
 
     public boolean revisePlans(DSAgent agent){
 
         if(PPlans.containsKey("roam"))
             return false; // plan exists,  no revision
+
+
+        // vypocte nahodne cilovy bod na mape ve vzdalenosti PDistance
 
         int x=1,y=1;
         int dx,dy;
@@ -45,7 +48,6 @@ public class DSGoalRoam extends DSGoal {
    //     PPlan= new DSAStar().computePath(agent.getMap(),agent.getMap().getAgentPos() ,new Point(dx,dy),agent.getBody(),300, agent);
         DSPlan plan = astarGroup("roam",1,agent, new Point(gx,gy), agent.getBody());
 
-
         if (plan == null){
             return (false);
         }
@@ -55,6 +57,6 @@ public class DSGoalRoam extends DSGoal {
     }
 
     public DSGoalRoam(int distance){
-        PDistance=4;//distance;
+        PDistance=  distance;
     }
 }
