@@ -1,4 +1,4 @@
-package dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs;
+package dsAgents.dsBeliefBase.dsBeliefs;
 
 import java.util.HashMap;
 import java.util.Map;

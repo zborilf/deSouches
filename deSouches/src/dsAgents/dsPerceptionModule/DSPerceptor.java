@@ -1,11 +1,11 @@
 package dsAgents.dsPerceptionModule;
 
-import dsAgents.dsReasoningModule.dsBeliefBase.DSBeliefBase;
-import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.DSBeliefsIndexes;
-import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
-import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
-import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.DSRole;
+import dsAgents.dsBeliefBase.DSBeliefBase;
+import dsAgents.dsBeliefBase.dsBeliefs.DSBeliefsIndexes;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
+import dsAgents.dsBeliefBase.dsBeliefs.DSRole;
 import dsMultiagent.dsTasks.DSTask;
 import dsAgents.dsPerceptionModule.dsSyntax.DSPercepts;
 import eis.PerceptUpdate;
@@ -18,6 +18,7 @@ import java.util.LinkedList;
 
 
 public class DSPerceptor {
+
 
     private static final String TAG = "DSProcessPercepts";
     LinkedList<Point> PFriendsSeen;
@@ -268,7 +269,8 @@ Point pp=new Point(Integer.parseInt(percept.getParameters().get(0).toString()),
 
 
                 case DSBeliefsIndexes.__name:
-
+                    BB.setName(perceptParams);
+                    break;
                 case DSBeliefsIndexes.__team:
 
                 case DSBeliefsIndexes.__teamSize:
@@ -276,18 +278,28 @@ Point pp=new Point(Integer.parseInt(percept.getParameters().get(0).toString()),
                 case DSBeliefsIndexes.__steps:
 
                 case DSBeliefsIndexes.__step:
+                    BB.setStep(perceptParams);
+                    break;
 
+                case DSBeliefsIndexes.__lastAction:
+                    BB.setLastAction(perceptParams);
+                    break;
+
+                    case DSBeliefsIndexes.__lastActionParams:
+                        BB.setLastActionParams(perceptParams);
                         break;
+
 
                     case DSBeliefsIndexes.__lastActionResult:
                         BB.setLastActionResult(perceptParams);
                         break;
 
+                case DSBeliefsIndexes.__energy:
+                    BB.setEnergy(perceptParams);
+                    break;
+
                 case DSBeliefsIndexes.__score:
 
-                    case DSBeliefsIndexes.__energy:
-                        BB.setEnergy(perceptParams);
-                        break;
             }
         }
         System.out.println("========\n\n");
@@ -298,6 +310,7 @@ Point pp=new Point(Integer.parseInt(percept.getParameters().get(0).toString()),
     public DSPerceptor(){
         PPercepts=new DSPercepts();
         PFriendsSeen=new LinkedList<Point>();
+
     }
 
 }

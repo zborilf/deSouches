@@ -2,10 +2,10 @@ package dsAgents;
 
 
 import deSouches.utils.HorseRider;
-import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsPerceptionModule.DSPerceptor;
-import dsAgents.dsReasoningModule.dsBeliefBase.DSBeliefBase;
+import dsAgents.dsBeliefBase.DSBeliefBase;
 import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsIntention.DSIntention;
 import dsAgents.dsReasoningModule.dsIntention.DSIntentionPool;
@@ -20,15 +20,13 @@ import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
 
 import java.awt.*;
-import java.io.IOException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import static deSouches.utils.HorseRider.makeLogFor;
-
 public class DSAgent extends Agent {
     private static final String TAG = "DSAgent";
+
 
     private EnvironmentInterfaceStandard PEI;
     boolean PLeutnant;
@@ -242,7 +240,7 @@ public class DSAgent extends Agent {
                     DSPerceptor.processPercepts(PBeliefBase,percepts);
 
 
-                    // FEEDBACK
+                    // FEEDBACK, result of the last action performed
 
                     propagateFeedback(perceptor, newPercepts, recentIntentionExecuted);
 
@@ -275,7 +273,7 @@ public class DSAgent extends Agent {
                         if(PBeliefBase.getScenario()!=null)
                             PBeliefBase.getScenario().checkEvent((DSAgent) (this.getAgent()),DSScenario._noBlockEvent);
 
-                        // not moving period ++
+                        // not moving period ++, deadlock detection
                     if((myPos.x==PLastPosition.x)&&(myPos.y==PLastPosition.y))
                         PIdleSteps++;
                     else{
@@ -306,6 +304,7 @@ public class DSAgent extends Agent {
                         // vykonani zameru
                         // report uspesneho/neuspesneho ukonceni nasledovani zameru
 
+
                         if(PBeliefBase.getScenario()==null)
                             System.out.println("Scenario: No scenario");
                         else
@@ -316,11 +315,18 @@ public class DSAgent extends Agent {
                         else
                             System.out.println("Intention: "+PIntentionPool.getIntention().description());
 
+                        // report spatrenych pratel, asi skrz mapu, jinak si nepamatuji proc
                         PBeliefBase.getCommander().friendsReport(
                                 (DSAgent) this.getAgent(), perceptor.getFriendsSeen(), PBeliefBase.getStep());
+
                         if((PIntentionPool.getIntention()==null)&&(getScenario()==null))
                             PBeliefBase.getCommander().needJob((DSAgent) this.getAgent());
+
+                        // EXECUTING INTENTION
                         recentIntentionExecuted = PIntentionPool.executeOneIntention((DSAgent) this.getAgent());
+                        // PRINT recentIntention on GUI
+                        PBeliefBase.getGUI().writePlan(recentIntentionExecuted.getRecentPlan());
+
                         if (recentIntentionExecuted != null) {
                             if (recentIntentionExecuted.intentionState() == DSIntention.__Intention_Finished) {
                                 PIntentionPool.removeIntention(recentIntentionExecuted);
@@ -370,15 +376,19 @@ public class DSAgent extends Agent {
                    int number, boolean leutnant){
         super();
 
+
+
             PLeutnant=leutnant;					// in 2020 there will be little bit more roles
             PNumber=number;                   			// but unique number remains
             PEI=ei;                             		// handle to ei (environment to connect the server)
-            PName=name;
+            PName=name;                 // tohle ale prijde s prvnim vemem (a nastavi tak BB/GUI)
             PEntity=entity;
             PIntentionPool=new DSIntentionPool();               // set of intentions
             PSynchronized=new HashMap<DSAgent, Point>();        // ???
 
             PBeliefBase=new DSBeliefBase(this);                 // new BB for the agent
+
+            PBeliefBase.setGUI(dsGUI.createGUI(number));
 
             PBeliefBase.setJADEName(name);                                           // jade name
             PBeliefBase.setIsLeutnant(leutnant);                                     // TODO should be general role in 2020

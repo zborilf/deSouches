@@ -1,7 +1,7 @@
 package dsAgents;
 
 import deSouches.utils.HorseRider;
-import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsMultiagent.dsScenarios.*;
 import dsMultiagent.DSGroup;
 import dsMultiagent.DSGroupPool;
@@ -295,8 +295,4 @@ public class DeSouches extends Agent{
         addBehaviour(rl);
     }
 
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
-        new DeSouches();
-    }
 }

@@ -1,4 +1,4 @@
-package dsAgents.dsReasoningModule.dsBeliefBase;
+package dsAgents.dsBeliefBase;
 
 /*
  Vše, co deSouches ví, vjemy => pozice na mapě, objekty na mapách, úkoly, krok, energie, skore
@@ -7,26 +7,24 @@ package dsAgents.dsReasoningModule.dsBeliefBase;
 
 import dsAgents.DSAgent;
 import dsAgents.DeSouches;
-import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.DSBeliefsIndexes;
-import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.DSRole;
+import dsAgents.dsBeliefBase.dsBeliefs.DSRole;
 import dsAgents.dsPerceptionModule.DSStatusIndexes;
-import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
-import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsMultiagent.DSGroup;
 import dsMultiagent.dsScenarios.DSScenario;
-import eis.PerceptUpdate;
 import eis.iilang.Parameter;
 import eis.iilang.Percept;
 
 import java.awt.*;
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.LinkedList;
+import dsAgents.dsGUI;
 
 public class DSBeliefBase {
 
-
+    private dsGUI PGUI;
 
     private DSMap PMap;
     private DSAgent PAgent;
@@ -52,6 +50,13 @@ public class DSBeliefBase {
     private String PLastAction="unknown";
     private String PLastActionParams="success";
 
+    public void setGUI(dsGUI gui){
+        PGUI=gui;
+    }
+
+    public dsGUI getGUI(){
+        return(PGUI);
+    }
 
     // 0 : __simStart
     // INIT
@@ -70,6 +75,7 @@ public class DSBeliefBase {
     public void setName(Collection<Parameter> parameters){
         String name=parameters.iterator().next().toString();
         PName = name;
+        PGUI.setAgentName(PName);
     }
 
     public String getName(){
@@ -130,6 +136,7 @@ public class DSBeliefBase {
     public void setStep(Collection<Parameter> parameters) {
         int step=Integer.valueOf(parameters.iterator().next().toString());
         PStep=step;
+        PGUI.setStep(step);
     }
 
     public int getStep(){
@@ -139,21 +146,27 @@ public class DSBeliefBase {
 
     // 10 : __lastAction
 
-    // TODO
-
+    public void setLastAction(Collection<Parameter> parameters){
+        String action=parameters.iterator().next().toString();
+        PLastAction=action;
+        PGUI.setLastAction(action);
+    }
 
 
     // 11 : __lastActionParams
 
-    // TODO
-
+    public void setLastActionParams(Collection<Parameter> parameters){
+        String action=parameters.iterator().next().toString();
+        PLastAction=action;
+        PGUI.setLastActionParams(action);
+    }
 
     // 12 : __lastActionResult
 
     public void setLastActionResult(Collection<Parameter> parameters){
         String actionResult=parameters.iterator().next().toString();
         PLastActionResult=DSStatusIndexes.getIndex(actionResult);
-        System.out.println("LAR LAR LAR "+PLastActionResult);
+        PGUI.setLastActionResult(actionResult);
     }
 
     public int getLastActionResult(){
@@ -193,6 +206,7 @@ public class DSBeliefBase {
     public void setEnergy(Collection<Parameter> parameters){
         String energy=parameters.iterator().next().toString();
         PEnergy=Integer.parseInt(energy);
+        PGUI.setEnergy(energy);
     }
 
     public int getEnergy(){
@@ -353,6 +367,8 @@ public class DSBeliefBase {
 
     public void setScenario(DSScenario scenario){
         PScenario=scenario;
+        PGUI.setScenarion(scenario.getName());
+
     }
 
     public DSScenario getScenario(){

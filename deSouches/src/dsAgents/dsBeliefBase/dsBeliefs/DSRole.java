@@ -1,7 +1,5 @@
-package dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs;
+package dsAgents.dsBeliefBase.dsBeliefs;
 
-import dsAgents.dsExecutionModule.dsActions.*;
-import eis.iilang.Parameter;
 import eis.iilang.Percept;
 
 import java.util.*;

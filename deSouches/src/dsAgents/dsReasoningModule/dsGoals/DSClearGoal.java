@@ -2,7 +2,7 @@
 package dsAgents.dsReasoningModule.dsGoals;
 
 import dsAgents.DSAgent;
-import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsExecutionModule.dsActions.DSAction;
 import dsAgents.dsExecutionModule.dsActions.DSClear;
 import dsAgents.dsExecutionModule.dsActions.DSRotateCW;

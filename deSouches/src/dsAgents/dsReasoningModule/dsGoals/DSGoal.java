@@ -3,9 +3,8 @@ package dsAgents.dsReasoningModule.dsGoals;
 
 import dsAgents.DSAgent;
 import dsAgents.dsPerceptionModule.DSStatusIndexes;
-import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
-import dsAgents.dsExecutionModule.dsActions.DSMove;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStar;
 
@@ -82,6 +81,9 @@ public abstract class DSGoal {
         return(PSubGoal);
     }
 
+    public DSPlan getRecentPlan(){
+        return(PRecentPlan);
+    }
 
     public int executionFeedback(int result, DSAgent agent){
         if(PRecentPlan==null)

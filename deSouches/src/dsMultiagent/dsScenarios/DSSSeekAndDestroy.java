@@ -1,7 +1,7 @@
 package dsMultiagent.dsScenarios;
 
 import dsAgents.DSAgent;
-import dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsReasoningModule.dsGoals.DSClearGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoToPosition;
 import dsAgents.dsReasoningModule.dsGoals.DSGoal;

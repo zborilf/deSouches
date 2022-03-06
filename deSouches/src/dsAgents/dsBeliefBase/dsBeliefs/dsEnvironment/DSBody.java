@@ -1,4 +1,4 @@
-package dsAgents.dsReasoningModule.dsBeliefBase.dsBeliefs.dsEnvironment;
+package dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment;
 
 
 import java.awt.*;

@@ -4,6 +4,7 @@ import java.util.LinkedList;
 
 import dsAgents.DSAgent;
 import dsAgents.dsReasoningModule.dsGoals.DSGoal;
+import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 
 public class DSIntention {
 
@@ -62,6 +63,9 @@ public class DSIntention {
             return(false);
     }
 
+    public DSPlan getRecentPlan(){
+        return(PIntentionStack.getFirst().getRecentPlan());
+    }
 
     public DSGoal executeIntention(DSAgent agent) {
 
