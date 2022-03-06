@@ -1,9 +1,11 @@
 package dsAgents;
 
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
+import eis.iilang.Percept;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.LinkedList;
 
 public class dsGUI {
     private JTextField dsgValuePanel;
@@ -21,6 +23,8 @@ public class dsGUI {
     private JTextArea dsgPlan;
     private JPanel dsgValuesPanel;
     private JPanel dsgMap;
+    private JTextArea dsgTextMap;
+    private JTextArea dsgLogText;
     private JTable dsgMapTable;
 
     public void setAgentName(String agentName){
@@ -56,6 +60,13 @@ public class dsGUI {
         Rectangle r=dsgMapTable.getCellRect(2,2,true);
     }
 
+    public void textMapClear(){
+        dsgTextMap.setText("");
+    }
+
+    public void writeTextMap(String text){
+        dsgTextMap.setText(text+"\n");
+    }
 
     public static dsGUI createGUI(int number){
         JFrame frame=new JFrame("GUI for agent "+number);

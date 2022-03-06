@@ -39,16 +39,7 @@ public class DSPerceptor {
                 iterator().next().getParameters().get(0).toString());
     }
 
-    public LinkedList<DSRole> getRolesFromPercepts(Collection<Percept> percepts) {
-        LinkedList<DSRole> roles=new LinkedList();
-        Percept percept;
-        Iterator iterator=percepts.stream().filter(prc -> prc.getName().equals("role")).iterator();
-        while(iterator.hasNext()){
-                percept=(Percept)iterator.next();
-                roles.add(new DSRole(percept));
-        }
-        return(roles);
-    }
+
 
     public String getTeamFromPercepts(Collection<Percept> percepts) {
         return(percepts.stream().filter(prc -> prc.getName().equals("team")).
@@ -252,21 +243,69 @@ Point pp=new Point(Integer.parseInt(percept.getParameters().get(0).toString()),
 
 
     public static void processPercepts(DSBeliefBase BB, PerceptUpdate percepts){
-        Iterator<Percept> newPercepts;
-        newPercepts=percepts.getAddList().iterator();
+
+        BB.getGUI().textMapClear();
+
+
+/*
+     for delete list
+ */
+
+        Iterator<Percept> newDeletePercepts=percepts.getDeleteList().iterator();
+
+        Percept percept;
         String perceptName;
         Collection<Parameter> perceptParams;
-        while(newPercepts.hasNext()) {
-            Percept percept=newPercepts.next();
+
+        while(newDeletePercepts.hasNext()) {
+            percept=newDeletePercepts.next();
             perceptName=percept.getName();
             perceptParams=percept.getParameters();
 
-            System.out.print("new ... "+DSBeliefsIndexes.getIndex(perceptName)+" : ");
-            System.out.println(perceptName+" / "+perceptParams);
+            switch(DSBeliefsIndexes.getIndex(perceptName)){
 
+                case DSBeliefsIndexes.__thing:
+                    BB.deleteThingFromOutlook(perceptParams);
+                    break;
+
+                case DSBeliefsIndexes.__name:
+                    break;
+                case DSBeliefsIndexes.__team:
+                    break;
+                case DSBeliefsIndexes.__teamSize:
+                    break;
+                case DSBeliefsIndexes.__steps:
+                    break;
+                case DSBeliefsIndexes.__step:
+                    break;
+                case DSBeliefsIndexes.__lastAction:
+                    break;
+                case DSBeliefsIndexes.__lastActionParams:
+                    break;
+                case DSBeliefsIndexes.__lastActionResult:
+                    break;
+                case DSBeliefsIndexes.__energy:
+                    break;
+                case DSBeliefsIndexes.__score:
+
+            }
+        }
+
+
+
+        Iterator<Percept> newAddPercepts=percepts.getAddList().iterator();
+
+
+        while(newAddPercepts.hasNext()) {
+            percept=newAddPercepts.next();
+            perceptName=percept.getName();
+            perceptParams=percept.getParameters();
 
             switch(DSBeliefsIndexes.getIndex(perceptName)){
 
+                case DSBeliefsIndexes.__thing:
+                    BB.addThingToOutlook(perceptParams);
+                    break;
 
                 case DSBeliefsIndexes.__name:
                     BB.setName(perceptParams);
@@ -276,6 +315,10 @@ Point pp=new Point(Integer.parseInt(percept.getParameters().get(0).toString()),
                 case DSBeliefsIndexes.__teamSize:
 
                 case DSBeliefsIndexes.__steps:
+
+                case DSBeliefsIndexes.__role:
+                    BB.processRole(perceptParams);
+                    break;
 
                 case DSBeliefsIndexes.__step:
                     BB.setStep(perceptParams);
@@ -302,7 +345,11 @@ Point pp=new Point(Integer.parseInt(percept.getParameters().get(0).toString()),
 
             }
         }
-        System.out.println("========\n\n");
+
+        String outlookString=BB.getOutlook().stringOutlook(BB.getVision());
+        BB.getGUI().writeTextMap(outlookString);
+
+
     }
 
 

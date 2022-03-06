@@ -1,5 +1,6 @@
 package dsAgents.dsBeliefBase.dsBeliefs;
 
+import eis.iilang.Parameter;
 import eis.iilang.Percept;
 
 import java.util.*;
@@ -26,15 +27,24 @@ public class DSRole {
                     Int clearMaxDistance
      */
 
-    public DSRole(Percept percept){
-        String aa=percept.getName();
-        String bb=percept.getParameters().toString();
-        PRoleName=percept.getParameters().get(0).toString();
-        PVision=Integer.valueOf(percept.getParameters().get(1).toString());
-        String pactions=percept.getParameters().get(2).toString();
+    public String getRoleName(){
+        return(PRoleName);
+    }
+
+    public int getVision(){
+        return(PVision);
+    }
+
+    public DSRole(Collection<Parameter> parameters){
+        Iterator i= parameters.iterator();
+
+        PRoleName=i.next().toString();
+        PVision=Integer.valueOf(i.next().toString());
+
+        String pactions=i.next().toString();
         String pactions2=pactions.substring(1,pactions.length()-1);
         PActions = Arrays.asList(pactions2.split("\\s*,\\s*"));
-        String pspeeds=percept.getParameters().get(3).toString();
+        String pspeeds=i.next().toString();
         String pspeeds2=pspeeds.substring(1,pspeeds.length()-1);
         List<String> pspeedsS=Arrays.asList(pspeeds2.split("\\s*,\\s*"));
         PSpeeds=new LinkedList<Integer>();
@@ -42,8 +52,8 @@ public class DSRole {
             PSpeeds.add(Integer.valueOf(sp));
 
 
-        PClearChance=Math.round(Float.valueOf(percept.getParameters().get(4).toString())*100);
-        PClearDistance=Integer.valueOf(percept.getParameters().get(5).toString());
-        System.out.println(bb);
+        PClearChance=Math.round(Float.valueOf(i.next().toString())*100);
+        PClearDistance=Integer.valueOf(i.next().toString());
+
     }
 }

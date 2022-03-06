@@ -41,11 +41,10 @@ public class DSMap {
         return;
     }
 
-
     public DSCell getCellAt(Point position) {
         return (PMap.get(position));
-
     }
+
     public Point getAgentPos() { // Master
         return(new Point(PX,PY));
     }
@@ -491,7 +490,6 @@ public class DSMap {
                             textMap.append("O");
                         if (node.getType() == DSCell.__DSEntity_Friend)
                             textMap.append("F");
-
                         if (node.getType() == DSCell.__DSEntity_Enemy)
                             textMap.append("E");
                         if (node.getType() == DSCell.__DSMarker)

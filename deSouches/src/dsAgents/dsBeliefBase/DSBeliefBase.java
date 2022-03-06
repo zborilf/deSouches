@@ -8,6 +8,8 @@ package dsAgents.dsBeliefBase;
 import dsAgents.DSAgent;
 import dsAgents.DeSouches;
 import dsAgents.dsBeliefBase.dsBeliefs.DSRole;
+import dsAgents.dsBeliefBase.dsBeliefs.DSRoles;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSAgentOutlook;
 import dsAgents.dsPerceptionModule.DSStatusIndexes;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
@@ -19,6 +21,7 @@ import eis.iilang.Percept;
 
 import java.awt.*;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.LinkedList;
 import dsAgents.dsGUI;
 
@@ -27,14 +30,17 @@ public class DSBeliefBase {
     private dsGUI PGUI;
 
     private DSMap PMap;
+    private DSAgentOutlook POutlook;
+
     private DSAgent PAgent;
     private DSGroup PGroup=null;
     private int PStepsTotal;
     private int PTeamSize;
     private int PScore=0;
     private int PStep=0;
-    LinkedList<DSRole> PRoles=null;
-    private int PVision=0;     // obsolete in 2022
+    private DSRoles PRoles;
+    private DSRole PActiveRole=null;
+
     private boolean PIsLeutnant=false;  // obsolete in 2022
     private int PEnergy=0;
     private DeSouches PCommander;
@@ -113,7 +119,14 @@ public class DSBeliefBase {
 
     // 5 : __role
 
-    // TODO
+    public void processRole(Collection<Parameter> parameters){
+        if(parameters.size()==1)
+            PActiveRole=PRoles.getRole(parameters.iterator().next().toString());
+            else{
+                DSRole role=new DSRole(parameters);
+                PRoles.addRole(role);
+        }
+    }
 
 
     // 6 : __actionID
@@ -188,7 +201,24 @@ public class DSBeliefBase {
 
     // 14 : __thing
 
-    // TODO
+    public void addThingToOutlook(Collection<Parameter> parameters){
+        Iterator i=parameters.iterator();
+        POutlook.processAddThing(Integer.valueOf(i.next().toString()),
+                                Integer.valueOf(i.next().toString()),
+                                i.next().toString(),
+                                i.next().toString(),
+                                PStep);
+    }
+
+
+    public void deleteThingFromOutlook(Collection<Parameter> parameters){
+        Iterator i=parameters.iterator();
+        POutlook.processDeleteThing(Integer.valueOf(i.next().toString()),
+                Integer.valueOf(i.next().toString()),
+                i.next().toString(),
+                i.next().toString(),
+                PStep);
+    }
 
 
     // 15 : __task
@@ -273,8 +303,6 @@ public class DSBeliefBase {
 
 
 
-
-
     // POZICE
 
     public Point getPosition() {      // vráti pozici na (skupinové) mapě pro agenta
@@ -291,7 +319,7 @@ public class DSBeliefBase {
 
 
 
-    // IS LEUTNANT?
+    // IS LEUTNANT? ... 2022 - role
 
     public void setIsLeutnant(boolean isLeutnant){
         PIsLeutnant=isLeutnant;
@@ -311,21 +339,14 @@ public class DSBeliefBase {
         return(PCommander);
     }
 
-    // ROLES
-
-    public void setRoles(LinkedList<DSRole> roles){
-        Percept p;
-        PRoles = roles;
-    };
 
     // DOHLED - zastarale 2022, vytahuje se z role
 
-    public void setVision(int range){
-        PVision=range;
-    }
 
     public int getVision(){
-        return(PVision);
+        if(PActiveRole==null)
+            return(0);
+        return(PActiveRole.getVision());
     }
 
     // TELO AGENTA
@@ -346,6 +367,12 @@ public class DSBeliefBase {
 
     public void setMap(DSMap map){
         PMap=map;
+    }
+
+    // ROZHLED
+
+    public DSAgentOutlook getOutlook(){
+        return(POutlook);
     }
 
     // SOCIAL
@@ -447,10 +474,10 @@ public class DSBeliefBase {
 
 
 
-
-
     public DSBeliefBase(DSAgent agent){
         PAgent=agent;
+        PRoles=new DSRoles();
+        POutlook=new DSAgentOutlook();
     }
 
 }

@@ -231,10 +231,7 @@ public class DSAgent extends Agent {
                     DSPerceptor.processPercepts(PBeliefBase, percepts);
 
 
-
                     Collection<Percept> newPercepts=percepts.getAddList();  // TODO ??
-
-                    System.out.println(percepts);
 
 
                     DSPerceptor.processPercepts(PBeliefBase,percepts);
@@ -245,14 +242,15 @@ public class DSAgent extends Agent {
                     propagateFeedback(perceptor, newPercepts, recentIntentionExecuted);
 
                     // MAP UPDATE
+
                     Point myPos = PBeliefBase.getPosition();
 
                     PBeliefBase.getMap().clearArea(PBeliefBase.getVision(), myPos, PBeliefBase.getStep());
 
                     // barriera pro vycisteni mapy v dohledu
                     // while(!PCommander.barrier(PStep,1,(DSAgent)this.getAgent())){}
-                    perceptor.actualizeMap(getMap(), percepts.getAddList(), getMap().getAgentPos((DSAgent) (this.getAgent())),
-                            PBeliefBase.getTeamName(), PBeliefBase.getStep());
+                    perceptor.actualizeMap(getMap(), percepts.getAddList(),
+                            getMap().getAgentPos((DSAgent) (this.getAgent())), PBeliefBase.getTeamName(), PBeliefBase.getStep());
 
 
              //       getMap().printMap(((DSAgent) this.getAgent()).getGroupMasterName());
@@ -272,6 +270,8 @@ public class DSAgent extends Agent {
                     if(!perceptor.seesBlocksInBody(percepts.getAddList()))
                         if(PBeliefBase.getScenario()!=null)
                             PBeliefBase.getScenario().checkEvent((DSAgent) (this.getAgent()),DSScenario._noBlockEvent);
+
+                        //  == DEADLOCK ==
 
                         // not moving period ++, deadlock detection
                     if((myPos.x==PLastPosition.x)&&(myPos.y==PLastPosition.y))
