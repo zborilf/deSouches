@@ -68,9 +68,13 @@ public class dsGUI {
         dsgTextMap.setText(text+"\n");
     }
 
+    public void appendTextMap(String text){
+        dsgTextMap.append(text+"\n");
+    }
+
     public static dsGUI createGUI(int number){
         JFrame frame=new JFrame("GUI for agent "+number);
-        frame.setSize(new Dimension(300,100));
+        frame.setSize(new Dimension(650,100));
         dsGUI gui=new dsGUI();
         frame.setContentPane(gui.dsgMainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

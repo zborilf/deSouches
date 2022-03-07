@@ -36,7 +36,7 @@ public class DSCell {
 
     static Map<Integer, String> _thingTypes=new HashMap<Integer, String>()
     {{
-        put(__DSClear," CC ");
+        put(__DSClear," .. ");
         put(__DSObstacle, " ## ");
         put(__DSEntity_Friend, " FF ");
         put(__DSEntity_Enemy," EE ");

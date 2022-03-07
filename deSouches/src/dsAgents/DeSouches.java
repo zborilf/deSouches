@@ -86,7 +86,7 @@ public class DeSouches extends Agent{
         if(scenario.getTask()!=null) {
             System.out.println("scenario completed: " + scenario.getTask().getName());
             PMasterGroup.releaseGoalArea(scenario.getTask());
-            PMasterGroup.getMap().printMap("Scenario completed");
+         //   PMasterGroup.getMap().printMap("Scenario completed");
         }
             PScenariosActive.remove(scenario);;
             for(DSAgent agent:scenario.getAgentsAllocated()) {

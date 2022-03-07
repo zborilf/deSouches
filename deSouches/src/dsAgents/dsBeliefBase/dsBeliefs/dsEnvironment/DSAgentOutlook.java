@@ -4,53 +4,43 @@ package dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment;
     2022, actual outlook of an agent (process add/delete lists)
  */
 
-import eis.iilang.Parameter;
-
 import java.awt.*;
-import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedList;
 
 public class DSAgentOutlook {
     HashMap<Point, DSCell> POutlook;
-
-
-    Rectangle getScale(){
-        int minx=0;
-        int maxx=0;
-        int miny=0;
-        int maxy=0;
-
-        for(Point point:POutlook.keySet()){
-            if(point.x<minx)
-                minx=point.x;
-            if(point.x>maxx)
-                maxx=point.x;
-            if(point.y<miny)
-                miny=point.y;
-            if(point.y>maxy)
-                maxy=point.y;
-        }
-        return(new Rectangle(minx,miny,maxx-minx+1,maxy-miny+1));
-    }
+    int PStep;
 
     public void processAddThing(int y, int x, String type, String params, int step){
+        PStep=step;
         DSCell cell=new DSCell(x, y, type, params, step);
         POutlook.put(new Point(x,y),cell);
     }
 
     public void processDeleteThing(int y, int x, String type, String params, int step){
-         POutlook.remove(new Point(x,y));
+        PStep=step;
+        POutlook.remove(new Point(x,y));
+    }
+
+    public LinkedList<DSCell> getCellsList(int vision){
+        LinkedList<DSCell> cl=new LinkedList<DSCell>();
+        for(int i = -vision;i <= vision; i++)
+            for (int j = -vision; j <= vision; j++)
+                if(POutlook.get(new Point(i,j))!=null)
+                    cl.add(POutlook.get(new Point(i,j)));
+                else
+                    if(Math.abs(i)+Math.abs(j)<=vision)     // sees nothing
+                    cl.add(new DSCell(i,j,DSCell.__DSClear,PStep));
+        return(cl);
     }
 
     public String stringOutlook(int vision){
-        Rectangle rec;
-        rec=getScale();
 
         String so="";
 
-
-        for(int i=rec.y;i<rec.y+rec.height;i++) {
-            for (int j = rec.x; j < rec.x + rec.width; j++) {
+        for(int i = -vision;i <= vision; i++) {
+            for (int j = -vision; j <= vision; j++) {
                 if(Math.abs(i)+Math.abs(j)>vision)
                     so = so + "    ";
                 else{

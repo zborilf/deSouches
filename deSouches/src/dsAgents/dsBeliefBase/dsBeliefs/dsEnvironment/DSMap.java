@@ -53,6 +53,9 @@ public class DSMap {
         return(PAgentPosition.get(agent));
     }
 
+    public String getOwner(){
+        return(PAgent.getAgentName());
+    }
 
     public static int distance(Point a, Point b) {
         if((a==null)||(b==null))
@@ -421,6 +424,7 @@ public class DSMap {
             if (oldCell.getTimestamp() > cell.getTimestamp()) {
                 return (false);
             }
+        PMap.remove(point);
         PMap.put(point, cell);
 
         // PCells
@@ -450,6 +454,8 @@ public class DSMap {
         return(true);
     }
 
+
+
     public synchronized void printFriends(){
         String st="Map members for "+PAgent.getEntityName();
         Set<DSAgent> agents=((HashMap<DSAgent,Point>)(PAgentPosition.clone())).keySet();
@@ -474,53 +480,27 @@ public class DSMap {
         System.out.println(s);
     }
 
-    public void printMap(String agentName){
+    public String stringMap(){
         DSCell node;
-        StringBuilder textMap = new StringBuilder();
+        String so=PAgentPosition.keySet().toString()+"\n";
+
         for(int j=PYMin;j<=PYMax;j++) {
             for(int i=PXMin;i<=PXMax;i++) {
                 node=PMap.get(new Point(i,j));
                 if(node!=null) {
-                    if((j==0)&&(i==0)) {
-                        textMap.append("X");
+                    if((j==getAgentPos().y)&&(i==getAgentPos().x)) {
+                        so=so+" AA ";
                     }else{
-                        if (node.getType() == DSCell.__DSClear)
-                            textMap.append(".");
-                        if (node.getType() == DSCell.__DSObstacle)
-                            textMap.append("O");
-                        if (node.getType() == DSCell.__DSEntity_Friend)
-                            textMap.append("F");
-                        if (node.getType() == DSCell.__DSEntity_Enemy)
-                            textMap.append("E");
-                        if (node.getType() == DSCell.__DSMarker)
-                            textMap.append("M");
-                        if (node.getType() == DSCell.__DSGoal)
-                            textMap.append("G");
-                        if (node.getType() >= DSCell.__DSDispenser) {
-                            int disType = node.getType() - DSCell.__DSDispenser;
-                            textMap.append(disType);
-                        }
-                        if ((node.getType() >= DSCell.__DSBlock) && (node.getType() < DSCell.__DSDispenser))
-                            textMap.append("B");
+                        so=so+DSCell.getTypeSign(node.getType());
                     }
                 }
                 else {
-                    textMap.append("-");
+                    so=so+" .. ";
                 }
-                if(border.isOutside(new Point(i,j)))
-                    textMap.append("*");
-                textMap.append(" ".repeat(textMap.length()%2));
             }
-            textMap.append(" \n");
+            so=so+" \n";
         }
-        HorseRider.inquire(TAG, "printMap: "+agentName+" Map min: ["+PXMin+","+PYMin+"] max:"+PXMax+","+PYMax+"]\n"+textMap);
-        Point d0=nearestObject(DSCell.__DSDispenser,new Point(PX,PY));
-        Point d1=nearestObject(DSCell.__DSDispenser+1,new Point(PX,PY));
-        Point d2=nearestObject(DSCell.__DSDispenser+2,new Point(PX,PY));
-        Point g=nearestObject(DSCell.__DSGoal,new Point(PX,PY) );
-        printCells();
-        printFriends();
-        HorseRider.inform(TAG, "printMap: "+"Nearest dispenser 0 at "+d0+" d1 at "+d1+" d2 at "+d2+", nearest goal at"+g);
+        return(so);
     }
 
 
@@ -538,7 +518,6 @@ public class DSMap {
         return(true);
     }
 
-
     public void addAgent(DSAgent agent, Point displacement){
         System.out.println("Agent "+agent.getEntityName()+" position was "+agent.getPosition());
         Point pos=new Point((int)(displacement.x+agent.getPosition().getX()),
@@ -552,7 +531,6 @@ public class DSMap {
 
     public DSMap(DSAgent agent){
         PMap=new HashMap<Point, DSCell>();
-     //   PDispensers=new HashMap<Integer,LinkedList<Point>>();
         PX=0; PY=0;
         PXMin=0;PXMax=0;PYMin=0;PYMax=0;
         PCells=new HashMap<Integer,LinkedList<DSCell>>();

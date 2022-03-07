@@ -2,6 +2,7 @@ package dsAgents.dsPerceptionModule;
 
 import dsAgents.dsBeliefBase.DSBeliefBase;
 import dsAgents.dsBeliefBase.dsBeliefs.DSBeliefsIndexes;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSAgentOutlook;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
@@ -130,7 +131,7 @@ public class DSPerceptor {
         while (perceptI.hasNext()) {
             percept = perceptI.next();
 
-Point pp=new Point(Integer.parseInt(percept.getParameters().get(0).toString()),
+        Point pp=new Point(Integer.parseInt(percept.getParameters().get(0).toString()),
         Integer.parseInt(percept.getParameters().get(1).toString()));
             System.out.println("body part " + pp);
 
@@ -185,15 +186,27 @@ Point pp=new Point(Integer.parseInt(percept.getParameters().get(0).toString()),
     }
 
 
-    public boolean actualizeMap(DSMap map, Collection<Percept> percepts, Point agentPos, String PTeamName, int step) {
-        Iterator<Percept> perceptI;
-        Percept percept;
-        DSCell node;
-        int x,y;
-
-//      Mas pravdu, Vaclave, tady by si to zaslouzilo udelat vyrazne lepe
+    public boolean actualizeMap(DSMap map, DSAgentOutlook outlook, Point agentPos, int vision,
+                                String PTeamName, int step) {
 
         clearFriendsList();
+
+        LinkedList<DSCell> cells=outlook.getCellsList(vision); // transfers outlook to linear list of cells
+
+        // in the map the real coords depends on the agent's position
+
+        for(DSCell cell:cells) {
+            if (cell.getType() == DSCell.__DSEntity_Friend)
+                PFriendsSeen.add(new Point(cell.getX(), cell.getY()));
+            DSCell newCell=new DSCell(cell.getY()+agentPos.x,cell.getX()+agentPos.y,
+                    cell.getType(),cell.getTimestamp());
+            map.updateCell(newCell);
+        }
+
+
+        /*
+
+
         perceptI=percepts.stream().filter(prc -> prc.getName().equals("obstacle")).iterator(); //.findFirst().get();
 
         // ted by mel ale vycistit vsechny cely v dohledu, jinak se nesmazou zanikle prekazky
@@ -232,6 +245,9 @@ Point pp=new Point(Integer.parseInt(percept.getParameters().get(0).toString()),
                 map.updateCell(node);
             //}
         }
+
+         */
+
         return(true);
     }
 
@@ -282,6 +298,7 @@ Point pp=new Point(Integer.parseInt(percept.getParameters().get(0).toString()),
                     break;
                 case DSBeliefsIndexes.__lastActionParams:
                     break;
+
                 case DSBeliefsIndexes.__lastActionResult:
                     break;
                 case DSBeliefsIndexes.__energy:
@@ -305,6 +322,8 @@ Point pp=new Point(Integer.parseInt(percept.getParameters().get(0).toString()),
 
                 case DSBeliefsIndexes.__thing:
                     BB.addThingToOutlook(perceptParams);
+
+
                     break;
 
                 case DSBeliefsIndexes.__name:
@@ -347,7 +366,7 @@ Point pp=new Point(Integer.parseInt(percept.getParameters().get(0).toString()),
         }
 
         String outlookString=BB.getOutlook().stringOutlook(BB.getVision());
-        BB.getGUI().writeTextMap(outlookString);
+        BB.getGUI().writeTextMap("OUTLOOK:\n"+outlookString);
 
 
     }

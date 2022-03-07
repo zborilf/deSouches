@@ -56,6 +56,10 @@ public class DSAgent extends Agent {
         return(PBeliefBase.getStep());
     }
 
+    public DSMap getMap(){
+        return(PBeliefBase.getMap());
+    }
+
     public Point getPosition(){
         return(PBeliefBase.getPosition());
     }
@@ -118,9 +122,6 @@ public class DSAgent extends Agent {
                 " skupinu mastra "+group.getMaster());
     }
 
-    public DSMap getMap(){
-        return(PBeliefBase.getMap());
-    }
 
     public void setBody(DSBody body) {PBeliefBase.setBody(body);} // TODO body zvlastni belief
 
@@ -245,23 +246,24 @@ public class DSAgent extends Agent {
 
                     Point myPos = PBeliefBase.getPosition();
 
-                    PBeliefBase.getMap().clearArea(PBeliefBase.getVision(), myPos, PBeliefBase.getStep());
+           //         PBeliefBase.getMap().clearArea(PBeliefBase.getVision(), myPos, PBeliefBase.getStep());
 
                     // barriera pro vycisteni mapy v dohledu
                     // while(!PCommander.barrier(PStep,1,(DSAgent)this.getAgent())){}
-                    perceptor.actualizeMap(getMap(), percepts.getAddList(),
-                            getMap().getAgentPos((DSAgent) (this.getAgent())), PBeliefBase.getTeamName(), PBeliefBase.getStep());
+                    perceptor.actualizeMap(PBeliefBase.getMap(), PBeliefBase.getOutlook(),
+                            PBeliefBase.getMap().getAgentPos((DSAgent) (this.getAgent())), PBeliefBase.getVision(),
+                            PBeliefBase.getTeamName(), PBeliefBase.getStep());
 
+                    PBeliefBase.getGUI().appendTextMap("MAP:"+PBeliefBase.getMap().getOwner()+"\n"+
+                            PBeliefBase.getMap().stringMap());
 
              //       getMap().printMap(((DSAgent) this.getAgent()).getGroupMasterName());
              //       getMap().printCells();
 
                     // REPORT AKTUALNICH TASKU LEUTNANTEM DESOUCHEMU
                     if (PBeliefBase.isLeutnant()) {
-                        HorseRider.inform(TAG, "++++++++++++++++++++ step " + PBeliefBase.getStep() + " +++++++++++++++++++++");
                         PBeliefBase.getCommander().checkDeadlines(PBeliefBase.getStep());
                         PBeliefBase.getCommander().tasksProposed(perceptor.getTasksFromPercepts(percepts.getAddList()),PBeliefBase.getStep());
-                        PBeliefBase.getMap().printMap("map "+getStep());
                     }
 
                     perceptor.getBodyFromPercepts(percepts.getAddList());
