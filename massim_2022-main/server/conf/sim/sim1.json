@@ -4,7 +4,7 @@
     "steps" : 750,
     "randomSeed" : 22,
     "randomFail" : 1,
-    "entities" : {"standard" : 30},
+    "entities" : {"standard" : 5},
     "clusterBounds" : [1,3],
 
     "roles" : "$(roles/standard.json)",

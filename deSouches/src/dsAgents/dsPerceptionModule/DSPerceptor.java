@@ -330,8 +330,10 @@ public class DSPerceptor {
                     BB.setName(perceptParams);
                     break;
                 case DSBeliefsIndexes.__team:
-
+                    break;
                 case DSBeliefsIndexes.__teamSize:
+                    BB.setTeamSize(perceptParams);
+                    break;
 
                 case DSBeliefsIndexes.__steps:
 

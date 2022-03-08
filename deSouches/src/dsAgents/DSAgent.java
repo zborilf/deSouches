@@ -10,6 +10,7 @@ import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsIntention.DSIntention;
 import dsAgents.dsReasoningModule.dsIntention.DSIntentionPool;
 import dsMultiagent.DSGroup;
+import dsMultiagent.DSSynchronize;
 import dsMultiagent.dsScenarios.DSScenario;
 import eis.EnvironmentInterfaceStandard;
 import eis.PerceptUpdate;
@@ -29,6 +30,8 @@ public class DSAgent extends Agent {
 
 
     private EnvironmentInterfaceStandard PEI;
+
+    DSSynchronize PSynchronizer;
     boolean PLeutnant;
 
     private DSBeliefBase PBeliefBase;
@@ -306,20 +309,15 @@ public class DSAgent extends Agent {
                         // vykonani zameru
                         // report uspesneho/neuspesneho ukonceni nasledovani zameru
 
-
-                        if(PBeliefBase.getScenario()==null)
-                            System.out.println("Scenario: No scenario");
-                        else
-                            System.out.println("Scenario: "+PBeliefBase.getScenario().getName());
-
-                        if(PIntentionPool.getIntention()==null)
-                            System.out.println("Intention: No intention");
-                        else
-                            System.out.println("Intention: "+PIntentionPool.getIntention().description());
-
                         // report spatrenych pratel, asi skrz mapu, jinak si nepamatuji proc
-                        PBeliefBase.getCommander().friendsReport(
-                                (DSAgent) this.getAgent(), perceptor.getFriendsSeen(), PBeliefBase.getStep());
+                        PSynchronizer.addObservation(
+                                (DSAgent) this.getAgent(),
+                                PBeliefBase.getStep(),
+                                PBeliefBase.getOutlook().getFriendsSeen(PBeliefBase.getVision()),
+                                PBeliefBase.getTeamSize());
+
+                        //smazto
+                        PBeliefBase.getGUI().appendTextMap(PBeliefBase.getTeamSize()+"/n"+PBeliefBase.getOutlook().getFriendsSeen(PBeliefBase.getVision()).toString());
 
                         if((PIntentionPool.getIntention()==null)&&(getScenario()==null))
                             PBeliefBase.getCommander().needJob((DSAgent) this.getAgent());
@@ -375,11 +373,11 @@ public class DSAgent extends Agent {
 
 
     public DSAgent(String name, DSGroup group, String entity, EnvironmentInterfaceStandard ei, DeSouches commander,
-                   int number, boolean leutnant){
+                   int number, boolean leutnant, DSSynchronize synchronizer){
         super();
 
 
-
+            PSynchronizer=synchronizer;
             PLeutnant=leutnant;					// in 2020 there will be little bit more roles
             PNumber=number;                   			// but unique number remains
             PEI=ei;                             		// handle to ei (environment to connect the server)

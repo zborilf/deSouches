@@ -35,6 +35,20 @@ public class DSAgentOutlook {
         return(cl);
     }
 
+    // list of friend agents in actual outlook
+
+    public LinkedList<Point> getFriendsSeen(int vision){
+        LinkedList<Point> flist=new LinkedList<Point>();
+        for(int i = -vision;i <= vision; i++)
+            for (int j = -vision; j <= vision; j++) {
+                Point point=new Point(i,j);
+                if (POutlook.get(point) != null)
+                    if (POutlook.get(point).getType()==DSCell.__DSEntity_Friend)
+                        flist.add(point);
+            }
+        return(flist);
+    }
+
     public String stringOutlook(int vision){
 
         String so="";

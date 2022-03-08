@@ -106,7 +106,7 @@ public class DSBeliefBase {
         PTeamSize=teamSize;
     }
 
-    protected int getTeamSize() {return(PTeamSize);}
+    public int getTeamSize() {return(PTeamSize);}
 
     // 4 : __steps
 

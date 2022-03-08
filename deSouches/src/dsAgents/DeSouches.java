@@ -27,7 +27,7 @@ public class DeSouches extends Agent{
 
     static EnvironmentInterfaceStandard PEI;
     private int PPopulationSize=0;
-    private DSSynchronize PSynchronize;
+    private DSSynchronize PSynchronizer;
     private DSGroupPool PGroupPool;
     private LinkedList<String> PActiveTasks;
     private HashMap<Integer,LinkedList<DSAgent>> PBarriers;
@@ -77,10 +77,10 @@ public class DeSouches extends Agent{
             INTERFACE
      */
 
-    public synchronized void friendsReport(DSAgent agent, LinkedList<Point> list, int step){
+  /*  public synchronized void friendsReport(DSAgent agent, LinkedList<Point> list, int step){
         PSynchronize.addObservation(agent,step,list);
     }
-
+*/
 
     public synchronized void scenarioCompleted(DSScenario scenario){
         if(scenario.getTask()!=null) {
@@ -251,8 +251,6 @@ public class DeSouches extends Agent{
             boolean leutnant=true;
             Collection<String> entities;
             entities = PEI.getEntities();
-            PPopulationSize=entities.size();
-            PSynchronize=new DSSynchronize(PPopulationSize);
 
             int agentNo = 0;
             HorseRider.inform(TAG, "action: "+"Je treba vytvorit agenty pro ... ");
@@ -260,7 +258,8 @@ public class DeSouches extends Agent{
             for (String entity : entities) {
                 agentName = "Agent" + agentNo++;
                 try {
-                    agent = new DSAgent(agentName, null, entity, PEI, (DeSouches)this.getAgent(),agentNo, leutnant);
+                    agent = new DSAgent(agentName, null, entity, PEI, (DeSouches)this.getAgent(),agentNo,
+                                                leutnant, PSynchronizer);
                     leutnant=false;
                     this.getAgent().getContainerController().acceptNewAgent(agentName, agent);
                     agent.setup();
@@ -279,6 +278,7 @@ public class DeSouches extends Agent{
         super();
 
         DSPercepts.initBlocks();
+        PSynchronizer= new DSSynchronize();
         PGroupPool=new DSGroupPool();
         PActiveTasks=new LinkedList<String>();
         PMasterGroup=null;

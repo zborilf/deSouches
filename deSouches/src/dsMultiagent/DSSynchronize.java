@@ -87,22 +87,21 @@ public class DSSynchronize {
         }
     }
 
-    public synchronized LinkedList addObservation(DSAgent agent, int step, LinkedList<Point>observation){
+    public synchronized LinkedList addObservation(DSAgent agent, int step, LinkedList<Point>observation, int teamSize){
         DSFriendsSeen dsfs=PObservations.get(step);
         if(dsfs==null)
             dsfs=new DSFriendsSeen();
         // agent vidi pratele na vzdalenosti observation
         dsfs.addFriends(agent,observation);
         PObservations.put(step,dsfs);
-        if(dsfs.isComplete(PPopulationSize))
+        if(dsfs.isComplete(teamSize))
             dsfs.synchronizeAgents();
 
         return(null);
     }
 
 
-    public DSSynchronize( int populationSize){
-                PPopulationSize = populationSize;
+    public DSSynchronize(){
                 PObservations = new HashMap<Integer, DSFriendsSeen>();
     }
 }
