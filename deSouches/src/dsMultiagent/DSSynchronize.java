@@ -65,7 +65,7 @@ public class DSSynchronize {
                                 ((!fa.getGroup().isMasterGroup())&&(agent1.getGroup().getNumber()<fa.getGroup().getNumber())))
                         {
                             Point displacement=getGroupDisplacement(agent1.getPosition(), fa.getPosition(), new Point(p.x,p.y));
-
+                            System.out.println(agent1.getEntityName()+" + "+fa.getEntityName()+" - "+displacement);
                             agent1.getGroup().absorbGroup(fa.getGroup(),displacement);
                         }
                     }
@@ -94,8 +94,8 @@ public class DSSynchronize {
         // agent vidi pratele na vzdalenosti observation
         dsfs.addFriends(agent,observation);
         PObservations.put(step,dsfs);
-        if(dsfs.isComplete(teamSize))
-            dsfs.synchronizeAgents();
+  //      if(dsfs.isComplete(teamSize))
+  //          dsfs.synchronizeAgents();             // TODO SYNCHRONIZE
 
         return(null);
     }

@@ -193,14 +193,26 @@ public class DSPerceptor {
 
         LinkedList<DSCell> cells=outlook.getCellsList(vision); // transfers outlook to linear list of cells
 
+
+        // clear map -> seen empty, clear it, if it is older than step
+
+        for(int i = -vision;i <= vision; i++)
+            for (int j = -vision; j <= vision; j++) {
+                if(Math.abs(i)+Math.abs(j)<=vision) {
+                    Point point = new Point(i + agentPos.x, j + agentPos.y);
+                    map.removeOlder(point, step);
+                }
+            }
+
         // in the map the real coords depends on the agent's position
+
 
         for(DSCell cell:cells) {
             if (cell.getType() == DSCell.__DSEntity_Friend)
                 PFriendsSeen.add(new Point(cell.getX(), cell.getY()));
-            DSCell newCell=new DSCell(cell.getY()+agentPos.x,cell.getX()+agentPos.y,
+            DSCell newCell=new DSCell(cell.getX()+agentPos.x,cell.getY()+agentPos.y,
                     cell.getType(),cell.getTimestamp());
-            map.updateCell(newCell);
+            map.addCell(newCell);
         }
 
 
@@ -322,8 +334,6 @@ public class DSPerceptor {
 
                 case DSBeliefsIndexes.__thing:
                     BB.addThingToOutlook(perceptParams);
-
-
                     break;
 
                 case DSBeliefsIndexes.__name:
@@ -367,7 +377,7 @@ public class DSPerceptor {
             }
         }
 
-        String outlookString=BB.getOutlook().stringOutlook(BB.getVision());
+        String outlookString=BB.getOutlook().stringOutlook(BB.getVision(),BB.getName());
         BB.getGUI().writeTextMap("OUTLOOK:\n"+outlookString);
 
 

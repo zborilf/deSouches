@@ -5,34 +5,29 @@ package dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment;
  */
 
 import java.awt.*;
-import java.util.HashMap;
 import java.util.LinkedList;
 
 public class DSAgentOutlook {
-    HashMap<Point, DSCell> POutlook;
+    DSCells POutlook;
     int PStep;
 
-    public void processAddThing(int y, int x, String type, String params, int step){
-        PStep=step;
-        DSCell cell=new DSCell(x, y, type, params, step);
-        POutlook.put(new Point(x,y),cell);
+    public int getStep(){
+        return(PStep);
     }
 
-    public void processDeleteThing(int y, int x, String type, String params, int step){
+    public void processAddThing(int x, int y, String type, String params, int step){
         PStep=step;
-        POutlook.remove(new Point(x,y));
+        DSCell cell=new DSCell(x, y, type, params, step);
+        POutlook.put(cell);
+    }
+
+    public void processDeleteThing(int x, int y, String type, String params, int step){
+        PStep=step;
+        POutlook.removeCell(x,y, DSCell.getThingTypeIndex(type,params));
     }
 
     public LinkedList<DSCell> getCellsList(int vision){
-        LinkedList<DSCell> cl=new LinkedList<DSCell>();
-        for(int i = -vision;i <= vision; i++)
-            for (int j = -vision; j <= vision; j++)
-                if(POutlook.get(new Point(i,j))!=null)
-                    cl.add(POutlook.get(new Point(i,j)));
-                else
-                    if(Math.abs(i)+Math.abs(j)<=vision)     // sees nothing
-                    cl.add(new DSCell(i,j,DSCell.__DSClear,PStep));
-        return(cl);
+        return(POutlook.getInRange(vision));
     }
 
     // list of friend agents in actual outlook
@@ -42,19 +37,18 @@ public class DSAgentOutlook {
         for(int i = -vision;i <= vision; i++)
             for (int j = -vision; j <= vision; j++) {
                 Point point=new Point(i,j);
-                if (POutlook.get(point) != null)
-                    if (POutlook.get(point).getType()==DSCell.__DSEntity_Friend)
-                        flist.add(point);
+                if (POutlook.getKeyType(point,DSCell.__DSEntity_Friend)!=null)
+                       flist.add(point);
             }
         return(flist);
     }
 
-    public String stringOutlook(int vision){
+    public String stringOutlook(int vision, String agentname){
 
         String so="";
 
-        for(int i = -vision;i <= vision; i++) {
-            for (int j = -vision; j <= vision; j++) {
+        for(int j = -vision;j <= vision; j++) {
+            for (int i = -vision; i <= vision; i++) {
                 if(Math.abs(i)+Math.abs(j)>vision)
                     so = so + "    ";
                 else{
@@ -62,7 +56,7 @@ public class DSAgentOutlook {
                         so = so + " AA ";
                     else{
                         if (POutlook.containsKey(new Point(i, j)))
-                            so = so + DSCell.getTypeSign(POutlook.get(new Point(i, j)).getType());
+                            so = so + DSCell.getTypeSign(POutlook.getFirst(new Point(i, j)).getType());
                         else
                             so = so + " .. ";
                     }
@@ -70,11 +64,14 @@ public class DSAgentOutlook {
             }
                 so=so+'\n';
         }
+
+        so=so+getFriendsSeen(vision).toString()+'\n';
+
         return(so);
     }
 
     public DSAgentOutlook(){
-        POutlook=new HashMap<Point, DSCell>();
+        POutlook=new DSCells();
     }
 
 }

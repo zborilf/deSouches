@@ -24,6 +24,7 @@ public class dsGUI {
     private JPanel dsgValuesPanel;
     private JPanel dsgMap;
     private JTextArea dsgTextMap;
+    private JScrollBar scrollBar1;
     private JTextArea dsgLogText;
     private JTable dsgMapTable;
 

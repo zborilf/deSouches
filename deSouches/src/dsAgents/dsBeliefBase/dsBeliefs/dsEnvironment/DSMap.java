@@ -23,7 +23,7 @@ public class DSMap {
 
     private static final String TAG = "DSMap";
  //   int PStep = 0;
-    HashMap<Point, DSCell> PMap;
+    DSCells PMap;
     HashMap<Integer, LinkedList<DSCell>> PCells; // bude to nahashovane podle typu, kazdy typ svuj list
     // DSDispenserPool PDispenserPool; ... predelat horni na LL<DSCellNode> a hotovo
     DSAgent PAgent;
@@ -31,7 +31,7 @@ public class DSMap {
     final static int _maxDistance=5000;
 
     int PY, PX, PXMin, PXMax, PYMin, PYMax;
-    private Border border = new Border();
+   // private Border border = new Border();
 
     void updateXYMinMax(int x, int y) {
         if (x > PXMax) PXMax = x;
@@ -41,9 +41,6 @@ public class DSMap {
         return;
     }
 
-    public DSCell getCellAt(Point position) {
-        return (PMap.get(position));
-    }
 
     public Point getAgentPos() { // Master
         return(new Point(PX,PY));
@@ -57,6 +54,8 @@ public class DSMap {
         return(PAgent.getAgentName());
     }
 
+
+
     public static int distance(Point a, Point b) {
         if((a==null)||(b==null))
             return(_maxDistance);
@@ -68,7 +67,15 @@ public class DSMap {
     }
 
     public synchronized void mergeMaps(DSMap map, Point displacement) {
-        HashMap<Point, DSCell> mapClone=(HashMap<Point, DSCell>)map.getPositions().clone();
+        // 2022 version
+        DSCell newCell;
+        for(DSCell cell:PMap.getCells()) {
+            newCell=new DSCell(cell.getX()+displacement.x,cell.getY()+displacement.y,
+                                                            cell.getType(),cell.getTimestamp());
+            PMap.put(newCell);
+        }
+
+        /*HashMap<Point, DSCell> mapClone=(HashMap<Point, DSCell>)map.getPositions().clone();
         DSCell cell;
         for(Point cellPosition:mapClone.keySet()){
             cell=mapClone.get(cellPosition);
@@ -76,11 +83,11 @@ public class DSMap {
             cell.PY=cell.PY+displacement.y;
          //   updateXYMinMax(cell.PX, cell.PY);
             updateCell(cell);
-        }
+        }*/
         return;
     }
 
-    public HashMap<Point, DSCell> getPositions(){
+    public DSCells getPositions(){
         return PMap;
     }
 
@@ -112,12 +119,11 @@ public class DSMap {
     }
 
     public boolean isObstacleAt(Point position, DSBody agentbody, DSBody body, int step) {
-        if(border.isOutside(position))
-            return(true);
         for(DSCell bodyItem:body.getBodyList()) {
-            DSCell node = PMap.get(new Point(position.x + bodyItem.getX(), position.y + bodyItem.getY()));
+            DSCell node = PMap.getKeyType(
+                        new Point(position.x + bodyItem.getX(), position.y + bodyItem.getY()),
+                            DSCell.__DSObstacle);
             if (node != null) {
-                border.isOutside(node.getPosition());
                 if(isFriendAt(node.getPosition()))
                     return(true);
                 if (isAgentBody(node.getPosition(), agentbody))
@@ -334,98 +340,25 @@ public class DSMap {
     }
 
 
-
-
-    synchronized void removeCell(DSCell cellToRemove){
-        if(cellToRemove==null)
-            return;
-        int type=cellToRemove.getType();
-        if(PCells.get(type)==null)
-            return;
-        LinkedList<DSCell> cellsC=PCells.get(type);
-        if(cellsC==null)
-            return;
-        cellsC=(LinkedList<DSCell>)cellsC.clone();
-        LinkedList<DSCell> newCells=new LinkedList<DSCell>();
-        if(cellsC!=null) {
-            for (DSCell cell : cellsC) {
-                if ((cell.getX() != cellToRemove.getX()) ||
-                        (cell.getY() != cellToRemove.getY()))
-                    newCells.add(cell);
-            }
-            PCells.remove(type);
-            PCells.put(type,newCells);
-        }
+    synchronized public void removeOlder(Point position, int timestamp){
+            PMap.removeOlder(position, timestamp);
     }
 
-    synchronized boolean clearMap(int radius, Point agentPos, int step) {
-        Point point;
-        DSCell cell;
-        updateXYMinMax(agentPos.x-radius,agentPos.y-radius);
-        updateXYMinMax(agentPos.x+radius,agentPos.y+radius);
-
-        for(int j=-radius;j<=radius;j++)
-            for(int i=-radius;i<=radius;i++) {
-                if(Math.abs(i)+Math.abs(j)>radius)continue;
-                point=new Point(agentPos.x+i,agentPos.y+j);
-                if(PMap.containsKey(point)) {
-                    removeCell(PMap.get(point));
-                    PMap.remove(point);
-                    PMap.put(point, new DSCell(point.x, point.y, DSCell.__DSClear, step));
-                }
-            }
-
-        return(true);
+    public void addCell(DSCell cell){
+        PMap.put(cell);
     }
-
-
-    synchronized void clearCells(int radius, Point agentPosition) {
-        try {
-            Iterator<Integer> typesI = ((Iterator<Integer>) (PCells.keySet().iterator()));
-            LinkedList<DSCell> oldList;
-            LinkedList<DSCell> newList;
-            int type;
-            for (Iterator<Integer> iterator = typesI; typesI.hasNext(); ) {
-                type = iterator.next();
-                oldList = (LinkedList<DSCell>) PCells.get(type).clone();
-                newList = new LinkedList<DSCell>();
-                for (DSCell cell : oldList)
-                    if (Math.abs(cell.getX() - agentPosition.x) + Math.abs(cell.getY() - agentPosition.y) > radius)
-                        newList.add(cell);
-                PCells.put(type, newList);
-            }
-        }catch(Exception e){};
-    }
-     /*
-        for(int type:typesI) {
-            oldList = (LinkedList<DSCell>) PCells.get(type).clone();
-            newList = new LinkedList<DSCell>();
-            for (DSCell cell : oldList)
-                if (Math.abs(cell.getX() - agentPosition.x) + Math.abs(cell.getY() - agentPosition.y) > radius)
-                    newList.add(cell);
-            PCells.put(type, newList);
-        }*/
-
-
-
-    public synchronized void clearArea(int radius, Point agentPosition, int step){
-        clearMap(radius, agentPosition, step);
-        clearCells(radius, agentPosition);
-    }
-
 
     public boolean updateCell(DSCell cell) {
         int x=cell.getX();
         int y=cell.getY();
         updateXYMinMax(x, y);
-        Point point = new Point(x, y);
+        /*    Point point = new Point(x, y);
         DSCell oldCell = PMap.get(point);
         if (oldCell != null)
             if (oldCell.getTimestamp() > cell.getTimestamp()) {
                 return (false);
-            }
-        PMap.remove(point);
-        PMap.put(point, cell);
+            }*/
+        PMap.put(cell);
 
         // PCells
 //        System.out.println("++ vkladam pro "+PAgent.getEntityName()+" ... "+cell.cellToString());
@@ -455,38 +388,15 @@ public class DSMap {
     }
 
 
-
-    public synchronized void printFriends(){
-        String st="Map members for "+PAgent.getEntityName();
-        Set<DSAgent> agents=((HashMap<DSAgent,Point>)(PAgentPosition.clone())).keySet();
-        for(DSAgent agent:agents){
-            st=st+"/ "+agent.getAgentName()+"  @ ["+agent.getPosition().x+","+agent.getPosition().y+"] ";
-        }
-        System.out.println(st);
-    }
-
-    public synchronized void printCells(){
-        String s="Objekty na mape "+PAgent.getEntityName();
-        Set<Integer> types=((HashMap<Integer,DSCell>)PCells.clone()).keySet();
-        for(int type:types) {
-            s=s.concat(type + ":");
-            LinkedList<DSCell> cells=(LinkedList<DSCell>)PCells.get(type).clone();
-            if(cells!=null)
-                for (DSCell cell : cells)
-                    if(cell!=null)
-                        s=s.concat("[" + cell.PX + ";" + cell.PY + " |"+cell.getTimestamp()+"],");
-                s=s.concat("\n");
-        }
-        System.out.println(s);
-    }
-
     public String stringMap(){
         DSCell node;
         String so=PAgentPosition.keySet().toString()+"\n";
-
-        for(int j=PYMin;j<=PYMax;j++) {
-            for(int i=PXMin;i<=PXMax;i++) {
-                node=PMap.get(new Point(i,j));
+        Point tlc=PMap.getTLC();     // top left corner
+        Point brc=PMap.getBRC();     // bottom right corner
+        so=so+tlc+" / "+brc+"\n";
+       for(int j=tlc.y;j<=brc.y;j++) {
+            for(int i=tlc.x;i<=brc.x;i++) {
+                node=PMap.getFirst(new Point(i,j));
                 if(node!=null) {
                     if((j==getAgentPos().y)&&(i==getAgentPos().x)) {
                         so=so+" AA ";
@@ -530,70 +440,13 @@ public class DSMap {
     }
 
     public DSMap(DSAgent agent){
-        PMap=new HashMap<Point, DSCell>();
+        PMap=new DSCells();
         PX=0; PY=0;
         PXMin=0;PXMax=0;PYMin=0;PYMax=0;
         PCells=new HashMap<Integer,LinkedList<DSCell>>();
         PAgent=agent;
         PAgentPosition=new HashMap<DSAgent, Point>();
         PAgentPosition.put(agent, new Point(0,0));
-    }
-
-    public void setBorder(Point agentPos, String plannedDirection) {
-        border.addBorder(agentPos,plannedDirection);
-        HorseRider.warn(TAG, "setBorder: "+agentPos+" "+plannedDirection);
-     //   printMap("Border set");
-    }
-
-    private class Border { // TODO: this expects the border to always be box !!!!
-        private boolean westIsSet = false;
-        private boolean eastIsSet = false;
-        private boolean northIsSet = false;
-        private boolean southIsSet = false;
-        private int westBorder;
-        private int eastBorder;
-        private int northBorder;
-        private int southBorder;
-
-        boolean isOutside(Point at) {
-            if (westIsSet && at.getX() <= westBorder) {
-                return true;
-            }
-            if (eastIsSet && at.getX() >= eastBorder) {
-                return true;
-            }
-            if (northIsSet && at.getY() <= northBorder) {
-                return true;
-            }
-            //noinspection RedundantIfStatement
-            if (southIsSet && at.getY() >= southBorder) {
-                return true;
-            }
-            return false;
-        }
-
-        void addBorder(Point agentPos, String direction) {
-            switch (direction) {
-                case "w":
-                    westIsSet = true;
-                    westBorder = agentPos.x - 1;
-                    break;
-                case "e":
-                    eastIsSet = true;
-                    eastBorder = agentPos.x + 1;
-                    break;
-                case "n":
-                    northIsSet = true;
-                    northBorder = agentPos.y - 1;
-                    break;
-                case "s":
-                    southIsSet = true;
-                    southBorder = agentPos.y + 1;
-                    break;
-                default:
-                    break;
-            }
-        }
     }
 
 }
