@@ -54,7 +54,9 @@ public class DSMap {
         return(PAgent.getAgentName());
     }
 
-
+    public int getNOC(){
+        return(PMap.getSize());
+    }
 
     public static int distance(Point a, Point b) {
         if((a==null)||(b==null))
@@ -344,11 +346,11 @@ public class DSMap {
             PMap.removeOlder(position, timestamp);
     }
 
-    public void addCell(DSCell cell){
+    synchronized public void addCell(DSCell cell){
         PMap.put(cell);
     }
 
-    public boolean updateCell(DSCell cell) {
+    synchronized public boolean updateCell(DSCell cell) {
         int x=cell.getX();
         int y=cell.getY();
         updateXYMinMax(x, y);
@@ -388,24 +390,22 @@ public class DSMap {
     }
 
 
-    public String stringMap(){
+    synchronized public String stringMap(){
         DSCell node;
-        String so=PAgentPosition.keySet().toString()+"\n";
+        String so="";
         Point tlc=PMap.getTLC();     // top left corner
         Point brc=PMap.getBRC();     // bottom right corner
-        so=so+tlc+" / "+brc+"\n";
        for(int j=tlc.y;j<=brc.y;j++) {
             for(int i=tlc.x;i<=brc.x;i++) {
                 node=PMap.getFirst(new Point(i,j));
                 if(node!=null) {
                     if((j==getAgentPos().y)&&(i==getAgentPos().x)) {
-                        so=so+" AA ";
                     }else{
                         so=so+DSCell.getTypeSign(node.getType());
                     }
                 }
                 else {
-                    so=so+" .. ";
+                    so=so+" ..";
                 }
             }
             so=so+" \n";

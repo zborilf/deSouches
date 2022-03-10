@@ -58,7 +58,6 @@ public class dsGUI {
 
     public void writePlan(DSPlan plan){
         dsgPlan.setText(plan.plan2text());
-        Rectangle r=dsgMapTable.getCellRect(2,2,true);
     }
 
     public void textMapClear(){

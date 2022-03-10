@@ -36,12 +36,12 @@ public class DSCell {
 
     static Map<Integer, String> _thingTypes=new HashMap<Integer, String>()
     {{
-        put(__DSClear," .. ");
-        put(__DSObstacle, " ## ");
-        put(__DSEntity_Friend, " FF ");
-        put(__DSEntity_Enemy," EE ");
-        put(__DSMarker ," MM ");
-        put(__DSTaskArea, " TT ");
+        put(__DSClear," ..");
+        put(__DSObstacle, " ##");
+        put(__DSEntity_Friend, " FF");
+        put(__DSEntity_Enemy," EE");
+        put(__DSMarker ," MM");
+        put(__DSTaskArea, " TT");
     }};
 
     public static int getThingTypeIndex(String thing, String params){
@@ -64,14 +64,14 @@ public class DSCell {
             return(_thingTypes.get(type));
 
         if((type>=__DSBlock)&&(type<__DSDispenser)){
-            return(" B"+String.valueOf(type-__DSBlock)+" ");
+            return(" B"+String.valueOf(type-__DSBlock)+"");
         }
 
         if((type>=__DSDispenser)){
-            return(" D"+String.valueOf(type-__DSDispenser)+" ");
+            return(" D"+String.valueOf(type-__DSDispenser)+"");
         }
 
-        return(" ?? ");
+        return(" ??");
     }
 
 

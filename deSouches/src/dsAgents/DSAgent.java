@@ -247,6 +247,9 @@ public class DSAgent extends Agent {
 
                     // MAP UPDATE
 
+
+
+
                     Point myPos = PBeliefBase.getPosition();
 
            //         PBeliefBase.getMap().clearArea(PBeliefBase.getVision(), myPos, PBeliefBase.getStep());
@@ -256,6 +259,9 @@ public class DSAgent extends Agent {
                     perceptor.actualizeMap(PBeliefBase.getMap(), PBeliefBase.getOutlook(),
                             PBeliefBase.getMap().getAgentPos((DSAgent) (this.getAgent())), PBeliefBase.getVision(),
                             PBeliefBase.getTeamName(), PBeliefBase.getStep());
+
+                    PBeliefBase.getGUI().appendTextMap("Velikost mapy: "+PBeliefBase.getMap().getNOC()+"\n");
+
 
                     PBeliefBase.getGUI().appendTextMap("MAP:"+PBeliefBase.getMap().getOwner()+"\n"+
                             PBeliefBase.getMap().stringMap());
@@ -297,6 +303,7 @@ public class DSAgent extends Agent {
                                         getScenario().getAgentsAllocatedText());
                             }
 
+
                     // agent disabled? Inform and dont execute
                     if (perceptor.disabled(newPercepts))
                         PBeliefBase.getCommander().agentDisabled((DSAgent) this.getAgent());
@@ -316,8 +323,6 @@ public class DSAgent extends Agent {
                                 PBeliefBase.getOutlook().getFriendsSeen(PBeliefBase.getVision()),
                                 PBeliefBase.getTeamSize());
 
-                        //smazto
-                        PBeliefBase.getGUI().appendTextMap(PBeliefBase.getTeamSize()+"/n"+PBeliefBase.getOutlook().getFriendsSeen(PBeliefBase.getVision()).toString());
 
                         if((PIntentionPool.getIntention()==null)&&(getScenario()==null))
                             PBeliefBase.getCommander().needJob((DSAgent) this.getAgent());
@@ -339,6 +344,7 @@ public class DSAgent extends Agent {
                     }
                 }
             } catch (Exception e) {
+                PBeliefBase.getGUI().appendTextMap("Exception "+e.toString());
                 System.out.println(e.toString());
             }
         }       // END action()

@@ -30,6 +30,14 @@ public class DSAgentOutlook {
         return(POutlook.getInRange(vision));
     }
 
+    public LinkedList<DSCell> getAllAt(Point point){
+        return(POutlook.getAllAt(point));
+    }
+
+    public DSCells getCells(){
+        return(POutlook);
+    }
+
     // list of friend agents in actual outlook
 
     public LinkedList<Point> getFriendsSeen(int vision){
@@ -50,15 +58,15 @@ public class DSAgentOutlook {
         for(int j = -vision;j <= vision; j++) {
             for (int i = -vision; i <= vision; i++) {
                 if(Math.abs(i)+Math.abs(j)>vision)
-                    so = so + "    ";
+                    so = so + "   ";
                 else{
                     if ((j == i) && (i == 0))
-                        so = so + " AA ";
+                        so = so + " AA";
                     else{
                         if (POutlook.containsKey(new Point(i, j)))
                             so = so + DSCell.getTypeSign(POutlook.getFirst(new Point(i, j)).getType());
                         else
-                            so = so + " .. ";
+                            so = so + " ..";
                     }
                 }
             }

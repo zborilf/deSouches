@@ -13,6 +13,10 @@ public class DSCells {
         return(PCells);
     }
 
+    public int getSize(){
+        return(PCells.size());
+    }
+
     // top left corner
     public Point getTLC(){
         if (PCells.isEmpty())
@@ -41,7 +45,7 @@ public class DSCells {
     }
 
 
-    public void put(DSCell element){
+    synchronized  public void put(DSCell element){
         PCells.add(element);
     }
 
@@ -54,7 +58,7 @@ public class DSCells {
             PCells=newList;
     }
 
-    public void removeOlder(Point point, int step) {
+    synchronized public void removeOlder(Point point, int step) {
         LinkedList<DSCell> newList=new LinkedList<DSCell>();
         for(DSCell element:PCells)
             if((element.getPosition().x!=point.x)||(element.getPosition().y!=point.y)||(element.getTimestamp()>step))
@@ -85,8 +89,15 @@ public class DSCells {
         for(DSCell element:PCells)
             if((element.getPosition().x==point.x)&&(element.getPosition().y==point.y))
                 return(element);
-
             return(null);
+    }
+
+    public LinkedList<DSCell> getAllAt(Point point){
+        LinkedList<DSCell> cells=new LinkedList<DSCell>();
+        for(DSCell element:PCells)
+            if((element.getPosition().x==point.x)&&(element.getPosition().y==point.y))
+                cells.add(element);
+        return(cells);
     }
 
     public DSCell getKeyType(Point point,int type){

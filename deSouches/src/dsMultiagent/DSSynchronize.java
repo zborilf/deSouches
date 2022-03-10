@@ -94,8 +94,8 @@ public class DSSynchronize {
         // agent vidi pratele na vzdalenosti observation
         dsfs.addFriends(agent,observation);
         PObservations.put(step,dsfs);
-  //      if(dsfs.isComplete(teamSize))
-  //          dsfs.synchronizeAgents();             // TODO SYNCHRONIZE
+        if(dsfs.isComplete(teamSize))
+            dsfs.synchronizeAgents();
 
         return(null);
     }

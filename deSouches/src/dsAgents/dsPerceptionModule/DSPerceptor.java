@@ -2,10 +2,7 @@ package dsAgents.dsPerceptionModule;
 
 import dsAgents.dsBeliefBase.DSBeliefBase;
 import dsAgents.dsBeliefBase.dsBeliefs.DSBeliefsIndexes;
-import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSAgentOutlook;
-import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
-import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.*;
 import dsAgents.dsBeliefBase.dsBeliefs.DSRole;
 import dsMultiagent.dsTasks.DSTask;
 import dsAgents.dsPerceptionModule.dsSyntax.DSPercepts;
@@ -186,27 +183,32 @@ public class DSPerceptor {
     }
 
 
-    public boolean actualizeMap(DSMap map, DSAgentOutlook outlook, Point agentPos, int vision,
+    synchronized public boolean actualizeMap(DSMap map, DSAgentOutlook outlook, Point agentPos, int vision,
                                 String PTeamName, int step) {
 
         clearFriendsList();
-
-        LinkedList<DSCell> cells=outlook.getCellsList(vision); // transfers outlook to linear list of cells
-
+        DSCells newOutlook=outlook.getCells();
 
         // clear map -> seen empty, clear it, if it is older than step
 
+        LinkedList<DSCell> cells;
+
         for(int i = -vision;i <= vision; i++)
-            for (int j = -vision; j <= vision; j++) {
+            for (int j = -vision+Math.abs(i); Math.abs(j) + Math.abs(i) <= vision; j++) {
                 if(Math.abs(i)+Math.abs(j)<=vision) {
-                    Point point = new Point(i + agentPos.x, j + agentPos.y);
-                    map.removeOlder(point, step);
+                    map.removeOlder(new Point(i + agentPos.x, j + agentPos.y), step);
+                    cells=newOutlook.getAllAt(new Point(i, j));
+                    for(DSCell cell:cells){
+                        DSCell newCell=new DSCell(cell.getX()+agentPos.x,cell.getY()+agentPos.y,
+                                cell.getType(),cell.getTimestamp());
+                        map.updateCell(newCell);
+                    }
                 }
             }
 
         // in the map the real coords depends on the agent's position
 
-
+/*
         for(DSCell cell:cells) {
             if (cell.getType() == DSCell.__DSEntity_Friend)
                 PFriendsSeen.add(new Point(cell.getX(), cell.getY()));
@@ -214,7 +216,7 @@ public class DSPerceptor {
                     cell.getType(),cell.getTimestamp());
             map.addCell(newCell);
         }
-
+*/
 
         /*
 
