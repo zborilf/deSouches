@@ -28,17 +28,17 @@ public class DSSSeekAndDestroy extends DSScenario {
         //PCommander.scenarioCompleted(this);
         if(PState==_Seek) {
             PState = _Destroy;
-            Point direction=PAgent.getMap().objectAroundCell(PAgent.getPosition(),DSCell.__DSObstacle);
+            Point direction=PAgent.getMap().objectAroundCell(PAgent.getMapPosition(),DSCell.__DSObstacle);
             if(direction==null) {
                 initScenario(PAgent.getStep());
                 return;
             }
-            Point targetPosition=new Point(PAgent.getPosition().x+direction.x,PAgent.getPosition().y+direction.y);
+            Point targetPosition=new Point(PAgent.getMapPosition().x+direction.x,PAgent.getMapPosition().y+direction.y);
             if(PAgent.getMap().objectAroundCell(targetPosition,DSCell.__DSEntity_Friend)!=null)
                 initScenario(PAgent.getStep());
             else{
                 Point relDirection=
-                        new Point(direction.x-PAgent.getPosition().x,direction.y-PAgent.getPosition().y);
+                        new Point(direction.x-PAgent.getMapPosition().x,direction.y-PAgent.getMapPosition().y);
                 System.out.println(PAgent.getEntityName() + " Odpalim ve smeru " + relDirection);
                 PAgent.hearOrder(new DSClearGoal(relDirection));
              }

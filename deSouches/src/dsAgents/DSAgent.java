@@ -63,8 +63,12 @@ public class DSAgent extends Agent {
         return(PBeliefBase.getMap());
     }
 
-    public Point getPosition(){
-        return(PBeliefBase.getPosition());
+    public Point getMapPosition(){
+        return(PBeliefBase.getMapPosition());
+    }
+
+    public Point getRealPosition(){
+        return(PBeliefBase.getRealPosition());
     }
 
     public void holdsBlock(int type){
@@ -205,7 +209,6 @@ public class DSAgent extends Agent {
         int actionResult= PBeliefBase.getLastActionResult();
 
         if (recentIntentionExecuted != null){
-                System.out.println("\nResult je "+actionResult);
                 recentIntentionExecuted.intentionExecutionFeedback(actionResult, (DSAgent) this);
         }
     }
@@ -225,15 +228,10 @@ public class DSAgent extends Agent {
                 perceptsCol=PEI.getPercepts(PName,PEntity);
                 percepts = perceptsCol.get(PEntity);
                 if (!(percepts.isEmpty())) {
-                    /*          System.out.println("Agent "+PBeliefBase.getName()+" is in group "+
-                            PBeliefBase.getGroup().getMaster()+" at "+PBeliefBase.getPosition()+
-                            " body "+PBeliefBase.getBody().bodyToString());*/
 
                     // SENSING
 
-
                     DSPerceptor.processPercepts(PBeliefBase, percepts);
-
 
                     Collection<Percept> newPercepts=percepts.getAddList();  // TODO ??
 
@@ -247,10 +245,7 @@ public class DSAgent extends Agent {
 
                     // MAP UPDATE
 
-
-
-
-                    Point myPos = PBeliefBase.getPosition();
+                    Point myPos = PBeliefBase.getMapPosition();
 
            //         PBeliefBase.getMap().clearArea(PBeliefBase.getVision(), myPos, PBeliefBase.getStep());
 
@@ -265,9 +260,6 @@ public class DSAgent extends Agent {
 
                     PBeliefBase.getGUI().appendTextMap("MAP:"+PBeliefBase.getMap().getOwner()+"\n"+
                             PBeliefBase.getMap().stringMap());
-
-             //       getMap().printMap(((DSAgent) this.getAgent()).getGroupMasterName());
-             //       getMap().printCells();
 
                     // REPORT AKTUALNICH TASKU LEUTNANTEM DESOUCHEMU
                     if (PBeliefBase.isLeutnant()) {
@@ -307,8 +299,6 @@ public class DSAgent extends Agent {
                     // agent disabled? Inform and dont execute
                     if (perceptor.disabled(newPercepts))
                         PBeliefBase.getCommander().agentDisabled((DSAgent) this.getAgent());
-
-
                     else
                     {
                         // EXECUTION
@@ -323,15 +313,6 @@ public class DSAgent extends Agent {
                                 PBeliefBase.getOutlook().getFriendsSeen(PBeliefBase.getVision()),
                                 PBeliefBase.getTeamSize());
 
-
-                        if((PIntentionPool.getIntention()==null)&&(getScenario()==null))
-                            PBeliefBase.getCommander().needJob((DSAgent) this.getAgent());
-
-                        // EXECUTING INTENTION
-                        recentIntentionExecuted = PIntentionPool.executeOneIntention((DSAgent) this.getAgent());
-                        // PRINT recentIntention on GUI
-                        PBeliefBase.getGUI().writePlan(recentIntentionExecuted.getRecentPlan());
-
                         if (recentIntentionExecuted != null) {
                             if (recentIntentionExecuted.intentionState() == DSIntention.__Intention_Finished) {
                                 PIntentionPool.removeIntention(recentIntentionExecuted);
@@ -341,6 +322,14 @@ public class DSAgent extends Agent {
                                 PIntentionPool.removeIntention(recentIntentionExecuted);
                             }
                         }
+
+                        if((PIntentionPool.getIntention()==null)&&(getScenario()==null))
+                            PBeliefBase.getCommander().needJob((DSAgent) this.getAgent());
+
+                        // EXECUTING INTENTION
+                        recentIntentionExecuted = PIntentionPool.executeOneIntention((DSAgent) this.getAgent());
+                        // PRINT recentIntention on GUI
+                        PBeliefBase.getGUI().writePlan(recentIntentionExecuted.getRecentPlan());
                     }
                 }
             } catch (Exception e) {

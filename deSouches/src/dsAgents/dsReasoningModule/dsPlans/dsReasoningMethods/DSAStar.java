@@ -165,7 +165,7 @@ public final class DSAStar {
         DSAStarItem goal;
         Point from=open.getFirst().getPosition();
         String AN=agent.getEntityName();
-        System.out.println( "aStar: "+"Pocitam A* pro "+agent.getEntityName()+" jeho origpos je"+agent.getPosition()+
+        System.out.println( "aStar: "+"Pocitam A* pro "+agent.getEntityName()+" jeho origpos je"+agent.getMapPosition()+
                " z grupy "+agent.getGroup().getMaster()+" z pozice "+open.getFirst().getPosition()+" do "+to+
                 " agent body "+agentBody.bodyToString()+" final body "+finalBody.bodyToString());
  //       map.printMap("Astar "+agent.getEntityName());

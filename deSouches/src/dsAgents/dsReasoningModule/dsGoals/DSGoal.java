@@ -38,7 +38,7 @@ public abstract class DSGoal {
 
     DSPlan astarGroup(String planName, int priority, DSAgent agent,Point destination, DSBody body){
         DSMap map=agent.getMap();
-        Point agentPosition=agent.getPosition();
+        Point agentPosition=agent.getMapPosition();
         return(new DSAStar().computePath(
                 planName, priority, map, agentPosition, destination, body, __AStarSteps, agent));
     }
@@ -90,9 +90,6 @@ public abstract class DSGoal {
             return(__DSGNoPlan);
 
         if (result== DSStatusIndexes.__action_success) {
-            System.out.println( "executionFeedback: " + "Agent " + agent.getEntityName() + " action " +
-                    PRecentPlan.getAction().actionText() + " for goal " + this.getGoalName() + " succeeded! Body " +
-                        agent.getBody().bodyToString());//+ " Plan was "+PPlan.plan2text());
             PRecentPlan.externalActionSucceeded(agent);
             PLastStatus = __DSGExecutionSucceeded;
             return (PLastStatus);
@@ -101,7 +98,6 @@ public abstract class DSGoal {
         if (result== DSStatusIndexes.__action_failed_random) {
                 PRecentPlan.externalActionFailed(agent);
                 PLastStatus = __DSGExecutionSucceeded;
-      //      System.out.println( "executionFeedback: " + "Agent " + agent.getEntityName() + " action randomly failed!! ");
                 return (PLastStatus);
         }
 
@@ -109,7 +105,6 @@ public abstract class DSGoal {
             PRecentPlan.externalActionFailed(agent);
             PLastStatus = __DSGExecutionSucceeded;;
             PPlans.remove(PRecentPlan.getName());
-        //    System.out.println( "executionFeedback: " + "Agent " + agent.getEntityName() + " action path failed!! ");
             return (PLastStatus);
         }
 
@@ -117,7 +112,6 @@ public abstract class DSGoal {
             PRecentPlan.externalActionFailed(agent);
             PLastStatus = __DSGMovePathFailed;
             PPlans.remove(PRecentPlan.getName());
-            //    System.out.println( "executionFeedback: " + "Agent " + agent.getEntityName() + " action path failed!! ");
             return (PLastStatus);
         }
 

@@ -17,7 +17,6 @@ import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsMultiagent.DSGroup;
 import dsMultiagent.dsScenarios.DSScenario;
 import eis.iilang.Parameter;
-import eis.iilang.Percept;
 
 import java.awt.*;
 import java.util.Collection;
@@ -29,6 +28,8 @@ public class DSBeliefBase {
 
     private dsGUI PGUI;
 
+    private int PX;
+    private int PY;
     private DSMap PMap;
     private DSAgentOutlook POutlook;
 
@@ -305,12 +306,20 @@ public class DSBeliefBase {
 
     // POZICE
 
-    public Point getPosition() {      // vráti pozici na (skupinové) mapě pro agenta
+    public Point getMapPosition() {      // vráti pozici na (skupinové) mapě pro agenta
         return(PMap.getAgentPos(PAgent));
     }
 
+    public Point getRealPosition(){
+        return(new Point(PX,PY));
+    }
+
     public void moveBy(int PDx, int PDy) {
-        PMap.moveBy(PAgent,PDx,PDy);
+         PMap.moveBy(PAgent,PDx,PDy);
+         PX=PX+PDx;
+         PY=PY+PDy;
+         PGUI.setXY(PX,PY);
+
     }
 
 
@@ -444,7 +453,7 @@ public class DSBeliefBase {
 
         LinkedList<DSAgent> members=(LinkedList<DSAgent>)PAgent.getGroup().getMembers().clone();
         for(DSAgent friend:members){
-            if(isNeighbour(position,friend.getPosition()))
+            if(isNeighbour(position,friend.getMapPosition()))
                 return(true);
         }
         return(true);
@@ -452,7 +461,7 @@ public class DSBeliefBase {
 
 
     public Point nearestObject(DSAgent agent, int type) {
-        return(getMap().nearestObject(type,agent.getPosition()));
+        return(getMap().nearestObject(type,agent.getMapPosition()));
     }
 
     public Point nearestDispenser(int type){
@@ -461,7 +470,7 @@ public class DSBeliefBase {
     }
 
     public Point nearestFreeBlock(int type){
-        Point blockAt=getMap().nearestFreeBlock(type, PAgent.getPosition());
+        Point blockAt=getMap().nearestFreeBlock(type, PAgent.getMapPosition());
         if(blockAt!=null)
                 return(blockAt);
             return(null);
@@ -476,6 +485,8 @@ public class DSBeliefBase {
 
     public DSBeliefBase(DSAgent agent){
         PAgent=agent;
+        PX=0;
+        PY=0;
         PRoles=new DSRoles();
         POutlook=new DSAgentOutlook();
     }

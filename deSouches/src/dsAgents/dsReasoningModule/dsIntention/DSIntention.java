@@ -45,9 +45,12 @@ public class DSIntention {
         if (TLG.goalAchieved()) {
             return (__Intention_Finished);
         }else
-            if((TLG.goalStatus()==DSGoal.__DSGPlanningFailed)||
-                    (TLG.goalStatus()==DSGoal.__DSGExecutionFailed))
-                return(__Intention_Failed);
+            if((
+                    TLG.goalStatus()==DSGoal.__DSGPlanningFailed)||
+                    (TLG.goalStatus()==DSGoal.__DSGExecutionFailed)||
+                    (TLG.goalStatus()==DSGoal.__DSGMovePathFailed))
+                        return(__Intention_Failed);
+
         return (__Intention_InProcess);
     }
 

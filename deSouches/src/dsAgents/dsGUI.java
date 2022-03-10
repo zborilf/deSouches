@@ -1,11 +1,9 @@
 package dsAgents;
 
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
-import eis.iilang.Percept;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.LinkedList;
 
 public class dsGUI {
     private JTextField dsgValuePanel;
@@ -25,6 +23,9 @@ public class dsGUI {
     private JPanel dsgMap;
     private JTextArea dsgTextMap;
     private JScrollBar scrollBar1;
+    private JTextField dsgXYValue;
+    private JTextField dsgXValue;
+    private JTextField dsgYValue;
     private JTextArea dsgLogText;
     private JTable dsgMapTable;
 
@@ -44,6 +45,9 @@ public class dsGUI {
               dsgLAParamsValue.setText(laParams);
     }
 
+    public void setXY(int x, int y) {
+        dsgXYValue.setText(x+" / "+y);
+    }
 
     public void setLastActionResult(String lastAction){
         dsgLAResultValue.setText(lastAction);

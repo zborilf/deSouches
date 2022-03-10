@@ -15,9 +15,9 @@ public class DSODispenserGoalMission {
 
     public int getLength(){
             if(PAgent.getBody().blockAttached(DSCell.__DSBlock+PDispenserType)!=null)
-                        return(DSMap.distance(PAgent.getPosition(),PGoalPosition));
+                        return(DSMap.distance(PAgent.getMapPosition(),PGoalPosition));
         if(PAgent.getBody().blockAttached(DSCell.__DSBlock+PDispenserType)==null)
-            return(DSMap.distance(PAgent.getPosition(),PDispenserPosition)+
+            return(DSMap.distance(PAgent.getMapPosition(),PDispenserPosition)+
                     DSMap.distance(PDispenserPosition,PGoalPosition));
         return(_distanceMax);
     }
@@ -36,7 +36,7 @@ public class DSODispenserGoalMission {
 
     public void printDGM(int type){
         System.out.println("-: shortest for "+type+" dispenser at "+PDispenserPosition+" and goal at "+PGoalPosition+
-                " is with agent "+PAgent.getEntityName()+" at position "+PAgent.getPosition()+"/n TOTAL LENGTH is "+
+                " is with agent "+PAgent.getEntityName()+" at position "+PAgent.getMapPosition()+"/n TOTAL LENGTH is "+
                 getLength());
     }
 

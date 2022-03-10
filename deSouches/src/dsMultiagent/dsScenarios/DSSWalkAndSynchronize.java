@@ -23,7 +23,6 @@ public class DSSWalkAndSynchronize extends DSScenario {
 
     @Override
     public void goalCompleted(DSAgent agent, DSGoal goal) {
-
         if(goal.getGoalName().contentEquals("clearGoal")
                 ||goal.getGoalName().contentEquals("detachAllGoal")) {
             if(PRadius<_RadiusMax)
@@ -43,7 +42,7 @@ public class DSSWalkAndSynchronize extends DSScenario {
         System.out.println(goal.getGoalName());
         if(goal.getGoalName().contentEquals("dsRoam")
                     ||goal.getGoalName().contentEquals("detachAllGoal")) {
-            DSGoal newGoal = new DSGoalRoam(PRadius);//DSGoalRoam();
+            DSGoal newGoal = new DSClearGoal();//DSGoalRoam();
             agent.hearOrder(newGoal);
         }
         if(goal.getGoalName().contentEquals("clearGoal")) {

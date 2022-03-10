@@ -104,9 +104,16 @@ public class DSCells {
         for(DSCell element:PCells)
             if((element.getPosition().x==point.x)&&(element.getPosition().y==point.y)&&(element.getType()==type))
                 return(element);
-
         return(null);
 
+    }
+
+    public LinkedList<DSCell> getAllType(int type){
+        LinkedList<DSCell> cells=new LinkedList<DSCell>();
+        for(DSCell element:PCells)
+            if(element.getType()==type)
+                cells.add(element);
+        return(cells);
     }
 
     public boolean containsKey(Point point){

@@ -2,6 +2,8 @@ package dsAgents.dsReasoningModule.dsGoals;
 
 
 import dsAgents.DSAgent;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsExecutionModule.dsActions.DSClear;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 
 import java.awt.*;
@@ -21,9 +23,20 @@ public class DSGoalRoam extends DSGoal {
 
     public boolean revisePlans(DSAgent agent){
 
-        if(PPlans.containsKey("roam"))
-            return false; // plan exists,  no revision
+        if((PPlans.containsKey("roam"))&&(!PPlans.containsKey("clear"))) {
+            Point direction;
+            direction=agent.getMap().objectAroundCell(agent.getMapPosition(), DSCell.__DSObstacle);
+            if(direction==null)
+                return false; // plan exists,  no revision
+            DSPlan plan=new DSPlan("clear",2);
+            DSClear clearAction=new DSClear(agent.getEI(),direction);
+            plan.appendAction(clearAction);
+            PPlans.put("clear",plan);
+            return(true);
+        }
 
+        if(PPlans.containsKey("roam"))
+            return(false);
 
         // vypocte nahodne cilovy bod na mape ve vzdalenosti PDistance
 
@@ -41,8 +54,8 @@ public class DSGoalRoam extends DSGoal {
         if(quadrant%2==1)
             x=-1;
 
-        gx= x*dx + agent.getPosition().x;
-        gy= y*dy + agent.getPosition().y;
+        gx= x*dx + agent.getMapPosition().x;
+        gy= y*dy + agent.getMapPosition().y;
 
 
    //     PPlan= new DSAStar().computePath(agent.getMap(),agent.getMap().getAgentPos() ,new Point(dx,dy),agent.getBody(),300, agent);

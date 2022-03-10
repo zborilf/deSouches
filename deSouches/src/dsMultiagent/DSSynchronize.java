@@ -64,7 +64,7 @@ public class DSSynchronize {
                         if((agent1.getGroup().isMasterGroup())||
                                 ((!fa.getGroup().isMasterGroup())&&(agent1.getGroup().getNumber()<fa.getGroup().getNumber())))
                         {
-                            Point displacement=getGroupDisplacement(agent1.getPosition(), fa.getPosition(), new Point(p.x,p.y));
+                            Point displacement=getGroupDisplacement(agent1.getMapPosition(), fa.getMapPosition(), new Point(p.x,p.y));
                             System.out.println(agent1.getEntityName()+" + "+fa.getEntityName()+" - "+displacement);
                             agent1.getGroup().absorbGroup(fa.getGroup(),displacement);
                         }

@@ -21,16 +21,18 @@ public class DSClearGoal extends DSGoal {
 
     @Override
     public boolean revisePlans(DSAgent agent) {
-        Point direction=agent.getMap().objectAroundCell(agent.getPosition(), DSCell.__DSObstacle);
+        Point direction;
+        if(PDirection==null)
+            direction=agent.getMap().objectAroundCell(agent.getMapPosition(), DSCell.__DSObstacle);
+        else
+            direction=PDirection;
+
         if(direction==null)
             return(false);
-        System.out.println(agent.getEntityName()+"("+agent.getStep()+") strikes once again");
-        Point relDirection=new Point(direction.x-agent.getPosition().x,direction.y-agent.getPosition().y);
+
         DSPlan plan = new DSPlan("justClear", 1);
-        DSAction clear = new DSClear(agent.getEI(), relDirection);
+        DSAction clear = new DSClear(agent.getEI(), direction);
         plan.appendAction(clear);
-        DSRotateCW anotherAction = new DSRotateCW(agent.getEI());
-        plan.appendAction(anotherAction);
         PPlans.put("justClear", plan);
         return (true);
     }
@@ -39,5 +41,11 @@ public class DSClearGoal extends DSGoal {
         super();
         PDirection=direction;
     }
+
+    public DSClearGoal(){
+        super();
+        PDirection=null;
+    }
+
 
 }

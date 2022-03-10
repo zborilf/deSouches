@@ -12,7 +12,6 @@
 
 package dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment;
 
-import deSouches.utils.HorseRider;
 import dsAgents.DSAgent;
 import dsAgents.dsPerceptionModule.DSPerceptor;
 
@@ -107,7 +106,7 @@ public class DSMap {
         HashMap<DSAgent,Point> agentPositions=(HashMap<DSAgent,Point>)(PAgentPosition.clone());
         Set<DSAgent> agents=agentPositions.keySet();
         for(DSAgent agent:agents){
-            Point agentPos=(Point)agent.getPosition().clone();
+            Point agentPos=(Point)agent.getMapPosition().clone();
             if((position.x==agentPos.x)&&(position.y==agentPos.y))
                 return(true);
         }
@@ -233,21 +232,21 @@ public class DSMap {
 
     public String getFreeNeighbourObject(int objectType, DSAgent agent){
         Point position;
-        position=new Point(agent.getPosition().x+1,agent.getPosition().y);
+        position=new Point(agent.getMapPosition().x+1,agent.getMapPosition().y);
         if(isOjectAt(position, objectType))
-            if(!isSoldierAroundExcept(position,agent.getPosition()))
+            if(!isSoldierAroundExcept(position,agent.getMapPosition()))
             return("e");
-        position=new Point(agent.getPosition().x-1,agent.getPosition().y);
+        position=new Point(agent.getMapPosition().x-1,agent.getMapPosition().y);
         if(isOjectAt(position, objectType))
-            if(!isSoldierAroundExcept(position,agent.getPosition()))
+            if(!isSoldierAroundExcept(position,agent.getMapPosition()))
                 return("w");
-        position=new Point(agent.getPosition().x,agent.getPosition().y+1);
+        position=new Point(agent.getMapPosition().x,agent.getMapPosition().y+1);
         if(isOjectAt(position, objectType))
-            if(!isSoldierAroundExcept(position,agent.getPosition()))
+            if(!isSoldierAroundExcept(position,agent.getMapPosition()))
                 return("s");
-        position=new Point(agent.getPosition().x,agent.getPosition().y-1);
+        position=new Point(agent.getMapPosition().x,agent.getMapPosition().y-1);
         if(isOjectAt(position, objectType))
-            if(!isSoldierAroundExcept(position,agent.getPosition()))
+            if(!isSoldierAroundExcept(position,agent.getMapPosition()))
                 return("n");
 
         return("");
@@ -267,21 +266,19 @@ public class DSMap {
 
     public Point objectAroundCell(Point position, int objectType){// TODO tohle zobecnit na body
 
-        LinkedList<DSCell> objects=PCells.get(objectType);
+        LinkedList<DSCell> cells=new LinkedList<DSCell>();
 
-        if(isPositionInCellList(objects,new Point((int)position.getX()+1,(int)position.getY())))
-            return(new Point((int)position.getX()+1,(int)position.getY()));
+        if(PMap.getKeyType(new Point((int)position.getX()+1,(int)position.getY()),objectType)!=null)
+            return(new Point(1,0));
+        if(PMap.getKeyType(new Point((int)position.getX()-1,(int)position.getY()),objectType)!=null)
+            return(new Point(-1,0));
+        if(PMap.getKeyType(new Point((int)position.getX(),(int)position.getY()+1),objectType)!=null)
+            return(new Point(0,1));
+        if(PMap.getKeyType(new Point((int)position.getX(),(int)position.getY()-1),objectType)!=null)
+            return(new Point(0,-1));
 
-        if(isPositionInCellList(objects,new Point((int)position.getX()-1,(int)position.getY())))
-            return(new Point((int)position.getX()-1,(int)position.getY()));
 
-        if(isPositionInCellList(objects,new Point((int)position.getX(),(int)position.getY()+1)))
-            return(new Point((int)position.getX(),(int)position.getY()+1));
-
-        if(isPositionInCellList(objects,new Point((int)position.getX(),(int)position.getY()-1)))
-            return(new Point((int)position.getX(),(int)position.getY()-1));
-
-        return(null);
+            return(null);
     }
 
 
@@ -429,9 +426,9 @@ public class DSMap {
     }
 
     public void addAgent(DSAgent agent, Point displacement){
-        System.out.println("Agent "+agent.getEntityName()+" position was "+agent.getPosition());
-        Point pos=new Point((int)(displacement.x+agent.getPosition().getX()),
-                (int)(displacement.y+agent.getPosition().getY()));
+        System.out.println("Agent "+agent.getEntityName()+" position was "+agent.getMapPosition());
+        Point pos=new Point((int)(displacement.x+agent.getMapPosition().getX()),
+                (int)(displacement.y+agent.getMapPosition().getY()));
         PAgentPosition.put(agent,pos);
     }
 

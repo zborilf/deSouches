@@ -28,7 +28,7 @@ public class DSGoToPosition extends DSGoal {
         if(PBody==null)
                 PBody=agent.getBody();
 
-        Point agentPos=agent.getPosition();     // asi zbytecne
+        Point agentPos=agent.getMapPosition();     // asi zbytecne
         //    PPlan = new DSAStar().
         //    computePath(agent.getGroup().getGroupMap(), agent.getMap().getAgentPos(), PPosition, PBody,100, agent);
 

@@ -21,7 +21,7 @@ public class DSOptimizer {
     LinkedList<Point> getAgentPositions() {
         LinkedList<Point> agentPositions = new LinkedList<Point>();
         for(DSAgent agent:PAgents)
-            agentPositions.add(agent.getPosition());
+            agentPositions.add(agent.getMapPosition());
         return(agentPositions);
     }
 
