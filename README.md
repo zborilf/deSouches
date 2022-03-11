@@ -11,11 +11,9 @@ Instalace
 ... massim_2022-main/server/run.bat  (java -jar target\server-2020-2.0-jar-with-dependencies.jar \ --monitor 8000)
 
 Napojeni se na server v java
-... Spustit deSouches (projekt na GITu), vyvijime v Idea
-... spousti se jako jade, tedy jade musi byt nalinkovan jako knihovna, pak jade klasicky java spusteni
-...	jade.Boot -nomtp -gui general:dsAgents.DeSouches 
-... pokud to blbne, zkontrolujte, ze ve tride deSouches. java je       PEI = new EnvironmentInterface("C:\\Users\\zbori\\_%_%_EDEN\\GIT_REPOSITORY\\deSouches\\eismassimconfig.json");
-...	spravne nastaveno na umisteni eismassimconfig.json
+... Spustit deSouches (projekt na GITu), vyvijime v Ideas
+... Nutno nainstalovat [jade](https://medium.com/@jmackie97/setting-up-jade-with-intellij-2406f0495e9) a massim a obě knihovny nalinkovat
+...	jade.Boot -nomtp -gui general:dsAgents.DeSouches (jdk 17)
 ... pokud jede Server (volba scenare, at to jede po iteracich), tak by se mely objevovat vypisy, co ma na senzorech za data
 ... agenti nic nedelaj, protoze je to stare pro predminuly rocnik, ale zaklad by tam mel byt
 ... tymy agentu pracuji na spolecne veci, ktera je koordinovana automatem
