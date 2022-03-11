@@ -285,7 +285,7 @@ public class DeSouches extends Agent{
         PScenariosActive=new LinkedList<DSScenario>();
         PBarriers=new HashMap<Integer,LinkedList<DSAgent>>();
         try {
-            PEI = new EnvironmentInterface("C:\\Users\\zbori\\_%_%_EDEN\\GIT_REPOSITORY\\deSouches\\eismassimconfig.json");
+            PEI = new EnvironmentInterface("eismassimconfig.json");
             PEI.start();
         } catch (ManagementException e) {
             HorseRider.warn(TAG, "DeSouches: Something failed!", e);
