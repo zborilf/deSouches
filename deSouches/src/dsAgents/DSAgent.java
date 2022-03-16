@@ -28,12 +28,9 @@ import java.util.Map;
 public class DSAgent extends Agent {
     private static final String TAG = "DSAgent";
 
-
     private EnvironmentInterfaceStandard PEI;
 
-    DSSynchronize PSynchronizer;
     boolean PLeutnant;
-
     private DSBeliefBase PBeliefBase;
     private String PName;
     private String PEntity;
@@ -64,12 +61,9 @@ public class DSAgent extends Agent {
     }
 
     public Point getMapPosition(){
-        return(PBeliefBase.getMapPosition());
+        return(PBeliefBase.getAgentPosition());
     }
 
-    public Point getRealPosition(){
-        return(PBeliefBase.getRealPosition());
-    }
 
     public void holdsBlock(int type){
         PBeliefBase.setHoldsBolockType(type);
@@ -115,9 +109,6 @@ public class DSAgent extends Agent {
         return(PBeliefBase.getCommander());
     }
 
-    public String getGroupMasterName(){
-        return(PBeliefBase.getGroup().getMaster());
-    }
 
     public DSGroup getGroup(){
         return(PBeliefBase.getGroup());
@@ -125,8 +116,7 @@ public class DSAgent extends Agent {
 
     public void setGroup(DSGroup group){
         PBeliefBase.setGroup(group);
-        HorseRider.inform(TAG, "setGroup: "+"Nastavil jsem atentovi "+PBeliefBase.getName()+
-                " skupinu mastra "+group.getMaster());
+        PBeliefBase.setMap(group.getMap());
     }
 
 
@@ -142,6 +132,11 @@ public class DSAgent extends Agent {
     public int getNumber(){
         return(PNumber);
     }
+
+    public boolean standsAtRoleZone(){
+        return(PBeliefBase.standsAtRoleZone());
+    }
+
 
 
     /*
@@ -177,12 +172,12 @@ public class DSAgent extends Agent {
             return(false);
     }
 
-    public void moveBy(int Dx, int Dy){
-        PBeliefBase.moveBy(Dx,Dy);
+    public void setActualRole(String role){
+        PBeliefBase.setRole(role);
     }
 
-    public Point getNearestObject(int objectType){
-        return(PBeliefBase.nearestObject(this,objectType));
+    public String getActualRole(){
+        return(PBeliefBase.getAcualRole());
     }
 
     public Point getNearestGoal(){
@@ -195,6 +190,14 @@ public class DSAgent extends Agent {
 
     public Point nearestFreeBlock(int blockType){
         return(PBeliefBase.nearestFreeBlock(blockType));
+    }
+
+    public void setGUIFocus(){
+        PBeliefBase.setGUIFocus(true);
+    }
+
+    public void removeGUIFocus(){
+        PBeliefBase.setGUIFocus(false);
     }
 
     /*
@@ -245,7 +248,7 @@ public class DSAgent extends Agent {
 
                     // MAP UPDATE
 
-                    Point myPos = PBeliefBase.getMapPosition();
+                    Point myPos = PBeliefBase.getAgentPosition();
 
            //         PBeliefBase.getMap().clearArea(PBeliefBase.getVision(), myPos, PBeliefBase.getStep());
 
@@ -255,11 +258,39 @@ public class DSAgent extends Agent {
                             PBeliefBase.getMap().getAgentPos((DSAgent) (this.getAgent())), PBeliefBase.getVision(),
                             PBeliefBase.getTeamName(), PBeliefBase.getStep());
 
-                    PBeliefBase.getGUI().appendTextMap("Velikost mapy: "+PBeliefBase.getMap().getNOC()+"\n");
+                    // standing at goal/role zone, synchronize abs position!!
+
+                    if(PBeliefBase.getSynchronizationNeeded()){
+                        try {
+                            int spx = PBeliefBase.getSyncronizationPointX();
+                            int spy = PBeliefBase.getSyncronizationPointY();
+                            DSSynchronize synchronizer = PBeliefBase.getSynchronizer();
+                            DSMap newMap = synchronizer.synchronizePosition((DSAgent) this.getAgent(), spx, spy);
+                            PBeliefBase.setMap(newMap);
+                        /*
+                        PBeliefBase.setMap(
+                               PBeliefBase.getSynchronizer().synchronizePosition((DSAgent)this.getAgent(),
+                                       PBeliefBase.getSyncronizationPointX(),
+                                       PBeliefBase.getSyncronizationPointY()));*/
+                            PBeliefBase.synchronizationDone();
+                        }catch(Exception e){
+                            System.out.println("exc "+e.toString());
+                            }
+                    }
 
 
-                    PBeliefBase.getGUI().appendTextMap("MAP:"+PBeliefBase.getMap().getOwner()+"\n"+
-                            PBeliefBase.getMap().stringMap());
+                    if(PBeliefBase.getGUIFocus()) {
+
+
+
+                        PBeliefBase.getGUI().setXY(PBeliefBase.getAgentPosition().x,
+                                                            PBeliefBase.getAgentPosition().y);
+                        PBeliefBase.getGUI().setTextMap("MAP:" +
+                                PBeliefBase.getMap().getOwner() + "\n" +
+                                PBeliefBase.getMap().isMasterMap() + "\n" +
+                                PBeliefBase.getAgentPosition()+"\n"+
+                                PBeliefBase.getMap().stringMap());
+                    }
 
                     // REPORT AKTUALNICH TASKU LEUTNANTEM DESOUCHEMU
                     if (PBeliefBase.isLeutnant()) {
@@ -289,10 +320,10 @@ public class DSAgent extends Agent {
                     if(getScenario().checkDeadlock()){
                                 // vsichni clenove tymu se nehybou dele, nez je stanoveny deadlock limit
                             getCommander().scenarioFailed(PBeliefBase.getScenario());
-                            System.out.println(getEntityName()+" DEADLOCK pro " +
-                                  //  "task "+getScenario().getTask().getName()+
-                                    " group members "+
-                                        getScenario().getAgentsAllocatedText());
+                        //    System.out.println(getEntityName()+" DEADLOCK pro " +
+                        //                  "task "+getScenario().getTask().getName()+
+                        //                  " group members "
+                        //                  getScenario().getAgentsAllocatedText());
                             }
 
 
@@ -307,7 +338,7 @@ public class DSAgent extends Agent {
                         // report uspesneho/neuspesneho ukonceni nasledovani zameru
 
                         // report spatrenych pratel, asi skrz mapu, jinak si nepamatuji proc
-                        PSynchronizer.addObservation(
+                        PBeliefBase.getSynchronizer().addObservation(
                                 (DSAgent) this.getAgent(),
                                 PBeliefBase.getStep(),
                                 PBeliefBase.getOutlook().getFriendsSeen(PBeliefBase.getVision()),
@@ -329,11 +360,13 @@ public class DSAgent extends Agent {
                         // EXECUTING INTENTION
                         recentIntentionExecuted = PIntentionPool.executeOneIntention((DSAgent) this.getAgent());
                         // PRINT recentIntention on GUI
-                        PBeliefBase.getGUI().writePlan(recentIntentionExecuted.getRecentPlan());
+
+                        if(PBeliefBase.getGUIFocus())
+                            PBeliefBase.getGUI().writePlan(recentIntentionExecuted.getRecentPlan());
+
                     }
                 }
             } catch (Exception e) {
-                PBeliefBase.getGUI().appendTextMap("Exception "+e.toString());
                 System.out.println(e.toString());
             }
         }       // END action()
@@ -368,11 +401,11 @@ public class DSAgent extends Agent {
 
 
     public DSAgent(String name, DSGroup group, String entity, EnvironmentInterfaceStandard ei, DeSouches commander,
-                   int number, boolean leutnant, DSSynchronize synchronizer){
+                   int number, boolean leutnant, DSSynchronize synchronizer, dsGUI gui, boolean guiFocus){
         super();
 
 
-            PSynchronizer=synchronizer;
+
             PLeutnant=leutnant;					// in 2020 there will be little bit more roles
             PNumber=number;                   			// but unique number remains
             PEI=ei;                             		// handle to ei (environment to connect the server)
@@ -381,9 +414,10 @@ public class DSAgent extends Agent {
             PIntentionPool=new DSIntentionPool();               // set of intentions
             PSynchronized=new HashMap<DSAgent, Point>();        // ???
 
-            PBeliefBase=new DSBeliefBase(this);                 // new BB for the agent
+            PBeliefBase=new DSBeliefBase(this, synchronizer);                 // new BB for the agent
 
-            PBeliefBase.setGUI(dsGUI.createGUI(number));
+            PBeliefBase.setGUI(gui);
+            PBeliefBase.setGUIFocus(guiFocus);
 
             PBeliefBase.setJADEName(name);                                           // jade name
             PBeliefBase.setIsLeutnant(leutnant);                                     // TODO should be general role in 2020

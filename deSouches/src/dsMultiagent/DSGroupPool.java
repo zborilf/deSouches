@@ -35,7 +35,6 @@ public class DSGroupPool {
         for(DSGroup group:groups){
               if(group.isCapable(task, priority)) {
                 capableGroups.add(group);
-                HorseRider.inform(TAG, "getCapableGroups: "+"Skupina " + group.getMaster() + " dokaze " + task.getTypesNeeded());
             }
         }
         return(capableGroups);

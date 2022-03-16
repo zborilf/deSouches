@@ -23,7 +23,7 @@ public class DSAttach extends dsAgents.dsExecutionModule.dsActions.DSAction {
     @Override
     public void succeededEffect(DSAgent agent){
         Point direction= DSPerceptor.getPositionFromDirection(PDirection);
-        Point agentPosition=agent.getMap().getAgentPos();
+        Point agentPosition=agent.getMap().getOwnerAgentPos();
         Point attaching=new Point(direction.x+agentPosition.x,direction.y+agentPosition.y);
         // TODO takhle to ma byt ... DSCell cell=agent.getMap().getCellAt(attaching);
         DSCell cell=new DSCell(direction.x,direction.y,DSCell.__DSBlock+PBlockType,0);

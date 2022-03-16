@@ -117,13 +117,10 @@ public abstract class DSGoal {
 
 
         // a ted vsechny ostatni ...
-        System.out.println( "executionFeedback: " + "Agent " + agent.getEntityName() + "result: "+result);
         PRecentPlan.externalActionFailed(agent);
         PPlans.remove(PRecentPlan.getName());
         PLastStatus=__DSGExecutionFailed;
 
-        System.out.println("executionFeedback: "+"Agent "+agent.getEntityName()+" action failed!! "+result+
-                " body "+agent.getBody().bodyToString()+ " plan:"+PRecentPlan.plan2text());
         // prozatim kazdy dalsi druh failu bude mit za nasledek pad planu (a pripadne preplanovani
 
         return(PLastStatus);
@@ -159,9 +156,6 @@ public abstract class DSGoal {
             PLastStatus = __DSGPlanningFailed;
             return (PLastStatus);
         }
-
-        System.out.println(agent.getEntityName()+"$"+agent.getStep()+" (body "+agent.getBody().bodyToString()+
-                "$ "+agent.getStep()+") odpaluje plan pro "+this.getGoalName()+" P:"+chosenPlan.plan2text());
 
 
         if (!chosenPlan.executeOneStep(agent)) {

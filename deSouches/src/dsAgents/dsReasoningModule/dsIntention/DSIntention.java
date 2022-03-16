@@ -62,7 +62,6 @@ public class DSIntention {
             PIntentionStack.getFirst().executionFeedback(actionResult, agent);
             return(true);
         }
-         System.out.println("Agent "+agent.getEntityName()+" does not need feedback");
             return(false);
     }
 

@@ -24,14 +24,17 @@ public class DeSouches extends Agent{
     private static final String TAG = "DeSouches";
     private static final int _timeNeeded=80;
     private static final int _busyAgentsLimit=8;
+    private dsGUI PGUI;
+    private DSAgent PGUIFocus;
 
     static EnvironmentInterfaceStandard PEI;
     private int PPopulationSize=0;
     private DSSynchronize PSynchronizer;
     private DSGroupPool PGroupPool;
     private LinkedList<String> PActiveTasks;
+    private HashMap<String,DSAgent> PRegisteredAgents;
+
     private HashMap<Integer,LinkedList<DSAgent>> PBarriers;
-    private DSGroup PMasterGroup;
 
     private LinkedList<DSScenario> PScenariosActive;
 
@@ -49,10 +52,20 @@ public class DeSouches extends Agent{
     }
 
     public void groupExtendedBy(DSGroup extendedGroup, DSGroup by){
-        if(by==PMasterGroup)
-            PMasterGroup=extendedGroup;
-        HorseRider.inquire(TAG, "groupExtended: "+"ACTUAL GROUPS");
-        PGroupPool.printGroups();
+    //    if(by==PMasterGroup)
+    //        PMasterGroup=extendedGroup;
+
+        if(extendedGroup.isMasterGroup())
+            System.out.println("MasterGroupExtended: ");
+        else
+            System.out.println("groupExtended: ");
+
+        extendedGroup.printGroup();
+        System.out.println(" by group ");
+        by.printGroup();
+        System.out.println(" step "+extendedGroup.getMembers().getFirst().getStep());
+
+//        PGroupPool.printGroups();
     }
 
     /*
@@ -85,7 +98,7 @@ public class DeSouches extends Agent{
     public synchronized void scenarioCompleted(DSScenario scenario){
         if(scenario.getTask()!=null) {
             System.out.println("scenario completed: " + scenario.getTask().getName());
-            PMasterGroup.releaseGoalArea(scenario.getTask());
+            PSynchronizer.getMasterGroup().releaseGoalArea(scenario.getTask());
          //   PMasterGroup.getMap().printMap("Scenario completed");
         }
             PScenariosActive.remove(scenario);;
@@ -141,25 +154,12 @@ public class DeSouches extends Agent{
 
     int getBusyAgents(){
 
-        if(PMasterGroup==null)
+        if(PSynchronizer.getMasterGroup()==null)
             return(0);
-        return(PMasterGroup.getBusyAgents(2).size());
+        return(PSynchronizer.getMasterGroup().getBusyAgents(2).size());
     }
 
     public synchronized boolean tasksProposed(LinkedList<DSTask> tasks, int step){
-
-        // pouze overi, zdali pro nektery task je mastergrupa, nebo nejaka grupa, pokud jeste mastergrupa nebyla
-        // ustavena vhodna, schopna. Pokud je, necha vytvorit patricny scenar
-
-        System.out.println("NoGroups = "+PGroupPool.getGroups().size());
-        System.out.println("NoGroupsActive = "+PScenariosActive.size());
-        System.out.println("Busy agents = "+getBusyAgents());
-        if(PMasterGroup!=null)
-            System.out.println("MasterGroup is "+PMasterGroup.getMaster());
-
-
-     //   if(PScenariosActive.size()>0)
-     //       return(false);
 
 
         if(tasks.size()==0)
@@ -184,21 +184,15 @@ public class DeSouches extends Agent{
                 if (!PActiveTasks.contains(task.getName()))
 
                     // jen pro dva, typ 1 linearni, typ 2 na bok, linearni
-                    if (PMasterGroup != null) {
-                        if (PMasterGroup.isCapable(task, 2)) {
-                            chosenGroup = PMasterGroup;
+                    PSynchronizer.getMasterGroup();
+                    if (PSynchronizer.getMasterGroup() != null) {
+                        if (PSynchronizer.getMasterGroup().isCapable(task, 2)) {
+                            chosenGroup = PSynchronizer.getMasterGroup();
                         } else
                             chosenGroup = null;
-                        HorseRider.inform(TAG, "taskActive: MasterGroup je grupa " + PMasterGroup.getMaster() +
-                                " / " + PMasterGroup.getMembers().size());
-                    } else {
-                        capableGroups = PGroupPool.getCapableGroups(task, 2);
-                        if (capableGroups.size() > 0) {
-                            chosenGroup = capableGroups.getFirst(); // TODO neco chytrejsiho
-                            PMasterGroup = chosenGroup;
-                            PMasterGroup.setMasterGroup();
-                        }
+
                     }
+
 
                 if (chosenGroup != null) {
 
@@ -252,14 +246,20 @@ public class DeSouches extends Agent{
             Collection<String> entities;
             entities = PEI.getEntities();
 
+            PGUI=dsGUI.createGUI(0, (DeSouches)this.getAgent());
+
             int agentNo = 0;
             HorseRider.inform(TAG, "action: "+"Je treba vytvorit agenty pro ... ");
+            boolean guiFocus=true;
 
             for (String entity : entities) {
                 agentName = "Agent" + agentNo++;
                 try {
                     agent = new DSAgent(agentName, null, entity, PEI, (DeSouches)this.getAgent(),agentNo,
-                                                leutnant, PSynchronizer);
+                                                leutnant, PSynchronizer, PGUI, guiFocus);
+                    if(guiFocus)
+                        PGUIFocus=agent;
+                    guiFocus=false;
                     leutnant=false;
                     this.getAgent().getContainerController().acceptNewAgent(agentName, agent);
                     agent.setup();
@@ -274,17 +274,34 @@ public class DeSouches extends Agent{
         }
     }
 
+    public void registerAgent(String agentName, DSAgent agent){
+        if(PRegisteredAgents.containsKey(agentName))
+            return;
+        PRegisteredAgents.put(agentName, agent);
+        PGUI.registerAgent(agentName);
+    }
+
+    public void changeGUIFocus(String agentName){
+        if(PRegisteredAgents.containsKey(agentName)) {
+            PGUIFocus.removeGUIFocus();
+            PGUIFocus = PRegisteredAgents.get(agentName);
+            PGUIFocus.setGUIFocus();
+            PGUI.setAgentName(agentName);
+        }
+    }
+
     public DeSouches() {
         super();
 
         DSPercepts.initBlocks();
+        PRegisteredAgents=new HashMap<String, DSAgent>();
         PSynchronizer= new DSSynchronize();
         PGroupPool=new DSGroupPool();
         PActiveTasks=new LinkedList<String>();
-        PMasterGroup=null;
         PScenariosActive=new LinkedList<DSScenario>();
         PBarriers=new HashMap<Integer,LinkedList<DSAgent>>();
         try {
+
             PEI = new EnvironmentInterface("C:\\Users\\zbori\\_%_%_EDEN\\GIT_REPOSITORY\\deSouches\\eismassimconfig.json");
             PEI.start();
         } catch (ManagementException e) {

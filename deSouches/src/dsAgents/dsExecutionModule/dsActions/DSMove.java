@@ -21,9 +21,12 @@ public class DSMove extends dsAgents.dsExecutionModule.dsActions.DSAction {
     int PDx=0;
     int PDy=0;
 
+    int PLAStep=0;
+
     @Override
     public DSGoal execute(DSAgent agent) {
         Action a = new Action("move", new Identifier(PDirection));
+        PLAStep=agent.getStep();
         try {
             agent.getEI().performAction(agent.getJADEAgentName(), a);
         } catch (ActException e) {
@@ -43,11 +46,10 @@ public class DSMove extends dsAgents.dsExecutionModule.dsActions.DSAction {
         return(new DSAStarItem(newPosition,item,this,body,0,0));
     }
 
-    public void succeededEffect(DSAgent agent){
-
-        DSMap map=agent.getMap();
-        map.moveBy(PDx,PDy);
-        agent.moveBy(PDx,PDy);
+    synchronized public void succeededEffect(DSAgent agent){
+        if((agent.getStep()-PLAStep)>1)
+                System.out.println("!!! "+agent.getEntityName()+" v kroku "+agent.getStep()+" prodleva "+(agent.getStep()-PLAStep));
+        agent.getMap().moveBy(agent, PDx,PDy);
     }
 
     @Override

@@ -23,7 +23,6 @@ public class DSClear extends DSAction {
 
         Action a = new Action("clear", new Numeral(Pp.x), new Numeral(Pp.y));
         try {
-            System.out.println(agent.getEntityName()+" BUM (step "+agent.getStep()+"):"+Pp);
             agent.getEI().performAction(agent.getJADEAgentName(), a);
         } catch (ActException e) {
             return(new DSGoalFalse());

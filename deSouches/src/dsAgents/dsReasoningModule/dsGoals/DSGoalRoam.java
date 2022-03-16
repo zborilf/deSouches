@@ -3,6 +3,7 @@ package dsAgents.dsReasoningModule.dsGoals;
 
 import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsExecutionModule.dsActions.DSAdopt;
 import dsAgents.dsExecutionModule.dsActions.DSClear;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 
@@ -23,6 +24,17 @@ public class DSGoalRoam extends DSGoal {
 
     public boolean revisePlans(DSAgent agent){
 
+        if(agent.standsAtRoleZone()){
+            if(agent.getActualRole().compareTo("digger")!=0) {
+                // standing at role zone and is not 'digger', make high priority plan to change it
+                DSPlan plan = new DSPlan("set role digger", 2);
+                DSAdopt adoptAction = new DSAdopt(agent.getEI(), "digger");
+                plan.appendAction(adoptAction);
+                PPlans.put(plan.getName(), plan);
+                return (true);
+            }
+        }
+
         if((PPlans.containsKey("roam"))&&(!PPlans.containsKey("clear"))) {
             Point direction;
             direction=agent.getMap().objectAroundCell(agent.getMapPosition(), DSCell.__DSObstacle);
@@ -31,7 +43,7 @@ public class DSGoalRoam extends DSGoal {
             DSPlan plan=new DSPlan("clear",2);
             DSClear clearAction=new DSClear(agent.getEI(),direction);
             plan.appendAction(clearAction);
-            PPlans.put("clear",plan);
+            PPlans.put(plan.getName(),plan);
             return(true);
         }
 

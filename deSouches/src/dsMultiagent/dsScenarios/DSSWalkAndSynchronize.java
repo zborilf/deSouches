@@ -39,7 +39,6 @@ public class DSSWalkAndSynchronize extends DSScenario {
 
     @Override
     public void goalFailed(DSAgent agent, DSGoal goal) {
-        System.out.println(goal.getGoalName());
         if(goal.getGoalName().contentEquals("dsRoam")
                     ||goal.getGoalName().contentEquals("detachAllGoal")) {
             DSGoal newGoal = new DSClearGoal();//DSGoalRoam();

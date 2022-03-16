@@ -4,6 +4,8 @@ import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 public class dsGUI {
     private JTextField dsgValuePanel;
@@ -24,10 +26,24 @@ public class dsGUI {
     private JTextArea dsgTextMap;
     private JScrollBar scrollBar1;
     private JTextField dsgXYValue;
+    private JPanel dsgAgentsPanel;
+    private JComboBox dsgAgentsSelect;
+    private JTextArea dsgTextOutlook;
     private JTextField dsgXValue;
     private JTextField dsgYValue;
     private JTextArea dsgLogText;
     private JTable dsgMapTable;
+
+    private DeSouches PCommander;
+
+    public dsGUI() {
+        dsgAgentsSelect.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                PCommander.changeGUIFocus(e.getItem().toString());
+            }
+        });
+    }
 
     public void setAgentName(String agentName){
         dsgAgentNameValue.setText(agentName);
@@ -46,12 +62,13 @@ public class dsGUI {
     }
 
     public void setXY(int x, int y) {
-        dsgXYValue.setText(x+" / "+y);
+        dsgXYValue.setText(x+" // "+y);
     }
 
     public void setLastActionResult(String lastAction){
         dsgLAResultValue.setText(lastAction);
     }
+
     public void setEnergy(String energy){
         dsgEnergyValue.setText(energy);
     }
@@ -61,25 +78,38 @@ public class dsGUI {
     }
 
     public void writePlan(DSPlan plan){
-        dsgPlan.setText(plan.plan2text());
+        if(plan==null)
+            dsgPlan.setText(" -- no plan -- ");
+        else
+            dsgPlan.setText(plan.plan2text());
     }
 
     public void textMapClear(){
         dsgTextMap.setText("");
     }
 
-    public void writeTextMap(String text){
+    public void writeTextOutlook(String text)
+    {
+        dsgTextOutlook.setText(text+"\n");
+    }
+
+    public void setTextMap(String text){
         dsgTextMap.setText(text+"\n");
     }
 
-    public void appendTextMap(String text){
-        dsgTextMap.append(text+"\n");
+    public void registerAgent(String agent){
+        dsgAgentsSelect.addItem(agent);
     }
 
-    public static dsGUI createGUI(int number){
+    void setCommander(DeSouches commander) {
+        PCommander=commander;
+    }
+
+    public static dsGUI createGUI(int number, DeSouches commander){
         JFrame frame=new JFrame("GUI for agent "+number);
         frame.setSize(new Dimension(650,100));
         dsGUI gui=new dsGUI();
+        gui.setCommander(commander);
         frame.setContentPane(gui.dsgMainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();

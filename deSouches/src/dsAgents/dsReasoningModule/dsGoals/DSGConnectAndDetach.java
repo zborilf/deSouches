@@ -27,7 +27,7 @@ public class DSGConnectAndDetach extends  DSGoal {
         DSAction detach=new DSDetach(agent.getEI(), PDirection);
         plan.insertAction(detach);
         plan.insertAction(connect);
-        plan.printPlan(agent);
+
         PPlans.put("dance1",plan);
         return true;
     }

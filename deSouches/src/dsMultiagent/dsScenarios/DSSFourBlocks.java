@@ -343,7 +343,7 @@ public class DSSFourBlocks extends DSSBlockScenarios{
         PStateL3=1;
 
         System.out.println("initScenario: " + "\n!@!  TASK:" + PTask.getName() + " type "+PTask.getTaskTypeNumber()+" / "+
-                ", Group master"+PMaster.getGroup().getMaster()+"\n@@Master " + PMaster.getEntityName() +
+                ", Group master"+PMaster.getGroup().getMaster().getEntityName()+"\n@@Master " + PMaster.getEntityName() +
                 "  pujde na " + PMasterDispenserPos + " pro " + PType1 + " a do golu " + PMasterGoalPos +
                 " body is "+PMaster.getBody().bodyToString()+
                 ",\n@@ Leutnant1 " + PLeutnant1.getEntityName() + "  pujde na " + PLeutnant1DispenserPos + " pro " + PType2 +

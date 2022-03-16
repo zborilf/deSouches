@@ -32,6 +32,8 @@ public class DSCell {
         put("entityB",__DSEntity_Enemy);
         put("markerclear",__DSMarker);
         put("taskboard",__DSTaskArea);
+        put("goalZone",__DSGoal);
+        put("roleZone",__DSRoleArea);
     }};
 
     static Map<Integer, String> _thingTypes=new HashMap<Integer, String>()
@@ -42,6 +44,8 @@ public class DSCell {
         put(__DSEntity_Enemy," EE");
         put(__DSMarker ," MM");
         put(__DSTaskArea, " TT");
+        put(__DSGoal ," gg");
+        put(__DSRoleArea, " rr");
     }};
 
     public static int getThingTypeIndex(String thing, String params){

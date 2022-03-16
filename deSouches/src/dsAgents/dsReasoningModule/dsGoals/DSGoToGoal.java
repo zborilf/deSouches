@@ -24,7 +24,7 @@ public class DSGoToGoal extends DSGoal{
         }
 
         DSPlan plan = new DSAStar().computePath(
-                "goToGoal",1,agent.getMap(), agent.getMap().getAgentPos(),
+                "goToGoal",1,agent.getMap(), agent.getMap().getAgentPos(agent),
                                                         point, agent.getBody(),5000, agent);
         if(plan==null)
             return(false);

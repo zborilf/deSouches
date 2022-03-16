@@ -65,7 +65,7 @@ public class DSSSeekAndDestroy extends DSScenario {
         Point PAttackPosition=PAgent.getMap().getFreeNeighbourPosition(PObstacleAt,PAgent);
         if(PAttackPosition!=null){
             System.out.println(PAgent.getEntityName()+" znicim blizky "+guard+" blok na "+
-                    PObstacleAt+" z"+PAttackPosition+", master="+ PAgent.getGroup().getMaster());
+                    PObstacleAt+" z"+PAttackPosition+", master="+ PAgent.getGroup().getMaster().getEntityName());
             DSGoToPosition sADGoal = new DSGoToPosition(PAttackPosition, PAgent.getBody());
             PAgent.hearOrder(sADGoal);
             return true;

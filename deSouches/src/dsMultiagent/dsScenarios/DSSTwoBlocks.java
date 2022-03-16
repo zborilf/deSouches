@@ -212,7 +212,7 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
 
 
         System.out.println("initScenario: " + "\n!@!  TASK:" + PTask.getName() + " type "+PTask.getTaskTypeNumber()+" / "+
-                ", Group master"+PMaster.getGroup().getMaster()+"\n@@Master " + PMaster.getEntityName() +
+                ", Group master"+PMaster.getGroup().getMaster().getEntityName()+"\n@@Master " + PMaster.getEntityName() +
                 "  pujde na " + PMasterDispenserPos + " pro " + PType1 + " a do golu " + PMasterGoalPos +
                 " body is "+PMasterGoalBody.bodyToString()+
                 ",\n@@ Leutnant1 " + PLeutnant1.getEntityName() + "  pujde na " + PSlaveDispenserPos + " pro " + PType2 +

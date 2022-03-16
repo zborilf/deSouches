@@ -26,6 +26,8 @@ public class DSPlan {
     boolean PPlanSuceeded=false;
 
     public String plan2text(){
+        if(PLinearPlan==null)
+            return("--- no plan ---");
         String st="";
         for(DSAction action:PLinearPlan) {
             st = st.concat(action.actionText() + " ; ");

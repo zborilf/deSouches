@@ -3,7 +3,6 @@ package dsAgents.dsPerceptionModule;
 import dsAgents.dsBeliefBase.DSBeliefBase;
 import dsAgents.dsBeliefBase.dsBeliefs.DSBeliefsIndexes;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.*;
-import dsAgents.dsBeliefBase.dsBeliefs.DSRole;
 import dsMultiagent.dsTasks.DSTask;
 import dsAgents.dsPerceptionModule.dsSyntax.DSPercepts;
 import eis.PerceptUpdate;
@@ -274,8 +273,6 @@ public class DSPerceptor {
 
     public static void processPercepts(DSBeliefBase BB, PerceptUpdate percepts){
 
-        BB.getGUI().textMapClear();
-
 
 /*
      for delete list
@@ -308,6 +305,15 @@ public class DSPerceptor {
                     break;
                 case DSBeliefsIndexes.__step:
                     break;
+
+                case DSBeliefsIndexes.__roleZone:
+                    BB.leavesRoleZone(perceptParams);
+                    break;
+
+                case DSBeliefsIndexes.__goalZone:
+                    BB.leavesGoalZone(perceptParams);
+                    break;
+
                 case DSBeliefsIndexes.__lastAction:
                     break;
                 case DSBeliefsIndexes.__lastActionParams:
@@ -323,9 +329,9 @@ public class DSPerceptor {
         }
 
 
-
         Iterator<Percept> newAddPercepts=percepts.getAddList().iterator();
 
+      //  System.out.println(newAddPercepts);
 
         while(newAddPercepts.hasNext()) {
             percept=newAddPercepts.next();
@@ -353,6 +359,14 @@ public class DSPerceptor {
                     BB.processRole(perceptParams);
                     break;
 
+                case DSBeliefsIndexes.__roleZone:
+                    BB.standsAtRoleZone(perceptParams);
+                    break;
+
+                case DSBeliefsIndexes.__goalZone:
+                    BB.standsAtGoalZone(perceptParams);
+                break;
+
                 case DSBeliefsIndexes.__step:
                     BB.setStep(perceptParams);
                     break;
@@ -379,10 +393,12 @@ public class DSPerceptor {
             }
         }
 
-        String outlookString=BB.getOutlook().stringOutlook(BB.getVision(),BB.getName());
-        BB.getGUI().writeTextMap("OUTLOOK:\n"+outlookString);
 
-
+        if(BB.getGUIFocus()) {
+            String outlookString = BB.getOutlook().stringOutlook(BB.getVision(), BB.getName());
+            BB.getGUI().textMapClear();
+            BB.getGUI().writeTextOutlook("OUTLOOK:\n" + outlookString);
+        }
     }
 
 

@@ -23,9 +23,14 @@ public class DSGroup {
     boolean PMasterGroup;
 
 
-    public String getMaster(){
-        return(PMaster.getEntityName());
+//    public String getMaster(){
+//        return(PMaster.getEntityName());
+//    }
+
+    public DSAgent getMaster(){
+        return(PMaster);
     }
+
 
     public void setMasterGroup(){
         PMasterGroup=true;
@@ -156,30 +161,12 @@ public class DSGroup {
 
     public LinkedList<Point> allObjects(int type) {
         return(PGroupMap.allObjects(type));
-
-        /*
-     //   LinkedList<Point> objectPositionsAgt;
-        LinkedList<Point> objectPositionsGrp = new LinkedList<Point>();
-        Point objectPosition;
-        if (!PMembers.containsKey(PMaster))
-            return (null);
-        Set<DSAgent> agentSet=((HashMap<DSAgent,Point>)PMembers.clone()).keySet();
-        for (DSAgent agentServ : agentSet) {
-            objectPositionsAgt = agentServ.getMap().allObjects(type);
-            if(objectPositionsAgt!=null)
-                for (Point positionAgt : objectPositionsAgt) {
-                    objectPosition = transferPosition(positionAgt, PMaster, agentServ);
-                    if (!objectPositionsGrp.contains(objectPosition))
-                        objectPositionsGrp.add(objectPosition);
-                }
-        }
-        return (objectPositionsGrp);*/
     }
 
 
 
     public void printGroup(){
-        String st1= "MASTER{"+PMaster.getEntityName()+"}";
+        String st1= "Leader {"+PMaster.getEntityName()+"}";
         String st2;
 
         LinkedList<DSAgent> agentSet=((LinkedList<DSAgent>)PMembers.clone());
@@ -188,12 +175,13 @@ public class DSGroup {
             st2=agent.getEntityName()+", ";
             st1=st1.concat(st2);
         }
+
+        System.out.println(st1);
+
         LinkedList<Point> goals=allObjects(DSCell.__DSGoal);
         LinkedList<Point> d1=allObjects(DSCell.__DSDispenser);
         LinkedList<Point> d2=allObjects(DSCell.__DSDispenser+1);
         LinkedList<Point> d3=allObjects(DSCell.__DSDispenser+2);
-
-        HorseRider.inquire(TAG, "printGroup: "+"GGG : "+st1+"\nGoals at:"+goals+"\nD1 at:"+d1+"\nD2 at:"+d2+"\nD3 at:"+d3);
     }
 
     int getBusyMembersCount(int priority){
@@ -204,21 +192,6 @@ public class DSGroup {
                 count++;
             return(count);
     }
-
-    /*
-    public boolean isCapable(DSTask task,  int priority){
-        LinkedList<Integer> types=task.getTypesNeeded();
-        if(allObjects(DSCell.__DSGoal).size()==0)
-            return(false);
-        if ((PMembers.size() - getBusyMembersCount(priority))<types.size()) {
-            return(false);
-        }
-        for(int i:types)
-            if(allObjects(DSCell.__DSDispenser+i).size()==0)
-                return(false);
-        return(true);
-    }
-    */
 
     // is Capable funguje pro libovolnou velikost tasku
     public boolean isCapable(DSTask task,  int priority){
@@ -242,23 +215,16 @@ public class DSGroup {
         return(true);
     }
 
+    synchronized public void shiftGroupMap(Point DPos){
 
+    }
 
     public synchronized boolean absorbGroup(DSGroup groupToAbsorb, Point displacement){
 
-        // fromAgent se musi posunout o displacement, aby byl v koordinatech skupiny toAgenta
-        // je treba toto zobecnit na posunuti mezi skupinama, tedy mastrama vyse uvedenych
-
-       /* if(step<=PLastStep)
-            return(false);
-        PLastStep=step;*/
         if(groupToAbsorb==this)
             return(true);
 
-         System.out.println("Skupina "+this.getMaster()+" absorbuje skupinu "+groupToAbsorb.getMaster()+" disp "+displacement);
-
         LinkedList<DSAgent> newMembers=groupToAbsorb.getMembers();
-        Point originalDisplacement, newDisplacement;
 
         LinkedList<DSAgent> membersCl=(LinkedList<DSAgent>)newMembers.clone();
 
@@ -266,23 +232,18 @@ public class DSGroup {
             PMembers.add(newMember);
             PGroupMap.addAgent(newMember,displacement);
             newMember.setGroup(this);
-            System.out.println("addAgent "+newMember+" disp "+displacement);
-
-            newMember.setGroup(this);
         }
+
         PMaster.getCommander().groupRemoved(groupToAbsorb);
         PMaster.getCommander().groupExtendedBy(this,groupToAbsorb);
-   //     group.getMap().printMap(group.PMaster.getEntityName());
-   //     PGroupMap.printMap(PMaster.getEntityName());
-
         PGroupMap.mergeMaps(groupToAbsorb.getMap(),displacement);
-   //     PGroupMap.printMap(PMaster.getEntityName());
+
         return(true);
     }
 
+
     public DSGroup(DSAgent agent){
         PMaster=agent;
-        Random random=new Random();
         PMembers=new LinkedList<DSAgent>();
         PMembers.add(agent);
         PGoalAreas= new HashMap<DSTask, Point>();

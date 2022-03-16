@@ -8,7 +8,6 @@ import java.util.Map;
 public class DSCells {
     LinkedList<DSCell> PCells;
 
-
     public LinkedList<DSCell> getCells(){
         return(PCells);
     }

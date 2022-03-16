@@ -128,7 +128,6 @@ public final class DSAStar {
             plan.insertAction(goal.getAction());
             goal = goal.getPrevious();
         }
-        plan.printPlan(agent);
         return plan;
     }
 
@@ -165,10 +164,6 @@ public final class DSAStar {
         DSAStarItem goal;
         Point from=open.getFirst().getPosition();
         String AN=agent.getEntityName();
-        System.out.println( "aStar: "+"Pocitam A* pro "+agent.getEntityName()+" jeho origpos je"+agent.getMapPosition()+
-               " z grupy "+agent.getGroup().getMaster()+" z pozice "+open.getFirst().getPosition()+" do "+to+
-                " agent body "+agentBody.bodyToString()+" final body "+finalBody.bodyToString());
- //       map.printMap("Astar "+agent.getEntityName());
         goal = aStarIterate(map, open, close, to, finalBody, steps, agent, agentBody);
 
             if (goal != null) {
@@ -181,8 +176,8 @@ public final class DSAStar {
                 return (extractPath(path, goal, agent));
         }
         else {
-            System.out.println( "aStar: "+"Astar failed for " + agent.getEntityName()+" from ["+from.x+","+
-                    from.y+"], to ["+to.x+","+to.y+"] agent body "+agentBody.bodyToString());
+       //     System.out.println( "aStar: "+"Astar failed for " + agent.getEntityName()+" from ["+from.x+","+
+       //             from.y+"], to ["+to.x+","+to.y+"] agent body "+agentBody.bodyToString());
        //       map.printMap("Failed A* for "+agent.getEntityName());
         }
         return null;

@@ -72,9 +72,6 @@ public class DSAgentOutlook {
             }
                 so=so+'\n';
         }
-
-        so=so+getFriendsSeen(vision).toString()+'\n';
-
         return(so);
     }
 

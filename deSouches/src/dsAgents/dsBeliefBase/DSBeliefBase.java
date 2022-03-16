@@ -9,12 +9,10 @@ import dsAgents.DSAgent;
 import dsAgents.DeSouches;
 import dsAgents.dsBeliefBase.dsBeliefs.DSRole;
 import dsAgents.dsBeliefBase.dsBeliefs.DSRoles;
-import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSAgentOutlook;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.*;
 import dsAgents.dsPerceptionModule.DSStatusIndexes;
-import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
-import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsMultiagent.DSGroup;
+import dsMultiagent.DSSynchronize;
 import dsMultiagent.dsScenarios.DSScenario;
 import eis.iilang.Parameter;
 
@@ -28,10 +26,17 @@ public class DSBeliefBase {
 
     private dsGUI PGUI;
 
-    private int PX;
-    private int PY;
     private DSMap PMap;
+    private int PWidthMap;
+    private int PHeightMap;
+    private boolean PGUIFocus;
     private DSAgentOutlook POutlook;
+
+    private boolean PSynchronizationNeeded=false;
+    private boolean PStandsAtRole=false;
+    private boolean PStandsAtGoal=false;
+    private int PNeedSynchronizeX;
+    private int PNeedSynchronizeY;
 
     private DSAgent PAgent;
     private DSGroup PGroup=null;
@@ -40,7 +45,9 @@ public class DSBeliefBase {
     private int PScore=0;
     private int PStep=0;
     private DSRoles PRoles;
-    private DSRole PActiveRole=null;
+    private DSRole PActualRole =null;
+
+    DSSynchronize PSynchronizer;
 
     private boolean PIsLeutnant=false;  // obsolete in 2022
     private int PEnergy=0;
@@ -65,6 +72,46 @@ public class DSBeliefBase {
         return(PGUI);
     }
 
+    public void setGUIFocus(boolean focus){ PGUIFocus=focus; }
+
+    public boolean getGUIFocus() { return(PGUIFocus); }
+
+    public boolean getSynchronizationNeeded(){
+        return(PSynchronizationNeeded);
+    }
+
+    public int getSyncronizationPointX(){
+        return(PNeedSynchronizeX);
+    }
+
+    public int getSyncronizationPointY(){
+        return(PNeedSynchronizeY);
+    }
+
+    public boolean standsAtRoleZone(){
+        return(PStandsAtRole);
+    }
+
+    public void synchronizationDone(){
+        PSynchronizationNeeded=false;
+    }
+
+    public boolean setRole(String role){
+        if(PRoles.getRole(role)!=null) {
+            PActualRole = PRoles.getRole(role);
+            return (true);
+        }
+        return(false);
+    }
+
+    public String getAcualRole(){
+        return(PActualRole.getRoleName());
+    }
+
+    public DSSynchronize getSynchronizer(){
+        return(PSynchronizer);
+    }
+
     // 0 : __simStart
     // INIT
 
@@ -82,7 +129,9 @@ public class DSBeliefBase {
     public void setName(Collection<Parameter> parameters){
         String name=parameters.iterator().next().toString();
         PName = name;
-        PGUI.setAgentName(PName);
+        if(PGUIFocus)
+            PGUI.setAgentName(PName);
+        PCommander.registerAgent(PName,PAgent);
     }
 
     public String getName(){
@@ -122,7 +171,7 @@ public class DSBeliefBase {
 
     public void processRole(Collection<Parameter> parameters){
         if(parameters.size()==1)
-            PActiveRole=PRoles.getRole(parameters.iterator().next().toString());
+            PActualRole =PRoles.getRole(parameters.iterator().next().toString());
             else{
                 DSRole role=new DSRole(parameters);
                 PRoles.addRole(role);
@@ -150,7 +199,8 @@ public class DSBeliefBase {
     public void setStep(Collection<Parameter> parameters) {
         int step=Integer.valueOf(parameters.iterator().next().toString());
         PStep=step;
-        PGUI.setStep(step);
+        if(PGUIFocus)
+            PGUI.setStep(step);
     }
 
     public int getStep(){
@@ -163,7 +213,8 @@ public class DSBeliefBase {
     public void setLastAction(Collection<Parameter> parameters){
         String action=parameters.iterator().next().toString();
         PLastAction=action;
-        PGUI.setLastAction(action);
+        if(PGUIFocus)
+            PGUI.setLastAction(action);
     }
 
 
@@ -172,7 +223,8 @@ public class DSBeliefBase {
     public void setLastActionParams(Collection<Parameter> parameters){
         String action=parameters.iterator().next().toString();
         PLastAction=action;
-        PGUI.setLastActionParams(action);
+        if(PGUIFocus)
+            PGUI.setLastActionParams(action);
     }
 
     // 12 : __lastActionResult
@@ -180,7 +232,8 @@ public class DSBeliefBase {
     public void setLastActionResult(Collection<Parameter> parameters){
         String actionResult=parameters.iterator().next().toString();
         PLastActionResult=DSStatusIndexes.getIndex(actionResult);
-        PGUI.setLastActionResult(actionResult);
+        if(PGUIFocus)
+            PGUI.setLastActionResult(actionResult);
     }
 
     public int getLastActionResult(){
@@ -237,7 +290,8 @@ public class DSBeliefBase {
     public void setEnergy(Collection<Parameter> parameters){
         String energy=parameters.iterator().next().toString();
         PEnergy=Integer.parseInt(energy);
-        PGUI.setEnergy(energy);
+        if(PGUIFocus)
+            PGUI.setEnergy(energy);
     }
 
     public int getEnergy(){
@@ -252,13 +306,37 @@ public class DSBeliefBase {
 
     // 19 : __roleZone
 
-    // TODO
+    void synchronizationDemand(Collection<Parameter> parameters){
+        int __fooDistance=20;
+        PSynchronizationNeeded=true;
+        Iterator i=parameters.iterator();
+        PNeedSynchronizeX=Integer.parseInt(i.next().toString());
+        PNeedSynchronizeY=Integer.parseInt(i.next().toString());
+    }
 
+    public void standsAtRoleZone(Collection<Parameter> parameters){
+        POutlook.processAddThing(0,0,"goalZone" ,"",PStep);
+        synchronizationDemand(parameters);
+        PStandsAtRole=true;
+    }
+
+    public void leavesRoleZone(Collection<Parameter> parameters){
+        PSynchronizationNeeded=false;
+        PStandsAtRole=false;
+    }
 
     // 20 : __goalZone
 
-    // TODO
+    public void standsAtGoalZone(Collection<Parameter> parameters){
+        POutlook.processAddThing(0,0,"goalZone" ,"",PStep);
+        PStandsAtGoal=true;
+        synchronizationDemand(parameters);
+    }
 
+    public void leavesGoalZone(Collection<Parameter> parameters){
+        PSynchronizationNeeded=false;
+        PStandsAtGoal=false;
+    }
 
     // 21 : __violation
 
@@ -306,26 +384,9 @@ public class DSBeliefBase {
 
     // POZICE
 
-    public Point getMapPosition() {      // vráti pozici na (skupinové) mapě pro agenta
+    public Point getAgentPosition() {      // vráti pozici na (skupinové) mapě pro agenta
         return(PMap.getAgentPos(PAgent));
     }
-
-    public Point getRealPosition(){
-        return(new Point(PX,PY));
-    }
-
-    public void moveBy(int PDx, int PDy) {
-         PMap.moveBy(PAgent,PDx,PDy);
-         PX=PX+PDx;
-         PY=PY+PDy;
-         PGUI.setXY(PX,PY);
-
-    }
-
-
-    // LastActionResult
-
-
 
 
     // IS LEUTNANT? ... 2022 - role
@@ -353,9 +414,9 @@ public class DSBeliefBase {
 
 
     public int getVision(){
-        if(PActiveRole==null)
+        if(PActualRole ==null)
             return(0);
-        return(PActiveRole.getVision());
+        return(PActualRole.getVision());
     }
 
     // TELO AGENTA
@@ -402,8 +463,11 @@ public class DSBeliefBase {
     // AKTUALNI SCENAR
 
     public void setScenario(DSScenario scenario){
+        if(scenario==null)
+            return;
         PScenario=scenario;
-        PGUI.setScenarion(scenario.getName());
+        if(PGUIFocus)
+            PGUI.setScenarion(scenario.getName());
 
     }
 
@@ -483,12 +547,12 @@ public class DSBeliefBase {
 
 
 
-    public DSBeliefBase(DSAgent agent){
+    public DSBeliefBase(DSAgent agent, DSSynchronize synchronizer){
         PAgent=agent;
-        PX=0;
-        PY=0;
         PRoles=new DSRoles();
         POutlook=new DSAgentOutlook();
+        PSynchronizer=synchronizer;
+
     }
 
 }
