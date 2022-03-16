@@ -27,7 +27,7 @@ public class DSGoalRoam extends DSGoal {
         if(agent.standsAtRoleZone()){
             if(agent.getActualRole().compareTo("digger")!=0) {
                 // standing at role zone and is not 'digger', make high priority plan to change it
-                DSPlan plan = new DSPlan("set role digger", 2);
+                DSPlan plan = new DSPlan("set role digger", 3);
                 DSAdopt adoptAction = new DSAdopt(agent.getEI(), "digger");
                 plan.appendAction(adoptAction);
                 PPlans.put(plan.getName(), plan);

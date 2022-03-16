@@ -1,6 +1,6 @@
 {
   "scenario": "assemble2021",
-  "host": "massimserver",
+  "host": "127.0.0.1",
   "port": 12300,
   "scheduling": false,
   "timeout": 100000,
@@ -8,7 +8,6 @@
   "exceptions": false,
 
   "entities" : {},
-  
   "multi-entities": [
     {
       "name-prefix": "entityA",

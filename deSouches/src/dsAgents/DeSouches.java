@@ -52,8 +52,8 @@ public class DeSouches extends Agent{
     }
 
     public void groupExtendedBy(DSGroup extendedGroup, DSGroup by){
-    //    if(by==PMasterGroup)
-    //        PMasterGroup=extendedGroup;
+        //    if(by==PMasterGroup)
+        //        PMasterGroup=extendedGroup;
 
         if(extendedGroup.isMasterGroup())
             System.out.println("MasterGroupExtended: ");
@@ -69,7 +69,7 @@ public class DeSouches extends Agent{
     }
 
     /*
-    *       BARRIER   - of agents. True, if all the agents are in the list
+     *       BARRIER   - of agents. True, if all the agents are in the list
      */
 
     public synchronized boolean barrier(int step, int phase, DSAgent agent){
@@ -99,10 +99,10 @@ public class DeSouches extends Agent{
         if(scenario.getTask()!=null) {
             System.out.println("scenario completed: " + scenario.getTask().getName());
             PSynchronizer.getMasterGroup().releaseGoalArea(scenario.getTask());
-         //   PMasterGroup.getMap().printMap("Scenario completed");
+            //   PMasterGroup.getMap().printMap("Scenario completed");
         }
-            PScenariosActive.remove(scenario);;
-            for(DSAgent agent:scenario.getAgentsAllocated()) {
+        PScenariosActive.remove(scenario);;
+        for(DSAgent agent:scenario.getAgentsAllocated()) {
             agent.removeScenario();
         }
     }
@@ -185,47 +185,47 @@ public class DeSouches extends Agent{
 
                     // jen pro dva, typ 1 linearni, typ 2 na bok, linearni
                     PSynchronizer.getMasterGroup();
-                    if (PSynchronizer.getMasterGroup() != null) {
-                        if (PSynchronizer.getMasterGroup().isCapable(task, 2)) {
-                            chosenGroup = PSynchronizer.getMasterGroup();
-                        } else
-                            chosenGroup = null;
+                if (PSynchronizer.getMasterGroup() != null) {
+                    if (PSynchronizer.getMasterGroup().isCapable(task, 2)) {
+                        chosenGroup = PSynchronizer.getMasterGroup();
+                    } else
+                        chosenGroup = null;
 
-                    }
+                }
 
 
                 if (chosenGroup != null) {
 
                     if(task.getDeadline()-chosenGroup.getFreeAgents(2).getFirst().getStep()>=_timeNeeded){
 
-                    PActiveTasks.add(task.getName());
+                        PActiveTasks.add(task.getName());
 
 
-                    if (task.getTypesNeeded().size() == 2)
-                        if ((taskType <= 3)&&(getBusyAgents()+2<=_busyAgentsLimit)) {
-                            twoBlocks = new DSSTwoBlocks(this, chosenGroup, task, taskType);
-                            twoBlocks.initScenario(step);
-                            PScenariosActive.add(twoBlocks);
-                            return (true);
-                        }
+                        if (task.getTypesNeeded().size() == 2)
+                            if ((taskType <= 3)&&(getBusyAgents()+2<=_busyAgentsLimit)) {
+                                twoBlocks = new DSSTwoBlocks(this, chosenGroup, task, taskType);
+                                twoBlocks.initScenario(step);
+                                PScenariosActive.add(twoBlocks);
+                                return (true);
+                            }
 
 
-                if (task.getTypesNeeded().size() == 3)
-                    if ((taskType <= 18)&&(getBusyAgents()+3<=_busyAgentsLimit)) {
-                        threeBlocks = new DSSThreeBlocks(this, chosenGroup, task, taskType);
-                        threeBlocks.initScenario(step);
-                        PScenariosActive.add(threeBlocks);
-                        return (true);
-                }
+                        if (task.getTypesNeeded().size() == 3)
+                            if ((taskType <= 18)&&(getBusyAgents()+3<=_busyAgentsLimit)) {
+                                threeBlocks = new DSSThreeBlocks(this, chosenGroup, task, taskType);
+                                threeBlocks.initScenario(step);
+                                PScenariosActive.add(threeBlocks);
+                                return (true);
+                            }
 
 
-                if (task.getTypesNeeded().size() == 4)
-                    if ((taskType <=42)&&(getBusyAgents()+4<=_busyAgentsLimit)) {
-                        fourBlocks = new DSSFourBlocks(this, chosenGroup, task, taskType);
-                        fourBlocks.initScenario(step);
-                        PScenariosActive.add(fourBlocks);
-                        return (true);
-                }
+                        if (task.getTypesNeeded().size() == 4)
+                            if ((taskType <=42)&&(getBusyAgents()+4<=_busyAgentsLimit)) {
+                                fourBlocks = new DSSFourBlocks(this, chosenGroup, task, taskType);
+                                fourBlocks.initScenario(step);
+                                PScenariosActive.add(fourBlocks);
+                                return (true);
+                            }
                     }
                 }
             }
@@ -234,8 +234,8 @@ public class DeSouches extends Agent{
     }
 
     /*
-    *       INIT
-    */
+     *       INIT
+     */
 
     public class createArmy extends OneShotBehaviour {
 
@@ -256,7 +256,7 @@ public class DeSouches extends Agent{
                 agentName = "Agent" + agentNo++;
                 try {
                     agent = new DSAgent(agentName, null, entity, PEI, (DeSouches)this.getAgent(),agentNo,
-                                                leutnant, PSynchronizer, PGUI, guiFocus);
+                            leutnant, PSynchronizer, PGUI, guiFocus);
                     if(guiFocus)
                         PGUIFocus=agent;
                     guiFocus=false;
@@ -265,7 +265,7 @@ public class DeSouches extends Agent{
                     agent.setup();
 
                     this.getAgent().getContainerController().getAgent(agentName).start();
-                  //  needJob(agent)
+                    //  needJob(agent)
 
                 } catch (Exception pe) {
                     HorseRider.yell(TAG, "action: "+"Tak tohle se nepovedlo " + agentName, pe);
@@ -302,7 +302,7 @@ public class DeSouches extends Agent{
         PBarriers=new HashMap<Integer,LinkedList<DSAgent>>();
         try {
 
-            PEI = new EnvironmentInterface("C:\\Users\\zbori\\_%_%_EDEN\\GIT_REPOSITORY\\deSouches\\eismassimconfig.json");
+            PEI = new EnvironmentInterface("eismassimconfig.json");
             PEI.start();
         } catch (ManagementException e) {
             HorseRider.warn(TAG, "DeSouches: Something failed!", e);
