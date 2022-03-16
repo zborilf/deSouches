@@ -1,10 +1,10 @@
 # Compiled files
 *.class
-**/out/
+**/out/*
 
 # Log file
 *.log
-**/logs/
+**/logs/*
 
 # BlueJ files
 *.ctxt
@@ -25,5 +25,5 @@
 hs_err_pid*
 
 #IDE files
-.idea
+**/.idea/*
 *.iml
