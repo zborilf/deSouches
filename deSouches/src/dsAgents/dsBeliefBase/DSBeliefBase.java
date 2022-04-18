@@ -88,7 +88,7 @@ public class DSBeliefBase {
         return(PNeedSynchronizeY);
     }
 
-    public boolean standsAtRoleZone(){
+    public boolean isAtRoleZone(){
         return(PStandsAtRole);
     }
 
@@ -315,12 +315,13 @@ public class DSBeliefBase {
     }
 
     public void standsAtRoleZone(Collection<Parameter> parameters){
-        POutlook.processAddThing(0,0,"goalZone" ,"",PStep);
+        POutlook.processAddThing(0,0,"roleZone" ,"",PStep);
         synchronizationDemand(parameters);
         PStandsAtRole=true;
     }
 
     public void leavesRoleZone(Collection<Parameter> parameters){
+        POutlook.processDeleteThing(0,0,"roleZone","",PStep);
         PSynchronizationNeeded=false;
         PStandsAtRole=false;
     }
@@ -334,6 +335,7 @@ public class DSBeliefBase {
     }
 
     public void leavesGoalZone(Collection<Parameter> parameters){
+        POutlook.processDeleteThing(0,0,"goalZone","",PStep);
         PSynchronizationNeeded=false;
         PStandsAtGoal=false;
     }

@@ -44,11 +44,11 @@ public class DSCell {
         put(__DSEntity_Enemy," EE");
         put(__DSMarker ," MM");
         put(__DSTaskArea, " TT");
-        put(__DSGoal ," ++");
-        put(__DSRoleArea, " //");
+        put(__DSGoal ," gg");
+        put(__DSRoleArea, " rr");
     }};
 
-    protected static int getThingTypeIndex(String thing, String params){
+    public static int getThingTypeIndex(String thing, String params){
 
         if(thing.equals("dispenser")){
             return(__DSDispenser+Integer.valueOf(params.substring(1)));
@@ -63,7 +63,7 @@ public class DSCell {
     }
 
 
-    protected static String getTypeSign(int type){
+    public static String getTypeSign(int type){
         if(_thingTypes.containsKey(type))
             return(_thingTypes.get(type));
 

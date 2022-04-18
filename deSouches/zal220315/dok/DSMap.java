@@ -9,20 +9,19 @@
 
  */
 
-
 package dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment;
 
 import dsAgents.DSAgent;
 import dsAgents.dsPerceptionModule.DSPerceptor;
 
-import java.awt.*;
+import java.awt.Point;
 import java.util.*;
 
 public class DSMap {
 
     private static final String TAG = "DSMap";
 
-    DSCells PMapCells;
+    DSCells PMap;
     int PWidthMap=0;
     int PHeightMap=0;
     HashMap <DSAgent,Point> PAgentPosition;
@@ -34,7 +33,7 @@ public class DSMap {
     final static int _maxDistance=5000;
 
     int PY, PX, PXMin, PXMax, PYMin, PYMax;
-   // private Border border = new Border();
+    // private Border border = new Border();
 
     int centralizeXCoords(int x){
         if(PWidthMap==0)
@@ -74,7 +73,7 @@ public class DSMap {
     }
 
     public DSCells getMap(){
-        return(PMapCells);
+        return(PMap);
     }
 
     public Point getOwnerAgentPos() { // Master
@@ -93,9 +92,6 @@ public class DSMap {
         return(PAgent.getAgentName());
     }
 
-    public int getNOC(){
-        return(PMapCells.getSize());
-    }
 
     public static int distance(Point a, Point b) {
         if((a==null)||(b==null))
@@ -109,28 +105,33 @@ public class DSMap {
 
     public synchronized void mergeMaps(DSMap map, Point displacement) {
         // 2022 version
-        DSCell newCell;
-        LinkedList<DSCell> mapClone=(LinkedList<DSCell>)map.getMap().getCells().clone();
-        for(DSCell cell:mapClone) {
-            newCell=new DSCell(centralizeXCoords(cell.getX()+displacement.x),
-                                            centralizeYCoords(cell.getY()+displacement.y),
-                                                            cell.getType(),cell.getTimestamp());
-            PMapCells.put(newCell);
+        Map<Point, DSCell> mapClone = new Hashtable<>();
+        mapClone.putAll((Map<? extends Point, ? extends DSCell>) map.getMap());
+        for(Map.Entry<Point, DSCell> entry: mapClone.entrySet()) {
+            DSCell cell  = entry.getValue();
+            DSCell newCell=new DSCell(centralizeXCoords(cell.getX()+displacement.x),
+                    centralizeYCoords(cell.getY()+displacement.y),
+                    cell.getType(),cell.getTimestamp());
+            PMap.removeAt(entry.getKey());
+            PMap.put(newCell);
         }
-        return;
     }
 
 
 
 
     public synchronized void shiftMap(Point displacement) {
-        for(DSCell cell: PMapCells.getCells()) {
-            cell.setX(centralizeXCoords(cell.getX()+displacement.x));
-            cell.setY(centralizeYCoords(cell.getY()+displacement.y));
+        for(Map.Entry<Point, DSCell> element: PMap.getCells().entrySet()) {
+            int oldX = element.getValue().getX();
+            int oldY = element.getValue().getY();
+            DSCell nCell = new DSCell(centralizeXCoords(oldX+displacement.x),centralizeYCoords(oldY+displacement.y),
+                    element.getValue().getType(),element.getValue().getTimestamp());
+            PMap.removeAt(element.getKey());
+            PMap.put(nCell);
         }
         for(DSAgent agent:PAgentPosition.keySet()){
             Point newPosition=new Point(centralizeXCoords(PAgentPosition.get(agent).x+displacement.x),
-                                                  centralizeYCoords(PAgentPosition.get(agent).y+displacement.y));
+                    centralizeYCoords(PAgentPosition.get(agent).y+displacement.y));
             PAgentPosition.put(agent,newPosition);
         }
     }
@@ -164,9 +165,9 @@ public class DSMap {
 
     public boolean isObstacleAt(Point position, DSBody agentbody, DSBody body, int step) {
         for(DSCell bodyItem:body.getBodyList()) {
-            DSCell node = PMapCells.getKeyType(
-                        new Point(position.x + bodyItem.getX(), position.y + bodyItem.getY()),
-                            DSCell.__DSObstacle);
+            DSCell node = PMap.getKeyType(
+                    new Point(position.x + bodyItem.getX(), position.y + bodyItem.getY()),
+                    DSCell.__DSObstacle);
             if (node != null) {
                 if(isFriendAt(node.getPosition()))
                     return(true);
@@ -176,14 +177,14 @@ public class DSMap {
 
                 if ((node.getType() == DSCell.__DSObstacle))
                     return (true);
-                // Pratele nejsou na pame, ale zname jejich presne aktualni pozice
+                    // Pratele nejsou na pame, ale zname jejich presne aktualni pozice
 
 
                 else //TODO to dole omezit casove souc_cas-timestamp (cca 5 kroku)
-                if((step-node.getTimestamp())<5)
-                     if ((node.getType() == DSCell.__DSEntity_Enemy)
-                             || (node.getType() == DSCell.__DSEntity_Friend)
-                                 || ((node.getType() >= DSCell.__DSBlock) && (node.getType() < DSCell.__DSDispenser)))
+                    if((step-node.getTimestamp())<5)
+                        if ((node.getType() == DSCell.__DSEntity_Enemy)
+                                || (node.getType() == DSCell.__DSEntity_Friend)
+                                || ((node.getType() >= DSCell.__DSBlock) && (node.getType() < DSCell.__DSDispenser)))
                             return(true);
             }
         }
@@ -193,7 +194,7 @@ public class DSMap {
 
     boolean isOjectAt(Point position, int objectType){
 
-        return(!(PMapCells.getKeyType(position,objectType)==null));
+        return(!(PMap.getKeyType(position,objectType)==null));
 
     }
 
@@ -236,7 +237,7 @@ public class DSMap {
 
 
     public LinkedList<Point> allObjects(int type) {
-        LinkedList<DSCell> objects = PMapCells.getAllType(type);
+        LinkedList<DSCell> objects = PMap.getAllType(type);
         LinkedList<Point> objectPositions = new LinkedList<Point>();
         if(objects==null)
             return(null);
@@ -251,16 +252,16 @@ public class DSMap {
 
         LinkedList<DSCell> cells=new LinkedList<DSCell>();
 
-        if(PMapCells.getKeyType(new Point((int)position.getX()+1,(int)position.getY()),objectType)!=null)
+        if(PMap.getKeyType(new Point((int)position.getX()+1,(int)position.getY()),objectType)!=null)
             return(new Point(1,0));
-        if(PMapCells.getKeyType(new Point((int)position.getX()-1,(int)position.getY()),objectType)!=null)
+        if(PMap.getKeyType(new Point((int)position.getX()-1,(int)position.getY()),objectType)!=null)
             return(new Point(-1,0));
-        if(PMapCells.getKeyType(new Point((int)position.getX(),(int)position.getY()+1),objectType)!=null)
+        if(PMap.getKeyType(new Point((int)position.getX(),(int)position.getY()+1),objectType)!=null)
             return(new Point(0,1));
-        if(PMapCells.getKeyType(new Point((int)position.getX(),(int)position.getY()-1),objectType)!=null)
+        if(PMap.getKeyType(new Point((int)position.getX(),(int)position.getY()-1),objectType)!=null)
             return(new Point(0,-1));
 
-            return(null);
+        return(null);
     }
 
 
@@ -272,10 +273,10 @@ public class DSMap {
             if(distance(referencePoint, a)==distance(referencePoint, b))
                 return(0);
             if (closer(referencePoint, a, b))
-            return(-1);
-                    else return(1);
+                return(-1);
+            else return(1);
         }
-            public sortByDistance(Point rp){
+        public sortByDistance(Point rp){
             referencePoint=rp;
         }
     }
@@ -296,13 +297,13 @@ public class DSMap {
             if(objectAroundCell(position2,DSCell.__DSEntity_Enemy)==null)
                 if(objectAroundCell(position2,DSCell.__DSEntity_Friend)==null)
                     return(position2);
-            return(null);
+        return(null);
     }
 
 
     public Point nearestObject(int type, Point agentPosition) {
 
-        LinkedList<DSCell> objects= PMapCells.getAllType(type);
+        LinkedList<DSCell> objects=PMap.getAllType(type);
 
         if(objects==null)
             return(null);
@@ -321,12 +322,12 @@ public class DSMap {
     }
 
 
-    synchronized public void removeOlder(Point position, int timestamp, boolean removeArea){
-            PMapCells.removeOlder(position, timestamp, removeArea);
+    synchronized public void removeOlder(Point position, int timestamp){
+        PMap.removeOlder(position, timestamp);
     }
 
     synchronized public void addCell(DSCell cell){
-        PMapCells.put(cell);
+        PMap.put(cell);
     }
 
     synchronized public boolean updateCell(DSCell cell) {
@@ -335,7 +336,7 @@ public class DSMap {
         cell.setX(centralizeXCoords(cell.getX()));
         cell.setY(centralizeYCoords(cell.getY()));
 
-        PMapCells.put(cell);
+        PMap.put(cell);
         return(true);
     }
 
@@ -351,7 +352,6 @@ public class DSMap {
             return(" "+Math.abs(i));
     }
 
-
     public DSCell[][] map2Array(Point tlc, Point brc){
         int lx=tlc.x;
         int ty=tlc.y;
@@ -362,13 +362,11 @@ public class DSMap {
 
         DSCell[][] mapArray=new DSCell[width][height];
 
-        for(DSCell cell: PMapCells.getCells()){
+        for(DSCell cell:PMap.getCells().values()){
             mapArray[cell.getX()-lx][cell.getY()-ty]=cell;
         }
         return(mapArray);
     }
-
-
 
     synchronized public String stringMap(){
         DSCell node;
@@ -378,10 +376,11 @@ public class DSMap {
         for(DSAgent agent: PAgentPosition.keySet())
             so=so+agent.getEntityName()+", ";
         so=so+"\n";
-
-        Point tlc= PMapCells.getTLC();     // top left corner
-        Point brc= PMapCells.getBRC();     // bottom right corner
-
+        //TODO: clone causes exception on null but wont work wo
+        Point tlc = (Point) PMap.getTLC().clone();     // top left corner
+        Point brc = (Point) PMap.getBRC().clone();     // bottom right corner
+        if(tlc == null || brc == null)
+            return "map empty";
         mapArray=map2Array(tlc, brc);
 
         int lx=tlc.x;
@@ -443,7 +442,7 @@ public class DSMap {
     }
 
     public DSMap(DSAgent agent){
-        PMapCells =new DSCells();
+        PMap=new DSCells();
         PX=0; PY=0;
         PXMin=0;PXMax=0;PYMin=0;PYMax=0;
         PAgent=agent;

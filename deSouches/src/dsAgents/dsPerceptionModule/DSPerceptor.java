@@ -21,43 +21,6 @@ public class DSPerceptor {
     LinkedList<Point> PFriendsSeen;
     DSPercepts PPercepts;
 
-    public int getStepsTotalFromPercepts(Collection<Percept> percepts) {
-            return (DSPercepts.perceptParam2Int(
-                    percepts.stream().filter(prc -> prc.getName().equals("steps")).iterator().next(),0));
-    }
-
-    public int getTeamSizeFromPercepts(Collection<Percept> percepts) {
-        return (DSPercepts.perceptParam2Int(
-                percepts.stream().filter(prc -> prc.getName().equals("teamSize")).iterator().next(),0));
-    }
-
-    public String getNameFromPercepts(Collection<Percept> percepts) {
-        return(percepts.stream().filter(prc -> prc.getName().equals("name")).
-                iterator().next().getParameters().get(0).toString());
-    }
-
-
-
-    public String getTeamFromPercepts(Collection<Percept> percepts) {
-        return(percepts.stream().filter(prc -> prc.getName().equals("team")).
-                iterator().next().getParameters().get(0).toString());
-    }
-
-
-    public int getStepFromPercepts(Collection<Percept> percepts) {
-        return(Integer.parseInt(percepts.stream().filter(prc -> prc.getName().equals("step")).
-                iterator().next().getParameters().get(0).toString()));
-    }
-
-
-    public String actionResult(Collection<Percept> percepts) {
-        try {
-            return (percepts.stream().filter(prc -> prc.getName().equals("lastActionResult")).iterator().
-                    next().getParameters().get(0).toString());
-        }catch(Exception e){};
-        return(null);
-    }
-
 
     public boolean disabled(Collection<Percept> percepts){
         try {
@@ -78,9 +41,6 @@ public class DSPerceptor {
         PFriendsSeen.clear();
     }
 
-    public LinkedList<Point> getFriendsSeen(){
-        return(PFriendsSeen);
-    }
 
     public static Point getPositionFromDirection(String direction){
         Point directionPosition;
@@ -195,7 +155,8 @@ public class DSPerceptor {
         for(int i = -vision;i <= vision; i++)
             for (int j = -vision+Math.abs(i); Math.abs(j) + Math.abs(i) <= vision; j++) {
                 if(Math.abs(i)+Math.abs(j)<=vision) {
-                    map.removeOlder(new Point(i + agentPos.x, j + agentPos.y), step);
+                    map.removeOlder(new Point(i + agentPos.x, j + agentPos.y), step,
+                            (i==0)&&(j==0));
                     cells=newOutlook.getAllAt(new Point(i, j));
                     for(DSCell cell:cells){
                         DSCell newCell=new DSCell(cell.getX()+agentPos.x,cell.getY()+agentPos.y,
@@ -204,64 +165,7 @@ public class DSPerceptor {
                     }
                 }
             }
-
-        // in the map the real coords depends on the agent's position
-
-/*
-        for(DSCell cell:cells) {
-            if (cell.getType() == DSCell.__DSEntity_Friend)
-                PFriendsSeen.add(new Point(cell.getX(), cell.getY()));
-            DSCell newCell=new DSCell(cell.getX()+agentPos.x,cell.getY()+agentPos.y,
-                    cell.getType(),cell.getTimestamp());
-            map.addCell(newCell);
-        }
-*/
-
-        /*
-
-
-        perceptI=percepts.stream().filter(prc -> prc.getName().equals("obstacle")).iterator(); //.findFirst().get();
-
-        // ted by mel ale vycistit vsechny cely v dohledu, jinak se nesmazou zanikle prekazky
-
-        while(perceptI.hasNext()) {
-            percept=perceptI.next();
-            x=agentPos.x+PPercepts.perceptParam2Int(percept, 0);
-            y=agentPos.y+PPercepts.perceptParam2Int(percept, 1);
-            node=new DSCell(x,y, DSCell.__DSObstacle,step);
-            map.updateCell(node);
-        }
-
-        perceptI=percepts.stream().filter(prc -> prc.getName().equals("goal")).iterator(); //.findFirst().get();
-
-        while(perceptI.hasNext()) {
-            percept=perceptI.next();
-            x=agentPos.x+PPercepts.perceptParam2Int(percept, 0);
-            y=agentPos.y+PPercepts.perceptParam2Int(percept, 1);
-            node=new DSCell(x,y, DSCell.__DSGoal,step);
-            map.updateCell(node);
-        }
-
-        perceptI=percepts.stream().filter(prc -> prc.getName().equals("thing")).iterator(); //.findFirst().get();
-
-        while(perceptI.hasNext()) {
-            percept=perceptI.next();
-            int tx=PPercepts.perceptParam2Int(percept, 0);
-            int ty=PPercepts.perceptParam2Int(percept, 1);
-            int type=PPercepts.perceptParam2Type(percept,2, PTeamName);
-            if(type==DSCell.__DSEntity_Friend)
-                   PFriendsSeen.add(new Point(tx,ty));
-            // else {
-                x = agentPos.x + tx;
-                y = agentPos.y + ty;
-                node = new DSCell(x, y, type, step);
-                map.updateCell(node);
-            //}
-        }
-
-         */
-
-        return(true);
+   return(true);
     }
 
 

@@ -2,6 +2,11 @@ package dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment;
 
 /*
     2022, actual outlook of an agent (process add/delete lists)
+    Public
+    public int getStep()
+    public void processAddThing(int x, int y, String type, String params, int step)
+
+
  */
 
 import java.awt.*;
@@ -24,14 +29,6 @@ public class DSAgentOutlook {
     public void processDeleteThing(int x, int y, String type, String params, int step){
         PStep=step;
         POutlook.removeCell(x,y, DSCell.getThingTypeIndex(type,params));
-    }
-
-    public LinkedList<DSCell> getCellsList(int vision){
-        return(POutlook.getInRange(vision));
-    }
-
-    public LinkedList<DSCell> getAllAt(Point point){
-        return(POutlook.getAllAt(point));
     }
 
     public DSCells getCells(){

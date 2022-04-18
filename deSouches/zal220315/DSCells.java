@@ -12,12 +12,12 @@ public class DSCells {
         return(PCells);
     }
 
-    protected int getSize(){
+    public int getSize(){
         return(PCells.size());
     }
 
     // top left corner
-    protected Point getTLC(){
+    public Point getTLC(){
         if (PCells.isEmpty())
                 return null;
         Point tlc =PCells.getFirst().getPosition();
@@ -30,7 +30,7 @@ public class DSCells {
             return(tlc);
     }
 // bottom right corner
-    protected Point getBRC() {
+    public Point getBRC() {
         if (PCells.isEmpty())
             return null;
         Point brc = PCells.getFirst().getPosition();
@@ -44,17 +44,23 @@ public class DSCells {
     }
 
 
-    synchronized protected void put(DSCell element){
+    synchronized  public void put(DSCell element){
         PCells.add(element);
     }
 
-
-
-    synchronized protected void removeOlder(Point point, int step, boolean removeArea) {
+    public void removeAt(Point point){
         LinkedList<DSCell> newList=new LinkedList<DSCell>();
         for(DSCell element:PCells)
-            if((element.getPosition().x!=point.x)||(element.getPosition().y!=point.y)||(element.getTimestamp()>step)
-                    ||(((element.getType()==DSCell.__DSGoal)||(element.getType()==DSCell.__DSRoleArea))&&(!removeArea)))
+            if((element.getPosition().x!=point.x)||(element.getPosition().y!=point.y))
+                newList.add(element);
+
+            PCells=newList;
+    }
+
+    synchronized public void removeOlder(Point point, int step) {
+        LinkedList<DSCell> newList=new LinkedList<DSCell>();
+        for(DSCell element:PCells)
+            if((element.getPosition().x!=point.x)||(element.getPosition().y!=point.y)||(element.getTimestamp()>step))
                     newList.add(element);
             PCells=newList;
     }

@@ -2,7 +2,7 @@
     "NOsetup" : "conf/setup/test.txt",
 
     "steps" : 750,
-    "randomSeed" : 26,
+    "randomSeed" : 6,
     "randomFail" : 1,
     "entities" : {"standard" : 40},
     "clusterBounds" : [1,3],

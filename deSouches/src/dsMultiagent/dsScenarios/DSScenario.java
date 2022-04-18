@@ -13,6 +13,7 @@ public abstract class DSScenario {
 
     public final static int _disabledEvent=0;
     public final static int _noBlockEvent=1;
+    public final static int _areaSpoted=2;
 
     int PDefaultPriority=1;
     public static final int _idleLimit=65;

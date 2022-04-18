@@ -22,7 +22,7 @@ public class DSMap {
 
     private static final String TAG = "DSMap";
 
-    DSCells PMapCells;
+    DSCells PMap;
     int PWidthMap=0;
     int PHeightMap=0;
     HashMap <DSAgent,Point> PAgentPosition;
@@ -74,7 +74,7 @@ public class DSMap {
     }
 
     public DSCells getMap(){
-        return(PMapCells);
+        return(PMap);
     }
 
     public Point getOwnerAgentPos() { // Master
@@ -94,7 +94,7 @@ public class DSMap {
     }
 
     public int getNOC(){
-        return(PMapCells.getSize());
+        return(PMap.getSize());
     }
 
     public static int distance(Point a, Point b) {
@@ -115,7 +115,7 @@ public class DSMap {
             newCell=new DSCell(centralizeXCoords(cell.getX()+displacement.x),
                                             centralizeYCoords(cell.getY()+displacement.y),
                                                             cell.getType(),cell.getTimestamp());
-            PMapCells.put(newCell);
+            PMap.put(newCell);
         }
         return;
     }
@@ -124,7 +124,7 @@ public class DSMap {
 
 
     public synchronized void shiftMap(Point displacement) {
-        for(DSCell cell: PMapCells.getCells()) {
+        for(DSCell cell: PMap.getCells()) {
             cell.setX(centralizeXCoords(cell.getX()+displacement.x));
             cell.setY(centralizeYCoords(cell.getY()+displacement.y));
         }
@@ -164,7 +164,7 @@ public class DSMap {
 
     public boolean isObstacleAt(Point position, DSBody agentbody, DSBody body, int step) {
         for(DSCell bodyItem:body.getBodyList()) {
-            DSCell node = PMapCells.getKeyType(
+            DSCell node = PMap.getKeyType(
                         new Point(position.x + bodyItem.getX(), position.y + bodyItem.getY()),
                             DSCell.__DSObstacle);
             if (node != null) {
@@ -193,7 +193,7 @@ public class DSMap {
 
     boolean isOjectAt(Point position, int objectType){
 
-        return(!(PMapCells.getKeyType(position,objectType)==null));
+        return(!(PMap.getKeyType(position,objectType)==null));
 
     }
 
@@ -236,7 +236,7 @@ public class DSMap {
 
 
     public LinkedList<Point> allObjects(int type) {
-        LinkedList<DSCell> objects = PMapCells.getAllType(type);
+        LinkedList<DSCell> objects = PMap.getAllType(type);
         LinkedList<Point> objectPositions = new LinkedList<Point>();
         if(objects==null)
             return(null);
@@ -251,13 +251,13 @@ public class DSMap {
 
         LinkedList<DSCell> cells=new LinkedList<DSCell>();
 
-        if(PMapCells.getKeyType(new Point((int)position.getX()+1,(int)position.getY()),objectType)!=null)
+        if(PMap.getKeyType(new Point((int)position.getX()+1,(int)position.getY()),objectType)!=null)
             return(new Point(1,0));
-        if(PMapCells.getKeyType(new Point((int)position.getX()-1,(int)position.getY()),objectType)!=null)
+        if(PMap.getKeyType(new Point((int)position.getX()-1,(int)position.getY()),objectType)!=null)
             return(new Point(-1,0));
-        if(PMapCells.getKeyType(new Point((int)position.getX(),(int)position.getY()+1),objectType)!=null)
+        if(PMap.getKeyType(new Point((int)position.getX(),(int)position.getY()+1),objectType)!=null)
             return(new Point(0,1));
-        if(PMapCells.getKeyType(new Point((int)position.getX(),(int)position.getY()-1),objectType)!=null)
+        if(PMap.getKeyType(new Point((int)position.getX(),(int)position.getY()-1),objectType)!=null)
             return(new Point(0,-1));
 
             return(null);
@@ -302,7 +302,7 @@ public class DSMap {
 
     public Point nearestObject(int type, Point agentPosition) {
 
-        LinkedList<DSCell> objects= PMapCells.getAllType(type);
+        LinkedList<DSCell> objects=PMap.getAllType(type);
 
         if(objects==null)
             return(null);
@@ -321,12 +321,12 @@ public class DSMap {
     }
 
 
-    synchronized public void removeOlder(Point position, int timestamp, boolean removeArea){
-            PMapCells.removeOlder(position, timestamp, removeArea);
+    synchronized public void removeOlder(Point position, int timestamp){
+            PMap.removeOlder(position, timestamp);
     }
 
     synchronized public void addCell(DSCell cell){
-        PMapCells.put(cell);
+        PMap.put(cell);
     }
 
     synchronized public boolean updateCell(DSCell cell) {
@@ -335,7 +335,7 @@ public class DSMap {
         cell.setX(centralizeXCoords(cell.getX()));
         cell.setY(centralizeYCoords(cell.getY()));
 
-        PMapCells.put(cell);
+        PMap.put(cell);
         return(true);
     }
 
@@ -351,7 +351,6 @@ public class DSMap {
             return(" "+Math.abs(i));
     }
 
-
     public DSCell[][] map2Array(Point tlc, Point brc){
         int lx=tlc.x;
         int ty=tlc.y;
@@ -362,13 +361,11 @@ public class DSMap {
 
         DSCell[][] mapArray=new DSCell[width][height];
 
-        for(DSCell cell: PMapCells.getCells()){
+        for(DSCell cell:PMap.getCells()){
             mapArray[cell.getX()-lx][cell.getY()-ty]=cell;
         }
         return(mapArray);
     }
-
-
 
     synchronized public String stringMap(){
         DSCell node;
@@ -379,8 +376,8 @@ public class DSMap {
             so=so+agent.getEntityName()+", ";
         so=so+"\n";
 
-        Point tlc= PMapCells.getTLC();     // top left corner
-        Point brc= PMapCells.getBRC();     // bottom right corner
+        Point tlc=PMap.getTLC();     // top left corner
+        Point brc=PMap.getBRC();     // bottom right corner
 
         mapArray=map2Array(tlc, brc);
 
@@ -443,7 +440,7 @@ public class DSMap {
     }
 
     public DSMap(DSAgent agent){
-        PMapCells =new DSCells();
+        PMap=new DSCells();
         PX=0; PY=0;
         PXMin=0;PXMax=0;PYMin=0;PYMax=0;
         PAgent=agent;

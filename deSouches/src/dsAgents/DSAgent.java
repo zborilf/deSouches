@@ -133,8 +133,8 @@ public class DSAgent extends Agent {
         return(PNumber);
     }
 
-    public boolean standsAtRoleZone(){
-        return(PBeliefBase.standsAtRoleZone());
+    public boolean isAtRoleZone(){
+        return(PBeliefBase.isAtRoleZone());
     }
 
 
