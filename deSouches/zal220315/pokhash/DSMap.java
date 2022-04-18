@@ -244,7 +244,7 @@ public class DSMap {
         return (objectPositions);
     }
 
-    public synchronized Point objectAroundCell(Point position, int objectType){// TODO tohle zobecnit na body
+    public Point objectAroundCell(Point position, int objectType){// TODO tohle zobecnit na body
 
         LinkedList<DSCell> cells=new LinkedList<DSCell>();
 
@@ -361,61 +361,12 @@ public class DSMap {
 
         for(DSCell cell: PMapCells.getCells()){
             mapArray[cell.getX()-lx][cell.getY()-ty]=cell;
-
         }
-
-   /*     System.out.println("role areas:");
-        for(DSCell cell:PMapCells.getAllType(DSCell.__DSRoleArea))
-            System.out.print(cell.getPosition()+" / ");
-        System.out.println();*/
-
         return(mapArray);
     }
 
 
 
-
-    synchronized public String stringMap(){
-        DSCell node;
-        DSCell[][] mapArray;
-        String so="";
-
-        for(DSAgent agent: PAgentPosition.keySet())
-            so=so+agent.getEntityName()+", ";
-        so=so+"\n";
-
-        Point tlc= PMapCells.getTLC();     // top left corner
-        Point brc= PMapCells.getBRC();     // bottom right corner
-
-        int lx=tlc.x;
-        int ty=tlc.y;
-        int width=brc.x-lx+1;
-        int height=brc.y-ty+1;
-
-        for(int i=0;i<width;i++)
-            so=so+nmb(i+lx);
-        so=so+" \n";
-
-        for(int j=0;j<height;j++) {
-            for (int i = 0; i < width; i++) {
-                node = PMapCells.getOneAt(new Point(i,j));
-                if (node != null) {
-                    if ((j == getOwnerAgentPos().y) && (i == getOwnerAgentPos().x)) {
-                    } else {
-                        so = so + DSCell.getTypeSign(node.getType());
-                    }
-                } else {
-                    so = so + " ..";
-                }
-            }
-            so = so + nmb(j+ty) + " \n";
-        }
-
-        return(so);
-    }
-
-
-/*
     synchronized public String stringMap(){
         DSCell node;
         DSCell[][] mapArray;
@@ -456,8 +407,6 @@ public class DSMap {
 
         return(so);
     }
-
- */
 
     public void setWidth(int width){
         PWidthMap=width;

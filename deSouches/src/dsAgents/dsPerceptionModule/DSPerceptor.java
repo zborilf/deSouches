@@ -158,10 +158,11 @@ public class DSPerceptor {
                     map.removeOlder(new Point(i + agentPos.x, j + agentPos.y), step,
                             (i==0)&&(j==0));
                     cells=newOutlook.getAllAt(new Point(i, j));
-                    for(DSCell cell:cells){
-                        DSCell newCell=new DSCell(cell.getX()+agentPos.x,cell.getY()+agentPos.y,
-                                cell.getType(),cell.getTimestamp());
-                        map.updateCell(newCell);
+                    if(cells!=null)
+                        for(DSCell cell:cells){
+                            DSCell newCell=new DSCell(cell.getX()+agentPos.x,cell.getY()+agentPos.y,
+                                    cell.getType(),cell.getTimestamp());
+                            map.updateCell(newCell);
                     }
                 }
             }

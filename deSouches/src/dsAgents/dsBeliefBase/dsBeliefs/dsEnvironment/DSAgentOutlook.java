@@ -2,10 +2,6 @@ package dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment;
 
 /*
     2022, actual outlook of an agent (process add/delete lists)
-    Public
-    public int getStep()
-    public void processAddThing(int x, int y, String type, String params, int step)
-
 
  */
 
@@ -31,7 +27,7 @@ public class DSAgentOutlook {
         POutlook.removeCell(x,y, DSCell.getThingTypeIndex(type,params));
     }
 
-    public DSCells getCells(){
+    public synchronized DSCells getCells(){
         return(POutlook);
     }
 
@@ -48,7 +44,7 @@ public class DSAgentOutlook {
         return(flist);
     }
 
-    public String stringOutlook(int vision, String agentname){
+    public synchronized String stringOutlook(int vision, String agentname){
 
         String so="";
 
@@ -57,11 +53,16 @@ public class DSAgentOutlook {
                 if(Math.abs(i)+Math.abs(j)>vision)
                     so = so + "   ";
                 else{
-                    if ((j == i) && (i == 0))
+                    if ((j == 0) && (i == 0))
                         so = so + " AA";
                     else{
-                        if (POutlook.containsKey(new Point(i, j)))
-                            so = so + DSCell.getTypeSign(POutlook.getFirst(new Point(i, j)).getType());
+                        if (POutlook.containsKey(new Point(i, j))) {
+                            DSCell cell=POutlook.getOneAt(new Point(i, j));
+                            if(cell!=null)
+                                so = so + DSCell.getTypeSign(cell.getType());
+                            else
+                                so = so + " ..";
+                        }
                         else
                             so = so + " ..";
                     }

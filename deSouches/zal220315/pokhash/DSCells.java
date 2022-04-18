@@ -88,9 +88,6 @@ public class DSCells {
 
         if(PHashCells.containsKey(element.getPosition())){
             LinkedList<DSCell> cells=PHashCells.get(element.getPosition());
-            for(DSCell cell:cells)
-                if(cell.getType()==element.getType())   // not two of the same type at one place
-                    return;
             cells.add(element);
         }
         else {
@@ -105,25 +102,19 @@ public class DSCells {
     protected synchronized void removeOlder(Point point, int step, boolean removeArea) {
         // new Hash
 
-        LinkedList<DSCell> oldList=PHashCells.get(point);
-        LinkedList<DSCell> newList=new LinkedList();
-
+        LinkedList<DSCell> newList=PHashCells.get(point);
         DSCell tsCell=new DSCell(point.x,point.y,"clear","",step); // every place once visited contains this with timestamp
-        if(oldList!=null) {
-            for (DSCell element : oldList)
+        if(newList!=null) {
+            for (DSCell element : newList)
                 if ((element.getTimestamp() > step)
-                        || (((element.getType() == DSCell.__DSGoal) || (element.getType() == DSCell.__DSRoleArea)))) { //&& (!removeArea)))
-  //                  if ((element.getType() == DSCell.__DSGoal) || (element.getType() == DSCell.__DSRoleArea))
-  //                      System.out.println("Zachranuji areu na "+element.getPosition());
+                        || (((element.getType() == DSCell.__DSGoal) || (element.getType() == DSCell.__DSRoleArea)) && (!removeArea)))
                     newList.add(element);
-                }
                 newList.add(tsCell);
         }
         else{
             newList=new LinkedList();
             newList.add(tsCell);
         }
-  //      System.out.println("Po clearu zbylo "+newList.size());
         PHashCells.put(point, newList);
     }
 
@@ -162,17 +153,10 @@ public class DSCells {
 
     public synchronized DSCell getOneAt(Point point){
         LinkedList<DSCell> cells=getAllAt(point);
-        DSCell cell;
         if(cells!=null)
-            if(!cells.isEmpty()) {
-                cell = cells.getFirst();
-                for (DSCell cell2 : cells) {
-                    if (cell2.getType() > cell.getType())
-                        cell = cell2;
-                }
-                return (cell);
-            }
-        return(null);
+            if(!cells.isEmpty())
+                return(cells.getFirst());
+            return(null);
     }
 
 

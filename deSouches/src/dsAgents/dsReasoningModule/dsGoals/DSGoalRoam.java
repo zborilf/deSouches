@@ -40,6 +40,7 @@ public class DSGoalRoam extends DSGoal {
             direction=agent.getMap().objectAroundCell(agent.getMapPosition(), DSCell.__DSObstacle);
             if(direction==null)
                 return false; // plan exists,  no revision
+
             DSPlan plan=new DSPlan("clear",2);
             DSClear clearAction=new DSClear(agent.getEI(),direction);
             plan.appendAction(clearAction);

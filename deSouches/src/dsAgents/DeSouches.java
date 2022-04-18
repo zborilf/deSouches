@@ -125,7 +125,8 @@ public class DeSouches extends Agent{
         //TODO koupil to vojak, failne asi jenom twoblocks resp viceblocks
         agent.setBody(new DSBody());
         HorseRider.inform(TAG, "agentDisabled: DISABLED "+agent.getEntityName());
-        agent.getScenario().checkEvent(agent, DSScenario._disabledEvent);
+        if(agent.followsScenario())
+            agent.getScenario().checkEvent(agent, DSScenario._disabledEvent);
     }
 
 

@@ -83,6 +83,11 @@ public class DSAgent extends Agent {
         HorseRider.inform(TAG, "setScenario: priority for "+PBeliefBase.getName()+" is "+PScenarioPriority);
     }
 
+    public boolean followsScenario(){
+        return(PBeliefBase.getScenario()!=null);
+    }
+
+
     private int getScenarioPriority(){
        return(PScenarioPriority);
     }
