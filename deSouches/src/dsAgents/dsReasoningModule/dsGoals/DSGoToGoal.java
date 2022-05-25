@@ -8,7 +8,7 @@ import java.awt.*;
 
 public class DSGoToGoal extends DSGoal{
     @Override
-    public String getGoalName() {
+    public String getGoalDescription() {
         return("goToGoal");
     }
 

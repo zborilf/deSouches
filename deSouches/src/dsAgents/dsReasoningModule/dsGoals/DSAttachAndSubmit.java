@@ -13,7 +13,7 @@ public class DSAttachAndSubmit extends DSGoal {
     int PBlockType;
 
     @Override
-    public String getGoalName() {
+    public String getGoalDescription() {
         return("attachAndSubmit");
     }
 

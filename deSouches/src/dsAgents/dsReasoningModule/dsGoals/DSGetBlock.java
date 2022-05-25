@@ -19,7 +19,7 @@ public class DSGetBlock extends DSGoal {
     // napad, kdyz nevidi depod, sestavi plan jit k nejblizsimu 'neprekazkovemu' okraji sve mapy
     // pokud depot vidi, snazi se k nemu dojit, sestavi cestu k nemu, pokud by nahodou spadl, sestavuje cestu znovu
 
-    public String getGoalName(){
+    public String getGoalDescription(){
         return("goToDispenser");
     }
 

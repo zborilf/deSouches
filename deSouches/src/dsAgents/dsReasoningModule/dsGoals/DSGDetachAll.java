@@ -8,7 +8,7 @@ import java.util.LinkedList;
 
 public class DSGDetachAll extends DSGoal{
     @Override
-    public String getGoalName() {
+    public String getGoalDescription() {
         return("detachAllGoal");
     }
 

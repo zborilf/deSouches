@@ -138,12 +138,12 @@ public class DSPlan {
         //          ... false, nejde akci vykonat, za zadncyh okolnosti
         //          ... subgoal, tento subgoal musi byt splnen, pak je splnena i akce
 
-            if(subgoal.getGoalName().contentEquals("false")){
+            if(subgoal.getGoalDescription().contentEquals("false")){
             // TODO to, ze zde je jen return zpusobuje, ze se fail akce opakuji znovu a znovu
             //  plan by mel byt             PLinearPlan.clear(); ale jak odlisit od uspechu, kde je
                 return(false);
             }
-            if(!subgoal.getGoalName().contentEquals("true")) {
+            if(!subgoal.getGoalDescription().contentEquals("true")) {
                 // TODO, tak kde se uspesna akce popne z planu?
                 PSubGoal = subgoal;
                 return(true);

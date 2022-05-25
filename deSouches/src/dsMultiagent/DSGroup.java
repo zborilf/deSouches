@@ -44,6 +44,28 @@ public class DSGroup {
         return(PMembers);
     }
 
+    public LinkedList<DSAgent> getMembersByRole(String role){
+        LinkedList<DSAgent> membersRole=new LinkedList<DSAgent>();
+        LinkedList<DSAgent> members=getMembers();
+        if(members==null)
+            return(null);
+        for(DSAgent member:members)
+            if(member.getActualRole().compareTo(role)==0)
+                membersRole.add(member);
+        return(membersRole);
+    }
+
+
+    public LinkedList<Point> getMembersPositionsByRole(String role) {
+        LinkedList<Point> positions=new LinkedList<Point>();
+        LinkedList<DSAgent> members=getMembersByRole(role);
+        if(members==null)
+            return(null);
+        for(DSAgent member:members)
+            positions.add(member.getMapPosition());
+        return(positions);
+    }
+
     public int getNumber(){
         return(PMaster.getNumber());
     }
@@ -128,11 +150,13 @@ public class DSGroup {
 
 
     public LinkedList<DSAgent> getMembersList(){
+        /*
         LinkedList<DSAgent> membersCl=(LinkedList<DSAgent>)PMembers.clone();
         LinkedList<DSAgent> membersLst= new LinkedList<DSAgent>();
         for(DSAgent agent:membersCl)
             membersLst.add(agent);
-        return(membersLst);
+        return(membersLst);*/
+        return((LinkedList<DSAgent>)PMembers.clone());
     }
 
     public LinkedList<DSAgent> getFreeAgents(int priority){
@@ -234,7 +258,7 @@ public class DSGroup {
             newMember.setGroup(this);
         }
 
-        PMaster.getCommander().groupRemoved(groupToAbsorb);
+    //    PMaster.getCommander().groupRemoved(groupToAbsorb);
         PMaster.getCommander().groupExtendedBy(this,groupToAbsorb);
         PGroupMap.mergeMaps(groupToAbsorb.getMap(),displacement);
 

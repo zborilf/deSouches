@@ -12,7 +12,7 @@ public class DSGConnectAndDetach extends  DSGoal {
     String PPartnerName;
 
     @Override
-    public String getGoalName() {
+    public String getGoalDescription() {
         return("connectAndDetach");
     }
 

@@ -12,7 +12,7 @@ public class DSGConnectGoal extends DSGoal{
     private int PNOLeutnant;
 
     @Override
-    public String getGoalName() {
+    public String getGoalDescription() {
             return("customGoal");
     }
 

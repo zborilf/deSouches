@@ -23,36 +23,36 @@ public class DSMap {
     private static final String TAG = "DSMap";
 
     DSCells PMapCells;
-    int PWidthMap=0;
-    int PHeightMap=0;
-    HashMap <DSAgent,Point> PAgentPosition;
-    private boolean PMasterMap=false;
+    int PWidthMap = 0;
+    int PHeightMap = 0;
+    HashMap<DSAgent, Point> PAgentPosition;
+    private boolean PMasterMap = false;
 
 
     DSAgent PAgent;
 
-    final static int _maxDistance=5000;
+    final static int _maxDistance = 5000;
 
     int PY, PX, PXMin, PXMax, PYMin, PYMax;
-   // private Border border = new Border();
+    // private Border border = new Border();
 
-    int centralizeXCoords(int x){
-        if(PWidthMap==0)
-            return(x);
-        while(x<0)
-            x+=PWidthMap;
-        x=x % PWidthMap;
-        return(x);
+    int centralizeXCoords(int x) {
+        if (PWidthMap == 0)
+            return (x);
+        while (x < 0)
+            x += PWidthMap;
+        x = x % PWidthMap;
+        return (x);
     }
 
 
-    int centralizeYCoords(int y){
-        if(PHeightMap==0)
-            return(y);
-        while(y<0)
-            y+=PHeightMap;
-        y =y % PHeightMap;
-        return(y);
+    int centralizeYCoords(int y) {
+        if (PHeightMap == 0)
+            return (y);
+        while (y < 0)
+            y += PHeightMap;
+        y = y % PHeightMap;
+        return (y);
     }
 
     void updateXYMinMax(int x, int y) {
@@ -63,46 +63,99 @@ public class DSMap {
         return;
     }
 
-    public void setMasterMap(){
-        PMasterMap=true;
-        PWidthMap=70;   // provizorka
-        PHeightMap=70;  // provizorka
+    public void setMasterMap() {
+        PMasterMap = true;
+        PWidthMap = 70;   // provizorka
+        PHeightMap = 70;  // provizorka
     }
 
-    public boolean isMasterMap(){
-        return(PMasterMap);
+    public boolean isMasterMap() {
+        return (PMasterMap);
     }
 
-    public DSCells getMap(){
-        return(PMapCells);
+    public DSCells getMap() {
+        return (PMapCells);
     }
 
     public Point getOwnerAgentPos() { // Master
-        return(new Point(PX,PY));
+        return (new Point(PX, PY));
     }
 
     public Point getAgentPos(DSAgent agent) {
-        return(PAgentPosition.get(agent));
+        return (PAgentPosition.get(agent));
     }
 
-    public void setAgentPos(DSAgent agent,Point position) {
+    public void setAgentPos(DSAgent agent, Point position) {
         PAgentPosition.put(agent, position);
     }
 
-    public String getOwner(){
-        return(PAgent.getAgentName());
+    public String getOwner() {
+        return (PAgent.getAgentName());
     }
 
 
     public static int distance(Point a, Point b) {
-        if((a==null)||(b==null))
-            return(_maxDistance);
-        return (Math.abs(a.x - b.x) + Math.abs(a.y-b.y)); // Manhattan
+        if ((a == null) || (b == null))
+            return (_maxDistance);
+        return (Math.abs(a.x - b.x) + Math.abs(a.y - b.y)); // Manhattan
     }
 
     public static boolean closer(Point a, Point b, Point c) {
         return (distance(a, b) < distance(a, c));
     }
+
+    /*
+            MAKING ZONES
+     */
+
+    static LinkedList<Point> get8Neighbours(Point cell, LinkedList<Point> cells){
+        LinkedList<Point> neighbours=new LinkedList<Point>();
+        int x=cell.x;
+        int y=cell.y;
+        for(Point cell2:cells)
+            if((Math.abs(x-cell2.getX())<=1)&&(Math.abs(y-cell2.getY())<=1))
+                neighbours.add(cell2);
+        return(neighbours);
+    }
+
+
+        static LinkedList<Point> getZone(LinkedList<Point> cells) {
+    /*
+            gets contiguous are with the first cell of the list (and removes it form the list)
+     */
+            if (cells.isEmpty())
+                return (cells);
+            Point cell;
+            LinkedList<Point> open = new LinkedList<Point>();
+            LinkedList<Point> closed = new LinkedList<Point>();
+            open.add(cells.getFirst());
+            while (!open.isEmpty()) {
+                cell = open.getFirst();
+                open.removeFirst();
+                closed.add(cell);
+                open.addAll(get8Neighbours(cell, cells));
+                for (Point cell2 : open)
+                    cells.remove(cell2);
+            };
+            return(closed);
+        }
+
+    public static LinkedList<LinkedList<Point>> getPointsZones(LinkedList<Point> cells){
+        /*
+             Divides cells into contiguous areas
+         */
+        LinkedList<LinkedList<Point>> zones=new LinkedList<LinkedList<Point>>();
+        LinkedList<Point> zone=new LinkedList<Point>();
+        while(!cells.isEmpty()){
+            zone=getZone(cells);
+            for (Point cell2 : zone)
+                cells.remove(cell2);
+            zones.add(zone);
+        }
+        return(zones);
+    }
+
+
 
     public synchronized void mergeMaps(DSMap map, Point displacement) {
         // 2022 version
@@ -236,7 +289,7 @@ public class DSMap {
         LinkedList<DSCell> objects = PMapCells.getAllType(type);
         LinkedList<Point> objectPositions = new LinkedList<Point>();
         if(objects==null)
-            return(null);
+            return(objectPositions);
         objects=(LinkedList<DSCell>)objects.clone();
         for (DSCell cell : objects) {
             objectPositions.add(cell.getPosition());
@@ -360,8 +413,10 @@ public class DSMap {
         DSCell[][] mapArray=new DSCell[width][height];
 
         for(DSCell cell: PMapCells.getCells()){
-            mapArray[cell.getX()-lx][cell.getY()-ty]=cell;
-
+            if(mapArray[cell.getX()-lx][cell.getY()-ty]==null)
+                mapArray[cell.getX()-lx][cell.getY()-ty]=cell;
+            if(mapArray[cell.getX()-lx][cell.getY()-ty].getType()<cell.getType())
+                mapArray[cell.getX()-lx][cell.getY()-ty]=cell;
         }
 
    /*     System.out.println("role areas:");
@@ -372,8 +427,7 @@ public class DSMap {
         return(mapArray);
     }
 
-
-
+/*
 
     synchronized public String stringMap(){
         DSCell node;
@@ -414,8 +468,8 @@ public class DSMap {
         return(so);
     }
 
+*/
 
-/*
     synchronized public String stringMap(){
         DSCell node;
         DSCell[][] mapArray;
@@ -457,7 +511,7 @@ public class DSMap {
         return(so);
     }
 
- */
+
 
     public void setWidth(int width){
         PWidthMap=width;

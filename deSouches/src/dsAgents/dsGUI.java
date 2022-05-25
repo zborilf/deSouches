@@ -29,6 +29,8 @@ public class dsGUI {
     private JPanel dsgAgentsPanel;
     private JComboBox dsgAgentsSelect;
     private JTextArea dsgTextOutlook;
+    private JTextField dsgGoalArea;
+    private JTextField dsgScenarioArea;
     private JTextField dsgXValue;
     private JTextField dsgYValue;
     private JTextArea dsgLogText;
@@ -73,9 +75,11 @@ public class dsGUI {
         dsgEnergyValue.setText(energy);
     }
 
-    public void setScenarion(String scenario){
-        dsgPlan.append(scenario+'\n');
-    }
+    public void setScenario(String scenario){dsgScenarioArea.setText(scenario);}
+
+    public void noticeLastGoal(String goal){dsgGoalArea.setText(goal);}
+
+
 
     public void writePlan(DSPlan plan){
         if(plan==null)

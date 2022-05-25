@@ -4,7 +4,7 @@ import dsAgents.DSAgent;
 
 public class DSGoalTrue extends DSGoal {
     @Override
-    public String getGoalName() {
+    public String getGoalDescription() {
         return ("true");
     }
 

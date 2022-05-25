@@ -11,9 +11,12 @@ import dsAgents.dsBeliefBase.dsBeliefs.DSRole;
 import dsAgents.dsBeliefBase.dsBeliefs.DSRoles;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.*;
 import dsAgents.dsPerceptionModule.DSStatusIndexes;
+import dsAgents.dsPerceptionModule.dsSyntax.DSPercepts;
 import dsMultiagent.DSGroup;
 import dsMultiagent.DSSynchronize;
 import dsMultiagent.dsScenarios.DSScenario;
+import dsMultiagent.dsTasks.DSTask;
+import eis.iilang.Function;
 import eis.iilang.Parameter;
 
 import java.awt.*;
@@ -21,6 +24,8 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedList;
 import dsAgents.dsGUI;
+import eis.iilang.ParameterList;
+import eis.iilang.Percept;
 
 public class DSBeliefBase {
 
@@ -277,7 +282,48 @@ public class DSBeliefBase {
 
     // 15 : __task
 
-    // TODO
+    public void removeTask(Collection<Parameter> parameters){
+        PCommander.taskExpired(parameters.iterator().next().toString());
+    }
+
+    public void setTask(Collection<Parameter> parameters){
+        System.out.println(parameters.toString());
+        /*
+                parameters = [taskName, deadline, reward, [req(x,y,type]*]]
+         */
+
+        DSTask task;
+        String name;
+        int deadline;
+        int reward;
+        DSBody body;
+        DSCell cell;
+        ParameterList shapeParameters;
+
+        Iterator<Parameter> piterator=parameters.iterator();
+
+
+        name=piterator.next().toString();
+        deadline=Integer.parseInt(piterator.next().toString());
+        reward=Integer.parseInt(piterator.next().toString());
+
+        shapeParameters=(ParameterList)piterator.next();
+
+            body=new DSBody();
+            for(Parameter parameter:shapeParameters){
+                int x = Integer.parseInt(((Function) parameter).getParameters().get(0).toString());
+                int y = Integer.parseInt(((Function) parameter).getParameters().get(1).toString());
+                String typeS = ((Function) parameter).getParameters().get(2).toString();
+                int type= DSPercepts.blockTypeByName(typeS);
+                cell=new DSCell( x, y, type+DSCell.__DSBlock, 0);
+                if(Math.abs(x)+Math.abs(y)==1)
+                    body.insertFirstCell(cell);  // must be at the first position
+                else
+                    body.addCell(cell);
+
+            }
+            PCommander.taskProposed(new DSTask(name,deadline,reward,body), PStep); // nebo primo do GroupOptionsPool? Necht je to pres deSouches
+        }
 
 
     // 16 : __attached
@@ -469,9 +515,10 @@ public class DSBeliefBase {
             return;
         PScenario=scenario;
         if(PGUIFocus)
-            PGUI.setScenarion(scenario.getName());
+            PGUI.setScenario(scenario.getName());
 
     }
+
 
     public DSScenario getScenario(){
         return(PScenario);

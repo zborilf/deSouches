@@ -39,48 +39,48 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
     @Override
     public void goalCompleted(DSAgent agent, DSGoal goal) {
 
-       System.out.println("goalCompleted: " + "SCEN: Task te chvali, agente " + agent.getEntityName() + " za " + goal.getGoalName());
+       System.out.println("goalCompleted: " + "SCEN: Task te chvali, agente " + agent.getEntityName() + " za " + goal.getGoalDescription());
 
         if (agent == PMaster) {
-            if (goal.getGoalName().contentEquals("goRandomly"))
+            if (goal.getGoalDescription().contentEquals("goRandomly"))
                 agent.hearOrder(new DSGetBlock(PType1));
-            if (goal.getGoalName().contentEquals("detachAllGoal")) {
+            if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
                 PStateL1=1;
                 agent.hearOrder(new DSGetBlock(PType1, PMasterDispenserPos));
             }
-            if (goal.getGoalName().contentEquals("goToDispenser")) {
+            if (goal.getGoalDescription().contentEquals("goToDispenser")) {
                 PStateM = 2;
                 agent.hearOrder(new DSGoToPosition(PMasterGoalPos, PMasterGoalBody));
             }
-            if (goal.getGoalName().contentEquals("goToPosition")){
+            if (goal.getGoalDescription().contentEquals("goToPosition")){
                 PStateM = 3;
                 agent.hearOrder(new DSGConnectGoal(PTaskType,2,PTask.getName()));
             }
-            if (goal.getGoalName().contentEquals("customGoal")) {
+            if (goal.getGoalDescription().contentEquals("customGoal")) {
                 PStateM=4;
                 agent.hearOrder(new DSGSubmitGoal(PTask.getName()));
             }
-            if (goal.getGoalName().contentEquals("submitGoal"))
+            if (goal.getGoalDescription().contentEquals("submitGoal"))
                 PCommander.scenarioCompleted(this);
         }
 
         if (agent == PLeutnant1) {
-            if (goal.getGoalName().contentEquals("goRandomly"))
+            if (goal.getGoalDescription().contentEquals("goRandomly"))
                 agent.hearOrder(new DSGetBlock(PType2));
 
-            if (goal.getGoalName().contentEquals("detachAllGoal")) {
+            if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
                 PStateL1=1;
                 agent.hearOrder(new DSGetBlock(PType2, PLeutnant1DispenserPos));
             }
-            if (goal.getGoalName().contentEquals("goToDispenser")){
+            if (goal.getGoalDescription().contentEquals("goToDispenser")){
                 PStateL1 = 2;
                 agent.hearOrder(new DSGoToPosition(PLeutnant1GoalPos, PLeutnant1GoalBody));
             }
-            if (goal.getGoalName().contentEquals("goToPosition")) {
+            if (goal.getGoalDescription().contentEquals("goToPosition")) {
                 PStateL1 = 3;
                 agent.hearOrder(new DSGConnectGoal(PTaskType,2,PTask.getName()));
             }
-            if (goal.getGoalName().contentEquals("customGoal")) {
+            if (goal.getGoalDescription().contentEquals("customGoal")) {
                 PStateL1=4;
             }
 
@@ -88,21 +88,21 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
 
 
         if (agent == PLeutnant2) {
-            if (goal.getGoalName().contentEquals("goRandomly"))
+            if (goal.getGoalDescription().contentEquals("goRandomly"))
                 agent.hearOrder(new DSGetBlock(PType3));
-            if (goal.getGoalName().contentEquals("detachAllGoal")) {
+            if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
                 PStateL1=1;
                 agent.hearOrder(new DSGetBlock(PType3, PLeutnant2DispenserPos));
             }
-            if (goal.getGoalName().contentEquals("goToDispenser")){
+            if (goal.getGoalDescription().contentEquals("goToDispenser")){
                 PStateL2 = 2;
                 agent.hearOrder(new DSGoToPosition(PLeutnant2GoalPos, PLeutnant2GoalBody));
             }
-            if (goal.getGoalName().contentEquals("goToPosition")) {
+            if (goal.getGoalDescription().contentEquals("goToPosition")) {
                 PStateL2 = 3;
                 agent.hearOrder(new DSGConnectGoal(PTaskType,2, PTask.getName()));
             }
-            if (goal.getGoalName().contentEquals("customGoal")) {
+            if (goal.getGoalDescription().contentEquals("customGoal")) {
                 PStateL2=4;
             }
 
@@ -115,44 +115,44 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
 
         if (agent == PMaster) {
 
-            if (goal.getGoalName().contentEquals("goToDispenser")) {
-                agent.hearOrder(new DSGoalRoam(4));
+            if (goal.getGoalDescription().contentEquals("goToDispenser")) {
+                agent.hearOrder(new DSGoalExplore(4));
                 PStateM=2;
             }
-            if (goal.getGoalName().contentEquals("goToPosition")) {
+            if (goal.getGoalDescription().contentEquals("goToPosition")) {
                 PStateM = 3;
                 agent.hearOrder(new DSGoToPosition(PMasterGoalPos, PMasterGoalBody));
             }
-            if (goal.getGoalName().contentEquals("goRandomly"))
+            if (goal.getGoalDescription().contentEquals("goRandomly"))
                 agent.hearOrder(new DSGetBlock(PType1));
         }
 
         if (agent == PLeutnant1) {
 
-            if (goal.getGoalName().contentEquals("goToDispenser")) {
+            if (goal.getGoalDescription().contentEquals("goToDispenser")) {
                 PStateL1=2;
-                agent.hearOrder(new DSGoalRoam(4));
+                agent.hearOrder(new DSGoalExplore(4));
             }
-            if (goal.getGoalName().contentEquals("goToPosition")) {
+            if (goal.getGoalDescription().contentEquals("goToPosition")) {
                 PStateL1 = 3;
                 agent.hearOrder(new DSGoToPosition(PLeutnant1GoalPos, PLeutnant1GoalBody));
             }
-            if (goal.getGoalName().contentEquals("goRandomly"))
+            if (goal.getGoalDescription().contentEquals("goRandomly"))
                 agent.hearOrder(new DSGetBlock(PType2));
         }
 
 
         if (agent == PLeutnant2) {
 
-            if (goal.getGoalName().contentEquals("goToDispenser")) {
+            if (goal.getGoalDescription().contentEquals("goToDispenser")) {
                 PStateL2=2;
-                agent.hearOrder(new DSGoalRoam(4));
+                agent.hearOrder(new DSGoalExplore(4));
             }
-            if (goal.getGoalName().contentEquals("goToPosition")) {
+            if (goal.getGoalDescription().contentEquals("goToPosition")) {
                 PStateL2 = 3;
                 agent.hearOrder(new DSGoToPosition(PLeutnant2GoalPos, PLeutnant2GoalBody));
             }
-            if (goal.getGoalName().contentEquals("goRandomly"))
+            if (goal.getGoalDescription().contentEquals("goRandomly"))
                 agent.hearOrder(new DSGetBlock(PType3));
         }
 

@@ -73,6 +73,8 @@ public class DSAgent extends Agent {
         PBeliefBase.setHoldsBolockType(-1);
     }
 
+    public int getVisionRange(){ return(PBeliefBase.getVision()); }
+
     public EnvironmentInterfaceStandard getEI() {
         return (PEI);
     }
@@ -101,7 +103,6 @@ public class DSAgent extends Agent {
         PScenarioPriority=0;
         PBeliefBase.getCommander().needJob(this);
     }
-
     public int getIdleSteps(){
         return(PIdleSteps);
     }
@@ -244,7 +245,7 @@ public class DSAgent extends Agent {
                     Collection<Percept> newPercepts=percepts.getAddList();  // TODO ??
 
 
-                    DSPerceptor.processPercepts(PBeliefBase,percepts);
+      //              DSPerceptor.processPercepts(PBeliefBase,percepts);
 
 
                     // FEEDBACK, result of the last action performed
@@ -286,8 +287,6 @@ public class DSAgent extends Agent {
 
                     if(PBeliefBase.getGUIFocus()) {
 
-
-
                         PBeliefBase.getGUI().setXY(PBeliefBase.getAgentPosition().x,
                                                             PBeliefBase.getAgentPosition().y);
                         PBeliefBase.getGUI().setTextMap("MAP:" +
@@ -297,11 +296,10 @@ public class DSAgent extends Agent {
                                 PBeliefBase.getMap().stringMap());
                     }
 
-                    // REPORT AKTUALNICH TASKU LEUTNANTEM DESOUCHEMU
-                    if (PBeliefBase.isLeutnant()) {
-                        PBeliefBase.getCommander().checkDeadlines(PBeliefBase.getStep());
-                        PBeliefBase.getCommander().tasksProposed(perceptor.getTasksFromPercepts(percepts.getAddList()),PBeliefBase.getStep());
-                    }
+                    // sensing phase is over, salut commander / for synchronization and commander level reconsiderations
+
+                    PBeliefBase.getCommander().salut(PBeliefBase.getStep(), 0, (DSAgent)this.getAgent());
+
 
                     perceptor.getBodyFromPercepts(percepts.getAddList());
 
@@ -366,9 +364,10 @@ public class DSAgent extends Agent {
                         recentIntentionExecuted = PIntentionPool.executeOneIntention((DSAgent) this.getAgent());
                         // PRINT recentIntention on GUI
 
-                        if(PBeliefBase.getGUIFocus())
+                        if(PBeliefBase.getGUIFocus()) {
+                            PBeliefBase.getGUI().noticeLastGoal(recentIntentionExecuted.getTLG().getGoalDescription());
                             PBeliefBase.getGUI().writePlan(recentIntentionExecuted.getRecentPlan());
-
+                        }
                     }
                 }
             } catch (Exception e) {
@@ -433,7 +432,7 @@ public class DSAgent extends Agent {
             if(group==null){
                 group = new DSGroup(this);
                 group.getMap().addNewAgent(this, new Point(0,0));
-                commander.groupCreated(group);
+            //    commander.groupCreated(group);
             }
             PBeliefBase.setGroup(group);
             PBeliefBase.setMap(group.getMap());

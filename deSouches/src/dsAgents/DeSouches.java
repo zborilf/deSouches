@@ -2,9 +2,14 @@ package dsAgents;
 
 import deSouches.utils.HorseRider;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
+import dsMultiagent.dsGroupOptions.dsGroupOption;
+import dsMultiagent.dsGroupOptions.dsGroupOptionsPool;
+import dsMultiagent.dsGroupOptions.dsGroupTaskOption;
+import dsMultiagent.dsGroupReasoning.DSCoallitionReasoning;
 import dsMultiagent.dsScenarios.*;
 import dsMultiagent.DSGroup;
-import dsMultiagent.DSGroupPool;
 import dsMultiagent.DSSynchronize;
 import dsMultiagent.dsTasks.DSTask;
 import dsAgents.dsPerceptionModule.dsSyntax.DSPercepts;
@@ -24,13 +29,16 @@ public class DeSouches extends Agent{
     private static final String TAG = "DeSouches";
     private static final int _timeNeeded=80;
     private static final int _busyAgentsLimit=8;
+    private static final int __max_workers=8;
+
     private dsGUI PGUI;
+    private dsGeneralGUI PGGUI;
     private DSAgent PGUIFocus;
 
     static EnvironmentInterfaceStandard PEI;
     private int PPopulationSize=0;
     private DSSynchronize PSynchronizer;
-    private DSGroupPool PGroupPool;
+    private dsMultiagent.dsGroupOptions.dsGroupOptionsPool PGroupOptions;
     private LinkedList<String> PActiveTasks;
     private HashMap<String,DSAgent> PRegisteredAgents;
 
@@ -38,53 +46,179 @@ public class DeSouches extends Agent{
 
     private LinkedList<DSScenario> PScenariosActive;
 
+    /*
+        deSouches BB is included in this module
+     */
+
+    private int PLastStep=0;
+
 
     /*
         DIVISIONS MANAGEMENT
     */
 
     public void groupCreated(DSGroup group){
-        PGroupPool.addGroup(group);
+  //      PGroupPool.addGroup(group);
     }
 
     public void groupRemoved(DSGroup group){
-        PGroupPool.removeGroup(group);
+  //      PGroupPool.removeGroup(group);
     }
 
-    public void groupExtendedBy(DSGroup extendedGroup, DSGroup by){
-        //    if(by==PMasterGroup)
-        //        PMasterGroup=extendedGroup;
+    /*
+        Group reasoning: revise options / relevant strategies are fixed for the tasks
+                                            applicable (?), teams reconsiderations
+     */
 
-        if(extendedGroup.isMasterGroup())
-            System.out.println("MasterGroupExtended: ");
-        else
-            System.out.println("groupExtended: ");
-
-        extendedGroup.printGroup();
-        System.out.println(" by group ");
-        by.printGroup();
-        System.out.println(" step "+extendedGroup.getMembers().getFirst().getStep());
-
-//        PGroupPool.printGroups();
+    public String roleNeeded(DSAgent agent){
+        String role="digger";
+        LinkedList<DSAgent> workers=agent.getGroup().getMembersByRole("worker");
+        if(workers!=null)
+            if(workers.size()>=__max_workers)
+                return(role);
+        if(Math.random()<0.5)
+            role="worker";
+        return(role);
     }
+
+    /*
+            Reasoning about tasks -> coalition search
+     */
+
+    void printPointLists(LinkedList<LinkedList<Point>> points){
+        String st;
+        for(LinkedList<Point>points2:points) {
+            st = "";
+            for (Point point : points2)
+                st = st + "[" + point.x + "," + point.y + "] ";
+            PGGUI.addTask(st);
+        }
+    }
+
+
+
+    void checkTask(LinkedList<Integer> types) {
+
+        /*
+        toto je bastl, opravit po ladeni, vyhodit
+         */
+
+        boolean possible=true;
+        if (PSynchronizer.getMasterGroup() == null){
+            PGGUI.addTask("Neni mastergrupa");
+            return;
+        }
+
+        LinkedList<DSAgent> workers=new LinkedList<DSAgent>();
+        LinkedList<LinkedList<Point>> dispensersForTypes=new LinkedList<LinkedList<Point>>();
+        LinkedList<Point> dispensersForType= new LinkedList<Point>();
+        LinkedList<Point> goalslLocations= new LinkedList<Point>();
+        LinkedList<LinkedList<Point>> goalZones=new LinkedList<LinkedList<Point>>();
+
+
+        DSMap map=PSynchronizer.getMasterGroup().getMap();
+        String st;
+        if(types==null)
+            possible=false;
+        else{
+            // list of list of dispensers locations for every needed type
+
+            for (int type : types) {
+                st = type + ": ";
+                dispensersForType = map.allObjects(DSCell.__DSDispenser + type);
+                if (dispensersForType.isEmpty()) {
+                    possible=false;
+                    st = st + "nejsou";
+                }
+                else {
+                    dispensersForTypes.add(dispensersForType);
+                    for (Point position : dispensersForType)
+                        st = st + " / " + position.toString();
+                }
+                PGGUI.addTask(st);
+            }
+
+            st = "Goal:";
+            goalslLocations = map.allObjects(DSCell.__DSGoal);
+            if (goalslLocations == null) {
+                st = st + "nejsou";
+                possible=false;
+            }
+            else
+                for (Point position : goalslLocations)
+                    st = st + " / " + position.toString();
+            PGGUI.addTask(st);
+
+            goalZones=DSMap.getPointsZones(goalslLocations);
+            printPointLists(goalZones);
+
+            st = "Agents: ";
+            for (DSAgent agent : PSynchronizer.getMasterGroup().getMembers()) {
+                st = st + " " + agent.getMapPosition();
+            }
+            PGGUI.addTask(st);
+
+            st = "Diggers: ";
+            LinkedList<DSAgent> diggers = PSynchronizer.getMasterGroup().getMembersByRole("digger");
+            if (diggers != null)
+                for (DSAgent digger : diggers)
+                    st = st + digger.getEntityName() + " / ";
+            PGGUI.addTask(st);
+
+            st = "Workers: ";
+            workers = PSynchronizer.getMasterGroup().getMembersByRole("worker");
+            if(workers==null)
+                possible=false;
+                        else
+                    for (DSAgent worker : workers)
+                        st = st + worker.getEntityName() + " / ";
+            PGGUI.addTask(st);
+        }
+
+        if(possible)
+            if(workers.size()<dispensersForTypes.size())
+                // not enaugh workers
+                possible=false;
+
+
+        if(possible) {
+            PGGUI.addTask("TASK POSSIBLE!");
+
+            DSCoallitionReasoning.proposeTaskCoallition(workers, dispensersForTypes, goalZones);
+
+        }
+    }
+
+
+    void groupReasoning(){
+        for(dsGroupOption option:PGroupOptions.getOptions())
+            if(option instanceof dsGroupTaskOption){
+                DSTask task=((dsGroupTaskOption)option).getTask();
+                if(task.getDeadline()<PLastStep)
+                    PGroupOptions.removeOption(task.getName());
+         //       if(task.getTypesNeeded()!=null) {
+         //           PGGUI.addTask("Je treba resit " + task.getName() +
+         //                   " deadline " + task.getDeadline() + " pozadavky " + task.getTypesNeeded().toString());
+                    checkTask(task.getTypesNeeded());
+         //       }
+            }
+    }
+
 
     /*
      *       BARRIER   - of agents. True, if all the agents are in the list
      */
 
-    public synchronized boolean barrier(int step, int phase, DSAgent agent){
-        int id=step*10+phase;            // TODO 10 should be a system constant ... number of agents
-        LinkedList<DSAgent> agentList;
-        agentList=PBarriers.get(id);
-        if(agentList==null)
-            agentList = new LinkedList<DSAgent>();
-        if(!agentList.contains(agent))
-            agentList.add(agent);
-        PBarriers.put(id,agentList);
-        System.out.println("::"+agent.getEntityName()+"--"+step+"/"+phase+"/"+agentList.size()+" population "+
-                PPopulationSize);
-        return(agentList.size()==PPopulationSize);
+    public synchronized void salut(int step, int phase, DSAgent agent){  // barrier
+        if(step>PLastStep) {
+            PGGUI.clearTasks();
+            PLastStep=step;
+            checkDeadlines(step);  // TODO ... reconsider options, but only once per step
+            PGGUI.addTask("Step:"+PLastStep);
+            groupReasoning();
+        }
     }
+
 
     /*
             INTERFACE
@@ -121,6 +255,33 @@ public class DeSouches extends Agent{
             PActiveTasks.remove(scenario.getTask());
     }
 
+
+    /*
+            when a group is extended, then
+                        1 scenarios carried out by its members is forgotten
+     */
+
+    public void groupExtendedBy(DSGroup extendedGroup, DSGroup by){
+        //    if(by==PMasterGroup)
+        //        PMasterGroup=extendedGroup;
+
+        if(extendedGroup.isMasterGroup())
+            System.out.println("MasterGroupExtended: ");
+        else
+            System.out.println("groupExtended: ");
+
+        extendedGroup.printGroup();
+        System.out.println(" by group ");
+        by.printGroup();
+        System.out.println(" step "+extendedGroup.getMembers().getFirst().getStep());
+
+
+        for(DSAgent agent:by.getMembers())
+            agent.removeScenario();
+//        PGroupPool.printGroups();
+    }
+
+
     public void agentDisabled(DSAgent agent){
         //TODO koupil to vojak, failne asi jenom twoblocks resp viceblocks
         agent.setBody(new DSBody());
@@ -131,20 +292,23 @@ public class DeSouches extends Agent{
 
 
     public synchronized void needJob(DSAgent agent){
-        if(PGroupPool.getGroups().size()==1){
+      /*  if(PGroupPool.getGroups().size()==1){
             // all synchronized
             DSSSeekAndDestroy scenario=new DSSSeekAndDestroy(agent);
             agent.setScenario(scenario);
             scenario.initScenario(agent.getStep());
         }
-        else {
-            DSSWalkAndSynchronize scenario = new DSSWalkAndSynchronize(agent, 10);  // 10 je max delka prochazky
+        else {*/
+            DSDivideAndExplore scenario = new DSDivideAndExplore(agent, 5);  // 10 je max delka prochazky
             agent.setScenario(scenario);
             scenario.initScenario(agent.getStep());
-        }
+       // }
     }
 
     public void checkDeadlines(int step){
+
+        // predelat ... dsGroupOptins 2022
+
         LinkedList<DSScenario> scenarios=(LinkedList<DSScenario>)PScenariosActive.clone();
         for(DSScenario scenario:scenarios)
             if(scenario.getDeadline()<step) {
@@ -160,7 +324,93 @@ public class DeSouches extends Agent{
         return(PSynchronizer.getMasterGroup().getBusyAgents(2).size());
     }
 
-    public synchronized boolean tasksProposed(LinkedList<DSTask> tasks, int step){
+
+    public synchronized  boolean taskExpired(String name){
+        PGroupOptions.removeOption(name);
+        PGGUI.addTask("Removed: "+name);
+
+        return(true);
+    }
+
+    public synchronized boolean taskProposed(DSTask task, int step) {
+
+        /*
+        DSGroup chosenGroup;
+        DSSTwoBlocks twoBlocks;
+        DSSThreeBlocks threeBlocks;
+        DSSFourBlocks fourBlocks;
+        */
+
+        dsGroupTaskOption taskOption=new dsGroupTaskOption(task);
+
+        if(PGroupOptions.addOption(taskOption))
+            PGGUI.addTask(task.getName() + "\\" + task.getTaskBody().bodyToString());
+
+
+    /*
+        PGGUI.addTask(task.getName() + "\\" + task.getTaskBody().bodyToString());
+        int taskType = task.getTaskTypeNumber();
+
+
+        if (taskType <= 42) { // LADENI, bereme jen Task4
+
+            chosenGroup = null;
+
+            if (!PActiveTasks.contains(task.getName()))
+
+                // jen pro dva, typ 1 linearni, typ 2 na bok, linearni
+                PSynchronizer.getMasterGroup();
+            if (PSynchronizer.getMasterGroup() != null) {
+                if (PSynchronizer.getMasterGroup().isCapable(task, 2)) {
+                    chosenGroup = PSynchronizer.getMasterGroup();
+                } else
+                    chosenGroup = null;
+
+            }
+
+
+            if (chosenGroup != null) {
+
+                if (task.getDeadline() - chosenGroup.getFreeAgents(2).getFirst().getStep() >= _timeNeeded) {
+
+                    PActiveTasks.add(task.getName());
+
+
+                    if (task.getTypesNeeded().size() == 2)
+                        if ((taskType <= 3) && (getBusyAgents() + 2 <= _busyAgentsLimit)) {
+                            twoBlocks = new DSSTwoBlocks(this, chosenGroup, task, taskType);
+                            twoBlocks.initScenario(step);
+                            PScenariosActive.add(twoBlocks);
+                            return (true);
+                        }
+
+
+                    if (task.getTypesNeeded().size() == 3)
+                        if ((taskType <= 18) && (getBusyAgents() + 3 <= _busyAgentsLimit)) {
+                            threeBlocks = new DSSThreeBlocks(this, chosenGroup, task, taskType);
+                            threeBlocks.initScenario(step);
+                            PScenariosActive.add(threeBlocks);
+                            return (true);
+                        }
+
+
+                    if (task.getTypesNeeded().size() == 4)
+                        if ((taskType <= 42) && (getBusyAgents() + 4 <= _busyAgentsLimit)) {
+                            fourBlocks = new DSSFourBlocks(this, chosenGroup, task, taskType);
+                            fourBlocks.initScenario(step);
+                            PScenariosActive.add(fourBlocks);
+                            return (true);
+                        }
+                }
+            }
+        }
+        */
+
+        return(false);
+    }
+
+/*
+        public synchronized boolean tasksProposed(LinkedList<DSTask> tasks, int step){
 
 
         if(tasks.size()==0)
@@ -171,10 +421,11 @@ public class DeSouches extends Agent{
         DSSTwoBlocks twoBlocks;
         DSSThreeBlocks threeBlocks;
         DSSFourBlocks fourBlocks;
+        PGGUI.clearTasks();
 
         for(DSTask task:tasks) {
 
-
+            PGGUI.addTask(task.toString());
             taskType = task.getTaskTypeNumber();
 
 
@@ -247,7 +498,8 @@ public class DeSouches extends Agent{
             Collection<String> entities;
             entities = PEI.getEntities();
 
-            PGUI=dsGUI.createGUI(0, (DeSouches)this.getAgent());
+            PGGUI=dsGeneralGUI.createGUI(0, (DeSouches)this.getAgent());
+            PGUI=dsGUI.createGUI(1, (DeSouches)this.getAgent());
 
             int agentNo = 0;
             HorseRider.inform(TAG, "action: "+"Je treba vytvorit agenty pro ... ");
@@ -297,10 +549,11 @@ public class DeSouches extends Agent{
         DSPercepts.initBlocks();
         PRegisteredAgents=new HashMap<String, DSAgent>();
         PSynchronizer= new DSSynchronize();
-        PGroupPool=new DSGroupPool();
         PActiveTasks=new LinkedList<String>();
         PScenariosActive=new LinkedList<DSScenario>();
         PBarriers=new HashMap<Integer,LinkedList<DSAgent>>();
+        PGroupOptions=new dsGroupOptionsPool();
+
         try {
 
             PEI = new EnvironmentInterface("eismassimconfig.json");

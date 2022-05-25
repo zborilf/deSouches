@@ -194,6 +194,7 @@ public class DSPerceptor {
             perceptName=percept.getName();
             perceptParams=percept.getParameters();
 
+
             switch(DSBeliefsIndexes.getIndex(perceptName)){
 
                 case DSBeliefsIndexes.__thing:
@@ -226,6 +227,11 @@ public class DSPerceptor {
 
                 case DSBeliefsIndexes.__lastActionResult:
                     break;
+
+                case DSBeliefsIndexes.__task:
+                    BB.removeTask(perceptParams);
+                    break;
+
                 case DSBeliefsIndexes.__energy:
                     break;
                 case DSBeliefsIndexes.__score:
@@ -252,8 +258,10 @@ public class DSPerceptor {
                 case DSBeliefsIndexes.__name:
                     BB.setName(perceptParams);
                     break;
+
                 case DSBeliefsIndexes.__team:
                     break;
+
                 case DSBeliefsIndexes.__teamSize:
                     BB.setTeamSize(perceptParams);
                     break;
@@ -284,10 +292,13 @@ public class DSPerceptor {
                         BB.setLastActionParams(perceptParams);
                         break;
 
-
                     case DSBeliefsIndexes.__lastActionResult:
                         BB.setLastActionResult(perceptParams);
                         break;
+
+                        case DSBeliefsIndexes.__task:
+                            BB.setTask(perceptParams);
+                            break;
 
                 case DSBeliefsIndexes.__energy:
                     BB.setEnergy(perceptParams);

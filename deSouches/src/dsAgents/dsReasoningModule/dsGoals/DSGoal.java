@@ -58,10 +58,10 @@ public abstract class DSGoal {
     }
 
 
-    public abstract String getGoalName();
+    public abstract String getGoalDescription();
 
 
-    public DSPlan hasPlan() { // vrati plan s nejvyssi prioritou, pokud zadny neni -> null
+    public DSPlan highestPriorityPlan() { // vrati plan s nejvyssi prioritou, pokud zadny neni -> null
         DSPlan hpPlan=null;
         for(String planName:PPlans.keySet())
             if(hpPlan==null)
@@ -127,10 +127,6 @@ public abstract class DSGoal {
     };
 
 
-    public void subGoalAchieved(){
-        PSubGoal=null;
-    }
-
 
     public int followGoal(DSAgent agent) {
 
@@ -139,6 +135,7 @@ public abstract class DSGoal {
 
         for(String planName:PPlans.keySet())         // nebyl jiz cin dosazen? TODO melo by byt uz po vykonani akce, resp. po feedbacku
             if(PPlans.get(planName).planSuceeded()) {
+                System.out.println(agent.getEntityName()+":"+this.getGoalDescription()+" achieved by "+PPlans.get(planName).plan2text());
                 PLastStatus = __DSGGoalAchieved;
                 return (PLastStatus);
             }
@@ -150,7 +147,7 @@ public abstract class DSGoal {
 
         revisePlans(agent);     //
 
-        DSPlan chosenPlan=hasPlan();
+        DSPlan chosenPlan= highestPriorityPlan();
 
         if (chosenPlan == null) {       // plan nebyl a ani se makePlanem nevytvoril -> gol spadl
             PLastStatus = __DSGPlanningFailed;

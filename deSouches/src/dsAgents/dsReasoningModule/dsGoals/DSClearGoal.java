@@ -15,7 +15,7 @@ public class DSClearGoal extends DSGoal {
     Point PDirection;
 
     @Override
-    public String getGoalName() {
+    public String getGoalDescription() {
         return ("clearGoal");
     }
 

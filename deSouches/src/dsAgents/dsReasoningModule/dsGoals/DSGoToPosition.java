@@ -11,7 +11,7 @@ public class DSGoToPosition extends DSGoal {
     Point PDestination;
     DSBody PBody=null;
 
-    public String getGoalName(){
+    public String getGoalDescription(){
         return("goToPosition");
     }
 

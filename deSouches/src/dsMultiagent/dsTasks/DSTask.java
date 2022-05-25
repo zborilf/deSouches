@@ -485,6 +485,9 @@ public class DSTask {
             case 42:
                 PTaskType = new DSTaskType42();
                 break;
+            default:
+                PTaskType = null;
+                return;
         }
 
         PTypesNeeded=PTaskType.getTypesNeeded(getTaskBody());

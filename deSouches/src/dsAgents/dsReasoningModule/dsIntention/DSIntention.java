@@ -37,7 +37,7 @@ public class DSIntention {
         if(PIntentionStack.isEmpty())
             return("no intention");
 
-        return(PIntentionStack.getFirst().getGoalName());
+        return(PIntentionStack.getFirst().getGoalDescription());
     }
 
     public int intentionState() {
@@ -50,7 +50,7 @@ public class DSIntention {
                     (TLG.goalStatus()==DSGoal.__DSGExecutionFailed)||
                     (TLG.goalStatus()==DSGoal.__DSGMovePathFailed))
                         return(__Intention_Failed);
-
+                               
         return (__Intention_InProcess);
     }
 

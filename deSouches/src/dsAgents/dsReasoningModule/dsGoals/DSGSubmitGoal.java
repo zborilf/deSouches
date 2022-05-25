@@ -10,7 +10,7 @@ public class DSGSubmitGoal extends DSGoal{
 
 
     @Override
-    public String getGoalName() {
+    public String getGoalDescription() {
         return("submitGoal");
     }
 
