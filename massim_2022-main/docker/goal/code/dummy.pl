@@ -1,3 +1,0 @@
-:- dynamic
-
-	step/1.

@@ -1,0 +1,3 @@
+[submodule "massim_2022"]
+	path = massim_2022
+	url = https://github.com/agentcontest/massim_2022
