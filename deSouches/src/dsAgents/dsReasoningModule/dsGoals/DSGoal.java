@@ -126,10 +126,9 @@ public abstract class DSGoal {
     // "+PLastStatus);
 
     for (String planName :
-        PPlans
-            .keySet()) // nebyl jiz cin dosazen? TODO melo by byt uz po vykonani akce, resp. po
-                       // feedbacku
-    if (PPlans.get(planName).planSuceeded()) {
+        PPlans.keySet()) // nebyl jiz cin dosazen? TODO melo by byt uz po vykonani akce, resp. po
+      // feedbacku
+      if (PPlans.get(planName).planSuceeded()) {
         System.out.println(
             agent.getEntityName()
                 + ":"
@@ -159,7 +158,7 @@ public abstract class DSGoal {
       PPlans.remove(chosenPlan); // plan byl neuspesny, bude odstranen
       PLastStatus = __DSGExecutionFailed;
     } else { // execution was OK, execution result may be 1, waiting feetback 2, demands subgoal
-             // (zatim neni) 3, succeeded
+      // (zatim neni) 3, succeeded
       PRecentPlan = chosenPlan;
       PLastStatus = __DSGExecutionSucceeded;
       if (chosenPlan.waitingForFeedback()) {

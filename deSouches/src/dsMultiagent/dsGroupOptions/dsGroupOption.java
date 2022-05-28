@@ -1,6 +1,5 @@
 package dsMultiagent.dsGroupOptions;
 
-
 public class dsGroupOption {
 
   public static final int __taskOption = 1;

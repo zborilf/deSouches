@@ -1,6 +1,5 @@
 package dsAgents.dsBeliefBase.dsBeliefs;
 
-
 import java.util.HashMap;
 
 public class DSRoles {
