@@ -5,6 +5,7 @@
 # Log file
 *.log
 **/logs/*
+APDescription.txt
 
 # BlueJ files
 *.ctxt

@@ -4,28 +4,27 @@ import dsAgents.DSAgent;
 
 public class DSGChangeRole extends DSGoal {
 
-    String PRole;
+  String PRole;
 
-    public boolean goalAchieved(){
-        return(PLastStatus==__DSGGoalAchieved);
+  public boolean goalAchieved() {
+    return (PLastStatus == __DSGGoalAchieved);
+  }
+
+  @Override
+  public String getGoalDescription() {
+    return null;
+  }
+
+  @Override
+  public boolean revisePlans(DSAgent agent) {
+    if (agent.getActualRole().compareTo(PRole) == 0) {
+      PLastStatus = __DSGGoalAchieved;
     }
+    //        if(if(PPlans.containsKey("changeRole"))
+    return false;
+  }
 
-
-    @Override
-    public String getGoalDescription() {
-        return null;
-    }
-
-    @Override
-    public boolean revisePlans(DSAgent agent) {
-        if(agent.getActualRole().compareTo(PRole)==0){
-            PLastStatus=__DSGGoalAchieved;
-        }
-//        if(if(PPlans.containsKey("changeRole"))
-            return false;
-    }
-
-    public DSGChangeRole(String role){
-        PRole=  role;
-    }
+  public DSGChangeRole(String role) {
+    PRole = role;
+  }
 }

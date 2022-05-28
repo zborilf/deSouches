@@ -14,37 +14,37 @@ import eis.iilang.Identifier;
 
 public class DSRequest extends DSAction {
 
-    String PDirection;
+  String PDirection;
 
-    @Override
-    public DSGoal execute(DSAgent agent) {
-        Action a = new Action("request", new Identifier(PDirection));
-        try {
-            agent.getEI().performAction(agent.getJADEAgentName(), a);
+  @Override
+  public DSGoal execute(DSAgent agent) {
+    Action a = new Action("request", new Identifier(PDirection));
+    try {
+      agent.getEI().performAction(agent.getJADEAgentName(), a);
 
-        } catch (ActException e) {
-            return(new DSGoalFalse());
-        }
-        return(new DSGoalTrue());
+    } catch (ActException e) {
+      return (new DSGoalFalse());
     }
+    return (new DSGoalTrue());
+  }
 
-    @Override
-    public DSAStarItem simulate(DSMap map, DSAStarItem item, DSBody agentBody, int step) {
-        return null;
-    }
+  @Override
+  public DSAStarItem simulate(DSMap map, DSAStarItem item, DSBody agentBody, int step) {
+    return null;
+  }
 
-    @Override
-    public boolean isExternal(){return(true);}
+  @Override
+  public boolean isExternal() {
+    return (true);
+  }
 
-    @Override
-    public String actionText() {
-        return("Request "+PDirection);
-    }
+  @Override
+  public String actionText() {
+    return ("Request " + PDirection);
+  }
 
-
-    public DSRequest(EnvironmentInterfaceStandard ei, String direction){
-        super(ei);
-        PDirection=direction;
-    }
-
+  public DSRequest(EnvironmentInterfaceStandard ei, String direction) {
+    super(ei);
+    PDirection = direction;
+  }
 }

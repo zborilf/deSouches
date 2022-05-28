@@ -12,36 +12,34 @@ import eis.exceptions.ActException;
 import eis.iilang.Action;
 
 public class DSSkip extends DSAction {
-    @Override
-    public DSGoal execute(DSAgent agent) {
-        Action a = new Action("skip");
-        try {
-            agent.getEI().performAction(agent.getJADEAgentName(), a);
+  @Override
+  public DSGoal execute(DSAgent agent) {
+    Action a = new Action("skip");
+    try {
+      agent.getEI().performAction(agent.getJADEAgentName(), a);
 
-        } catch (ActException e) {
-            return(new DSGoalFalse());
-        }
-        return(new DSGoalTrue());
+    } catch (ActException e) {
+      return (new DSGoalFalse());
     }
+    return (new DSGoalTrue());
+  }
 
-    @Override
-    public boolean isExternal() {
-        return true;
-    }
+  @Override
+  public boolean isExternal() {
+    return true;
+  }
 
-    @Override
-    public String actionText() {
-        return("skip");
-    }
+  @Override
+  public String actionText() {
+    return ("skip");
+  }
 
-    @Override
-    public DSAStarItem simulate(DSMap map, DSAStarItem item, DSBody body, int step) {
-        return null;
-    }
+  @Override
+  public DSAStarItem simulate(DSMap map, DSAStarItem item, DSBody body, int step) {
+    return null;
+  }
 
-    public DSSkip(EnvironmentInterfaceStandard ei)
-    {
-        super(ei);
-    }
-
+  public DSSkip(EnvironmentInterfaceStandard ei) {
+    super(ei);
+  }
 }
