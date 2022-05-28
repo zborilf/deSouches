@@ -3,6 +3,7 @@ package dsAgents;
 import deSouches.utils.HorseRider;
 import dsAgents.dsBeliefBase.DSBeliefBase;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsPerceptionModule.DSPerceptor;
 import dsAgents.dsReasoningModule.dsGoals.DSGoal;
@@ -20,9 +21,12 @@ import eis.iilang.Percept;
 import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class DSAgent extends Agent {
   private static final String TAG = "DSAgent";
@@ -42,6 +46,8 @@ public class DSAgent extends Agent {
   private int PScenarioPriority = 0;
   private DSIntentionPool PIntentionPool;
   private HashMap<DSAgent, Point> PSynchronized;
+
+  public ArrayList<Point> roamList = new ArrayList<>();
 
   public String getAgentName() {
     return (PBeliefBase.getName());
@@ -213,6 +219,14 @@ public class DSAgent extends Agent {
     }
   }
 
+  public int getAuctionBid(Point p) {
+    // TODO:L implement fce vzdalenosti // stari a doba od prozkoumani vscihni stejne takze not
+    // worth asi -> nejspis k vytvareni bodu
+    int price = (int) (100 - this.getMapPosition().distance(p) + this.knownSurrounding(p, 1));
+
+    return price;
+  }
+
   public class controlLoop extends CyclicBehaviour {
 
     DSIntention recentIntentionExecuted = null;
@@ -266,7 +280,8 @@ public class DSAgent extends Agent {
             PBeliefBase.getMap().getAgentPos((DSAgent) (this.getAgent())),
             PBeliefBase.getVision(),
             PBeliefBase.getTeamName(),
-            PBeliefBase.getStep());
+            PBeliefBase.getStep(),
+            (DSAgent) this.getAgent());
 
         // standing at goal/role zone, synchronize abs position!!
 
@@ -291,7 +306,7 @@ public class DSAgent extends Agent {
           PBeliefBase.getGUI()
               .setTextMap(
                   "MAP:"
-                      + PBeliefBase.getMap().getOwner()
+                      + PBeliefBase.getMap().getOwnerName()
                       + "\n"
                       + PBeliefBase.getMap().isMasterMap()
                       + "\n"
@@ -445,5 +460,32 @@ public class DSAgent extends Agent {
 
     controlLoop loop = new controlLoop(this);
     addBehaviour(loop);
+  }
+
+  public double knownSurrounding(Point p, int radius) {
+    double known = 0;
+    for (int x = p.x - radius; x <= p.x + radius; x++) {
+      for (int y = p.y - radius; y <= p.y + radius; y++) {
+        // check if known
+        var allAtList = this.getMap().getMap().getAllAt(new Point(x, y));
+        if (allAtList == null) {
+          continue;
+        }
+
+        int curStep = this.getStep();
+        // sort by timestamp -> higher number = newer
+        DSCell getNewest =
+            allAtList.stream()
+                .sorted((c1, c2) -> c2.getTimestamp() - c1.getTimestamp())
+                .collect(Collectors.toCollection(LinkedList::new))
+                .getFirst();
+        // zohlednit vek linearni klesajici fce do casu 100 TODO:l zohlednit vek -> spravna fce?
+        int age = curStep - getNewest.getTimestamp();
+        if (getNewest != null) {
+          known += (age >= 100) ? 0.0 : ((100.0 - age) / 100.0);
+        }
+      }
+    }
+    return known;
   }
 }

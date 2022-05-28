@@ -79,8 +79,12 @@ public class DSMap {
     PAgentPosition.put(agent, position);
   }
 
-  public String getOwner() {
+  public String getOwnerName() {
     return (PAgent.getAgentName());
+  }
+
+  public DSAgent getOwner() {
+    return PAgent;
   }
 
   public static int distance(Point a, Point b) {
@@ -150,7 +154,8 @@ public class DSMap {
               centralizeXCoords(cell.getX() + displacement.x),
               centralizeYCoords(cell.getY() + displacement.y),
               cell.getType(),
-              cell.getTimestamp());
+              cell.getTimestamp(),
+              cell.getFoundBy());
       PMapCells.put(newCell);
     }
     return;
@@ -207,7 +212,7 @@ public class DSMap {
           return (false);
 
         if ((node.getType() == DSCell.__DSObstacle)) return (true);
-        // Pratele nejsou na pame, ale zname jejich presne aktualni pozice
+        // Pratele nejsou na mape, ale zname jejich presne aktualni pozice
 
         else // TODO to dole omezit casove souc_cas-timestamp (cca 5 kroku)
         if ((step - node.getTimestamp()) < 5)

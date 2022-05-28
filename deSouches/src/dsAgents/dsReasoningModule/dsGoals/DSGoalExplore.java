@@ -13,6 +13,7 @@ package dsAgents.dsReasoningModule.dsGoals;
                        Agent joins another group (should catch event 'group attached' or something ... )
 */
 
+import auction.AuctionSingleton;
 import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
@@ -28,14 +29,22 @@ public class DSGoalExplore extends DSGoal {
   // dojde na nejbližší nepřekážkový okraj své známé mapy
 
   static final double __random_walk = 0.25;
+
+  private final int TARGET_SOFT_CAP = 20;
+  private final int TARGET_HARD_CAP = 30;
+  private final int LIMIT = 6;
+  private final int SOFT_LIMIT = LIMIT / 2;
   int PDistance;
   Random PRandom = new Random();
+
+  AuctionSingleton auction = AuctionSingleton.getInstance();
 
   public String getGoalDescription() {
     return ("Goal explore / " + highestPriorityPlan().getName());
   }
 
   public boolean revisePlans(DSAgent agent) {
+    auction.participateAuctions(agent);
 
     if (!PPlans.containsKey("clear")) {
       Point direction = null;
@@ -142,6 +151,54 @@ public class DSGoalExplore extends DSGoal {
       if (quadrant > 1) y = -1;
       if (quadrant % 2 == 1) x = -1;
 
+      gx = x * dx + agent.getMapPosition().x;
+      gy = y * dy + agent.getMapPosition().y;
+
+      Point tlc = agent.getMap().getMap().getTLC();
+      Point brc = agent.getMap().getMap().getBRC();
+      int lenX = brc.x - tlc.x;
+      int lenY = brc.y - tlc.y;
+
+      int limit =
+          agent.roamList.size() >= TARGET_SOFT_CAP
+              ? (agent.roamList.size() >= TARGET_HARD_CAP ? 0 : SOFT_LIMIT)
+              : LIMIT;
+      // step 0
+      if (lenX <= 0 || lenY <= 0) {
+        System.err.println("velikost mapy <0");
+      }
+
+      if (lenX <= 0 || lenY <= 0) {
+        System.err.println("NULLA");
+      }
+
+      // random generovani bodu dokud nematchne kriteria
+      // while (limit != 0) {
+      //  gx = tlc.x + PRandom.nextInt(lenX);
+      //  gy = tlc.y + PRandom.nextInt(lenY);
+      //  Point p = new Point(gx, gy);
+
+      //  // unknown surrounding over threshold
+      //  int knownNeighbours = knownSurrounding(agent, p, 1);
+
+      //  if (knownNeighbours < 5) {
+      //    agent.roamList.add(p);
+      //    limit--;
+      //  }
+      // }
+
+      // ArrayList<Point> roamCopy = (ArrayList<Point>) agent.roamList.clone();
+      // for (Point p: roamCopy) {
+      //  // attempt to sell all items, first remove goal from own list, it'll get auto assigned to
+      // winner
+      //  auction.sellItem(agent, agent.getGroup(), p, agent.getAuctionBid(p));
+      // }
+
+      Point p = new Point(gx, gy);
+
+      // unknown surrounding over threshold
+      double knownNeighbours = agent.knownSurrounding(p, 1);
+
       destination = new Point(x * dx + agent.getMapPosition().x, y * dy + agent.getMapPosition().y);
       destinationS = "to random position";
     }
@@ -163,6 +220,10 @@ public class DSGoalExplore extends DSGoal {
     }
     //        PPlan.appendAction(new DSClear(agent.getEI()));
     PPlans.put("roam", plan);
+
+    // TODO:L kdy vim ze skoncil ? -> nevim, prodavam furt i kdyz nebude delat
+    // auction.leaveAuctions(agent);
+
     return (true);
   }
 

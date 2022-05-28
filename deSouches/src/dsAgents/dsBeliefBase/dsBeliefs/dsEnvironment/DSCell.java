@@ -1,5 +1,6 @@
 package dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment;
 
+import dsAgents.DSAgent;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -76,7 +77,17 @@ public class DSCell {
     return (" ??");
   }
 
-  int PType, PX, PY, PTimeStamp;
+  private int PType, PX, PY, PTimeStamp;
+
+  private DSAgent foundBy;
+
+  public void setFoundBy(DSAgent foundBy) {
+    this.foundBy = foundBy;
+  }
+
+  public DSAgent getFoundBy() {
+    return foundBy;
+  }
 
   public void setType(int type) {
     PType = type;
@@ -96,6 +107,10 @@ public class DSCell {
 
   public Point getPosition() {
     return (new Point(PX, PY));
+  }
+
+  public void setTimestamp(int timestamp) {
+    this.PTimeStamp = timestamp;
   }
 
   public int getTimestamp() {
@@ -137,5 +152,23 @@ public class DSCell {
     PY = y;
     PType = getThingTypeIndex(type, params);
     PTimeStamp = timestamp;
+  }
+
+  // bude tam pozice rel. k agentovi, objekt, casove razitko
+  public DSCell(int x, int y, String type, String params, int timestamp, DSAgent foundBy) {
+
+    PX = x;
+    PY = y;
+    PType = getThingTypeIndex(type, params);
+    PTimeStamp = timestamp;
+    this.foundBy = foundBy;
+  }
+
+  public DSCell(int x, int y, int type, int timestamp, DSAgent foundBy) {
+    PX = x;
+    PY = y;
+    PType = type;
+    PTimeStamp = timestamp;
+    this.foundBy = foundBy;
   }
 }

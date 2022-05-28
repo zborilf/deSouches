@@ -254,12 +254,11 @@ public class DSBeliefBase {
 
   public void addThingToOutlook(Collection<Parameter> parameters) {
     Iterator i = parameters.iterator();
-    POutlook.processAddThing(
-        Integer.valueOf(i.next().toString()),
-        Integer.valueOf(i.next().toString()),
-        i.next().toString(),
-        i.next().toString(),
-        PStep);
+    int x = Integer.valueOf(i.next().toString());
+    int y = Integer.valueOf(i.next().toString());
+    String type = i.next().toString();
+    String params = i.next().toString();
+    POutlook.processAddThing(x, y, type, params, PStep, PAgent);
   }
 
   public void deleteThingFromOutlook(Collection<Parameter> parameters) {
@@ -347,7 +346,7 @@ public class DSBeliefBase {
   }
 
   public void standsAtRoleZone(Collection<Parameter> parameters) {
-    POutlook.processAddThing(0, 0, "roleZone", "", PStep);
+    POutlook.processAddThing(0, 0, "roleZone", "", PStep, PAgent);
     synchronizationDemand(parameters);
     PStandsAtRole = true;
   }
@@ -361,7 +360,7 @@ public class DSBeliefBase {
   // 20 : __goalZone
 
   public void standsAtGoalZone(Collection<Parameter> parameters) {
-    POutlook.processAddThing(0, 0, "goalZone", "", PStep);
+    POutlook.processAddThing(0, 0, "goalZone", "", PStep, PAgent);
     PStandsAtGoal = true;
     synchronizationDemand(parameters);
   }

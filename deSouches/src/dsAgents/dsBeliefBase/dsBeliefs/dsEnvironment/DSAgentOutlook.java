@@ -5,6 +5,7 @@ package dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment;
 
 */
 
+import dsAgents.DSAgent;
 import java.awt.*;
 import java.util.LinkedList;
 
@@ -16,9 +17,9 @@ public class DSAgentOutlook {
     return (PStep);
   }
 
-  public void processAddThing(int x, int y, String type, String params, int step) {
+  public void processAddThing(int x, int y, String type, String params, int step, DSAgent agent) {
     PStep = step;
-    DSCell cell = new DSCell(x, y, type, params, step);
+    DSCell cell = new DSCell(x, y, type, params, step, agent);
     POutlook.put(cell);
   }
 
@@ -55,13 +56,13 @@ public class DSAgentOutlook {
           else {
             if (POutlook.containsKey(new Point(i, j))) {
               DSCell cell = POutlook.getOneAt(new Point(i, j));
-              if (cell != null) so = so + DSCell.getTypeSign(cell.getType());
-              else so = so + " ..";
-            } else so = so + " ..";
+              if (cell == null || cell.getType() == DSCell.__DSClear) so += " ..";
+              else so += DSCell.getTypeSign(cell.getType());
+            }
           }
         }
       }
-      so = so + '\n';
+      so += '\n';
     }
     return (so);
   }

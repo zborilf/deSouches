@@ -21,7 +21,7 @@ public class DSCells {
   }
 
   // top left corner
-  protected synchronized Point getTLC() {
+  public synchronized Point getTLC() {
     // Hash
 
     Point tlc = PHashCells.keySet().iterator().next();
@@ -44,7 +44,7 @@ public class DSCells {
     return (tlc);
   }
   // bottom right corner
-  protected synchronized Point getBRC() {
+  public synchronized Point getBRC() {
 
     // Hash
 
@@ -79,8 +79,14 @@ public class DSCells {
     if (PHashCells.containsKey(element.getPosition())) {
       LinkedList<DSCell> cells = PHashCells.get(element.getPosition());
       for (DSCell cell : cells)
-        if (cell.getType() == element.getType()) // not two of the same type at one place
-        return;
+        if (cell.getType() == element.getType()) { // not two of the same type at one place
+          // try to update info
+          if (element.getTimestamp() > cell.getTimestamp()) {
+            cell.setTimestamp(element.getTimestamp());
+            cell.setFoundBy(element.getFoundBy());
+          }
+          return;
+        }
       cells.add(element);
     } else {
       LinkedList<DSCell> cells = new LinkedList();
@@ -95,10 +101,7 @@ public class DSCells {
     LinkedList<DSCell> oldList = PHashCells.get(point);
     LinkedList<DSCell> newList = new LinkedList();
 
-    DSCell tsCell =
-        new DSCell(
-            point.x, point.y, "clear", "",
-            step); // every place once visited contains this with timestamp
+    // TODO:l tscell no necesarry overit!!
     if (oldList != null) {
       for (DSCell element : oldList)
         if ((element.getTimestamp() > step)
@@ -109,10 +112,6 @@ public class DSCells {
           //                      System.out.println("Zachranuji areu na "+element.getPosition());
           newList.add(element);
         }
-      newList.add(tsCell);
-    } else {
-      newList = new LinkedList();
-      newList.add(tsCell);
     }
     //      System.out.println("Po clearu zbylo "+newList.size());
     PHashCells.put(point, newList);
