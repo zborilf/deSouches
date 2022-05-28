@@ -3,55 +3,47 @@ package dsAgents.dsReasoningModule.dsGoals;
 import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
-
 import java.awt.*;
 
 public class DSGoToPosition extends DSGoal {
 
-    Point PDestination;
-    DSBody PBody=null;
+  Point PDestination;
+  DSBody PBody = null;
 
-    public String getGoalDescription(){
-        return("goToPosition");
+  public String getGoalDescription() {
+    return ("goToPosition");
+  }
+
+  public boolean revisePlans(DSAgent agent) {
+
+    if (PPlans.containsKey("goToPosition")) return false;
+
+    if (PDestination == null) {
+      return (false);
     }
 
+    if (PBody == null) PBody = agent.getBody();
 
-    public boolean revisePlans(DSAgent agent) {
+    Point agentPos = agent.getMapPosition(); // asi zbytecne
+    //    PPlan = new DSAStar().
+    //    computePath(agent.getGroup().getGroupMap(), agent.getMap().getAgentPos(), PPosition,
+    // PBody,100, agent);
 
-        if(PPlans.containsKey("goToPosition"))
-            return false;
+    DSPlan plan = astarGroup("goToPosition", 1, agent, PDestination, PBody);
+    if (plan == null) return (false);
 
-        if (PDestination == null) {
-            return (false);
-        }
+    PPlans.put("goToPosition", plan);
+    return (true);
+  }
 
-        if(PBody==null)
-                PBody=agent.getBody();
+  public DSGoToPosition(Point position) {
+    super();
+    PDestination = position;
+  }
 
-        Point agentPos=agent.getMapPosition();     // asi zbytecne
-        //    PPlan = new DSAStar().
-        //    computePath(agent.getGroup().getGroupMap(), agent.getMap().getAgentPos(), PPosition, PBody,100, agent);
-
-        DSPlan plan = astarGroup("goToPosition",1,agent, PDestination, PBody);
-        if(plan==null)
-            return(false);
-
-        PPlans.put("goToPosition",plan);
-        return(true);
-
-    }
-
-
-    public DSGoToPosition(Point position) {
-        super();
-        PDestination=position;
-    }
-
-
-    public DSGoToPosition(Point position, DSBody body) {
-        super();
-        PBody=body;
-        PDestination=position;
-    }
-
+  public DSGoToPosition(Point position, DSBody body) {
+    super();
+    PBody = body;
+    PDestination = position;
+  }
 }

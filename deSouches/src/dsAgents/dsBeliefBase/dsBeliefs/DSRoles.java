@@ -1,21 +1,20 @@
 package dsAgents.dsBeliefBase.dsBeliefs;
 
-import dsAgents.dsBeliefBase.dsBeliefs.DSRole;
 
 import java.util.HashMap;
 
 public class DSRoles {
-    HashMap<String, DSRole> PRoles;
+  HashMap<String, DSRole> PRoles;
 
-    public void addRole(DSRole role){
-        PRoles.put(role.getRoleName(),role);
-    }
+  public void addRole(DSRole role) {
+    PRoles.put(role.getRoleName(), role);
+  }
 
-    public DSRole getRole(String roleName){
-        return(PRoles.get(roleName));
-    }
+  public DSRole getRole(String roleName) {
+    return (PRoles.get(roleName));
+  }
 
-    public DSRoles(){
-        PRoles=new HashMap<String, DSRole>();
-    }
+  public DSRoles() {
+    PRoles = new HashMap<String, DSRole>();
+  }
 }

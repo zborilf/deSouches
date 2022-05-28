@@ -5,139 +5,123 @@ import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsExecutionModule.dsActions.*;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
-
 import java.awt.*;
 
 /*
-    A     XXX
-    OO    XXX
-    O     XX
-          X
+   A     XXX
+   OO    XXX
+   O     XX
+         X
 
 
-    Mpos	L1	        L2		Mpos	CL1 CL2	G
-    0	    -1,2	    1,0		L1	    S   S   CCW CM  D
-				        L2	    CM   D
+   Mpos	L1	        L2		Mpos	CL1 CL2	G
+   0	    -1,2	    1,0		L1	    S   S   CCW CM  D
+			        L2	    CM   D
 
- */
+*/
 
-public class DSTaskType10 extends DSTaskType{
+public class DSTaskType10 extends DSTaskType {
 
-    @Override
-    protected DSPlan makePlanMaster(String taskName){
-        DSPlan plan=new DSPlan("Master, connect and submit",2);
-        DSConnect connect=new DSConnect(PMaster.getEI(),"s",PLeutnant1.getEntityName());
-        plan.appendAction(connect);
-        connect=new DSConnect(PMaster.getEI(),"s",PLeutnant2.getEntityName());
-        plan.appendAction(connect);
-        return(plan);
-    }
+  @Override
+  protected DSPlan makePlanMaster(String taskName) {
+    DSPlan plan = new DSPlan("Master, connect and submit", 2);
+    DSConnect connect = new DSConnect(PMaster.getEI(), "s", PLeutnant1.getEntityName());
+    plan.appendAction(connect);
+    connect = new DSConnect(PMaster.getEI(), "s", PLeutnant2.getEntityName());
+    plan.appendAction(connect);
+    return (plan);
+  }
 
-
-    DSPlan makePlanL1(){
-        DSPlan plan=new DSPlan("Leutnant1, task10",2);
+  DSPlan makePlanL1() {
+    DSPlan plan = new DSPlan("Leutnant1, task10", 2);
     /*    DSMove move=new DSMove(PMaster.getEI(),"s");
-        plan.appendAction(move);
-        move=new DSMove(PMaster.getEI(),"s");
-        plan.appendAction(move);
-        DSRotateContraCW rotate=new DSRotateContraCW(PMaster.getEI());
-        plan.appendAction(rotate);*/
+    plan.appendAction(move);
+    move=new DSMove(PMaster.getEI(),"s");
+    plan.appendAction(move);
+    DSRotateContraCW rotate=new DSRotateContraCW(PMaster.getEI());
+    plan.appendAction(rotate);*/
 
-        DSConnect connect=new DSConnect(PMaster.getEI(),"e",PMaster.getEntityName());
-        plan.appendAction(connect);
-        DSDetach detach=new DSDetach(PMaster.getEI(),"e");
-        plan.appendAction(detach);
-        return(plan);
-    };
+    DSConnect connect = new DSConnect(PMaster.getEI(), "e", PMaster.getEntityName());
+    plan.appendAction(connect);
+    DSDetach detach = new DSDetach(PMaster.getEI(), "e");
+    plan.appendAction(detach);
+    return (plan);
+  }
+  ;
 
+  DSPlan makePlanL2() {
+    DSPlan plan = new DSPlan("Leutnant2, task10", 2);
+    DSConnect connect = new DSConnect(PMaster.getEI(), "s", PMaster.getEntityName());
+    plan.appendAction(connect);
+    DSDetach detach = new DSDetach(PMaster.getEI(), "s");
+    plan.appendAction(detach);
+    return (plan);
+  }
+  ;
 
-    DSPlan makePlanL2(){
-        DSPlan plan=new DSPlan("Leutnant2, task10",2);
-        DSConnect connect=new DSConnect(PMaster.getEI(),"s",PMaster.getEntityName());
-        plan.appendAction(connect);
-        DSDetach detach=new DSDetach(PMaster.getEI(),"s");
-        plan.appendAction(detach);
-        return(plan);
-    };
+  /*
+     public DSBody getSoldierGoalBody() {
+         return null;
+     }
 
-/*
-    public DSBody getSoldierGoalBody() {
-        return null;
-    }
+     @Override
+     public DSBody getSoldierGoalBody(DSAgent agent) {
+         if(agent==PLeutnant1)
+             return(DSBody.getDoubleBody(new Point(1,0)));
+         return(DSBody.getDoubleBody(new Point(0,1)));
+     }
 
-    @Override
-    public DSBody getSoldierGoalBody(DSAgent agent) {
-        if(agent==PLeutnant1)
-            return(DSBody.getDoubleBody(new Point(1,0)));
-        return(DSBody.getDoubleBody(new Point(0,1)));
-    }
+     @Override
+     public String getConnectDirection(DSAgent agent){
+         if(agent==PLeutnant1)
+             return("e");
+         if(agent==PLeutnant2)
+             return("s");
+         return("");
+     }
 
-    @Override
-    public String getConnectDirection(DSAgent agent){
-        if(agent==PLeutnant1)
-            return("e");
-        if(agent==PLeutnant2)
-            return("s");
-        return("");
-    }
+  */
 
- */
+  @Override
+  public DSBody getTaskBody() {
+    return null;
+  }
 
-    @Override
-    public DSBody getTaskBody() {
-        return null;
-    }
+  @Override
+  public Point formationPosition(DSAgent agent, Point position) {
+    if (agent == PMaster) return (new Point(position.x, position.y));
+    if (agent == PLeutnant1) return (new Point(position.x - 1, position.y + 2));
+    if (agent == PLeutnant2) return (new Point(position.x + 1, position.y));
+    return (null);
+  }
 
+  @Override
+  public Point blockPosition(int agent) {
+    if (agent == 1) return (new Point(0, 1));
+    if (agent == 2) return (new Point(0, 2));
+    if (agent == 3) return (new Point(1, 1));
+    return (null);
+  }
 
+  @Override
+  public Point blockPosition(DSAgent agent) {
+    if (agent == PMaster) return (blockPosition(1));
+    if (agent == PLeutnant1) return (blockPosition(2));
+    if (agent == PLeutnant2) return (blockPosition(3));
+    return (null);
+  }
 
-    @Override
-    public Point formationPosition(DSAgent agent, Point position) {
-        if(agent==PMaster)
-            return(new Point(position.x,position.y));
-        if(agent==PLeutnant1)
-            return(new Point(position.x-1,position.y+2));
-        if(agent==PLeutnant2)
-            return(new Point(position.x+1,position.y));
-        return(null);
-    }
-
-    @Override
-    public Point blockPosition(int agent) {
-        if(agent==1)
-            return(new Point(0,1));
-        if(agent==2)
-            return(new Point(0,2));
-        if(agent==3)
-            return(new Point(1,1));
-        return(null);
-    }
-
-
-    @Override
-    public Point blockPosition(DSAgent agent) {
-        if(agent==PMaster)
-            return(blockPosition(1));
-        if(agent==PLeutnant1)
-            return(blockPosition(2));
-        if(agent==PLeutnant2)
-            return(blockPosition(3));
-        return(null);
-    }
-
-
-
-    public DSTaskType10() {
-        super();
-        PTaskTypeNumber = 10;
-        PTaskArea.addCell(new DSCell(-1, 0, 0, 0));
-        PTaskArea.addCell(new DSCell(-1, 1, 0, 0));
-        PTaskArea.addCell(new DSCell(-1, 2, 0, 0));
-        PTaskArea.addCell(new DSCell(-1, 3, 0, 0));
-        PTaskArea.addCell(new DSCell(0, 0, 0, 0));
-        PTaskArea.addCell(new DSCell(0, 1, 0, 0));
-        PTaskArea.addCell(new DSCell(0, 2, 0, 0));
-        PTaskArea.addCell(new DSCell(1, 0, 0, 0));
-        PTaskArea.addCell(new DSCell(1, 1, 0, 0));
-    }
-
+  public DSTaskType10() {
+    super();
+    PTaskTypeNumber = 10;
+    PTaskArea.addCell(new DSCell(-1, 0, 0, 0));
+    PTaskArea.addCell(new DSCell(-1, 1, 0, 0));
+    PTaskArea.addCell(new DSCell(-1, 2, 0, 0));
+    PTaskArea.addCell(new DSCell(-1, 3, 0, 0));
+    PTaskArea.addCell(new DSCell(0, 0, 0, 0));
+    PTaskArea.addCell(new DSCell(0, 1, 0, 0));
+    PTaskArea.addCell(new DSCell(0, 2, 0, 0));
+    PTaskArea.addCell(new DSCell(1, 0, 0, 0));
+    PTaskArea.addCell(new DSCell(1, 1, 0, 0));
+  }
 }
