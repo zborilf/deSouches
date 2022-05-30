@@ -3,6 +3,7 @@ package dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.stream.Collectors;
 
 public class DSCells {
   // LinkedList<DSCell> PCells;
@@ -24,6 +25,7 @@ public class DSCells {
   public synchronized Point getTLC() {
     // Hash
 
+    if (PHashCells.isEmpty()) return null;
     Point tlc = PHashCells.keySet().iterator().next();
     tlc = new Point(tlc.x, tlc.y);
     for (Point point : PHashCells.keySet()) {
@@ -47,6 +49,7 @@ public class DSCells {
   public synchronized Point getBRC() {
 
     // Hash
+    if (PHashCells.isEmpty()) return null;
 
     Point brc = PHashCells.keySet().iterator().next();
     brc = new Point(brc.x, brc.y);
@@ -142,6 +145,21 @@ public class DSCells {
             cells.add(element);
     return(cells);
      */
+  }
+
+  // get newest of cells according to timestamp
+  public synchronized DSCell getNewestAt(Point point) {
+
+    LinkedList<DSCell> cellsAtPoint = this.getAllAt(point);
+
+    if (cellsAtPoint == null || cellsAtPoint.isEmpty()) {
+      return null;
+    }
+
+    return cellsAtPoint.stream()
+        .sorted((c1, c2) -> c2.getTimestamp() - c1.getTimestamp())
+        .collect(Collectors.toCollection(LinkedList::new))
+        .getFirst();
   }
 
   public synchronized DSCell getOneAt(Point point) {

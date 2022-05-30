@@ -22,6 +22,8 @@ public class DSCell {
 
   public static int __DSDispenser = 100;
 
+  private double cellPheromone;
+
   static Map<String, Integer> _thingMap =
       new HashMap<String, Integer>() {
         {
@@ -170,5 +172,18 @@ public class DSCell {
     PType = type;
     PTimeStamp = timestamp;
     this.foundBy = foundBy;
+  }
+
+  public void addPheromone(double addLevel) {
+    cellPheromone += addLevel;
+  }
+
+  public void evaporate() {
+    cellPheromone *= 0.95;
+  }
+
+  // current pheromone by age and surround
+  public double getPheromone(int curStep) {
+    return curStep - getTimestamp() + cellPheromone;
   }
 }
