@@ -4,7 +4,6 @@ import antExploreUtils.AntMapUpdateSingleton;
 import deSouches.utils.HorseRider;
 import dsAgents.dsBeliefBase.DSBeliefBase;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsPerceptionModule.DSPerceptor;
 import dsAgents.dsReasoningModule.dsGoals.DSGoal;
@@ -148,10 +147,6 @@ public class DSAgent extends Agent {
     return (PNumber);
   }
 
-  public boolean isAtRoleZone() {
-    return (PBeliefBase.isAtRoleZone());
-  }
-
   /*
              MAS INTERFACE
   */
@@ -220,14 +215,6 @@ public class DSAgent extends Agent {
     }
   }
 
-  public int getAuctionBid(Point p) {
-    // TODO:L implement fce vzdalenosti // stari a doba od prozkoumani vscihni stejne takze not
-    // worth asi -> nejspis k vytvareni bodu
-    int price = (int) (100 - this.getMapPosition().distance(p) + this.knownSurrounding(p, 1));
-
-    return price;
-  }
-
   public class controlLoop extends CyclicBehaviour {
 
     DSAgent agent;
@@ -291,22 +278,6 @@ public class DSAgent extends Agent {
           PBeliefBase.getStep(),
           (DSAgent) this.getAgent());
 
-      // standing at goal/role zone, synchronize abs position!!
-
-      if (PBeliefBase.getSynchronizationNeeded()) {
-        int spx = PBeliefBase.getSyncronizationPointX();
-        int spy = PBeliefBase.getSyncronizationPointY();
-        DSSynchronize synchronizer = PBeliefBase.getSynchronizer();
-        DSMap newMap = synchronizer.synchronizePosition((DSAgent) this.getAgent(), spx, spy);
-        PBeliefBase.setMap(newMap);
-        /*
-        PBeliefBase.setMap(
-               PBeliefBase.getSynchronizer().synchronizePosition((DSAgent)this.getAgent(),
-                       PBeliefBase.getSyncronizationPointX(),
-                       PBeliefBase.getSyncronizationPointY()));*/
-        PBeliefBase.synchronizationDone();
-      }
-
       if (PBeliefBase.getGUIFocus()) {
 
         PBeliefBase.getGUI()
@@ -321,6 +292,16 @@ public class DSAgent extends Agent {
                     + PBeliefBase.getAgentPosition()
                     + "\n"
                     + PBeliefBase.getMap().stringMap());
+        PBeliefBase.getGUI()
+            .setPheromoneTextMap(
+                "PHEROMONE MAP:"
+                    + PBeliefBase.getMap().getOwnerName()
+                    + "\n"
+                    + PBeliefBase.getMap().isMasterMap()
+                    + "\n"
+                    + PBeliefBase.getAgentPosition()
+                    + "\n"
+                    + PBeliefBase.getMap().stringPheroMap());
       }
 
       // sensing phase is over, salut commander / for synchronization and commander level
@@ -365,6 +346,7 @@ public class DSAgent extends Agent {
         // vykonani zameru
         // report uspesneho/neuspesneho ukonceni nasledovani zameru
 
+        // TODO:l looks useless to me -> i can get friends other ways and delete lot of code
         // report spatrenych pratel, asi skrz mapu, jinak si nepamatuji proc
         PBeliefBase.getSynchronizer()
             .addObservation(
@@ -468,27 +450,5 @@ public class DSAgent extends Agent {
 
     controlLoop loop = new controlLoop(this);
     addBehaviour(loop);
-  }
-
-  public double knownSurrounding(Point p, int radius) {
-    double known = 0;
-    for (int x = p.x - radius; x <= p.x + radius; x++) {
-      for (int y = p.y - radius; y <= p.y + radius; y++) {
-        // check if known
-
-        DSCell getNewest = this.getMap().getMap().getNewestAt(new Point(x, y));
-        if (getNewest == null) {
-          continue;
-        }
-
-        int curStep = this.getStep();
-        // zohlednit vek linearni klesajici fce do casu 100 TODO:l zohlednit vek -> spravna fce?
-        int age = curStep - getNewest.getTimestamp();
-        if (getNewest != null) {
-          known += (age >= 100) ? 0.0 : ((100.0 - age) / 100.0);
-        }
-      }
-    }
-    return known;
   }
 }

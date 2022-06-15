@@ -1,9 +1,9 @@
 package dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment;
 
 import java.awt.*;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.stream.Collectors;
 
 public class DSCells {
   // LinkedList<DSCell> PCells;
@@ -76,9 +76,6 @@ public class DSCells {
   }
 
   protected synchronized void put(DSCell element) {
-
-    // hash verze
-
     if (PHashCells.containsKey(element.getPosition())) {
       LinkedList<DSCell> cells = PHashCells.get(element.getPosition());
       for (DSCell cell : cells)
@@ -104,7 +101,6 @@ public class DSCells {
     LinkedList<DSCell> oldList = PHashCells.get(point);
     LinkedList<DSCell> newList = new LinkedList();
 
-    // TODO:l tscell no necesarry overit!!
     if (oldList != null) {
       for (DSCell element : oldList)
         if ((element.getTimestamp() > step)
@@ -121,8 +117,6 @@ public class DSCells {
   }
 
   public synchronized void removeCell(int x, int y, int type) {
-    // new Hash
-
     Point point = new Point(x, y);
     LinkedList<DSCell> oldList = PHashCells.get(point);
     LinkedList<DSCell> newList = new LinkedList<DSCell>();
@@ -132,23 +126,12 @@ public class DSCells {
   }
 
   public synchronized LinkedList<DSCell> getAllAt(Point point) {
-
-    // Hash version
-
     if (PHashCells.containsKey(point)) return ((LinkedList<DSCell>) PHashCells.get(point).clone());
     else return (null);
-
-    /*
-    LinkedList<DSCell> cells=new LinkedList<DSCell>();
-    for(DSCell element:PCells)
-        if((element.getPosition().x==point.x)&&(element.getPosition().y==point.y))
-            cells.add(element);
-    return(cells);
-     */
   }
 
-  // get newest of cells according to timestamp
   public synchronized DSCell getNewestAt(Point point) {
+    // get newest of cells according to timestamp + synchronize pheromone
 
     LinkedList<DSCell> cellsAtPoint = this.getAllAt(point);
 
@@ -156,10 +139,16 @@ public class DSCells {
       return null;
     }
 
-    return cellsAtPoint.stream()
-        .sorted((c1, c2) -> c2.getTimestamp() - c1.getTimestamp())
-        .collect(Collectors.toCollection(LinkedList::new))
-        .getFirst();
+    DSCell newestCell =
+        cellsAtPoint.stream().max(Comparator.comparingDouble(DSCell::getTimestamp)).get();
+    int tStamp = newestCell.getTimestamp();
+    double maxPhero = newestCell.getVisiblePheromone(tStamp);
+
+    for (DSCell c : cellsAtPoint) {
+      c.setPheromonePropagated(maxPhero);
+    }
+
+    return newestCell;
   }
 
   public synchronized DSCell getOneAt(Point point) {
@@ -177,20 +166,10 @@ public class DSCells {
   }
 
   public synchronized DSCell getKeyType(Point point, int type) {
+    LinkedList<DSCell> cellsAtPoint = this.getAllAt(point);
+    if (cellsAtPoint == null) return null;
 
-    // Hash version
-
-    if (!PHashCells.containsKey(point)) return (null);
-    LinkedList<DSCell> cellsAtPos = PHashCells.get(point);
-    for (DSCell element : cellsAtPos) if (element.getType() == type) return (element);
-    return (null);
-
-    /* old version
-    for(DSCell element:PCells)
-        if((element.getPosition().x==point.x)&&(element.getPosition().y==point.y)&&(element.getType()==type))
-            return(element);
-    return(null);
-    */
+    return cellsAtPoint.stream().filter(c -> c.getType() == type).findFirst().orElse(null);
   }
 
   public synchronized LinkedList<DSCell> getAllType(

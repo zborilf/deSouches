@@ -14,7 +14,7 @@ public final class DSAStar {
   private static final String TAG = "DSAStar";
 
   private static int heuristic(Point from, Point to) {
-    return Math.abs(from.x - to.x) + Math.abs(from.y - to.y);
+    return DSMap.distance(from, to);
   }
 
   private static void printList(String agentName, LinkedList<DSAStarItem> lst) {

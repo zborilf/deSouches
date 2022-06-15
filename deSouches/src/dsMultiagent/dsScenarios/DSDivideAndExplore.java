@@ -1,6 +1,7 @@
 package dsMultiagent.dsScenarios;
 
 import dsAgents.DSAgent;
+import dsAgents.dsExecutionModule.dsActions.DSMove;
 import dsAgents.dsReasoningModule.dsGoals.*;
 import java.awt.*;
 import java.util.HashMap;
@@ -57,7 +58,18 @@ public class DSDivideAndExplore extends DSScenario {
   @Override
   public void goalFailed(DSAgent agent, DSGoal goal) {
     // never mind, go on
-    System.out.println(agent.getEntityName() + " DAE, Failed " + goal.goalStatus());
+    if (goal.goalStatus() == DSGoal.__DSGMovePathFailed) {
+      DSMove mv = (DSMove) goal.getRecentPlan().getAction();
+      System.out.println(
+          agent.getEntityName()
+              + " DAE, Failed "
+              + DSGoal.getGoalStatusType(goal.goalStatus())
+              + " dir: "
+              + mv.getPlannedDirection());
+    } else {
+      System.out.println(
+          agent.getEntityName() + " DAE, Failed " + DSGoal.getGoalStatusType(goal.goalStatus()));
+    }
     divideSpace(PAgent.getGroup().getFreeAgents(2), false);
 
     DSGoal newGoal = new DSGoalExplore(PRadius); // ... area!);

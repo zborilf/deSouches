@@ -8,6 +8,7 @@ import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStar;
 import java.awt.*;
 import java.util.HashMap;
+import java.util.Map;
 
 public abstract class DSGoal {
 
@@ -20,6 +21,24 @@ public abstract class DSGoal {
   public static final int __DSGGoalAchieved = 5;
   public static final int __DSGMovePathFailed = 6;
   public static final int __DSGMoveBorderFailed = 7;
+
+  static Map<Integer, String> _FailTypes =
+      new HashMap<>() {
+        {
+          put(__DSGExecutionSucceeded, "noPlan/success");
+          put(__DSGSubgoalNeeded, " no subgoal");
+          put(__DSGFeedbackNeeded, "no feedback");
+          put(__DSGPlanningFailed, "planning");
+          put(__DSGExecutionFailed, "Execution");
+          put(__DSGGoalAchieved, "Goal Achieved");
+          put(__DSGMovePathFailed, "movePath");
+          put(__DSGMoveBorderFailed, "moveBorder");
+        }
+      };
+
+  public static String getGoalStatusType(int status) {
+    return _FailTypes.getOrDefault(status, "unknown");
+  }
 
   private static final String TAG = "DSGoal";
 

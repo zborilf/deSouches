@@ -50,7 +50,6 @@ public class DSMap {
     if (x < PXMin) PXMin = x;
     if (y > PYMax) PYMax = y;
     if (y < PYMin) PYMin = y;
-    return;
   }
 
   public void setMasterMap() {
@@ -90,6 +89,7 @@ public class DSMap {
   public static int distance(Point a, Point b) {
     if ((a == null) || (b == null)) return (_maxDistance);
     return (Math.abs(a.x - b.x) + Math.abs(a.y - b.y)); // Manhattan
+    // TODO:l prekroceni mapy
   }
 
   public static boolean closer(Point a, Point b, Point c) {
@@ -110,6 +110,18 @@ public class DSMap {
     return (neighbours);
   }
 
+  public LinkedList<Point> getNeighboursExactDistance(Point cell, int r) {
+    LinkedList<Point> neighbours = new LinkedList<Point>();
+    for (int x = cell.x - r; x <= cell.x + r; x++) {
+      for (int y = cell.y - r; y <= cell.y + r; y++) {
+        // todo:l prekroceni mapy
+        Point p = new Point(x, y);
+        if (distance(p, cell) == r) neighbours.add(p);
+      }
+    }
+    return (neighbours);
+  }
+
   static LinkedList<Point> getZone(LinkedList<Point> cells) {
     /*
            gets contiguous are with the first cell of the list (and removes it form the list)
@@ -126,7 +138,6 @@ public class DSMap {
       open.addAll(get8Neighbours(cell, cells));
       for (Point cell2 : open) cells.remove(cell2);
     }
-    ;
     return (closed);
   }
 
@@ -471,6 +482,52 @@ public class DSMap {
     }
 
     return (so);
+  }
+
+  public synchronized String stringPheroMap() {
+    DSCell node;
+    DSCell[][] mapArray;
+    final String MAX = "99";
+    StringBuilder so = new StringBuilder();
+    int curStep = 0;
+
+    for (DSAgent agent : PAgentPosition.keySet()) {
+      so.append(agent.getEntityName()).append(", ");
+      curStep = Math.max(curStep, agent.getStep());
+    }
+    so.append("\n");
+
+    Point tlc = PMapCells.getTLC(); // top left corner
+    Point brc = PMapCells.getBRC(); // bottom right corner
+
+    mapArray = map2Array(tlc, brc);
+
+    int lx = tlc.x;
+    int ty = tlc.y;
+    int width = brc.x - lx + 1;
+    int height = brc.y - ty + 1;
+
+    for (int i = 0; i < width; i++) so.append(nmb(i + lx));
+    so.append(" \n");
+
+    for (int j = 0; j < height; j++) {
+      for (int i = 0; i < width; i++) {
+        node = mapArray[i][j];
+        if (node != null) {
+          if (node.getType() == DSCell.__DSEntity_Friend) {
+            so.append("AA");
+          } else {
+            so.append((int) node.getVisiblePheromone(curStep));
+          }
+        } else {
+          so.append(MAX);
+        }
+        so.append(" ");
+      }
+      so.append("  ").append(nmb(j + ty)).append(" \n");
+    }
+
+    return (so.toString());
   }
 
   public void setWidth(int width) {

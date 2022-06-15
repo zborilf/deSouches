@@ -35,12 +35,6 @@ public class DSBeliefBase {
   private boolean PGUIFocus;
   private DSAgentOutlook POutlook;
 
-  private boolean PSynchronizationNeeded = false;
-  private boolean PStandsAtRole = false;
-  private boolean PStandsAtGoal = false;
-  private int PNeedSynchronizeX;
-  private int PNeedSynchronizeY;
-
   private DSAgent PAgent;
   private DSGroup PGroup = null;
   private int PStepsTotal;
@@ -83,26 +77,6 @@ public class DSBeliefBase {
     return (PGUIFocus);
   }
 
-  public boolean getSynchronizationNeeded() {
-    return (PSynchronizationNeeded);
-  }
-
-  public int getSyncronizationPointX() {
-    return (PNeedSynchronizeX);
-  }
-
-  public int getSyncronizationPointY() {
-    return (PNeedSynchronizeY);
-  }
-
-  public boolean isAtRoleZone() {
-    return (PStandsAtRole);
-  }
-
-  public void synchronizationDone() {
-    PSynchronizationNeeded = false;
-  }
-
   public boolean setRole(String role) {
     if (PRoles.getRole(role) != null) {
       PActualRole = PRoles.getRole(role);
@@ -112,6 +86,7 @@ public class DSBeliefBase {
   }
 
   public String getAcualRole() {
+    if (PActualRole == null) return "Role Not Available yet";
     return (PActualRole.getRoleName());
   }
 
@@ -337,38 +312,38 @@ public class DSBeliefBase {
 
   // 19 : __roleZone
 
-  void synchronizationDemand(Collection<Parameter> parameters) {
-    int __fooDistance = 20;
-    PSynchronizationNeeded = true;
+  public void addRoleZoneToOutlook(Collection<Parameter> parameters) {
     Iterator i = parameters.iterator();
-    PNeedSynchronizeX = Integer.parseInt(i.next().toString());
-    PNeedSynchronizeY = Integer.parseInt(i.next().toString());
-  }
-
-  public void standsAtRoleZone(Collection<Parameter> parameters) {
-    POutlook.processAddThing(0, 0, "roleZone", "", PStep, PAgent);
-    synchronizationDemand(parameters);
-    PStandsAtRole = true;
+    int x = Integer.parseInt(i.next().toString());
+    int y = Integer.parseInt(i.next().toString());
+    POutlook.processAddThing(x, y, "roleZone", "", PStep, PAgent);
   }
 
   public void leavesRoleZone(Collection<Parameter> parameters) {
-    POutlook.processDeleteThing(0, 0, "roleZone", "", PStep);
-    PSynchronizationNeeded = false;
-    PStandsAtRole = false;
+    // TODO:l works? -> shouldnt be neccesary
+    if (true) return;
+    Iterator i = parameters.iterator();
+    int x = Integer.parseInt(i.next().toString());
+    int y = Integer.parseInt(i.next().toString());
+    POutlook.processDeleteThing(x, y, "roleZone", "", PStep);
   }
 
   // 20 : __goalZone
 
-  public void standsAtGoalZone(Collection<Parameter> parameters) {
-    POutlook.processAddThing(0, 0, "goalZone", "", PStep, PAgent);
-    PStandsAtGoal = true;
-    synchronizationDemand(parameters);
+  public void addGoleZoneToOutlook(Collection<Parameter> parameters) {
+    Iterator i = parameters.iterator();
+    int x = Integer.parseInt(i.next().toString());
+    int y = Integer.parseInt(i.next().toString());
+    POutlook.processAddThing(x, y, "goalZone", "", PStep, PAgent);
   }
 
   public void leavesGoalZone(Collection<Parameter> parameters) {
-    POutlook.processDeleteThing(0, 0, "goalZone", "", PStep);
-    PSynchronizationNeeded = false;
-    PStandsAtGoal = false;
+    // TODO:l works ?
+    if (true) return;
+    Iterator i = parameters.iterator();
+    int x = Integer.parseInt(i.next().toString());
+    int y = Integer.parseInt(i.next().toString());
+    POutlook.processDeleteThing(x, y, "goalZone", "", PStep);
   }
 
   // 21 : __violation
@@ -508,8 +483,7 @@ public class DSBeliefBase {
   boolean isNeighbour(Point point1, Point point2)
         // jsou tyto body sousede v ctyrokoli?
       {
-    if (((Math.abs(point1.x - point2.x) == 1) || (Math.abs(point1.y - point2.y) == 1))
-        && ((point1.x - point2.x == 0) || (point1.y - point2.y == 0))) return (true);
+    if (DSMap.distance(point1, point2) == 1) return (true);
 
     return (false);
   }

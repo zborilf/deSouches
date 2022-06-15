@@ -174,17 +174,18 @@ public class DSPerceptor {
           // complete vision area with empty cells
           DSCell clearCell =
               new DSCell(i + agentPos.x, j + agentPos.y, DSCell.__DSClear, step, agent);
-          // remove old clear if exists
-          map.getMap().removeCell(clearCell.getX(), clearCell.getY(), DSCell.__DSClear);
-          // add clear if needed
+
+          // remove old clear if something else exists
           if ((map.getMap().getAllAt(new Point(clearCell.getX(), clearCell.getY())) == null)
-              || !(map.getMap().getAllAt(new Point(clearCell.getX(), clearCell.getY())).stream()
-                  .anyMatch(
+              || map.getMap().getAllAt(new Point(clearCell.getX(), clearCell.getY())).stream()
+                  .noneMatch(
                       p ->
                           (p.getType() == DSCell.__DSObstacle)
                               || ((p.getType() >= DSCell.__DSBlock)
-                                  && (p.getType() < DSCell.__DSDispenser))))) {
+                                  && (p.getType() < DSCell.__DSDispenser)))) {
             map.updateCell(clearCell);
+          } else {
+            map.getMap().removeCell(clearCell.getX(), clearCell.getY(), DSCell.__DSClear);
           }
         }
       }
@@ -287,11 +288,11 @@ public class DSPerceptor {
           break;
 
         case DSBeliefsIndexes.__roleZone:
-          BB.standsAtRoleZone(perceptParams);
+          BB.addRoleZoneToOutlook(perceptParams);
           break;
 
         case DSBeliefsIndexes.__goalZone:
-          BB.standsAtGoalZone(perceptParams);
+          BB.addGoleZoneToOutlook(perceptParams);
           break;
 
         case DSBeliefsIndexes.__step:
@@ -324,8 +325,9 @@ public class DSPerceptor {
 
     if (BB.getGUIFocus()) {
       String outlookString = BB.getOutlook().stringOutlook(BB.getVision(), BB.getName());
-      BB.getGUI().textMapClear();
       BB.getGUI().writeTextOutlook("OUTLOOK:\n" + outlookString);
+      BB.getGUI()
+          .writePheroOutlook("INFO GAIN:\n" + BB.getOutlook().stringPheroOutLook(BB.getVision()));
     }
   }
 

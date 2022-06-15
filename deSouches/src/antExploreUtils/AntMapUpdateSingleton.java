@@ -1,5 +1,6 @@
 package antExploreUtils;
 
+import antExploreUtils.stats.AntMapStatistics;
 import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
@@ -7,6 +8,7 @@ import dsMultiagent.DSGroup;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class AntMapUpdateSingleton {
   /*
@@ -15,8 +17,6 @@ public class AntMapUpdateSingleton {
 
   private static volatile AntMapUpdateSingleton singleton;
 
-  private AntMapUpdateSingleton() {}
-
   public static synchronized AntMapUpdateSingleton getInstance() {
 
     if (singleton == null) singleton = new AntMapUpdateSingleton();
@@ -24,19 +24,23 @@ public class AntMapUpdateSingleton {
     return singleton;
   }
 
-  HashMap<DSGroup, Integer> agentStep = new HashMap<>();
+  private AntMapStatistics stat = new AntMapStatistics();
 
-  // each group separately
-  // TODO:l synchronized jde predelat na semafor
-  public synchronized void updateMap(DSAgent agent) {
+  private AntMapUpdateSingleton() {}
+
+  ConcurrentHashMap<DSGroup, Integer> agentStep = new ConcurrentHashMap<>();
+
+  public void updateMap(DSAgent agent) {
     DSGroup g = agent.getGroup();
 
-    // 1st pass ?
-    if (agentStep.containsKey(g) && agentStep.get(g) == agent.getStep()) {
-      return;
+    // groups work separately but only first agent of group calculates stats
+    synchronized (this) {
+      if (!agentStep.containsKey(g) || agentStep.get(g) == agent.getStep()) {
+        agentStep.put(agent.getGroup(), agent.getStep());
+        return;
+      }
+      agentStep.put(g, agent.getStep());
     }
-
-    agentStep.put(g, agent.getStep());
 
     DSMap groupMap = agent.getMap();
     Point tlc = groupMap.getMap().getTLC();
@@ -47,42 +51,151 @@ public class AntMapUpdateSingleton {
       return;
     }
 
-    // systematic pass
+    // to propagate from  I need to keep track of their pheromones
+    // keeping copy of all cells, so they are not deleted also adding undiscovered cells
+    HashMap<Point, DSCell> emptyCells = new HashMap<>();
+    HashMap<Point, Double> nextGenPheromone = new HashMap<>();
+
     for (int x = tlc.x; x <= brc.x; x++) {
       for (int y = tlc.y; y <= brc.y; y++) {
         Point p = new Point(x, y);
-        LinkedList<DSCell> cellsAtPoint = groupMap.getMap().getAllAt(p);
-        if (cellsAtPoint == null || cellsAtPoint.isEmpty()) {
+        DSCell nCell = getNewestCellAt(groupMap, emptyCells, p);
+        // -100 to maximimize pheromone levels for undiscovered
+        DSCell cell = new DSCell(x, y, DSCell.__DSBorder, -100, agent);
+        if (nCell != null) {
+          cell.setTimestamp(nCell.getTimestamp());
+          cell.setPheromonePropagated(nCell.getFullPheromone());
+        }
+        emptyCells.put(p, cell);
+      }
+    }
+
+    final double PROPAGATION_LOSS = 8.0, PROPAGATION_COEFICIENT = 0.9;
+    final double AGENT_REPEL = 20.0;
+    final double WALL_REPEL = 5.0;
+
+    // systematic pass - calculate
+    for (int x = tlc.x; x <= brc.x; x++) {
+      for (int y = tlc.y; y <= brc.y; y++) {
+        // pheromone evaporation is automatic as it is calculated from discovery timestamp
+
+        Point p = new Point(x, y);
+
+        DSCell newestAtp = getNewestCellAt(groupMap, emptyCells, p);
+
+        if (newestAtp == null) {
+          System.err.println("SHOULD BE UNREACHABLE HERE");
           continue;
         }
 
-        for (DSCell cell : cellsAtPoint) {
-          cell.evaporate();
+        LinkedList<Point> neigh = groupMap.getNeighboursExactDistance(p, 1);
+        double max = -1;
+        for (Point nP : neigh) {
+          DSCell nCell = getNewestCellAt(groupMap, emptyCells, nP);
+          if (nCell == null) continue;
+
+          LinkedList<DSCell> allAt = groupMap.getMap().getAllAt(nP);
+          boolean isAgent = false, isWall = false;
+          if (allAt != null && !allAt.isEmpty()) {
+            isAgent = allAt.stream().anyMatch(q -> q.getType() == DSCell.__DSEntity_Friend);
+            isWall =
+                allAt.stream()
+                    .anyMatch(
+                        q -> q.getType() == DSCell.__DSObstacle || q.getType() == DSCell.__DSBlock);
+          }
+
+          // propagation equation
+          double offer =
+              nCell.getVisiblePheromone(agent.getStep()) * PROPAGATION_COEFICIENT
+                  - (isAgent ? AGENT_REPEL : 0)
+                  - (isWall ? WALL_REPEL : 0);
+          max = Math.max(max, offer);
         }
+        nextGenPheromone.put(p, max);
 
-        // in theory all at same point should have same pheromone level
-        // TODO:l check first vs newest
+        // puvodni myslenka propagovat "vsem" sousedum ma exponenicalni slozitost a nesiham v kroku
+        // propagate from direct neighbourhood
+        // TODO:l smazat :c propagateToNeighbours viz. vyse
+        // propagateToNeighbours(groupMap,emptyCells,
+        // newestAtp.getVisiblePheromone(newestAtp.getTimestamp()), newestAtp.getTimestamp(),
+        // newestAtp);
+      }
+    }
 
-        // DSCell newestAtp = cellsAtPoint.getFirst();
+    // systematic pass - update
+    for (int x = tlc.x; x <= brc.x; x++) {
+      for (int y = tlc.y; y <= brc.y; y++) {
+        Point p = new Point(x, y);
         DSCell newestAtp = groupMap.getMap().getNewestAt(p);
 
-        // diffusion to neighbourhood
-        for (int xSurround = p.x - 1; xSurround <= p.x + 1; xSurround++) {
-          for (int ySurround = p.y - 1; ySurround <= p.y + 1; ySurround++) {
-            if (xSurround < 0 || xSurround > tlc.x || ySurround < 0 || ySurround > tlc.y) {
-              // TODO:l resit overflow
-              continue;
-            }
-
-            Point pSurround = new Point(xSurround, ySurround);
-            LinkedList<DSCell> cellsAtSurroundPoint = groupMap.getMap().getAllAt(pSurround);
-
-            for (DSCell cell : cellsAtSurroundPoint) {
-              cell.addPheromone(newestAtp.getPheromone(agent.getStep()));
-            }
-          }
+        if (newestAtp != null && nextGenPheromone.get(p) != null) {
+          newestAtp.setPheromonePropagated(nextGenPheromone.get(p));
         }
       }
     }
+
+    // statistics -> each group gets here once for now
+    stat.numberOfUsedGroups(agent, agentStep);
+
+    // statistics -> once in step guaranted
+    synchronized (this) {
+      if (stat.completedStep == agent.getStep()) return;
+      stat.completedStep = agent.getStep();
+    }
+
+    stat.knownCellsStats(agent, agentStep);
+    stat.revisitedStats(agent, agentStep);
+  }
+
+  public void propagateToNeighbours(
+      DSMap map, HashMap<Point, DSCell> emptyCells, double proposed, int step, DSCell current) {
+    // todo:l neni cell propaguj max -> doresit okraje
+    // TODO:l pohrat si s konstantami/nasobicy (i v dscell )
+    current.setPheromonePropagated(proposed);
+
+    final double PROPAGATION_LOSS = 8.0;
+    final double AGENT_REPEL = 20.0;
+    final double WALL_REPEL = 5.0;
+
+    // todo:l potrebuji poznat friendly agenta muze byt enemy
+    LinkedList<DSCell> allAt = map.getMap().getAllAt(current.getPosition());
+    boolean isAgent = false, isWall = false;
+    if (allAt != null && !allAt.isEmpty()) {
+      isAgent = allAt.stream().anyMatch(x -> x.getType() == DSCell.__DSAgent);
+      isWall =
+          allAt.stream()
+              .anyMatch(x -> x.getType() == DSCell.__DSObstacle || x.getType() == DSCell.__DSBlock);
+    }
+
+    // propagation equation
+    double offer =
+        proposed - PROPAGATION_LOSS - (isAgent ? AGENT_REPEL : 0) - (isWall ? WALL_REPEL : 0);
+
+    // continue propagation
+    LinkedList<Point> neighbours = map.getNeighboursExactDistance(current.getPosition(), 1);
+    // save time not going back
+    neighbours.remove(current.getPosition());
+    for (Point p : neighbours) {
+      DSCell cell = getNewestCellAt(map, emptyCells, p);
+      if (cell == null) {
+        continue;
+      }
+      double currentP = cell.getVisiblePheromone(step);
+      // recursion and break condition
+      if (offer > currentP || offer <= 0.0) {
+        propagateToNeighbours(map, emptyCells, offer, step, cell);
+      }
+    }
+  }
+
+  protected DSCell getNewestCellAt(DSMap map, HashMap<Point, DSCell> emptyCells, Point atPoint) {
+    // get cells from map if present otherwise fetch emptyCell
+    // using newest as all cells should have synchronized pheromone levels
+    DSCell cellsAtPoint = map.getMap().getNewestAt(atPoint);
+    if (cellsAtPoint == null) {
+      // beyond border > null
+      cellsAtPoint = emptyCells.getOrDefault(atPoint, null);
+    }
+    return cellsAtPoint;
   }
 }
