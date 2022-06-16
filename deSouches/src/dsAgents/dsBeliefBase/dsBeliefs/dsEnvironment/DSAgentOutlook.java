@@ -5,7 +5,9 @@ package dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment;
 
 */
 
+import dsAgents.DSAgent;
 import java.awt.*;
+import java.util.Comparator;
 import java.util.LinkedList;
 
 public class DSAgentOutlook {
@@ -16,9 +18,9 @@ public class DSAgentOutlook {
     return (PStep);
   }
 
-  public void processAddThing(int x, int y, String type, String params, int step) {
+  public void processAddThing(int x, int y, String type, String params, int step, DSAgent agent) {
     PStep = step;
-    DSCell cell = new DSCell(x, y, type, params, step);
+    DSCell cell = new DSCell(x, y, type, params, step, agent);
     POutlook.put(cell);
   }
 
@@ -55,18 +57,53 @@ public class DSAgentOutlook {
           else {
             if (POutlook.containsKey(new Point(i, j))) {
               DSCell cell = POutlook.getOneAt(new Point(i, j));
-              if (cell != null) so = so + DSCell.getTypeSign(cell.getType());
-              else so = so + " ..";
-            } else so = so + " ..";
+              if (cell == null || cell.getType() == DSCell.__DSClear) so += " ..";
+              else so += DSCell.getTypeSign(cell.getType());
+            }
           }
         }
       }
-      so = so + '\n';
+      so += '\n';
     }
     return (so);
   }
 
   public DSAgentOutlook() {
     POutlook = new DSCells();
+  }
+
+  public String stringPheroOutLook(int vision) {
+    StringBuilder so = new StringBuilder();
+
+    for (int x = -vision; x <= vision; x++) {
+      for (int y = -vision; y <= vision; y++) {
+        if (Math.abs(x) + Math.abs(y) > vision) so.append(" ");
+        else {
+          var regulC = POutlook.getNewestAt(new Point(x, y));
+
+          if (regulC != null) {
+            var p =
+                POutlook.getAllAt(new Point(x, y)).stream()
+                    .max(Comparator.comparingInt(foo -> (int) foo.getVisiblePheromone(getStep())))
+                    .orElse(null);
+            int pPhero = (int) p.getVisiblePheromone(getStep());
+            int regulPhero = (int) regulC.getVisiblePheromone(getStep());
+            if (pPhero != regulPhero) {
+              System.err.println("CHYBA PHERO OUTLOOK" + pPhero + "=/=" + regulPhero);
+            }
+            int phero = pPhero / 10;
+            if (phero >= 10) {
+              System.err.println("WONT DISPLAY CORRECTLY");
+              // TODO:l add letters if necessary
+            }
+            so.append(phero);
+          } else {
+            so.append("?");
+          }
+        }
+      }
+      so.append('\n');
+    }
+    return so.toString();
   }
 }

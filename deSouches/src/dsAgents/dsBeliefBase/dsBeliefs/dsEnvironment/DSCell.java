@@ -1,5 +1,6 @@
 package dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment;
 
+import dsAgents.DSAgent;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +9,7 @@ public class DSCell {
 
   public static int __DSClear = 0;
   public static int __DSObstacle = 1;
-  public static int __DSEntity_Friend = 2;
+  public static int __DSEntity_Friend = 2; // ptani na agenta zmenit na entitu
   public static int __DSEntity_Enemy = 3;
   public static int __DSMarker = 4;
   public static int __DSBorder = 5;
@@ -20,6 +21,10 @@ public class DSCell {
   public static int __DSBlock = 50;
 
   public static int __DSDispenser = 100;
+
+  private double cellPheromone = 0;
+  private int AntStatisticsLastTimeVisited = 0;
+  private int AntStatisticsStepsBetweenRevisits = 0;
 
   static Map<String, Integer> _thingMap =
       new HashMap<String, Integer>() {
@@ -76,7 +81,17 @@ public class DSCell {
     return (" ??");
   }
 
-  int PType, PX, PY, PTimeStamp;
+  private int PType, PX, PY, PTimeStamp;
+
+  private DSAgent foundBy;
+
+  public void setFoundBy(DSAgent foundBy) {
+    this.foundBy = foundBy;
+  }
+
+  public DSAgent getFoundBy() {
+    return foundBy;
+  }
 
   public void setType(int type) {
     PType = type;
@@ -96,6 +111,16 @@ public class DSCell {
 
   public Point getPosition() {
     return (new Point(PX, PY));
+  }
+
+  public int revisitedInSteps() {
+    return AntStatisticsStepsBetweenRevisits;
+  }
+
+  public void setTimestamp(int timestamp) {
+    this.PTimeStamp = timestamp;
+    AntStatisticsStepsBetweenRevisits = timestamp - AntStatisticsLastTimeVisited;
+    AntStatisticsLastTimeVisited = timestamp;
   }
 
   public int getTimestamp() {
@@ -126,6 +151,7 @@ public class DSCell {
     PY = y;
     PType = type;
     PTimeStamp = timestamp;
+    AntStatisticsLastTimeVisited = timestamp;
   }
 
   // 2022, thing is from {obstacle, entity, dispenser, marker, block, taskboard}
@@ -137,5 +163,49 @@ public class DSCell {
     PY = y;
     PType = getThingTypeIndex(type, params);
     PTimeStamp = timestamp;
+    AntStatisticsLastTimeVisited = timestamp;
+  }
+
+  // bude tam pozice rel. k agentovi, objekt, casove razitko
+  public DSCell(int x, int y, String type, String params, int timestamp, DSAgent foundBy) {
+
+    PX = x;
+    PY = y;
+    PType = getThingTypeIndex(type, params);
+    PTimeStamp = timestamp;
+    AntStatisticsLastTimeVisited = timestamp;
+    this.foundBy = foundBy;
+  }
+
+  public DSCell(int x, int y, int type, int timestamp, DSAgent foundBy) {
+    PX = x;
+    PY = y;
+    PType = type;
+    PTimeStamp = timestamp;
+    AntStatisticsLastTimeVisited = timestamp;
+    this.foundBy = foundBy;
+  }
+
+  public void setPheromonePropagated(double pheromone) {
+    cellPheromone = pheromone;
+  }
+
+  private double getTimePheromone(int curStep) {
+    // current ~pheromone~ (information gain) by age
+    final int TIME_EVAP_CONST = 5, MAX_VAL = 100;
+    double p = Math.min((curStep - getTimestamp()) * TIME_EVAP_CONST, MAX_VAL);
+
+    return p;
+  }
+
+  public double getFullPheromone() {
+    return cellPheromone;
+  }
+
+  public double getVisiblePheromone(int curStep) {
+    // used for path calculation
+    // todo:l prumer ?
+    // return Math.max(cellPheromone,getTimePheromone(curStep));
+    return (cellPheromone + getTimePheromone(curStep)) / 2.0;
   }
 }

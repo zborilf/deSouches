@@ -1,5 +1,6 @@
 package dsAgents.dsPerceptionModule;
 
+import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.DSBeliefBase;
 import dsAgents.dsBeliefBase.dsBeliefs.DSBeliefsIndexes;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.*;
@@ -138,7 +139,13 @@ public class DSPerceptor {
   }
 
   public synchronized boolean actualizeMap(
-      DSMap map, DSAgentOutlook outlook, Point agentPos, int vision, String PTeamName, int step) {
+      DSMap map,
+      DSAgentOutlook outlook,
+      Point agentPos,
+      int vision,
+      String PTeamName,
+      int step,
+      DSAgent agent) {
 
     clearFriendsList();
     DSCells newOutlook = outlook.getCells();
@@ -159,9 +166,27 @@ public class DSPerceptor {
                       cell.getX() + agentPos.x,
                       cell.getY() + agentPos.y,
                       cell.getType(),
-                      cell.getTimestamp());
+                      cell.getTimestamp(),
+                      agent);
               map.updateCell(newCell);
             }
+
+          // complete vision area with empty cells
+          DSCell clearCell =
+              new DSCell(i + agentPos.x, j + agentPos.y, DSCell.__DSClear, step, agent);
+
+          // remove old clear if something else exists
+          if ((map.getMap().getAllAt(new Point(clearCell.getX(), clearCell.getY())) == null)
+              || map.getMap().getAllAt(new Point(clearCell.getX(), clearCell.getY())).stream()
+                  .noneMatch(
+                      p ->
+                          (p.getType() == DSCell.__DSObstacle)
+                              || ((p.getType() >= DSCell.__DSBlock)
+                                  && (p.getType() < DSCell.__DSDispenser)))) {
+            map.updateCell(clearCell);
+          } else {
+            map.getMap().removeCell(clearCell.getX(), clearCell.getY(), DSCell.__DSClear);
+          }
         }
       }
     return (true);
@@ -263,11 +288,11 @@ public class DSPerceptor {
           break;
 
         case DSBeliefsIndexes.__roleZone:
-          BB.standsAtRoleZone(perceptParams);
+          BB.addRoleZoneToOutlook(perceptParams);
           break;
 
         case DSBeliefsIndexes.__goalZone:
-          BB.standsAtGoalZone(perceptParams);
+          BB.addGoleZoneToOutlook(perceptParams);
           break;
 
         case DSBeliefsIndexes.__step:
@@ -300,13 +325,14 @@ public class DSPerceptor {
 
     if (BB.getGUIFocus()) {
       String outlookString = BB.getOutlook().stringOutlook(BB.getVision(), BB.getName());
-      BB.getGUI().textMapClear();
       BB.getGUI().writeTextOutlook("OUTLOOK:\n" + outlookString);
+      BB.getGUI()
+          .writePheroOutlook("INFO GAIN:\n" + BB.getOutlook().stringPheroOutLook(BB.getVision()));
     }
   }
 
   public DSPerceptor() {
     PPercepts = new DSPercepts();
-    PFriendsSeen = new LinkedList<Point>();
+    PFriendsSeen = new LinkedList<>();
   }
 }

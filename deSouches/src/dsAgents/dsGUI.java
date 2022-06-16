@@ -28,8 +28,10 @@ public class dsGUI {
   private JPanel dsgAgentsPanel;
   private JComboBox dsgAgentsSelect;
   private JTextArea dsgTextOutlook;
+  private JTextArea dsgPheroOutlook;
   private JTextField dsgGoalArea;
   private JTextField dsgScenarioArea;
+  private JCheckBox textMapSwitchCheckBox;
   private JTextField dsgXValue;
   private JTextField dsgYValue;
   private JTextArea dsgLogText;
@@ -89,15 +91,23 @@ public class dsGUI {
   }
 
   public void textMapClear() {
-    dsgTextMap.setText("");
+    if (!textMapSwitchCheckBox.isSelected()) dsgTextMap.setText("");
   }
 
   public void writeTextOutlook(String text) {
     dsgTextOutlook.setText(text + "\n");
   }
 
+  public void writePheroOutlook(String text) {
+    dsgPheroOutlook.setText(text + "\n");
+  }
+
   public void setTextMap(String text) {
-    dsgTextMap.setText(text + "\n");
+    if (!textMapSwitchCheckBox.isSelected()) dsgTextMap.setText(text + "\n");
+  }
+
+  public void setPheromoneTextMap(String text) {
+    if (textMapSwitchCheckBox.isSelected()) dsgTextMap.setText(text + "\n");
   }
 
   public void registerAgent(String agent) {
