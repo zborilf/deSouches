@@ -84,19 +84,19 @@ public class DSAgentOutlook {
           if (regulC != null) {
             var p =
                 POutlook.getAllAt(new Point(x, y)).stream()
-                    .max(Comparator.comparingInt(foo -> (int) foo.getVisiblePheromone(getStep())))
+                    .max(Comparator.comparingInt(foo -> (int) foo.getPheromone()))
                     .orElse(null);
-            int pPhero = (int) p.getVisiblePheromone(getStep());
-            int regulPhero = (int) regulC.getVisiblePheromone(getStep());
+            int pPhero = (int) p.getPheromone();
+            int regulPhero = (int) regulC.getPheromone();
             if (pPhero != regulPhero) {
               System.err.println("CHYBA PHERO OUTLOOK" + pPhero + "=/=" + regulPhero);
             }
             int phero = pPhero / 10;
+            char printVal = (char) (phero + '0');
             if (phero >= 10) {
-              System.err.println("WONT DISPLAY CORRECTLY");
-              // TODO:l add letters if necessary
+              printVal = (char) (phero - 10 + 'A');
             }
-            so.append(phero);
+            so.append(printVal);
           } else {
             so.append("?");
           }

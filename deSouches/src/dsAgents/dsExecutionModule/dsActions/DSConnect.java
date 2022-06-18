@@ -8,7 +8,6 @@ import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
-import eis.EnvironmentInterfaceStandard;
 import eis.exceptions.ActException;
 import eis.iilang.Action;
 import eis.iilang.Identifier;
@@ -52,8 +51,7 @@ public class DSConnect extends DSAction {
     return null;
   }
 
-  public DSConnect(EnvironmentInterfaceStandard ei, String direction, String partnerName) {
-    super(ei);
+  public DSConnect(String direction, String partnerName) {
     PDirection = direction;
     PPartnerName = partnerName;
   }

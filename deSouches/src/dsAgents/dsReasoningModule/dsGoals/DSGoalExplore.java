@@ -17,20 +17,20 @@ import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsExecutionModule.dsActions.DSAdopt;
-import dsAgents.dsExecutionModule.dsActions.DSClear;
-import dsAgents.dsExecutionModule.dsActions.DSMove;
-import dsAgents.dsPerceptionModule.DSPerceptor;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
+import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStar;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSStraightPath;
 import java.awt.Point;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Objects;
 
 public class DSGoalExplore extends DSGoal {
   private static final String TAG = "DSGoalRoam";
 
   int PDistance;
-  private final int ROAM_PRIORITY = 1;
 
   public String getGoalDescription() {
     if (highestPriorityPlan() == null) return "Goal explore";
@@ -38,156 +38,103 @@ public class DSGoalExplore extends DSGoal {
   }
 
   public boolean revisePlans(DSAgent agent) {
+    final int ROAM_PRIORITY = 2, PRIORITY_BOOST = 2, LARGE_N = 300;
+    final double ALLOWED_SIMMILAR = 0.9;
 
-    // TODO:l imo pouze worth pokud diger uvidim
-    if (!PPlans.containsKey("clear")
-        && agent.getActualRole().contentEquals("digger")
-        && (Math.random() < 0.6)) {
-      Point obstacleAt = agent.getMap().nearestObject(DSCell.__DSObstacle, agent.getMapPosition());
-      int range = agent.getVisionRange();
-      DSPlan plan = new DSPlan("clear", 4);
-      Point direction =
-          new Point(
-              obstacleAt.x - agent.getMapPosition().x, obstacleAt.y - agent.getMapPosition().y);
+    // exploration with attachments doesn't really make sense as its slower;
+    if (agent.getBody().getBodyList().size() > 1) return false;
 
-      DSClear clearAction = new DSClear(agent.getEI(), direction);
-      plan.appendAction(clearAction);
-      PPlans.put(plan.getName(), plan);
-    }
+    List<Point> destinations = new ArrayList<>();
+    int local_priority = ROAM_PRIORITY;
 
     if (agent.getActualRole().compareTo("default") == 0) {
+      // try to change role if viable
       if (agent.getMap().getMap().getKeyType(agent.getMapPosition(), DSCell.__DSRoleArea) != null) {
-        // standing at role zone and is not 'digger', make high priority plan to change it
-
+        // standing at role zone -> set role
         String role = agent.getCommander().roleNeeded(agent);
 
-        DSPlan plan = new DSPlan("set role " + role, 3);
-        DSAdopt adoptAction = new DSAdopt(agent.getEI(), role);
+        DSPlan plan = new DSPlan("set role " + role, 5);
+        DSAdopt adoptAction = new DSAdopt(role);
         plan.appendAction(adoptAction);
         PPlans.put(plan.getName(), plan);
-        return (true);
+        return true;
       }
 
-      if (!PPlans.containsKey("goToRoleZone") && (Math.random() < 0.5)) {
-        Point dp = (agent.getMap().nearestObject(DSCell.__DSRoleArea, agent.getMapPosition()));
-        if (dp != null) {
-          DSPlan plan =
-              new DSStraightPath()
-                  .computeStraightPath(
-                      agent,
-                      "reachRoleZone",
-                      (Point) agent.getMapPosition().clone(),
-                      new Point(dp.x, dp.y),
-                      2);
-          PPlans.put("goToRoleZone", plan);
-        }
+      Point dp = agent.getMap().nearestObject(DSCell.__DSRoleArea, agent.getMapPosition());
+      if (dp != null && DSMap.distance(dp, agent.getMapPosition()) <= agent.getVisionRange()) {
+        // zone in near proximity might as well go there -> first in list, the highest prior
+        destinations.add(new Point(dp.x, dp.y));
+        local_priority += PRIORITY_BOOST;
       }
     }
 
-    Point destination = null;
-    String destinationS = "";
-
-    // TODO:l priority priblizeni k ruznym typu bloku na feromony + posilit pro roly digger
-    // todo:l ciste reaktivne nextPoint nebo vytvorit treba trasu delky 3 / PDistance -> ted
-    // nextPoint dle vetsi vzdalenosti
+    // exploration
 
     LinkedList<Point> neigbours =
         agent.getMap().getNeighboursExactDistance(agent.getMapPosition(), agent.getVisionRange());
+    List<DSCell> neigbourCells =
+        neigbours.stream()
+            .map(c -> agent.getMap().getMap().getNewestAt(c))
+            .filter(Objects::nonNull)
+            .toList();
 
-    int curStep = agent.getStep();
-    DSCell maxCell = null;
-    double maxCellPhero = -100;
-    // TODO:l delete vision output
-    if (agent.getEntityName().contains("agentA1")) {
-      System.err.print("A1 vis:");
-    }
-    for (Point p : neigbours) {
-      DSCell cell = agent.getMap().getMap().getNewestAt(p);
-      if (cell != null) {
-
-        // TODO:l pokud symetrie drz smer
-        if (agent.getEntityName().contains("agentA1")) {
-          System.err.print(
-              "  (" + p.x + "," + p.y + ") ->" + (int) cell.getVisiblePheromone(curStep));
-        }
-        maxCell = cell.getVisiblePheromone(curStep) > maxCellPhero ? cell : maxCell;
-        maxCellPhero = maxCell.getVisiblePheromone(curStep);
-      }
-    }
-    if (agent.getEntityName().contains("agentA1")) {
-      System.err.println(" ." + agent.getStep());
-    }
-    System.err.flush();
-
-    if (maxCell != null) {
-      destination = maxCell.getPosition();
-    } else {
+    if (neigbourCells.isEmpty())
       System.err.println("CELL HAS NO NEIGHBOURS step: " + agent.getStep());
+    else {
+      double simmilar_min =
+          neigbourCells.stream()
+                  .min(Comparator.comparingDouble(DSCell::getPheromone))
+                  .orElse(null)
+                  .getPheromone()
+              / ALLOWED_SIMMILAR;
+
+      // add sorted viable cells
+      neigbourCells.stream()
+          .filter(c -> c.getPheromone() > simmilar_min)
+          .sorted(Comparator.comparingDouble(DSCell::getPheromone))
+          .map(DSCell::getPosition)
+          .forEachOrdered(destinations::add);
     }
 
-    if (destination == null) return false;
+    if (destinations.isEmpty()) return false;
 
-    // TODO:l proc DSSTRAIGHT a ne ASTAR
-    DSPlan plan =
-        new DSStraightPath()
-            .computeStraightPath(
-                agent, "roam", (Point) agent.getMapPosition().clone(), destination, ROAM_PRIORITY);
-    final int UNREASONABLY_LARGE_N = 100;
+    // ASTAR - avoids obstacles -> default and explorer role
+    // STRAIGHTPATH - throught obstacles -> digger
 
-    // plan = new
-    // DSAStar().computePath("astarPlan",ROAM_PRIORITY,agent.getMap(),agent.getMapPosition(),destination,agent.getBody(), UNREASONABLY_LARGE_N, agent);
+    for (Point candidate : destinations) {
+      DSPlan plan =
+          new DSStraightPath()
+              .computeStraightPath(
+                  agent,
+                  "explore StraightPath",
+                  (Point) agent.getMapPosition().clone(),
+                  candidate,
+                  local_priority);
 
-    // only first step of plan may include clear
-    DSPlan stepPlan = new DSPlan("roamAnt", ROAM_PRIORITY);
-    DSMove firstAction;
-    try {
-      firstAction = (DSMove) plan.getAction();
-    } catch (Exception e) {
-      System.err.println("EXPLORE PATH NOT AVAILABLE step: " + agent.getStep());
-      return false;
-    }
+      if (agent.getActualRole().compareTo("explorer") == 0) {
+        plan =
+            new DSAStar()
+                .computePath(
+                    "explore Astar",
+                    local_priority,
+                    agent.getMap(),
+                    agent.getMapPosition(),
+                    candidate,
+                    agent.getBody(),
+                    LARGE_N,
+                    agent);
+      }
 
-    Point dir = DSPerceptor.getPositionFromDirection(firstAction.getPlannedDirection());
-    Point p = new Point(agent.getMapPosition().x + dir.x, agent.getMapPosition().y + dir.y);
-    var alternativeP = agent.getMap().getNeighboursExactDistance(agent.getMapPosition(), 1);
-    Point finalDestination = destination;
-    alternativeP.sort(Comparator.comparingInt(sortP -> DSMap.distance(sortP, finalDestination)));
-
-    // agent may be in way -> try other cells
-    // todo:l maybe lower prior
-    for (int i = 0; !alternativeP.isEmpty(); i++) {
-
-      if (agent.getMap().isObstacleAt(p, agent.getBody(), agent.getBody(), agent.getStep())) {
-        // TODO:l astar asi resi obstacle
-        // TODO:l zatim zbytecne kontroluje range -> muzu zkusit nexstep clearovat?
-        int range = 1;
-        if (agent.getActualRole().contentEquals("digger")) range = agent.getVisionRange();
-        if (DSMap.distance(agent.getMapPosition(), p) <= range) {
-          DSPlan plan1 = new DSPlan("clear", ROAM_PRIORITY);
-          Point direction =
-              new Point(p.x - agent.getMapPosition().x, p.y - agent.getMapPosition().y);
-
-          DSClear clearAction = new DSClear(agent.getEI(), direction);
-          plan1.appendAction(clearAction);
-          PPlans.put(plan1.getName(), plan1);
-          return true;
-        }
-      } else if (agent.getMap().getMap().getKeyType(p, DSCell.__DSAgent) != null
-          || agent.getMap().getMap().getKeyType(p, DSCell.__DSEntity_Enemy) != null
-          || agent.getMap().getMap().getKeyType(p, DSCell.__DSEntity_Friend) != null) {
-        // try other change direction
-        // TODO:l due to synchronization problems temporary problems may arise
-        p = alternativeP.pop();
-        firstAction = new DSMove(agent.getEI(), DSPerceptor.getDirectionFromPosition(p));
-      } else {
-        // regular walk
-        stepPlan.appendAction(firstAction);
-        PPlans.put("roamAnt", stepPlan);
+      if (plan != null) {
+        // TODO:l maybe plan only from first action for more reactive approach
+        // DSPlan stepPlan = new DSPlan("roamAnt", local_priority);
+        // stepPlan.appendAction(plan.getAction());
+        // PPlans.put("roamAnt",stepPlan);
+        PPlans.put("roamAnt", plan);
         return true;
       }
     }
 
-    System.err.println(agent.getEntityName() + " NO PATH AVAILABLE");
     return false;
   }
 

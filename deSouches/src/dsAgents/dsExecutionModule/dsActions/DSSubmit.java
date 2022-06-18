@@ -8,7 +8,6 @@ import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
-import eis.EnvironmentInterfaceStandard;
 import eis.exceptions.ActException;
 import eis.iilang.Action;
 import eis.iilang.Identifier;
@@ -51,8 +50,7 @@ public class DSSubmit extends DSAction {
     return null;
   }
 
-  public DSSubmit(EnvironmentInterfaceStandard ei, String taskName) {
-    super(ei);
+  public DSSubmit(String taskName) {
     PTaskName = taskName;
   }
 }

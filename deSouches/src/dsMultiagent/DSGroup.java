@@ -238,6 +238,7 @@ public class DSGroup {
     for (DSAgent newMember : membersCl) {
       PMembers.add(newMember);
       PGroupMap.addAgent(newMember, displacement);
+      newMember.getGroup().removeAgent(newMember);
       newMember.setGroup(this);
     }
 
@@ -246,6 +247,11 @@ public class DSGroup {
     PGroupMap.mergeMaps(groupToAbsorb.getMap(), displacement);
 
     return (true);
+  }
+
+  private void removeAgent(DSAgent member) {
+    PMembers.remove(member);
+    PGroupMap.removeAgent(member);
   }
 
   public DSGroup(DSAgent agent) {

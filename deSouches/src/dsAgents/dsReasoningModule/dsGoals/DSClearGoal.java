@@ -26,7 +26,7 @@ public class DSClearGoal extends DSGoal {
     if (direction == null) return (false);
 
     DSPlan plan = new DSPlan("justClear", 1);
-    DSAction clear = new DSClear(agent.getEI(), direction);
+    DSAction clear = new DSClear(direction);
     plan.appendAction(clear);
     PPlans.put("justClear", plan);
     return (true);

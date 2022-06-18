@@ -51,9 +51,9 @@ public class DSGetBlock extends DSGoal {
 
       if (newPlan != null) {
         newPlan.setPriority(1000 - newPlan.getLength());
-        DSRequest newRequest = new DSRequest(agent.getEI(), mv2);
+        DSRequest newRequest = new DSRequest(mv2);
         newPlan.appendAction(newRequest);
-        DSAttach newAttach = new DSAttach(agent.getEI(), mv2, PBlockType);
+        DSAttach newAttach = new DSAttach(mv2, PBlockType);
         newPlan.appendAction(newAttach);
 
         return (newPlan);
@@ -80,7 +80,7 @@ public class DSGetBlock extends DSGoal {
     DSPlan newPlan = astarGroup("goForBlock", 2, agent, position, agent.getBody());
     if (newPlan != null) {
       newPlan.setPriority(1000 - newPlan.getLength());
-      DSAttach newAttach = new DSAttach(agent.getEI(), neighbPosOp, PBlockType);
+      DSAttach newAttach = new DSAttach(neighbPosOp, PBlockType);
       newPlan.appendAction(newAttach);
 
       return (newPlan);
@@ -97,7 +97,7 @@ public class DSGetBlock extends DSGoal {
                 return(null);
             // Make plan
             DSPlan newPlan=new DSPlan("grabBlock",3);
-            DSAttach newAttach = new DSAttach(agent.getEI(), direction, PBlockType);
+            DSAttach newAttach = new DSAttach( direction, PBlockType);
                 newPlan.appendAction(newAttach);
                 return (newPlan);
     */

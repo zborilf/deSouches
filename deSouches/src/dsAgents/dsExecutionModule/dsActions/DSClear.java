@@ -7,7 +7,6 @@ import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
-import eis.EnvironmentInterfaceStandard;
 import eis.exceptions.ActException;
 import eis.iilang.Action;
 import eis.iilang.Numeral;
@@ -48,8 +47,7 @@ public class DSClear extends DSAction {
     return null;
   }
 
-  public DSClear(EnvironmentInterfaceStandard ei, Point direction) {
-    super(ei);
+  public DSClear(Point direction) {
     Pp = direction;
   }
 }

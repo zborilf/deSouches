@@ -7,17 +7,12 @@ import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
-import eis.EnvironmentInterfaceStandard;
 import eis.exceptions.ActException;
 import eis.iilang.Action;
 import eis.iilang.Identifier;
 import java.awt.Point;
 
 public class DSRotateCW extends DSAction {
-
-  public DSRotateCW(EnvironmentInterfaceStandard ei) {
-    super(ei);
-  }
 
   @Override
   public void succeededEffect(DSAgent agent) {

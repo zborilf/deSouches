@@ -81,6 +81,10 @@ public class DSAgent extends Agent {
     return (PBeliefBase.getVision());
   }
 
+  public int getSpeed() {
+    return (PBeliefBase.getSpeed());
+  }
+
   public EnvironmentInterfaceStandard getEI() {
     return (PEI);
   }
@@ -338,45 +342,45 @@ public class DSAgent extends Agent {
         }
 
       // agent disabled? Inform and dont execute
-      if (perceptor.disabled(newPercepts))
+      if (perceptor.disabled(newPercepts)) {
         PBeliefBase.getCommander().agentDisabled((DSAgent) this.getAgent());
-      else {
-        // EXECUTION
-        // vyber zameru
-        // vykonani zameru
-        // report uspesneho/neuspesneho ukonceni nasledovani zameru
+        return;
+      }
 
-        // TODO:l looks useless to me -> i can get friends other ways and delete lot of code
-        // report spatrenych pratel, asi skrz mapu, jinak si nepamatuji proc
-        PBeliefBase.getSynchronizer()
-            .addObservation(
-                (DSAgent) this.getAgent(),
-                PBeliefBase.getStep(),
-                PBeliefBase.getOutlook().getFriendsSeen(PBeliefBase.getVision()),
-                PBeliefBase.getTeamSize());
+      // EXECUTION
+      // vyber zameru
+      // vykonani zameru
+      // report uspesneho/neuspesneho ukonceni nasledovani zameru
 
-        if (recentIntentionExecuted != null) {
-          if (recentIntentionExecuted.intentionState() == DSIntention.__Intention_Finished) {
-            PIntentionPool.removeIntention(recentIntentionExecuted);
-            informCompleted(recentIntentionExecuted.getTLG());
-          } else if (recentIntentionExecuted.intentionState() == DSIntention.__Intention_Failed) {
-            informFailed(recentIntentionExecuted.getTLG());
-            PIntentionPool.removeIntention(recentIntentionExecuted);
-          }
+      // report spatrenych pratel, skrz mapu -> vede na merge group
+      PBeliefBase.getSynchronizer()
+          .addObservation(
+              (DSAgent) this.getAgent(),
+              PBeliefBase.getStep(),
+              PBeliefBase.getOutlook().getFriendsSeen(PBeliefBase.getVision()),
+              PBeliefBase.getTeamSize());
+
+      if (recentIntentionExecuted != null) {
+        if (recentIntentionExecuted.intentionState() == DSIntention.__Intention_Finished) {
+          PIntentionPool.removeIntention(recentIntentionExecuted);
+          informCompleted(recentIntentionExecuted.getTLG());
+        } else if (recentIntentionExecuted.intentionState() == DSIntention.__Intention_Failed) {
+          informFailed(recentIntentionExecuted.getTLG());
+          PIntentionPool.removeIntention(recentIntentionExecuted);
         }
+      }
 
-        if ((PIntentionPool.getIntention() == null) && (getScenario() == null))
-          PBeliefBase.getCommander().needJob((DSAgent) this.getAgent());
+      if ((PIntentionPool.getIntention() == null) && (getScenario() == null))
+        PBeliefBase.getCommander().needJob((DSAgent) this.getAgent());
 
-        // EXECUTING INTENTION
-        recentIntentionExecuted = PIntentionPool.executeOneIntention((DSAgent) this.getAgent());
-        // PRINT recentIntention on GUI
+      // EXECUTING INTENTION
+      recentIntentionExecuted = PIntentionPool.executeOneIntention((DSAgent) this.getAgent());
+      // PRINT recentIntention on GUI
 
-        if (PBeliefBase.getGUIFocus()) {
-          PBeliefBase.getGUI()
-              .noticeLastGoal(recentIntentionExecuted.getTLG().getGoalDescription());
-          PBeliefBase.getGUI().writePlan(recentIntentionExecuted.getRecentPlan());
-        }
+      if (PBeliefBase.getGUIFocus()) {
+        PBeliefBase.getGUI()
+            .noticeLastGoal(recentIntentionExecuted.getTLG().getGoalDescription());
+        PBeliefBase.getGUI().writePlan(recentIntentionExecuted.getRecentPlan());
       }
     } // END action()
 

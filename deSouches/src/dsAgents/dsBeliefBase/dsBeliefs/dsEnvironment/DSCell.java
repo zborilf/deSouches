@@ -26,6 +26,8 @@ public class DSCell {
   private int AntStatisticsLastTimeVisited = 0;
   private int AntStatisticsStepsBetweenRevisits = 0;
 
+  private final int MAX_PHERO = 100;
+
   static Map<String, Integer> _thingMap =
       new HashMap<String, Integer>() {
         {
@@ -145,6 +147,13 @@ public class DSCell {
     return (st);
   }
 
+  private int startPheromoneByType(int type) {
+    return MAX_PHERO
+        + (type == DSCell.__DSObstacle
+            ? MAX_PHERO / 4
+            : 0); // make wall travel less likely //TODO:l is okay ?
+  }
+
   public DSCell(int x, int y, int type, int timestamp) {
     // bude tam pozice rel. k agentovi, objekt, casove razitko
     PX = x;
@@ -152,6 +161,7 @@ public class DSCell {
     PType = type;
     PTimeStamp = timestamp;
     AntStatisticsLastTimeVisited = timestamp;
+    cellPheromone = startPheromoneByType(PType);
   }
 
   // 2022, thing is from {obstacle, entity, dispenser, marker, block, taskboard}
@@ -164,6 +174,7 @@ public class DSCell {
     PType = getThingTypeIndex(type, params);
     PTimeStamp = timestamp;
     AntStatisticsLastTimeVisited = timestamp;
+    cellPheromone = startPheromoneByType(PType);
   }
 
   // bude tam pozice rel. k agentovi, objekt, casove razitko
@@ -175,6 +186,7 @@ public class DSCell {
     PTimeStamp = timestamp;
     AntStatisticsLastTimeVisited = timestamp;
     this.foundBy = foundBy;
+    cellPheromone = startPheromoneByType(PType);
   }
 
   public DSCell(int x, int y, int type, int timestamp, DSAgent foundBy) {
@@ -184,28 +196,24 @@ public class DSCell {
     PTimeStamp = timestamp;
     AntStatisticsLastTimeVisited = timestamp;
     this.foundBy = foundBy;
+    cellPheromone = startPheromoneByType(PType);
   }
 
-  public void setPheromonePropagated(double pheromone) {
+  public void evaporatePheromone(double coeficient) {
+    // no evap for static elements
+    if (PType == DSCell.__DSGoal
+        || PType == DSCell.__DSDispenser
+        || PType == DSCell.__DSRoleArea
+        || PType == DSCell.__DSTaskArea) return;
+
+    if (coeficient > 0.0 && coeficient < 1.0) cellPheromone *= coeficient;
+  }
+
+  public void setPheromone(double pheromone) {
     cellPheromone = pheromone;
   }
 
-  private double getTimePheromone(int curStep) {
-    // current ~pheromone~ (information gain) by age
-    final int TIME_EVAP_CONST = 5, MAX_VAL = 100;
-    double p = Math.min((curStep - getTimestamp()) * TIME_EVAP_CONST, MAX_VAL);
-
-    return p;
-  }
-
-  public double getFullPheromone() {
+  public double getPheromone() {
     return cellPheromone;
-  }
-
-  public double getVisiblePheromone(int curStep) {
-    // used for path calculation
-    // todo:l prumer ?
-    // return Math.max(cellPheromone,getTimePheromone(curStep));
-    return (cellPheromone + getTimePheromone(curStep)) / 2.0;
   }
 }

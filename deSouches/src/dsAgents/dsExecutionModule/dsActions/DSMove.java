@@ -8,14 +8,15 @@ import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
-import eis.EnvironmentInterfaceStandard;
 import eis.exceptions.ActException;
 import eis.iilang.Action;
 import eis.iilang.Identifier;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class DSMove extends dsAgents.dsExecutionModule.dsActions.DSAction {
-  private final String PDirection;
+  private ArrayList<String> PDirection = new ArrayList<>();
   int PDx = 0;
   int PDy = 0;
 
@@ -23,7 +24,12 @@ public class DSMove extends dsAgents.dsExecutionModule.dsActions.DSAction {
 
   @Override
   public DSGoal execute(DSAgent agent) {
-    Action a = new Action("move", new Identifier(PDirection));
+    Action a =
+        new Action(
+            "move",
+            PDirection.stream()
+                .map(Identifier::new)
+                .collect(Collectors.toCollection(ArrayList::new)));
     PLAStep = agent.getStep();
     try {
       agent.getEI().performAction(agent.getJADEAgentName(), a);
@@ -65,27 +71,33 @@ public class DSMove extends dsAgents.dsExecutionModule.dsActions.DSAction {
     return ("Move [" + PDx + "," + PDy + "]");
   }
 
-  public DSMove(EnvironmentInterfaceStandard ei, String direction) {
-    super(ei);
-    PDirection = direction;
-    Point pos = DSPerceptor.getPositionFromDirection(PDirection);
+  public DSMove(String direction) {
+    PDirection.add(direction);
+    Point pos = DSPerceptor.getPositionFromDirection(direction);
     PDx = pos.x;
     PDy = pos.y;
-    /*    PDx=0; PDy=0;
-    if(PDirection.contentEquals("n"))
-        PDy=-1;
-    else
-    if(PDirection.contentEquals("s"))
-        PDy=1;
-    else
-    if(PDirection.contentEquals("w"))
-        PDx=-1;
-    else
-    if(PDirection.contentEquals("e"))
-        PDx=1;*/
+  }
+
+  public void addDirection(String direction) {
+    PDirection.add(direction);
+    Point pos = DSPerceptor.getPositionFromDirection(direction);
+    PDx += pos.x;
+    PDy += pos.y;
+  }
+
+  public void AstarReverseOrder() {
+    ArrayList<String> tempList = new ArrayList<String>();
+    for (int i = PDirection.size() - 1; i >= 0; i--) {
+      tempList.add(PDirection.get(i));
+    }
+    PDirection = tempList;
   }
 
   public String getPlannedDirection() {
-    return PDirection;
+    return PDirection.get(0);
+  }
+
+  public String getPlannedDirections() {
+    return String.join("->", PDirection);
   }
 }

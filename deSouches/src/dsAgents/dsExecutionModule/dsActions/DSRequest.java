@@ -7,7 +7,6 @@ import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
-import eis.EnvironmentInterfaceStandard;
 import eis.exceptions.ActException;
 import eis.iilang.Action;
 import eis.iilang.Identifier;
@@ -43,8 +42,7 @@ public class DSRequest extends DSAction {
     return ("Request " + PDirection);
   }
 
-  public DSRequest(EnvironmentInterfaceStandard ei, String direction) {
-    super(ei);
+  public DSRequest(String direction) {
     PDirection = direction;
   }
 }

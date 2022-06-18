@@ -5,7 +5,6 @@ import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
-import eis.EnvironmentInterfaceStandard;
 
 public class DSDisconnect extends DSAction {
 
@@ -27,9 +26,5 @@ public class DSDisconnect extends DSAction {
   @Override
   public String actionText() {
     return ("Disconnect");
-  }
-
-  public DSDisconnect(EnvironmentInterfaceStandard ei) {
-    super(ei);
   }
 }

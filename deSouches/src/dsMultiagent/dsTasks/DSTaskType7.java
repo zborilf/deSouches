@@ -24,11 +24,11 @@ public class DSTaskType7 extends DSTaskType {
 
   DSPlan makePlanL1() {
     DSPlan plan = new DSPlan("Leutnant2, task7", 2);
-    DSConnect connect = new DSConnect(PMaster.getEI(), "e", PLeutnant2.getEntityName());
+    DSConnect connect = new DSConnect("e", PLeutnant2.getEntityName());
     plan.appendAction(connect);
-    connect = new DSConnect(PMaster.getEI(), "e", PMaster.getEntityName());
+    connect = new DSConnect("e", PMaster.getEntityName());
     plan.appendAction(connect);
-    DSDetach detach = new DSDetach(PMaster.getEI(), "e");
+    DSDetach detach = new DSDetach("e");
     plan.appendAction(detach);
     return (plan);
   }
@@ -36,9 +36,9 @@ public class DSTaskType7 extends DSTaskType {
 
   DSPlan makePlanL2() {
     DSPlan plan = new DSPlan("Leutnant2, task7", 2);
-    DSConnect connect = new DSConnect(PMaster.getEI(), "w", PLeutnant1.getEntityName());
+    DSConnect connect = new DSConnect("w", PLeutnant1.getEntityName());
     plan.appendAction(connect);
-    DSDetach detach = new DSDetach(PMaster.getEI(), "w");
+    DSDetach detach = new DSDetach("w");
     plan.appendAction(detach);
     return (plan);
   }

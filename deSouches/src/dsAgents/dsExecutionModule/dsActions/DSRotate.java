@@ -5,7 +5,6 @@ import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
-import eis.EnvironmentInterfaceStandard;
 
 public class DSRotate extends DSAction {
 
@@ -27,9 +26,5 @@ public class DSRotate extends DSAction {
   @Override
   public String actionText() {
     return ("Rotate");
-  }
-
-  public DSRotate(EnvironmentInterfaceStandard ei) {
-    super(ei);
   }
 }
