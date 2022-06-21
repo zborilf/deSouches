@@ -101,5 +101,6 @@ public class DSDivideAndExplore extends DSScenario {
     PAgentsAllocated.add(agent);
     PRadius = radius;
     PPriority = 1;
+    //TODO:l k cemu toto
   }
 }
