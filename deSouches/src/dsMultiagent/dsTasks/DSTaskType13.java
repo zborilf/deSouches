@@ -24,13 +24,13 @@ public class DSTaskType13 extends DSTaskType {
 
   DSPlan makePlanL1() {
     DSPlan plan = new DSPlan("Leutnant1, task13", 2);
-    /*    DSMove move=new DSMove(PMaster.getEI(),"s");
+    /*    DSMove move=new DSMove("s");
     plan.appendAction(move);*/
-    DSConnect connect = new DSConnect(PMaster.getEI(), "w", PLeutnant2.getEntityName());
+    DSConnect connect = new DSConnect("w", PLeutnant2.getEntityName());
     plan.appendAction(connect);
-    connect = new DSConnect(PMaster.getEI(), "w", PMaster.getEntityName());
+    connect = new DSConnect("w", PMaster.getEntityName());
     plan.appendAction(connect);
-    DSDetach detach = new DSDetach(PMaster.getEI(), "w");
+    DSDetach detach = new DSDetach("w");
     plan.appendAction(detach);
     return (plan);
   }
@@ -38,15 +38,15 @@ public class DSTaskType13 extends DSTaskType {
 
   DSPlan makePlanL2() {
     DSPlan plan = new DSPlan("Leutnant2, task13", 2);
-    /*    DSMove move=new DSMove(PMaster.getEI(),"s");
+    /*    DSMove move=new DSMove("s");
     plan.appendAction(move);
-    move=new DSMove(PMaster.getEI(),"s");
+    move=new DSMove("s");
     plan.appendAction(move);
     DSRotateCW rotate=new DSRotateCW(PMaster.getEI());
     plan.appendAction(rotate);*/
-    DSConnect connect = new DSConnect(PMaster.getEI(), "s", PLeutnant1.getEntityName());
+    DSConnect connect = new DSConnect("s", PLeutnant1.getEntityName());
     plan.appendAction(connect);
-    DSDetach detach = new DSDetach(PMaster.getEI(), "s");
+    DSDetach detach = new DSDetach("s");
     plan.appendAction(detach);
     return (plan);
   }

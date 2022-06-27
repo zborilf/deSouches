@@ -7,11 +7,9 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 public class DSSynchronize {
-
   private static final String TAG = "DSSynchronize";
 
-  HashMap<Integer, DSFriendsSeen> PObservations;
-
+  HashMap<Integer, DSFriendsSeen> PObservations = new HashMap<>();
   DSMap PMasterMap;
 
   DSGroup PMasterGroup;
@@ -21,7 +19,7 @@ public class DSSynchronize {
   }
 
   class DSFriendsSeen {
-    HashMap<DSAgent, LinkedList<Point>> PFriendsSeen;
+    HashMap<DSAgent, LinkedList<Point>> PFriendsSeen = new HashMap<>();
 
     // agent at agG1Pos in S1 sees agent at agG2Ois in S2 at agDisplacement
     // return displacement between S1 and S2 as
@@ -87,13 +85,10 @@ public class DSSynchronize {
     boolean isComplete(int size) {
       return (PFriendsSeen.keySet().size() == size);
     }
-
-    DSFriendsSeen() {
-      PFriendsSeen = new HashMap<DSAgent, LinkedList<Point>>();
-    }
   }
 
-  public synchronized LinkedList addObservation(
+  // observations for agent synchronization
+  public synchronized void addObservation(
       DSAgent agent, int step, LinkedList<Point> observation, int teamSize) {
     DSFriendsSeen dsfs = PObservations.get(step);
     if (dsfs == null) dsfs = new DSFriendsSeen();
@@ -101,8 +96,6 @@ public class DSSynchronize {
     dsfs.addFriends(agent, observation);
     PObservations.put(step, dsfs);
     if (dsfs.isComplete(teamSize)) dsfs.synchronizeAgents();
-
-    return (null);
   }
 
   public synchronized DSMap synchronizePosition(
@@ -144,9 +137,5 @@ public class DSSynchronize {
 
     PMasterGroup.absorbGroup(agent.getGroup(), new Point(0, 0)); // already shifted
     return (PMasterMap);
-  }
-
-  public DSSynchronize() {
-    PObservations = new HashMap<Integer, DSFriendsSeen>();
   }
 }

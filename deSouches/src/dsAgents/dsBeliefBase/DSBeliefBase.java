@@ -320,8 +320,6 @@ public class DSBeliefBase {
   }
 
   public void leavesRoleZone(Collection<Parameter> parameters) {
-    // TODO:l works? -> shouldnt be neccesary
-    if (true) return;
     Iterator i = parameters.iterator();
     int x = Integer.parseInt(i.next().toString());
     int y = Integer.parseInt(i.next().toString());
@@ -338,8 +336,6 @@ public class DSBeliefBase {
   }
 
   public void leavesGoalZone(Collection<Parameter> parameters) {
-    // TODO:l works ?
-    if (true) return;
     Iterator i = parameters.iterator();
     int x = Integer.parseInt(i.next().toString());
     int y = Integer.parseInt(i.next().toString());
@@ -413,6 +409,12 @@ public class DSBeliefBase {
   public int getVision() {
     if (PActualRole == null) return (0);
     return (PActualRole.getVision());
+  }
+
+  public int getSpeed() {
+    if (PActualRole == null) return (0);
+    int attached = this.getBody().getAllDirectionsAttached().size();
+    return PActualRole.getSpeed(attached);
   }
 
   // TELO AGENTA

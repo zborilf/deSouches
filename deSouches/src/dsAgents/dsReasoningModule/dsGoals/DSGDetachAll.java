@@ -29,7 +29,7 @@ public class DSGDetachAll extends DSGoal {
             + " mel neco attachle minimalne na "
             + directions.getFirst());
     for (String direction : directions) {
-      detach = new DSDetach(agent.getEI(), direction);
+      detach = new DSDetach(direction);
       detachAllPlan.insertAction(detach);
     }
     PPlans.put("detachAllGoal", detachAllPlan);

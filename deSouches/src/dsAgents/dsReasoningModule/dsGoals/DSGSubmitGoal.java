@@ -17,7 +17,7 @@ public class DSGSubmitGoal extends DSGoal {
   public boolean revisePlans(DSAgent agent) {
     if (PPlans.containsKey("submitGoal")) return false;
     DSPlan plan = new DSPlan("submit plan", 1);
-    plan.insertAction(new DSSubmit(agent.getEI(), PTaskName));
+    plan.insertAction(new DSSubmit(PTaskName));
     PPlans.put("submitGoal", plan);
     return (true);
   }

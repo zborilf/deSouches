@@ -73,6 +73,7 @@ public class DeSouches extends Agent {
     LinkedList<DSAgent> workers = agent.getGroup().getMembersByRole("worker");
     if (workers != null) if (workers.size() >= __max_workers) return (role);
     if (Math.random() < 0.5) role = "worker";
+    if (Math.random() < 0.5) role = "explorer";
     return (role);
   }
 

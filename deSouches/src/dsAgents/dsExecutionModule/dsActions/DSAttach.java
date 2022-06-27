@@ -9,7 +9,6 @@ import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
-import eis.EnvironmentInterfaceStandard;
 import eis.exceptions.ActException;
 import eis.iilang.Action;
 import eis.iilang.Identifier;
@@ -65,8 +64,7 @@ public class DSAttach extends dsAgents.dsExecutionModule.dsActions.DSAction {
     return ("Attach " + PDirection);
   }
 
-  public DSAttach(EnvironmentInterfaceStandard ei, String direction, int type) {
-    super(ei);
+  public DSAttach(String direction, int type) {
     PDirection = direction;
     PBlockType = type;
   }

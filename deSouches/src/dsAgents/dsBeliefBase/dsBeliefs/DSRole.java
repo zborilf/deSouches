@@ -31,6 +31,12 @@ public class DSRole {
     return (PVision);
   }
 
+  public int getSpeed(int attached) {
+    if (attached < 0) return 0;
+    if (attached >= PSpeeds.size()) return PSpeeds.get(PSpeeds.size() - 1);
+    return PSpeeds.get(attached);
+  }
+
   public DSRole(Collection<Parameter> parameters) {
     Iterator i = parameters.iterator();
 

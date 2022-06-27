@@ -5,7 +5,6 @@ import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
-import eis.EnvironmentInterfaceStandard;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,8 +28,6 @@ public abstract class DSAction {
         }
       };
 
-  EnvironmentInterfaceStandard PEI;
-
   public static Class getActionClass(String action) {
     return (_actionMap.get(action));
   }
@@ -46,8 +43,4 @@ public abstract class DSAction {
   } // after suc. feedback
 
   public abstract DSAStarItem simulate(DSMap map, DSAStarItem item, DSBody body, int step);
-
-  public DSAction(EnvironmentInterfaceStandard ei) {
-    PEI = ei;
-  }
 }

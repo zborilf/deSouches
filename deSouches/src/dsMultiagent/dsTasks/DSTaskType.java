@@ -49,14 +49,14 @@ public abstract class DSTaskType {
 
   protected DSPlan makePlanSubmit(String taskName) {
     DSPlan plan = new DSPlan("Master, submit", 2);
-    DSSubmit submit = new DSSubmit(PMaster.getEI(), taskName);
+    DSSubmit submit = new DSSubmit(taskName);
     plan.appendAction(submit);
     return (plan);
   }
 
   protected DSPlan makePlanMaster(String taskName) {
     DSPlan plan = new DSPlan("Master, connect", 2);
-    DSConnect connect = new DSConnect(PMaster.getEI(), "s", PLeutnant1.getEntityName());
+    DSConnect connect = new DSConnect("s", PLeutnant1.getEntityName());
     plan.appendAction(connect);
     return (plan);
   }

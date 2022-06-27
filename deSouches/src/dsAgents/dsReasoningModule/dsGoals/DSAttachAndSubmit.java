@@ -23,9 +23,9 @@ public class DSAttachAndSubmit extends DSGoal {
     if (PPlans.containsKey("attachAndSubmit")) return false; // plan exists,  no revision
 
     DSPlan plan = new DSPlan("attachAndSubmit", 1);
-    DSAction submit = new DSSubmit(agent.getEI(), PTaskName);
+    DSAction submit = new DSSubmit(PTaskName);
     plan.insertAction(submit);
-    DSAttach newAttach = new DSAttach(agent.getEI(), PDirection, PBlockType);
+    DSAttach newAttach = new DSAttach(PDirection, PBlockType);
     plan.insertAction(newAttach);
     PPlans.put("attachAndSubmit", plan);
     return (true);

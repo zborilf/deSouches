@@ -7,7 +7,6 @@ import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
-import eis.EnvironmentInterfaceStandard;
 import eis.exceptions.ActException;
 import eis.iilang.Action;
 
@@ -37,9 +36,5 @@ public class DSSkip extends DSAction {
   @Override
   public DSAStarItem simulate(DSMap map, DSAStarItem item, DSBody body, int step) {
     return null;
-  }
-
-  public DSSkip(EnvironmentInterfaceStandard ei) {
-    super(ei);
   }
 }

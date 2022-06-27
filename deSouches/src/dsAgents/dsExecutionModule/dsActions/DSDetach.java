@@ -8,7 +8,6 @@ import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
-import eis.EnvironmentInterfaceStandard;
 import eis.exceptions.ActException;
 import eis.iilang.Action;
 import eis.iilang.Identifier;
@@ -65,8 +64,7 @@ public class DSDetach extends DSAction {
     return null;
   }
 
-  public DSDetach(EnvironmentInterfaceStandard ei, String direction) {
-    super(ei);
+  public DSDetach(String direction) {
     PDirection = direction;
   }
 }

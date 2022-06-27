@@ -487,7 +487,7 @@ public class DSMap {
   public synchronized String stringPheroMap() {
     DSCell node;
     DSCell[][] mapArray;
-    final String MAX = "99";
+    final String MIN = "00";
     StringBuilder so = new StringBuilder();
     int curStep = 0;
 
@@ -513,14 +513,19 @@ public class DSMap {
     for (int j = 0; j < height; j++) {
       for (int i = 0; i < width; i++) {
         node = mapArray[i][j];
+        char[] cappedVal = MIN.toCharArray();
         if (node != null) {
           if (node.getType() == DSCell.__DSEntity_Friend) {
             so.append("AA");
           } else {
-            so.append((int) node.getVisiblePheromone(curStep));
+            int phero = (int) node.getPheromone();
+            cappedVal[1] = (char) ((phero % 10) + '0');
+            if (phero >= 100) cappedVal[0] = (char) ((phero / 10) - 10 + 'A');
+            if (phero >= 200 || phero < 0) System.err.println(" ERROR: PHEROMONE OVERFLOW");
+            so.append(cappedVal);
           }
         } else {
-          so.append(MAX);
+          so.append(cappedVal);
         }
         so.append(" ");
       }
@@ -554,6 +559,10 @@ public class DSMap {
             (int) (displacement.x + agent.getMapPosition().getX()),
             (int) (displacement.y + agent.getMapPosition().getY()));
     PAgentPosition.put(agent, pos);
+  }
+
+  public void removeAgent(DSAgent agent) {
+    PAgentPosition.remove(agent);
   }
 
   public void addNewAgent(DSAgent agent, Point position) {

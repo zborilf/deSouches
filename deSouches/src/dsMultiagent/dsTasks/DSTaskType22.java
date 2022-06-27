@@ -13,13 +13,11 @@ public class DSTaskType22 extends DSTaskType {
   @Override
   DSPlan makePlanL1() {
     DSPlan plan = new DSPlan("Leutnant1, task22", 2);
-    DSConnect connect =
-        new DSConnect(PMaster.getEI(), getConnectDirection(PLeutnant1), PLeutnant2.getEntityName());
+    DSConnect connect = new DSConnect(getConnectDirection(PLeutnant1), PLeutnant2.getEntityName());
     plan.appendAction(connect);
-    connect =
-        new DSConnect(PMaster.getEI(), getConnectDirection(PLeutnant1), PMaster.getEntityName());
+    connect = new DSConnect(getConnectDirection(PLeutnant1), PMaster.getEntityName());
     plan.appendAction(connect);
-    DSDetach detach = new DSDetach(PMaster.getEI(), getConnectDirection(PLeutnant1));
+    DSDetach detach = new DSDetach(getConnectDirection(PLeutnant1));
     plan.appendAction(detach);
     return (plan);
   }
@@ -28,13 +26,11 @@ public class DSTaskType22 extends DSTaskType {
   @Override
   DSPlan makePlanL2() {
     DSPlan plan = new DSPlan("Leutnant2, task22", 2);
-    DSConnect connect =
-        new DSConnect(PMaster.getEI(), getConnectDirection(PLeutnant2), PLeutnant3.getEntityName());
+    DSConnect connect = new DSConnect(getConnectDirection(PLeutnant2), PLeutnant3.getEntityName());
     plan.appendAction(connect);
-    connect =
-        new DSConnect(PMaster.getEI(), getConnectDirection(PLeutnant2), PLeutnant1.getEntityName());
+    connect = new DSConnect(getConnectDirection(PLeutnant2), PLeutnant1.getEntityName());
     plan.appendAction(connect);
-    DSDetach detach = new DSDetach(PMaster.getEI(), getConnectDirection(PLeutnant2));
+    DSDetach detach = new DSDetach(getConnectDirection(PLeutnant2));
     plan.appendAction(detach);
     return (plan);
   }
@@ -43,10 +39,9 @@ public class DSTaskType22 extends DSTaskType {
   @Override
   DSPlan makePlanL3() {
     DSPlan plan = new DSPlan("Leutnant3, task22", 2);
-    DSConnect connect =
-        new DSConnect(PMaster.getEI(), getConnectDirection(PLeutnant3), PLeutnant2.getEntityName());
+    DSConnect connect = new DSConnect(getConnectDirection(PLeutnant3), PLeutnant2.getEntityName());
     plan.appendAction(connect);
-    DSDetach detach = new DSDetach(PMaster.getEI(), getConnectDirection(PLeutnant3));
+    DSDetach detach = new DSDetach(getConnectDirection(PLeutnant3));
     plan.appendAction(detach);
     return (plan);
   }

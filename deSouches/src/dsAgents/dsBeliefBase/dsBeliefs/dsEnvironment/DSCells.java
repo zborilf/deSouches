@@ -83,6 +83,7 @@ public class DSCells {
           // try to update info
           if (element.getTimestamp() > cell.getTimestamp()) {
             cell.setTimestamp(element.getTimestamp());
+            cell.setPheromone(element.getPheromone());
             cell.setFoundBy(element.getFoundBy());
           }
           return;
@@ -141,11 +142,10 @@ public class DSCells {
 
     DSCell newestCell =
         cellsAtPoint.stream().max(Comparator.comparingDouble(DSCell::getTimestamp)).get();
-    int tStamp = newestCell.getTimestamp();
-    double maxPhero = newestCell.getVisiblePheromone(tStamp);
+    double maxPhero = newestCell.getPheromone();
 
     for (DSCell c : cellsAtPoint) {
-      c.setPheromonePropagated(maxPhero);
+      c.setPheromone(maxPhero); // TODO:l is correct? zone is always MAX
     }
 
     return newestCell;

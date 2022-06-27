@@ -61,12 +61,12 @@ public final class DSAStar {
 
   private static LinkedList<DSAction> createActionList(DSAgent agent) {
     LinkedList<DSAction> actionList = new LinkedList<DSAction>();
-    actionList.add(new DSRotateCW(agent.getEI()));
-    actionList.add(new DSRotateContraCW(agent.getEI()));
-    actionList.add(new DSMove(agent.getEI(), "n"));
-    actionList.add(new DSMove(agent.getEI(), "s"));
-    actionList.add(new DSMove(agent.getEI(), "w"));
-    actionList.add(new DSMove(agent.getEI(), "e"));
+    actionList.add(new DSRotateCW());
+    actionList.add(new DSRotateContraCW());
+    actionList.add(new DSMove("n"));
+    actionList.add(new DSMove("s"));
+    actionList.add(new DSMove("w"));
+    actionList.add(new DSMove("e"));
     return (actionList);
   }
 
@@ -144,7 +144,25 @@ public final class DSAStar {
 
   private DSPlan extractPath(DSPlan plan, DSAStarItem goal, DSAgent agent) {
     while (goal != null && goal.getAction() != null) {
-      plan.insertAction(goal.getAction());
+      DSAction ac = goal.getAction();
+      if (ac.actionText().contains("Move")) {
+        DSMove mv = (DSMove) ac;
+
+        for (int i = agent.getSpeed() - 1;
+            i > 0 && goal.getPrevious() != null && goal.getPrevious().getAction() != null;
+            i--) {
+          goal = goal.getPrevious();
+          DSAction nextAc = goal.getAction();
+          if (nextAc.actionText().contains("Move")) {
+            DSMove nextMv = (DSMove) nextAc;
+            mv.addDirection(nextMv.getPlannedDirection());
+          }
+        }
+        mv.AstarReverseOrder();
+        plan.insertAction(mv);
+      } else {
+        plan.insertAction(ac);
+      }
       goal = goal.getPrevious();
     }
     return plan;
@@ -197,10 +215,6 @@ public final class DSAStar {
 
     if (goal != null) {
       DSPlan path = new DSPlan(planName, priority);
-      if (Math.random() < 0.5) {
-        DSSkip skip = new DSSkip(agent.getEI());
-        path.insertAction(skip);
-      }
       //         printStructures(agent.getEntityName(),open,close,0);
       return (extractPath(path, goal, agent));
     } else {

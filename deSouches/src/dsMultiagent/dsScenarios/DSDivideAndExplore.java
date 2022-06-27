@@ -65,7 +65,7 @@ public class DSDivideAndExplore extends DSScenario {
               + " DAE, Failed "
               + DSGoal.getGoalStatusType(goal.goalStatus())
               + " dir: "
-              + mv.getPlannedDirection());
+              + mv.getPlannedDirections());
     } else {
       System.out.println(
           agent.getEntityName() + " DAE, Failed " + DSGoal.getGoalStatusType(goal.goalStatus()));
