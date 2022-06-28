@@ -4,6 +4,7 @@ import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import java.awt.*;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.util.ArrayList;
 import javax.swing.*;
 
 public class dsGUI {
@@ -110,8 +111,31 @@ public class dsGUI {
     if (textMapSwitchCheckBox.isSelected()) dsgTextMap.setText(text + "\n");
   }
 
-  public void registerAgent(String agent) {
-    dsgAgentsSelect.addItem(agent);
+  public synchronized void registerAgent(String agent) {
+    // add in sorted order
+    final int BEGIN_NUMBER = 6;
+    int thisAgentN = Integer.parseInt(agent.substring(BEGIN_NUMBER));
+    int count = dsgAgentsSelect.getItemCount();
+
+    ArrayList<Integer> items = new ArrayList<>();
+    for (int i = 0; i < count; i++) {
+      int agentN =
+          Integer.parseInt(dsgAgentsSelect.getItemAt(i).toString().substring(BEGIN_NUMBER));
+      items.add(agentN);
+    }
+
+    if (items.size() == 0) {
+      dsgAgentsSelect.addItem(agent);
+    } else {
+      int firstHigherIndex = count;
+      for (int i = 0; i < count; i++) {
+        if (items.get(i) > thisAgentN) {
+          firstHigherIndex = i;
+          break;
+        }
+      }
+      dsgAgentsSelect.insertItemAt(agent, firstHigherIndex);
+    }
   }
 
   void setCommander(DeSouches commander) {
