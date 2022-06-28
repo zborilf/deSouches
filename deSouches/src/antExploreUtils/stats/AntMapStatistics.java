@@ -53,7 +53,7 @@ public class AntMapStatistics {
         Files.createDirectory(path);
       } catch (FileAlreadyExistsException ignored) {
       }
-      FileHandler fh = new FileHandler("logs/AntMapStatistics.log");
+      FileHandler fh = new FileHandler("logs/AntMapStatistics.xlsx");
 
       fh.setFormatter(format);
 
