@@ -262,4 +262,10 @@ public class DSGroup {
     PGroupMap = new DSMap(PMaster);
     PMasterGroup = false;
   }
+
+  @Override
+  public String toString() {
+    // group will be identified by leader name
+    return "skupina " + PMaster.getEntityName();
+  }
 }

@@ -23,8 +23,6 @@ public class DSCell {
   public static int __DSDispenser = 100;
 
   private double cellPheromone = 0;
-  private int AntStatisticsLastTimeVisited = 0;
-  private int AntStatisticsStepsBetweenRevisits = 0;
 
   private final int MAX_PHERO = 100;
 
@@ -115,14 +113,8 @@ public class DSCell {
     return (new Point(PX, PY));
   }
 
-  public int revisitedInSteps() {
-    return AntStatisticsStepsBetweenRevisits;
-  }
-
   public void setTimestamp(int timestamp) {
     this.PTimeStamp = timestamp;
-    AntStatisticsStepsBetweenRevisits = timestamp - AntStatisticsLastTimeVisited;
-    AntStatisticsLastTimeVisited = timestamp;
   }
 
   public int getTimestamp() {
@@ -160,7 +152,6 @@ public class DSCell {
     PY = y;
     PType = type;
     PTimeStamp = timestamp;
-    AntStatisticsLastTimeVisited = timestamp;
     cellPheromone = startPheromoneByType(PType);
   }
 
@@ -173,7 +164,6 @@ public class DSCell {
     PY = y;
     PType = getThingTypeIndex(type, params);
     PTimeStamp = timestamp;
-    AntStatisticsLastTimeVisited = timestamp;
     cellPheromone = startPheromoneByType(PType);
   }
 
@@ -184,7 +174,6 @@ public class DSCell {
     PY = y;
     PType = getThingTypeIndex(type, params);
     PTimeStamp = timestamp;
-    AntStatisticsLastTimeVisited = timestamp;
     this.foundBy = foundBy;
     cellPheromone = startPheromoneByType(PType);
   }
@@ -194,7 +183,6 @@ public class DSCell {
     PY = y;
     PType = type;
     PTimeStamp = timestamp;
-    AntStatisticsLastTimeVisited = timestamp;
     this.foundBy = foundBy;
     cellPheromone = startPheromoneByType(PType);
   }

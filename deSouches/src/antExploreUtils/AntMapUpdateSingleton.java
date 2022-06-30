@@ -120,8 +120,10 @@ public class AntMapUpdateSingleton {
       }
     }
 
-    // statistics -> each group gets here once for now
-    stat.numberOfUsedGroups(agent, agentStep);
+    // statistics -> each group gets here once per step
+    stat.knownCellsStats(agent);
+    stat.revisitedStats(agent);
+    stat.mapSizeStats(agent);
 
     // statistics -> once in step guaranted
     synchronized (this) {
@@ -129,8 +131,7 @@ public class AntMapUpdateSingleton {
       stat.completedStep = agent.getStep();
     }
 
-    stat.knownCellsStats(agent, agentStep);
-    stat.revisitedStats(agent, agentStep);
+    stat.numberOfUsedGroups(agent, agentStep);
   }
 
   protected DSCell getNewestCellAt(DSMap map, HashMap<Point, DSCell> emptyCells, Point atPoint) {
