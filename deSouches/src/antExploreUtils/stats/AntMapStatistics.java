@@ -21,7 +21,6 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 public class AntMapStatistics {
-  // todo velikost mapy, pocet sektoru,
   public int completedStep = -1;
   private static final Logger loggerGroup = Logger.getLogger("loggerGroup");
   private static final Logger loggerCells = Logger.getLogger("loggerCells");
