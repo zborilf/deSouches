@@ -327,7 +327,8 @@ public class DSPerceptor {
       String outlookString = BB.getOutlook().stringOutlook(BB.getVision(), BB.getName());
       BB.getGUI().writeTextOutlook("OUTLOOK:\n" + outlookString);
       BB.getGUI()
-          .writePheroOutlook("INFO GAIN:\n" + BB.getOutlook().stringPheroOutLook(BB.getVision()));
+          .writePheroOutlook(
+              "PHEROMONE OUTLOOK:\n" + BB.getOutlook().stringPheroOutLook(BB.getVision()));
     }
   }
 
