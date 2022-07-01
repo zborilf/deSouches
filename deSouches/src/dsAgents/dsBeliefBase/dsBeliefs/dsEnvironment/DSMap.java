@@ -516,7 +516,7 @@ public class DSMap {
         node = mapArray[i][j];
         if (node != null) {
           if (node.getType() == DSCell.__DSEntity_Friend) {
-            so.append("AA");
+            so.append("**");
           } else {
             int phero = (int) node.getPheromone();
             String hex = Integer.toHexString(phero).toUpperCase();

@@ -39,7 +39,7 @@ public class DSGoalExplore extends DSGoal {
 
   public boolean revisePlans(DSAgent agent) {
     final int ROAM_PRIORITY = 2, PRIORITY_BOOST = 2, LARGE_N = 300;
-    final double ALLOWED_SIMMILAR = 0.9;
+    final double ALLOWED_SIMILAR = 0.9;
 
     // exploration with attachments doesn't really make sense as its slower;
     if (agent.getBody().getBodyList().size() > 1) return false;
@@ -81,16 +81,18 @@ public class DSGoalExplore extends DSGoal {
     if (neigbourCells.isEmpty())
       System.err.println("CELL HAS NO NEIGHBOURS step: " + agent.getStep());
     else {
-      double simmilar_min =
+      double min =
           neigbourCells.stream()
-                  .min(Comparator.comparingDouble(DSCell::getPheromone))
-                  .orElse(null)
-                  .getPheromone()
-              / ALLOWED_SIMMILAR;
+              .min(Comparator.comparingDouble(DSCell::getPheromone))
+              .orElse(null)
+              .getPheromone();
 
       // add sorted viable cells
       neigbourCells.stream()
-          .filter(c -> c.getPheromone() > simmilar_min)
+          .filter(
+              c ->
+                  c.getPheromone() >= (min * ALLOWED_SIMILAR)
+                      && c.getPheromone() <= (min + min * (1 - ALLOWED_SIMILAR)))
           .sorted(Comparator.comparingDouble(DSCell::getPheromone))
           .map(DSCell::getPosition)
           .forEachOrdered(destinations::add);
@@ -125,12 +127,11 @@ public class DSGoalExplore extends DSGoal {
                     agent);
       }
 
-      if (plan != null) {
-        // TODO:l maybe plan only from first action for more reactive approach
-        // DSPlan stepPlan = new DSPlan("roamAnt", local_priority);
-        // stepPlan.appendAction(plan.getAction());
-        // PPlans.put("roamAnt",stepPlan);
-        PPlans.put("roamAnt", plan);
+      if (plan != null && plan.getLength() != 0) {
+        // shorter plan only from first action for more reactive approach
+        DSPlan stepPlan = new DSPlan("roamAnt", local_priority);
+        stepPlan.appendAction(plan.getAction());
+        PPlans.put("roamAnt", stepPlan);
         return true;
       }
     }

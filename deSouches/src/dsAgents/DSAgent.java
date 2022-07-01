@@ -29,7 +29,7 @@ import java.util.Map;
 public class DSAgent extends Agent {
   private static final String TAG = "DSAgent";
 
-  private final int SLEEP_BETWEEN_STEPS = 100;
+  private final int SLEEP_BETWEEN_STEPS = 50;
 
   private EnvironmentInterfaceStandard PEI;
 
@@ -248,10 +248,6 @@ public class DSAgent extends Agent {
 
       // percepts not empty ↓↓↓
 
-      // UPDATE PHEROMONES for exploration purposes
-
-      antmap.updateMap(this.agent);
-
       // SENSING
 
       DSPerceptor.processPercepts(PBeliefBase, percepts);
@@ -281,6 +277,9 @@ public class DSAgent extends Agent {
           PBeliefBase.getTeamName(),
           PBeliefBase.getStep(),
           (DSAgent) this.getAgent());
+
+      // UPDATE PHEROMONES for exploration purposes
+      antmap.updateMap(this.agent);
 
       if (PBeliefBase.getGUIFocus()) {
 
@@ -378,8 +377,7 @@ public class DSAgent extends Agent {
       // PRINT recentIntention on GUI
 
       if (PBeliefBase.getGUIFocus()) {
-        PBeliefBase.getGUI()
-            .noticeLastGoal(recentIntentionExecuted.getTLG().getGoalDescription());
+        PBeliefBase.getGUI().noticeLastGoal(recentIntentionExecuted.getTLG().getGoalDescription());
         PBeliefBase.getGUI().writePlan(recentIntentionExecuted.getRecentPlan());
       }
     } // END action()

@@ -89,7 +89,7 @@ public class AntMapUpdateSingleton {
 
         // diffusion from direct neighbours
         LinkedList<Point> neigh = groupMap.getNeighboursExactDistance(p, 1);
-        // neigh.addAll(groupMap.getNeighboursExactDistance(p, 2)); //TODO:l maybe yield better
+        neigh.addAll(groupMap.getNeighboursExactDistance(p, 2));
         // results
         double neighCount = 1, sum = newestAtp.getPheromone();
 

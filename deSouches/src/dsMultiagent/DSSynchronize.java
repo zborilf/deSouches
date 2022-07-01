@@ -57,22 +57,33 @@ public class DSSynchronize {
               if (agent1 != agent2) {
                 observation2 = PFriendsSeen.get(agent2);
                 for (Point p2 : observation2)
-                  if (((np.x == p2.x) && (np.y == p2.y)) && ((np.x != 0) || (np.y != 0))) {
+                  if (((np.x == p2.x) && (np.y == p2.y))) {
                     noMatches++;
                     fa = agent2;
                   }
               }
             }
             if ((noMatches == 1) && (agent1.getGroup() != fa.getGroup()))
-              // absorbuje bud mastergrupa, nebo z nemastergrup ta s mensim ID sveho mastera
+            // absorbuje bud mastergrupa, nebo z nemastergrup ta s mensim ID sveho mastera
+            {
               if ((agent1.getGroup().isMasterGroup())
                   || ((!fa.getGroup().isMasterGroup())
                       && (agent1.getGroup().getNumber() < fa.getGroup().getNumber()))) {
+                System.err.println(
+                    "MERGE: " + fa.getEntityName() + " a " + agent1.getEntityName() + " " + np);
                 Point displacement =
                     getGroupDisplacement(
                         agent1.getMapPosition(), fa.getMapPosition(), new Point(p.x, p.y));
                 agent1.getGroup().absorbGroup(fa.getGroup(), displacement);
               }
+            } else if ((noMatches == 1)
+                && (agent1.getGroup() == fa.getGroup())
+                && DSMap.distance(agent1.getMapPosition(), fa.getMapPosition()) > 20) {
+              System.err.println("PREKROCENI MAPY - porovnat seen/map vector");
+              // prekorceni mapy TODO:l prodiskutovat co s tim (pokd nesedi x vektor nebo y vektor
+              // prekroceni)
+              // zatim blbe funguje synchronizace idk
+            }
           }
         }
       }

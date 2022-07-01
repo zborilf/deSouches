@@ -85,9 +85,10 @@ public class DSCells {
     if (oldList != null) {
       for (DSCell element : oldList)
         if ((element.getTimestamp() > step)
-            || (((element.getType() == DSCell.__DSGoal)
+            || (((element.getType() == DSCell.__DSGoalArea)
                 || (element.getType() == DSCell.__DSRoleArea)))) { // && (!removeArea)))
-          //                  if ((element.getType() == DSCell.__DSGoal) || (element.getType() ==
+          //                  if ((element.getType() == DSCell.__DSGoalArea) || (element.getType()
+          // ==
           // DSCell.__DSRoleArea))
           //                      System.out.println("Zachranuji areu na "+element.getPosition());
           newList.add(element);
@@ -113,6 +114,7 @@ public class DSCells {
 
   public synchronized DSCell getNewestAt(Point point) {
     // get newest of cells according to timestamp + synchronize pheromone
+    // filter out absolute points for pheromone dispersion (zone + dispenser)
 
     LinkedList<DSCell> cellsAtPoint = this.getAllAt(point);
 
@@ -124,8 +126,10 @@ public class DSCells {
         cellsAtPoint.stream().max(Comparator.comparingDouble(DSCell::getTimestamp)).get();
     double maxPhero = newestCell.getPheromone();
 
-    for (DSCell c : cellsAtPoint) {
-      c.setPheromone(maxPhero); // TODO:l is correct? zone is always MAX
+    if (!DSCell.isPermanentType(newestCell)) {
+      for (DSCell c : cellsAtPoint) {
+        c.setPheromone(maxPhero);
+      }
     }
 
     return newestCell;

@@ -519,8 +519,8 @@ public class DSBeliefBase {
   }
 
   public Point nearestGoal() {
-    return (nearestObject(PAgent, DSCell.__DSGoal));
-    //        return(PMap.nearestObject(DSCell.__DSGoal,new Point(0,0)));
+    return (nearestObject(PAgent, DSCell.__DSGoalArea));
+    //        return(PMap.nearestObject(DSCell.__DSGoalArea,new Point(0,0)));
   }
 
   public DSBeliefBase(DSAgent agent, DSSynchronize synchronizer) {
