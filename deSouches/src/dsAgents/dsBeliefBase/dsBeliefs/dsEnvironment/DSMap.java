@@ -512,22 +512,21 @@ public class DSMap {
 
     for (int j = 0; j < height; j++) {
       for (int i = 0; i < width; i++) {
+        so.append(" ");
         node = mapArray[i][j];
-        char[] cappedVal = MIN.toCharArray();
         if (node != null) {
           if (node.getType() == DSCell.__DSEntity_Friend) {
             so.append("AA");
           } else {
             int phero = (int) node.getPheromone();
-            cappedVal[1] = (char) ((phero % 10) + '0');
-            if (phero >= 100) cappedVal[0] = (char) ((phero / 10) - 10 + 'A');
-            if (phero >= 200 || phero < 0) System.err.println(" ERROR: PHEROMONE OVERFLOW");
-            so.append(cappedVal);
+            String hex = Integer.toHexString(phero).toUpperCase();
+            hex = hex.length() == 1 ? '0' + hex : hex;
+            if (phero >= 255 || phero < 0) System.err.println(" ERROR: PHEROMONE OVERFLOW");
+            so.append(hex);
           }
         } else {
-          so.append(cappedVal);
+          so.append(MIN);
         }
-        so.append(" ");
       }
       so.append("  ").append(nmb(j + ty)).append(" \n");
     }

@@ -7,7 +7,6 @@ package dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment;
 
 import dsAgents.DSAgent;
 import java.awt.*;
-import java.util.Comparator;
 import java.util.LinkedList;
 
 public class DSAgentOutlook {
@@ -77,28 +76,19 @@ public class DSAgentOutlook {
 
     for (int x = -vision; x <= vision; x++) {
       for (int y = -vision; y <= vision; y++) {
-        if (Math.abs(x) + Math.abs(y) > vision) so.append(" ");
+        if (Math.abs(x) + Math.abs(y) > vision) so.append("   ");
         else {
-          var regulC = POutlook.getNewestAt(new Point(x, y));
+          DSCell regulC = POutlook.getNewestAt(new Point(x, y));
 
           if (regulC != null) {
-            var p =
-                POutlook.getAllAt(new Point(x, y)).stream()
-                    .max(Comparator.comparingInt(foo -> (int) foo.getPheromone()))
-                    .orElse(null);
-            int pPhero = (int) p.getPheromone();
-            int regulPhero = (int) regulC.getPheromone();
-            if (pPhero != regulPhero) {
-              System.err.println("CHYBA PHERO OUTLOOK" + pPhero + "=/=" + regulPhero);
-            }
-            int phero = pPhero / 10;
-            char printVal = (char) (phero + '0');
-            if (phero >= 10) {
-              printVal = (char) (phero - 10 + 'A');
-            }
-            so.append(printVal);
+            // only MSB to outlook for compact look
+            int phero = (int) regulC.getPheromone();
+            String hex = Integer.toHexString(phero).toUpperCase();
+            hex = hex.length() == 1 ? '0' + hex : hex;
+            if (phero >= 255 || phero < 0) System.err.println(" ERROR: PHEROMONE OVERFLOW");
+            so.append(hex + " ");
           } else {
-            so.append("?");
+            so.append("?? ");
           }
         }
       }
