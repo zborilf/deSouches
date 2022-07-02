@@ -57,6 +57,11 @@ public class DSGoalExplore extends DSGoal {
         DSAdopt adoptAction = new DSAdopt(role);
         plan.appendAction(adoptAction);
         PPlans.put(plan.getName(), plan);
+        if (agent.triedAdopt_deleteLater != 0) {
+          System.err.println(agent.getEntityName() + " ZASE ADOPT ROLE" + agent.getStep());
+        }
+        agent.triedAdopt_deleteLater = agent.getStep();
+
         return true;
       }
 
