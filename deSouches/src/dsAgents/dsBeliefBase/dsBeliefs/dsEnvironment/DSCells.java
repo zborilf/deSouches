@@ -124,13 +124,6 @@ public class DSCells {
 
     DSCell newestCell =
         cellsAtPoint.stream().max(Comparator.comparingDouble(DSCell::getTimestamp)).get();
-    double maxPhero = newestCell.getPheromone();
-
-    if (!DSCell.isPermanentType(newestCell)) {
-      for (DSCell c : cellsAtPoint) {
-        c.setPheromone(maxPhero);
-      }
-    }
 
     return newestCell;
   }
