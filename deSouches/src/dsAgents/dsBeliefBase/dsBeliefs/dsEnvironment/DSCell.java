@@ -202,7 +202,6 @@ public class DSCell {
   }
 
   public void setPheromone(double pheromone) {
-    if (isPermanentType(PType)) return;
     cellPheromone = pheromone;
   }
 
