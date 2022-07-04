@@ -48,7 +48,6 @@ public class DSAgent extends Agent {
   public ArrayList<Point> roamList = new ArrayList<>();
 
   AntMapUpdateSingleton antmap = AntMapUpdateSingleton.getInstance();
-  public int triedAdopt_deleteLater = 0;
 
   public String getAgentName() {
     return (PBeliefBase.getName());
@@ -228,7 +227,6 @@ public class DSAgent extends Agent {
 
     public void action() {
       Map<String, PerceptUpdate> perceptsCol = null;
-      PerceptUpdate percepts = null;
       DSPerceptor perceptor = new DSPerceptor();
 
       try {
@@ -236,7 +234,7 @@ public class DSAgent extends Agent {
       } catch (PerceiveException e) {
         e.printStackTrace();
       }
-      percepts = perceptsCol.get(PEntity);
+      PerceptUpdate percepts = perceptsCol.get(PEntity);
 
       if (percepts.isEmpty()) {
         /*

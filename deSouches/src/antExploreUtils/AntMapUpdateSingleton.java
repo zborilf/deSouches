@@ -83,7 +83,6 @@ public class AntMapUpdateSingleton {
         DSCell newestAtp = getNewestCellAt(groupMap, emptyCells, p);
 
         if (newestAtp == null) {
-          System.err.println("SHOULD BE UNREACHABLE HERE");
           continue;
         }
 

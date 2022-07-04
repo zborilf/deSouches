@@ -233,6 +233,7 @@ public class DSBeliefBase {
     int y = Integer.valueOf(i.next().toString());
     String type = i.next().toString();
     String params = i.next().toString();
+    //System.err.println("percept: " + x + " " + y + " " + type + " " + params + " " + PStep);
     POutlook.processAddThing(x, y, type, params, PStep, PAgent);
   }
 

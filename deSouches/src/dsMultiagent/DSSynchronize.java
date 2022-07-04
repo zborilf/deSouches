@@ -58,19 +58,19 @@ public class DSSynchronize {
             }
 
             LinkedList<Point> reverseObserv = PFriendsSeen.get(agent2);
-            // must match all observations within his range
-            boolean match =
-                observation.stream()
-                    .filter(x -> DSMap.distance(p, x) <= LOWESTVISION)
-                    .allMatch(obs -> reverseObserv.contains(new Point(-obs.x, -obs.y)));
-            boolean reversematch =
-                reverseObserv.stream()
-                    .filter(x -> DSMap.distance(np, x) <= LOWESTVISION)
-                    .allMatch(obs -> observation.contains(new Point(-obs.x, -obs.y)));
-            if (match && reversematch) {
-              noMatches_new++;
-              // fa = agent2;
-            }
+            // must match all observations within his range - TODO: synchronization not working yet (server issue)
+            //boolean match =
+            //    observation.stream()
+            //        .filter(x -> DSMap.distance(p, x) <= LOWESTVISION)
+            //        .allMatch(obs -> reverseObserv.contains(new Point(-obs.x, -obs.y)));
+            //boolean reversematch =
+            //    reverseObserv.stream()
+            //        .filter(x -> DSMap.distance(np, x) <= LOWESTVISION)
+            //        .allMatch(obs -> observation.contains(new Point(-obs.x, -obs.y)));
+            //if (match && reversematch) {
+            //  noMatches_new++;
+            //   fa = agent2;
+            //}
 
             for (Point p2 : reverseObserv)
               if (((np.x == p2.x) && (np.y == p2.y))) {
@@ -79,11 +79,11 @@ public class DSSynchronize {
               }
           }
 
-          if (noMatches_new == 1 && noMatches != noMatches_new) {
-            System.err.println("rozdil oproti stare verzi");
-            System.err.println(agent1.getEntityName() + " a " + fa.getEntityName());
-            System.err.println(noMatches_new + " " + noMatches);
-          }
+          //if (noMatches_new == 1 && noMatches != noMatches_new) {
+          //  System.err.println("rozdil oproti stare verzi");
+          //  System.err.println(agent1.getEntityName() + " a " + fa.getEntityName());
+          //  System.err.println(noMatches_new + " " + noMatches);
+          //}
 
           if ((noMatches == 1) && (agent1.getGroup() != fa.getGroup()))
           // absorbuje bud mastergrupa, nebo z nemastergrup ta s mensim ID sveho mastera
@@ -91,8 +91,7 @@ public class DSSynchronize {
             if ((agent1.getGroup().isMasterGroup())
                 || ((!fa.getGroup().isMasterGroup())
                     && (agent1.getGroup().getNumber() < fa.getGroup().getNumber()))) {
-              System.err.println(
-                  "MERGE: " + fa.getEntityName() + " a " + agent1.getEntityName() + " " + np);
+              //System.err.println("MERGE: " + fa.getEntityName() + " a " + agent1.getEntityName() + " " + np);
               Point displacement =
                   getGroupDisplacement(
                       agent1.getMapPosition(), fa.getMapPosition(), new Point(p.x, p.y));
@@ -101,16 +100,13 @@ public class DSSynchronize {
           } else if ((noMatches == 1)
               && (agent1.getGroup() == fa.getGroup())
               && DSMap.distance(agent1.getMapPosition(), fa.getMapPosition())
-                  > agent1.getVisionRange()) {
-            System.err.println("PREKROCENI MAPY - porovnat seen/map vector");
-            System.err.println(agent1.getEntityName() + " a " + fa.getEntityName());
+                  > LOWESTVISION) {
+            //TODO: synchronization not working yet ( server issue)
             System.err.println(
-                "ASI VELIKOST X= "
+                "ODHAD VELIKOST MAPY x:"
                     + Math.abs(agent1.getMapPosition().x - fa.getMapPosition().x)
                     + "+"
-                    + p.x);
-            System.err.println(
-                "ASI VELIKOST Y= "
+                    + p.x + " Y: "
                     + Math.abs(agent1.getMapPosition().y - fa.getMapPosition().y)
                     + "+"
                     + p.y);
