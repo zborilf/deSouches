@@ -6,6 +6,7 @@ import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsMultiagent.DSGroup;
 import java.awt.*;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.concurrent.ConcurrentHashMap;
@@ -83,13 +84,12 @@ public class AntMapUpdateSingleton {
         DSCell newestAtp = getNewestCellAt(groupMap, emptyCells, p);
 
         if (newestAtp == null) {
-          System.err.println("SHOULD BE UNREACHABLE HERE");
           continue;
         }
 
         // diffusion from direct neighbours
         LinkedList<Point> neigh = groupMap.getNeighboursExactDistance(p, 1);
-        // neigh.addAll(groupMap.getNeighboursExactDistance(p, 2)); //TODO:l maybe yield better
+        neigh.addAll(groupMap.getNeighboursExactDistance(p, 2));
         // results
         double neighCount = 1, sum = newestAtp.getPheromone();
 
@@ -101,10 +101,11 @@ public class AntMapUpdateSingleton {
           sum += nCell.getPheromone();
         }
 
+        // ( neigh_size instead of neighCount boosts edges)
+        double res = sum / (neigh.size()+1);
         // evaporation
-        newestAtp.evaporatePheromone(EVAP_COEFICIENT);
-
-        nextGenPheromone.put(p, sum / neighCount);
+        res *= EVAP_COEFICIENT;
+        nextGenPheromone.put(p,res);
       }
     }
 
@@ -116,12 +117,24 @@ public class AntMapUpdateSingleton {
 
         if (newestAtp != null && nextGenPheromone.get(p) != null) {
           newestAtp.setPheromone(nextGenPheromone.get(p));
+          LinkedList<DSCell> cellsAtPoint = groupMap.getMap().getAllAt(p);
+
+          if (cellsAtPoint == null || cellsAtPoint.isEmpty()) {
+            continue;
+          }
+
+          for (DSCell c : cellsAtPoint) {
+            c.setPheromone(nextGenPheromone.get(p));
+          }
+
         }
       }
     }
 
-    // statistics -> each group gets here once for now
-    stat.numberOfUsedGroups(agent, agentStep);
+    // statistics -> each group gets here once per step
+    stat.knownCellsStats(agent);
+    stat.revisitedStats(agent);
+    stat.mapSizeStats(agent);
 
     // statistics -> once in step guaranted
     synchronized (this) {
@@ -129,8 +142,7 @@ public class AntMapUpdateSingleton {
       stat.completedStep = agent.getStep();
     }
 
-    stat.knownCellsStats(agent, agentStep);
-    stat.revisitedStats(agent, agentStep);
+    stat.numberOfUsedGroups(agent, agentStep);
   }
 
   protected DSCell getNewestCellAt(DSMap map, HashMap<Point, DSCell> emptyCells, Point atPoint) {

@@ -164,7 +164,8 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
 
     Point positionG;
 
-    positionG = PGroup.getGoalArea(PTask, step); // PGroup.allObjects(DSCell.__DSGoal).getFirst();
+    positionG =
+        PGroup.getGoalArea(PTask, step); // PGroup.allObjects(DSCell.__DSGoalArea).getFirst();
     if (positionG == null) return (false);
 
     PMasterGoalPos = positionG;

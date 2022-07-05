@@ -6,6 +6,7 @@
 *.log
 **/logs/*
 APDescription.txt
+**/figures/*
 
 # BlueJ files
 *.ctxt

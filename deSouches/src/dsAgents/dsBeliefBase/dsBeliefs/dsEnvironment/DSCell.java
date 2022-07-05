@@ -13,7 +13,7 @@ public class DSCell {
   public static int __DSEntity_Enemy = 3;
   public static int __DSMarker = 4;
   public static int __DSBorder = 5;
-  public static int __DSGoal = 6;
+  public static int __DSGoalArea = 6;
   public static int __DSAgent = 7;
   public static int __DSTaskArea = 8;
   public static int __DSRoleArea = 9;
@@ -23,8 +23,6 @@ public class DSCell {
   public static int __DSDispenser = 100;
 
   private double cellPheromone = 0;
-  private int AntStatisticsLastTimeVisited = 0;
-  private int AntStatisticsStepsBetweenRevisits = 0;
 
   private final int MAX_PHERO = 100;
 
@@ -37,7 +35,7 @@ public class DSCell {
           put("entityB", __DSEntity_Enemy);
           put("markerclear", __DSMarker);
           put("taskboard", __DSTaskArea);
-          put("goalZone", __DSGoal);
+          put("goalZone", __DSGoalArea);
           put("roleZone", __DSRoleArea);
         }
       };
@@ -51,7 +49,7 @@ public class DSCell {
           put(__DSEntity_Enemy, " EE");
           put(__DSMarker, " MM");
           put(__DSTaskArea, " TT");
-          put(__DSGoal, " ++");
+          put(__DSGoalArea, " ++");
           put(__DSRoleArea, " //");
         }
       };
@@ -115,14 +113,8 @@ public class DSCell {
     return (new Point(PX, PY));
   }
 
-  public int revisitedInSteps() {
-    return AntStatisticsStepsBetweenRevisits;
-  }
-
   public void setTimestamp(int timestamp) {
     this.PTimeStamp = timestamp;
-    AntStatisticsStepsBetweenRevisits = timestamp - AntStatisticsLastTimeVisited;
-    AntStatisticsLastTimeVisited = timestamp;
   }
 
   public int getTimestamp() {
@@ -148,10 +140,7 @@ public class DSCell {
   }
 
   private int startPheromoneByType(int type) {
-    return MAX_PHERO
-        + (type == DSCell.__DSObstacle
-            ? MAX_PHERO / 4
-            : 0); // make wall travel less likely //TODO:l is okay ?
+    return MAX_PHERO; // add pheromone to exception for less likelihood of exploration eg. obstacle
   }
 
   public DSCell(int x, int y, int type, int timestamp) {
@@ -160,7 +149,6 @@ public class DSCell {
     PY = y;
     PType = type;
     PTimeStamp = timestamp;
-    AntStatisticsLastTimeVisited = timestamp;
     cellPheromone = startPheromoneByType(PType);
   }
 
@@ -173,7 +161,6 @@ public class DSCell {
     PY = y;
     PType = getThingTypeIndex(type, params);
     PTimeStamp = timestamp;
-    AntStatisticsLastTimeVisited = timestamp;
     cellPheromone = startPheromoneByType(PType);
   }
 
@@ -184,7 +171,6 @@ public class DSCell {
     PY = y;
     PType = getThingTypeIndex(type, params);
     PTimeStamp = timestamp;
-    AntStatisticsLastTimeVisited = timestamp;
     this.foundBy = foundBy;
     cellPheromone = startPheromoneByType(PType);
   }
@@ -194,19 +180,25 @@ public class DSCell {
     PY = y;
     PType = type;
     PTimeStamp = timestamp;
-    AntStatisticsLastTimeVisited = timestamp;
     this.foundBy = foundBy;
     cellPheromone = startPheromoneByType(PType);
   }
 
-  public void evaporatePheromone(double coeficient) {
-    // no evap for static elements
-    if (PType == DSCell.__DSGoal
-        || PType == DSCell.__DSDispenser
-        || PType == DSCell.__DSRoleArea
-        || PType == DSCell.__DSTaskArea) return;
+  public static boolean isPermanentType(DSCell dsCell) {
+    return isPermanentType(dsCell.getType());
+  }
 
-    if (coeficient > 0.0 && coeficient < 1.0) cellPheromone *= coeficient;
+  public static boolean isPermanentType(int p) {
+    return p == DSCell.__DSRoleArea
+        || p == DSCell.__DSTaskArea
+        || p == DSCell.__DSDispenser
+        || p == DSCell.__DSGoalArea;
+  }
+
+  public void evaporatePheromone(double coefficient) {
+    if (isPermanentType(PType)) return;
+
+    if (coefficient > 0.0 && coefficient < 1.0) cellPheromone *= coefficient;
   }
 
   public void setPheromone(double pheromone) {

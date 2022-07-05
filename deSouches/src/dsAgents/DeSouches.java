@@ -128,7 +128,7 @@ public class DeSouches extends Agent {
       }
 
       st = "Goal:";
-      goalslLocations = map.allObjects(DSCell.__DSGoal);
+      goalslLocations = map.allObjects(DSCell.__DSGoalArea);
       if (goalslLocations == null) {
         st = st + "nejsou";
         possible = false;

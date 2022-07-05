@@ -233,6 +233,7 @@ public class DSBeliefBase {
     int y = Integer.valueOf(i.next().toString());
     String type = i.next().toString();
     String params = i.next().toString();
+    //System.err.println("percept: " + x + " " + y + " " + type + " " + params + " " + PStep);
     POutlook.processAddThing(x, y, type, params, PStep, PAgent);
   }
 
@@ -519,8 +520,8 @@ public class DSBeliefBase {
   }
 
   public Point nearestGoal() {
-    return (nearestObject(PAgent, DSCell.__DSGoal));
-    //        return(PMap.nearestObject(DSCell.__DSGoal,new Point(0,0)));
+    return (nearestObject(PAgent, DSCell.__DSGoalArea));
+    //        return(PMap.nearestObject(DSCell.__DSGoalArea,new Point(0,0)));
   }
 
   public DSBeliefBase(DSAgent agent, DSSynchronize synchronizer) {

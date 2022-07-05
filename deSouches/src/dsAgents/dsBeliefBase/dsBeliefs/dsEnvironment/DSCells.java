@@ -6,9 +6,11 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 public class DSCells {
-  // LinkedList<DSCell> PCells;
-  // new map hash point -> list of cells
   HashMap<Point, LinkedList<DSCell>> PHashCells;
+
+  // for revisit time stat measuring
+  HashMap<Point, Integer> revisitedNewestEvent = new HashMap<>();
+  HashMap<Point, Integer> revisitedTime = new HashMap<>();
 
   public synchronized LinkedList<DSCell> getCells() {
 
@@ -23,8 +25,6 @@ public class DSCells {
 
   // top left corner
   public synchronized Point getTLC() {
-    // Hash
-
     if (PHashCells.isEmpty()) return null;
     Point tlc = PHashCells.keySet().iterator().next();
     tlc = new Point(tlc.x, tlc.y);
@@ -32,23 +32,10 @@ public class DSCells {
       if (point.x <= tlc.x) tlc.x = point.x;
       if (point.y <= tlc.y) tlc.y = point.y;
     }
-
-    /*
-    if (PCells.isEmpty())`
-            return null;
-    Point tlc =PCells.getFirst().getPosition();
-    for(DSCell cell:PCells) {
-        if (cell.getX() <= tlc.x)
-            tlc.x=cell.getX();
-        if (cell.getY() <= tlc.y)
-            tlc.y=cell.getY();
-    }*/
     return (tlc);
   }
   // bottom right corner
   public synchronized Point getBRC() {
-
-    // Hash
     if (PHashCells.isEmpty()) return null;
 
     Point brc = PHashCells.keySet().iterator().next();
@@ -59,25 +46,13 @@ public class DSCells {
     }
 
     return (brc);
-
-    /*
-
-    if (PCells.isEmpty())
-        return null;
-    Point brc = PCells.getFirst().getPosition();
-    for (DSCell cell : PCells){
-        if (cell.getX() >= brc.x)
-            brc.x = cell.getX();
-    if (cell.getY() >= brc.y)
-        brc.y = cell.getY();
-    }
-    return(brc);
-     */
   }
 
   protected synchronized void put(DSCell element) {
-    if (PHashCells.containsKey(element.getPosition())) {
-      LinkedList<DSCell> cells = PHashCells.get(element.getPosition());
+    Point pos = element.getPosition();
+
+    if (PHashCells.containsKey(pos)) {
+      LinkedList<DSCell> cells = PHashCells.get(pos);
       for (DSCell cell : cells)
         if (cell.getType() == element.getType()) { // not two of the same type at one place
           // try to update info
@@ -92,22 +67,28 @@ public class DSCells {
     } else {
       LinkedList<DSCell> cells = new LinkedList();
       cells.add(element);
-      PHashCells.put(element.getPosition(), cells);
+      PHashCells.put(pos, cells);
+    }
+
+    int oldTime = revisitedNewestEvent.getOrDefault(pos, 1);
+    int cellTime = getNewestAt(pos).getTimestamp();
+    if (cellTime >= oldTime) {
+      revisitedNewestEvent.put(pos, cellTime);
+      if (cellTime > oldTime) revisitedTime.put(pos, cellTime - oldTime);
     }
   }
 
   protected synchronized void removeOlder(Point point, int step, boolean removeArea) {
-    // new Hash
-
     LinkedList<DSCell> oldList = PHashCells.get(point);
     LinkedList<DSCell> newList = new LinkedList();
 
     if (oldList != null) {
       for (DSCell element : oldList)
         if ((element.getTimestamp() > step)
-            || (((element.getType() == DSCell.__DSGoal)
+            || (((element.getType() == DSCell.__DSGoalArea)
                 || (element.getType() == DSCell.__DSRoleArea)))) { // && (!removeArea)))
-          //                  if ((element.getType() == DSCell.__DSGoal) || (element.getType() ==
+          //                  if ((element.getType() == DSCell.__DSGoalArea) || (element.getType()
+          // ==
           // DSCell.__DSRoleArea))
           //                      System.out.println("Zachranuji areu na "+element.getPosition());
           newList.add(element);
@@ -119,7 +100,7 @@ public class DSCells {
 
   public synchronized void removeCell(int x, int y, int type) {
     Point point = new Point(x, y);
-    LinkedList<DSCell> oldList = PHashCells.get(point);
+    LinkedList<DSCell> oldList = getAllAt(point);
     LinkedList<DSCell> newList = new LinkedList<DSCell>();
 
     for (DSCell element : oldList) if (element.getType() != type) newList.add(element);
@@ -133,6 +114,7 @@ public class DSCells {
 
   public synchronized DSCell getNewestAt(Point point) {
     // get newest of cells according to timestamp + synchronize pheromone
+    // filter out absolute points for pheromone dispersion (zone + dispenser)
 
     LinkedList<DSCell> cellsAtPoint = this.getAllAt(point);
 
@@ -142,11 +124,6 @@ public class DSCells {
 
     DSCell newestCell =
         cellsAtPoint.stream().max(Comparator.comparingDouble(DSCell::getTimestamp)).get();
-    double maxPhero = newestCell.getPheromone();
-
-    for (DSCell c : cellsAtPoint) {
-      c.setPheromone(maxPhero); // TODO:l is correct? zone is always MAX
-    }
 
     return newestCell;
   }
@@ -165,8 +142,12 @@ public class DSCells {
     return (null);
   }
 
+  public int getRevisitAt(Point point) {
+    return revisitedTime.getOrDefault(point, 0);
+  }
+
   public synchronized DSCell getKeyType(Point point, int type) {
-    LinkedList<DSCell> cellsAtPoint = this.getAllAt(point);
+    LinkedList<DSCell> cellsAtPoint = getAllAt(point);
     if (cellsAtPoint == null) return null;
 
     return cellsAtPoint.stream().filter(c -> c.getType() == type).findFirst().orElse(null);
@@ -186,22 +167,10 @@ public class DSCells {
   }
 
   public synchronized boolean containsKey(Point point) {
-    // Hash version
     return (PHashCells.containsKey(point));
-
-    /* Old version
-    for(DSCell element:PCells)
-        if((element.getPosition().x==point.x)&&(element.getPosition().y==point.y))
-            return(true);
-
-        return(false);
-     */
   }
 
   public DSCells() {
-    // hash version
     PHashCells = new HashMap<Point, LinkedList<DSCell>>();
-    // old version
-    //   PCells=new LinkedList<DSCell>();
   }
 }

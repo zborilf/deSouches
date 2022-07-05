@@ -68,7 +68,7 @@ public class DSGroup {
 
   public Point getUGuardedGoalArea() {
     Random random = new Random();
-    LinkedList<Point> goals = allObjects(DSCell.__DSGoal);
+    LinkedList<Point> goals = allObjects(DSCell.__DSGoalArea);
     if (goals == null) return (null);
     if (goals.size() == 0) return (null);
     int select = random.nextInt(goals.size());
@@ -98,7 +98,7 @@ public class DSGroup {
   public Point getGoalArea(DSTask task, int step) { // TODO vylepsit
     if (PGoalAreas.containsKey(task)) return (PGoalAreas.get(task));
     boolean conflict;
-    LinkedList<Point> goals = allObjects(DSCell.__DSGoal);
+    LinkedList<Point> goals = allObjects(DSCell.__DSGoalArea);
     //    goals=sortByObstacleDistance(goals);
     Collections.shuffle(goals); // lets try this, select the goal area randomly
     for (Point position : goals) {
@@ -194,7 +194,7 @@ public class DSGroup {
 
     System.out.println(st1);
 
-    LinkedList<Point> goals = allObjects(DSCell.__DSGoal);
+    LinkedList<Point> goals = allObjects(DSCell.__DSGoalArea);
     LinkedList<Point> d1 = allObjects(DSCell.__DSDispenser);
     LinkedList<Point> d2 = allObjects(DSCell.__DSDispenser + 1);
     LinkedList<Point> d3 = allObjects(DSCell.__DSDispenser + 2);
@@ -210,7 +210,7 @@ public class DSGroup {
   // is Capable funguje pro libovolnou velikost tasku
   public boolean isCapable(DSTask task, int priority) {
     LinkedList<Integer> types = task.getTypesNeeded();
-    LinkedList goals = allObjects(DSCell.__DSGoal);
+    LinkedList goals = allObjects(DSCell.__DSGoalArea);
     if (goals == null) return (false);
     if (goals.size() == 0) return (false);
     // ok, skupina zna nejakej plac pro submitnuti
@@ -261,5 +261,11 @@ public class DSGroup {
     PGoalAreas = new HashMap<DSTask, Point>();
     PGroupMap = new DSMap(PMaster);
     PMasterGroup = false;
+  }
+
+  @Override
+  public String toString() {
+    // group will be identified by leader name
+    return "skupina " + PMaster.getEntityName();
   }
 }
