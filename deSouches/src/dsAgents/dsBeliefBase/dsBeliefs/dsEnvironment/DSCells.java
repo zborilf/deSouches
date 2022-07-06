@@ -81,7 +81,11 @@ public class DSCells {
   public synchronized void removeCell(int x, int y, int type) {
     Point point = new Point(x, y);
     LinkedList<DSCell> oldList = getAllAt(point);
-    LinkedList<DSCell> newList = new LinkedList<DSCell>();
+    LinkedList<DSCell> newList = new LinkedList<>();
+    if(oldList == null){
+      System.err.println("TRYING TO DELETE NON EXISTING PLACE: " + x + " " + y);
+      return;
+    }
 
     for (DSCell element : oldList) if (element.getType() != type) newList.add(element);
     PHashCells.put(point, newList);
@@ -94,7 +98,6 @@ public class DSCells {
 
   public synchronized DSCell getNewestAt(Point point) {
     // get newest of cells according to timestamp + synchronize pheromone
-    // filter out absolute points for pheromone dispersion (zone + dispenser)
 
     LinkedList<DSCell> cellsAtPoint = this.getAllAt(point);
 
@@ -135,12 +138,10 @@ public class DSCells {
 
   public synchronized LinkedList<DSCell> getAllType(
       int type) { // objekty daneho typu na vsech pozicich
-    // Hash verze
 
     LinkedList<DSCell> cells = new LinkedList();
-    LinkedList<DSCell> cellsAt = new LinkedList();
     for (Point point : PHashCells.keySet()) {
-      cellsAt = PHashCells.get(point);
+      LinkedList<DSCell> cellsAt = PHashCells.get(point);
       for (DSCell element : cellsAt) if (element.getType() == type) cells.add(element);
     }
     return (cells);

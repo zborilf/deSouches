@@ -34,6 +34,7 @@ public class DSBeliefBase {
   private int PHeightMap;
   private boolean PGUIFocus;
   private DSAgentOutlook POutlook;
+  private DSAgentOutlook PDeleteOutlook;
 
   private DSAgent PAgent;
   private DSGroup PGroup = null;
@@ -132,7 +133,7 @@ public class DSBeliefBase {
   // 3 : __teamSize
 
   public void setTeamSize(Collection<Parameter> parameters) {
-    int teamSize = Integer.valueOf(parameters.iterator().next().toString());
+    int teamSize = Integer.parseInt(parameters.iterator().next().toString());
     PTeamSize = teamSize;
   }
 
@@ -229,22 +230,27 @@ public class DSBeliefBase {
 
   public void addThingToOutlook(Collection<Parameter> parameters) {
     Iterator i = parameters.iterator();
-    int x = Integer.valueOf(i.next().toString());
-    int y = Integer.valueOf(i.next().toString());
+    int x = Integer.parseInt(i.next().toString());
+    int y = Integer.parseInt(i.next().toString());
     String type = i.next().toString();
     String params = i.next().toString();
-    //System.err.println("percept: " + x + " " + y + " " + type + " " + params + " " + PStep);
+    //TODO ignoring markers
+    if(type.equals("marker")){
+      return;
+    }
+    //if(type.equals("obstacle"))
+    //System.err.println("obstacle: " + x + " " + y + " " + type + " " + params + " " + PStep);
     POutlook.processAddThing(x, y, type, params, PStep, PAgent);
   }
 
   public void deleteThingFromOutlook(Collection<Parameter> parameters) {
     Iterator i = parameters.iterator();
-    POutlook.processDeleteThing(
-        Integer.valueOf(i.next().toString()),
-        Integer.valueOf(i.next().toString()),
-        i.next().toString(),
-        i.next().toString(),
-        PStep);
+    int x = Integer.parseInt(i.next().toString());
+    int y = Integer.parseInt(i.next().toString());
+    String type = i.next().toString();
+    String params = i.next().toString();
+
+    PDeleteOutlook.processAddThing(x,y,type,params,PStep,PAgent);
   }
 
   // 15 : __task
@@ -321,6 +327,7 @@ public class DSBeliefBase {
   }
 
   public void leavesRoleZone(Collection<Parameter> parameters) {
+    //TODO melo by byt zbytecne
     Iterator i = parameters.iterator();
     int x = Integer.parseInt(i.next().toString());
     int y = Integer.parseInt(i.next().toString());
@@ -337,6 +344,7 @@ public class DSBeliefBase {
   }
 
   public void leavesGoalZone(Collection<Parameter> parameters) {
+    //TODO melo by byt zbytecne
     Iterator i = parameters.iterator();
     int x = Integer.parseInt(i.next().toString());
     int y = Integer.parseInt(i.next().toString());
@@ -443,6 +451,15 @@ public class DSBeliefBase {
   public DSAgentOutlook getOutlook() {
     return (POutlook);
   }
+  public void clearOutlook() {
+    POutlook = new DSAgentOutlook();
+  }
+  public DSAgentOutlook getDeleteOutlook() {
+    return (PDeleteOutlook);
+  }
+  public void clearDeleteOutlook() {
+    PDeleteOutlook = new DSAgentOutlook();
+  }
 
   // SOCIAL
 
@@ -528,6 +545,7 @@ public class DSBeliefBase {
     PAgent = agent;
     PRoles = new DSRoles();
     POutlook = new DSAgentOutlook();
+    PDeleteOutlook = new DSAgentOutlook();
     PSynchronizer = synchronizer;
   }
 }

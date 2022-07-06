@@ -116,7 +116,7 @@ public class AntMapUpdateSingleton {
         DSCell newestAtp = groupMap.getMap().getNewestAt(p);
 
         if (newestAtp != null && nextGenPheromone.get(p) != null) {
-          newestAtp.setPheromone(nextGenPheromone.get(p));
+          //newestAtp.setPheromone(nextGenPheromone.get(p));
           LinkedList<DSCell> cellsAtPoint = groupMap.getMap().getAllAt(p);
 
           if (cellsAtPoint == null || cellsAtPoint.isEmpty()) {

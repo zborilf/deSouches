@@ -271,6 +271,7 @@ public class DSAgent extends Agent {
       perceptor.actualizeMap(
           PBeliefBase.getMap(),
           PBeliefBase.getOutlook(),
+          PBeliefBase.getDeleteOutlook(),
           PBeliefBase.getMap().getAgentPos((DSAgent) (this.getAgent())),
           PBeliefBase.getVision(),
           PBeliefBase.getTeamName(),
