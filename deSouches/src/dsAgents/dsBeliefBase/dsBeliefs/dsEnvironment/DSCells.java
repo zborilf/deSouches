@@ -78,26 +78,6 @@ public class DSCells {
     }
   }
 
-  protected synchronized void removeOlder(Point point, int step, boolean removeArea) {
-    LinkedList<DSCell> oldList = PHashCells.get(point);
-    LinkedList<DSCell> newList = new LinkedList();
-
-    if (oldList != null) {
-      for (DSCell element : oldList)
-        if ((element.getTimestamp() > step)
-            || (((element.getType() == DSCell.__DSGoalArea)
-                || (element.getType() == DSCell.__DSRoleArea)))) { // && (!removeArea)))
-          //                  if ((element.getType() == DSCell.__DSGoalArea) || (element.getType()
-          // ==
-          // DSCell.__DSRoleArea))
-          //                      System.out.println("Zachranuji areu na "+element.getPosition());
-          newList.add(element);
-        }
-    }
-    //      System.out.println("Po clearu zbylo "+newList.size());
-    PHashCells.put(point, newList);
-  }
-
   public synchronized void removeCell(int x, int y, int type) {
     Point point = new Point(x, y);
     LinkedList<DSCell> oldList = getAllAt(point);

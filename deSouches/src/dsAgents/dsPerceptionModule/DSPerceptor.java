@@ -138,7 +138,7 @@ public class DSPerceptor {
     return (taskList);
   }
 
-  public synchronized boolean actualizeMap(
+  public synchronized void actualizeMap(
       DSMap map,
       DSAgentOutlook outlook,
       Point agentPos,
@@ -156,40 +156,38 @@ public class DSPerceptor {
 
     for (int i = -vision; i <= vision; i++)
       for (int j = -vision + Math.abs(i); Math.abs(j) + Math.abs(i) <= vision; j++) {
-        if (Math.abs(i) + Math.abs(j) <= vision) {
-          map.removeOlder(new Point(i + agentPos.x, j + agentPos.y), step, (i == 0) && (j == 0));
-          cells = newOutlook.getAllAt(new Point(i, j));
-          if (cells != null)
-            for (DSCell cell : cells) {
-              DSCell newCell =
-                  new DSCell(
-                      cell.getX() + agentPos.x,
-                      cell.getY() + agentPos.y,
-                      cell.getType(),
-                      cell.getTimestamp(),
-                      agent);
-              map.updateCell(newCell);
-            }
+        if (Math.abs(i) + Math.abs(j) > vision) continue;
 
-          // complete vision area with empty cells
-          DSCell clearCell =
-              new DSCell(i + agentPos.x, j + agentPos.y, DSCell.__DSClear, step, agent);
-
-          // remove old clear if something else exists
-          if ((map.getMap().getAllAt(new Point(clearCell.getX(), clearCell.getY())) == null)
-              || map.getMap().getAllAt(new Point(clearCell.getX(), clearCell.getY())).stream()
-                  .noneMatch(
-                      p ->
-                          (p.getType() == DSCell.__DSObstacle)
-                              || ((p.getType() >= DSCell.__DSBlock)
-                                  && (p.getType() < DSCell.__DSDispenser)))) {
-            map.updateCell(clearCell);
-          } else {
-            map.getMap().removeCell(clearCell.getX(), clearCell.getY(), DSCell.__DSClear);
+        cells = newOutlook.getAllAt(new Point(i, j));
+        if (cells != null)
+          for (DSCell cell : cells) {
+            DSCell newCell =
+                new DSCell(
+                    cell.getX() + agentPos.x,
+                    cell.getY() + agentPos.y,
+                    cell.getType(),
+                    cell.getTimestamp(),
+                    agent);
+            map.updateCell(newCell);
           }
+
+        // complete vision area with empty cells
+        DSCell clearCell =
+            new DSCell(i + agentPos.x, j + agentPos.y, DSCell.__DSClear, step, agent);
+
+        // remove old clear if something else exists
+        if ((map.getMap().getAllAt(new Point(clearCell.getX(), clearCell.getY())) == null)
+            || map.getMap().getAllAt(new Point(clearCell.getX(), clearCell.getY())).stream()
+                .noneMatch(
+                    p ->
+                        (p.getType() == DSCell.__DSObstacle)
+                            || ((p.getType() >= DSCell.__DSBlock)
+                                && (p.getType() < DSCell.__DSDispenser)))) {
+          map.updateCell(clearCell);
+        } else {
+          map.getMap().removeCell(clearCell.getX(), clearCell.getY(), DSCell.__DSClear);
         }
       }
-    return (true);
   }
 
   /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

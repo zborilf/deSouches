@@ -17,7 +17,6 @@ import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsExecutionModule.dsActions.DSAdopt;
-import dsAgents.dsExecutionModule.dsActions.DSMove;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStar;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSStraightPath;

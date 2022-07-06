@@ -5,6 +5,7 @@ import deSouches.utils.HorseRider;
 import dsAgents.dsBeliefBase.DSBeliefBase;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
+import dsAgents.dsExecutionModule.dsActions.DSMove;
 import dsAgents.dsPerceptionModule.DSPerceptor;
 import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsIntention.DSIntention;
@@ -227,8 +228,6 @@ public class DSAgent extends Agent {
 
     public void action() {
       Map<String, PerceptUpdate> perceptsCol = null;
-      DSPerceptor perceptor = new DSPerceptor();
-
       try {
         perceptsCol = PEI.getPercepts(PName, PEntity);
       } catch (PerceiveException e) {
@@ -257,6 +256,7 @@ public class DSAgent extends Agent {
 
       // FEEDBACK, result of the last action performed
 
+      DSPerceptor perceptor = new DSPerceptor();
       propagateFeedback(perceptor, newPercepts, recentIntentionExecuted);
 
       // MAP UPDATE

@@ -352,10 +352,6 @@ public class DSMap {
     return (nearest);
   }
 
-  public synchronized void removeOlder(Point position, int timestamp, boolean removeArea) {
-    PMapCells.removeOlder(position, timestamp, removeArea);
-  }
-
   public synchronized void addCell(DSCell cell) {
     PMapCells.put(cell);
   }
