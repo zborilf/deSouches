@@ -468,7 +468,8 @@ public class DSMap {
       for (int i = 0; i < width; i++) {
         node = mapArray[i][j];
         if (node != null) {
-          if ((j == getOwnerAgentPos().y) && (i == getOwnerAgentPos().x) || node.getPosition().equals(masterPos)) {
+          if ((j == getOwnerAgentPos().y) && (i == getOwnerAgentPos().x)
+              || node.getPosition().equals(masterPos)) {
             so.append(" **");
           } else {
             so.append(DSCell.getTypeSign(node.getType()));

@@ -150,25 +150,20 @@ public class DSPerceptor {
 
     clearFriendsList();
 
-
     DSCells removedCells = deleteOutlook.getCells();
     DSCells newOutlook = outlook.getCells();
 
-
     for (var c : removedCells.getCells()) {
       DSCell delCell =
-              new DSCell(
-                      c.getX() + agentPos.x,
-                      c.getY() + agentPos.y,
-                      c.getType(),
-                      c.getTimestamp(),
-                      agent);
-      //TODO for now only obstacles are neccesarry
-      if (c.getType() == DSCell.__DSObstacle) {
+          new DSCell(
+              c.getX() + agentPos.x, c.getY() + agentPos.y, c.getType(), c.getTimestamp(), agent);
+      // TODO for now only these are neccesarry
+      if (c.getType() == DSCell.__DSObstacle
+          || c.getType() == DSCell.__DSEntity_Friend
+          || c.getType() == DSCell.__DSEntity_Enemy) {
         map.getMap().removeCell(delCell.getX(), delCell.getY(), delCell.getType());
       }
     }
-
 
     // outlook contains only newly seen cells -> add clear if no cell exists
 
@@ -180,37 +175,36 @@ public class DSPerceptor {
         if (cells != null)
           for (DSCell cell : cells) {
             DSCell newCell =
-                    new DSCell(
-                            cell.getX() + agentPos.x,
-                            cell.getY() + agentPos.y,
-                            cell.getType(),
-                            cell.getTimestamp(),
-                            agent);
+                new DSCell(
+                    cell.getX() + agentPos.x,
+                    cell.getY() + agentPos.y,
+                    cell.getType(),
+                    cell.getTimestamp(),
+                    agent);
             map.updateCell(newCell);
           }
       }
 
-    //adding clears
+    // adding clears
     for (int x = -vision; x <= vision; x++)
       for (int y = -vision + Math.abs(x); Math.abs(y) + Math.abs(x) <= vision; y++) {
         if (Math.abs(x) + Math.abs(y) > vision) continue;
 
         DSCell clearCell =
-                new DSCell(x + agentPos.x, y + agentPos.y, DSCell.__DSClear, step, agent);
+            new DSCell(x + agentPos.x, y + agentPos.y, DSCell.__DSClear, step, agent);
 
         LinkedList<DSCell> cells = map.getMap().getAllAt(clearCell.getPosition());
-        if (cells == null || cells.stream()
+        if (cells == null
+            || cells.stream()
                 .noneMatch(
-                        pCell ->
-                                (pCell.getType() == DSCell.__DSObstacle)
-                                        || ((pCell.getType() >= DSCell.__DSBlock)
-                                        && (pCell.getType() < DSCell.__DSDispenser)))) {
+                    pCell ->
+                        (pCell.getType() == DSCell.__DSObstacle)
+                            || ((pCell.getType() >= DSCell.__DSBlock)
+                                && (pCell.getType() < DSCell.__DSDispenser)))) {
           map.updateCell(clearCell);
         } else {
           map.getMap().removeCell(clearCell.getX(), clearCell.getY(), DSCell.__DSClear);
         }
-
-
       }
   }
 

@@ -82,7 +82,7 @@ public class DSCells {
     Point point = new Point(x, y);
     LinkedList<DSCell> oldList = getAllAt(point);
     LinkedList<DSCell> newList = new LinkedList<>();
-    if(oldList == null){
+    if (oldList == null) {
       System.err.println("TRYING TO DELETE NON EXISTING PLACE: " + x + " " + y);
       return;
     }

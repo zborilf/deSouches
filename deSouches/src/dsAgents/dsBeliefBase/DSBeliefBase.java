@@ -234,12 +234,12 @@ public class DSBeliefBase {
     int y = Integer.parseInt(i.next().toString());
     String type = i.next().toString();
     String params = i.next().toString();
-    //TODO ignoring markers
-    if(type.equals("marker")){
+    // TODO ignoring markers
+    if (type.equals("marker")) {
       return;
     }
-    //if(type.equals("obstacle"))
-    //System.err.println("obstacle: " + x + " " + y + " " + type + " " + params + " " + PStep);
+    // if(type.equals("obstacle"))
+    // System.err.println("obstacle: " + x + " " + y + " " + type + " " + params + " " + PStep);
     POutlook.processAddThing(x, y, type, params, PStep, PAgent);
   }
 
@@ -250,7 +250,7 @@ public class DSBeliefBase {
     String type = i.next().toString();
     String params = i.next().toString();
 
-    PDeleteOutlook.processAddThing(x,y,type,params,PStep,PAgent);
+    PDeleteOutlook.processAddThing(x, y, type, params, PStep, PAgent);
   }
 
   // 15 : __task
@@ -327,7 +327,7 @@ public class DSBeliefBase {
   }
 
   public void leavesRoleZone(Collection<Parameter> parameters) {
-    //TODO melo by byt zbytecne
+    // TODO melo by byt zbytecne
     Iterator i = parameters.iterator();
     int x = Integer.parseInt(i.next().toString());
     int y = Integer.parseInt(i.next().toString());
@@ -344,7 +344,7 @@ public class DSBeliefBase {
   }
 
   public void leavesGoalZone(Collection<Parameter> parameters) {
-    //TODO melo by byt zbytecne
+    // TODO melo by byt zbytecne
     Iterator i = parameters.iterator();
     int x = Integer.parseInt(i.next().toString());
     int y = Integer.parseInt(i.next().toString());
@@ -451,12 +451,15 @@ public class DSBeliefBase {
   public DSAgentOutlook getOutlook() {
     return (POutlook);
   }
+
   public void clearOutlook() {
     POutlook = new DSAgentOutlook();
   }
+
   public DSAgentOutlook getDeleteOutlook() {
     return (PDeleteOutlook);
   }
+
   public void clearDeleteOutlook() {
     PDeleteOutlook = new DSAgentOutlook();
   }
