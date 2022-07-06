@@ -352,10 +352,6 @@ public class DSMap {
     return (nearest);
   }
 
-  public synchronized void removeOlder(Point position, int timestamp, boolean removeArea) {
-    PMapCells.removeOlder(position, timestamp, removeArea);
-  }
-
   public synchronized void addCell(DSCell cell) {
     PMapCells.put(cell);
   }
@@ -448,10 +444,12 @@ public class DSMap {
   public synchronized String stringMap() {
     DSCell node;
     DSCell[][] mapArray;
-    String so = "";
+    Point masterPos = this.getOwner().getMapPosition();
 
-    for (DSAgent agent : PAgentPosition.keySet()) so = so + agent.getEntityName() + ", ";
-    so = so + "\n";
+    StringBuilder so = new StringBuilder();
+
+    for (DSAgent agent : PAgentPosition.keySet()) so.append(agent.getEntityName()).append(", ");
+    so.append("\n");
 
     Point tlc = PMapCells.getTLC(); // top left corner
     Point brc = PMapCells.getBRC(); // bottom right corner
@@ -463,25 +461,27 @@ public class DSMap {
     int width = brc.x - lx + 1;
     int height = brc.y - ty + 1;
 
-    for (int i = 0; i < width; i++) so = so + nmb(i + lx);
-    so = so + " \n";
+    for (int i = 0; i < width; i++) so.append(nmb(i + lx));
+    so.append(" \n");
 
     for (int j = 0; j < height; j++) {
       for (int i = 0; i < width; i++) {
         node = mapArray[i][j];
         if (node != null) {
-          if ((j == getOwnerAgentPos().y) && (i == getOwnerAgentPos().x)) {
+          if ((j == getOwnerAgentPos().y) && (i == getOwnerAgentPos().x)
+              || node.getPosition().equals(masterPos)) {
+            so.append(" **");
           } else {
-            so = so + DSCell.getTypeSign(node.getType());
+            so.append(DSCell.getTypeSign(node.getType()));
           }
         } else {
-          so = so + " ..";
+          so.append(" ..");
         }
       }
-      so = so + nmb(j + ty) + " \n";
+      so.append(nmb(j + ty)).append(" \n");
     }
 
-    return (so);
+    return (so.toString());
   }
 
   public synchronized String stringPheroMap() {
@@ -490,6 +490,7 @@ public class DSMap {
     final String MIN = "00";
     StringBuilder so = new StringBuilder();
     int curStep = 0;
+    Point masterPos = this.getOwner().getMapPosition();
 
     for (DSAgent agent : PAgentPosition.keySet()) {
       so.append(agent.getEntityName()).append(", ");
@@ -515,7 +516,7 @@ public class DSMap {
         so.append(" ");
         node = mapArray[i][j];
         if (node != null) {
-          if (node.getType() == DSCell.__DSEntity_Friend) {
+          if (node.getType() == DSCell.__DSEntity_Friend || node.getPosition().equals(masterPos)) {
             so.append("**");
           } else {
             int phero = (int) node.getPheromone();

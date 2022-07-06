@@ -17,7 +17,6 @@ import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsExecutionModule.dsActions.DSAdopt;
-import dsAgents.dsExecutionModule.dsActions.DSMove;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStar;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSStraightPath;
@@ -48,11 +47,12 @@ public class DSGoalExplore extends DSGoal {
     List<Point> destinations = new ArrayList<>();
     int local_priority = ROAM_PRIORITY;
 
-    //TODO: synchronization not working yet ( server issue)
-    if(false) {
+    // TODO: synchronization not working yet ( server issue)
+    if (false) {
       if (agent.getActualRole().compareTo("default") == 0) {
         // try to change role if viable
-        if (agent.getMap().getMap().getKeyType(agent.getMapPosition(), DSCell.__DSRoleArea) != null) {
+        if (agent.getMap().getMap().getKeyType(agent.getMapPosition(), DSCell.__DSRoleArea)
+            != null) {
           // standing at role zone -> set role
           String role = agent.getCommander().roleNeeded(agent);
 

@@ -227,8 +227,6 @@ public class DSAgent extends Agent {
 
     public void action() {
       Map<String, PerceptUpdate> perceptsCol = null;
-      DSPerceptor perceptor = new DSPerceptor();
-
       try {
         perceptsCol = PEI.getPercepts(PName, PEntity);
       } catch (PerceiveException e) {
@@ -257,6 +255,7 @@ public class DSAgent extends Agent {
 
       // FEEDBACK, result of the last action performed
 
+      DSPerceptor perceptor = new DSPerceptor();
       propagateFeedback(perceptor, newPercepts, recentIntentionExecuted);
 
       // MAP UPDATE
@@ -271,6 +270,7 @@ public class DSAgent extends Agent {
       perceptor.actualizeMap(
           PBeliefBase.getMap(),
           PBeliefBase.getOutlook(),
+          PBeliefBase.getDeleteOutlook(),
           PBeliefBase.getMap().getAgentPos((DSAgent) (this.getAgent())),
           PBeliefBase.getVision(),
           PBeliefBase.getTeamName(),

@@ -6,7 +6,6 @@ import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsMultiagent.DSGroup;
 import java.awt.*;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.concurrent.ConcurrentHashMap;
@@ -102,10 +101,10 @@ public class AntMapUpdateSingleton {
         }
 
         // ( neigh_size instead of neighCount boosts edges)
-        double res = sum / (neigh.size()+1);
+        double res = sum / (neigh.size() + 1);
         // evaporation
         res *= EVAP_COEFICIENT;
-        nextGenPheromone.put(p,res);
+        nextGenPheromone.put(p, res);
       }
     }
 
@@ -116,7 +115,7 @@ public class AntMapUpdateSingleton {
         DSCell newestAtp = groupMap.getMap().getNewestAt(p);
 
         if (newestAtp != null && nextGenPheromone.get(p) != null) {
-          newestAtp.setPheromone(nextGenPheromone.get(p));
+          // newestAtp.setPheromone(nextGenPheromone.get(p));
           LinkedList<DSCell> cellsAtPoint = groupMap.getMap().getAllAt(p);
 
           if (cellsAtPoint == null || cellsAtPoint.isEmpty()) {
@@ -126,7 +125,6 @@ public class AntMapUpdateSingleton {
           for (DSCell c : cellsAtPoint) {
             c.setPheromone(nextGenPheromone.get(p));
           }
-
         }
       }
     }

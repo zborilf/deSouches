@@ -39,7 +39,7 @@ public class DSClear extends DSAction {
 
   @Override
   public String actionText() {
-    return ("clear");
+    return ("clear "+ Pp);
   }
 
   @Override
