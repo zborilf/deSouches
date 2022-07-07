@@ -65,8 +65,7 @@ public class DSSynchronize {
             }
 
             LinkedList<Point> reverseObserv = PFriendsSeen.get(agent2);
-            // must match all observations within his range - TODO: synchronization not working yet
-            // (server issue)
+            // must match all observations within his range
             boolean match =
                 observation.stream()
                     .filter(x -> DSMap.distance(p, x) <= LOWESTVISION)

@@ -47,28 +47,24 @@ public class DSGoalExplore extends DSGoal {
     List<Point> destinations = new ArrayList<>();
     int local_priority = ROAM_PRIORITY;
 
-    // TODO: synchronization not working yet ( server issue)
-    if (false) {
-      if (agent.getActualRole().compareTo("default") == 0) {
-        // try to change role if viable
-        if (agent.getMap().getMap().getKeyType(agent.getMapPosition(), DSCell.__DSRoleArea)
-            != null) {
-          // standing at role zone -> set role
-          String role = agent.getCommander().roleNeeded(agent);
+    if (agent.getActualRole().compareTo("default") == 0) {
+      // try to change role if viable
+      if (agent.getMap().getMap().getKeyType(agent.getMapPosition(), DSCell.__DSRoleArea) != null) {
+        // standing at role zone -> set role
+        String role = agent.getCommander().roleNeeded(agent);
 
-          DSPlan plan = new DSPlan("set role " + role, 5);
-          DSAdopt adoptAction = new DSAdopt(role);
-          plan.appendAction(adoptAction);
-          PPlans.put(plan.getName(), plan);
-          return true;
-        }
+        DSPlan plan = new DSPlan("set role " + role, 5);
+        DSAdopt adoptAction = new DSAdopt(role);
+        plan.appendAction(adoptAction);
+        PPlans.put(plan.getName(), plan);
+        return true;
+      }
 
-        Point dp = agent.getMap().nearestObject(DSCell.__DSRoleArea, agent.getMapPosition());
-        if (dp != null && DSMap.distance(dp, agent.getMapPosition()) <= agent.getVisionRange()) {
-          // zone in near proximity might as well go there -> first in list, the highest prior
-          destinations.add(new Point(dp.x, dp.y));
-          local_priority += PRIORITY_BOOST;
-        }
+      Point dp = agent.getMap().nearestObject(DSCell.__DSRoleArea, agent.getMapPosition());
+      if (dp != null && DSMap.distance(dp, agent.getMapPosition()) <= agent.getVisionRange()) {
+        // zone in near proximity might as well go there -> first in list, the highest prior
+        destinations.add(new Point(dp.x, dp.y));
+        local_priority += PRIORITY_BOOST;
       }
     }
 

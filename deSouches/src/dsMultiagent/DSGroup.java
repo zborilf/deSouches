@@ -240,7 +240,6 @@ public class DSGroup {
       PGroupMap.addAgent(newMember, displacement);
       newMember.getGroup().removeAgent(newMember);
       newMember.setGroup(this);
-      newMember.mergeFlag = true;
     }
 
     //    PMaster.getCommander().groupRemoved(groupToAbsorb);
