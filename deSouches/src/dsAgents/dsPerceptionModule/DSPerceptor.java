@@ -157,12 +157,7 @@ public class DSPerceptor {
       DSCell delCell =
           new DSCell(
               c.getX() + agentPos.x, c.getY() + agentPos.y, c.getType(), c.getTimestamp(), agent);
-      // TODO for now only these are neccesarry
-      if (c.getType() == DSCell.__DSObstacle
-          || c.getType() == DSCell.__DSEntity_Friend
-          || c.getType() == DSCell.__DSEntity_Enemy) {
-        map.getMap().removeCell(delCell.getX(), delCell.getY(), delCell.getType());
-      }
+      map.getMap().removeCell(delCell.getX(), delCell.getY(), delCell.getType());
     }
 
     // outlook contains only newly seen cells -> add clear if no cell exists
@@ -171,9 +166,19 @@ public class DSPerceptor {
       for (int j = -vision + Math.abs(i); Math.abs(j) + Math.abs(i) <= vision; j++) {
         if (Math.abs(i) + Math.abs(j) > vision) continue;
 
+        // removing old moving entities as they are hard to track after merge
+        // TODO: unfortunately agents may be desynchronized after merge which was previously solved
+        // by deleteOlder
+        if (agent.mergeFlag) {
+          map.removeOlder(new Point(i + agentPos.x, j + agentPos.y), step);
+        }
+        map.removeOlder(new Point(i + agentPos.x, j + agentPos.y), step - 10);
         LinkedList<DSCell> cells = newOutlook.getAllAt(new Point(i, j));
-        if (cells != null)
+        if (cells != null) {
           for (DSCell cell : cells) {
+            // dont add self to map
+            if (cell.getType() == DSCell.__DSEntity_Friend && cell.getX() == 0 && cell.getY() == 0)
+              continue;
             DSCell newCell =
                 new DSCell(
                     cell.getX() + agentPos.x,
@@ -183,7 +188,11 @@ public class DSPerceptor {
                     agent);
             map.updateCell(newCell);
           }
+        }
       }
+    if (agent.mergeFlag) {
+      agent.mergeFlag = false;
+    }
 
     // adding clears
     for (int x = -vision; x <= vision; x++)
@@ -220,7 +229,6 @@ public class DSPerceptor {
     */
 
     Iterator<Percept> newDeletePercepts = percepts.getDeleteList().iterator();
-    BB.clearOutlook();
     BB.clearDeleteOutlook();
 
     Percept percept;
