@@ -12,6 +12,7 @@ import java.awt.*;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 
 public class DSPerceptor {
 
@@ -153,12 +154,12 @@ public class DSPerceptor {
     DSCells removedCells = deleteOutlook.getCells();
     DSCells newOutlook = outlook.getCells();
 
-    for (var c : removedCells.getCells()) {
-      DSCell delCell =
-          new DSCell(
-              c.getX() + agentPos.x, c.getY() + agentPos.y, c.getType(), c.getTimestamp(), agent);
-      map.getMap().removeCell(delCell.getX(), delCell.getY(), delCell.getType());
-    }
+    // for (var c : removedCells.getCells()) {
+    //  DSCell delCell =
+    //      new DSCell(
+    //          c.getX() + agentPos.x, c.getY() + agentPos.y, c.getType(), c.getTimestamp(), agent);
+    //  map.getMap().removeCell(delCell.getX(), delCell.getY(), delCell.getType());
+    // }
 
     // outlook contains only newly seen cells -> add clear if no cell exists
 
@@ -166,19 +167,16 @@ public class DSPerceptor {
       for (int j = -vision + Math.abs(i); Math.abs(j) + Math.abs(i) <= vision; j++) {
         if (Math.abs(i) + Math.abs(j) > vision) continue;
 
-        // removing old moving entities as they are hard to track after merge
-        // TODO: unfortunately agents may be desynchronized after merge which was previously solved
-        // by deleteOlder
-        if (agent.mergeFlag) {
-          map.removeOlder(new Point(i + agentPos.x, j + agentPos.y), step);
+        List<DSCell> old = new LinkedList<>();
+        var allAt = map.getMap().getAllAt(new Point(i + agentPos.x, j + agentPos.y));
+        if (allAt != null && !allAt.isEmpty()) {
+          old = allAt.stream().filter(x -> x.getTimestamp() <= step).toList();
         }
-        map.removeOlder(new Point(i + agentPos.x, j + agentPos.y), step - 10);
+
+        map.removeOlder(new Point(i + agentPos.x, j + agentPos.y), step);
         LinkedList<DSCell> cells = newOutlook.getAllAt(new Point(i, j));
         if (cells != null) {
           for (DSCell cell : cells) {
-            // dont add self to map
-            if (cell.getType() == DSCell.__DSEntity_Friend && cell.getX() == 0 && cell.getY() == 0)
-              continue;
             DSCell newCell =
                 new DSCell(
                     cell.getX() + agentPos.x,
@@ -186,13 +184,22 @@ public class DSPerceptor {
                     cell.getType(),
                     cell.getTimestamp(),
                     agent);
+
+            var ncell =
+                old.stream()
+                    .filter(
+                        c ->
+                            newCell.getPosition().equals(c.getPosition())
+                                && c.getType() == newCell.getType())
+                    .toList();
+            if (!ncell.isEmpty()) {
+              newCell.setPheromone(ncell.get(0).getPheromone());
+              newCell.setTimestamp(ncell.get(0).getTimestamp());
+            }
             map.updateCell(newCell);
           }
         }
       }
-    if (agent.mergeFlag) {
-      agent.mergeFlag = false;
-    }
 
     // adding clears
     for (int x = -vision; x <= vision; x++)
