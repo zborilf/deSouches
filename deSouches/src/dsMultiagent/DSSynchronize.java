@@ -43,6 +43,13 @@ public class DSSynchronize {
     synchronized void synchronizeAgents() {
       final int LOWESTVISION = 5;
 
+      // higher probability of available info
+      try {
+        wait(50);
+      } catch (InterruptedException e) {
+        throw new RuntimeException(e);
+      }
+
       for (DSAgent agent1 : PFriendsSeen.keySet()) {
         LinkedList<Point> observation = PFriendsSeen.get(agent1);
         for (Point p : observation) {
@@ -51,39 +58,28 @@ public class DSSynchronize {
           }
           Point np = new Point(-p.x, -p.y);
           DSAgent fa = null;
-          int noMatches_new = 0, noMatches = 0;
+          int noMatches = 0;
           for (DSAgent agent2 : PFriendsSeen.keySet()) {
             if (agent1 == agent2) {
               continue;
             }
 
             LinkedList<Point> reverseObserv = PFriendsSeen.get(agent2);
-            // must match all observations within his range - TODO: synchronization not working yet (server issue)
-            //boolean match =
-            //    observation.stream()
-            //        .filter(x -> DSMap.distance(p, x) <= LOWESTVISION)
-            //        .allMatch(obs -> reverseObserv.contains(new Point(-obs.x, -obs.y)));
-            //boolean reversematch =
-            //    reverseObserv.stream()
-            //        .filter(x -> DSMap.distance(np, x) <= LOWESTVISION)
-            //        .allMatch(obs -> observation.contains(new Point(-obs.x, -obs.y)));
-            //if (match && reversematch) {
-            //  noMatches_new++;
-            //   fa = agent2;
-            //}
-
-            for (Point p2 : reverseObserv)
-              if (((np.x == p2.x) && (np.y == p2.y))) {
-                noMatches++;
-                fa = agent2;
-              }
+            // must match all observations within his range - TODO: synchronization not working yet
+            // (server issue)
+            boolean match =
+                observation.stream()
+                    .filter(x -> DSMap.distance(p, x) <= LOWESTVISION)
+                    .allMatch(obs -> reverseObserv.contains(new Point(obs.x - p.x, obs.y - p.y)));
+            boolean reversematch =
+                reverseObserv.stream()
+                    .filter(x -> DSMap.distance(np, x) <= LOWESTVISION)
+                    .allMatch(obs -> observation.contains(new Point(obs.x + p.x, obs.y + p.y)));
+            if (match && reversematch) {
+              noMatches++;
+              fa = agent2;
+            }
           }
-
-          //if (noMatches_new == 1 && noMatches != noMatches_new) {
-          //  System.err.println("rozdil oproti stare verzi");
-          //  System.err.println(agent1.getEntityName() + " a " + fa.getEntityName());
-          //  System.err.println(noMatches_new + " " + noMatches);
-          //}
 
           if ((noMatches == 1) && (agent1.getGroup() != fa.getGroup()))
           // absorbuje bud mastergrupa, nebo z nemastergrup ta s mensim ID sveho mastera
@@ -91,7 +87,6 @@ public class DSSynchronize {
             if ((agent1.getGroup().isMasterGroup())
                 || ((!fa.getGroup().isMasterGroup())
                     && (agent1.getGroup().getNumber() < fa.getGroup().getNumber()))) {
-              //System.err.println("MERGE: " + fa.getEntityName() + " a " + agent1.getEntityName() + " " + np);
               Point displacement =
                   getGroupDisplacement(
                       agent1.getMapPosition(), fa.getMapPosition(), new Point(p.x, p.y));
@@ -99,14 +94,13 @@ public class DSSynchronize {
             }
           } else if ((noMatches == 1)
               && (agent1.getGroup() == fa.getGroup())
-              && DSMap.distance(agent1.getMapPosition(), fa.getMapPosition())
-                  > LOWESTVISION) {
-            //TODO: synchronization not working yet ( server issue)
+              && DSMap.distance(agent1.getMapPosition(), fa.getMapPosition()) > LOWESTVISION) {
             System.err.println(
                 "ODHAD VELIKOST MAPY x:"
                     + Math.abs(agent1.getMapPosition().x - fa.getMapPosition().x)
                     + "+"
-                    + p.x + " Y: "
+                    + p.x
+                    + " Y: "
                     + Math.abs(agent1.getMapPosition().y - fa.getMapPosition().y)
                     + "+"
                     + p.y);

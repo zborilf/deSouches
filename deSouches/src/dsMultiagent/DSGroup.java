@@ -235,11 +235,12 @@ public class DSGroup {
 
     LinkedList<DSAgent> membersCl = (LinkedList<DSAgent>) newMembers.clone();
 
-    for (DSAgent newMember : membersCl) {
+    for (var newMember : membersCl) {
       PMembers.add(newMember);
       PGroupMap.addAgent(newMember, displacement);
       newMember.getGroup().removeAgent(newMember);
       newMember.setGroup(this);
+      newMember.mergeFlag = true;
     }
 
     //    PMaster.getCommander().groupRemoved(groupToAbsorb);

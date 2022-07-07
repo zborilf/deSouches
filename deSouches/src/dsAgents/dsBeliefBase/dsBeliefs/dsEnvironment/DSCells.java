@@ -78,12 +78,26 @@ public class DSCells {
     }
   }
 
+  protected synchronized void removeOlder(Point point, int step) {
+    LinkedList<DSCell> oldList = PHashCells.get(point);
+    LinkedList<DSCell> newList = new LinkedList();
+
+    if (oldList != null) {
+      for (DSCell element : oldList)
+        if ((element.getTimestamp() > step)
+            || (((element.getType() == DSCell.__DSGoalArea)
+                || (element.getType() == DSCell.__DSRoleArea)))) {
+          newList.add(element);
+        }
+    }
+    PHashCells.put(point, newList);
+  }
+
   public synchronized void removeCell(int x, int y, int type) {
     Point point = new Point(x, y);
     LinkedList<DSCell> oldList = getAllAt(point);
     LinkedList<DSCell> newList = new LinkedList<>();
     if (oldList == null) {
-      System.err.println("TRYING TO DELETE NON EXISTING PLACE: " + x + " " + y);
       return;
     }
 

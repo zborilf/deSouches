@@ -48,6 +48,7 @@ public class DSAgent extends Agent {
   public ArrayList<Point> roamList = new ArrayList<>();
 
   AntMapUpdateSingleton antmap = AntMapUpdateSingleton.getInstance();
+  public boolean mergeFlag = false;
 
   public String getAgentName() {
     return (PBeliefBase.getName());

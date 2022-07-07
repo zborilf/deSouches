@@ -234,12 +234,6 @@ public class DSBeliefBase {
     int y = Integer.parseInt(i.next().toString());
     String type = i.next().toString();
     String params = i.next().toString();
-    // TODO ignoring markers
-    if (type.equals("marker")) {
-      return;
-    }
-    // if(type.equals("obstacle"))
-    // System.err.println("obstacle: " + x + " " + y + " " + type + " " + params + " " + PStep);
     POutlook.processAddThing(x, y, type, params, PStep, PAgent);
   }
 
@@ -249,7 +243,7 @@ public class DSBeliefBase {
     int y = Integer.parseInt(i.next().toString());
     String type = i.next().toString();
     String params = i.next().toString();
-
+    POutlook.processDeleteThing(x, y, type, params, PStep);
     PDeleteOutlook.processAddThing(x, y, type, params, PStep, PAgent);
   }
 
@@ -327,11 +321,11 @@ public class DSBeliefBase {
   }
 
   public void leavesRoleZone(Collection<Parameter> parameters) {
-    // TODO melo by byt zbytecne
     Iterator i = parameters.iterator();
     int x = Integer.parseInt(i.next().toString());
     int y = Integer.parseInt(i.next().toString());
     POutlook.processDeleteThing(x, y, "roleZone", "", PStep);
+    PDeleteOutlook.processAddThing(x, y, "roleZone", "", PStep, PAgent);
   }
 
   // 20 : __goalZone
@@ -349,6 +343,7 @@ public class DSBeliefBase {
     int x = Integer.parseInt(i.next().toString());
     int y = Integer.parseInt(i.next().toString());
     POutlook.processDeleteThing(x, y, "goalZone", "", PStep);
+    PDeleteOutlook.processAddThing(x, y, "goalZone", "", PStep, PAgent);
   }
 
   // 21 : __violation
@@ -450,10 +445,6 @@ public class DSBeliefBase {
 
   public DSAgentOutlook getOutlook() {
     return (POutlook);
-  }
-
-  public void clearOutlook() {
-    POutlook = new DSAgentOutlook();
   }
 
   public DSAgentOutlook getDeleteOutlook() {
