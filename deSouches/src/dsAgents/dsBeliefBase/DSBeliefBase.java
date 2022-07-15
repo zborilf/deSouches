@@ -34,7 +34,6 @@ public class DSBeliefBase {
   private int PHeightMap;
   private boolean PGUIFocus;
   private DSAgentOutlook POutlook;
-  private DSAgentOutlook PDeleteOutlook;
 
   private DSAgent PAgent;
   private DSGroup PGroup = null;
@@ -244,7 +243,6 @@ public class DSBeliefBase {
     String type = i.next().toString();
     String params = i.next().toString();
     POutlook.processDeleteThing(x, y, type, params, PStep);
-    PDeleteOutlook.processAddThing(x, y, type, params, PStep, PAgent);
   }
 
   // 15 : __task
@@ -325,7 +323,6 @@ public class DSBeliefBase {
     int x = Integer.parseInt(i.next().toString());
     int y = Integer.parseInt(i.next().toString());
     POutlook.processDeleteThing(x, y, "roleZone", "", PStep);
-    PDeleteOutlook.processAddThing(x, y, "roleZone", "", PStep, PAgent);
   }
 
   // 20 : __goalZone
@@ -343,7 +340,6 @@ public class DSBeliefBase {
     int x = Integer.parseInt(i.next().toString());
     int y = Integer.parseInt(i.next().toString());
     POutlook.processDeleteThing(x, y, "goalZone", "", PStep);
-    PDeleteOutlook.processAddThing(x, y, "goalZone", "", PStep, PAgent);
   }
 
   // 21 : __violation
@@ -447,14 +443,6 @@ public class DSBeliefBase {
     return (POutlook);
   }
 
-  public DSAgentOutlook getDeleteOutlook() {
-    return (PDeleteOutlook);
-  }
-
-  public void clearDeleteOutlook() {
-    PDeleteOutlook = new DSAgentOutlook();
-  }
-
   // SOCIAL
 
   public void setGroup(DSGroup group) {
@@ -539,7 +527,6 @@ public class DSBeliefBase {
     PAgent = agent;
     PRoles = new DSRoles();
     POutlook = new DSAgentOutlook();
-    PDeleteOutlook = new DSAgentOutlook();
     PSynchronizer = synchronizer;
   }
 }

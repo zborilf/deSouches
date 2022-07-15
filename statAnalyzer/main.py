@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from matplotlib import pyplot as plt
 import pandas as pd
 import seaborn as sns
@@ -23,7 +25,7 @@ def plot_knownCells(df: pd.DataFrame, fig_location: str = None,
     # graphing
     sns.set_theme()
     sns.set_context('paper')
-    sns.lineplot(x='krok', y='buňek', data=df, palette='deep').set_title('Objevených buněk napříč všemi skupinami')
+    sns.lineplot(x='krok', y='buňek', data=df, palette='deep').set_title('Objevených buněk')
     plt.tight_layout()
 
     if print_stdout:
@@ -32,6 +34,42 @@ def plot_knownCells(df: pd.DataFrame, fig_location: str = None,
         for step in steps:
             cells = df.query('krok==' + str(step))['buňek']
             print('cells->step: ', step, ' max: ', cells.max(), ' min: ', cells.min(), ' avg: ', round(cells.mean(), 2))
+
+    if fig_location:
+        if not os.path.exists(os.path.dirname(fig_location)):
+            os.makedirs(os.path.dirname(fig_location))
+        plt.savefig(fig_location)
+
+    if show_figure:
+        plt.show()
+        plt.close()
+
+
+def plot_knownCellsSum(df: pd.DataFrame, fig_location: str = None,
+                       show_figure: bool = False, print_stdout: bool = False):
+    # renaming
+    _rename = {
+        'step': 'krok',
+        'group': 'skupina',
+        'cells': 'buňek'
+    }
+    df.rename(columns=_rename, inplace=True)
+    df = df.groupby(['krok']).sum()
+    df = df.reset_index()
+
+    # graphing
+    plt.clf()
+    sns.set_theme()
+    sns.set_context('paper')
+    sns.lineplot(x='krok', y='buňek', data=df, palette='deep').set_title('Objevených buněk')
+    plt.tight_layout()
+
+    if print_stdout:
+        # print interesting values
+        steps = sorted(df['krok'].unique())
+        for step in steps:
+            cells = df.query('krok==' + str(step))['buňek']
+            print('cells->step: ', step, ' sum: ', cells.to_string(index=False))
 
     if fig_location:
         if not os.path.exists(os.path.dirname(fig_location)):
@@ -156,15 +194,55 @@ def plot_revisitedCells(df: pd.DataFrame, fig_location: str = None,
         plt.close()
 
 
+def plot_finallCellsSum(df: pd.DataFrame, fig_location: str = None,
+                        show_figure: bool = False):
+    _rename = {
+        'step': 'krok',
+        'group': 'skupina',
+        'dispenser': 'vydavač',
+        'role': 'zóna rolí',
+        'task': 'zóna úkolů',
+        'goal': 'cílová zóna'
+    }
+
+    # renaming
+
+    df.rename(columns=_rename, inplace=True)
+    df = df.melt(id_vars=['krok', 'skupina'], var_name='typ', value_name='počet')
+    df = df.groupby(['krok', 'typ']).sum()
+    df = df.reset_index()
+
+    # graphing
+    plt.clf()
+    sns.set_theme()
+    sns.set_context('paper')
+    sns.lineplot(x='krok', y='počet', data=df, palette='deep', hue='typ').set_title(
+        'Objevených neměnných míst')
+    plt.tight_layout()
+
+    if fig_location:
+        if not os.path.exists(os.path.dirname(fig_location)):
+            os.makedirs(os.path.dirname(fig_location))
+        plt.savefig(fig_location)
+
+    if show_figure:
+        plt.show()
+        plt.close()
+
+
 if __name__ == '__main__':
     df = get_dataframe(filename='knownCells.csv')
-    plot_knownCells(df=df, fig_location='figures/knownCells.svg')
+    plot_knownCells(df=df, fig_location='figures/knownCells.pdf')
+    plot_knownCellsSum(df=df, fig_location='figures/knownCellsSum.pdf')
 
     df = get_dataframe(filename='usedGroups.csv')
-    plot_usedGroups(df=df, fig_location='figures/usedGroups.svg')
+    plot_usedGroups(df=df, fig_location='figures/usedGroups.pdf')
 
     df = get_dataframe(filename='mapSize.csv')
-    plot_mapSize(df=df, fig_location='figures/mapSize.svg')
+    plot_mapSize(df=df, fig_location='figures/mapSize.pdf')
 
     df = get_dataframe(filename='revisitedCells.csv')
-    plot_revisitedCells(df=df, fig_location='figures/revisitedCells.svg')
+    plot_revisitedCells(df=df, fig_location='figures/revisitedCells.pdf')
+
+    df = get_dataframe(filename='finalBlocks.csv')
+    plot_finallCellsSum(df=df, fig_location='figures/finalBlocks.pdf')

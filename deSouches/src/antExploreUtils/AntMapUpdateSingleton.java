@@ -133,6 +133,7 @@ public class AntMapUpdateSingleton {
     stat.knownCellsStats(agent);
     stat.revisitedStats(agent);
     stat.mapSizeStats(agent);
+    stat.absoluteObjectsStats(agent);
 
     // statistics -> once in step guaranted
     synchronized (this) {

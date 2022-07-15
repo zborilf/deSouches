@@ -3,6 +3,7 @@ package antExploreUtils.stats;
 import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCells;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsMultiagent.DSGroup;
 import java.awt.*;
 import java.io.IOException;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.FileHandler;
 import java.util.logging.Formatter;
@@ -26,6 +28,8 @@ public class AntMapStatistics {
   private static final Logger loggerCells = Logger.getLogger("loggerCells");
   private static final Logger loggerRevisited = Logger.getLogger("loggerRevisited");
   private static final Logger loggerMapSize = Logger.getLogger("loggerMapSize");
+
+  private static final Logger loggerFinalBlocks = Logger.getLogger("loggerFinalBlocks");
   private static final Formatter format =
       new Formatter() {
         @Override
@@ -50,7 +54,8 @@ public class AntMapStatistics {
                   new FileHandler("logs/usedGroups.csv"),
                   new FileHandler("logs/knownCells.csv"),
                   new FileHandler("logs/revisitedCells.csv"),
-                  new FileHandler("logs/mapSize.csv")));
+                  new FileHandler("logs/mapSize.csv"),
+                  new FileHandler("logs/finalBlocks.csv")));
 
       files.forEach(x -> x.setFormatter(format));
       files.forEach(x -> x.setFormatter(format));
@@ -69,6 +74,9 @@ public class AntMapStatistics {
       loggerMapSize.setUseParentHandlers(false);
       loggerMapSize.addHandler(files.get(3));
       loggerMapSize.info("step,group,size");
+      loggerFinalBlocks.setUseParentHandlers(false);
+      loggerFinalBlocks.addHandler(files.get(4));
+      loggerFinalBlocks.info("step,group,dispenser,role,task,goal");
 
     } catch (SecurityException | IOException e) {
       e.printStackTrace();
@@ -142,6 +150,65 @@ public class AntMapStatistics {
             + cellsRevisited
             + ", "
             + allGroupCells);
+  }
+
+  private int getDeposits(List<DSCell> cellList) {
+    // i dotykem pres hranu pocitma jako jedno lozisko
+    var clone = new ArrayList<>(cellList);
+
+    int unique = 0;
+    while (!clone.isEmpty()) {
+      var current = clone.remove(0);
+
+      int lastStep = 0;
+      // var neighbours = new HashSet<>(clone.stream().filter(c ->
+      // DSMap.distance(current.getPosition(), c.getPosition()) == 1).toList());
+      var neighbours =
+          new HashSet<>(
+              clone.stream()
+                  .filter(c -> current.getPosition().distance(c.getPosition()) < 2)
+                  .toList());
+      while (neighbours.size() != lastStep) {
+        lastStep = neighbours.size();
+        var newNeighs = new ArrayList<DSCell>();
+        for (var cell : neighbours) {
+          // newNeighs.addAll(clone.stream().filter(c -> DSMap.distance(cell.getPosition(),
+          // c.getPosition()) == 1).toList());
+          newNeighs.addAll(
+              clone.stream()
+                  .filter(c -> DSMap.distance(cell.getPosition(), c.getPosition()) < 2)
+                  .toList());
+        }
+        neighbours.addAll(newNeighs);
+      }
+      clone.removeAll(neighbours);
+      unique++;
+    }
+    return unique;
+  }
+
+  public void absoluteObjectsStats(DSAgent agent) {
+    var cells = agent.getGroup().getMap().getMap().getCells();
+    final long dispensers = cells.stream().filter(c -> c.getType() >= DSCell.__DSDispenser).count();
+    var roleList = cells.stream().filter(c -> c.getType() == DSCell.__DSRoleArea).toList();
+    final long roles = getDeposits(roleList);
+    var taskList = cells.stream().filter(c -> c.getType() == DSCell.__DSTaskArea).toList();
+    final long tasks = getDeposits(taskList);
+    var goalList = cells.stream().filter(c -> c.getType() == DSCell.__DSGoalArea).toList();
+    final long goals = getDeposits(goalList);
+
+    loggerFinalBlocks.info(
+        agent.getStep()
+            + ", "
+            + agent.getGroup()
+            + ", "
+            + dispensers
+            + ", "
+            + roles
+            + ", "
+            + tasks
+            + ", "
+            + goals);
   }
 
   public void mapSizeStats(DSAgent agent) {
