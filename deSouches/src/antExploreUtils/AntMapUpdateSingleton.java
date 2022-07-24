@@ -76,7 +76,6 @@ public class AntMapUpdateSingleton {
     // systematic pass - calculate
     for (int x = tlc.x; x <= brc.x; x++) {
       for (int y = tlc.y; y <= brc.y; y++) {
-        // pheromone evaporation is automatic as it is calculated from discovery timestamp
 
         Point p = new Point(x, y);
 
