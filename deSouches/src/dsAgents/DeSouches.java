@@ -10,7 +10,7 @@ import dsMultiagent.DSSynchronize;
 import dsMultiagent.dsGroupOptions.dsGroupOption;
 import dsMultiagent.dsGroupOptions.dsGroupOptionsPool;
 import dsMultiagent.dsGroupOptions.dsGroupTaskOption;
-import dsMultiagent.dsGroupReasoning.DSCoallitionReasoning;
+import dsMultiagent.dsGroupReasoning.DSCCoalitionMaker;
 import dsMultiagent.dsScenarios.*;
 import dsMultiagent.dsTasks.DSTask;
 import eis.EnvironmentInterfaceStandard;
@@ -106,7 +106,7 @@ public class DeSouches extends Agent {
     LinkedList<LinkedList<Point>> dispensersForTypes = new LinkedList<LinkedList<Point>>();
     LinkedList<Point> dispensersForType = new LinkedList<Point>();
     LinkedList<Point> goalslLocations = new LinkedList<Point>();
-    LinkedList<LinkedList<Point>> goalZones = new LinkedList<LinkedList<Point>>();
+    LinkedList<Point> goalZones = new LinkedList<Point>();
 
     DSMap map = PSynchronizer.getMasterGroup().getMap();
     String st;
@@ -136,7 +136,6 @@ public class DeSouches extends Agent {
       PGGUI.addTask(st);
 
       goalZones = DSMap.getPointsZones(goalslLocations);
-      printPointLists(goalZones);
 
       st = "Agents: ";
       for (DSAgent agent : PSynchronizer.getMasterGroup().getMembers()) {
@@ -164,7 +163,7 @@ public class DeSouches extends Agent {
     if (possible) {
       PGGUI.addTask("TASK POSSIBLE!");
 
-      DSCoallitionReasoning.proposeTaskCoallition(workers, dispensersForTypes, goalZones);
+      new DSCCoalitionMaker().proposeTaskCoallitions(workers, dispensersForTypes, goalZones);
     }
   }
 

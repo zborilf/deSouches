@@ -141,16 +141,16 @@ public class DSMap {
     return (closed);
   }
 
-  public static LinkedList<LinkedList<Point>> getPointsZones(LinkedList<Point> cells) {
+  public static LinkedList<Point> getPointsZones(LinkedList<Point> cells) {
     /*
         Divides cells into contiguous areas
     */
-    LinkedList<LinkedList<Point>> zones = new LinkedList<LinkedList<Point>>();
+    LinkedList<Point> zones = new LinkedList<Point>();
     LinkedList<Point> zone = new LinkedList<Point>();
     while (!cells.isEmpty()) {
       zone = getZone(cells);
       for (Point cell2 : zone) cells.remove(cell2);
-      zones.add(zone);
+      zones.add(zone.getFirst());     // TODO misto getFirst heuristicky ten bod v zone,ktery je nejlepsi pro odevzdani tasku
     }
     return (zones);
   }

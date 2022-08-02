@@ -23,7 +23,7 @@ pokud jede Server (volba scenare, at to jede po iteracich), tak by se mely objev
 
 agenti nic nedelaj, protoze je to stare pro predminuly rocnik, ale zaklad by tam mel byt
 
-tymy agentu pracuji na spolecne veci, ktera je koordinovana automatem
+tymy agentu pracuji na spolecne veci, ktera je koordinovana automate
 
 pokud agent plni ulohu, plni, dokud neskonci, nebo neselze, v obou pripadech referuje deSouches, jak dopadl, ten pak na zaklade automatu dava dalsi pokyny
 

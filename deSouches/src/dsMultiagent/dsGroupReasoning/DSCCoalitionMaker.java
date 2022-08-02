@@ -1,8 +1,11 @@
 package dsMultiagent.dsGroupReasoning;
 
+import dsAgents.DSAgent;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 
 public class DSCCoalitionMaker {
     ArrayList<DSCCoalition> PCoalitions=new ArrayList<DSCCoalition>();
@@ -96,27 +99,32 @@ public class DSCCoalitionMaker {
         return(distanceManhattan(start,through)+ distanceManhattan(through,end));
     }
 
-    public void suggestCoallitions(
-            ArrayList<Point> workers,
-            ArrayList<Point> goals,
-            ArrayList<ArrayList<Point>> subtasks
+    public synchronized ArrayList<DSCCoalition> proposeTaskCoallitions(
+            LinkedList<DSAgent> agents,
+            LinkedList<LinkedList<Point>> subtasks,
+            LinkedList<Point> goals
     )       // void je prozatim
     {
-        int noSubtasks=subtasks.size();
-        System.out.println("Pocet poduloh "+noSubtasks);
-        DSCCoalitionStructures coalition= new DSCCoalitionStructures(noSubtasks);
+        ArrayList<Point> agentPositions = new ArrayList<Point>();
+        for (DSAgent agent : agents) {
+            agentPositions.add(agent.getMapPosition());
+        }
+
+        int noSubtasks = subtasks.size();
+        System.out.println("Pocet poduloh " + noSubtasks);
+        DSCCoalitionStructures coalition = new DSCCoalitionStructures(noSubtasks);
         DSCTaskItem taskItem;
         Point bestDispenser;
-        DSCCoalition coal=null;
-        ArrayList<DSCCoalition> coalitions=new ArrayList<DSCCoalition>();
+        DSCCoalition coal = null;
+        ArrayList<DSCCoalition> coalitions = new ArrayList<DSCCoalition>();
 
-        int bestPrice=-1;
+        int bestPrice = -1;
         int price;
-        int subtaskNumber=1;
-        for(Point worker:workers)
-            for(Point goal:goals) {
+        int subtaskNumber = 1;
+        for (Point worker : agentPositions)
+            for (Point goal : goals) {
                 subtaskNumber = 1;
-                for (ArrayList<Point> subtask : subtasks) {
+                for (LinkedList<Point> subtask : subtasks) {
                     bestDispenser = subtask.get(0);
                     for (Point dispenser : subtask) {
                         price = computePrice(worker, dispenser, goal);
@@ -125,18 +133,18 @@ public class DSCCoalitionMaker {
                             bestDispenser = dispenser;
                         }
                     }
-                    System.out.println(subtaskNumber+": "+worker + "/" + bestDispenser + "/" + goal + " = " + bestPrice);
-                    taskItem=new DSCTaskItem(subtaskNumber,worker,bestDispenser,goal,bestPrice);
+                    System.out.println(subtaskNumber + ": " + worker + "/" + bestDispenser + "/" + goal + " = " + bestPrice);
+                    taskItem = new DSCTaskItem(subtaskNumber, worker, bestDispenser, goal, bestPrice);
                     coalition.addToTasks(taskItem);
 
-                    coal=new DSCCoalition(noSubtasks,taskItem); // TEMP
+                    coal = new DSCCoalition(noSubtasks, taskItem); // TEMP
                     // brand new one with the new tasks
                     coalitions.add(coal);
 
                     // try to add task to every existing coals
-                    for(DSCCoalition coal2:coalitions) {
-                        if(coal2.addMember(taskItem))       // coal extended
-                            if(coal2.completeCoalition())   // and become complete
+                    for (DSCCoalition coal2 : coalitions) {
+                        if (coal2.addMember(taskItem))       // coal extended
+                            if (coal2.completeCoalition())   // and become complete
                                 //                  coal2.printCoalition();
                                 PCoalitions.add(coal2);
                     }
@@ -144,19 +152,15 @@ public class DSCCoalitionMaker {
                     bestPrice = -1;
                     subtaskNumber++;
                 }
-                subtaskNumber=1;
+                subtaskNumber = 1;
             }
 
         System.out.println("HOTOVO");
-        for(DSCCoalition coal3:PCoalitions)
+        for (DSCCoalition coal3 : PCoalitions)
             coal3.printCoalition();
 
+        return(null);
     }
 
-
-    public static void main(String[] args){
-        System.out.println("Zdarec");
-        new DSCCoalitionMaker().suggestCoallitions(workers, goals, tasks);
-    }
 
 }
