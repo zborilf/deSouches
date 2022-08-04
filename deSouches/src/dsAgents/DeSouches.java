@@ -10,6 +10,7 @@ import dsMultiagent.DSSynchronize;
 import dsMultiagent.dsGroupOptions.dsGroupOption;
 import dsMultiagent.dsGroupOptions.dsGroupOptionsPool;
 import dsMultiagent.dsGroupOptions.dsGroupTaskOption;
+import dsMultiagent.dsGroupReasoning.DSCCoalition;
 import dsMultiagent.dsGroupReasoning.DSCCoalitionMaker;
 import dsMultiagent.dsScenarios.*;
 import dsMultiagent.dsTasks.DSTask;
@@ -18,6 +19,7 @@ import eis.exceptions.ManagementException;
 import jade.core.Agent;
 import jade.core.behaviours.OneShotBehaviour;
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -30,6 +32,7 @@ public class DeSouches extends Agent {
   private static final int _busyAgentsLimit = 8;
   private static final int __max_workers = 8;
 
+  private int PTeamSize;
   private dsGUI PGUI;
   private dsGeneralGUI PGGUI;
   private DSAgent PGUIFocus;
@@ -42,6 +45,8 @@ public class DeSouches extends Agent {
   private HashMap<String, DSAgent> PRegisteredAgents;
 
   private HashMap<Integer, LinkedList<DSAgent>> PBarriers;
+  private HashMap<Integer, Boolean> PStepsDone;
+
 
   private LinkedList<DSScenario> PScenariosActive;
 
@@ -59,7 +64,12 @@ public class DeSouches extends Agent {
     //      PGroupPool.addGroup(group);
   }
 
+  public void setTeamSize(int teamSize){
+    PTeamSize=teamSize;
+  }
+
   public void groupRemoved(DSGroup group) {
+
     //      PGroupPool.removeGroup(group);
   }
 
@@ -72,8 +82,8 @@ public class DeSouches extends Agent {
     String role = "digger";
     LinkedList<DSAgent> workers = agent.getGroup().getMembersByRole("worker");
     if (workers != null) if (workers.size() >= __max_workers) return (role);
-    if (Math.random() < 0.5) role = "worker";
-    if (Math.random() < 0.5) role = "explorer";
+    if (Math.random() < 1) role = "worker";
+    // if (Math.random() < 0) role = "explorer";
     return (role);
   }
 
@@ -162,8 +172,13 @@ public class DeSouches extends Agent {
 
     if (possible) {
       PGGUI.addTask("TASK POSSIBLE!");
-
-      new DSCCoalitionMaker().proposeTaskCoallitions(workers, dispensersForTypes, goalZones);
+      // computes coalitions
+      // takse the cheapest
+      // and prints it on General GUI
+      DSCCoalition coalition=new DSCCoalitionMaker().proposeTaskCoallitions(workers, dispensersForTypes, goalZones).get(0);
+      String c2s=coalition.coalition2String();
+      PGGUI.addTask(c2s);
+      System.out.println();
     }
   }
 
@@ -185,8 +200,29 @@ public class DeSouches extends Agent {
    *       BARRIER   - of agents. True, if all the agents are in the list
    */
 
+  public boolean stepsDone(int step){
+    if(PStepsDone.keySet().contains(step))
+      return(true);
+      else
+        return(false);
+  }
+
   public synchronized void salut(int step, int phase, DSAgent agent) { // barrier
-    if (step > PLastStep) {
+
+    if (PSynchronizer
+            .addObservation(
+                    agent,
+                    agent.getStep(),
+                    agent.getOutlook().getFriendsSeen(agent.getVision()),
+                    PTeamSize))
+    {
+      // steps done
+      PStepsDone.put(agent.getStep(),true);
+      System.out.println("Step "+agent.getStep()+" done");
+      //  }
+
+      // if (step > PLastStep) {
+
       PGGUI.clearTasks();
       PLastStep = step;
       checkDeadlines(step); // TODO ... reconsider options, but only once per step
@@ -208,7 +244,6 @@ public class DeSouches extends Agent {
     if (scenario.getTask() != null) {
       System.out.println("scenario completed: " + scenario.getTask().getName());
       PSynchronizer.getMasterGroup().releaseGoalArea(scenario.getTask());
-      //   PMasterGroup.getMap().printMap("Scenario completed");
     }
     PScenariosActive.remove(scenario);
     ;
@@ -235,8 +270,6 @@ public class DeSouches extends Agent {
   */
 
   public void groupExtendedBy(DSGroup extendedGroup, DSGroup by) {
-    //    if(by==PMasterGroup)
-    //        PMasterGroup=extendedGroup;
 
     if (extendedGroup.isMasterGroup()) System.out.println("MasterGroupExtended: ");
     else System.out.println("groupExtended: ");
@@ -480,9 +513,9 @@ public class DeSouches extends Agent {
                   (DeSouches) this.getAgent(),
                   agentNo,
                   leutnant,
-                  PSynchronizer,
                   PGUI,
                   guiFocus);
+
           if (guiFocus) PGUIFocus = agent;
           guiFocus = false;
           leutnant = false;
@@ -524,6 +557,7 @@ public class DeSouches extends Agent {
     PScenariosActive = new LinkedList<DSScenario>();
     PBarriers = new HashMap<Integer, LinkedList<DSAgent>>();
     PGroupOptions = new dsGroupOptionsPool();
+    PStepsDone=new HashMap();
 
     try {
 

@@ -26,6 +26,13 @@ public class DSCCoalition {
             item.printTask();
     }
 
+    public String coalition2String(){
+        String c="Coalition:\n";
+        for(DSCTaskItem item:PMembers)
+            c=c+item.task2String();
+        return(c);
+    }
+
     public DSCCoalition(int noTasks, DSCTaskItem firstMember){
         PNOTasks=noTasks;
         PMembers=new ArrayList<DSCTaskItem>();

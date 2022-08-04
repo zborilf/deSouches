@@ -45,8 +45,6 @@ public class DSBeliefBase {
   private DSRoles PRoles;
   private DSRole PActualRole = null;
 
-  DSSynchronize PSynchronizer;
-
   private boolean PIsLeutnant = false; // obsolete in 2022
   private int PEnergy = 0;
   private DeSouches PCommander;
@@ -91,10 +89,6 @@ public class DSBeliefBase {
     return (PActualRole.getRoleName());
   }
 
-  public DSSynchronize getSynchronizer() {
-    return (PSynchronizer);
-  }
-
   // 0 : __simStart
   // INIT
 
@@ -123,6 +117,7 @@ public class DSBeliefBase {
 
   public void setTeamName(Collection<Parameter> parameters) {
     String teamName = parameters.iterator().next().toString();
+
     PTeamName = teamName;
   }
 
@@ -134,6 +129,7 @@ public class DSBeliefBase {
 
   public void setTeamSize(Collection<Parameter> parameters) {
     int teamSize = Integer.parseInt(parameters.iterator().next().toString());
+    PCommander.setTeamSize(teamSize);
     PTeamSize = teamSize;
   }
 
@@ -535,11 +531,10 @@ public class DSBeliefBase {
     //        return(PMap.nearestObject(DSCell.__DSGoalArea,new Point(0,0)));
   }
 
-  public DSBeliefBase(DSAgent agent, DSSynchronize synchronizer) {
+  public DSBeliefBase(DSAgent agent) {
     PAgent = agent;
     PRoles = new DSRoles();
     POutlook = new DSAgentOutlook();
     PDeleteOutlook = new DSAgentOutlook();
-    PSynchronizer = synchronizer;
   }
 }

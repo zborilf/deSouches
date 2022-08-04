@@ -134,7 +134,15 @@ public class DSCCoalitionMaker {
                         }
                     }
                     System.out.println(subtaskNumber + ": " + worker + "/" + bestDispenser + "/" + goal + " = " + bestPrice);
-                    taskItem = new DSCTaskItem(subtaskNumber, worker, bestDispenser, goal, bestPrice);
+                    DSAgent workerAgent=null;
+
+                    // find agent from 'agents' by position 'worker'
+                    for(DSAgent workerAgent2:agents){
+                        if((workerAgent2.getMapPosition().getX()==worker.x)&&
+                                (workerAgent2.getMapPosition().getY()==worker.y))
+                            workerAgent=workerAgent2;
+                    }
+                    taskItem = new DSCTaskItem(subtaskNumber, workerAgent, worker, bestDispenser, goal, bestPrice);
                     coalition.addToTasks(taskItem);
 
                     coal = new DSCCoalition(noSubtasks, taskItem); // TEMP
@@ -159,7 +167,7 @@ public class DSCCoalitionMaker {
         for (DSCCoalition coal3 : PCoalitions)
             coal3.printCoalition();
 
-        return(null);
+        return(PCoalitions);
     }
 
 

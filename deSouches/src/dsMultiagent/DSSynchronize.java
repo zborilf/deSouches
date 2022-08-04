@@ -6,6 +6,8 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.LinkedList;
 
+import static dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell.*;
+
 public class DSSynchronize {
   private static final String TAG = "DSSynchronize";
 
@@ -34,21 +36,41 @@ public class DSSynchronize {
     x1+Dx=x2+Dsx a y1+Dy=y2’+Dsy. Proto Dsx=x1+Dx-x2’ a Dsy=y1+Dy-y2’. Což je posunutí [x1+Dx-x2’, y1+Dy-y2’].
     */
 
+    boolean masterGroupCandidate(DSGroup group){
+      // chceck whether this group is good enaugh to be
+      // when NOAgents > 5 TODO ... udelat chytreji
+      int ga=group.getMap().getMap().getAllType(__DSGoalArea).size();
+      int za=group.getMap().getMap().getAllType(__DSRoleArea).size();
+      int d0=group.getMap().getMap().getAllType(__DSDispenser+0).size();
+      int d1=group.getMap().getMap().getAllType(__DSDispenser+1).size();
+      int d2=group.getMap().getMap().getAllType(__DSDispenser+2).size();
+
+      if(((ga*za*d0*d1*d2)>0) && (group.getMembers().size()>5)) {
+        PMasterGroup=group;
+        group.setMasterGroup();
+      }
+
+      return(false);
+    }
+
     Point getGroupDisplacement(Point agG1Pos, Point agG2Pos, Point agDisplacement) {
       return (new Point(
-          (int) (agG1Pos.getX() + agDisplacement.x - agG2Pos.getX()),
-          (int) (agG1Pos.getY() + agDisplacement.y - agG2Pos.getY())));
+              (int) (agG1Pos.getX() + agDisplacement.x - agG2Pos.getX()),
+              (int) (agG1Pos.getY() + agDisplacement.y - agG2Pos.getY())));
     }
+
 
     synchronized void synchronizeAgents() {
       final int LOWESTVISION = 5;
 
       // higher probability of available info
+
       try {
         wait(50);
       } catch (InterruptedException e) {
         throw new RuntimeException(e);
       }
+
 
       for (DSAgent agent1 : PFriendsSeen.keySet()) {
         LinkedList<Point> observation = PFriendsSeen.get(agent1);
@@ -67,13 +89,13 @@ public class DSSynchronize {
             LinkedList<Point> reverseObserv = PFriendsSeen.get(agent2);
             // must match all observations within his range
             boolean match =
-                observation.stream()
-                    .filter(x -> DSMap.distance(p, x) <= LOWESTVISION)
-                    .allMatch(obs -> reverseObserv.contains(new Point(obs.x - p.x, obs.y - p.y)));
+                    observation.stream()
+                            .filter(x -> DSMap.distance(p, x) <= LOWESTVISION)
+                            .allMatch(obs -> reverseObserv.contains(new Point(obs.x - p.x, obs.y - p.y)));
             boolean reversematch =
-                reverseObserv.stream()
-                    .filter(x -> DSMap.distance(np, x) <= LOWESTVISION)
-                    .allMatch(obs -> observation.contains(new Point(obs.x + p.x, obs.y + p.y)));
+                    reverseObserv.stream()
+                            .filter(x -> DSMap.distance(np, x) <= LOWESTVISION)
+                            .allMatch(obs -> observation.contains(new Point(obs.x + p.x, obs.y + p.y)));
             if (match && reversematch) {
               noMatches++;
               fa = agent2;
@@ -84,29 +106,33 @@ public class DSSynchronize {
           // absorbuje bud mastergrupa, nebo z nemastergrup ta s mensim ID sveho mastera
           {
             if ((agent1.getGroup().isMasterGroup())
-                || ((!fa.getGroup().isMasterGroup())
+                    || ((!fa.getGroup().isMasterGroup())
                     && (agent1.getGroup().getNumber() < fa.getGroup().getNumber()))) {
               Point displacement =
-                  getGroupDisplacement(
-                      agent1.getMapPosition(), fa.getMapPosition(), new Point(p.x, p.y));
+                      getGroupDisplacement(
+                              agent1.getMapPosition(), fa.getMapPosition(), new Point(p.x, p.y));
               agent1.getGroup().absorbGroup(fa.getGroup(), displacement);
+              if(PMasterGroup==null)
+                masterGroupCandidate(agent1.getGroup());
             }
           } else if ((noMatches == 1)
-              && (agent1.getGroup() == fa.getGroup())
-              && DSMap.distance(agent1.getMapPosition(), fa.getMapPosition()) > LOWESTVISION) {
+                  && (agent1.getGroup() == fa.getGroup())
+                  && DSMap.distance(agent1.getMapPosition(), fa.getMapPosition()) > LOWESTVISION) {
             System.err.println(
-                "ODHAD VELIKOST MAPY x:"
-                    + Math.abs(agent1.getMapPosition().x - fa.getMapPosition().x)
-                    + "+"
-                    + p.x
-                    + " Y: "
-                    + Math.abs(agent1.getMapPosition().y - fa.getMapPosition().y)
-                    + "+"
-                    + p.y);
+                    "ODHAD VELIKOST MAPY x:"
+                            + Math.abs(agent1.getMapPosition().x - fa.getMapPosition().x)
+                            + "+"
+                            + p.x
+                            + " Y: "
+                            + Math.abs(agent1.getMapPosition().y - fa.getMapPosition().y)
+                            + "+"
+                            + p.y);
           }
         }
       }
     }
+
+
 
     void addFriends(DSAgent agent, LinkedList<Point> friends) {
       PFriendsSeen.put(agent, friends);
@@ -118,15 +144,25 @@ public class DSSynchronize {
   }
 
   // observations for agent synchronization
-  public synchronized void addObservation(
+  public synchronized boolean addObservation(
       DSAgent agent, int step, LinkedList<Point> observation, int teamSize) {
+
     DSFriendsSeen dsfs = PObservations.get(step);
     if (dsfs == null) dsfs = new DSFriendsSeen();
     // agent vidi pratele na vzdalenosti observation
     dsfs.addFriends(agent, observation);
     PObservations.put(step, dsfs);
-    if (dsfs.isComplete(teamSize)) dsfs.synchronizeAgents();
+
+
+    if (dsfs.isComplete(teamSize)) {
+      dsfs.synchronizeAgents();
+      return(true);
+    }
+    return(false);
   }
+
+
+  /*
 
   public synchronized DSMap synchronizePosition(
       DSAgent agent, int absX, int absY) { // agent nastavi jako PMAp
@@ -168,4 +204,8 @@ public class DSSynchronize {
     PMasterGroup.absorbGroup(agent.getGroup(), new Point(0, 0)); // already shifted
     return (PMasterMap);
   }
+
+   */
+
+
 }

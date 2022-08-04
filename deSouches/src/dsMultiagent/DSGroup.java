@@ -30,11 +30,14 @@ public class DSGroup {
 
   public void setMasterGroup() {
     PMasterGroup = true;
+    PGroupMap.setMasterMap();
   }
 
   public boolean isMasterGroup() {
     return (PMasterGroup);
   }
+
+  public int getGroupSize() { return(PMembers.size());}
 
   public LinkedList<DSAgent> getMembers() {
     return (PMembers);

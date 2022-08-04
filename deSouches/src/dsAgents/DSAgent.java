@@ -3,6 +3,7 @@ package dsAgents;
 import antExploreUtils.AntMapUpdateSingleton;
 import deSouches.utils.HorseRider;
 import dsAgents.dsBeliefBase.DSBeliefBase;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSAgentOutlook;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsPerceptionModule.DSPerceptor;
@@ -25,6 +26,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+
+import static dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell.*;
+import static dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell.__DSDispenser;
 
 public class DSAgent extends Agent {
   private static final String TAG = "DSAgent";
@@ -52,6 +56,11 @@ public class DSAgent extends Agent {
   public String getAgentName() {
     return (PBeliefBase.getName());
   }
+
+  public int getVision() { return(PBeliefBase.getVision()); }
+
+  public DSAgentOutlook getOutlook() { return(PBeliefBase.getOutlook()); }
+
 
   public String getJADEAgentName() {
     return (PBeliefBase.getJADEName());
@@ -205,9 +214,14 @@ public class DSAgent extends Agent {
     PBeliefBase.setGUIFocus(false);
   }
 
+
+
   /*
+   *
    *                CONTROL LOOP
+   *
    */
+
 
   public void propagateFeedback(
       DSPerceptor perceptor, Collection<Percept> newPercepts, DSIntention recentIntentionExecuted) {
@@ -219,6 +233,35 @@ public class DSAgent extends Agent {
     }
   }
 
+
+  /*
+            AGENT CONTROL LOOP
+   */
+
+
+  /*
+        LOOP
+          % sensing
+            S1, GET SENSOR DATA - PERCEPTS
+            S2, PROCESS PERCEPTS (one by one)
+            S3, PROPAGATE FEEDBACK (nejde to dat do process percepts?)
+            S4, UPDATE MAP (Using Outlook created in S2
+            S5, UPDATE PHERMONE MAP
+             6, PRINT . AGENT GUI
+            C7, SALUT COMANDER
+            C8, RAISE 'NOTHING CARYING' EVENT ... PROB TO HANDLE CLEAR ATTACK
+            C9, CHECK DEADLOCK, AGENT IS NOT MOVING, CANCEL SCENARIO (move to C7)?
+            C10, CHECK AGENT DISABLED -> INFORM COMANDER
+            C11, SYNCHRONIZER, REPORT OBSERVATION, POSSIBLY MERGE MAPS
+
+            E12, IF INTENTION FAILED -> INFORM
+            E13, IF INTENTION COMPLETED -> INFORM
+            E14, IF NO SCENARIO and NO INTENTION -> ASK FOR JOB
+            E15, EXECUTE, IF THERE IS SOMETHING TO DO
+
+
+  */
+
   public class controlLoop extends CyclicBehaviour {
 
     DSAgent agent;
@@ -227,6 +270,13 @@ public class DSAgent extends Agent {
 
     public void action() {
       Map<String, PerceptUpdate> perceptsCol = null;
+
+
+      /*
+                  SENSING
+       */
+
+
       try {
         perceptsCol = PEI.getPercepts(PName, PEntity);
       } catch (PerceiveException e) {
@@ -245,8 +295,6 @@ public class DSAgent extends Agent {
 
       // percepts not empty ↓↓↓
 
-      // SENSING
-
       DSPerceptor.processPercepts(PBeliefBase, percepts);
 
       Collection<Percept> newPercepts = percepts.getAddList(); // TODO ??
@@ -258,9 +306,9 @@ public class DSAgent extends Agent {
       DSPerceptor perceptor = new DSPerceptor();
       propagateFeedback(perceptor, newPercepts, recentIntentionExecuted);
 
-      // MAP UPDATE
-
-      Point myPos = PBeliefBase.getAgentPosition();
+      /*
+                  MAP UPDATE
+       */
 
       //         PBeliefBase.getMap().clearArea(PBeliefBase.getVision(), myPos,
       // PBeliefBase.getStep());
@@ -284,16 +332,26 @@ public class DSAgent extends Agent {
 
         PBeliefBase.getGUI()
             .setXY(PBeliefBase.getAgentPosition().x, PBeliefBase.getAgentPosition().y);
+        DSMap map=PBeliefBase.getMap();
+        int ga=map.getMap().getAllType(__DSGoalArea).size();
+        int za=map.getMap().getAllType(__DSRoleArea).size();
+        int d0=map.getMap().getAllType(__DSDispenser+0).size();
+        int d1=map.getMap().getAllType(__DSDispenser+1).size();
+        int d2=map.getMap().getAllType(__DSDispenser+2).size();
+
+
         PBeliefBase.getGUI()
             .setTextMap(
                 "MAP:"
-                    + PBeliefBase.getMap().getOwnerName()
+                    + map.getOwnerName()
                     + "\n"
-                    + PBeliefBase.getMap().isMasterMap()
+                    + map.isMasterMap()
                     + "\n"
                     + PBeliefBase.getAgentPosition()
                     + "\n"
-                    + PBeliefBase.getMap().stringMap());
+                    + ga + "/" + za + "/"+ d0 + "/"+ d1 + "/"+ d2 + "/ \n"
+                    + map.stringMap());
+
         PBeliefBase.getGUI()
             .setPheromoneTextMap(
                 "PHEROMONE MAP:"
@@ -311,7 +369,13 @@ public class DSAgent extends Agent {
 
       PBeliefBase.getCommander().salut(PBeliefBase.getStep(), 0, (DSAgent) this.getAgent());
 
+      this.getAgent().doWait(50);
+
       perceptor.getBodyFromPercepts(percepts.getAddList());
+
+      /*
+              C8
+       */
 
       // tady nechapu, o co jde
       if (!perceptor.seesBlocksInBody(percepts.getAddList()))
@@ -322,6 +386,16 @@ public class DSAgent extends Agent {
       //  == DEADLOCK ==
 
       // not moving period ++, deadlock detection
+
+
+       /*
+            C9
+       */
+
+
+      Point myPos = PBeliefBase.getAgentPosition();
+
+
       if ((myPos.x == PLastPosition.x) && (myPos.y == PLastPosition.y)) PIdleSteps++;
       else {
         PIdleSteps = 0;
@@ -339,24 +413,40 @@ public class DSAgent extends Agent {
           //                  getScenario().getAgentsAllocatedText());
         }
 
-      // agent disabled? Inform and dont execute
+      // agent disabled? Inform and don§t execute
       if (perceptor.disabled(newPercepts)) {
         PBeliefBase.getCommander().agentDisabled((DSAgent) this.getAgent());
         return;
       }
+
+
+      // report spatrenych pratel, skrz mapu -> vede na merge group
+
+      /*
+              C11
+       */
+
+      /*
+
+       presunuto do Salutu
+
+
+      PBeliefBase.getSynchronizer()
+              .addObservation(
+                      (DSAgent) this.getAgent(),
+                      PBeliefBase.getStep(),
+                      PBeliefBase.getOutlook().getFriendsSeen(PBeliefBase.getVision()),
+                      PBeliefBase.getTeamSize());
+      */
 
       // EXECUTION
       // vyber zameru
       // vykonani zameru
       // report uspesneho/neuspesneho ukonceni nasledovani zameru
 
-      // report spatrenych pratel, skrz mapu -> vede na merge group
-      PBeliefBase.getSynchronizer()
-          .addObservation(
-              (DSAgent) this.getAgent(),
-              PBeliefBase.getStep(),
-              PBeliefBase.getOutlook().getFriendsSeen(PBeliefBase.getVision()),
-              PBeliefBase.getTeamSize());
+      // MUSI BYT PREDTIM ZPRACOVANY VSTUPY VSECH AGENTU, KVULI SYNCHRONIZACI!!!!
+
+
 
       if (recentIntentionExecuted != null) {
         if (recentIntentionExecuted.intentionState() == DSIntention.__Intention_Finished) {
@@ -415,7 +505,7 @@ public class DSAgent extends Agent {
       DeSouches commander,
       int number,
       boolean leutnant,
-      DSSynchronize synchronizer,
+   //   DSSynchronize synchronizer,
       dsGUI gui,
       boolean guiFocus) {
     super();
@@ -428,7 +518,7 @@ public class DSAgent extends Agent {
     PIntentionPool = new DSIntentionPool(); // set of intentions
     PSynchronized = new HashMap<DSAgent, Point>(); // ???
 
-    PBeliefBase = new DSBeliefBase(this, synchronizer); // new BB for the agent
+    PBeliefBase = new DSBeliefBase(this); //, synchronizer); // new BB for the agent
 
     PBeliefBase.setGUI(gui);
     PBeliefBase.setGUIFocus(guiFocus);
