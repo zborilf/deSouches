@@ -3,17 +3,21 @@ import java.util.ArrayList;
 
 public class DSCCoalition {
     private final int PNOTasks;
-    private ArrayList<DSCTaskItem> PMembers;
+    private ArrayList<DSCCoalitionMember> PMembers;
 
-    public boolean addMember(DSCTaskItem member){
+    public boolean addMember(DSCCoalitionMember member){
         // only when goal matches, taskID is unique
-        if(PMembers.get(0).getPGoal()!=member.getPGoal())
+        if(PMembers.get(0).getGoal()!=member.getGoal())
             return(false);
-        for(DSCTaskItem oldMember:PMembers)
-            if((oldMember.getPTaskID()==member.getPTaskID())||(oldMember.getPAgentPosition()==member.getPAgentPosition()))
+        for(DSCCoalitionMember oldMember:PMembers)
+            if((oldMember.getTaskID()==member.getTaskID())||(oldMember.getAgentPosition()==member.getAgentPosition()))
                 return(false);
         PMembers.add(member);
         return(true);
+    }
+
+    public ArrayList<DSCCoalitionMember> getCoalitionMembers() {
+        return PMembers;
     }
 
     public boolean completeCoalition(){
@@ -22,20 +26,20 @@ public class DSCCoalition {
 
     public void printCoalition(){
         System.out.println("Coalition:");
-        for(DSCTaskItem item:PMembers)
+        for(DSCCoalitionMember item:PMembers)
             item.printTask();
     }
 
     public String coalition2String(){
         String c="Coalition:\n";
-        for(DSCTaskItem item:PMembers)
+        for(DSCCoalitionMember item:PMembers)
             c=c+item.task2String();
         return(c);
     }
 
-    public DSCCoalition(int noTasks, DSCTaskItem firstMember){
+    public DSCCoalition(int noTasks, DSCCoalitionMember firstMember){
         PNOTasks=noTasks;
-        PMembers=new ArrayList<DSCTaskItem>();
+        PMembers=new ArrayList<DSCCoalitionMember>();
         PMembers.add(firstMember);
     }
 }

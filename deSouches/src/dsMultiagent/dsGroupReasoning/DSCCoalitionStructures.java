@@ -6,15 +6,15 @@ import java.util.Comparator;
 public class DSCCoalitionStructures {
 
     int PNOTasks;
-    ArrayList<DSCTaskItem> PTasks;
-    ArrayList<DSCTaskItem> PCoalition;
+    ArrayList<DSCCoalitionMember> PTasks;
+    ArrayList<DSCCoalitionMember> PCoalition;
 
 
-    class dscComparator implements Comparator<DSCTaskItem> {
-        public int compare(DSCTaskItem item1, DSCTaskItem item2){
-            if(item1.getPPrice()>item2.getPPrice())
+    class dscComparator implements Comparator<DSCCoalitionMember> {
+        public int compare(DSCCoalitionMember item1, DSCCoalitionMember item2){
+            if(item1.getPrice()>item2.getPrice())
                 return(1);
-            if(item1.getPPrice()<item2.getPPrice())
+            if(item1.getPrice()<item2.getPrice())
                 return(-1);
             return(0);
         }
@@ -24,22 +24,22 @@ public class DSCCoalitionStructures {
         }
     }
 
-    public boolean addToTasks(DSCTaskItem item){
+    public boolean addToTasks(DSCCoalitionMember item){
         int i=0;
-        while((i<PTasks.size())&&(item.getPPrice()>PTasks.get(i).getPPrice()))
+        while((i<PTasks.size())&&(item.getPrice()>PTasks.get(i).getPrice()))
             i++;
         PTasks.add(i,item);
         return(true);
     }
 
     public void printTasks(){
-        for(DSCTaskItem item:PTasks)
+        for(DSCCoalitionMember item:PTasks)
             item.printTask();
     }
 
     public DSCCoalitionStructures(int noTasks){
         PNOTasks=noTasks;
-        PTasks=new ArrayList<DSCTaskItem>();
+        PTasks=new ArrayList<DSCCoalitionMember>();
     }
 
 

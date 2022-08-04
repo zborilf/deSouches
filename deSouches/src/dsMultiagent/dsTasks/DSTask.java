@@ -2,15 +2,12 @@ package dsMultiagent.dsTasks;
 
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
+
+import java.awt.*;
 import java.util.LinkedList;
 
 public class DSTask {
 
-  static final int __DSTMaster = 1;
-  static final int __DSTCaptain = 2;
-  static final int __DSTSoldier1 = 3;
-  static final int __DSTSoldier2 = 4;
-  static final int __DSTSoldier3 = 5;
 
   protected String PTaskName;
   int PDeadline;
@@ -18,9 +15,40 @@ public class DSTask {
   DSTaskType PTaskType;
   DSBody PTaskBody;
   LinkedList<Integer> PTypesNeeded;
+  DSTaskMember[] PSubtaskRoutes={null,null,null,null};
 
   public String getName() {
     return (PTaskName);
+  }
+
+  public void setSubtaskRoute(int subtaskNumber, DSTaskMember PSubtaskRoute) {
+    this.PSubtaskRoutes[subtaskNumber] = PSubtaskRoute;
+  }
+
+  public String task2String(int step){
+    String t="Task type "+PTaskType+"\n";
+    t=t+">> task body "+"at "+PTaskBody.bodyToString()+"\n";
+    for(int i=0; i<PTypesNeeded.size();i++) {
+      t=t+">>> Type needed <"+PTypesNeeded.get(i)+
+              ">\n>>>> route: ";
+      t=t+PSubtaskRoutes[i].taskMember2String()+" ["+PSubtaskRoutes[i].costEstimation() +"]\n";
+    }
+    t=t+">>>> deadline at: "+PDeadline+", remains: "+(PDeadline-step)+"\n";
+    t=t+">>>> cost estimated to "+subtaskCostEstimation()+"\n\n";
+    return(t);
+  }
+
+  public int subtaskCostEstimation() {
+    int ce = PSubtaskRoutes[0].costEstimation();
+    for (int i = 1; i < PTypesNeeded.size(); i++) {
+      if (ce < PSubtaskRoutes[i].costEstimation())
+        ce = PSubtaskRoutes[i].costEstimation();
+    }
+    return(ce);
+  }
+
+  public DSTaskMember getSubtaskRoutes(int subtaskNumber) {
+    return PSubtaskRoutes[subtaskNumber];
   }
 
   public LinkedList<Integer> getTypesNeeded() {

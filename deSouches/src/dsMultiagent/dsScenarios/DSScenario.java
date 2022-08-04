@@ -19,7 +19,6 @@ public abstract class DSScenario {
 
   DeSouches PCommander;
   int PTaskType;
-  DSGroup PGroup;
   int PScenarioType;
 
   DSTask PTask;
@@ -71,10 +70,12 @@ public abstract class DSScenario {
     return (true);
   }
 
-  public DSScenario(DeSouches commander, DSGroup group, DSTask task, int taskType) {
-    PTaskType = taskType;
+  public DSScenario(DeSouches commander, DSTask task) {
+    if(task==null)
+      PTaskType=-1;
+    else
+      PTaskType = task.getTaskTypeNumber();
     PCommander = commander;
-    PGroup = group;
     PTask = task;
     PAgentsAllocated = new LinkedList<DSAgent>();
     if (task != null) PScenarioType = task.getTaskTypeNumber();

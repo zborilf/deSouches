@@ -198,35 +198,29 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
     return (false);
   }
 
-  boolean allocateAgents(int step) {
+  boolean allocateAgents() {
 
-    Point positionG;
+    PMasterGoalPos = PTask.getSubtaskRoutes(0).getGoalPosition();
 
-    positionG =
-        PGroup.getGoalArea(PTask, step); // PGroup.allObjects(DSCell.__DSGoalArea).getFirst();
-    if (positionG == null) return (false);
+    PMaster = PTask.getSubtaskRoutes(0).getAgent();
+    PTask.getTaskType().setMaster(PMaster);
+    PLeutnant1 = PTask.getSubtaskRoutes(1).getAgent();
+    PTask.getTaskType().setLeutnant1(PLeutnant1);
+    PLeutnant2 = PTask.getSubtaskRoutes(2).getAgent();
+    PTask.getTaskType().setLeutnant2(PLeutnant2);
 
-    PMasterGoalPos = positionG;
-
-    DSOptimizer optim =
-        new DSOptimizer(PGroup.getFreeAgents(PPriority), positionG, PTask, PGroup.getMap());
-    LinkedList<DSODispenserGoalMission> missions = optim.getOptimalAgents();
-
-    PMaster = missions.get(0).getAgent();
-    PTaskType.setMaster(PMaster);
-    PLeutnant1 = missions.get(1).getAgent();
-    PTaskType.setLeutnant1(PLeutnant1);
-    PLeutnant2 = missions.get(2).getAgent();
-    PTaskType.setLeutnant2(PLeutnant2);
     PAgentsAllocated.add(PMaster);
     PAgentsAllocated.add(PLeutnant1);
     PAgentsAllocated.add(PLeutnant2);
-    PMasterDispenserPos = missions.get(0).getDispenserPosition();
-    PLeutnant1DispenserPos = missions.get(1).getDispenserPosition();
-    PLeutnant2DispenserPos = missions.get(2).getDispenserPosition();
-    PType1 = missions.get(0).getDispenserType();
-    PType2 = missions.get(1).getDispenserType();
-    PType3 = missions.get(2).getDispenserType();
+
+    PMasterDispenserPos = PTask.getSubtaskRoutes(0).getDispenserPosition();
+    PLeutnant1DispenserPos = PTask.getSubtaskRoutes(1).getDispenserPosition();
+    PLeutnant2DispenserPos = PTask.getSubtaskRoutes(2).getDispenserPosition();
+
+    PType1 = PTask.getTypesNeeded().get(0);
+    PType2 = PTask.getTypesNeeded().get(1);
+    PType3 = PTask.getTypesNeeded().get(2);
+
     PLeutnant1GoalPos = PTaskType.formationPosition(PLeutnant1, PMasterGoalPos);
     PLeutnant2GoalPos = PTaskType.formationPosition(PLeutnant2, PMasterGoalPos);
 
@@ -236,7 +230,7 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
   @Override
   public boolean initScenario(int step) {
 
-    if (!allocateAgents(step)) return (false);
+    if (!allocateAgents()) return (false);
     // posunout leutnanty na spravnou goalpozici
 
     // nastavit goalbody
@@ -308,8 +302,8 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
     return (true);
   }
 
-  public DSSThreeBlocks(DeSouches commander, DSGroup group, DSTask task, int taskType) {
-    super(commander, group, task, taskType);
+  public DSSThreeBlocks(DeSouches commander, DSTask task) {
+    super(commander, task);
     PPriority = 2;
     PTaskType = task.getTaskType();
   }

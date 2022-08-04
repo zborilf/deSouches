@@ -85,7 +85,7 @@ public class DSSSeekAndDestroy extends DSScenario {
   }
 
   public DSSSeekAndDestroy(DSAgent agent) {
-    super(agent.getCommander(), agent.getGroup(), null, 0);
+    super(agent.getCommander(),  null);
     PAgent = agent;
   }
 }

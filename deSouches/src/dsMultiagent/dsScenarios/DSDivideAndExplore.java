@@ -94,7 +94,7 @@ public class DSDivideAndExplore extends DSScenario {
   }
 
   public DSDivideAndExplore(DSAgent agent, int radius) {
-    super(agent.getCommander(), agent.getGroup(), null, 0);
+    super(agent.getCommander(),  null);
     PAreas = new HashMap<DSAgent, Rectangle>();
     PAgent = agent;
     PAgentsAllocated = new LinkedList<DSAgent>();

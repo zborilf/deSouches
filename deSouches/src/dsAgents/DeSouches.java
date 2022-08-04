@@ -12,14 +12,15 @@ import dsMultiagent.dsGroupOptions.dsGroupOptionsPool;
 import dsMultiagent.dsGroupOptions.dsGroupTaskOption;
 import dsMultiagent.dsGroupReasoning.DSCCoalition;
 import dsMultiagent.dsGroupReasoning.DSCCoalitionMaker;
+import dsMultiagent.dsGroupReasoning.DSCCoalitionMember;
 import dsMultiagent.dsScenarios.*;
 import dsMultiagent.dsTasks.DSTask;
+import dsMultiagent.dsTasks.DSTaskMember;
 import eis.EnvironmentInterfaceStandard;
 import eis.exceptions.ManagementException;
 import jade.core.Agent;
 import jade.core.behaviours.OneShotBehaviour;
 import java.awt.*;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -28,9 +29,11 @@ import massim.eismassim.EnvironmentInterface;
 public class DeSouches extends Agent {
 
   private static final String TAG = "DeSouches";
-  private static final int _timeNeeded = 80;
+  private static final int _timeNeeded = 40;
   private static final int _busyAgentsLimit = 8;
   private static final int __max_workers = 8;
+
+  private boolean PMakamNaUloze=false;
 
   private int PTeamSize;
   private dsGUI PGUI;
@@ -100,16 +103,19 @@ public class DeSouches extends Agent {
     }
   }
 
-  void checkTask(LinkedList<Integer> types) {
+  DSCCoalition checkTask(DSTask task) {
 
     /*
     toto je bastl, opravit po ladeni, vyhodit
      */
 
+    DSCCoalition coalition=null;
+    LinkedList<Integer> types=task.getTypesNeeded();
+
     boolean possible = true;
     if (PSynchronizer.getMasterGroup() == null) {
-      PGGUI.addTask("Neni mastergrupa");
-      return;
+      PGGUI.addTask("No Mastergroup");
+      return(coalition);
     }
 
     LinkedList<DSAgent> workers = new LinkedList<DSAgent>();
@@ -170,17 +176,61 @@ public class DeSouches extends Agent {
         // not enaugh workers
         possible = false;
 
+
     if (possible) {
       PGGUI.addTask("TASK POSSIBLE!");
       // computes coalitions
-      // takse the cheapest
-      // and prints it on General GUI
-      DSCCoalition coalition=new DSCCoalitionMaker().proposeTaskCoallitions(workers, dispensersForTypes, goalZones).get(0);
-      String c2s=coalition.coalition2String();
-      PGGUI.addTask(c2s);
-      System.out.println();
+      // takse the cheapest ( get(0) )
+      // prints it on General GUI
+      // and finally modify 'subtasks' in the 'task' properly
+
+      coalition=
+              new DSCCoalitionMaker().proposeTaskCoallitions(workers, dispensersForTypes, goalZones).get(0);
+
     }
+
+    return(coalition);
   }
+
+  /*
+        Execute selected and prepared task
+   */
+
+  boolean executeTask(DSTask task){
+
+    int taskType = task.getTaskTypeNumber();
+
+
+    if (!PActiveTasks.contains(task.getName()))
+
+      PActiveTasks.add(task.getName());
+
+
+    if (taskType <= 3){
+      DSSTwoBlocks twoBlocks = new DSSTwoBlocks(this, task);
+      twoBlocks.initScenario(PLastStep);
+      PScenariosActive.add(twoBlocks);
+      return (true);
+    }
+
+    if (taskType <= 18) {
+      DSSThreeBlocks threeBlocks = new DSSThreeBlocks(this, task);
+      threeBlocks.initScenario(PLastStep);
+      PScenariosActive.add(threeBlocks);
+      return (true);
+    }
+
+    if (taskType <= 42) {
+      DSSFourBlocks fourBlocks= new DSSFourBlocks(this, task);
+      fourBlocks.initScenario(PLastStep);
+      PScenariosActive.add(fourBlocks);
+      return (true);
+    }
+
+    return (false);
+  }
+
+
 
   void groupReasoning() {
     for (dsGroupOption option : PGroupOptions.getOptions())
@@ -191,9 +241,29 @@ public class DeSouches extends Agent {
         //           PGGUI.addTask("Je treba resit " + task.getName() +
         //                   " deadline " + task.getDeadline() + " pozadavky " +
         // task.getTypesNeeded().toString());
-        checkTask(task.getTypesNeeded());
-        //       }
-      }
+        DSCCoalition coalition=checkTask(task);
+        if(coalition!=null) {
+
+          DSTaskMember tmember;
+          for (DSCCoalitionMember cmember : coalition.getCoalitionMembers()) {
+            tmember = new DSTaskMember(cmember.getAgent(), cmember.getPDispenser(), cmember.getGoal());
+            task.setSubtaskRoute(cmember.getTaskID() - 1, tmember);
+          }
+          String taskString = task.task2String(PLastStep);
+
+          PGGUI.addTask(taskString);
+
+          if ((task.getDeadline() - PLastStep ) > (task.subtaskCostEstimation() + _timeNeeded)) {
+            if(!PMakamNaUloze)
+            executeTask(task); // task is possible (agents, resources, time)
+            PMakamNaUloze=true;
+          }
+
+        } // end non-empty coalition
+
+
+
+      } // end na udalost typu 'novy task'
   }
 
   /*
@@ -348,7 +418,7 @@ public class DeSouches extends Agent {
     int taskType = task.getTaskTypeNumber();
 
 
-    if (taskType <= 42) { // LADENI, bereme jen Task4
+    if (taskType <= 42) {
 
         chosenGroup = null;
 

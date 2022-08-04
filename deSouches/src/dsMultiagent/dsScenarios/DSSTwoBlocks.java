@@ -160,31 +160,25 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
     return (false);
   }
 
-  boolean allocateAgents(int step) {
+  boolean allocateAgents() {
 
-    Point positionG;
 
-    positionG =
-        PGroup.getGoalArea(PTask, step); // PGroup.allObjects(DSCell.__DSGoalArea).getFirst();
-    if (positionG == null) return (false);
+    PMasterGoalPos = PTask.getSubtaskRoutes(0).getGoalPosition();
 
-    PMasterGoalPos = positionG;
 
-    DSOptimizer optim =
-        new DSOptimizer(PGroup.getFreeAgents(PPriority), positionG, PTask, PGroup.getMap());
-    LinkedList<DSODispenserGoalMission> missions = optim.getOptimalAgents();
-
-    PMaster = missions.get(0).getAgent();
+    PMaster = PTask.getSubtaskRoutes(0).getAgent();
     PTask.getTaskType().setMaster(PMaster);
-    PLeutnant1 = missions.get(1).getAgent();
+    PLeutnant1 = PTask.getSubtaskRoutes(1).getAgent();
     PTask.getTaskType().setLeutnant1(PLeutnant1);
 
     PAgentsAllocated.add(PMaster);
     PAgentsAllocated.add(PLeutnant1);
-    PMasterDispenserPos = missions.get(0).getDispenserPosition();
-    PSlaveDispenserPos = missions.get(1).getDispenserPosition();
-    PType1 = missions.get(0).getDispenserType();
-    PType2 = missions.get(1).getDispenserType();
+
+    PMasterDispenserPos = PTask.getSubtaskRoutes(0).getDispenserPosition();
+    PSlaveDispenserPos = PTask.getSubtaskRoutes(1).getDispenserPosition();
+    PType1 = PTask.getTypesNeeded().get(0);
+    PType2 = PTask.getTypesNeeded().get(1);
+
     PSlaveGoalPos = PTask.getTaskType().formationPosition(PLeutnant1, PMasterGoalPos);
 
     return (true);
@@ -193,7 +187,7 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
   @Override
   public boolean initScenario(int step) {
 
-    if (!allocateAgents(step)) return (false);
+    if (!allocateAgents()) return (false);
 
     // posunout leutnanty na spravnou goalpozici
     // nastavit goalbody
@@ -289,8 +283,8 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
       }
   */
 
-  public DSSTwoBlocks(DeSouches commander, DSGroup group, DSTask task, int taskType) {
-    super(commander, group, task, taskType);
+  public DSSTwoBlocks(DeSouches commander, DSTask task) {
+    super(commander, task);
     PPriority = 2;
   }
 }

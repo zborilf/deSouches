@@ -4,7 +4,7 @@ import dsAgents.DSAgent;
 
 import java.awt.*;
 
-public class DSCTaskItem {
+public class DSCCoalitionMember {
     private int PTaskID;
     private int PPrice;
     private Point PAgentPosition;
@@ -12,19 +12,22 @@ public class DSCTaskItem {
     private Point PDispenser;
     private Point PGoal;
 
-    public int getPPrice() {
+    public int getPrice() {
         return PPrice;
     }
 
-    public int getPTaskID() {
+
+    public int getTaskID() {
         return PTaskID;
     }
 
-    public Point getPAgentPosition() {
+    public DSAgent getAgent() { return PAgent; }
+
+    public Point getAgentPosition() {
         return PAgentPosition;
     }
 
-    public Point getPGoal() {
+    public Point getGoal() {
         return PGoal;
     }
 
@@ -47,7 +50,7 @@ public class DSCTaskItem {
                 " (proice: "+PPrice+")\n");
     }
 
-    public DSCTaskItem(int taskID, DSAgent agent,Point agentPosition, Point dispenser, Point goal, int price){
+    public DSCCoalitionMember(int taskID, DSAgent agent, Point agentPosition, Point dispenser, Point goal, int price){
         PTaskID=taskID;
         PPrice=price;
         PAgent=agent;

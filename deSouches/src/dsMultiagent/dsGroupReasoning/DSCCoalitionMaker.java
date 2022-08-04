@@ -113,7 +113,7 @@ public class DSCCoalitionMaker {
         int noSubtasks = subtasks.size();
         System.out.println("Pocet poduloh " + noSubtasks);
         DSCCoalitionStructures coalition = new DSCCoalitionStructures(noSubtasks);
-        DSCTaskItem taskItem;
+        DSCCoalitionMember taskItem;
         Point bestDispenser;
         DSCCoalition coal = null;
         ArrayList<DSCCoalition> coalitions = new ArrayList<DSCCoalition>();
@@ -142,7 +142,7 @@ public class DSCCoalitionMaker {
                                 (workerAgent2.getMapPosition().getY()==worker.y))
                             workerAgent=workerAgent2;
                     }
-                    taskItem = new DSCTaskItem(subtaskNumber, workerAgent, worker, bestDispenser, goal, bestPrice);
+                    taskItem = new DSCCoalitionMember(subtaskNumber, workerAgent, worker, bestDispenser, goal, bestPrice);
                     coalition.addToTasks(taskItem);
 
                     coal = new DSCCoalition(noSubtasks, taskItem); // TEMP

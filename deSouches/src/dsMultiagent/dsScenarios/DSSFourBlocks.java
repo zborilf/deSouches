@@ -252,40 +252,34 @@ public class DSSFourBlocks extends DSSBlockScenarios {
     return (false);
   }
 
-  boolean allocateAgents(int step) {
+  boolean allocateAgents() {
 
-    Point positionG;
+    PMasterGoalPos = PTask.getSubtaskRoutes(0).getGoalPosition();
 
-    positionG =
-        PGroup.getGoalArea(PTask, step); // PGroup.allObjects(DSCell.__DSGoalArea).getFirst();
-    if (positionG == null) return (false);
+    PMaster = PTask.getSubtaskRoutes(0).getAgent();
+    PTask.getTaskType().setMaster(PMaster);
+    PLeutnant1 = PTask.getSubtaskRoutes(1).getAgent();
+    PTask.getTaskType().setLeutnant1(PLeutnant1);
+    PLeutnant2 = PTask.getSubtaskRoutes(2).getAgent();
+    PTask.getTaskType().setLeutnant2(PLeutnant2);
+    PLeutnant2 = PTask.getSubtaskRoutes(3).getAgent();
+    PTask.getTaskType().setLeutnant2(PLeutnant2);
 
-    PMasterGoalPos = positionG;
-
-    DSOptimizer optim =
-        new DSOptimizer(PGroup.getFreeAgents(PPriority), positionG, PTask, PGroup.getMap());
-    LinkedList<DSODispenserGoalMission> missions = optim.getOptimalAgents();
-
-    PMaster = missions.get(0).getAgent();
-    PTaskType.setMaster(PMaster);
-    PLeutnant1 = missions.get(1).getAgent();
-    PTaskType.setLeutnant1(PLeutnant1);
-    PLeutnant2 = missions.get(2).getAgent();
-    PTaskType.setLeutnant2(PLeutnant2);
-    PLeutnant3 = missions.get(3).getAgent();
-    PTaskType.setLeutnant3(PLeutnant3);
     PAgentsAllocated.add(PMaster);
     PAgentsAllocated.add(PLeutnant1);
     PAgentsAllocated.add(PLeutnant2);
     PAgentsAllocated.add(PLeutnant3);
-    PMasterDispenserPos = missions.get(0).getDispenserPosition();
-    PLeutnant1DispenserPos = missions.get(1).getDispenserPosition();
-    PLeutnant2DispenserPos = missions.get(2).getDispenserPosition();
-    PLeutnant3DispenserPos = missions.get(3).getDispenserPosition();
-    PType1 = missions.get(0).getDispenserType();
-    PType2 = missions.get(1).getDispenserType();
-    PType3 = missions.get(2).getDispenserType();
-    PType4 = missions.get(3).getDispenserType();
+
+    PMasterDispenserPos = PTask.getSubtaskRoutes(0).getDispenserPosition();
+    PLeutnant1DispenserPos = PTask.getSubtaskRoutes(1).getDispenserPosition();
+    PLeutnant2DispenserPos = PTask.getSubtaskRoutes(2).getDispenserPosition();
+    PLeutnant3DispenserPos = PTask.getSubtaskRoutes(3).getDispenserPosition();
+
+    PType1 = PTask.getTypesNeeded().get(0);
+    PType2 = PTask.getTypesNeeded().get(1);
+    PType3 = PTask.getTypesNeeded().get(2);
+    PType3 = PTask.getTypesNeeded().get(3);
+
     PLeutnant1GoalPos = PTaskType.formationPosition(PLeutnant1, PMasterGoalPos);
     PLeutnant2GoalPos = PTaskType.formationPosition(PLeutnant2, PMasterGoalPos);
     PLeutnant3GoalPos = PTaskType.formationPosition(PLeutnant3, PMasterGoalPos);
@@ -296,7 +290,7 @@ public class DSSFourBlocks extends DSSBlockScenarios {
   @Override
   public boolean initScenario(int step) {
 
-    if (!allocateAgents(step)) return (false);
+    if (!allocateAgents()) return (false);
     // posunout leutnanty na spravnou goalpozici
 
     // nastavit goalbody
@@ -395,8 +389,8 @@ public class DSSFourBlocks extends DSSBlockScenarios {
     return (true);
   }
 
-  public DSSFourBlocks(DeSouches commander, DSGroup group, DSTask task, int taskType) {
-    super(commander, group, task, taskType);
+  public DSSFourBlocks(DeSouches commander, DSTask task) {
+    super(commander, task);
     PPriority = 2;
     PTaskType = task.getTaskType();
   }
