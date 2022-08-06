@@ -6,6 +6,7 @@ import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsExecutionModule.dsActions.*;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import java.awt.Point;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
@@ -143,27 +144,30 @@ public final class DSAStar {
   }
 
   private DSPlan extractPath(DSPlan plan, DSAStarItem goal, DSAgent agent) {
+    var tempList = new ArrayList<DSAction>();
     while (goal != null && goal.getAction() != null) {
-      DSAction ac = goal.getAction();
+      tempList.add(0, goal.getAction());
+      goal = goal.getPrevious();
+    }
+
+    for (int i = 0; i < tempList.size(); i++) {
+      DSAction ac = tempList.get(i);
       if (ac.actionText().contains("Move")) {
         DSMove mv = (DSMove) ac;
-
-        for (int i = agent.getSpeed() - 1;
-            i > 0 && goal.getPrevious() != null && goal.getPrevious().getAction() != null;
-            i--) {
-          goal = goal.getPrevious();
-          DSAction nextAc = goal.getAction();
+        for (int j = 1; j < agent.getSpeed() && i + 1 < tempList.size(); j++) {
+          DSAction nextAc = tempList.get(i + 1);
           if (nextAc.actionText().contains("Move")) {
+            i++;
             DSMove nextMv = (DSMove) nextAc;
             mv.addDirection(nextMv.getPlannedDirection());
+          } else {
+            break;
           }
         }
-        mv.AstarReverseOrder();
-        plan.insertAction(mv);
+        plan.appendAction(mv);
       } else {
-        plan.insertAction(ac);
+        plan.appendAction(ac);
       }
-      goal = goal.getPrevious();
     }
     return plan;
   }

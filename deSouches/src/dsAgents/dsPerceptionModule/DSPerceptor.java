@@ -142,7 +142,6 @@ public class DSPerceptor {
   public synchronized void actualizeMap(
       DSMap map,
       DSAgentOutlook outlook,
-      DSAgentOutlook deleteOutlook,
       Point agentPos,
       int vision,
       String PTeamName,
@@ -151,15 +150,7 @@ public class DSPerceptor {
 
     clearFriendsList();
 
-    DSCells removedCells = deleteOutlook.getCells();
     DSCells newOutlook = outlook.getCells();
-
-    // for (var c : removedCells.getCells()) {
-    //  DSCell delCell =
-    //      new DSCell(
-    //          c.getX() + agentPos.x, c.getY() + agentPos.y, c.getType(), c.getTimestamp(), agent);
-    //  map.getMap().removeCell(delCell.getX(), delCell.getY(), delCell.getType());
-    // }
 
     // outlook contains only newly seen cells -> add clear if no cell exists
 
@@ -236,7 +227,6 @@ public class DSPerceptor {
     */
 
     Iterator<Percept> newDeletePercepts = percepts.getDeleteList().iterator();
-    BB.clearDeleteOutlook();
 
     Percept percept;
     String perceptName;

@@ -89,7 +89,7 @@ public class DSMap {
   public static int distance(Point a, Point b) {
     if ((a == null) || (b == null)) return (_maxDistance);
     return (Math.abs(a.x - b.x) + Math.abs(a.y - b.y)); // Manhattan
-    // TODO:l prekroceni mapy
+    // TODO: prekroceni mapy
   }
 
   public static boolean closer(Point a, Point b, Point c) {
@@ -114,7 +114,7 @@ public class DSMap {
     LinkedList<Point> neighbours = new LinkedList<Point>();
     for (int x = cell.x - r; x <= cell.x + r; x++) {
       for (int y = cell.y - r; y <= cell.y + r; y++) {
-        // todo:l prekroceni mapy
+        // TODO: prekroceni mapy
         Point p = new Point(x, y);
         if (distance(p, cell) == r) neighbours.add(p);
       }

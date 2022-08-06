@@ -58,8 +58,7 @@ public class DSDivideAndExplore extends DSScenario {
   @Override
   public void goalFailed(DSAgent agent, DSGoal goal) {
     // never mind, go on
-    if (goal.goalStatus() == DSGoal.__DSGMovePathFailed) {
-      DSMove mv = (DSMove) goal.getRecentPlan().getAction();
+    if (goal.goalStatus() == DSGoal.__DSGMovePathFailed && goal.getRecentPlan().getAction() instanceof DSMove mv) {
       System.out.println(
           agent.getEntityName()
               + " DAE, Failed "
@@ -101,6 +100,5 @@ public class DSDivideAndExplore extends DSScenario {
     PAgentsAllocated.add(agent);
     PRadius = radius;
     PPriority = 1;
-    //TODO:l k cemu toto
   }
 }

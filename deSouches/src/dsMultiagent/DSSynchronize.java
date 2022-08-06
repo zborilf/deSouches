@@ -95,14 +95,18 @@ public class DSSynchronize {
               && (agent1.getGroup() == fa.getGroup())
               && DSMap.distance(agent1.getMapPosition(), fa.getMapPosition()) > LOWESTVISION) {
             System.err.println(
-                "ODHAD VELIKOST MAPY x:"
+                "ODHAD VELIKOST MAPY X:"
                     + Math.abs(agent1.getMapPosition().x - fa.getMapPosition().x)
                     + "+"
                     + p.x
+                    + "= "
+                    + (Math.abs(agent1.getMapPosition().x - fa.getMapPosition().x) + p.x)
                     + " Y: "
                     + Math.abs(agent1.getMapPosition().y - fa.getMapPosition().y)
                     + "+"
-                    + p.y);
+                    + p.y
+                    + "= "
+                    + (Math.abs(agent1.getMapPosition().y - fa.getMapPosition().y) + p.y));
           }
         }
       }

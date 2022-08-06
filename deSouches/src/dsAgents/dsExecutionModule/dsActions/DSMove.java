@@ -85,14 +85,6 @@ public class DSMove extends dsAgents.dsExecutionModule.dsActions.DSAction {
     PDy += pos.y;
   }
 
-  public void AstarReverseOrder() {
-    ArrayList<String> tempList = new ArrayList<String>();
-    for (int i = PDirection.size() - 1; i >= 0; i--) {
-      tempList.add(PDirection.get(i));
-    }
-    PDirection = tempList;
-  }
-
   public String getPlannedDirection() {
     return PDirection.get(0);
   }

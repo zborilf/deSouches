@@ -76,7 +76,6 @@ public class AntMapUpdateSingleton {
     // systematic pass - calculate
     for (int x = tlc.x; x <= brc.x; x++) {
       for (int y = tlc.y; y <= brc.y; y++) {
-        // pheromone evaporation is automatic as it is calculated from discovery timestamp
 
         Point p = new Point(x, y);
 
@@ -133,6 +132,7 @@ public class AntMapUpdateSingleton {
     stat.knownCellsStats(agent);
     stat.revisitedStats(agent);
     stat.mapSizeStats(agent);
+    stat.absoluteObjectsStats(agent);
 
     // statistics -> once in step guaranted
     synchronized (this) {

@@ -74,7 +74,7 @@ public class DSCells {
     int cellTime = getNewestAt(pos).getTimestamp();
     if (cellTime >= oldTime) {
       revisitedNewestEvent.put(pos, cellTime);
-      if (cellTime > oldTime) revisitedTime.put(pos, cellTime - oldTime);
+      if (cellTime > oldTime + 1) revisitedTime.put(pos, cellTime - oldTime);
     }
   }
 
