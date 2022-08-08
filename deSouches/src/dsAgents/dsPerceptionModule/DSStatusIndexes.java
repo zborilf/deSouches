@@ -3,7 +3,7 @@ package dsAgents.dsPerceptionModule;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DSStatusIndexes {
+public class  DSStatusIndexes {
   public static final int __action_success = 1;
   public static final int __action_partial_success = 2;
   public static final int __action_failed = 3;

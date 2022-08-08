@@ -20,6 +20,14 @@ public class DSClear extends DSAction {
   public DSGoal execute(DSAgent agent) {
 
     Action a = new Action("clear", new Numeral(Pp.x), new Numeral(Pp.y));
+
+
+    try {
+      agent.getOutput().write("Clear action: " + a.toProlog()+"\n");
+      agent.getOutput().flush();
+    } catch (Exception e){};
+
+
     try {
       agent.getEI().performAction(agent.getJADEAgentName(), a);
     } catch (ActException e) {

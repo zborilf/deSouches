@@ -204,6 +204,7 @@ public class DSBeliefBase {
   public void setLastActionResult(Collection<Parameter> parameters) {
     String actionResult = parameters.iterator().next().toString();
     PLastActionResult = DSStatusIndexes.getIndex(actionResult);
+
     if (PGUIFocus) PGUI.setLastActionResult(actionResult);
   }
 
@@ -471,7 +472,8 @@ public class DSBeliefBase {
   public void setScenario(DSScenario scenario) {
     if (scenario == null) return;
     PScenario = scenario;
-    if (PGUIFocus) PGUI.setScenario(scenario.getName());
+    if (PGUIFocus)
+      PGUI.setScenario(scenario.getName());
   }
 
   public DSScenario getScenario() {

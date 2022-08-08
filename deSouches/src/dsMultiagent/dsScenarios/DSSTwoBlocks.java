@@ -29,6 +29,11 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
   int PType2;
 
   @Override
+  public String getName(){
+    return("Two Block scenario");
+  }
+
+  @Override
   public void goalCompleted(DSAgent agent, DSGoal goal) {
     HorseRider.inform(
         TAG,

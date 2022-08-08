@@ -33,6 +33,12 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
 
   private int PType1, PType2, PType3;
 
+
+  @Override
+  public String getName(){
+    return("Three Block scenario");
+  }
+
   @Override
   public void goalCompleted(DSAgent agent, DSGoal goal) {
 

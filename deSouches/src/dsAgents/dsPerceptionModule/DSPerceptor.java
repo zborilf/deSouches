@@ -142,7 +142,6 @@ public class DSPerceptor {
   public synchronized void actualizeMap(
       DSMap map,
       DSAgentOutlook outlook,
-      DSAgentOutlook deleteOutlook,
       Point agentPos,
       int vision,
       String PTeamName,
@@ -151,7 +150,6 @@ public class DSPerceptor {
 
     clearFriendsList();
 
-    DSCells removedCells = deleteOutlook.getCells();
     DSCells newOutlook = outlook.getCells();
 
     // for (var c : removedCells.getCells()) {

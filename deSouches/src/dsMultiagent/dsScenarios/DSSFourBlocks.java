@@ -36,6 +36,10 @@ public class DSSFourBlocks extends DSSBlockScenarios {
 
   private int PType1, PType2, PType3, PType4;
 
+  public String getName(){
+    return("Four Block scenario");
+  }
+
   @Override
   public void goalCompleted(DSAgent agent, DSGoal goal) {
 

@@ -7,6 +7,7 @@ import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSAgentOutlook;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsPerceptionModule.DSPerceptor;
+import dsAgents.dsPerceptionModule.DSStatusIndexes;
 import dsAgents.dsReasoningModule.dsGoals.DSGoal;
 import dsAgents.dsReasoningModule.dsIntention.DSIntention;
 import dsAgents.dsReasoningModule.dsIntention.DSIntentionPool;
@@ -22,6 +23,9 @@ import eis.iilang.Percept;
 import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
 import java.awt.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -33,7 +37,7 @@ import static dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell.__DSDispenser
 public class DSAgent extends Agent {
   private static final String TAG = "DSAgent";
 
-  private final int SLEEP_BETWEEN_STEPS = 50;
+  private final int SLEEP_BETWEEN_STEPS = 10;
 
   private EnvironmentInterfaceStandard PEI;
 
@@ -44,6 +48,7 @@ public class DSAgent extends Agent {
   private int PNumber;
   private int PIdleSteps;
   private Point PLastPosition;
+  private FileWriter POutput;
 
   private int PScenarioPriority = 0;
   private DSIntentionPool PIntentionPool;
@@ -92,6 +97,10 @@ public class DSAgent extends Agent {
 
   public int getSpeed() {
     return (PBeliefBase.getSpeed());
+  }
+
+  public FileWriter getOutput(){
+    return(POutput);
   }
 
   public EnvironmentInterfaceStandard getEI() {
@@ -223,10 +232,15 @@ public class DSAgent extends Agent {
    */
 
 
-  public void propagateFeedback(
-      DSPerceptor perceptor, Collection<Percept> newPercepts, DSIntention recentIntentionExecuted) {
+  public void propagateFeedback(DSIntention recentIntentionExecuted) {
 
     int actionResult = PBeliefBase.getLastActionResult();
+
+
+    try{
+      POutput.write("LAR: "+  actionResult+"\n");
+    }catch(Exception e){};
+
 
     if (recentIntentionExecuted != null) {
       recentIntentionExecuted.intentionExecutionFeedback(actionResult, (DSAgent) this);
@@ -304,7 +318,7 @@ public class DSAgent extends Agent {
       // FEEDBACK, result of the last action performed
 
       DSPerceptor perceptor = new DSPerceptor();
-      propagateFeedback(perceptor, newPercepts, recentIntentionExecuted);
+      propagateFeedback(recentIntentionExecuted);
 
       /*
                   MAP UPDATE
@@ -318,7 +332,6 @@ public class DSAgent extends Agent {
       perceptor.actualizeMap(
           PBeliefBase.getMap(),
           PBeliefBase.getOutlook(),
-          PBeliefBase.getDeleteOutlook(),
           PBeliefBase.getMap().getAgentPos((DSAgent) (this.getAgent())),
           PBeliefBase.getVision(),
           PBeliefBase.getTeamName(),
@@ -367,9 +380,14 @@ public class DSAgent extends Agent {
       // sensing phase is over, salut commander / for synchronization and commander level
       // reconsiderations
 
-      PBeliefBase.getCommander().salut(PBeliefBase.getStep(), 0, (DSAgent) this.getAgent());
+      if(!PBeliefBase.getCommander().salut(PBeliefBase.getStep(), 0, (DSAgent) this.getAgent()))
+        // waits when it is not the last salut in the round
+  //       this.getAgent().doWait();
 
-      this.getAgent().doWait(50);
+      try {
+        POutput.write("Step: " + PBeliefBase.getStep() + " , pos " + PBeliefBase.getAgentPosition().toString()+"\n");
+        POutput.flush();
+      }catch(Exception e){ };
 
       perceptor.getBodyFromPercepts(percepts.getAddList());
 
@@ -447,7 +465,6 @@ public class DSAgent extends Agent {
       // MUSI BYT PREDTIM ZPRACOVANY VSTUPY VSECH AGENTU, KVULI SYNCHRONIZACI!!!!
 
 
-
       if (recentIntentionExecuted != null) {
         if (recentIntentionExecuted.intentionState() == DSIntention.__Intention_Finished) {
           PIntentionPool.removeIntention(recentIntentionExecuted);
@@ -462,6 +479,7 @@ public class DSAgent extends Agent {
         PBeliefBase.getCommander().needJob((DSAgent) this.getAgent());
 
       // EXECUTING INTENTION
+
       recentIntentionExecuted = PIntentionPool.executeOneIntention((DSAgent) this.getAgent());
       // PRINT recentIntention on GUI
 
@@ -528,6 +546,15 @@ public class DSAgent extends Agent {
     PBeliefBase.setCommander(commander); // commander of this agent (deSouches)
     PBeliefBase.setBody(
         new DSBody()); // shape of the agene (one element for agent, later more complex with boxes
+
+    try {
+      POutput=new FileWriter("ag_"+entity+".txt");
+    } catch (IOException e) {
+      System.out.println("An error occurred.");
+      e.printStackTrace();
+    }
+
+
     // attached)
     // TODO - recet connection -> agent should check its shape, could carry some boxes
 

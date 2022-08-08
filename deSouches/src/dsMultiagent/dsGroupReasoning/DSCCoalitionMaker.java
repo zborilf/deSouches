@@ -102,7 +102,8 @@ public class DSCCoalitionMaker {
     public synchronized ArrayList<DSCCoalition> proposeTaskCoallitions(
             LinkedList<DSAgent> agents,
             LinkedList<LinkedList<Point>> subtasks,
-            LinkedList<Point> goals
+            LinkedList<Point> goals,
+            int notLongerThan
     )       // void je prozatim
     {
         ArrayList<Point> agentPositions = new ArrayList<Point>();
@@ -133,6 +134,7 @@ public class DSCCoalitionMaker {
                             bestDispenser = dispenser;
                         }
                     }
+
                     System.out.println(subtaskNumber + ": " + worker + "/" + bestDispenser + "/" + goal + " = " + bestPrice);
                     DSAgent workerAgent=null;
 
@@ -142,19 +144,10 @@ public class DSCCoalitionMaker {
                                 (workerAgent2.getMapPosition().getY()==worker.y))
                             workerAgent=workerAgent2;
                     }
-                    taskItem = new DSCCoalitionMember(subtaskNumber, workerAgent, worker, bestDispenser, goal, bestPrice);
-                    coalition.addToTasks(taskItem);
 
-                    coal = new DSCCoalition(noSubtasks, taskItem); // TEMP
-                    // brand new one with the new tasks
-                    coalitions.add(coal);
-
-                    // try to add task to every existing coals
-                    for (DSCCoalition coal2 : coalitions) {
-                        if (coal2.addMember(taskItem))       // coal extended
-                            if (coal2.completeCoalition())   // and become complete
-                                //                  coal2.printCoalition();
-                                PCoalitions.add(coal2);
+                    if(bestPrice<notLongerThan) {
+                        taskItem = new DSCCoalitionMember(subtaskNumber, workerAgent, worker, bestDispenser, goal, bestPrice);
+                        coalition.addToTasks(taskItem);
                     }
 
                     bestPrice = -1;
@@ -162,6 +155,25 @@ public class DSCCoalitionMaker {
                 }
                 subtaskNumber = 1;
             }
+
+
+        ArrayList<DSCCoalitionMember> tasks=coalition.getTasks();
+
+        for(DSCCoalitionMember task: tasks) {
+
+            // brand new one with the new tasks
+
+            coal = new DSCCoalition(noSubtasks, task); // TEMP
+            coalitions.add(coal);
+
+            // try to add task to every existing coals
+            for (DSCCoalition coal2 : coalitions) {
+                if (coal2.addMember(task))       // coal extended
+                    if (coal2.completeCoalition())   // and become complete
+                        //                  coal2.printCoalition();
+                        PCoalitions.add(coal2);
+            }
+        }
 
         System.out.println("HOTOVO");
         for (DSCCoalition coal3 : PCoalitions)

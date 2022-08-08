@@ -1,0 +1,345 @@
+LAR: 1
+Step: 8 , pos java.awt.Point[x=0,y=0]
+Clear action: clear(-1,0)
+LAR: 1
+Step: 9 , pos java.awt.Point[x=0,y=0]
+Absorbovan o java.awt.Point[x=0,y=2]
+LAR: 1
+Step: 10 , pos java.awt.Point[x=0,y=2]
+Clear action: clear(-1,0)
+LAR: 11
+Step: 11 , pos java.awt.Point[x=0,y=2]
+Moving action: move(s)
+LAR: 1
+Nekdo hybe agentem agentA18 na mape o [0,1]
+Step: 12 , pos java.awt.Point[x=0,y=3]
+LAR: 1
+Step: 13 , pos java.awt.Point[x=0,y=3]
+Moving action: move(s)
+LAR: 1
+Nekdo hybe agentem agentA18 na mape o [0,1]
+Step: 14 , pos java.awt.Point[x=0,y=4]
+LAR: 1
+Step: 15 , pos java.awt.Point[x=0,y=4]
+Moving action: move(s)
+LAR: 1
+Nekdo hybe agentem agentA18 na mape o [0,1]
+Step: 16 , pos java.awt.Point[x=0,y=5]
+LAR: 1
+Step: 17 , pos java.awt.Point[x=0,y=5]
+Moving action: move(e)
+LAR: 1
+Nekdo hybe agentem agentA18 na mape o [1,0]
+Step: 18 , pos java.awt.Point[x=1,y=5]
+LAR: 1
+Step: 19 , pos java.awt.Point[x=1,y=5]
+Moving action: move(e)
+LAR: 1
+Nekdo hybe agentem agentA18 na mape o [1,0]
+Step: 20 , pos java.awt.Point[x=2,y=5]
+LAR: 1
+Step: 21 , pos java.awt.Point[x=2,y=5]
+Moving action: move(e)
+LAR: 1
+Nekdo hybe agentem agentA18 na mape o [1,0]
+Step: 22 , pos java.awt.Point[x=3,y=5]
+LAR: 1
+Step: 23 , pos java.awt.Point[x=3,y=5]
+Clear action: clear(1,0)
+LAR: 11
+Step: 24 , pos java.awt.Point[x=3,y=5]
+Clear action: clear(1,0)
+LAR: 1
+Step: 25 , pos java.awt.Point[x=3,y=5]
+LAR: 1
+Step: 26 , pos java.awt.Point[x=3,y=5]
+Moving action: move(e)
+LAR: 1
+Nekdo hybe agentem agentA18 na mape o [1,0]
+Step: 27 , pos java.awt.Point[x=4,y=5]
+LAR: 1
+Step: 28 , pos java.awt.Point[x=4,y=5]
+Clear action: clear(1,0)
+LAR: 11
+Step: 29 , pos java.awt.Point[x=4,y=5]
+Clear action: clear(1,0)
+LAR: 11
+Step: 30 , pos java.awt.Point[x=4,y=5]
+Clear action: clear(1,0)
+LAR: 11
+Step: 31 , pos java.awt.Point[x=4,y=5]
+Clear action: clear(1,0)
+LAR: 1
+Step: 32 , pos java.awt.Point[x=4,y=5]
+LAR: 1
+Step: 33 , pos java.awt.Point[x=4,y=5]
+Moving action: move(e)
+LAR: 1
+Nekdo hybe agentem agentA18 na mape o [1,0]
+Step: 34 , pos java.awt.Point[x=5,y=5]
+LAR: 1
+Step: 35 , pos java.awt.Point[x=5,y=5]
+Clear action: clear(1,0)
+LAR: 1
+Step: 36 , pos java.awt.Point[x=5,y=5]
+LAR: 1
+Step: 37 , pos java.awt.Point[x=5,y=5]
+Moving action: move(e)
+LAR: 1
+Nekdo hybe agentem agentA18 na mape o [1,0]
+Step: 38 , pos java.awt.Point[x=6,y=5]
+LAR: 1
+Step: 39 , pos java.awt.Point[x=6,y=5]
+Clear action: clear(1,0)
+LAR: 1
+Step: 40 , pos java.awt.Point[x=6,y=5]
+LAR: 1
+Step: 41 , pos java.awt.Point[x=6,y=5]
+Moving action: move(e)
+LAR: 1
+Nekdo hybe agentem agentA18 na mape o [1,0]
+Step: 42 , pos java.awt.Point[x=7,y=5]
+LAR: 1
+Step: 43 , pos java.awt.Point[x=7,y=5]
+Clear action: clear(0,1)
+LAR: 1
+Step: 44 , pos java.awt.Point[x=7,y=5]
+LAR: 1
+Step: 45 , pos java.awt.Point[x=7,y=5]
+Clear action: clear(1,0)
+LAR: 11
+Step: 46 , pos java.awt.Point[x=7,y=5]
+Clear action: clear(1,0)
+LAR: 11
+Step: 47 , pos java.awt.Point[x=7,y=5]
+Clear action: clear(1,0)
+LAR: 11
+Step: 48 , pos java.awt.Point[x=7,y=5]
+Clear action: clear(1,0)
+LAR: 11
+Step: 49 , pos java.awt.Point[x=7,y=5]
+Clear action: clear(1,0)
+LAR: 11
+Step: 50 , pos java.awt.Point[x=7,y=5]
+Clear action: clear(1,0)
+LAR: 11
+Step: 51 , pos java.awt.Point[x=7,y=5]
+Clear action: clear(1,0)
+LAR: 11
+Step: 52 , pos java.awt.Point[x=7,y=5]
+Clear action: clear(1,0)
+LAR: 11
+Step: 53 , pos java.awt.Point[x=7,y=5]
+Clear action: clear(1,0)
+LAR: 11
+Step: 54 , pos java.awt.Point[x=7,y=5]
+Clear action: clear(1,0)
+LAR: 1
+Step: 55 , pos java.awt.Point[x=7,y=5]
+LAR: 1
+Step: 56 , pos java.awt.Point[x=7,y=5]
+Moving action: move(e)
+LAR: 1
+Nekdo hybe agentem agentA18 na mape o [1,0]
+Step: 57 , pos java.awt.Point[x=8,y=5]
+LAR: 1
+Step: 58 , pos java.awt.Point[x=8,y=5]
+Clear action: clear(1,0)
+LAR: 11
+Step: 59 , pos java.awt.Point[x=8,y=5]
+Clear action: clear(1,0)
+LAR: 11
+Step: 60 , pos java.awt.Point[x=8,y=5]
+Clear action: clear(1,0)
+LAR: 1
+Step: 61 , pos java.awt.Point[x=8,y=5]
+LAR: 1
+Step: 62 , pos java.awt.Point[x=8,y=5]
+Moving action: move(e)
+LAR: 1
+Nekdo hybe agentem agentA18 na mape o [1,0]
+Step: 63 , pos java.awt.Point[x=9,y=5]
+LAR: 1
+Step: 64 , pos java.awt.Point[x=9,y=5]
+Clear action: clear(1,0)
+LAR: 11
+Step: 65 , pos java.awt.Point[x=9,y=5]
+Clear action: clear(1,0)
+LAR: 11
+Step: 66 , pos java.awt.Point[x=9,y=5]
+Clear action: clear(1,0)
+LAR: 1
+Step: 67 , pos java.awt.Point[x=9,y=5]
+LAR: 1
+Step: 68 , pos java.awt.Point[x=9,y=5]
+Moving action: move(e)
+LAR: 1
+Nekdo hybe agentem agentA18 na mape o [1,0]
+Step: 69 , pos java.awt.Point[x=10,y=5]
+LAR: 1
+Step: 70 , pos java.awt.Point[x=10,y=5]
+Clear action: clear(1,0)
+LAR: 11
+Step: 71 , pos java.awt.Point[x=10,y=5]
+Clear action: clear(1,0)
+LAR: 1
+Step: 72 , pos java.awt.Point[x=10,y=5]
+LAR: 1
+Step: 73 , pos java.awt.Point[x=10,y=5]
+Moving action: move(e)
+LAR: 1
+Nekdo hybe agentem agentA18 na mape o [1,0]
+Step: 74 , pos java.awt.Point[x=11,y=5]
+LAR: 1
+Step: 75 , pos java.awt.Point[x=11,y=5]
+Clear action: clear(1,0)
+LAR: 1
+Step: 76 , pos java.awt.Point[x=11,y=5]
+LAR: 1
+Step: 77 , pos java.awt.Point[x=11,y=5]
+Moving action: move(e)
+LAR: 1
+Nekdo hybe agentem agentA18 na mape o [1,0]
+Step: 78 , pos java.awt.Point[x=12,y=5]
+LAR: 1
+Step: 79 , pos java.awt.Point[x=12,y=5]
+Clear action: clear(0,-1)
+LAR: 1
+Step: 80 , pos java.awt.Point[x=12,y=5]
+LAR: 1
+Step: 81 , pos java.awt.Point[x=12,y=5]
+Moving action: move(n)
+LAR: 1
+Nekdo hybe agentem agentA18 na mape o [0,-1]
+Step: 82 , pos java.awt.Point[x=12,y=4]
+LAR: 1
+Step: 83 , pos java.awt.Point[x=12,y=4]
+Clear action: clear(0,-1)
+LAR: 11
+Step: 84 , pos java.awt.Point[x=12,y=4]
+Clear action: clear(0,-1)
+LAR: 11
+Step: 85 , pos java.awt.Point[x=12,y=4]
+Clear action: clear(0,-1)
+LAR: 11
+Step: 86 , pos java.awt.Point[x=12,y=4]
+Clear action: clear(0,-1)
+LAR: 11
+Step: 87 , pos java.awt.Point[x=12,y=4]
+Clear action: clear(0,-1)
+LAR: 11
+Step: 88 , pos java.awt.Point[x=12,y=4]
+Clear action: clear(0,-1)
+LAR: 11
+Step: 89 , pos java.awt.Point[x=12,y=4]
+Clear action: clear(0,-1)
+LAR: 11
+Step: 90 , pos java.awt.Point[x=12,y=4]
+Clear action: clear(-1,0)
+LAR: 11
+Step: 91 , pos java.awt.Point[x=12,y=4]
+Clear action: clear(0,-1)
+LAR: 1
+Step: 92 , pos java.awt.Point[x=12,y=4]
+LAR: 1
+Step: 93 , pos java.awt.Point[x=12,y=4]
+Clear action: clear(-1,0)
+LAR: 1
+Step: 94 , pos java.awt.Point[x=12,y=4]
+LAR: 1
+Step: 95 , pos java.awt.Point[x=12,y=4]
+LAR: 12
+Step: 96 , pos java.awt.Point[x=12,y=4]
+Clear action: clear(1,0)
+LAR: 12
+Step: 97 , pos java.awt.Point[x=12,y=4]
+Clear action: clear(1,0)
+LAR: 12
+Step: 98 , pos java.awt.Point[x=12,y=4]
+Clear action: clear(1,0)
+LAR: 12
+Step: 99 , pos java.awt.Point[x=12,y=4]
+Clear action: clear(1,0)
+LAR: 12
+Step: 100 , pos java.awt.Point[x=12,y=4]
+Clear action: clear(1,0)
+LAR: 12
+Step: 101 , pos java.awt.Point[x=12,y=4]
+Clear action: clear(1,0)
+LAR: 12
+Step: 102 , pos java.awt.Point[x=12,y=4]
+Clear action: clear(1,0)
+LAR: 12
+Step: 103 , pos java.awt.Point[x=12,y=4]
+Clear action: clear(1,0)
+Absorbovan o java.awt.Point[x=3,y=-26]
+LAR: 12
+Step: 104 , pos java.awt.Point[x=15,y=-22]
+Moving action: move(w)
+LAR: 12
+Step: 105 , pos java.awt.Point[x=15,y=-22]
+Clear action: clear(1,0)
+LAR: 12
+Step: 106 , pos java.awt.Point[x=15,y=-22]
+Clear action: clear(1,0)
+LAR: 11
+Step: 107 , pos java.awt.Point[x=15,y=-22]
+Clear action: clear(1,0)
+LAR: 1
+Step: 108 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 109 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 110 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 111 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 112 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 113 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 114 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 115 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 116 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 117 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+LAR: 1
+Step: 119 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 120 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 121 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 122 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 123 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 124 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 125 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 126 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 127 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 128 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+LAR: 1
+Step: 130 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 131 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 132 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 133 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 134 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 135 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 136 , pos java.awt.Point[x=15,y=-22]
+LAR: 1
+Step: 137 , pos java.awt.Point[x=15,y=-22]

@@ -6,9 +6,11 @@ import java.util.Comparator;
 public class DSCCoalitionStructures {
 
     int PNOTasks;
-    ArrayList<DSCCoalitionMember> PTasks;
-    ArrayList<DSCCoalitionMember> PCoalition;
+    private ArrayList<DSCCoalitionMember> PTasks;
 
+    public ArrayList<DSCCoalitionMember> getTasks() {
+        return PTasks;
+    }
 
     class dscComparator implements Comparator<DSCCoalitionMember> {
         public int compare(DSCCoalitionMember item1, DSCCoalitionMember item2){

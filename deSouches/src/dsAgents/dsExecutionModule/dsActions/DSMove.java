@@ -32,6 +32,12 @@ public class DSMove extends dsAgents.dsExecutionModule.dsActions.DSAction {
                 .collect(Collectors.toCollection(ArrayList::new)));
     PLAStep = agent.getStep();
     try {
+
+      try {
+        agent.getOutput().write("Moving action: " + a.toProlog()+"\n");
+        agent.getOutput().flush();
+      } catch (Exception e){};
+
       agent.getEI().performAction(agent.getJADEAgentName(), a);
     } catch (ActException e) {
       return (new DSGoalFalse());

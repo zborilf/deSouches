@@ -21,6 +21,9 @@ import eis.exceptions.ManagementException;
 import jade.core.Agent;
 import jade.core.behaviours.OneShotBehaviour;
 import java.awt.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -47,6 +50,9 @@ public class DeSouches extends Agent {
   private LinkedList<String> PActiveTasks;
   private HashMap<String, DSAgent> PRegisteredAgents;
 
+  private FileWriter POutput;
+
+
   private HashMap<Integer, LinkedList<DSAgent>> PBarriers;
   private HashMap<Integer, Boolean> PStepsDone;
 
@@ -65,6 +71,10 @@ public class DeSouches extends Agent {
 
   public void groupCreated(DSGroup group) {
     //      PGroupPool.addGroup(group);
+  }
+
+  public FileWriter getOutput(){
+    return(POutput);
   }
 
   public void setTeamSize(int teamSize){
@@ -103,20 +113,21 @@ public class DeSouches extends Agent {
     }
   }
 
-  DSCCoalition checkTask(DSTask task) {
+  ArrayList<DSCCoalition> proposeCoalitions4task(DSTask task) {
 
     /*
-    toto je bastl, opravit po ladeni, vyhodit
+        toto je bastl, opravit po ladeni, vyhodit
      */
 
-    DSCCoalition coalition=null;
-    LinkedList<Integer> types=task.getTypesNeeded();
+    ArrayList<DSCCoalition> coalitions = null;
+    LinkedList<Integer> types = task.getTypesNeeded();
 
     boolean possible = true;
     if (PSynchronizer.getMasterGroup() == null) {
       PGGUI.addTask("No Mastergroup");
-      return(coalition);
+      return (coalitions);
     }
+
 
     LinkedList<DSAgent> workers = new LinkedList<DSAgent>();
     LinkedList<LinkedList<Point>> dispensersForTypes = new LinkedList<LinkedList<Point>>();
@@ -184,13 +195,12 @@ public class DeSouches extends Agent {
       // prints it on General GUI
       // and finally modify 'subtasks' in the 'task' properly
 
-      coalition=
-              new DSCCoalitionMaker().proposeTaskCoallitions(workers, dispensersForTypes, goalZones).get(0);
-
+      coalitions =
+              new DSCCoalitionMaker().proposeTaskCoallitions(workers, dispensersForTypes, goalZones,
+                      task.getDeadline() - PLastStep - _timeNeeded);
     }
-
-    return(coalition);
-  }
+      return (coalitions);
+    }
 
   /*
         Execute selected and prepared task
@@ -234,6 +244,11 @@ public class DeSouches extends Agent {
 
   void groupReasoning() {
     for (dsGroupOption option : PGroupOptions.getOptions())
+
+      /*
+            Task Options
+       */
+
       if (option instanceof dsGroupTaskOption) {
         DSTask task = ((dsGroupTaskOption) option).getTask();
         if (task.getDeadline() < PLastStep) PGroupOptions.removeOption(task.getName());
@@ -241,7 +256,7 @@ public class DeSouches extends Agent {
         //           PGGUI.addTask("Je treba resit " + task.getName() +
         //                   " deadline " + task.getDeadline() + " pozadavky " +
         // task.getTypesNeeded().toString());
-        DSCCoalition coalition=checkTask(task);
+        DSCCoalition coalition= proposeCoalitions4task(task).get(0);
         if(coalition!=null) {
 
           DSTaskMember tmember;
@@ -264,6 +279,15 @@ public class DeSouches extends Agent {
 
 
       } // end na udalost typu 'novy task'
+
+      /*
+            tasksCoalitions contains possible coalitions for actual tasks
+       */
+
+      /*
+            END sumarizace TASK OPTIONS
+       */
+
   }
 
   /*
@@ -277,10 +301,13 @@ public class DeSouches extends Agent {
         return(false);
   }
 
-  public synchronized void salut(int step, int phase, DSAgent agent) { // barrier
+  public synchronized boolean salut(int step, int phase, DSAgent agent) { // barrier
+
+  //  System.out.println("Step "+step+" - "+agent.getEntityName()+" salutes ");
 
     if (PSynchronizer
             .addObservation(
+                    POutput,
                     agent,
                     agent.getStep(),
                     agent.getOutlook().getFriendsSeen(agent.getVision()),
@@ -289,17 +316,20 @@ public class DeSouches extends Agent {
       // steps done
       PStepsDone.put(agent.getStep(),true);
       System.out.println("Step "+agent.getStep()+" done");
-      //  }
-
-      // if (step > PLastStep) {
 
       PGGUI.clearTasks();
       PLastStep = step;
       checkDeadlines(step); // TODO ... reconsider options, but only once per step
       PGGUI.addTask("Step:" + PLastStep);
-      groupReasoning();
+ //     groupReasoning();
+      for(DSAgent ragent:PRegisteredAgents.values())
+        ragent.doWake();
+      return(true);
     }
+    return(false);
   }
+
+
 
   /*
          INTERFACE
@@ -341,13 +371,22 @@ public class DeSouches extends Agent {
 
   public void groupExtendedBy(DSGroup extendedGroup, DSGroup by) {
 
-    if (extendedGroup.isMasterGroup()) System.out.println("MasterGroupExtended: ");
-    else System.out.println("groupExtended: ");
+  /*  String st="";
+    if (extendedGroup.isMasterGroup()) st="MasterGroupExtended: ";
+    else st="2groupExtended: ";
 
-    extendedGroup.printGroup();
-    System.out.println(" by group ");
-    by.printGroup();
-    System.out.println(" step " + extendedGroup.getMembers().getFirst().getStep());
+
+    st=st+extendedGroup.printGroup();
+    st=st+(" by group ");
+    st=st+by.printGroup();
+    st=st+" step " + extendedGroup.getMembers().getFirst().getStep();
+
+    try {
+      POutput.write(st + "\n");
+      POutput.flush();
+    }catch(Exception e){};
+    */
+
 
     for (DSAgent agent : by.getMembers()) agent.removeScenario();
     //        PGroupPool.printGroups();
@@ -401,154 +440,13 @@ public class DeSouches extends Agent {
 
   public synchronized boolean taskProposed(DSTask task, int step) {
 
-    /*
-    DSGroup chosenGroup;
-    DSSTwoBlocks twoBlocks;
-    DSSThreeBlocks threeBlocks;
-    DSSFourBlocks fourBlocks;
-    */
 
     dsGroupTaskOption taskOption = new dsGroupTaskOption(task);
 
     if (PGroupOptions.addOption(taskOption))
       PGGUI.addTask(task.getName() + "\\" + task.getTaskBody().bodyToString());
 
-    /*
-    PGGUI.addTask(task.getName() + "\\" + task.getTaskBody().bodyToString());
-    int taskType = task.getTaskTypeNumber();
-
-
-    if (taskType <= 42) {
-
-        chosenGroup = null;
-
-        if (!PActiveTasks.contains(task.getName()))
-
-            // jen pro dva, typ 1 linearni, typ 2 na bok, linearni
-            PSynchronizer.getMasterGroup();
-        if (PSynchronizer.getMasterGroup() != null) {
-            if (PSynchronizer.getMasterGroup().isCapable(task, 2)) {
-                chosenGroup = PSynchronizer.getMasterGroup();
-            } else
-                chosenGroup = null;
-
-        }
-
-
-        if (chosenGroup != null) {
-
-            if (task.getDeadline() - chosenGroup.getFreeAgents(2).getFirst().getStep() >= _timeNeeded) {
-
-                PActiveTasks.add(task.getName());
-
-
-                if (task.getTypesNeeded().size() == 2)
-                    if ((taskType <= 3) && (getBusyAgents() + 2 <= _busyAgentsLimit)) {
-                        twoBlocks = new DSSTwoBlocks(this, chosenGroup, task, taskType);
-                        twoBlocks.initScenario(step);
-                        PScenariosActive.add(twoBlocks);
-                        return (true);
-                    }
-
-
-                if (task.getTypesNeeded().size() == 3)
-                    if ((taskType <= 18) && (getBusyAgents() + 3 <= _busyAgentsLimit)) {
-                        threeBlocks = new DSSThreeBlocks(this, chosenGroup, task, taskType);
-                        threeBlocks.initScenario(step);
-                        PScenariosActive.add(threeBlocks);
-                        return (true);
-                    }
-
-
-                if (task.getTypesNeeded().size() == 4)
-                    if ((taskType <= 42) && (getBusyAgents() + 4 <= _busyAgentsLimit)) {
-                        fourBlocks = new DSSFourBlocks(this, chosenGroup, task, taskType);
-                        fourBlocks.initScenario(step);
-                        PScenariosActive.add(fourBlocks);
-                        return (true);
-                    }
-            }
-        }
-    }
-    */
-
     return (false);
-  }
-
-  /*
-      public synchronized boolean tasksProposed(LinkedList<DSTask> tasks, int step){
-
-
-      if(tasks.size()==0)
-          return(false);
-      int taskType;
-      LinkedList<DSGroup> capableGroups;
-      DSGroup chosenGroup;
-      DSSTwoBlocks twoBlocks;
-      DSSThreeBlocks threeBlocks;
-      DSSFourBlocks fourBlocks;
-      PGGUI.clearTasks();
-
-      for(DSTask task:tasks) {
-
-          PGGUI.addTask(task.toString());
-          taskType = task.getTaskTypeNumber();
-
-
-          if (taskType <= 42) { // LADENI, bereme jen Task4
-
-              chosenGroup = null;
-
-              if (!PActiveTasks.contains(task.getName()))
-
-                  // jen pro dva, typ 1 linearni, typ 2 na bok, linearni
-                  PSynchronizer.getMasterGroup();
-              if (PSynchronizer.getMasterGroup() != null) {
-                  if (PSynchronizer.getMasterGroup().isCapable(task, 2)) {
-                      chosenGroup = PSynchronizer.getMasterGroup();
-                  } else
-                      chosenGroup = null;
-
-              }
-
-
-              if (chosenGroup != null) {
-
-                  if(task.getDeadline()-chosenGroup.getFreeAgents(2).getFirst().getStep()>=_timeNeeded){
-
-                      PActiveTasks.add(task.getName());
-
-
-                      if (task.getTypesNeeded().size() == 2)
-                          if ((taskType <= 3)&&(getBusyAgents()+2<=_busyAgentsLimit)) {
-                              twoBlocks = new DSSTwoBlocks(this, chosenGroup, task, taskType);
-                              twoBlocks.initScenario(step);
-                              PScenariosActive.add(twoBlocks);
-                              return (true);
-                          }
-
-
-                      if (task.getTypesNeeded().size() == 3)
-                          if ((taskType <= 18)&&(getBusyAgents()+3<=_busyAgentsLimit)) {
-                              threeBlocks = new DSSThreeBlocks(this, chosenGroup, task, taskType);
-                              threeBlocks.initScenario(step);
-                              PScenariosActive.add(threeBlocks);
-                              return (true);
-                          }
-
-
-                      if (task.getTypesNeeded().size() == 4)
-                          if ((taskType <=42)&&(getBusyAgents()+4<=_busyAgentsLimit)) {
-                              fourBlocks = new DSSFourBlocks(this, chosenGroup, task, taskType);
-                              fourBlocks.initScenario(step);
-                              PScenariosActive.add(fourBlocks);
-                              return (true);
-                          }
-                  }
-              }
-          }
-      }
-      return(false);
   }
 
   /*
@@ -614,6 +512,8 @@ public class DeSouches extends Agent {
       PGUIFocus = PRegisteredAgents.get(agentName);
       PGUIFocus.setGUIFocus();
       PGUI.setAgentName(agentName);
+      if(PGUIFocus.getScenario()!=null)
+         PGUI.setScenario(PGUIFocus.getScenario().getName());
     }
   }
 
@@ -628,6 +528,13 @@ public class DeSouches extends Agent {
     PBarriers = new HashMap<Integer, LinkedList<DSAgent>>();
     PGroupOptions = new dsGroupOptionsPool();
     PStepsDone=new HashMap();
+
+    try {
+      POutput=new FileWriter("deSouches.txt");
+    } catch (IOException e) {
+      System.out.println("An error occurred.");
+      e.printStackTrace();
+    }
 
     try {
 

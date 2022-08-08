@@ -13,6 +13,7 @@ import dsAgents.DSAgent;
 import dsAgents.dsPerceptionModule.DSPerceptor;
 import java.awt.*;
 import java.util.*;
+;
 
 public class DSMap {
 
@@ -370,7 +371,6 @@ public class DSMap {
     return (true);
   }
 
-  public void shiftMapBy(Point dif) {}
 
   String nmb(int i) {
     if (Math.abs(i) < 10) return (" 0" + Math.abs(i));
@@ -402,48 +402,9 @@ public class DSMap {
     return (mapArray);
   }
 
-  /*
-
-      synchronized public String stringMap(){
-          DSCell node;
-          DSCell[][] mapArray;
-          String so="";
-
-          for(DSAgent agent: PAgentPosition.keySet())
-              so=so+agent.getEntityName()+", ";
-          so=so+"\n";
-
-          Point tlc= PMapCells.getTLC();     // top left corner
-          Point brc= PMapCells.getBRC();     // bottom right corner
-
-          int lx=tlc.x;
-          int ty=tlc.y;
-          int width=brc.x-lx+1;
-          int height=brc.y-ty+1;
-
-          for(int i=0;i<width;i++)
-              so=so+nmb(i+lx);
-          so=so+" \n";
-
-          for(int j=0;j<height;j++) {
-              for (int i = 0; i < width; i++) {
-                  node = PMapCells.getOneAt(new Point(i,j));
-                  if (node != null) {
-                      if ((j == getOwnerAgentPos().y) && (i == getOwnerAgentPos().x)) {
-                      } else {
-                          so = so + DSCell.getTypeSign(node.getType());
-                      }
-                  } else {
-                      so = so + " ..";
-                  }
-              }
-              so = so + nmb(j+ty) + " \n";
-          }
-
-          return(so);
-      }
-
-  */
+  String point2String(Point p){
+    return("["+p.x+","+p.y+"]");
+  }
 
   public synchronized String stringMap() {
     DSCell node;
@@ -452,7 +413,13 @@ public class DSMap {
 
     StringBuilder so = new StringBuilder();
 
-    for (DSAgent agent : PAgentPosition.keySet()) so.append(agent.getEntityName()).append(", ");
+    for (DSAgent agent : PAgentPosition.keySet()) {
+
+      so.append(agent.getEntityName()).append(point2String(agent.getMapPosition())).append(", ");
+      System.out.print(agent.getEntityName());
+      System.out.println(" "+point2String(agent.getMapPosition()));
+    }
+
     so.append("\n");
 
     Point tlc = PMapCells.getTLC(); // top left corner
@@ -547,7 +514,13 @@ public class DSMap {
     PWidthMap = height;
   }
 
-  public boolean moveBy(DSAgent agent, int x, int y) {
+  synchronized public boolean moveBy(DSAgent agent, int x, int y) {
+
+    try{
+      agent.getOutput().write("Nekdo hybe agentem "+agent.getAgentName()+" na mape o "+"["+x+","+y+"]\n");
+      agent.getOutput().flush();
+    }catch (Exception e){};
+
     PX = centralizeXCoords(PAgentPosition.get(agent).x + x);
     PY = centralizeYCoords(PAgentPosition.get(agent).y + y);
     // PX=PX+x;

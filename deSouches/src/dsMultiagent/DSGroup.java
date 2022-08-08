@@ -7,6 +7,7 @@ import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsMultiagent.dsTasks.DSTask;
 import java.awt.*;
+import java.io.FileWriter;
 import java.util.*;
 
 public class DSGroup {
@@ -184,9 +185,9 @@ public class DSGroup {
     return (PGroupMap.allObjects(type));
   }
 
-  public void printGroup() {
+  public String printGroup() {
     String st1 = "Leader {" + PMaster.getEntityName() + "}";
-    String st2;
+    String st2="";
 
     LinkedList<DSAgent> agentSet = ((LinkedList<DSAgent>) PMembers.clone());
 
@@ -197,10 +198,8 @@ public class DSGroup {
 
     System.out.println(st1);
 
-    LinkedList<Point> goals = allObjects(DSCell.__DSGoalArea);
-    LinkedList<Point> d1 = allObjects(DSCell.__DSDispenser);
-    LinkedList<Point> d2 = allObjects(DSCell.__DSDispenser + 1);
-    LinkedList<Point> d3 = allObjects(DSCell.__DSDispenser + 2);
+    return(st1);
+
   }
 
   int getBusyMembersCount(int priority) {
@@ -230,7 +229,8 @@ public class DSGroup {
 
   public synchronized void shiftGroupMap(Point DPos) {}
 
-  public synchronized boolean absorbGroup(DSGroup groupToAbsorb, Point displacement) {
+  public synchronized boolean absorbGroup(DSGroup groupToAbsorb, Point displacement,
+                                              FileWriter output) {
 
     if (groupToAbsorb == this) return (true);
 
@@ -238,11 +238,31 @@ public class DSGroup {
 
     LinkedList<DSAgent> membersCl = (LinkedList<DSAgent>) newMembers.clone();
 
+    String st="";
+    if (isMasterGroup()) st="MasterGroupExtended: ";
+    else st="groupExtended: ";
+
+
+    st=st+printGroup();
+    st=st+(" by group ");
+    st=st+groupToAbsorb.printGroup();
+    st=st+" step " + getMembers().getFirst().getStep();
+
+    try {
+      output.write(st + "\n");
+      output.flush();
+    }catch(Exception e){};
+
+
     for (var newMember : membersCl) {
       PMembers.add(newMember);
       PGroupMap.addAgent(newMember, displacement);
       newMember.getGroup().removeAgent(newMember);
       newMember.setGroup(this);
+      try{
+        newMember.getOutput().write("Absorbovan o "+displacement+"\n");
+        newMember.getOutput().flush();
+      }catch(Exception e){};
     }
 
     //    PMaster.getCommander().groupRemoved(groupToAbsorb);
