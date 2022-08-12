@@ -21,6 +21,7 @@ public class DSPlan {
   String PPlanName;
   boolean PWaitingForFeedback = false;
   boolean PPlanSuceeded = false;
+  boolean PFinalPlan=true;
 
   public String plan2text() {
     if (PLinearPlan == null) return ("--- no plan ---");
@@ -44,8 +45,12 @@ public class DSPlan {
     return (PPlanName);
   }
 
+  public boolean isEmpty(){
+    return(PLinearPlan.isEmpty());
+  }
+
   public boolean planSuceeded() {
-    return (PPlanSuceeded);
+    return (PPlanSuceeded&PFinalPlan);
   }
 
   public DSAction getAction() {
@@ -150,7 +155,17 @@ public class DSPlan {
     return (true);
   }
 
+
   public DSPlan(String planName, int priority) {
+    PFinalPlan = true;
+    PPlanName = planName;
+    PPriority = priority;
+    PLinearPlan = new LinkedList<DSAction>();
+    PSubGoal = null;
+  }
+
+  public DSPlan(String planName, int priority, boolean finalPlan) {
+    PFinalPlan = finalPlan;
     PPlanName = planName;
     PPriority = priority;
     PLinearPlan = new LinkedList<DSAction>();

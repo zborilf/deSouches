@@ -28,7 +28,7 @@ public class DSGetBlock extends DSGoal {
 
   DSPlan makePlanGetFromDispenser(DSAgent agent) {
 
-    if (PDispenserLocation == null) PDispenserLocation = agent.getNearestDispenser(PBlockType);
+ //   if (PDispenserLocation == null) PDispenserLocation = agent.getNearestDispenser(PBlockType);
 
     if (PDispenserLocation != null) { // nevidi dispenser
 
@@ -62,7 +62,7 @@ public class DSGetBlock extends DSGoal {
     return (null);
   }
 
-  /*11111111111
+  /*
          Plan "Go For a Block"
   */
 

@@ -4,6 +4,7 @@ import dsAgents.DSAgent;
 import dsAgents.DeSouches;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsReasoningModule.dsGoals.*;
+import dsAgents.dsTaskGUI;
 import dsMultiagent.DSGroup;
 import dsMultiagent.dsTasks.DSTask;
 import dsMultiagent.dsTasks.DSTaskType;
@@ -51,11 +52,13 @@ public class DSSFourBlocks extends DSSBlockScenarios {
             + goal.getGoalDescription());
 
     if (agent == PMaster) {
-      if (goal.getGoalDescription().contentEquals("goRandomly"))
-        agent.hearOrder(new DSGetBlock(PType1));
+      if (goal.getGoalDescription().contentEquals("goRandomly")) {
+
+        agent.hearOrder(new DSGGetBlock2022(PType1));
+      }
       if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
         PStateL1 = 1;
-        agent.hearOrder(new DSGetBlock(PType1, PMasterDispenserPos));
+        agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos));
       }
       if (goal.getGoalDescription().contentEquals("goToDispenser")) {
         PStateM = 2;
@@ -74,11 +77,11 @@ public class DSSFourBlocks extends DSSBlockScenarios {
 
     if (agent == PLeutnant1) {
       if (goal.getGoalDescription().contentEquals("goRandomly"))
-        agent.hearOrder(new DSGetBlock(PType2));
+        agent.hearOrder(new DSGGetBlock2022(PType2));
 
       if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
         PStateL1 = 1;
-        agent.hearOrder(new DSGetBlock(PType2, PLeutnant1DispenserPos));
+        agent.hearOrder(new DSGGetBlock2022(PType2, PLeutnant1DispenserPos));
       }
       if (goal.getGoalDescription().contentEquals("goToDispenser")) {
         PStateL1 = 2;
@@ -95,10 +98,10 @@ public class DSSFourBlocks extends DSSBlockScenarios {
 
     if (agent == PLeutnant2) {
       if (goal.getGoalDescription().contentEquals("goRandomly"))
-        agent.hearOrder(new DSGetBlock(PType3));
+        agent.hearOrder(new DSGGetBlock2022(PType3));
       if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
         PStateL1 = 1;
-        agent.hearOrder(new DSGetBlock(PType3, PLeutnant2DispenserPos));
+        agent.hearOrder(new DSGGetBlock2022(PType3, PLeutnant2DispenserPos));
       }
       if (goal.getGoalDescription().contentEquals("goToDispenser")) {
         PStateL2 = 2;
@@ -115,10 +118,10 @@ public class DSSFourBlocks extends DSSBlockScenarios {
 
     if (agent == PLeutnant3) {
       if (goal.getGoalDescription().contentEquals("goRandomly"))
-        agent.hearOrder(new DSGetBlock(PType4));
+        agent.hearOrder(new DSGGetBlock2022(PType4));
       if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
         PStateL3 = 1;
-        agent.hearOrder(new DSGetBlock(PType4, PLeutnant3DispenserPos));
+        agent.hearOrder(new DSGGetBlock2022(PType4, PLeutnant3DispenserPos));
       }
       if (goal.getGoalDescription().contentEquals("goToDispenser")) {
         PStateL3 = 2;
@@ -148,7 +151,7 @@ public class DSSFourBlocks extends DSSBlockScenarios {
         agent.hearOrder(new DSGoToPosition(PMasterGoalPos, PMasterGoalBody));
       }
       if (goal.getGoalDescription().contentEquals("goRandomly"))
-        agent.hearOrder(new DSGetBlock(PType1));
+        agent.hearOrder(new DSGGetBlock2022(PType1));
     }
 
     if (agent == PLeutnant1) {
@@ -162,7 +165,7 @@ public class DSSFourBlocks extends DSSBlockScenarios {
         agent.hearOrder(new DSGoToPosition(PLeutnant1GoalPos, PLeutnant1GoalBody));
       }
       if (goal.getGoalDescription().contentEquals("goRandomly"))
-        agent.hearOrder(new DSGetBlock(PType2));
+        agent.hearOrder(new DSGGetBlock2022(PType2));
     }
 
     if (agent == PLeutnant2) {
@@ -176,7 +179,7 @@ public class DSSFourBlocks extends DSSBlockScenarios {
         agent.hearOrder(new DSGoToPosition(PLeutnant2GoalPos, PLeutnant2GoalBody));
       }
       if (goal.getGoalDescription().contentEquals("goRandomly"))
-        agent.hearOrder(new DSGetBlock(PType3));
+        agent.hearOrder(new DSGGetBlock2022(PType3));
     }
 
     if (agent == PLeutnant3) {
@@ -190,7 +193,7 @@ public class DSSFourBlocks extends DSSBlockScenarios {
         agent.hearOrder(new DSGoToPosition(PLeutnant3GoalPos, PLeutnant3GoalBody));
       }
       if (goal.getGoalDescription().contentEquals("goRandomly"))
-        agent.hearOrder(new DSGetBlock(PType4));
+        agent.hearOrder(new DSGGetBlock2022(PType4));
     }
   }
 
@@ -199,22 +202,22 @@ public class DSSFourBlocks extends DSSBlockScenarios {
     switch (eventType) {
       case DSScenario._disabledEvent:
         if (PMaster == agent) {
-          agent.hearOrder(new DSGetBlock(PType1));
+          agent.hearOrder(new DSGGetBlock2022(PType1));
           PStateM = 1;
         }
 
         if (PLeutnant1 == agent) {
-          agent.hearOrder(new DSGetBlock(PType2));
+          agent.hearOrder(new DSGGetBlock2022(PType2));
           PStateL1 = 1;
         }
 
         if (PLeutnant2 == agent) {
-          agent.hearOrder(new DSGetBlock(PType3));
+          agent.hearOrder(new DSGGetBlock2022(PType3));
           PStateL2 = 1;
         }
 
         if (PLeutnant3 == agent) {
-          agent.hearOrder(new DSGetBlock(PType4));
+          agent.hearOrder(new DSGGetBlock2022(PType4));
           PStateL2 = 1;
         }
         return (true);
@@ -224,7 +227,7 @@ public class DSSFourBlocks extends DSSBlockScenarios {
           PMaster.getBody().resetBody();
           if (PStateM == 2) {
             PStateM = 1;
-            agent.hearOrder(new DSGetBlock(PType1, PMasterDispenserPos));
+            agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos));
           }
         }
 
@@ -232,7 +235,7 @@ public class DSSFourBlocks extends DSSBlockScenarios {
           PLeutnant1.getBody().resetBody();
           if (PStateL1 == 2) {
             PStateL1 = 1;
-            agent.hearOrder(new DSGetBlock(PType2, PLeutnant1DispenserPos));
+            agent.hearOrder(new DSGGetBlock2022(PType2, PLeutnant1DispenserPos));
           }
         }
 
@@ -240,7 +243,7 @@ public class DSSFourBlocks extends DSSBlockScenarios {
           PLeutnant2.getBody().resetBody();
           if (PStateL2 == 2) {
             PStateL2 = 1;
-            agent.hearOrder(new DSGetBlock(PType2, PLeutnant2DispenserPos));
+            agent.hearOrder(new DSGGetBlock2022(PType2, PLeutnant2DispenserPos));
           }
         }
 
@@ -248,7 +251,7 @@ public class DSSFourBlocks extends DSSBlockScenarios {
           PLeutnant3.getBody().resetBody();
           if (PStateL3 == 2) {
             PStateL3 = 1;
-            agent.hearOrder(new DSGetBlock(PType3, PLeutnant3DispenserPos));
+            agent.hearOrder(new DSGGetBlock2022(PType3, PLeutnant3DispenserPos));
           }
         }
         return (true);
@@ -266,7 +269,7 @@ public class DSSFourBlocks extends DSSBlockScenarios {
     PTask.getTaskType().setLeutnant1(PLeutnant1);
     PLeutnant2 = PTask.getSubtaskRoutes(2).getAgent();
     PTask.getTaskType().setLeutnant2(PLeutnant2);
-    PLeutnant2 = PTask.getSubtaskRoutes(3).getAgent();
+    PLeutnant3 = PTask.getSubtaskRoutes(3).getAgent();
     PTask.getTaskType().setLeutnant2(PLeutnant2);
 
     PAgentsAllocated.add(PMaster);
@@ -397,5 +400,7 @@ public class DSSFourBlocks extends DSSBlockScenarios {
     super(commander, task);
     PPriority = 2;
     PTaskType = task.getTaskType();
+    PGUI=dsTaskGUI.createGUI();
+    PGUI.setDsgTaskText(task);
   }
 }

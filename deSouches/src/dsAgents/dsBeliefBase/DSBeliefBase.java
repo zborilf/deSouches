@@ -56,6 +56,7 @@ public class DSBeliefBase {
   private boolean inicialized = false;
   private int PHoldsBlockType;
 
+  private String PLastGoal;
   private int PLastActionResult = DSStatusIndexes.__action_unknown_action;
   private String PLastAction = "unknown";
   private String PLastActionParams = "success";
@@ -74,6 +75,14 @@ public class DSBeliefBase {
 
   public boolean getGUIFocus() {
     return (PGUIFocus);
+  }
+
+  public void setLastGoal(String goal){
+    PLastGoal=goal;
+  }
+
+  public String getLastGoal(){
+    return(PLastGoal);
   }
 
   public boolean setRole(String role) {

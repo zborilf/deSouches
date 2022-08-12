@@ -38,13 +38,15 @@ public class DSIntentionPool {
           agent) { // vraci null -> intensna nesplnena, nebo TLG (top level goal) splnene intensny
     DSIntention intention = getIntention();
     if (intention == null) {
-      HorseRider.inform(
-          TAG, agent.getEntityName() + " executeOneIntention: " + "Zadnou intensnu nemame");
+      agent.printOutput("Néni intenšna");
       return (null);
     } else if (intention.intentionState() == DSIntention.__Intention_Finished) {
       PIntentions.remove(intention);
+      agent.printOutput("Skončila intenšna");
+
       return (intention);
     } else {
+      agent.printOutput("Exekuuju intenšnu");
       intention.executeIntention(agent);
       PLastIntention = intention;
     }

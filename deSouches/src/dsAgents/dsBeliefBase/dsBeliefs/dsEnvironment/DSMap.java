@@ -211,6 +211,12 @@ public class DSMap {
     return (body.pointInBody(body, new Point(Tx, Ty)));
   }
 
+  public boolean isObstacleAt(Point position){
+    return(PMapCells.getKeyType(
+            new Point(position.x, position.y),DSCell.__DSObstacle)!=null);
+  }
+
+
   public boolean isObstacleAt(Point position, DSBody agentbody, DSBody body, int step) {
     for (DSCell bodyItem : body.getBodyList()) {
       DSCell node =

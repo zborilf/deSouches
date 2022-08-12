@@ -68,7 +68,7 @@ public class DSIntention {
     // return goal (if feedback needed), else null
 
     DSGoal actualGoal = PIntentionStack.getFirst();
-    DSGoal subGoal = null;
+    DSGoal subGoal;
 
     if (actualGoal.goalStatus() == DSGoal.__DSGSubgoalNeeded) {
       subGoal = actualGoal.getSubGoal();
@@ -76,6 +76,7 @@ public class DSIntention {
       actualGoal = subGoal;
     }
 
+    agent.printOutput("Nasleduji cil "+actualGoal.getGoalDescription());
     actualGoal.followGoal(agent);
 
     // plan succesfully finished? Ok, get back one step

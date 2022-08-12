@@ -3,6 +3,7 @@ package dsMultiagent.dsScenarios;
 import dsAgents.DSAgent;
 import dsAgents.DeSouches;
 import dsAgents.dsReasoningModule.dsGoals.DSGoal;
+import dsAgents.dsTaskGUI;
 import dsMultiagent.DSGroup;
 import dsMultiagent.dsTasks.DSTask;
 import java.util.Iterator;
@@ -28,6 +29,14 @@ public abstract class DSScenario {
   public LinkedList<DSAgent> getAgentsAllocated() {
     return (PAgentsAllocated);
   }
+
+  protected dsTaskGUI PGUI=null;
+
+  public void updateGUI(){
+    if(PGUI!=null)
+      PGUI.setDsgTaskText(PTask);
+  }
+
 
   public String getName() {
     return ("No name scenario");

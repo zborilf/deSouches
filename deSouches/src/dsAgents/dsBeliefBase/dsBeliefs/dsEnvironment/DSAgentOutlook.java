@@ -17,6 +17,10 @@ public class DSAgentOutlook {
     return (PStep);
   }
 
+  public boolean isObstacleAt(Point p){
+    return(POutlook.getKeyType(p,DSCell.__DSObstacle)!=null);
+  }
+
   public void processAddThing(int x, int y, String type, String params, int step, DSAgent agent) {
     PStep = step;
     DSCell cell = new DSCell(x, y, type, params, step, agent);

@@ -48,6 +48,8 @@ public class DeSouches extends Agent {
   private DSSynchronize PSynchronizer;
   private dsMultiagent.dsGroupOptions.dsGroupOptionsPool PGroupOptions;
   private LinkedList<String> PActiveTasks;
+  LinkedList<dsTaskGUI> PTaskGUIs;
+
   private HashMap<String, DSAgent> PRegisteredAgents;
 
   private FileWriter POutput;
@@ -58,6 +60,15 @@ public class DeSouches extends Agent {
 
 
   private LinkedList<DSScenario> PScenariosActive;
+
+
+
+  public void printOutput(String s){
+    try{
+      POutput.write(s+"\n");
+      POutput.flush();
+    }catch(Exception e){};
+  }
 
   /*
      deSouches BB is included in this module
@@ -189,7 +200,9 @@ public class DeSouches extends Agent {
 
 
     if (possible) {
-      PGGUI.addTask("TASK POSSIBLE!");
+      PGGUI.addTask("" +
+              "" +
+              "TASK POSSIBLE!");
       // computes coalitions
       // takse the cheapest ( get(0) )
       // prints it on General GUI
@@ -210,6 +223,12 @@ public class DeSouches extends Agent {
 
     int taskType = task.getTaskTypeNumber();
 
+    printOutput("---------------");
+    printOutput(PLastStep+": Task : "+task.getName());
+    for(int i=0;i<4;i++)
+      if(task.getSubtaskRoutes(i)!=null)
+        printOutput(">> "+task.getSubtaskRoutes(i).taskMember2String());
+    printOutput("---------------");
 
     if (!PActiveTasks.contains(task.getName()))
 
@@ -256,23 +275,24 @@ public class DeSouches extends Agent {
         //           PGGUI.addTask("Je treba resit " + task.getName() +
         //                   " deadline " + task.getDeadline() + " pozadavky " +
         // task.getTypesNeeded().toString());
-        DSCCoalition coalition= proposeCoalitions4task(task).get(0);
-        if(coalition!=null) {
+        ArrayList<DSCCoalition> coalitions= proposeCoalitions4task(task);
+        if(coalitions!=null)
+          if(coalitions.size()>0){
+            DSCCoalition coalition=coalitions.get(0);
+            DSTaskMember tmember;
+            for (DSCCoalitionMember cmember : coalition.getCoalitionMembers()) {
+              tmember = new DSTaskMember(cmember.getAgent(), cmember.getPDispenser(), cmember.getGoal());
+              task.setSubtaskRoute(cmember.getTaskID() - 1, tmember);
+            }
+            String taskString = task.task2String(PLastStep);
 
-          DSTaskMember tmember;
-          for (DSCCoalitionMember cmember : coalition.getCoalitionMembers()) {
-            tmember = new DSTaskMember(cmember.getAgent(), cmember.getPDispenser(), cmember.getGoal());
-            task.setSubtaskRoute(cmember.getTaskID() - 1, tmember);
-          }
-          String taskString = task.task2String(PLastStep);
+            PGGUI.addTask(taskString);
 
-          PGGUI.addTask(taskString);
-
-          if ((task.getDeadline() - PLastStep ) > (task.subtaskCostEstimation() + _timeNeeded)) {
-            if(!PMakamNaUloze)
-            executeTask(task); // task is possible (agents, resources, time)
-            PMakamNaUloze=true;
-          }
+            //   if ((task.getDeadline() - PLastStep ) > (task.subtaskCostEstimation() + _timeNeeded)) {
+            if(!PMakamNaUloze){
+                executeTask(task); // task is possible (agents, resources, time)
+                PMakamNaUloze=true;
+            }
 
         } // end non-empty coalition
 
@@ -315,15 +335,24 @@ public class DeSouches extends Agent {
     {
       // steps done
       PStepsDone.put(agent.getStep(),true);
-      System.out.println("Step "+agent.getStep()+" done");
+      printOutput("Step "+agent.getStep()+" done");
 
       PGGUI.clearTasks();
       PLastStep = step;
       checkDeadlines(step); // TODO ... reconsider options, but only once per step
       PGGUI.addTask("Step:" + PLastStep);
- //     groupReasoning();
-      for(DSAgent ragent:PRegisteredAgents.values())
-        ragent.doWake();
+
+
+      // print task states
+      for(DSScenario scenario:PScenariosActive)
+        if(scenario.getTask()!=null)
+          scenario.updateGUI();
+
+
+      groupReasoning();
+
+      //     for(DSAgent ragent:PRegisteredAgents.values())
+      //  ragent.doWake();
       return(true);
     }
     return(false);
@@ -407,7 +436,7 @@ public class DeSouches extends Agent {
         scenario.initScenario(agent.getStep());
     }
     else {*/
-    DSDivideAndExplore scenario = new DSDivideAndExplore(agent, 5); // 10 je max delka prochazky
+    DSDivideAndExplore2022 scenario = new DSDivideAndExplore2022(agent, 5); // 10 je max delka prochazky
     agent.setScenario(scenario);
     scenario.initScenario(agent.getStep());
     // }
@@ -462,7 +491,8 @@ public class DeSouches extends Agent {
       Collection<String> entities;
       entities = PEI.getEntities();
 
-      PGGUI = dsGeneralGUI.createGUI(0, (DeSouches) this.getAgent());
+      PGGUI = dsGeneralGUI.createGUI((DeSouches) this.getAgent());
+
       PGUI = dsGUI.createGUI(1, (DeSouches) this.getAgent());
 
       int agentNo = 0;
@@ -524,6 +554,7 @@ public class DeSouches extends Agent {
     PRegisteredAgents = new HashMap<String, DSAgent>();
     PSynchronizer = new DSSynchronize();
     PActiveTasks = new LinkedList<String>();
+    PTaskGUIs = new LinkedList<dsTaskGUI>();
     PScenariosActive = new LinkedList<DSScenario>();
     PBarriers = new HashMap<Integer, LinkedList<DSAgent>>();
     PGroupOptions = new dsGroupOptionsPool();

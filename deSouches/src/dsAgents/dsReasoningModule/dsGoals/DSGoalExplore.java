@@ -129,7 +129,7 @@ public class DSGoalExplore extends DSGoal {
 
       if (plan != null && plan.getLength() != 0) {
         // shorter plan only from first action for more reactive approach
-        DSPlan stepPlan = new DSPlan("roamAnt", local_priority);
+        DSPlan stepPlan = new DSPlan("roamAnt", local_priority, false);   // TODO, vyhodit posledni false
         stepPlan.appendAction(plan.getAction());
         PPlans.put("roamAnt", stepPlan);
         return true;

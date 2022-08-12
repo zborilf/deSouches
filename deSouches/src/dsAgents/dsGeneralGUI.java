@@ -22,15 +22,15 @@ public class dsGeneralGUI {
     dsgGeneralText.append(task + "\n");
   }
 
-  public static dsGeneralGUI createGUI(int number, DeSouches commander) {
-    JFrame frame = new JFrame("GUI for General " + number);
-    frame.setSize(new Dimension(650, 100));
+  public static dsGeneralGUI createGUI(DeSouches commander) {
+    JFrame frame = new JFrame("GUI for General ");
+
     dsGeneralGUI gui = new dsGeneralGUI();
     gui.setCommander(commander);
     frame.setContentPane(gui.dsgGMainPanel);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.pack();
-    frame.setLocation(new Point(number * 40, number * 20));
+    frame.setLocation(new Point(200, 200));
+    frame.setSize(new Dimension(650, 400));
     frame.setVisible(true);
     return (gui);
   }

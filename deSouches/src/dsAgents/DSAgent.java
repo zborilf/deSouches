@@ -79,6 +79,10 @@ public class DSAgent extends Agent {
     return (PBeliefBase.getMap());
   }
 
+  public String getLastGoal() {
+    return (PBeliefBase.getLastGoal());
+  }
+
   public Point getMapPosition() {
     return (PBeliefBase.getAgentPosition());
   }
@@ -106,6 +110,7 @@ public class DSAgent extends Agent {
   public EnvironmentInterfaceStandard getEI() {
     return (PEI);
   }
+
 
   public void setScenario(DSScenario scenario) {
     PBeliefBase.setScenario(scenario);
@@ -167,6 +172,13 @@ public class DSAgent extends Agent {
 
   public int getNumber() {
     return (PNumber);
+  }
+
+  public void printOutput(String s){
+    try{
+      POutput.write(s+"\n");
+      POutput.flush();
+    }catch(Exception e){};
   }
 
   /*
@@ -385,7 +397,7 @@ public class DSAgent extends Agent {
   //       this.getAgent().doWait();
 
       try {
-        POutput.write("Step: " + PBeliefBase.getStep() + " , pos " + PBeliefBase.getAgentPosition().toString()+"\n");
+        POutput.write("\nStep: " + PBeliefBase.getStep() + " , pos " + PBeliefBase.getAgentPosition().toString()+"\n");
         POutput.flush();
       }catch(Exception e){ };
 
@@ -481,7 +493,17 @@ public class DSAgent extends Agent {
       // EXECUTING INTENTION
 
       recentIntentionExecuted = PIntentionPool.executeOneIntention((DSAgent) this.getAgent());
+
+
       // PRINT recentIntention on GUI
+      if(recentIntentionExecuted.getTLG()==null)
+        PBeliefBase.setLastGoal("No goal");
+      else
+        PBeliefBase.setLastGoal(recentIntentionExecuted.getTLG().getGoalDescription());
+
+      printOutput("\nStep: "+PBeliefBase.getStep());
+      printOutput("Scenario: "+PBeliefBase.getScenario().getName());
+      printOutput("Goal: "+PBeliefBase.getLastGoal());
 
       if (PBeliefBase.getGUIFocus()) {
         PBeliefBase.getGUI().noticeLastGoal(recentIntentionExecuted.getTLG().getGoalDescription());

@@ -155,6 +155,7 @@ public abstract class DSGoal {
                 + " achieved by "
                 + PPlans.get(planName).plan2text());
         PLastStatus = __DSGGoalAchieved;
+        agent.printOutput("Cil dosazen, pry");
         return (PLastStatus);
       }
 
@@ -168,10 +169,15 @@ public abstract class DSGoal {
 
     DSPlan chosenPlan = highestPriorityPlan();
 
+
+
     if (chosenPlan == null) { // plan nebyl a ani se makePlanem nevytvoril -> gol spadl
       PLastStatus = __DSGPlanningFailed;
       return (PLastStatus);
     }
+
+
+    agent.printOutput("HPPlan after revision "+chosenPlan.plan2text());
 
     if (!chosenPlan.executeOneStep(agent)) {
       PPlans.remove(chosenPlan); // plan byl neuspesny, bude odstranen

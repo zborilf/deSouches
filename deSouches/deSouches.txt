@@ -1,107 +1,122 @@
->>agentA3 sees agentA18 disp java.awt.Point[x=0,y=2] token true
-groupExtended: Leader {agentA3}agentA3,  by group Leader {agentA18}agentA18,  step 9
->>agentA8 sees agentA16 disp java.awt.Point[x=1,y=-1] token true
-groupExtended: Leader {agentA8}agentA8,  by group Leader {agentA16}agentA16,  step 10
->>agentA4 sees agentA10 disp java.awt.Point[x=-1,y=0] token false
->>agentA2 sees agentA11 disp java.awt.Point[x=0,y=-1] token true
-groupExtended: Leader {agentA2}agentA2,  by group Leader {agentA11}agentA11,  step 11
->>agentA27 sees agentA23 disp java.awt.Point[x=1,y=1] token false
->>agentA18 sees agentA26 disp java.awt.Point[x=1,y=1] token false
->>agentA4 sees agentA10 disp java.awt.Point[x=-1,y=0] token false
->>agentA25 sees agentA23 disp java.awt.Point[x=0,y=2] token false
->>agentA6 sees agentA15 disp java.awt.Point[x=1,y=2] token false
->>agentA16 sees agentA17 disp java.awt.Point[x=2,y=-1] token false
->>agentA18 sees agentA26 disp java.awt.Point[x=1,y=1] token true
-groupExtended: Leader {agentA3}agentA3, agentA18,  by group Leader {agentA26}agentA26,  step 12
->>agentA27 sees agentA23 disp java.awt.Point[x=1,y=1] token false
->>agentA27 sees agentA25 disp java.awt.Point[x=1,y=-1] token false
->>agentA18 sees agentA7 disp java.awt.Point[x=0,y=1] token false
->>agentA6 sees agentA15 disp java.awt.Point[x=1,y=2] token false
->>agentA16 sees agentA17 disp java.awt.Point[x=2,y=-1] token false
->>agentA30 sees agentA4 disp java.awt.Point[x=-1,y=1] token true
-groupExtended: Leader {agentA30}agentA30,  by group Leader {agentA4}agentA4,  step 13
->>agentA12 sees agentA15 disp java.awt.Point[x=1,y=1] token false
->>agentA16 sees agentA17 disp java.awt.Point[x=2,y=-1] token false
->>agentA18 sees agentA7 disp java.awt.Point[x=0,y=1] token false
->>agentA26 sees agentA7 disp java.awt.Point[x=0,y=1] token false
->>agentA4 sees agentA10 disp java.awt.Point[x=-2,y=1] token true
-groupExtended: Leader {agentA30}agentA30, agentA4,  by group Leader {agentA10}agentA10,  step 14
->>agentA18 sees agentA7 disp java.awt.Point[x=0,y=1] token false
->>agentA22 sees agentA13 disp java.awt.Point[x=0,y=1] token false
->>agentA29 sees agentA14 disp java.awt.Point[x=0,y=1] token false
->>agentA25 sees agentA23 disp java.awt.Point[x=0,y=2] token false
->>agentA16 sees agentA17 disp java.awt.Point[x=2,y=-1] token false
->>agentA26 sees agentA7 disp java.awt.Point[x=0,y=1] token false
->>agentA29 sees agentA19 disp java.awt.Point[x=0,y=2] token true
-groupExtended: Leader {agentA29}agentA29,  by group Leader {agentA19}agentA19,  step 15
->>agentA29 sees agentA14 disp java.awt.Point[x=0,y=1] token false
->>agentA9 sees agentA28 disp java.awt.Point[x=1,y=-1] token false
->>agentA25 sees agentA23 disp java.awt.Point[x=0,y=2] token false
->>agentA18 sees agentA7 disp java.awt.Point[x=0,y=1] token false
->>agentA25 sees agentA23 disp java.awt.Point[x=0,y=2] token true
-groupExtended: Leader {agentA25}agentA25,  by group Leader {agentA23}agentA23,  step 16
->>agentA6 sees agentA15 disp java.awt.Point[x=1,y=2] token false
->>agentA29 sees agentA14 disp java.awt.Point[x=0,y=1] token false
->>agentA18 sees agentA7 disp java.awt.Point[x=0,y=1] token false
->>agentA27 sees agentA23 disp java.awt.Point[x=1,y=-1] token false
->>agentA19 sees agentA14 disp java.awt.Point[x=0,y=1] token false
->>agentA12 sees agentA15 disp java.awt.Point[x=1,y=1] token false
->>agentA22 sees agentA13 disp java.awt.Point[x=0,y=1] token true
-groupExtended: Leader {agentA22}agentA22,  by group Leader {agentA13}agentA13,  step 17
->>agentA27 sees agentA25 disp java.awt.Point[x=1,y=-1] token false
->>agentA29 sees agentA14 disp java.awt.Point[x=0,y=1] token false
->>agentA18 sees agentA7 disp java.awt.Point[x=0,y=1] token false
->>agentA27 sees agentA23 disp java.awt.Point[x=1,y=-1] token false
->>agentA19 sees agentA14 disp java.awt.Point[x=0,y=1] token false
->>agentA12 sees agentA6 disp java.awt.Point[x=0,y=-1] token false
->>agentA3 sees agentA7 disp java.awt.Point[x=0,y=1] token false
->>agentA12 sees agentA15 disp java.awt.Point[x=1,y=1] token false
->>agentA27 sees agentA25 disp java.awt.Point[x=1,y=-1] token true
-groupExtended: Leader {agentA27}agentA27,  by group Leader {agentA25}agentA25, agentA23,  step 18
->>agentA29 sees agentA14 disp java.awt.Point[x=0,y=1] token false
->>agentA12 sees agentA6 disp java.awt.Point[x=0,y=-1] token false
->>agentA3 sees agentA7 disp java.awt.Point[x=0,y=1] token false
->>agentA12 sees agentA15 disp java.awt.Point[x=1,y=1] token false
->>agentA18 sees agentA7 disp java.awt.Point[x=0,y=1] token false
->>agentA12 sees agentA6 disp java.awt.Point[x=0,y=-1] token true
-groupExtended: Leader {agentA12}agentA12,  by group Leader {agentA6}agentA6,  step 19
->>agentA3 sees agentA7 disp java.awt.Point[x=0,y=1] token false
->>agentA12 sees agentA15 disp java.awt.Point[x=1,y=1] token false
->>agentA29 sees agentA14 disp java.awt.Point[x=0,y=1] token false
->>agentA3 sees agentA7 disp java.awt.Point[x=0,y=1] token true
-groupExtended: Leader {agentA3}agentA3, agentA18, agentA26,  by group Leader {agentA7}agentA7,  step 20
->>agentA12 sees agentA15 disp java.awt.Point[x=1,y=1] token false
->>agentA29 sees agentA14 disp java.awt.Point[x=0,y=1] token false
->>agentA29 sees agentA14 disp java.awt.Point[x=0,y=1] token true
-groupExtended: Leader {agentA29}agentA29, agentA19,  by group Leader {agentA14}agentA14,  step 21
->>agentA8 sees agentA17 disp java.awt.Point[x=2,y=-1] token true
-groupExtended: Leader {agentA8}agentA8, agentA16,  by group Leader {agentA17}agentA17,  step 22
->>agentA9 sees agentA28 disp java.awt.Point[x=1,y=-1] token true
-groupExtended: Leader {agentA9}agentA9,  by group Leader {agentA28}agentA28,  step 23
->>agentA6 sees agentA15 disp java.awt.Point[x=1,y=1] token true
-groupExtended: Leader {agentA12}agentA12, agentA6,  by group Leader {agentA15}agentA15,  step 24
->>agentA5 sees agentA24 disp java.awt.Point[x=0,y=1] token true
-groupExtended: Leader {agentA5}agentA5,  by group Leader {agentA24}agentA24,  step 27
->>agentA1 sees agentA23 disp java.awt.Point[x=-14,y=-1] token true
-groupExtended: Leader {agentA1}agentA1,  by group Leader {agentA27}agentA27, agentA25, agentA23,  step 31
->>agentA6 sees agentA16 disp java.awt.Point[x=-4,y=-11] token true
-groupExtended: Leader {agentA12}agentA12, agentA6, agentA15,  by group Leader {agentA8}agentA8, agentA16, agentA17,  step 32
->>agentA4 sees agentA27 disp java.awt.Point[x=25,y=-3] token true
-groupExtended: Leader {agentA30}agentA30, agentA4, agentA10,  by group Leader {agentA1}agentA1, agentA27, agentA25, agentA23,  step 46
->>agentA10 sees agentA17 disp java.awt.Point[x=-15,y=18] token true
-groupExtended: Leader {agentA30}agentA30, agentA4, agentA10, agentA1, agentA27, agentA25, agentA23,  by group Leader {agentA12}agentA12, agentA6, agentA15, agentA8, agentA16, agentA17,  step 77
->>agentA1 sees agentA5 disp java.awt.Point[x=31,y=-1] token true
-groupExtended: Leader {agentA30}agentA30, agentA4, agentA10, agentA1, agentA27, agentA25, agentA23, agentA12, agentA6, agentA15, agentA8, agentA16, agentA17,  by group Leader {agentA5}agentA5, agentA24,  step 84
->>agentA9 sees agentA22 disp java.awt.Point[x=-11,y=11] token true
-groupExtended: Leader {agentA9}agentA9, agentA28,  by group Leader {agentA22}agentA22, agentA13,  step 86
->>agentA25 sees agentA7 disp java.awt.Point[x=3,y=-26] token true
-groupExtended: Leader {agentA30}agentA30, agentA4, agentA10, agentA1, agentA27, agentA25, agentA23, agentA12, agentA6, agentA15, agentA8, agentA16, agentA17, agentA5, agentA24,  by group Leader {agentA3}agentA3, agentA18, agentA26, agentA7,  step 103
->>agentA23 sees agentA14 disp java.awt.Point[x=27,y=13] token true
-groupExtended: Leader {agentA30}agentA30, agentA4, agentA10, agentA1, agentA27, agentA25, agentA23, agentA12, agentA6, agentA15, agentA8, agentA16, agentA17, agentA5, agentA24, agentA3, agentA18, agentA26, agentA7,  by group Leader {agentA29}agentA29, agentA19, agentA14,  step 107
-> ! > 107 MASTERGRUPA agentA23!!!
->>agentA6 sees agentA9 disp java.awt.Point[x=-17,y=28] token true
-MasterGroupExtended: Leader {agentA30}agentA30, agentA4, agentA10, agentA1, agentA27, agentA25, agentA23, agentA12, agentA6, agentA15, agentA8, agentA16, agentA17, agentA5, agentA24, agentA3, agentA18, agentA26, agentA7, agentA29, agentA19, agentA14,  by group Leader {agentA9}agentA9, agentA28, agentA22, agentA13,  step 115
->>agentA30 sees agentA2 disp java.awt.Point[x=-14,y=-26] token true
-MasterGroupExtended: Leader {agentA30}agentA30, agentA4, agentA10, agentA1, agentA27, agentA25, agentA23, agentA12, agentA6, agentA15, agentA8, agentA16, agentA17, agentA5, agentA24, agentA3, agentA18, agentA26, agentA7, agentA29, agentA19, agentA14, agentA9, agentA28, agentA22, agentA13,  by group Leader {agentA2}agentA2, agentA11,  step 125
->>agentA13 sees agentA21 disp java.awt.Point[x=-47,y=37] token true
-MasterGroupExtended: Leader {agentA30}agentA30, agentA4, agentA10, agentA1, agentA27, agentA25, agentA23, agentA12, agentA6, agentA15, agentA8, agentA16, agentA17, agentA5, agentA24, agentA3, agentA18, agentA26, agentA7, agentA29, agentA19, agentA14, agentA9, agentA28, agentA22, agentA13, agentA2, agentA11,  by group Leader {agentA21}agentA21,  step 133
+Step 0 done
+Step 0 done
+Step 1 done
+Step 2 done
+Step 3 done
+Step 4 done
+Step 5 done
+Step 6 done
+Step 7 done
+Step 8 done
+Step 9 done
+Step 10 done
+Step 11 done
+Step 12 done
+Step 13 done
+Step 14 done
+Step 15 done
+Step 16 done
+Step 17 done
+Step 18 done
+Step 19 done
+Step 20 done
+Step 21 done
+Step 22 done
+Step 23 done
+Step 24 done
+Step 25 done
+Step 26 done
+Step 27 done
+Step 28 done
+Step 29 done
+Step 30 done
+Step 31 done
+Step 32 done
+Step 33 done
+Step 34 done
+Step 35 done
+Step 36 done
+Step 37 done
+Step 38 done
+Step 39 done
+Step 40 done
+Step 41 done
+Step 42 done
+Step 43 done
+Step 44 done
+Step 45 done
+Step 46 done
+Step 47 done
+Step 48 done
+Step 49 done
+Step 50 done
+Step 51 done
+Step 52 done
+Step 53 done
+Step 54 done
+Step 55 done
+Step 56 done
+Step 57 done
+Step 58 done
+Step 59 done
+Step 60 done
+Step 61 done
+Step 62 done
+Step 63 done
+Step 64 done
+Step 65 done
+Step 66 done
+Step 67 done
+Step 68 done
+Step 69 done
+Step 70 done
+Step 71 done
+Step 72 done
+Step 73 done
+Step 74 done
+Step 75 done
+Step 76 done
+Step 77 done
+Step 78 done
+Step 79 done
+Step 80 done
+Step 81 done
+Step 82 done
+Step 83 done
+Step 84 done
+Step 85 done
+Step 86 done
+Step 87 done
+Step 88 done
+Step 89 done
+Step 90 done
+Step 91 done
+Step 92 done
+Step 93 done
+Step 94 done
+Step 95 done
+Step 96 done
+Step 97 done
+Step 98 done
+Step 99 done
+Step 100 done
+Step 101 done
+Step 102 done
+Step 103 done
+Step 104 done
+Step 105 done
+Step 106 done
+Step 107 done
+Step 108 done
+Step 109 done
+Step 110 done
+Step 111 done
+Step 112 done
+Step 113 done
+Step 114 done
+Step 115 done
+Step 116 done
+Step 117 done
+Step 118 done
+Step 119 done
+Step 120 done

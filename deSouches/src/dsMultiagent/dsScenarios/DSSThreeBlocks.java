@@ -4,6 +4,7 @@ import dsAgents.DSAgent;
 import dsAgents.DeSouches;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsReasoningModule.dsGoals.*;
+import dsAgents.dsTaskGUI;
 import dsMultiagent.DSGroup;
 import dsMultiagent.dsTasks.DSTask;
 import dsMultiagent.dsTasks.DSTaskType;
@@ -50,54 +51,71 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
             + goal.getGoalDescription());
 
     if (agent == PMaster) {
-      if (goal.getGoalDescription().contentEquals("goRandomly"))
-        agent.hearOrder(new DSGetBlock(PType1));
-      if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
-        PStateL1 = 1;
-        agent.hearOrder(new DSGetBlock(PType1, PMasterDispenserPos));
+      if (goal.getGoalDescription().contentEquals("goRandomly")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goRandomly -> GetBlock");
+        agent.hearOrder(new DSGGetBlock2022(PType1));
       }
+
+      if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed detachAll -> GetBlock");
+        PStateL1 = 1;
+        agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos));
+      }
+
       if (goal.getGoalDescription().contentEquals("goToDispenser")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goToDispenser -> goToPosition");
         PStateM = 2;
         agent.hearOrder(new DSGoToPosition(PMasterGoalPos, PMasterGoalBody));
       }
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goToPosition -> ConnectGoal");
         PStateM = 3;
         agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
       }
       if (goal.getGoalDescription().contentEquals("customGoal")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed customGoal -> submitGoal");
         PStateM = 4;
         agent.hearOrder(new DSGSubmitGoal(PTask.getName()));
       }
-      if (goal.getGoalDescription().contentEquals("submitGoal")) PCommander.scenarioCompleted(this);
+      if (goal.getGoalDescription().contentEquals("submitGoal")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed submitGOal -> SCENARIO COMPLETED!!");
+        PCommander.scenarioCompleted(this);
+      }
     }
 
     if (agent == PLeutnant1) {
-      if (goal.getGoalDescription().contentEquals("goRandomly"))
-        agent.hearOrder(new DSGetBlock(PType2));
+      if (goal.getGoalDescription().contentEquals("goRandomly")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goRandomly -> GetBlock");
+        agent.hearOrder(new DSGGetBlock2022(PType2));
+      }
 
       if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed detachAll -> GetBlock");
         PStateL1 = 1;
-        agent.hearOrder(new DSGetBlock(PType2, PLeutnant1DispenserPos));
+        agent.hearOrder(new DSGGetBlock2022(PType2, PLeutnant1DispenserPos));
       }
       if (goal.getGoalDescription().contentEquals("goToDispenser")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goToDispenser -> goToPosition");
         PStateL1 = 2;
         agent.hearOrder(new DSGoToPosition(PLeutnant1GoalPos, PLeutnant1GoalBody));
       }
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goToPosition -> ConnectGoal");
         PStateL1 = 3;
         agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
       }
       if (goal.getGoalDescription().contentEquals("customGoal")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed customGoal");
         PStateL1 = 4;
       }
     }
 
     if (agent == PLeutnant2) {
       if (goal.getGoalDescription().contentEquals("goRandomly"))
-        agent.hearOrder(new DSGetBlock(PType3));
+        agent.hearOrder(new DSGGetBlock2022(PType3));
       if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
         PStateL1 = 1;
-        agent.hearOrder(new DSGetBlock(PType3, PLeutnant2DispenserPos));
+        agent.hearOrder(new DSGGetBlock2022(PType3, PLeutnant2DispenserPos));
       }
       if (goal.getGoalDescription().contentEquals("goToDispenser")) {
         PStateL2 = 2;
@@ -127,7 +145,7 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
         agent.hearOrder(new DSGoToPosition(PMasterGoalPos, PMasterGoalBody));
       }
       if (goal.getGoalDescription().contentEquals("goRandomly"))
-        agent.hearOrder(new DSGetBlock(PType1));
+        agent.hearOrder(new DSGGetBlock2022(PType1));
     }
 
     if (agent == PLeutnant1) {
@@ -141,7 +159,7 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
         agent.hearOrder(new DSGoToPosition(PLeutnant1GoalPos, PLeutnant1GoalBody));
       }
       if (goal.getGoalDescription().contentEquals("goRandomly"))
-        agent.hearOrder(new DSGetBlock(PType2));
+        agent.hearOrder(new DSGGetBlock2022(PType2));
     }
 
     if (agent == PLeutnant2) {
@@ -155,7 +173,7 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
         agent.hearOrder(new DSGoToPosition(PLeutnant2GoalPos, PLeutnant2GoalBody));
       }
       if (goal.getGoalDescription().contentEquals("goRandomly"))
-        agent.hearOrder(new DSGetBlock(PType3));
+        agent.hearOrder(new DSGGetBlock2022(PType3));
     }
   }
 
@@ -164,15 +182,15 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
     switch (eventType) {
       case DSScenario._disabledEvent:
         if (PMaster == agent) {
-          agent.hearOrder(new DSGetBlock(PType1));
+          agent.hearOrder(new DSGGetBlock2022(PType1));
           PStateM = 1;
         }
         if (PLeutnant1 == agent) {
-          agent.hearOrder(new DSGetBlock(PType2));
+          agent.hearOrder(new DSGGetBlock2022(PType2));
           PStateL1 = 1;
         }
         if (PLeutnant2 == agent) {
-          agent.hearOrder(new DSGetBlock(PType3));
+          agent.hearOrder(new DSGGetBlock2022(PType3));
           PStateL2 = 1;
         }
         return (true);
@@ -181,21 +199,21 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
           PMaster.getBody().resetBody();
           if (PStateM == 2) {
             PStateM = 1;
-            agent.hearOrder(new DSGetBlock(PType1, PMasterDispenserPos));
+            agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos));
           }
         }
         if (PLeutnant1 == agent) {
           PLeutnant1.getBody().resetBody();
           if (PStateL1 == 2) {
             PStateL1 = 1;
-            agent.hearOrder(new DSGetBlock(PType2, PLeutnant1DispenserPos));
+            agent.hearOrder(new DSGGetBlock2022(PType2, PLeutnant1DispenserPos));
           }
         }
         if (PLeutnant2 == agent) {
           PLeutnant2.getBody().resetBody();
           if (PStateL2 == 2) {
             PStateL2 = 1;
-            agent.hearOrder(new DSGetBlock(PType2, PLeutnant2DispenserPos));
+            agent.hearOrder(new DSGGetBlock2022(PType2, PLeutnant2DispenserPos));
           }
         }
 
@@ -312,5 +330,7 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
     super(commander, task);
     PPriority = 2;
     PTaskType = task.getTaskType();
+    PGUI=dsTaskGUI.createGUI();
+    PGUI.setDsgTaskText(task);
   }
 }
