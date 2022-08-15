@@ -4,7 +4,7 @@ import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsReasoningModule.dsGoals.DSClearGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoToPosition;
-import dsAgents.dsReasoningModule.dsGoals.DSGoal;
+import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import java.awt.*;
 
 public class DSSSeekAndDestroy extends DSScenario {
@@ -18,7 +18,7 @@ public class DSSSeekAndDestroy extends DSScenario {
   Point PObstacleAt, PAttackPossition;
 
   @Override
-  public void goalCompleted(DSAgent agent, DSGoal goal) {
+  public void goalCompleted(DSAgent agent, DSGGoal goal) {
     if (PState == _Destroy) {
       initScenario(PAgent.getStep());
       return;
@@ -49,7 +49,7 @@ public class DSSSeekAndDestroy extends DSScenario {
   }
 
   @Override
-  public void goalFailed(DSAgent agent, DSGoal goal) {
+  public void goalFailed(DSAgent agent, DSGGoal goal) {
     initScenario(agent.getStep());
   }
 
@@ -77,7 +77,7 @@ public class DSSSeekAndDestroy extends DSScenario {
               + PAttackPosition
               + ", master="
               + PAgent.getGroup().getMaster().getEntityName());
-      DSGoToPosition sADGoal = new DSGoToPosition(PAttackPosition, PAgent.getBody());
+      DSGoToPosition sADGoal = new DSGoToPosition(PAttackPosition, PAgent.getBody(), getTask().getDeadline());
       PAgent.hearOrder(sADGoal);
       return true;
     }

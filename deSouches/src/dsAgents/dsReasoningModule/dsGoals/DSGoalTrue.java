@@ -2,7 +2,7 @@ package dsAgents.dsReasoningModule.dsGoals;
 
 import dsAgents.DSAgent;
 
-public class DSGoalTrue extends DSGoal {
+public class DSGoalTrue extends DSGGoal {
   @Override
   public String getGoalDescription() {
     return ("true");
@@ -10,7 +10,7 @@ public class DSGoalTrue extends DSGoal {
 
   @Override
   public int goalStatus() {
-    return (DSGoal.__DSGGoalAchieved);
+    return (DSGGoal.__DSGGoalAchieved);
   }
 
   @Override

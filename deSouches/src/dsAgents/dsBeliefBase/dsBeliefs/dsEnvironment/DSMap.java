@@ -13,7 +13,7 @@ import dsAgents.DSAgent;
 import dsAgents.dsPerceptionModule.DSPerceptor;
 import java.awt.*;
 import java.util.*;
-;
+;import static jade.tools.sniffer.Agent.i;
 
 public class DSMap {
 
@@ -55,8 +55,8 @@ public class DSMap {
 
   public void setMasterMap() {
     PMasterMap = true;
-    PWidthMap = 70; // provizorka
-    PHeightMap = 70; // provizorka
+ //   PWidthMap = 70; // provizorka
+ //   PHeightMap = 70; // provizorka
   }
 
   public boolean isMasterMap() {
@@ -408,6 +408,13 @@ public class DSMap {
     return (mapArray);
   }
 
+  String printCells(LinkedList<DSCell> cells){
+    String s="";
+    for(DSCell cell:cells)
+      s=s+" ["+cell.getPosition().x+", "+cell.getPosition().y+"] ";
+    return(s);
+  }
+
   String point2String(Point p){
     return("["+p.x+","+p.y+"]");
   }
@@ -426,6 +433,13 @@ public class DSMap {
       System.out.println(" "+point2String(agent.getMapPosition()));
     }
 
+    LinkedList<DSCell> cells;
+    so=so.append("\n");
+    for(int ii=0;ii<3;ii++) {
+      String cs=printCells(PMapCells.getAllType(DSCell.__DSDispenser + ii));
+      so = so.append("D"+ii+": "+cs+"\n");
+    }
+
     so.append("\n");
 
     Point tlc = PMapCells.getTLC(); // top left corner
@@ -438,10 +452,12 @@ public class DSMap {
     int width = brc.x - lx + 1;
     int height = brc.y - ty + 1;
 
+    so.append("XXX");
     for (int i = 0; i < width; i++) so.append(nmb(i + lx));
     so.append(" \n");
 
     for (int j = 0; j < height; j++) {
+      so.append(nmb(j + ty));
       for (int i = 0; i < width; i++) {
         node = mapArray[i][j];
         if (node != null) {
@@ -455,7 +471,7 @@ public class DSMap {
           so.append(" ..");
         }
       }
-      so.append(nmb(j + ty)).append(" \n");
+      so.append(" \n");
     }
 
     return (so.toString());

@@ -4,7 +4,7 @@ import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsPerceptionModule.DSPerceptor;
-import dsAgents.dsReasoningModule.dsGoals.DSGoal;
+import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
@@ -23,7 +23,7 @@ public class DSMove extends dsAgents.dsExecutionModule.dsActions.DSAction {
   int PLAStep = 0;
 
   @Override
-  public DSGoal execute(DSAgent agent) {
+  public DSGGoal execute(DSAgent agent) {
     Action a =
         new Action(
             "move",

@@ -9,6 +9,9 @@ import dsAgents.dsPerceptionModule.DSPerceptor;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import java.awt.*;
 
+
+// obsolete, one step greedy search does this
+
 public final class DSStraightPath {
   // path through obstacles -> only digger and default
   // step is not really necessary for now as both roles have speed 1

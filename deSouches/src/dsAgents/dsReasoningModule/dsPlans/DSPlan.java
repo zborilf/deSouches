@@ -3,7 +3,7 @@ package dsAgents.dsReasoningModule.dsPlans;
 import deSouches.utils.HorseRider;
 import dsAgents.DSAgent;
 import dsAgents.dsExecutionModule.dsActions.DSAction;
-import dsAgents.dsReasoningModule.dsGoals.DSGoal;
+import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import java.util.LinkedList;
 
 /*
@@ -17,7 +17,7 @@ public class DSPlan {
   LinkedList<DSAction> PLinearPlan;
   int PPriority; // priorita planu
   DSAction PLastExternal = null;
-  DSGoal PSubGoal = null;
+  DSGGoal PSubGoal = null;
   String PPlanName;
   boolean PWaitingForFeedback = false;
   boolean PPlanSuceeded = false;
@@ -65,7 +65,15 @@ public class DSPlan {
     return (PSubGoal != null);
   }
 
-  public DSGoal getSubGoal() {
+  public void setSubGoal(DSGGoal subgoal){
+    PSubGoal=subgoal;
+  }
+
+  public void subgoalAchieved(){
+    PSubGoal=null;
+  }
+
+  public DSGGoal getSubGoal() {
     return (PSubGoal);
   }
 
@@ -128,7 +136,7 @@ public class DSPlan {
       }
 
       DSAction action = PLinearPlan.getFirst();
-      DSGoal subgoal = action.execute(agent);
+      DSGGoal subgoal = action.execute(agent);
 
       // subgoal ...  co udelat, aby tato akce mohla byt odstranena
       //          ... true, vse ok, muze byt odstranena

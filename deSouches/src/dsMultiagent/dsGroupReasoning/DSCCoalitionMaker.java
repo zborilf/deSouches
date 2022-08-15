@@ -92,11 +92,13 @@ public class DSCCoalitionMaker {
 
 
     public int distanceManhattan(Point a, Point b){
-        return(Math.abs(a.x-b.x)+Math.abs(a.y+b.y));
+        return(Math.abs(a.x-b.x)+Math.abs(a.y-b.y));
     }
 
     public int computePrice(Point start, Point through, Point end){
-        return(distanceManhattan(start,through)+ distanceManhattan(through,end));
+        int d1=distanceManhattan(start,through);
+        int d2=distanceManhattan(through,end);
+        return(d1+ d2);
     }
 
     public synchronized ArrayList<DSCCoalition> proposeTaskCoallitions(

@@ -7,7 +7,7 @@ import dsAgents.dsExecutionModule.dsActions.DSClear;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import java.awt.*;
 
-public class DSClearGoal extends DSGoal {
+public class DSClearGoal extends DSGGoal {
 
   Point PDirection;
 

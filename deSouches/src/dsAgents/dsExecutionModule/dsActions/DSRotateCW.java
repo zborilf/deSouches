@@ -3,7 +3,7 @@ package dsAgents.dsExecutionModule.dsActions;
 import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
-import dsAgents.dsReasoningModule.dsGoals.DSGoal;
+import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
@@ -25,7 +25,7 @@ public class DSRotateCW extends DSAction {
   }
 
   @Override
-  public DSGoal execute(DSAgent agent) {
+  public DSGGoal execute(DSAgent agent) {
     Action a = new Action("rotate", new Identifier("cw"));
 
     try {

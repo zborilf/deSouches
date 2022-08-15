@@ -144,14 +144,15 @@ public class dsGUI {
 
   public static dsGUI createGUI(int number, DeSouches commander) {
     JFrame frame = new JFrame("GUI for agent " + number);
-    frame.setSize(new Dimension(650, 100));
     dsGUI gui = new dsGUI();
     gui.setCommander(commander);
     frame.setContentPane(gui.dsgMainPanel);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.pack();
+    frame.setSize(new Dimension(2000, 1000));
     frame.setLocation(new Point(number * 40, number * 20));
     frame.setVisible(true);
+    frame.toFront();
     return (gui);
   }
 

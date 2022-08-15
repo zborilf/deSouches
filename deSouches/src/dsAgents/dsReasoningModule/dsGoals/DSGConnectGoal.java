@@ -4,7 +4,7 @@ import dsAgents.DSAgent;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import dsMultiagent.dsTasks.DSTaskType;
 
-public class DSGConnectGoal extends DSGoal {
+public class DSGConnectGoal extends DSGGoal {
 
   private DSPlan PPlan;
   private DSTaskType PTaskType;

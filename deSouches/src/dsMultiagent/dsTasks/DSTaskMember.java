@@ -10,9 +10,14 @@ public class DSTaskMember {
     DSAgent PAgent;
     Point PDispenserPosition;
     Point PGoalPosition;
+    int PPrice;
 
     public DSAgent getAgent(){
         return(PAgent);
+    }
+
+    public int getPrice(){
+        return(PPrice);
     }
 
     String point2String(Point point){
@@ -33,10 +38,12 @@ public class DSTaskMember {
     }
 
     public String taskMember2String(){
-        return(":- "+PAgent.getEntityName()+" -> "+point2String(PDispenserPosition)+" -> "+point2String(PGoalPosition));
+        return(":- "+PAgent.getEntityName()+":" + point2String(PAgent.getMapPosition())+" -> "
+                                        +point2String(PDispenserPosition)+" -> "+point2String(PGoalPosition));
     }
 
-    public DSTaskMember(DSAgent agent, Point dispenserPosition, Point goalPosition){
+    public DSTaskMember(DSAgent agent, Point dispenserPosition, Point goalPosition, int price){
+        PPrice = price;
         PAgent=agent;
         PDispenserPosition=dispenserPosition;
         PGoalPosition=goalPosition;

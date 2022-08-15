@@ -2,9 +2,8 @@ package dsMultiagent.dsScenarios;
 
 import dsAgents.DSAgent;
 import dsAgents.DeSouches;
-import dsAgents.dsReasoningModule.dsGoals.DSGoal;
+import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import dsAgents.dsTaskGUI;
-import dsMultiagent.DSGroup;
 import dsMultiagent.dsTasks.DSTask;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -58,9 +57,9 @@ public abstract class DSScenario {
     return (PTask);
   }
 
-  public abstract void goalCompleted(DSAgent agent, DSGoal goal);
+  public abstract void goalCompleted(DSAgent agent, DSGGoal goal);
 
-  public abstract void goalFailed(DSAgent agent, DSGoal goal);
+  public abstract void goalFailed(DSAgent agent, DSGGoal goal);
 
   public abstract boolean checkEvent(DSAgent agent, int eventType);
 

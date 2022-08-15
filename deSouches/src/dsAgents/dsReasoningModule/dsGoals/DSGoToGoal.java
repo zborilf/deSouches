@@ -2,10 +2,10 @@ package dsAgents.dsReasoningModule.dsGoals;
 
 import dsAgents.DSAgent;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
-import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStar;
+import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSPAStar;
 import java.awt.*;
 
-public class DSGoToGoal extends DSGoal {
+public class DSGoToGoal extends DSGGoal {
   @Override
   public String getGoalDescription() {
     return ("goToGoal");
@@ -22,7 +22,7 @@ public class DSGoToGoal extends DSGoal {
     }
 
     DSPlan plan =
-        new DSAStar()
+        new DSPAStar()
             .computePath(
                 "goToGoal",
                 1,
@@ -31,7 +31,8 @@ public class DSGoToGoal extends DSGoal {
                 point,
                 agent.getBody(),
                 5000,
-                agent);
+                agent, true);
+
     if (plan == null) return (false);
     // bastl, jen pro legraci. Volne sousedni agenta
     PPlans.put("goToGoal", plan);

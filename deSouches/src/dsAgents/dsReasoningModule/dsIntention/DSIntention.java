@@ -1,7 +1,7 @@
 package dsAgents.dsReasoningModule.dsIntention;
 
 import dsAgents.DSAgent;
-import dsAgents.dsReasoningModule.dsGoals.DSGoal;
+import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import java.util.LinkedList;
 
@@ -17,13 +17,15 @@ public class DSIntention {
   // vraci Goal, pokud je potreba zpetne vazby
 
   private static final String TAG = "DSIntention";
-  LinkedList<DSGoal> PIntentionStack = new LinkedList<DSGoal>();
+
+  LinkedList<DSGGoal> PIntentionStack = new LinkedList<DSGGoal>();
+
   public static int __Intention_NoPlan = 0;
   public static int __Intention_InProcess = 1;
   public static int __Intention_Finished = 2;
   public static int __Intention_Failed = 3;
 
-  public DSGoal getTLG() {
+  public DSGGoal getTLG() {
     return (PIntentionStack.getLast());
   }
 
@@ -35,12 +37,15 @@ public class DSIntention {
   }
 
   public int intentionState() {
-    DSGoal TLG = PIntentionStack.getLast();
+    DSGGoal TLG = PIntentionStack.getLast();
     if (TLG.goalAchieved()) {
       return (__Intention_Finished);
-    } else if ((TLG.goalStatus() == DSGoal.__DSGPlanningFailed)
-        || (TLG.goalStatus() == DSGoal.__DSGExecutionFailed)
-        || (TLG.goalStatus() == DSGoal.__DSGMovePathFailed)) return (__Intention_Failed);
+    } else if ((
+            TLG.goalStatus() == DSGGoal.__DSGPlanningFailed)
+        || (TLG.goalStatus() == DSGGoal.__DSGExecutionFailed)
+        || (TLG.goalStatus() == DSGGoal.__DSGMovePathFailed)
+        || (TLG.goalStatus() == DSGGoal.__DSGGoalFailed))
+      return (__Intention_Failed);
 
     return (__Intention_InProcess);
   }
@@ -49,7 +54,7 @@ public class DSIntention {
     // System.out.println("intentionExecutionFeedback: "+"Feeedback result in step
     // "+agent.getStep()+
     //             " for "+agent.getEntityName()+" is "+actionResult);
-    if (PIntentionStack.getFirst().goalStatus() == DSGoal.__DSGFeedbackNeeded) {
+    if (PIntentionStack.getFirst().goalStatus() == DSGGoal.__DSGFeedbackNeeded) {
       PIntentionStack.getFirst().executionFeedback(actionResult, agent);
       return (true);
     }
@@ -60,35 +65,42 @@ public class DSIntention {
     return (PIntentionStack.getFirst().getRecentPlan());
   }
 
-  public DSGoal executeIntention(DSAgent agent) {
+  public DSGGoal executeIntention(DSAgent agent) {
 
     // needs a subgoal? insert subgoal and go on
     // execute goal
     // goal achieved -> if not TLG, remove
     // return goal (if feedback needed), else null
 
-    DSGoal actualGoal = PIntentionStack.getFirst();
-    DSGoal subGoal;
+    DSGGoal actualGoal = PIntentionStack.getFirst();
+    DSGGoal subGoal;
 
-    if (actualGoal.goalStatus() == DSGoal.__DSGSubgoalNeeded) {
+    agent.printOutput(PIntentionStack.toString());
+
+    agent.printOutput("Nasleduji cil " + actualGoal.getGoalDescription());
+    actualGoal.followGoal(agent);
+    agent.printOutput("Cil byl nasledovan, status cile " + DSGGoal.getGoalStatusString(actualGoal.goalStatus()));
+
+
+    if (actualGoal.goalStatus() == DSGGoal.__DSGSubgoalNeeded) {
+      agent.printOutput("Subgoal!! Rozsiruji o " + actualGoal.getSubGoal().getGoalDescription());
       subGoal = actualGoal.getSubGoal();
       PIntentionStack.push(subGoal);
       actualGoal = subGoal;
-    }
+    } else {
+      // plan succesfully finished? Ok, get back one step
+      if ((actualGoal.goalAchieved()) && (PIntentionStack.size() > 1)) { // dont pop TLG!
+        PIntentionStack.pop();
+        PIntentionStack.getFirst().subgoalAchieved();
+      }
 
-    agent.printOutput("Nasleduji cil "+actualGoal.getGoalDescription());
-    actualGoal.followGoal(agent);
-
-    // plan succesfully finished? Ok, get back one step
-    if ((actualGoal.goalAchieved()) && (PIntentionStack.size() > 1)) // dont pop TLP!
-    PIntentionStack.pop();
-
-    // zde si nejsem jistej, asi obsolete
-    if (actualGoal.goalStatus() == DSGoal.__DSGFeedbackNeeded) return (actualGoal);
-    else return (null);
+      // zde si nejsem jistej, asi obsolete
+      if (actualGoal.goalStatus() == DSGGoal.__DSGFeedbackNeeded) return (actualGoal);
+      }
+     return (null);
   }
 
-  public DSIntention(DSGoal goal) {
+  public DSIntention(DSGGoal goal) {
     PIntentionStack.add(goal);
   }
 }

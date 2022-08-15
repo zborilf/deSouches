@@ -45,34 +45,34 @@ public class DSDivideAndExplore extends DSScenario {
   }
 
   @Override
-  public void goalCompleted(DSAgent agent, DSGoal goal) {
+  public void goalCompleted(DSAgent agent, DSGGoal goal) {
     // go on
     System.out.println(agent.getEntityName() + " DAE, Completed");
 
     divideSpace(PAgent.getGroup().getFreeAgents(2), false);
 
-    DSGoal newGoal = new DSGoalExplore(PRadius); // ... area!);
+    DSGGoal newGoal = new DSGoalExplore(PRadius); // ... area!);
     agent.hearOrder(newGoal);
   }
 
   @Override
-  public void goalFailed(DSAgent agent, DSGoal goal) {
+  public void goalFailed(DSAgent agent, DSGGoal goal) {
     // never mind, go on
-    if (goal.goalStatus() == DSGoal.__DSGMovePathFailed) {
+    if (goal.goalStatus() == DSGGoal.__DSGMovePathFailed) {
       DSMove mv = (DSMove) goal.getRecentPlan().getAction();
       System.out.println(
           agent.getEntityName()
               + " DAE, Failed "
-              + DSGoal.getGoalStatusType(goal.goalStatus())
+              + DSGGoal.getGoalStatusType(goal.goalStatus())
               + " dir: "
               + mv.getPlannedDirections());
     } else {
       System.out.println(
-          agent.getEntityName() + " DAE, Failed " + DSGoal.getGoalStatusType(goal.goalStatus()));
+          agent.getEntityName() + " DAE, Failed " + DSGGoal.getGoalStatusType(goal.goalStatus()));
     }
     divideSpace(PAgent.getGroup().getFreeAgents(2), false);
 
-    DSGoal newGoal = new DSGoalExplore(PRadius); // ... area!);
+    DSGGoal newGoal = new DSGoalExplore(PRadius); // ... area!);
     agent.hearOrder(newGoal);
   }
 

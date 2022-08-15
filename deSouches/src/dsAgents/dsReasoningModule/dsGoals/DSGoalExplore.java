@@ -18,7 +18,7 @@ import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsExecutionModule.dsActions.DSAdopt;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
-import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStar;
+import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSPAStar;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSStraightPath;
 import java.awt.Point;
 import java.util.ArrayList;
@@ -27,7 +27,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 
-public class DSGoalExplore extends DSGoal {
+public class DSGoalExplore extends DSGGoal {
   private static final String TAG = "DSGoalRoam";
 
   int PDistance;
@@ -115,7 +115,7 @@ public class DSGoalExplore extends DSGoal {
 
       if (agent.getActualRole().compareTo("explorer") == 0) {
         plan =
-            new DSAStar()
+            new DSPAStar()
                 .computePath(
                     "explore Astar",
                     local_priority,
@@ -124,7 +124,7 @@ public class DSGoalExplore extends DSGoal {
                     candidate,
                     agent.getBody(),
                     LARGE_N,
-                    agent);
+                    agent, true);
       }
 
       if (plan != null && plan.getLength() != 0) {

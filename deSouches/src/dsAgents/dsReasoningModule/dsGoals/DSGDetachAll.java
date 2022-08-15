@@ -5,7 +5,7 @@ import dsAgents.dsExecutionModule.dsActions.DSDetach;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import java.util.LinkedList;
 
-public class DSGDetachAll extends DSGoal {
+public class DSGDetachAll extends DSGGoal {
   @Override
   public String getGoalDescription() {
     return ("detachAllGoal");

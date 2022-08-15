@@ -1,0 +1,2023 @@
+LAR: 
+
+Step: 0 , pos java.awt.Point[x=0,y=0]
+NEW COMMAND! Goal explore
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@4a62501d]
+Nasleduji cil Goal explore
+Cil byl nasledovan, status cile planning failed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore
+Control Loop Finished
+LAR: 
+Failed goal Goal explore
+NEW COMMAND! Goal explore
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 1 , pos java.awt.Point[x=-1,y=0]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 2 , pos java.awt.Point[x=-2,y=0]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 3 , pos java.awt.Point[x=-3,y=0]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 4 , pos java.awt.Point[x=-3,y=0]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 5 , pos java.awt.Point[x=-4,y=0]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 6 , pos java.awt.Point[x=-4,y=0]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 7 , pos java.awt.Point[x=-5,y=0]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 9 , pos java.awt.Point[x=-5,y=0]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 10 , pos java.awt.Point[x=-6,y=0]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 11 , pos java.awt.Point[x=-7,y=0]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 12 , pos java.awt.Point[x=-8,y=0]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 13 , pos java.awt.Point[x=-9,y=0]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 14 , pos java.awt.Point[x=-10,y=0]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 15 , pos java.awt.Point[x=-11,y=0]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 16 , pos java.awt.Point[x=-12,y=0]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=1] ; 
+Clear action: clear(0,1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 18 , pos java.awt.Point[x=-13,y=0]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 19 , pos java.awt.Point[x=-13,y=1]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=1] ; 
+Clear action: clear(0,1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 20 , pos java.awt.Point[x=-13,y=1]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 21 , pos java.awt.Point[x=-13,y=2]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=1] ; 
+Clear action: clear(0,1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 22 , pos java.awt.Point[x=-13,y=2]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 23 , pos java.awt.Point[x=-13,y=3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=1] ; 
+Clear action: clear(0,1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 24 , pos java.awt.Point[x=-13,y=3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=1] ; 
+Clear action: clear(0,1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 25 , pos java.awt.Point[x=-13,y=3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=1] ; 
+Clear action: clear(0,1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 26 , pos java.awt.Point[x=-13,y=3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=1] ; 
+Clear action: clear(0,1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 27 , pos java.awt.Point[x=-13,y=3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 28 , pos java.awt.Point[x=-13,y=4]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 29 , pos java.awt.Point[x=-13,y=5]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 30 , pos java.awt.Point[x=-13,y=6]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 31 , pos java.awt.Point[x=-13,y=7]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 32 , pos java.awt.Point[x=-14,y=7]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 33 , pos java.awt.Point[x=-14,y=7]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 34 , pos java.awt.Point[x=-15,y=7]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 35 , pos java.awt.Point[x=-15,y=7]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 36 , pos java.awt.Point[x=-15,y=7]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 37 , pos java.awt.Point[x=-15,y=7]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 38 , pos java.awt.Point[x=-16,y=7]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 40 , pos java.awt.Point[x=-16,y=7]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 41 , pos java.awt.Point[x=-16,y=7]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 42 , pos java.awt.Point[x=-17,y=7]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 43 , pos java.awt.Point[x=-18,y=7]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+Absorbovan o java.awt.Point[x=2,y=-10]
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 44 , pos java.awt.Point[x=-17,y=-3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision 
+Cil byl nasledovan, status cile no plan / success
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 45 , pos java.awt.Point[x=-17,y=-3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 46 , pos java.awt.Point[x=-17,y=-3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 47 , pos java.awt.Point[x=-18,y=-3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [1,0] ; 
+Moving action: move(e)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [1,0]
+
+Step: 48 , pos java.awt.Point[x=-17,y=-3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 49 , pos java.awt.Point[x=-18,y=-3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 50 , pos java.awt.Point[x=-18,y=-3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 51 , pos java.awt.Point[x=-18,y=-3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 52 , pos java.awt.Point[x=-19,y=-3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [1,0] ; 
+Moving action: move(e)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [1,0]
+
+Step: 53 , pos java.awt.Point[x=-18,y=-3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 54 , pos java.awt.Point[x=-19,y=-3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 56 , pos java.awt.Point[x=-20,y=-3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 57 , pos java.awt.Point[x=-20,y=-3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 58 , pos java.awt.Point[x=-21,y=-3]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 59 , pos java.awt.Point[x=-21,y=-2]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+Absorbovan o java.awt.Point[x=31,y=-20]
+LAR: success
+
+Step: 60 , pos java.awt.Point[x=10,y=-22]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 61 , pos java.awt.Point[x=9,y=-22]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 62 , pos java.awt.Point[x=9,y=-22]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 63 , pos java.awt.Point[x=8,y=-22]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 64 , pos java.awt.Point[x=8,y=-22]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 65 , pos java.awt.Point[x=8,y=-22]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 66 , pos java.awt.Point[x=7,y=-22]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 67 , pos java.awt.Point[x=7,y=-22]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 68 , pos java.awt.Point[x=7,y=-23]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 69 , pos java.awt.Point[x=7,y=-23]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 70 , pos java.awt.Point[x=7,y=-23]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 71 , pos java.awt.Point[x=7,y=-23]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 72 , pos java.awt.Point[x=6,y=-23]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 74 , pos java.awt.Point[x=6,y=-23]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [1,0] ; 
+Moving action: move(e)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [1,0]
+
+Step: 76 , pos java.awt.Point[x=7,y=-24]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 77 , pos java.awt.Point[x=7,y=-24]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=1,y=0] ; 
+Clear action: clear(1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 78 , pos java.awt.Point[x=7,y=-24]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [1,0] ; 
+Moving action: move(e)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [1,0]
+
+Step: 79 , pos java.awt.Point[x=8,y=-24]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=1,y=0] ; 
+Clear action: clear(1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 80 , pos java.awt.Point[x=8,y=-24]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [1,0] ; 
+Moving action: move(e)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [1,0]
+
+Step: 81 , pos java.awt.Point[x=9,y=-24]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 82 , pos java.awt.Point[x=8,y=-24]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 83 , pos java.awt.Point[x=7,y=-24]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 84 , pos java.awt.Point[x=6,y=-24]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 85 , pos java.awt.Point[x=6,y=-24]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 86 , pos java.awt.Point[x=6,y=-24]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 87 , pos java.awt.Point[x=6,y=-25]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [1,0] ; 
+Moving action: move(e)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [1,0]
+
+Step: 88 , pos java.awt.Point[x=7,y=-25]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=1,y=0] ; 
+Clear action: clear(1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 89 , pos java.awt.Point[x=7,y=-25]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=1,y=0] ; 
+Clear action: clear(1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 90 , pos java.awt.Point[x=7,y=-25]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 91 , pos java.awt.Point[x=7,y=-26]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 92 , pos java.awt.Point[x=7,y=-27]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [1,0] ; 
+Moving action: move(e)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [1,0]
+
+Step: 93 , pos java.awt.Point[x=8,y=-27]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 94 , pos java.awt.Point[x=8,y=-28]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 95 , pos java.awt.Point[x=8,y=-29]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 97 , pos java.awt.Point[x=8,y=-29]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 98 , pos java.awt.Point[x=8,y=-30]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 99 , pos java.awt.Point[x=8,y=-29]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 100 , pos java.awt.Point[x=8,y=-30]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 101 , pos java.awt.Point[x=8,y=-31]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [-1,0] ; 
+Moving action: move(w)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [-1,0]
+
+Step: 102 , pos java.awt.Point[x=7,y=-31]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=-1,y=0] ; 
+Clear action: clear(-1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 103 , pos java.awt.Point[x=7,y=-31]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 104 , pos java.awt.Point[x=7,y=-31]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 105 , pos java.awt.Point[x=7,y=-31]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 106 , pos java.awt.Point[x=7,y=-31]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 107 , pos java.awt.Point[x=7,y=-31]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 108 , pos java.awt.Point[x=7,y=-32]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 109 , pos java.awt.Point[x=7,y=-32]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 110 , pos java.awt.Point[x=7,y=-33]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 111 , pos java.awt.Point[x=7,y=-32]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 112 , pos java.awt.Point[x=7,y=-33]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 113 , pos java.awt.Point[x=7,y=-34]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 114 , pos java.awt.Point[x=7,y=-33]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 115 , pos java.awt.Point[x=7,y=-34]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 116 , pos java.awt.Point[x=7,y=-34]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 117 , pos java.awt.Point[x=7,y=-35]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 118 , pos java.awt.Point[x=7,y=-34]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 119 , pos java.awt.Point[x=7,y=-35]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 120 , pos java.awt.Point[x=7,y=-35]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 121 , pos java.awt.Point[x=7,y=-36]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 122 , pos java.awt.Point[x=7,y=-35]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 123 , pos java.awt.Point[x=7,y=-36]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 124 , pos java.awt.Point[x=7,y=-36]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 125 , pos java.awt.Point[x=7,y=-37]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 126 , pos java.awt.Point[x=7,y=-36]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 127 , pos java.awt.Point[x=7,y=-37]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 128 , pos java.awt.Point[x=7,y=-37]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 129 , pos java.awt.Point[x=7,y=-37]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 130 , pos java.awt.Point[x=7,y=-38]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 131 , pos java.awt.Point[x=7,y=-37]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 132 , pos java.awt.Point[x=7,y=-38]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 133 , pos java.awt.Point[x=7,y=-38]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=-1] ; 
+Clear action: clear(0,-1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 134 , pos java.awt.Point[x=7,y=-38]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 135 , pos java.awt.Point[x=7,y=-39]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=1,y=0] ; 
+Clear action: clear(1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 136 , pos java.awt.Point[x=7,y=-39]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,-1] ; 
+Moving action: move(n)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,-1]
+
+Step: 137 , pos java.awt.Point[x=7,y=-40]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 138 , pos java.awt.Point[x=7,y=-39]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [1,0] ; 
+Moving action: move(e)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [1,0]
+
+Step: 139 , pos java.awt.Point[x=8,y=-39]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=1] ; 
+Clear action: clear(0,1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 140 , pos java.awt.Point[x=8,y=-39]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=1,y=0] ; 
+Clear action: clear(1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 141 , pos java.awt.Point[x=8,y=-39]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 142 , pos java.awt.Point[x=8,y=-38]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=1] ; 
+Clear action: clear(0,1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 143 , pos java.awt.Point[x=8,y=-38]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=1] ; 
+Clear action: clear(0,1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+
+Step: 144 , pos java.awt.Point[x=8,y=-38]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=1] ; 
+Clear action: clear(0,1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 145 , pos java.awt.Point[x=8,y=-38]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 146 , pos java.awt.Point[x=8,y=-37]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=0,y=1] ; 
+Clear action: clear(0,1)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+
+Step: 147 , pos java.awt.Point[x=8,y=-37]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision Move [0,1] ; 
+Moving action: move(s)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Nekdo hybe agentem agentA9 na mape o [0,1]
+
+Step: 148 , pos java.awt.Point[x=8,y=-36]
+Exekuuju intenšnu
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@52124379]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision clear java.awt.Point[x=1,y=0] ; 
+Clear action: clear(1,0)
+Cil byl nasledovan, status cile feedback needed
+Agent body  [0,0:7]
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished

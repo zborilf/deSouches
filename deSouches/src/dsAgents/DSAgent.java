@@ -7,12 +7,10 @@ import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSAgentOutlook;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsPerceptionModule.DSPerceptor;
-import dsAgents.dsPerceptionModule.DSStatusIndexes;
-import dsAgents.dsReasoningModule.dsGoals.DSGoal;
+import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import dsAgents.dsReasoningModule.dsIntention.DSIntention;
 import dsAgents.dsReasoningModule.dsIntention.DSIntentionPool;
 import dsMultiagent.DSGroup;
-import dsMultiagent.DSSynchronize;
 import dsMultiagent.dsScenarios.DSScenario;
 import eis.EnvironmentInterfaceStandard;
 import eis.PerceptUpdate;
@@ -23,7 +21,6 @@ import eis.iilang.Percept;
 import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
 import java.awt.*;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -145,6 +142,10 @@ public class DSAgent extends Agent {
     return (getScenarioPriority() >= priority);
   }
 
+  public boolean isBusyTask() {
+    return(PBeliefBase.getScenario().getTask()!=null);
+  }
+
   public DeSouches getCommander() {
     return (PBeliefBase.getCommander());
   }
@@ -185,23 +186,25 @@ public class DSAgent extends Agent {
              MAS INTERFACE
   */
 
-  public boolean hearOrder(DSGoal goal) {
+  public boolean hearOrder(DSGGoal goal) {
     // vytvori  intention a goal je jeji top level goal, rozsiri ni intention pool
     PIntentionPool.clearPool(); // TODO provizorne, pri vice intensnach odstranit
+    printOutput("NEW COMMAND! "+goal.getGoalDescription());
     DSIntention intention = new DSIntention(goal);
     PIntentionPool.adoptIntention(intention);
     return (true);
   }
 
-  public boolean informCompleted(DSGoal goal) {
+  public boolean informCompleted(DSGGoal goal) {
     if (PBeliefBase.getScenario() != null) {
       PBeliefBase.getScenario().goalCompleted(this, goal);
       return (true);
     } else return (false);
   }
 
-  public boolean informFailed(DSGoal goal) {
+  public boolean informFailed(DSGGoal goal) {
     if (PBeliefBase.getScenario() != null) {
+      printOutput("Failed goal "+goal.getGoalDescription());
       PBeliefBase.getScenario().goalFailed(this, goal);
       return (true);
     } else return (false);
@@ -250,7 +253,8 @@ public class DSAgent extends Agent {
 
 
     try{
-      POutput.write("LAR: "+  actionResult+"\n");
+
+      POutput.write("LAR: "+  PBeliefBase.getLastActionResultString()+"\n");
     }catch(Exception e){};
 
 
@@ -389,6 +393,8 @@ public class DSAgent extends Agent {
                     + PBeliefBase.getMap().stringPheroMap());
       }
 
+
+
       // sensing phase is over, salut commander / for synchronization and commander level
       // reconsiderations
 
@@ -408,7 +414,7 @@ public class DSAgent extends Agent {
        */
 
       // tady nechapu, o co jde
-      if (!perceptor.seesBlocksInBody(percepts.getAddList()))
+      if (!perceptor.seesBlocksInBody(agent.getOutlook()))
         if (PBeliefBase.getScenario() != null)
           PBeliefBase.getScenario()
               .checkEvent((DSAgent) (this.getAgent()), DSScenario._noBlockEvent);
@@ -487,28 +493,32 @@ public class DSAgent extends Agent {
         }
       }
 
-      if ((PIntentionPool.getIntention() == null) && (getScenario() == null))
+     if ((PIntentionPool.getIntention() == null) && (getScenario() == null))
         PBeliefBase.getCommander().needJob((DSAgent) this.getAgent());
 
       // EXECUTING INTENTION
 
       recentIntentionExecuted = PIntentionPool.executeOneIntention((DSAgent) this.getAgent());
 
+      if(recentIntentionExecuted!=null){
+        if(recentIntentionExecuted.getTLG()==null)
+          PBeliefBase.setLastGoal("No goal");
+        else
+          PBeliefBase.setLastGoal(recentIntentionExecuted.getTLG().getGoalDescription());
+
+        if (PBeliefBase.getGUIFocus()) {
+          PBeliefBase.getGUI().noticeLastGoal(recentIntentionExecuted.getTLG().getGoalDescription());
+          PBeliefBase.getGUI().writePlan(recentIntentionExecuted.getRecentPlan());
+        }
+      }
 
       // PRINT recentIntention on GUI
-      if(recentIntentionExecuted.getTLG()==null)
-        PBeliefBase.setLastGoal("No goal");
-      else
-        PBeliefBase.setLastGoal(recentIntentionExecuted.getTLG().getGoalDescription());
 
-      printOutput("\nStep: "+PBeliefBase.getStep());
+      printOutput("Agent body "+getBody().bodyToString());
       printOutput("Scenario: "+PBeliefBase.getScenario().getName());
       printOutput("Goal: "+PBeliefBase.getLastGoal());
+      printOutput("Control Loop Finished");
 
-      if (PBeliefBase.getGUIFocus()) {
-        PBeliefBase.getGUI().noticeLastGoal(recentIntentionExecuted.getTLG().getGoalDescription());
-        PBeliefBase.getGUI().writePlan(recentIntentionExecuted.getRecentPlan());
-      }
     } // END action()
 
     public controlLoop(DSAgent agent) {

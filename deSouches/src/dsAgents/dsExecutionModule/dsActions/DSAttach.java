@@ -5,7 +5,7 @@ import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsPerceptionModule.DSPerceptor;
-import dsAgents.dsReasoningModule.dsGoals.DSGoal;
+import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
@@ -35,7 +35,7 @@ public class DSAttach extends dsAgents.dsExecutionModule.dsActions.DSAction {
   }
 
   @Override
-  public DSGoal execute(DSAgent agent) {
+  public DSGGoal execute(DSAgent agent) {
     Action a = new Action("attach", new Identifier(PDirection));
     try {
       agent.getEI().performAction(agent.getJADEAgentName(), a);

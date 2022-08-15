@@ -58,6 +58,7 @@ public class DSBeliefBase {
 
   private String PLastGoal;
   private int PLastActionResult = DSStatusIndexes.__action_unknown_action;
+  private String PLastActionResultString = "";
   private String PLastAction = "unknown";
   private String PLastActionParams = "success";
 
@@ -213,6 +214,7 @@ public class DSBeliefBase {
   public void setLastActionResult(Collection<Parameter> parameters) {
     String actionResult = parameters.iterator().next().toString();
     PLastActionResult = DSStatusIndexes.getIndex(actionResult);
+    PLastActionResultString = actionResult;
 
     if (PGUIFocus) PGUI.setLastActionResult(actionResult);
   }
@@ -220,6 +222,8 @@ public class DSBeliefBase {
   public int getLastActionResult() {
     return (PLastActionResult);
   }
+
+  public String getLastActionResultString() { return(PLastActionResultString); }
 
   // 13 : __score
 

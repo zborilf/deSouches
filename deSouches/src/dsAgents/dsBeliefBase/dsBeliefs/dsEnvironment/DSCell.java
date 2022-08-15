@@ -5,7 +5,7 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DSCell {
+public class  DSCell {
 
   public static int __DSClear = 0;
   public static int __DSObstacle = 1;

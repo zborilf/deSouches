@@ -1,10 +1,8 @@
 package dsMultiagent.dsScenarios;
 
 import dsAgents.DSAgent;
-import dsAgents.dsExecutionModule.dsActions.DSMove;
-import dsAgents.dsReasoningModule.dsGoals.DSGGetBlock2022;
-import dsAgents.dsReasoningModule.dsGoals.DSGoal;
-import dsAgents.dsReasoningModule.dsGoals.DSGoalExplore;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsReasoningModule.dsGoals.*;
 
 import java.awt.*;
 import java.util.HashMap;
@@ -21,6 +19,7 @@ public class DSDivideAndExplore2022 extends DSScenario{
     int PRadius;
     DSAgent PAgent;
     HashMap<DSAgent, Rectangle> PAreas;
+
 
     void divideSpace(LinkedList<DSAgent> agents, boolean print) {
         int mx = 0;
@@ -44,39 +43,62 @@ public class DSDivideAndExplore2022 extends DSScenario{
 
     @Override
     public String getName() {
-        return ("Divide and Explore Scenario");
+        return ("Divide and Explore 2022 Scenario");
     }
 
     @Override
-    public void goalCompleted(DSAgent agent, DSGoal goal) {
+    public void goalCompleted(DSAgent agent, DSGGoal goal) {
         // go on
-        System.out.println(agent.getEntityName() + " DAE, Completed");
+        if(goal.getGoalDescription()=="changeRole") {
+            PCommander.printOutput(agent.getEntityName() + " ChangeRole, Completed");
+
+            DSGGoal newGoal = new DSGGetBlock2022(2, new Point(6, -16), 800); // ... area!);
+            agent.hearOrder(newGoal);
+            return;
+        }
+
+        else
+            if(goal.getGoalDescription()=="approachGoal")
+            PCommander.printOutput(agent.getEntityName() + " Approach, Completed");
+        else
+            PCommander.printOutput(agent.getEntityName() + " Explore, Completed");
 
         divideSpace(PAgent.getGroup().getFreeAgents(2), false);
 
-        DSGoal newGoal = new DSGoalExplore(PRadius); // ... area!);
+        DSGGoal newGoal = new DSGoalExplore(PRadius); // ... area!);
         agent.hearOrder(newGoal);
     }
 
     @Override
-    public void goalFailed(DSAgent agent, DSGoal goal) {
+    public void goalFailed(DSAgent agent, DSGGoal goal) {
         // never mind, go on
-        if (goal.goalStatus() == DSGoal.__DSGMovePathFailed) {
-            DSMove mv = (DSMove) goal.getRecentPlan().getAction();
-            System.out.println(
-                    agent.getEntityName()
-                            + " DAE, Failed "
-                            + DSGoal.getGoalStatusType(goal.goalStatus())
-                            + " dir: "
-                            + mv.getPlannedDirections());
-        } else {
-            System.out.println(
-                    agent.getEntityName() + " DAE, Failed " + DSGoal.getGoalStatusType(goal.goalStatus()));
-        }
-        divideSpace(PAgent.getGroup().getFreeAgents(2), false);
 
-        DSGoal newGoal = new DSGGetBlock2022(1, new Point(6,-16)); // ... area!);
-        agent.hearOrder(newGoal);
+
+        if(goal.getGoalDescription()=="changeRole") {
+            PAgent.hearOrder(new DSGChangeRole("worker"));
+            return;
+        }
+
+        if(goal.getGoalDescription()=="approachGoal") {
+            PCommander.printOutput(agent.getEntityName() + "Approach, Failed");
+            DSGGoal newGoal = new DSGGetBlock2022(2, new Point(6, -16),800); // ... area!);
+            agent.hearOrder(newGoal);
+            return;
+        }
+
+        if(goal.getGoalDescription()=="getBeside") {
+            PCommander.printOutput(agent.getEntityName() + "Get Beside, Failed");
+            DSGGoal newGoal = new DSGGetBlock2022(2, new Point(6, -16),800); // ... area!);
+            agent.hearOrder(newGoal);
+            return;
+        }
+
+        else
+
+            PCommander.printOutput(agent.getEntityName() + "DAE, Failed");
+            divideSpace(PAgent.getGroup().getFreeAgents(2), false);
+
+
     }
 
     @Override
@@ -93,7 +115,11 @@ public class DSDivideAndExplore2022 extends DSScenario{
         divideSpace(PAgent.getGroup().getFreeAgents(2), false);
 
 
-        PAgent.hearOrder(new DSGGetBlock2022(1, new Point(6,-16)));
+
+//        PAgent.hearOrder(new DSGGetBlock2022(2, new Point(6, -16)));
+
+
+        PAgent.hearOrder(new DSGChangeRole("worker"));
 
    //     PAgent.hearOrder(new DSGoalExplore(PRadius)); // TODO tohle pryc
 

@@ -4,7 +4,7 @@ import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsPerceptionModule.DSPerceptor;
-import dsAgents.dsReasoningModule.dsGoals.DSGoal;
+import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
@@ -24,7 +24,7 @@ public class DSSubmit extends DSAction {
   }
 
   @Override
-  public DSGoal execute(DSAgent agent) {
+  public DSGGoal execute(DSAgent agent) {
     Action a = new Action("submit", new Identifier(PTaskName));
     try {
       agent.getEI().performAction(agent.getJADEAgentName(), a);

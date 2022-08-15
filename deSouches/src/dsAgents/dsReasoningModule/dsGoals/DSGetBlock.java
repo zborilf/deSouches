@@ -8,7 +8,7 @@ import dsAgents.dsPerceptionModule.DSPerceptor;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import java.awt.*;
 
-public class DSGetBlock extends DSGoal {
+public class DSGetBlock extends DSGGoal {
 
   private static final String TAG = "DSGoToDispenser";
   int PBlockType;
@@ -41,7 +41,7 @@ public class DSGetBlock extends DSGoal {
       Point out = DSPerceptor.getPositionFromDirection(mv1);
 
       Point attachFrom = new Point(PDispenserLocation.x + out.x, PDispenserLocation.y + out.y);
-      DSPlan newPlan = astarGroup("goToDispenser", 1, agent, attachFrom, agent.getBody());
+      DSPlan newPlan = astarGroup("goToDispenser", 1, agent, attachFrom, agent.getBody(),false);
       HorseRider.inform(
           TAG,
           "makePlan: "
@@ -77,7 +77,7 @@ public class DSGetBlock extends DSGoal {
     String neighbPosOp = agent.getMap().oppositeDirection(neighbPos);
     Point out = DSPerceptor.getPositionFromDirection(neighbPos);
     Point position = new Point(blockAt.x + out.x, blockAt.y + out.y);
-    DSPlan newPlan = astarGroup("goForBlock", 2, agent, position, agent.getBody());
+    DSPlan newPlan = astarGroup("goForBlock", 2, agent, position, agent.getBody(), false);
     if (newPlan != null) {
       newPlan.setPriority(1000 - newPlan.getLength());
       DSAttach newAttach = new DSAttach(neighbPosOp, PBlockType);

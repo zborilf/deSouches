@@ -6,7 +6,7 @@ import dsAgents.dsExecutionModule.dsActions.DSConnect;
 import dsAgents.dsExecutionModule.dsActions.DSDetach;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 
-public class DSGConnectAndDetach extends DSGoal {
+public class DSGConnectAndDetach extends DSGGoal {
 
   String PDirection;
   String PPartnerName;

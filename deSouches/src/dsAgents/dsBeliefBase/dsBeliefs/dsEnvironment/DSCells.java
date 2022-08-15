@@ -105,9 +105,19 @@ public class DSCells {
     PHashCells.put(point, newList);
   }
 
-  public synchronized LinkedList<DSCell> getAllAt(Point point) {
-    if (PHashCells.containsKey(point)) return ((LinkedList<DSCell>) PHashCells.get(point).clone());
+  public synchronized LinkedList<DSCell> getAllAt(Point position) {
+    if (PHashCells.containsKey(position)) return ((LinkedList<DSCell>) PHashCells.get(position).clone());
     else return (null);
+  }
+
+  public boolean isObjectAt(int type, Point position){
+    if (PHashCells.containsKey(position)){
+      LinkedList<DSCell> cells=(LinkedList<DSCell>) PHashCells.get(position).clone();
+      for(DSCell cell:cells)
+        if(cell.getType()==type)
+          return(true);
+    }
+    return(false);
   }
 
   public synchronized DSCell getNewestAt(Point point) {

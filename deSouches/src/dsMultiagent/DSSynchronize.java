@@ -22,6 +22,29 @@ public class DSSynchronize {
     return (PMasterGroup);
   }
 
+
+
+  public boolean masterGroupCandidate(DSGroup group) {
+    // chceck whether this group is good enaugh to be
+    // when NOAgents > 5 TODO ... udelat chytreji
+    if(PMasterGroup!=null)
+      return(false);
+
+    int ga = group.getMap().getMap().getAllType(__DSGoalArea).size();
+    int za = group.getMap().getMap().getAllType(__DSRoleArea).size();
+    int d0 = group.getMap().getMap().getAllType(__DSDispenser + 0).size();
+    int d1 = group.getMap().getMap().getAllType(__DSDispenser + 1).size();
+    int d2 = group.getMap().getMap().getAllType(__DSDispenser + 2).size();
+
+    if (((ga * za * d0) > 0) && (group.getMembers().size() > 5)) {
+      PMasterGroup = group;
+      group.setMasterGroup();
+      return(true);
+    }
+
+    return (false);
+  }
+
   class DSFriendsSeen {
     HashMap<DSAgent, LinkedList<Point>> PFriendsSeen = new HashMap<>();
 
@@ -38,23 +61,7 @@ public class DSSynchronize {
     x1+Dx=x2+Dsx a y1+Dy=y2’+Dsy. Proto Dsx=x1+Dx-x2’ a Dsy=y1+Dy-y2’. Což je posunutí [x1+Dx-x2’, y1+Dy-y2’].
     */
 
-    boolean masterGroupCandidate(DSGroup group) {
-      // chceck whether this group is good enaugh to be
-      // when NOAgents > 5 TODO ... udelat chytreji
-      int ga = group.getMap().getMap().getAllType(__DSGoalArea).size();
-      int za = group.getMap().getMap().getAllType(__DSRoleArea).size();
-      int d0 = group.getMap().getMap().getAllType(__DSDispenser + 0).size();
-      int d1 = group.getMap().getMap().getAllType(__DSDispenser + 1).size();
-      int d2 = group.getMap().getMap().getAllType(__DSDispenser + 2).size();
 
-      if (((ga * za * d0 * d1 * d2) > 0) && (group.getMembers().size() > 5)) {
-        PMasterGroup = group;
-        group.setMasterGroup();
-        return(true);
-      }
-
-      return (false);
-    }
 
     Point getGroupDisplacement(Point agG1Pos, Point agG2Pos, Point agDisplacement) {
       return (new Point(
@@ -124,13 +131,6 @@ public class DSSynchronize {
 
                   if(token) {
                     agent1.getGroup().absorbGroup(agent2.getGroup(), displacement, output);
-                    if (PMasterGroup == null)
-                      if (masterGroupCandidate(agent1.getGroup()))
-                        try {
-                          output.write("> ! > " + agent1.getStep() + " MASTERGRUPA " + agent1.getEntityName() + "!!!\n");
-                          output.flush();
-                        } catch (Exception e) {
-                        }
                     token=false;
                   }      // for sure, only one sync per round // TODO ... opravdu je to nutne?
 
@@ -148,8 +148,8 @@ public class DSSynchronize {
       PFriendsSeen.put(agent, friends);
     }
 
+
     synchronized boolean isComplete(int size) {
-      System.out.println("Zbyva " + (size - PFriendsSeen.keySet().size()));
       return (PFriendsSeen.keySet().size() == size);
     }
 

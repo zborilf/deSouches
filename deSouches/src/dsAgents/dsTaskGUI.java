@@ -136,7 +136,6 @@ public class dsTaskGUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocation(new Point(350, 350));
         frame.pack();
-
         frame.setVisible(true);
         return (gui);
     }

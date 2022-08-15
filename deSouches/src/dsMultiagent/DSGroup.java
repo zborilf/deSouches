@@ -44,18 +44,22 @@ public class DSGroup {
     return (PMembers);
   }
 
-  public LinkedList<DSAgent> getMembersByRole(String role) {
+  public LinkedList<DSAgent> getMembersByRole(String role, boolean notBusy) {
+    // gets member by role, if notBusy, only those not working on a task
+
     LinkedList<DSAgent> membersRole = new LinkedList<DSAgent>();
     LinkedList<DSAgent> members = getMembers();
     if (members == null) return (null);
     for (DSAgent member : members)
-      if (member.getActualRole().compareTo(role) == 0) membersRole.add(member);
+      if (member.getActualRole().compareTo(role) == 0)
+        if((!notBusy)||(!member.isBusyTask()))
+          membersRole.add(member);
     return (membersRole);
   }
 
   public LinkedList<Point> getMembersPositionsByRole(String role) {
     LinkedList<Point> positions = new LinkedList<Point>();
-    LinkedList<DSAgent> members = getMembersByRole(role);
+    LinkedList<DSAgent> members = getMembersByRole(role,false );
     if (members == null) return (null);
     for (DSAgent member : members) positions.add(member.getMapPosition());
     return (positions);

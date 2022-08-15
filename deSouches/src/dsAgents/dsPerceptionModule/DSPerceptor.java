@@ -66,10 +66,8 @@ public class DSPerceptor {
     return ("");
   }
 
-  public boolean seesBlocksInBody(Collection<Percept> percepts) {
-    Iterator<Percept> perceptI =
-        percepts.stream().filter(prc -> prc.getName().equals("attached")).iterator();
-    return (perceptI.hasNext());
+  public boolean seesBlocksInBody(DSAgentOutlook outlook) {
+        return(outlook.seesBlockBy(new Point(0,0),DSCell.__DSBlock, DSCell.__DSBlock+20));
   }
 
   public DSBody getBodyFromPercepts(Collection<Percept> percepts) {
@@ -281,6 +279,9 @@ public class DSPerceptor {
           BB.removeTask(perceptParams);
           break;
 
+        case DSBeliefsIndexes.__attached:
+          break;
+
         case DSBeliefsIndexes.__energy:
           break;
         case DSBeliefsIndexes.__score:
@@ -345,6 +346,10 @@ public class DSPerceptor {
         case DSBeliefsIndexes.__task:
           BB.setTask(perceptParams);
           break;
+
+        case DSBeliefsIndexes.__attached:
+          break;
+
 
         case DSBeliefsIndexes.__energy:
           BB.setEnergy(perceptParams);
