@@ -38,6 +38,10 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
     return("Three Block scenario");
   }
 
+  public void updateGUI() {
+    PGUI.setDsgTaskText(PTask, PMasterGoalPos, PLeutnant1GoalPos, PLeutnant2GoalPos, null);
+  }
+
   @Override
   public void goalCompleted(DSAgent agent, DSGGoal goal) {
 
@@ -68,8 +72,14 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
         PGUI.addText2Terminal(agent.getEntityName()+" completed goToPosition -> ConnectGoal");
         PStateM = 3;
-        agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
+      //  agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
       }
+      if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" evasive manoeuvre -> goToPosition");
+        PStateM = 2;
+        agent.hearOrder(new DSGoToPosition(PMasterGoalPos, PMasterGoalBody, getTask().getDeadline()));
+      }
+
       if (goal.getGoalDescription().contentEquals("customGoal")) {
         PGUI.addText2Terminal(agent.getEntityName()+" completed customGoal -> submitGoal");
         PStateM = 4;
@@ -100,7 +110,12 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
         PGUI.addText2Terminal(agent.getEntityName()+" completed goToPosition -> ConnectGoal");
         PStateL1 = 3;
-        agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
+     //   agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
+      }
+      if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" evasive manoeuvre -> goToPosition");
+        PStateM = 2;
+        agent.hearOrder(new DSGoToPosition(PLeutnant1GoalPos, PLeutnant1GoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("customGoal")) {
         PGUI.addText2Terminal(agent.getEntityName()+" completed customGoal");
@@ -109,9 +124,12 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
     }
 
     if (agent == PLeutnant2) {
-      if (goal.getGoalDescription().contentEquals("goRandomly"))
-        agent.hearOrder(new DSGGetBlock2022(PType3,PLeutnant2DispenserPos, getTask().getDeadline()));
+      if (goal.getGoalDescription().contentEquals("goRandomly")) {
+        PGUI.addText2Terminal(agent.getEntityName() + " completed goRandomly -> GetBlock");
+        agent.hearOrder(new DSGGetBlock2022(PType3, PLeutnant2DispenserPos, getTask().getDeadline()));
+      }
       if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed detachAll -> GetBlock");
         PStateL1 = 1;
         agent.hearOrder(new DSGGetBlock2022(PType3, PLeutnant2DispenserPos, getTask().getDeadline()));
       }
@@ -119,13 +137,25 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
         PStateL2 = 2;
         agent.hearOrder(new DSGoToPosition(PLeutnant2GoalPos, PLeutnant2GoalBody, getTask().getDeadline()));
       }
+      if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" evasive manoeuvre -> goToPosition");
+        PStateM = 2;
+        agent.hearOrder(new DSGoToPosition(PLeutnant2GoalPos, PLeutnant2GoalBody, getTask().getDeadline()));
+      }
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goToPosition -> ConnectGoal");
         PStateL2 = 3;
-        agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
+     //   agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
       }
       if (goal.getGoalDescription().contentEquals("customGoal")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed customGoal");
         PStateL2 = 4;
       }
+    }
+    if((PStateM==3)&&(PStateL1==3)&&(PStateL2==3)){
+      PMaster.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
+      PLeutnant1.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
+      PLeutnant2.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
     }
   }
 
@@ -136,50 +166,80 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
             "goalFailed: "
                     + "SCEN: Task to je smula agente "
                     + agent.getEntityName()
-                    + " za "
+                    + " kvuli "
                     + goal.getGoalDescription());
 
 
     if (agent == PMaster) {
 
       if (goal.getGoalDescription().contentEquals("get block 2022")) {
-        agent.hearOrder(new DSGoalExplore(4));
+        agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
+     //   agent.hearOrder(new DSGoalExplore(4));
         PStateM = 2;
       }
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
-        PStateM = 3;
+        PStateM = 2;
+        agent.hearOrder(new DSEvasiveManoeuvre());
+      }
+      if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" evasive manoeuvre -> goToPosition");
+        PStateM = 2;
         agent.hearOrder(new DSGoToPosition(PMasterGoalPos, PMasterGoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("goRandomly"))
         agent.hearOrder(new DSGGetBlock2022(PType1,PMasterDispenserPos, getTask().getDeadline()));
+
+      if (goal.getGoalDescription().contentEquals("customGoal")) {
+        agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
+      }
+
     }
 
     if (agent == PLeutnant1) {
 
       if (goal.getGoalDescription().contentEquals("get block 2022")) {
         PStateL1 = 2;
-        agent.hearOrder(new DSGoalExplore(4));
+        agent.hearOrder(new DSGGetBlock2022(PType2, PLeutnant1DispenserPos, getTask().getDeadline()));
+//        agent.hearOrder(new DSGoalExplore(4));
       }
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
-        PStateL1 = 3;
+        PStateL1 = 2;
+        agent.hearOrder(new DSEvasiveManoeuvre());
+      }
+      if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" evasive manoeuvre -> goToPosition");
+        PStateL1 = 2;
         agent.hearOrder(new DSGoToPosition(PLeutnant1GoalPos, PLeutnant1GoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("goRandomly"))
         agent.hearOrder(new DSGGetBlock2022(PType2,PLeutnant1DispenserPos, getTask().getDeadline()));
+      }
+      if (goal.getGoalDescription().contentEquals("customGoal")) {
+      agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
     }
 
     if (agent == PLeutnant2) {
 
       if (goal.getGoalDescription().contentEquals("get block 2022")) {
         PStateL2 = 2;
-        agent.hearOrder(new DSGoalExplore(4));
+        agent.hearOrder(new DSGGetBlock2022(PType3, PLeutnant2DispenserPos, getTask().getDeadline()));
+
+//        agent.hearOrder(new DSGoalExplore(4));
       }
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
-        PStateL2 = 3;
+        PStateL2 = 2;
+        agent.hearOrder(new DSEvasiveManoeuvre());
+      }
+      if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" evasive manoeuvre -> goToPosition");
+        PStateL2 = 2;
         agent.hearOrder(new DSGoToPosition(PLeutnant2GoalPos, PLeutnant2GoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("goRandomly"))
         agent.hearOrder(new DSGGetBlock2022(PType3,PLeutnant2DispenserPos, getTask().getDeadline()));
+    }
+    if (goal.getGoalDescription().contentEquals("customGoal")) {
+      agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
     }
   }
 
@@ -338,6 +398,8 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
             + " body is "
             + PLeutnant2.getBody().bodyToString());
 
+    updateGUI();
+
     return (true);
   }
 
@@ -346,6 +408,5 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
     PPriority = 2;
     PTaskType = task.getTaskType();
     PGUI=dsTaskGUI.createGUI();
-    PGUI.setDsgTaskText(task);
   }
 }

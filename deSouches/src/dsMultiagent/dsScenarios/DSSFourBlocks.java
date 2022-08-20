@@ -39,6 +39,10 @@ public class DSSFourBlocks extends DSSBlockScenarios {
     return("Four Block scenario");
   }
 
+  public void updateGUI() {
+    PGUI.setDsgTaskText(PTask, PMasterGoalPos, PLeutnant1GoalPos, PLeutnant2GoalPos, PLeutnant3GoalPos);
+  }
+
   @Override
   public void goalCompleted(DSAgent agent, DSGGoal goal) {
 
@@ -51,20 +55,27 @@ public class DSSFourBlocks extends DSSBlockScenarios {
 
     if (agent == PMaster) {
       if (goal.getGoalDescription().contentEquals("goRandomly")) {
-
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goRandomly -> GetBlock");
         agent.hearOrder(new DSGGetBlock2022(PType1,PMasterDispenserPos, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed detachAll -> GetBlock");
         PStateL1 = 1;
         agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("get block 2022")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goToDispenser -> goToPosition");
         PStateM = 2;
         agent.hearOrder(new DSGoToPosition(PMasterGoalPos, PMasterGoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goToPosition -> ConnectGoal");
         PStateM = 3;
-        agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
+      }
+      if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" evasive manoeuvre -> goToPosition");
+        PStateM = 2;
+        agent.hearOrder(new DSGoToPosition(PMasterGoalPos, PMasterGoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("customGoal")) {
         PStateM = 4;
@@ -74,20 +85,29 @@ public class DSSFourBlocks extends DSSBlockScenarios {
     }
 
     if (agent == PLeutnant1) {
-      if (goal.getGoalDescription().contentEquals("goRandomly"))
+      if (goal.getGoalDescription().contentEquals("goRandomly")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goRandomly -> GetBlock");
         agent.hearOrder(new DSGGetBlock2022(PType2, PLeutnant1DispenserPos, getTask().getDeadline()));
+      }
 
       if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed detachAll -> GetBlock");
         PStateL1 = 1;
         agent.hearOrder(new DSGGetBlock2022(PType2, PLeutnant1DispenserPos, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("get block 2022")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goToDispenser -> goToPosition");
         PStateL1 = 2;
         agent.hearOrder(new DSGoToPosition(PLeutnant1GoalPos, PLeutnant1GoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goToPosition -> ConnectGoal");
         PStateL1 = 3;
-        agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
+      }
+      if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" evasive manoeuvre -> goToPosition");
+        PStateL1 = 2;
+        agent.hearOrder(new DSGoToPosition(PLeutnant1GoalPos, PLeutnant1GoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("customGoal")) {
         PStateL1 = 4;
@@ -95,19 +115,28 @@ public class DSSFourBlocks extends DSSBlockScenarios {
     }
 
     if (agent == PLeutnant2) {
-      if (goal.getGoalDescription().contentEquals("goRandomly"))
+      if (goal.getGoalDescription().contentEquals("goRandomly")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goRandomly -> GetBlock");
         agent.hearOrder(new DSGGetBlock2022(PType3, PLeutnant2DispenserPos, getTask().getDeadline()));
+      }
       if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed detachAll -> GetBlock");
         PStateL1 = 1;
         agent.hearOrder(new DSGGetBlock2022(PType3, PLeutnant2DispenserPos, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("get block 2022")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goToDispenser -> goToPosition");
         PStateL2 = 2;
         agent.hearOrder(new DSGoToPosition(PLeutnant2GoalPos, PLeutnant2GoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goToPosition -> ConnectGoal");
         PStateL2 = 3;
-        agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
+        }
+      if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" evasive manoeuvre -> goToPosition");
+        PStateL2 = 2;
+        agent.hearOrder(new DSGoToPosition(PLeutnant2GoalPos, PLeutnant2GoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("customGoal")) {
         PStateL2 = 4;
@@ -115,23 +144,38 @@ public class DSSFourBlocks extends DSSBlockScenarios {
     }
 
     if (agent == PLeutnant3) {
-      if (goal.getGoalDescription().contentEquals("goRandomly"))
+      if (goal.getGoalDescription().contentEquals("goRandomly")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goRandomly -> GetBlock");
         agent.hearOrder(new DSGGetBlock2022(PType4, PLeutnant3DispenserPos, getTask().getDeadline()));
+      }
       if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed detachAll -> GetBlock");
         PStateL3 = 1;
         agent.hearOrder(new DSGGetBlock2022(PType4, PLeutnant3DispenserPos, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("get block 2022")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goToDispenser -> goToPosition");
         PStateL3 = 2;
         agent.hearOrder(new DSGoToPosition(PLeutnant3GoalPos, PLeutnant3GoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" completed goToPosition -> ConnectGoal");
         PStateL3 = 3;
-        agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
+         }
+      if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" evasive manoeuvre -> goToPosition");
+        PStateL3 = 2;
+        agent.hearOrder(new DSGoToPosition(PLeutnant3GoalPos, PLeutnant3GoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("customGoal")) {
         PStateL3 = 4;
       }
+    }
+    if((PStateM==3)&&(PStateL1==3)&&(PStateL2==3)){
+      PMaster.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
+      PLeutnant1.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
+      PLeutnant2.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
+      PLeutnant3.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
     }
   }
 
@@ -142,61 +186,102 @@ public class DSSFourBlocks extends DSSBlockScenarios {
             "goalFailed: "
                     + "SCEN: Task to je smula agente "
                     + agent.getEntityName()
-                    + " za "
+                    + " kvuli "
                     + goal.getGoalDescription());
 
 
     if (agent == PMaster) {
 
       if (goal.getGoalDescription().contentEquals("get block 2022")) {
-        agent.hearOrder(new DSGoalExplore(4));
-        PStateM = 2;
+        agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
+
+        //agent.hearOrder(new DSGoalExplore(4));
+        PStateM = 1;
       }
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
-        PStateM = 3;
+        PStateM = 2;
+        agent.hearOrder(new DSEvasiveManoeuvre());
+      }
+
+      if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+        PGUI.addText2Terminal(agent.getEntityName() + " evasive manoeuvre -> goToPosition");
+        PStateM = 2;
         agent.hearOrder(new DSGoToPosition(PMasterGoalPos, PMasterGoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("goRandomly"))
         agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
+      if (goal.getGoalDescription().contentEquals("customGoal")) {
+        agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
+      }
     }
 
     if (agent == PLeutnant1) {
 
       if (goal.getGoalDescription().contentEquals("get block 2022")) {
-        PStateL1 = 2;
-        agent.hearOrder(new DSGoalExplore(4));
+        PStateL1 = 1;
+        agent.hearOrder(new DSGGetBlock2022(PType2, PLeutnant1DispenserPos, getTask().getDeadline()));
+
+        //        agent.hearOrder(new DSGoalExplore(4));
       }
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
-        PStateL1 = 3;
+        PStateL1 = 2;
+        agent.hearOrder(new DSEvasiveManoeuvre());
+      }
+      if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+        PGUI.addText2Terminal(agent.getEntityName() + " evasive manoeuvre -> goToPosition");
+        PStateL1 = 2;
         agent.hearOrder(new DSGoToPosition(PLeutnant1GoalPos, PLeutnant1GoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("goRandomly"))
         agent.hearOrder(new DSGGetBlock2022(PType2,PLeutnant1DispenserPos, getTask().getDeadline()));
     }
+    if (goal.getGoalDescription().contentEquals("customGoal")) {
+      agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
+    }
 
     if (agent == PLeutnant2) {
 
       if (goal.getGoalDescription().contentEquals("get block 2022")) {
-        PStateL2 = 2;
-        agent.hearOrder(new DSGoalExplore(4));
+        PStateL2 = 1;
+        agent.hearOrder(new DSGGetBlock2022(PType3, PLeutnant2DispenserPos, getTask().getDeadline()));
+        //        agent.hearOrder(new DSGoalExplore(4));
       }
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
-        PStateL2 = 3;
+        PStateL2 = 2;
+        agent.hearOrder(new DSEvasiveManoeuvre());
+      }
+
+      if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+        PGUI.addText2Terminal(agent.getEntityName() + " evasive manoeuvre -> goToPosition");
+        PStateL2 = 2;
         agent.hearOrder(new DSGoToPosition(PLeutnant2GoalPos, PLeutnant2GoalBody, getTask().getDeadline()));
+      }
+      if (goal.getGoalDescription().contentEquals("customGoal")) {
+        agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
       }
       if (goal.getGoalDescription().contentEquals("goRandomly"))
         agent.hearOrder(new DSGGetBlock2022(PType3,PLeutnant2DispenserPos, getTask().getDeadline()));
+
     }
 
     if (agent == PLeutnant3) {
 
       if (goal.getGoalDescription().contentEquals("get block 2022")) {
-        PStateL3 = 2;
-        agent.hearOrder(new DSGoalExplore(4));
+        PStateL3 = 1;
+        agent.hearOrder(new DSGGetBlock2022(PType4, PLeutnant3DispenserPos, getTask().getDeadline()));
+        //        agent.hearOrder(new DSGoalExplore(4));
       }
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
-        PStateL3 = 3;
+        PStateL3 = 2;
+        agent.hearOrder(new DSEvasiveManoeuvre());
+      }
+      if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+        PGUI.addText2Terminal(agent.getEntityName() + " evasive manoeuvre -> goToPosition");
+        PStateL3 = 2;
         agent.hearOrder(new DSGoToPosition(PLeutnant3GoalPos, PLeutnant3GoalBody, getTask().getDeadline()));
+      }
+      if (goal.getGoalDescription().contentEquals("customGoal")) {
+        agent.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
       }
       if (goal.getGoalDescription().contentEquals("goRandomly"))
         agent.hearOrder(new DSGGetBlock2022(PType4, PLeutnant3DispenserPos, getTask().getDeadline()));
@@ -399,7 +484,9 @@ public class DSSFourBlocks extends DSSBlockScenarios {
             + " body is "
             + PLeutnant3.getBody().bodyToString());
 
-    return (true);
+        updateGUI();
+
+        return (true);
   }
 
   public DSSFourBlocks(DeSouches commander, DSTask task) {
@@ -407,6 +494,6 @@ public class DSSFourBlocks extends DSSBlockScenarios {
     PPriority = 2;
     PTaskType = task.getTaskType();
     PGUI=dsTaskGUI.createGUI();
-    PGUI.setDsgTaskText(task);
+   // PGUI.setDsgTaskText(task);
   }
 }

@@ -79,18 +79,27 @@ public class dsTaskGUI {
 
 
 
-    public void setDsgTaskText(DSTask task){
-        DSAgent M,L1, L2,L3;
-        L2=null; L3=null; //M, L1 are always some
+    public synchronized void setDsgTaskText(DSTask task, Point gp1,Point gp2,Point gp3,Point gp4){
 
+        DSAgent M, L1, L2, L3;
+
+        L1=null; L2=null; L3=null; //M is always some
+        dsgStepLabel.setText(String.valueOf(task.getDeadline()));
         M=task.getSubtaskRoutes(0).getAgent();
-        L1=task.getSubtaskRoutes(1).getAgent();
 
+        if(task.getSubtaskRoutes(1)!=null) {
+            L1 = task.getSubtaskRoutes(1).getAgent();
+            dsgAgentL1.setText(getAgentName(L1));
+            dsgDispenserL1.setText(getPosition(task.getSubtaskRoutes(1).getDispenserPosition()));
+            dsgGoalL1.setText(getPosition(gp2));
+            dsgPositionL1.setText(getAgentPosition(L1));
+            dsgActivityL1.setText(L1.getLastGoal());
+        }
         if(task.getSubtaskRoutes(2)!=null) {
             L2=task.getSubtaskRoutes(2).getAgent();
             dsgAgentL2.setText(getAgentName(L2));
             dsgDispenserL2.setText(getPosition(task.getSubtaskRoutes(2).getDispenserPosition()));
-            dsgGoalL2.setText(getPosition(task.getSubtaskRoutes(2).getGoalPosition()));
+            dsgGoalL2.setText(getPosition(gp3));
             dsgPositionL2.setText(getAgentPosition(L2));
             dsgActivityL2.setText(L2.getLastGoal());
 
@@ -100,27 +109,21 @@ public class dsTaskGUI {
             dsgAgentL3.setText(getAgentName(L3));
             dsgDispenserL3.setText(getPosition(task.getSubtaskRoutes(3).getDispenserPosition()));
             dsgGoalL3.setText(getPosition(task.getSubtaskRoutes(3).getGoalPosition()));
-            dsgPositionL3.setText(getAgentPosition(L3));
+            dsgGoalL2.setText(getPosition(gp4));
             dsgActivityL3.setText(L3.getLastGoal());
         }
 
         dsgAgentM.setText(getAgentName(M));
-        dsgAgentL1.setText(getAgentName(L1));
 
         dsgActivityM.setText(M.getLastGoal());
-        dsgActivityL1.setText(L1.getLastGoal());
 
         dsgDispenserM.setText(getPosition(task.getSubtaskRoutes(0).getDispenserPosition()));
-        dsgDispenserL1.setText(getPosition(task.getSubtaskRoutes(1).getDispenserPosition()));
 
-        dsgGoalM.setText(getPosition(task.getSubtaskRoutes(0).getGoalPosition()));
-        dsgGoalL1.setText(getPosition(task.getSubtaskRoutes(1).getGoalPosition()));
+        dsgGoalM.setText(getPosition(gp1));
 
         dsgPositionM.setText(getAgentPosition(M));
-        dsgPositionL1.setText(getAgentPosition(L1));
 
-        dsgStepLabel.setText(String.valueOf(M.getStep()));
-
+        
     }
 
     public void addText2Terminal(String text){

@@ -19,7 +19,10 @@ public class DSMove extends dsAgents.dsExecutionModule.dsActions.DSAction {
   private ArrayList<String> PDirection = new ArrayList<>();
   int PDx = 0;
   int PDy = 0;
+  int PDxO = 0;
+  int PDyO = 0;
 
+  boolean PPartial=false;
   int PLAStep = 0;
 
   @Override
@@ -31,13 +34,9 @@ public class DSMove extends dsAgents.dsExecutionModule.dsActions.DSAction {
                 .map(Identifier::new)
                 .collect(Collectors.toCollection(ArrayList::new)));
     PLAStep = agent.getStep();
+    agent.printOutput("Moving action: " + a.toProlog()+"\n");
+
     try {
-
-      try {
-        agent.getOutput().write("Moving action: " + a.toProlog()+"\n");
-        agent.getOutput().flush();
-      } catch (Exception e){};
-
       agent.getEI().performAction(agent.getJADEAgentName(), a);
     } catch (ActException e) {
       return (new DSGoalFalse());
@@ -64,7 +63,15 @@ public class DSMove extends dsAgents.dsExecutionModule.dsActions.DSAction {
               + agent.getStep()
               + " prodleva "
               + (agent.getStep() - PLAStep));
+    if (PPartial) {
+      agent.getMap().moveBy(agent, PDxO, PDyO);
+    }else
     agent.getMap().moveBy(agent, PDx, PDy);
+
+  }
+
+  public void setPartial(){
+    PPartial=true;
   }
 
   @Override
@@ -87,6 +94,8 @@ public class DSMove extends dsAgents.dsExecutionModule.dsActions.DSAction {
   public void addDirection(String direction) {
     PDirection.add(direction);
     Point pos = DSPerceptor.getPositionFromDirection(direction);
+    PDxO = pos.x;
+    PDyO = pos.y;
     PDx += pos.x;
     PDy += pos.y;
   }

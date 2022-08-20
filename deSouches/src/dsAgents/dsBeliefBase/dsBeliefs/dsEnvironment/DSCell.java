@@ -54,6 +54,16 @@ public class  DSCell {
         }
       };
 
+  public boolean isUnmovable(){
+    if(((PType>=__DSBlock)&&(PType<=__DSBlock+20))||
+            (PType==__DSObstacle)||
+            (PType==__DSEntity_Friend)||
+            (PType==__DSEntity_Enemy))
+      return(true);
+      else
+        return(false);
+  }
+
   protected static int getThingTypeIndex(String thing, String params) {
 
     if (thing.equals("dispenser")) {
@@ -133,6 +143,7 @@ public class  DSCell {
     if ((x == PX) && (y == PY)) return (true);
     return (false);
   }
+
 
   public String cellToString() {
     String st = "Cell at [" + PX + "," + PY + "]" + "/" + PType + "/" + PTimeStamp;

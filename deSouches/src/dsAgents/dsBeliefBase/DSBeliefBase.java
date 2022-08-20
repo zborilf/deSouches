@@ -61,6 +61,8 @@ public class DSBeliefBase {
   private String PLastActionResultString = "";
   private String PLastAction = "unknown";
   private String PLastActionParams = "success";
+  private LinkedList<Point> PAttached = new LinkedList<Point>();
+
 
   public void setGUI(dsGUI gui) {
     PGUI = gui;
@@ -84,6 +86,10 @@ public class DSBeliefBase {
 
   public String getLastGoal(){
     return(PLastGoal);
+  }
+
+  public LinkedList<Point> getAttched(){
+    return(PAttached);
   }
 
   public boolean setRole(String role) {
@@ -263,13 +269,14 @@ public class DSBeliefBase {
     PCommander.taskExpired(parameters.iterator().next().toString());
   }
 
+
+
   public void setTask(Collection<Parameter> parameters) {
     System.out.println(parameters.toString());
     /*
            parameters = [taskName, deadline, reward, [req(x,y,type]*]]
     */
 
-    DSTask task;
     String name;
     int deadline;
     int reward;
@@ -297,13 +304,32 @@ public class DSBeliefBase {
       else body.addCell(cell);
     }
     PCommander.taskProposed(
-        new DSTask(name, deadline, reward, body),
-        PStep); // nebo primo do GroupOptionsPool? Necht je to pres deSouches
+        new DSTask(name, deadline, reward, body, PStep)); // nebo primo do GroupOptionsPool? Necht je to pres deSouches
   }
 
   // 16 : __attached
 
-  // TODO
+  public void addAttached(Collection<Parameter> parameters){
+    Iterator i = parameters.iterator();
+    int x = Integer.parseInt(i.next().toString());
+    int y = Integer.parseInt(i.next().toString());
+    Point point=new Point(x,y);
+    PAttached.add(point);
+  }
+
+
+  public void rempveAttached(Collection<Parameter> parameters){
+    Iterator i = parameters.iterator();
+    int x = Integer.parseInt(i.next().toString());
+    int y = Integer.parseInt(i.next().toString());
+    Point point=new Point(x,y);
+    LinkedList<Point> newList=new LinkedList();
+    for(Point point2:PAttached)
+      if (!(point2.x==point.x)||!(point2.y==point.y)) {
+        newList.add(point2);
+      }
+    PAttached=newList;
+  }
 
   // 17 : __energy
 
@@ -483,7 +509,9 @@ public class DSBeliefBase {
   // AKTUALNI SCENAR
 
   public void setScenario(DSScenario scenario) {
-    if (scenario == null) return;
+    if (scenario != null)
+      PAgent.printOutput("---- SCENARIO SET TO "+scenario.getName());
+
     PScenario = scenario;
     if (PGUIFocus)
       PGUI.setScenario(scenario.getName());

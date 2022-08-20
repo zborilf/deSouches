@@ -120,14 +120,22 @@ public class DSCells {
     return(false);
   }
 
+  public boolean isDestructibleAt(Point point){
+    for(DSCell c: getAllAt(point)){
+      if((c.getType()==DSCell.__DSObstacle)||
+              ((c.getType()>=DSCell.__DSBlock)&&(c.getType()<=DSCell.__DSBlock+20)))
+        return(true);
+    }
+    return(false);
+  }
+
   public synchronized DSCell getNewestAt(Point point) {
     // get newest of cells according to timestamp + synchronize pheromone
 
     LinkedList<DSCell> cellsAtPoint = this.getAllAt(point);
 
     if (cellsAtPoint == null || cellsAtPoint.isEmpty()) {
-      return null;
-    }
+      return null;}
 
     DSCell newestCell =
         cellsAtPoint.stream().max(Comparator.comparingDouble(DSCell::getTimestamp)).get();
@@ -156,8 +164,7 @@ public class DSCells {
   public synchronized DSCell getKeyType(Point point, int type) {
     LinkedList<DSCell> cellsAtPoint = getAllAt(point);
     if (cellsAtPoint == null) return null;
-
-    return cellsAtPoint.stream().filter(c -> c.getType() == type).findFirst().orElse(null);
+        return cellsAtPoint.stream().filter(c -> c.getType() == type).findFirst().orElse(null);
   }
 
   public synchronized LinkedList<DSCell> getAllType(

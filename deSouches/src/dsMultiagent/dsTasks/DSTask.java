@@ -17,6 +17,19 @@ public class DSTask {
   LinkedList<Integer> PTypesNeeded;
   DSTaskMember[] PSubtaskRoutes={null,null,null,null};
 
+
+
+
+  public int getReward(){
+    return(PReward);
+  }
+
+  public Point getGoalArea(){
+    if(PSubtaskRoutes[0]!=null)
+      return(PSubtaskRoutes[0].getGoalPosition());
+    return(null);
+  }
+
   public String getName() {
     return (PTaskName);
   }
@@ -341,6 +354,11 @@ public class DSTask {
     body.addCell(new DSCell(-1, 1, 0, 0));
     body.addCell(new DSCell(-2, 1, 0, 0));
     bodies.add(body);
+    // A na zaver jednicka
+    // 43
+    body = new DSBody();
+    body.addCell(new DSCell(0, 1, 0, 0));
+    bodies.add(body);
 
     int i = 1;
     for (DSBody bodyL : bodies) {
@@ -356,6 +374,7 @@ public class DSTask {
     if (PTaskType == null) return (0);
     return (PTaskType.getTaskType());
   }
+
 
   public DSTaskType getTaskType() {
     return (PTaskType);
@@ -378,7 +397,7 @@ public class DSTask {
   }
 
   public DSTask(
-      String name, int deadline, int reward, DSBody body) { // , LinkedList<Integer> typesNeeded){
+      String name, int deadline, int reward, DSBody body, int step) { // , LinkedList<Integer> typesNeeded){
     PTaskName = name;
     PDeadline = deadline;
     PReward = reward;
@@ -509,6 +528,9 @@ public class DSTask {
         break;
       case 42:
         PTaskType = new DSTaskType42();
+        break;
+      case 43:
+        PTaskType = new DSTaskType43();
         break;
       default:
         PTaskType = null;

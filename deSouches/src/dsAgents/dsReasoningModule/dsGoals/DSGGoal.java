@@ -10,6 +10,7 @@ import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSOneStepGreedy;
 
 import java.awt.*;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 
 
@@ -124,12 +125,27 @@ public abstract class DSGGoal {
 
   public abstract String getGoalDescription();
 
+  public String getGoalParametersDescription(){
+    return(" no params");
+  }
+
   public DSPlan highestPriorityPlan() { // vrati plan s nejvyssi prioritou, pokud zadny neni -> null
     DSPlan hpPlan = null;
-    for (String planName : PPlans.keySet())
-      if (hpPlan == null) hpPlan = PPlans.get(planName);
-      else if (PPlans.get(planName).getPriority() > hpPlan.getPriority())
-        hpPlan = PPlans.get(planName);
+
+    HashMap<String, DSPlan> plans2=(HashMap<String, DSPlan>)PPlans.clone();
+
+    for (String planName : plans2.keySet()) {
+      if(PPlans.get(planName)==null)
+              PPlans.remove(planName);
+      else
+      if(PPlans.get(planName).isEmpty()&&(!PPlans.get(planName).isFinal()))
+              PPlans.remove(planName);
+      else {
+        if (hpPlan == null) hpPlan = PPlans.get(planName);
+        else if (PPlans.get(planName).getPriority() > hpPlan.getPriority())
+          hpPlan = PPlans.get(planName);
+      }
+    }
     return (hpPlan);
   }
 
@@ -156,7 +172,13 @@ public abstract class DSGGoal {
     if (PRecentPlan == null) return (__DSGNoPlan);
 
     if (result == DSStatusIndexes.__action_success) {
-      PRecentPlan.externalActionSucceeded(agent);
+      PRecentPlan.externalActionSucceeded(agent,false);
+      PLastStatus = __DSGExecutionSucceeded;
+      return (PLastStatus);
+    }
+
+    if (result == DSStatusIndexes.__action_partial_success) {
+      PRecentPlan.externalActionSucceeded(agent,true);
       PLastStatus = __DSGExecutionSucceeded;
       return (PLastStatus);
     }
@@ -193,11 +215,6 @@ public abstract class DSGGoal {
   }
   ;
 
-  protected synchronized void removeEmptyPlans(){
-    for(String plan:PPlans.keySet())
-      if(PPlans.get(plan).isEmpty())
-        PPlans.remove(plan);
-  }
 
 
   public int followGoal(DSAgent agent) {
@@ -217,6 +234,7 @@ public abstract class DSGGoal {
                 + PPlans.get(planName).plan2text());
         PLastStatus = __DSGGoalAchieved;
         agent.printOutput("Cil dosazen, pry");
+        PPlans.remove(planName);
         return (PLastStatus);
       }
 
@@ -243,7 +261,7 @@ public abstract class DSGGoal {
     }
 
 
-    agent.printOutput("HPPlan after revision "+chosenPlan.plan2text());
+    agent.printOutput("HPPlan after revision "+chosenPlan.getName()+" body "+chosenPlan.plan2text());
 
     if (!chosenPlan.executeOneStep(agent)) {
       PPlans.remove(chosenPlan); // plan byl neuspesny, bude odstranen

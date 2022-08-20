@@ -131,7 +131,7 @@ public class DSAgent extends Agent {
   protected void removeScenario() {
     PBeliefBase.setScenario(null);
     PScenarioPriority = 0;
-    PBeliefBase.getCommander().needJob(this);
+   // PBeliefBase.getCommander().needJob(this);
   }
 
   public int getIdleSteps() {
@@ -143,6 +143,8 @@ public class DSAgent extends Agent {
   }
 
   public boolean isBusyTask() {
+    if(PBeliefBase.getScenario()==null)
+      return(false);
     return(PBeliefBase.getScenario().getTask()!=null);
   }
 
@@ -402,10 +404,7 @@ public class DSAgent extends Agent {
         // waits when it is not the last salut in the round
   //       this.getAgent().doWait();
 
-      try {
-        POutput.write("\nStep: " + PBeliefBase.getStep() + " , pos " + PBeliefBase.getAgentPosition().toString()+"\n");
-        POutput.flush();
-      }catch(Exception e){ };
+      printOutput("\nStep: " + PBeliefBase.getStep() + " , pos " + PBeliefBase.getAgentPosition().toString()+"\n");
 
       perceptor.getBodyFromPercepts(percepts.getAddList());
 
@@ -437,17 +436,6 @@ public class DSAgent extends Agent {
         PIdleSteps = 0;
         PLastPosition = (Point) myPos.clone();
       }
-
-      // pokud se nehybou dlouho, zlikvidujem scenar a nahlasime generalovi
-      if (getScenario() != null)
-        if (getScenario().checkDeadlock()) {
-          // vsichni clenove tymu se nehybou dele, nez je stanoveny deadlock limit
-          getCommander().scenarioFailed(PBeliefBase.getScenario());
-          //    System.out.println(getEntityName()+" DEADLOCK pro " +
-          //                  "task "+getScenario().getTask().getName()+
-          //                  " group members "
-          //                  getScenario().getAgentsAllocatedText());
-        }
 
       // agent disabled? Inform and don§t execute
       if (perceptor.disabled(newPercepts)) {
@@ -493,7 +481,8 @@ public class DSAgent extends Agent {
         }
       }
 
-     if ((PIntentionPool.getIntention() == null) && (getScenario() == null))
+     if ((PIntentionPool.getIntention() == null) &&
+             (getScenario() == null))
         PBeliefBase.getCommander().needJob((DSAgent) this.getAgent());
 
       // EXECUTING INTENTION
@@ -515,8 +504,17 @@ public class DSAgent extends Agent {
       // PRINT recentIntention on GUI
 
       printOutput("Agent body "+getBody().bodyToString());
-      printOutput("Scenario: "+PBeliefBase.getScenario().getName());
+      printOutput("Atteched "+PBeliefBase.getAttched().toString());
+      if(PBeliefBase.getScenario()!=null)
+        printOutput("Scenario: "+PBeliefBase.getScenario().getName());
+      else
+        printOutput("Scenario: none");
       printOutput("Goal: "+PBeliefBase.getLastGoal());
+      if(recentIntentionExecuted!=null)
+        if(recentIntentionExecuted.getTLG()!=null)
+          printOutput(" desc: "+ recentIntentionExecuted.getTLG().getGoalParametersDescription());
+        else
+          printOutput("\n");
       printOutput("Control Loop Finished");
 
     } // END action()

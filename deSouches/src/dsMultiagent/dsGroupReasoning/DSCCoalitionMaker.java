@@ -137,7 +137,8 @@ public class DSCCoalitionMaker {
                         }
                     }
 
-                    System.out.println(subtaskNumber + ": " + worker + "/" + bestDispenser + "/" + goal + " = " + bestPrice);
+                    System.out.println(subtaskNumber + ": " + worker + "/" + bestDispenser + "/" + goal + " = " + bestPrice+
+                            " nlt "+notLongerThan);
                     DSAgent workerAgent=null;
 
                     // find agent from 'agents' by position 'worker'
@@ -167,6 +168,8 @@ public class DSCCoalitionMaker {
 
             coal = new DSCCoalition(noSubtasks, task); // TEMP
             coalitions.add(coal);
+            if(coal.completeCoalition()) // one block tasks
+                PCoalitions.add(coal);
 
             // try to add task to every existing coals
             for (DSCCoalition coal2 : coalitions) {

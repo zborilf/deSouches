@@ -13,7 +13,9 @@ public class DSHybridPathPlanner {
                                             DSBody finalBody, int timeout, boolean finalPlan) {
         DSPlan plan=new DSPAStar()
                 .computePath(
-                        planName, priority, map, map.getAgentPos(agent), destination, finalBody, timeout, agent, finalPlan);
+                        planName, priority, map, map.getAgentPos(agent), destination,
+                        finalBody, timeout, agent, finalPlan);
+
         if(plan!=null)
             if(plan.getLength()<=1) {
                 agent.printOutput("HP A* One action");
@@ -21,22 +23,22 @@ public class DSHybridPathPlanner {
             }
             else
             {
-                agent.printOutput("HP A* More actions");
+                agent.printOutput("HP A* More actions "+plan.plan2text());
 
-                DSPlan plan2=new DSPlan(planName, priority, finalPlan);
                 /*
+                DSPlan plan2=new DSPlan(planName, priority, finalPlan);
                 plan2.appendAction(plan.getAction());
                 return(plan2);
                  */
                 // zkusim to vratit komplet, pak je ale zbytecne i to prvni if
+
                 return(plan);
             }
 
             // one step is always false
 
-        plan=DSOneStepGreedy.oneStep(planName,priority,agent.getOutlook(),destination, false);
+        plan=DSOneStepGreedy.oneStep(planName,priority,agent,destination, false);
             if(plan!=null) {
-                agent.printOutput("HP Greedy");
                 return (plan);
             }
 

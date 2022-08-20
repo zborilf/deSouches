@@ -25,7 +25,6 @@ public class DSGApproachTypes extends DSGGoal {
 
     @Override
     public boolean revisePlans(DSAgent agent) {
-        removeEmptyPlans();
 
         /*
                 1, if sees some from the desired types in outlook, finishes -> creates empty 'terminating' plan
@@ -67,10 +66,11 @@ public class DSGApproachTypes extends DSGGoal {
         DSPlan plan= DSHybridPathPlanner.getOneStep("approach", agent.getMap(),1, agent,
                 PSupposedPosition, agent.getBody(), PTimeout-agent.getStep(), false);
 
-
-        PPlans.put(plan.getName(), plan);
-
-        return(true);
+        if(plan!=null) {
+            PPlans.put(plan.getName(), plan);
+            return (true);
+        }
+        return(false);
 
     }
 

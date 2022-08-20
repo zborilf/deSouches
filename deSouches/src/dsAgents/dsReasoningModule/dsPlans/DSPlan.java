@@ -3,6 +3,7 @@ package dsAgents.dsReasoningModule.dsPlans;
 import deSouches.utils.HorseRider;
 import dsAgents.DSAgent;
 import dsAgents.dsExecutionModule.dsActions.DSAction;
+import dsAgents.dsExecutionModule.dsActions.DSMove;
 import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import java.util.LinkedList;
 
@@ -49,6 +50,8 @@ public class DSPlan {
     return(PLinearPlan.isEmpty());
   }
 
+  public boolean isFinal()  { return(PFinalPlan); }
+
   public boolean planSuceeded() {
     return (PPlanSuceeded&PFinalPlan);
   }
@@ -87,6 +90,10 @@ public class DSPlan {
     return (true);
   }
 
+  public void setTerminating(boolean finalPlan){
+    PFinalPlan=finalPlan;
+  }
+
   public int getLength() {
     return (PLinearPlan.size());
   }
@@ -100,19 +107,23 @@ public class DSPlan {
     return (action);
   }
 
-  public void effectAndDeleteAction(DSAgent agent) {
+  public void effectAndDeleteAction(DSAgent agent, boolean partial) {
     if (!PLinearPlan.isEmpty()) {
+
       DSAction action = popAction();
+      if(partial){
+        ((DSMove)action).setPartial();
+      }
       action.succeededEffect(agent);
     }
     if (PLinearPlan.isEmpty()) PPlanSuceeded = true;
   }
 
   public boolean externalActionSucceeded(
-      DSAgent agent) { // muze se rozsirit o popis akce a parametry, pro kontrolu
+      DSAgent agent, boolean partial) { // muze se rozsirit o popis akce a parametry, pro kontrolu
 
     if (PWaitingForFeedback) {
-      effectAndDeleteAction(agent);
+      effectAndDeleteAction(agent, partial);
       PWaitingForFeedback = false;
       return (true);
     } else return (false);
@@ -159,7 +170,7 @@ public class DSPlan {
         return (true);
       }
     }
-    effectAndDeleteAction(agent);
+    effectAndDeleteAction(agent,false);
     return (true);
   }
 

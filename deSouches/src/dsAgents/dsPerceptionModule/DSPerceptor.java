@@ -91,51 +91,6 @@ public class DSPerceptor {
     return (null);
   }
 
-  public LinkedList<DSTask> getTasksFromPercepts(Collection<Percept> percepts) {
-    Iterator<Percept> perceptI;
-    LinkedList<DSTask> taskList = new LinkedList<DSTask>();
-    LinkedList<Integer> typesNeeded;
-    Percept percept;
-    DSTask task;
-    String name;
-    int deadline;
-    int reward;
-    DSBody body;
-    DSCell cell;
-    ParameterList parameters;
-
-    perceptI =
-        percepts.stream()
-            .filter(prc -> prc.getName().equals("task"))
-            .iterator(); // .findFirst().get();
-    while (perceptI.hasNext()) {
-      percept = perceptI.next();
-      name = percept.getParameters().get(0).toString();
-      deadline = Integer.parseInt(percept.getParameters().get(1).toString());
-      reward = Integer.parseInt(percept.getParameters().get(2).toString());
-      parameters = (ParameterList) percept.getParameters().get(3);
-      body = new DSBody();
-      typesNeeded = new LinkedList<Integer>();
-      for (Parameter parameter : parameters) {
-        Function pl = (Function) parameter;
-        int x = Integer.parseInt(((Function) parameter).getParameters().get(0).toString());
-        int y = Integer.parseInt(((Function) parameter).getParameters().get(1).toString());
-        String typeS = ((Function) parameter).getParameters().get(2).toString();
-        int type = PPercepts.blockTypeByName(typeS);
-        cell = new DSCell(x, y, type + DSCell.__DSBlock, 0);
-        if (Math.abs(x) + Math.abs(y) == 1) {
-          body.insertFirstCell(cell);
-          typesNeeded.add(0, type);
-        } else {
-          body.addCell(cell);
-          //       typesNeeded.add(type);
-        }
-      }
-      task = new DSTask(name, deadline, reward, body); // ,typesNeeded);
-      taskList.add(task);
-    }
-    return (taskList);
-  }
 
   public synchronized void actualizeMap(
       DSMap map,
@@ -280,6 +235,7 @@ public class DSPerceptor {
           break;
 
         case DSBeliefsIndexes.__attached:
+          BB.rempveAttached(perceptParams);
           break;
 
         case DSBeliefsIndexes.__energy:
@@ -348,6 +304,7 @@ public class DSPerceptor {
           break;
 
         case DSBeliefsIndexes.__attached:
+          BB.addAttached(perceptParams);
           break;
 
 

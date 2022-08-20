@@ -20,6 +20,7 @@ public class DSGConnectGoal extends DSGGoal {
   public boolean revisePlans(DSAgent agent) {
     if (PPlans.containsKey("customGoal")) return false;
     DSPlan plan = PTaskType.dancePlan(agent, PTaskName);
+   // plan.setTerminating(false);
     if (plan != null) {
       PPlans.put("customGoal", plan);
       return (true);

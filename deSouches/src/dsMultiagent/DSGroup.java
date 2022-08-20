@@ -84,6 +84,13 @@ public class DSGroup {
     return (goalArea);
   }
 
+  public boolean standsMemberAt(Point position){
+    for(DSAgent agent:PMembers)
+      if(agent.getMap().isAgentBodyAt(position,agent))
+        return(true);
+      return(false);
+  }
+
   public class CustomComparator implements Comparator<Point> {
 
     @Override

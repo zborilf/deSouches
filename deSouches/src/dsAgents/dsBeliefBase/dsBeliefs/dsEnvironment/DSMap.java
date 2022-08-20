@@ -142,16 +142,29 @@ public class DSMap {
     return (closed);
   }
 
-  public static LinkedList<Point> getPointsZones(LinkedList<Point> cells) {
+  Point getGoalPositionHeuristic(LinkedList<Point> zone){
+    for(Point z:zone){
+      boolean good=true;
+      for(int i=0; i<3; i++)
+        for(int j=0; j<3; j++)
+          if(isEnemyAt(new Point(z.x+i,z.y+j)))
+            good=false;
+          if(good)
+            return(z);
+    }
+    return(null);
+  }
+
+  public synchronized LinkedList<Point> getPointsZones(LinkedList<Point> cells) {
     /*
         Divides cells into contiguous areas
     */
     LinkedList<Point> zones = new LinkedList<Point>();
-    LinkedList<Point> zone = new LinkedList<Point>();
+    LinkedList<Point> zone;
     while (!cells.isEmpty()) {
       zone = getZone(cells);
       for (Point cell2 : zone) cells.remove(cell2);
-      zones.add(zone.getFirst());     // TODO misto getFirst heuristicky ten bod v zone,ktery je nejlepsi pro odevzdani tasku
+      zones.add(getGoalPositionHeuristic(zone));     // TODO misto getFirst heuristicky ten bod v zone,ktery je nejlepsi pro odevzdani tasku
     }
     return (zones);
   }
@@ -205,24 +218,61 @@ public class DSMap {
     return (false);
   }
 
-  boolean isAgentBody(Point position, DSBody body) {
-    int Tx = centralizeXCoords(position.x - PX);
-    int Ty = centralizeYCoords(position.y - PY);
-    return (body.pointInBody(body, new Point(Tx, Ty)));
+  boolean isEnemyAt(Point position){
+    LinkedList<DSCell> cells=PMapCells.getAllAt(position);
+    if(cells==null)
+      return(false);
+    for(DSCell cell:cells)
+      if(cell!=null)
+      if(cell.getType()==DSCell.__DSEntity_Enemy)
+        return(true);
+      return(false);
   }
 
-  public boolean isObstacleAt(Point position){
-    return(PMapCells.getKeyType(
-            new Point(position.x, position.y),DSCell.__DSObstacle)!=null);
+  boolean isAgentBody(Point position, DSBody body) {
+    return (body.pointInBody(body, position));
+  }
+
+
+  public synchronized boolean isAgentBodyAt(Point position, DSAgent agent){
+    Point relposition=new Point(position.x-agent.getMapPosition().x, position.y-agent.getMapPosition().y);
+    return(agent.getBody().isCellAt(relposition));
   }
 
 
   public boolean isObstacleAt(Point position, DSBody agentbody, DSBody body, int step) {
     for (DSCell bodyItem : body.getBodyList()) {
+
+      // for all positions where (possibly simulated) body is
+
+      Point nodePosition = new Point(position.x + bodyItem.getX(), position.y + bodyItem.getY());
+      if (!isAgentBody(nodePosition, agentbody)) {
+        // the agent is not here, check possible unmovable elements
+        LinkedList<DSCell> cells = PMapCells.getAllAt(nodePosition);
+        if(cells!=null)
+          for (DSCell cell : cells)
+            if (cell.isUnmovable())
+            return (true);
+      }
+    }
+    return(false);
+  }
+
+
+  /*
+  original
+
+
+  public boolean isObstacleAt(Point position, DSBody agentbody, DSBody body, int step) {
+    for (DSCell bodyItem : body.getBodyList()) {
+
+      // for all positions where (possibly simulated) body is
+
       DSCell node =
           PMapCells.getKeyType(
               new Point(position.x + bodyItem.getX(), position.y + bodyItem.getY()),
               DSCell.__DSObstacle);
+
       if (node != null) {
         if (isFriendAt(node.getPosition())) return (true);
         if (isAgentBody(node.getPosition(), agentbody))
@@ -242,6 +292,8 @@ public class DSMap {
     }
     return (false);
   }
+*/
+
 
   boolean isOjectAt(Point position, int objectType) {
 

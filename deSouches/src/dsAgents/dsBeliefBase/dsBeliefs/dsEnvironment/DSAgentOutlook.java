@@ -59,7 +59,11 @@ public class DSAgentOutlook {
   public boolean isFree(Point position){
     if(!POutlookCells.containsKey(position))
       return(true);
-    return(POutlookCells.getAllAt(position).isEmpty());
+    LinkedList<DSCell> c2=POutlookCells.getAllAt(position);
+    for(DSCell c:c2)
+      if(c.isUnmovable())
+        return(false);
+      return(true);
   }
 
   public Point seenNearest(int objectType){

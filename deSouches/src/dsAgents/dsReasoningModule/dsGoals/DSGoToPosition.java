@@ -2,6 +2,8 @@ package dsAgents.dsReasoningModule.dsGoals;
 
 import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsExecutionModule.dsActions.DSClear;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSHybridPathPlanner;
 
@@ -12,14 +14,23 @@ public class DSGoToPosition extends DSGGoal {
   Point PDestination;
   DSBody PBody = null;
   int PTimeout;
+  String PName="goToPosition";
 
   public String getGoalDescription() {
-    return ("goToPosition");
+    return (PName);
+  }
+
+  @Override
+  public String getGoalParametersDescription(){
+    return(" to "+PDestination+" body "+PBody.bodyToString());
   }
 
   public boolean revisePlans(DSAgent agent) {
 
-    if (PPlans.containsKey("goToPosition")) return false;
+
+
+    if ((PPlans.containsKey(PName))&&(!PPlans.get(PName).isEmpty()))
+      return false;
 
     if (PDestination == null) {
       return (false);
@@ -38,10 +49,22 @@ public class DSGoToPosition extends DSGGoal {
                                                 PDestination, PBody, PTimeout-agent.getStep(), true);
 
 
-    if (plan == null) return (false);
+    if (plan == null) {
+      Point ap=agent.getMapPosition();
+      Point op=agent.getMap().nearestObject(DSCell.__DSObstacle,agent.getMapPosition());
+        if(Math.abs(op.x-ap.x)+Math.abs(op.y-ap.y)==1){
+          plan=new DSPlan("goToPosition clear",2,false);
+          plan.appendAction(new DSClear(new Point(op.x-ap.x,op.y-ap.y)));
+          return(false);
+        }
+    }
 
-    PPlans.put(plan.getName(), plan);
+    PPlans.put(PName, plan);
     return (true);
+  }
+
+  public void setName(String name){
+    PName=name;
   }
 
   public DSGoToPosition(Point position) {

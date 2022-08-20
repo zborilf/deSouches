@@ -52,12 +52,13 @@ public class DSGoalExplore extends DSGGoal {
       if (agent.getMap().getMap().getKeyType(agent.getMapPosition(), DSCell.__DSRoleArea) != null) {
         // standing at role zone -> set role
         String role = agent.getCommander().roleNeeded(agent);
-
-        DSPlan plan = new DSPlan("set role " + role, 5);
-        DSAdopt adoptAction = new DSAdopt(role);
-        plan.appendAction(adoptAction);
-        PPlans.put(plan.getName(), plan);
-        return true;
+        if(!role.contentEquals("")) {
+          DSPlan plan = new DSPlan("set role " + role, 5);
+          DSAdopt adoptAction = new DSAdopt(role);
+          plan.appendAction(adoptAction);
+          PPlans.put(plan.getName(), plan);
+          return true;
+        }
       }
 
       Point dp = agent.getMap().nearestObject(DSCell.__DSRoleArea, agent.getMapPosition());

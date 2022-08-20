@@ -130,7 +130,7 @@ public final class DSPAStar {
     while (!actions.isEmpty()) {
       DSAction action = actions.pop();
       DSAStarItem newItem =
-          action.simulate(map, item, agentBody, step); // TODO ta nula na konci je provizorka
+          action.simulate(map, item, agentBody, step);
       if (newItem != null) {
         if (!isInClosed(newItem.getPosition(), newItem.getBody(), closed)) {
           int newHeuristic = heuristic(newItem.getPosition(), to);
@@ -238,6 +238,7 @@ public final class DSPAStar {
       int steps,
       DSAgent agent,
       boolean finalPlan) {
+
     // od; do; limit pocet kroku; struktura, kterou agent tahne (on+veci)
     LinkedList<DSAStarItem> open = new LinkedList<DSAStarItem>();
     LinkedList<DSAStarItem> close = new LinkedList<DSAStarItem>();

@@ -24,7 +24,9 @@ public class DSConnect extends DSAction {
 
     Point Pp = DSPerceptor.getPositionFromDirection(PDirection);
     Action a =
-        new Action("connect", new Identifier(PPartnerName), new Numeral(Pp.x), new Numeral(Pp.y));
+            new Action("connect", new Identifier(PPartnerName), new Numeral(Pp.x), new Numeral(Pp.y));
+    agent.printOutput("Connect action: " + a.toProlog()+"\n");
+
     try {
       agent.getEI().performAction(agent.getJADEAgentName(), a);
 

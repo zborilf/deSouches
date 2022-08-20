@@ -31,6 +31,10 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
     return("Two Block scenario");
   }
 
+  public void updateGUI() {
+    PGUI.setDsgTaskText(PTask, PMasterGoalPos, PSlaveGoalPos, null, null);
+  }
+
   @Override
   public void goalCompleted(DSAgent agent, DSGGoal goal) {
     agent.getCommander().printOutput(
@@ -59,6 +63,11 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
         PGUI.addText2Terminal(agent.getEntityName()+" goToPosition!!");
         PStateM = 3;
+      }
+      if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" evasive manoeuvre -> goToPosition");
+        PStateM = 2;
+        agent.hearOrder(new DSGoToPosition(PMasterGoalPos, PMasterGoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("connectAndDetach")) {
         PGUI.addText2Terminal(agent.getEntityName()+" connectAndDetach -> attachAndSubmit");
@@ -91,6 +100,12 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
         PGUI.addText2Terminal(agent.getEntityName()+" goToPosition!!");
         PStateL1 = 3;
       }
+      if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" evasive manoeuvre -> goToPosition");
+        PStateL1 = 2;
+        agent.hearOrder(new DSGoToPosition(PSlaveGoalPos, PSlaveGoalBody, getTask().getDeadline()));
+      }
+
       if (goal.getGoalDescription().contentEquals("connectAndDetach")) {
         PGUI.addText2Terminal(agent.getEntityName()+" connectAndDetach (I am done, L1)");
         agent.hearOrder(new DSGoalExplore(10));
@@ -116,24 +131,30 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
         "goalFailed: "
             + "SCEN: Task to je smula agente "
             + agent.getEntityName()
-            + " za "
+            + " kvuli "
             + goal.getGoalDescription());
 
     if (agent == PMaster) {
       if (goal.getGoalDescription().contentEquals("get block 2022")) {
-        PGUI.addText2Terminal(agent.getEntityName()+" FAILED M: goToDispenser -> goalExplore");
+        PGUI.addText2Terminal(agent.getEntityName()+" FAILED M: goToDispenser -> Repeat");
         agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
         PStateM = 1;
       }
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
         PGUI.addText2Terminal(agent.getEntityName()+" FAILED M: goToPosition -> goToPosition");
-        PStateM = 1;
+        PStateM = 2;
+        agent.hearOrder(new DSEvasiveManoeuvre());
+      }
+      if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" evasive manoeuvre -> goToPosition");
+        PStateM = 2;
         agent.hearOrder(new DSGoToPosition(PMasterGoalPos, PMasterGoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("goRandomly")) {
         PGUI.addText2Terminal(agent.getEntityName() + " FAILED M: goRandomly -> getBlock");
         agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
       }
+
     }
     if (agent == PLeutnant1) {
       if (goal.getGoalDescription().contentEquals("get block 2022")) {
@@ -144,12 +165,29 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
         PGUI.addText2Terminal(agent.getEntityName() + " FAILED L1: goToPosition -> goToPosition");
         PStateL1 = 2;
+        agent.hearOrder(new DSEvasiveManoeuvre());
+      }
+      if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+        PGUI.addText2Terminal(agent.getEntityName()+" evasive manoeuvre -> goToPosition");
+        PStateL1 = 2;
         agent.hearOrder(new DSGoToPosition(PSlaveGoalPos, PSlaveGoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("goRandomly")){
         PGUI.addText2Terminal(agent.getEntityName() + " FAILED M: goRandomly -> getBlock");
         agent.hearOrder(new DSGGetBlock2022(PType2, PSlaveDispenserPos, getTask().getDeadline()));
       }
+    }
+
+    if ((PStateM == 3) && (PStateL1 == 3)) {
+      PGUI.addText2Terminal(agent.getEntityName()+" -> ConnectAndDetach");
+      // zde ma byt dance pro vsechny cleny, vysledkem je vhodny plan
+      PMaster.hearOrder(new DSGConnectAndDetach("s", PLeutnant1.getEntityName()));
+      if (PTaskType == 1)
+        PLeutnant1.hearOrder(new DSGConnectAndDetach("n", PMaster.getEntityName()));
+      if (PTaskType == 2)
+        PLeutnant1.hearOrder(new DSGConnectAndDetach("s", PMaster.getEntityName()));
+      if (PTaskType == 3)
+        PLeutnant1.hearOrder(new DSGConnectAndDetach("s", PMaster.getEntityName()));
     }
   }
 
@@ -266,6 +304,9 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
             + " body is "
             + PSlaveGoalBody.bodyToString());
 
+            updateGUI();
+
+
     return (true);
   }
 
@@ -319,7 +360,6 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
     super(commander, task);
     PPriority = 2;
     PGUI=dsTaskGUI.createGUI();
-    PGUI.setDsgTaskText(task);
   }
 
 

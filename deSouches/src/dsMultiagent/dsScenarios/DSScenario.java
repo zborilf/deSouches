@@ -31,15 +31,13 @@ public abstract class DSScenario {
 
   protected dsTaskGUI PGUI=null;
 
-  public void updateGUI(){
-    if(PGUI!=null)
-      PGUI.setDsgTaskText(PTask);
-  }
+  public void updateGUI(){};
 
 
   public String getName() {
     return ("No name scenario");
   }
+
 
   public String getAgentsAllocatedText() {
     String agents = "";
