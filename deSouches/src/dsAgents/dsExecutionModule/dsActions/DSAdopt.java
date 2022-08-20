@@ -24,6 +24,9 @@ public class DSAdopt extends DSAction {
   public DSGGoal execute(DSAgent agent) {
 
     Action a = new Action("adopt", new Identifier(PRole));
+    agent.printOutput("Adopt action: " + a.toProlog()+"\n");
+
+
     try {
       agent.getEI().performAction(agent.getJADEAgentName(), a);
 
@@ -35,7 +38,7 @@ public class DSAdopt extends DSAction {
 
   @Override
   public void succeededEffect(DSAgent agent) {
-    agent.setActualRole(PRole);
+    //agent.setActualRole(PRole);
   }
 
   @Override

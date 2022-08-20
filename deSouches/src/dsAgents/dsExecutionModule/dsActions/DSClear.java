@@ -21,11 +21,7 @@ public class DSClear extends DSAction {
 
     Action a = new Action("clear", new Numeral(Pp.x), new Numeral(Pp.y));
 
-
-    try {
-      agent.getOutput().write("Clear action: " + a.toProlog()+"\n");
-      agent.getOutput().flush();
-    } catch (Exception e){};
+    agent.printOutput("Clear action: " + a.toProlog()+"\n");
 
 
     try {

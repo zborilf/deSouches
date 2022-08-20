@@ -36,7 +36,7 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
   }
 
   @Override
-  public void goalCompleted(DSAgent agent, DSGGoal goal) {
+  public synchronized void goalCompleted(DSAgent agent, DSGGoal goal) {
     agent.getCommander().printOutput(
         "goalCompleted: "
             + "SCEN: Task te chvali, agente "
@@ -115,6 +115,7 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
     if ((PStateM == 3) && (PStateL1 == 3)) {
       PGUI.addText2Terminal(agent.getEntityName()+" -> ConnectAndDetach");
       // zde ma byt dance pro vsechny cleny, vysledkem je vhodny plan
+
       PMaster.hearOrder(new DSGConnectAndDetach("s", PLeutnant1.getEntityName()));
       if (PTaskType == 1)
         PLeutnant1.hearOrder(new DSGConnectAndDetach("n", PMaster.getEntityName()));
@@ -126,7 +127,7 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
   }
 
   @Override
-  public void goalFailed(DSAgent agent, DSGGoal goal) {
+  public synchronized void goalFailed(DSAgent agent, DSGGoal goal) {
     agent.getCommander().printOutput(
         "goalFailed: "
             + "SCEN: Task to je smula agente "

@@ -611,8 +611,6 @@ public class DeSouches extends Agent {
 
   public synchronized boolean taskExpired(String name) {
     PGroupOptions.removeOption(name);
-    PGGUI.addTask("Removed: " + name);
-
     return (true);
   }
 

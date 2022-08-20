@@ -43,7 +43,7 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
   }
 
   @Override
-  public void goalCompleted(DSAgent agent, DSGGoal goal) {
+  public synchronized  void goalCompleted(DSAgent agent, DSGGoal goal) {
 
     agent.getCommander().printOutput(
         "goalCompleted: "
@@ -153,6 +153,9 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
       }
     }
     if((PStateM==3)&&(PStateL1==3)&&(PStateL2==3)){
+      PMaster.printOutput("budem tancovat M\n");
+      PLeutnant1.printOutput("budem tancovat L1\n");
+      PLeutnant2.printOutput("budem tancovat L2\n");
       PMaster.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
       PLeutnant1.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
       PLeutnant2.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
@@ -160,7 +163,7 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
   }
 
   @Override
-  public void goalFailed(DSAgent agent, DSGGoal goal) {
+  public synchronized  void goalFailed(DSAgent agent, DSGGoal goal) {
 
     agent.getCommander().printOutput(
             "goalFailed: "

@@ -44,7 +44,7 @@ public class DSSFourBlocks extends DSSBlockScenarios {
   }
 
   @Override
-  public void goalCompleted(DSAgent agent, DSGGoal goal) {
+  public synchronized void goalCompleted(DSAgent agent, DSGGoal goal) {
 
    agent.getCommander().printOutput(
         "goalCompleted: "
@@ -180,7 +180,7 @@ public class DSSFourBlocks extends DSSBlockScenarios {
   }
 
   @Override
-  public void goalFailed(DSAgent agent, DSGGoal goal) {
+  public synchronized void goalFailed(DSAgent agent, DSGGoal goal) {
 
     agent.getCommander().printOutput(
             "goalFailed: "
