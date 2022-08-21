@@ -38,8 +38,8 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
     return("Three Block scenario");
   }
 
-  public void updateGUI() {
-    PGUI.setDsgTaskText(PTask, PMasterGoalPos, PLeutnant1GoalPos, PLeutnant2GoalPos, null);
+  public void updateGUI(int step) {
+    PGUI.setDsgTaskText(PTask, step, PMasterGoalPos, PLeutnant1GoalPos, PLeutnant2GoalPos, null);
   }
 
   @Override
@@ -401,7 +401,7 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
             + " body is "
             + PLeutnant2.getBody().bodyToString());
 
-    updateGUI();
+    updateGUI(step);
 
     return (true);
   }

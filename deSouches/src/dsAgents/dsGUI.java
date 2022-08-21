@@ -113,7 +113,7 @@ public class dsGUI {
 
   public synchronized void registerAgent(String agent) {
     // add in sorted order
-    final int BEGIN_NUMBER = 6;
+    final int BEGIN_NUMBER = 12;
     int thisAgentN = Integer.parseInt(agent.substring(BEGIN_NUMBER));
     int count = dsgAgentsSelect.getItemCount();
 

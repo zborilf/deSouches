@@ -39,8 +39,8 @@ public class DSSFourBlocks extends DSSBlockScenarios {
     return("Four Block scenario");
   }
 
-  public void updateGUI() {
-    PGUI.setDsgTaskText(PTask, PMasterGoalPos, PLeutnant1GoalPos, PLeutnant2GoalPos, PLeutnant3GoalPos);
+  public void updateGUI(int step) {
+    PGUI.setDsgTaskText(PTask, step, PMasterGoalPos, PLeutnant1GoalPos, PLeutnant2GoalPos, PLeutnant3GoalPos);
   }
 
   @Override
@@ -484,7 +484,7 @@ public class DSSFourBlocks extends DSSBlockScenarios {
             + " body is "
             + PLeutnant3.getBody().bodyToString());
 
-        updateGUI();
+        updateGUI(step);
 
         return (true);
   }

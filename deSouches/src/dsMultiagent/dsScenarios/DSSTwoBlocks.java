@@ -31,8 +31,8 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
     return("Two Block scenario");
   }
 
-  public void updateGUI() {
-    PGUI.setDsgTaskText(PTask, PMasterGoalPos, PSlaveGoalPos, null, null);
+  public void updateGUI(int step) {
+    PGUI.setDsgTaskText(PTask, step, PMasterGoalPos, PSlaveGoalPos, null, null);
   }
 
   @Override
@@ -305,7 +305,7 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
             + " body is "
             + PSlaveGoalBody.bodyToString());
 
-            updateGUI();
+            updateGUI(step);
 
 
     return (true);

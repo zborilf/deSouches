@@ -396,6 +396,10 @@ public class DSTask {
     return (PTaskType.getTaskArea());
   }
 
+  public void suceeded(){
+
+  }
+
   public DSTask(
       String name, int deadline, int reward, DSBody body, int step) { // , LinkedList<Integer> typesNeeded){
     PTaskName = name;

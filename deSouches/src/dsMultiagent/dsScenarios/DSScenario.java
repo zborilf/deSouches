@@ -31,7 +31,8 @@ public abstract class DSScenario {
 
   protected dsTaskGUI PGUI=null;
 
-  public void updateGUI(){};
+  public void updateGUI(int step){};
+
 
 
   public String getName() {
@@ -45,6 +46,15 @@ public abstract class DSScenario {
       agents = agents + ((DSAgent) i.next()).getEntityName() + ",";
     }
     return (agents);
+  }
+
+  public void scenarioFailed(){
+    PGUI.failed();
+  }
+
+
+  public void scenarioSuceeded(){
+    PGUI.suceeded();
   }
 
   public int getPriority() {

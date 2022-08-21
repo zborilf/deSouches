@@ -400,7 +400,7 @@ public class DSAgent extends Agent {
       // sensing phase is over, salut commander / for synchronization and commander level
       // reconsiderations
 
-      if(!PBeliefBase.getCommander().salut(PBeliefBase.getStep(), 0, (DSAgent) this.getAgent()))
+      if(!PBeliefBase.getCommander().salut(PBeliefBase.getStep(), PBeliefBase.getScore(), (DSAgent) this.getAgent()))
         // waits when it is not the last salut in the round
   //       this.getAgent().doWait();
 

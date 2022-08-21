@@ -513,8 +513,10 @@ public class DSBeliefBase {
       PAgent.printOutput("---- SCENARIO SET TO "+scenario.getName());
 
     PScenario = scenario;
-    if (PGUIFocus)
-      PGUI.setScenario(scenario.getName());
+    if (PGUIFocus) {
+      if(scenario!=null)
+        PGUI.setScenario(scenario.getName());
+    }
   }
 
   public DSScenario getScenario() {

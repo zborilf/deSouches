@@ -31,7 +31,7 @@ public class  DSCell {
         {
           put("clear", __DSClear); // toto je asi spatne, clear = marker : clear
           put("obstacle", __DSObstacle);
-          put("entityA", __DSEntity_Friend);
+          put("entityFIT_BUT", __DSEntity_Friend);
           put("entityB", __DSEntity_Enemy);
           put("markerclear", __DSMarker);
           put("taskboard", __DSTaskArea);

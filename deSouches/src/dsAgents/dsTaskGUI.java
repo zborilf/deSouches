@@ -5,6 +5,7 @@ import dsMultiagent.dsTasks.DSTask;
 import javax.swing.*;
 import java.awt.*;
 
+
 public class dsTaskGUI {
     private JPanel dsgMainPanel;
     private JTextField dsgDispenserM;
@@ -78,13 +79,21 @@ public class dsTaskGUI {
     }
 
 
+    public void suceeded(){
+        dsgRoleLabelPanel.setBackground(Color.GREEN);
+    }
 
-    public synchronized void setDsgTaskText(DSTask task, Point gp1,Point gp2,Point gp3,Point gp4){
+    public void failed(){
+        dsgRoleLabelPanel.setBackground(Color.RED);
+    }
+
+
+    public synchronized void setDsgTaskText(DSTask task, int step, Point gp1,Point gp2,Point gp3,Point gp4){
 
         DSAgent M, L1, L2, L3;
 
         L1=null; L2=null; L3=null; //M is always some
-        dsgStepLabel.setText(String.valueOf(task.getDeadline()));
+        dsgStepLabel.setText(step+"/"+String.valueOf(task.getDeadline()));
         M=task.getSubtaskRoutes(0).getAgent();
 
         if(task.getSubtaskRoutes(1)!=null) {
@@ -136,7 +145,7 @@ public class dsTaskGUI {
 
         dsTaskGUI gui = new dsTaskGUI();
         frame.setContentPane(gui.dsgMainPanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setLocation(new Point(350, 350));
         frame.pack();
         frame.setVisible(true);

@@ -25,10 +25,10 @@ import jade.core.behaviours.OneShotBehaviour;
 import java.awt.*;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.LinkedList;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
 import massim.eismassim.EnvironmentInterface;
 
 public class DeSouches extends Agent {
@@ -50,6 +50,7 @@ public class DeSouches extends Agent {
   private dsMultiagent.dsGroupOptions.dsGroupOptionsPool PGroupOptions;
   private LinkedList<String> PActiveTasks;
   LinkedList<dsTaskGUI> PTaskGUIs;
+  int PScore=0;
 
   private HashMap<String, DSAgent> PRegisteredAgents;
 
@@ -299,7 +300,7 @@ public class DeSouches extends Agent {
       PScenariosActive.add(fourBlocks);
       return (true);
     }
-/*
+    /*
     if (taskType == 43){
       printOutput(("Jednickovej task"));
       DSSOneBlock oneBlock= new DSSOneBlock(this, task);
@@ -338,21 +339,24 @@ public class DeSouches extends Agent {
     return(taskC);
   }
 
-
-  void groupReasoning() {
-
-
-
+  void printInformations(){
     try {
       PMapsOutput.write(PSynchronizer.getMasterGroup().getMap().stringMap());
       PMapsOutput.write("\n\n");
       PMapsOutput.flush();
     } catch (Exception e) {
     }
-    printOutput("Step "+PLastStep+"\n");
+    printOutput(" --------------------------------- ");
+    printOutput("Step "+PLastStep);
     printOutput("Active tasks: " +(PActiveTasks.toString()));
     printOutput("Goal positions allocated: " +getTasksGoalAreasSt());
+    printOutput("Score: "+PScore);
 
+  }
+
+  void groupReasoning() {
+
+    printInformations();
 
     LinkedList<DSScenario> scenarios = (LinkedList<DSScenario>) PScenariosActive.clone();
     for (DSScenario scenario : scenarios){
@@ -439,7 +443,7 @@ public class DeSouches extends Agent {
         return(false);
   }
 
-  public synchronized boolean salut(int step, int phase, DSAgent agent) { // barrier
+  public synchronized boolean salut(int step, int score, DSAgent agent) { // barrier
 
   //  System.out.println("Step "+step+" - "+agent.getEntityName()+" salutes ");
 
@@ -452,6 +456,8 @@ public class DeSouches extends Agent {
                     PTeamSize))
     {
       // steps done
+      PScore=score;
+
       PStepsDone.put(agent.getStep(),true);
 
       PGGUI.clearTasks();
@@ -466,7 +472,7 @@ public class DeSouches extends Agent {
         // print task states
       for(DSScenario scenario:PScenariosActive)
         if(scenario.getTask()!=null)
-          scenario.updateGUI();
+          scenario.updateGUI(PLastStep);
 
 
       groupReasoning();
@@ -523,12 +529,14 @@ public class DeSouches extends Agent {
     public synchronized void scenarioCompleted(DSScenario scenario) {
     if (scenario.getTask() != null) {
       printOutput("scenario completed: " + scenario.getTask().getName());
+      scenario.scenarioSuceeded();
       //PSynchronizer.getMasterGroup().releaseGoalArea(scenario.getTask());
     }
     boolean newJob=false;
       if(scenario.getTask()!=null){
         newJob=true;
-      }
+      }else
+        scenario.getTask().suceeded();
 
     for (DSAgent agent : scenario.getAgentsAllocated()) {
       agent.removeScenario();
@@ -540,6 +548,7 @@ public class DeSouches extends Agent {
 
   public synchronized void scenarioFailed(DSScenario scenario) {
     if (scenario == null) return;
+    scenario.scenarioFailed();
     if (scenario.getTask() != null) {
       printOutput(PLastStep+":scenario failed: " + scenario.getTask().getName());
       for (DSAgent agent : scenario.getAgentsAllocated()) {
@@ -708,7 +717,10 @@ public class DeSouches extends Agent {
     PStepsDone=new HashMap();
 
     try {
-      POutput=new FileWriter("deSouches.txt");
+      DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss");
+      Calendar cal = Calendar.getInstance();
+      String fn="deSouches"+dateFormat.format(cal.getTime())+".txt";
+      POutput=new FileWriter(fn);
       PMapsOutput=new FileWriter("deSMaps.txt");
     } catch (IOException e) {
       System.out.println("An error occurred.");

@@ -25,8 +25,8 @@ public class DSSOneBlock extends DSSBlockScenarios{
         return ("One block scenario");
     }
 
-    public void updateGUI() {
-        PGUI.setDsgTaskText(PTask, PMasterGoalPos, null, null, null);
+    public void updateGUI(int step) {
+        PGUI.setDsgTaskText(PTask, step, PMasterGoalPos, null, null, null);
     }
 
     @Override
@@ -187,9 +187,8 @@ public class DSSOneBlock extends DSSBlockScenarios{
                         + PMasterGoalPos
                         + " body is "
                         + PMasterGoalBody.bodyToString());
-                        PGUI.setDsgTaskText(PTask,PMasterGoalPos,null,null,null);
 
-        updateGUI();
+        updateGUI(step);
 
         return (true);
     }

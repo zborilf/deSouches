@@ -313,6 +313,11 @@ public class DSPerceptor {
           break;
 
         case DSBeliefsIndexes.__score:
+          BB.setScore(perceptParams);
+          break;
+        case DSBeliefsIndexes.__ranking:
+          BB.getCommander().printOutput(" FINAL RANKING: "+perceptParams.iterator().next().toString());
+          System.exit(0);
       }
     }
 
