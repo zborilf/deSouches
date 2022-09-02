@@ -82,7 +82,7 @@ public class DSSynchronize {
     return(size);
   }
 
-  public synchronized void estimateSize(){
+  public synchronized boolean estimateSize(){
     HashMap<Integer, Integer> estimationsW=new HashMap<Integer, Integer>();
     HashMap<Integer, Integer> estimationsH=new HashMap<Integer, Integer>();
     LinkedList<Point> d1= PMasterGroup.getMap().getTypePositions(DSCell.__DSDispenser + 0);
@@ -93,8 +93,13 @@ public class DSSynchronize {
     estimationsH=estimateSize(d1,estimationsH,false);
 
 
-    PMasterGroup.getMap().setWidth(getBiggest(estimationsW,3));
-    PMasterGroup.getMap().setHeight(getBiggest(estimationsH,3));
+    if((PMasterGroup.getMap().setWidth(getBiggest(estimationsW,3)))||
+            (PMasterGroup.getMap().setHeight(getBiggest(estimationsH,3))))
+            return(true);
+                    else
+                      return(false);
+
+
 
   }
 

@@ -11,6 +11,7 @@ import dsAgents.dsPerceptionModule.dsSyntax.DSPercepts;
 import dsAgents.dsReasoningModule.dsGoals.DSEvasiveManoeuvre;
 import dsAgents.dsReasoningModule.dsGoals.DSGChangeRole;
 import dsAgents.dsReasoningModule.dsGoals.DSGDetachAll;
+import dsAgents.dsReasoningModule.dsGoals.DSGForceDetach;
 import dsMultiagent.DSGroup;
 import dsMultiagent.DSSynchronize;
 import dsMultiagent.dsGroupOptions.dsGroupOption;
@@ -299,7 +300,7 @@ public class DeSouches extends Agent {
       return (true);
     }
 
-/*
+
     if (taskType == 43){
       printOutput(("Jednickovej task"));
       DSSOneBlock oneBlock= new DSSOneBlock(this, task);
@@ -308,7 +309,7 @@ public class DeSouches extends Agent {
       PScenariosActive.add(oneBlock);
       return(true);
     }
-    */
+
 
 
     return (false);
@@ -481,7 +482,10 @@ public class DeSouches extends Agent {
           printOutput("> ! > " + agent.getStep() + " MASTERGRUPA " + agent.getEntityName() + "!!!\n");
 
       if(PSynchronizer.getMasterGroup()!=null)
-        PSynchronizer.estimateSize();
+        if(PSynchronizer.estimateSize()){
+          for(DSScenario scenario:PScenariosActive)
+            scenario.calibrateScenario(getMasterMap());
+        }
 
         // print task states
       for(DSScenario scenario:PScenariosActive)
@@ -675,7 +679,7 @@ public class DeSouches extends Agent {
           this.getAgent().getContainerController().getAgent(agentName).start();
           //  needJob(agent)
 
-          agent.hearOrder(new DSGDetachAll());
+          agent.hearOrder(new DSGForceDetach());
 
         } catch (Exception pe) {}
       }
@@ -716,7 +720,7 @@ public class DeSouches extends Agent {
     try {
       DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss");
       Calendar cal = Calendar.getInstance();
-      String fn="deSouches"+dateFormat.format(cal.getTime())+".txt";
+      String fn="deSouches"+dateFormat.format(cal.getTime())+".dso";
       POutput=new FileWriter(fn);
       PMapsOutput=new FileWriter("deSMaps.txt");
     } catch (IOException e) {

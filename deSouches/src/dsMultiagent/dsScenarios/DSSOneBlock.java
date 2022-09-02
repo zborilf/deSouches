@@ -3,6 +3,7 @@ package dsMultiagent.dsScenarios;
 import dsAgents.DSAgent;
 import dsAgents.DeSouches;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsReasoningModule.dsGoals.*;
 import dsMultiagent.dsTasks.DSTask;
 
@@ -131,7 +132,10 @@ public class DSSOneBlock extends DSSBlockScenarios{
     }
 
 
-
+    public void calibrateScenario(DSMap map){
+        PMasterDispenserPos=map.centralizeCoords(PMasterDispenserPos);
+        PMasterGoalPos=map.centralizeCoords(PMasterGoalPos);
+    }
 
     boolean allocateAgents() {
 

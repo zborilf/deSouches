@@ -57,6 +57,7 @@ public class DSBody {
     return (shiftedBody);
   }
 
+
   public LinkedList<String> getAllDirectionsAttached() {
     LinkedList<String> directions = new LinkedList<String>();
     if (isCellAt(new Point(-1, 0))) directions.add("w");

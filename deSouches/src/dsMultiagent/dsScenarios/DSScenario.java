@@ -2,6 +2,7 @@ package dsMultiagent.dsScenarios;
 
 import dsAgents.DSAgent;
 import dsAgents.DeSouches;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import dsAgents.dsGUI.DSTaskGUI;
 import dsMultiagent.dsTasks.DSTask;
@@ -72,6 +73,10 @@ public abstract class DSScenario {
   public abstract boolean checkEvent(DSAgent agent, int eventType);
 
   public abstract boolean initScenario(int step);
+
+  public void calibrateScenario(DSMap map){
+
+  }
 
   public int getDeadline() {
     return (PTask.getDeadline());

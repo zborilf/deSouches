@@ -14,6 +14,7 @@ import dsAgents.DSConfig;
 
 import java.awt.*;
 import java.util.*;
+import java.util.List;
 ;
 
 public class DSMap {
@@ -122,6 +123,7 @@ public class DSMap {
          MAKING ZONES
   */
 
+  // TODO, lepe normalizovat
   static LinkedList<Point> get8Neighbours(Point cell, LinkedList<Point> cells) {
     LinkedList<Point> neighbours = new LinkedList<Point>();
     int x = cell.x;
@@ -136,8 +138,7 @@ public class DSMap {
     LinkedList<Point> neighbours = new LinkedList<Point>();
     for (int x = cell.x - r; x <= cell.x + r; x++) {
       for (int y = cell.y - r; y <= cell.y + r; y++) {
-        // todo:l prekroceni mapy
-        Point p = new Point(x, y);
+        Point p = centralizeCoords(new Point(x, y));
         if (distance(p, cell) == r) neighbours.add(p);
       }
     }
@@ -617,36 +618,65 @@ public class DSMap {
     return (so.toString());
   }
 
-  public synchronized void setWidth(int width) {
-   // return;
+  public boolean sizeEstimated(){
+    //return(isMasterMap());
+     return((PWidthMap!=0) || (PHeightMap!=0));
+  }
 
+  public synchronized boolean setWidth(int width) {
+    //return;
+    if(width!=PWidthMap)
     if(width> DSConfig.___meaningfulSize) {
-      for(DSCell cell:PMapCells.getCells()) {
-        cell.setX(Math.floorMod(cell.getX(), width));
-        PMapCells.put(cell);
-        PMapCells.newWidth(width);
-      }
       PWidthMap = width;
       for(DSAgent agent:PAgentPosition.keySet())
-       PAgentPosition.put(agent,centralizeCoords(PAgentPosition.get(agent)));
-    }
-  }
+        moveBy(agent,0,0);
+      LinkedList<Point> points=new LinkedList<Point>();
+      for(Point point:PMapCells.PHashCells.keySet())
+        points.add(point);
 
-  public synchronized void setHeight(int height) {
-    //return;
+      for(Point point:points)
+        if((point.x<0)||(point.x>=width))
+          PMapCells.PHashCells.remove(point);
 
-    if(height>0) {
-      for (DSCell cell : PMapCells.getCells()) {
-        cell.setY(Math.floorMod(cell.getY(), height));
-        PMapCells.put(cell);
-        PMapCells.newHeight(height);
+
+     // for(DSCell cell:PMapCells.getCells()) {
+     //   if((cell.getX()<0)||(cell.getX()>=width))
+     //     PMapCells.PHashCells.remove(cell.getPosition());
+        //cell.setX(Math.floorMod(cell.getX(), width));
+        //PMapCells.put(cell);
+        //PMapCells.newWidth(width);
+      return(true);
       }
+      return(false);
+    }
+
+
+  public synchronized boolean setHeight(int height) {
+  //  return;
+    if(height!=PHeightMap)
+    if(height> DSConfig.___meaningfulSize) {
       PHeightMap = height;
       for(DSAgent agent:PAgentPosition.keySet())
-        PAgentPosition.put(agent,centralizeCoords(PAgentPosition.get(agent)));
+        moveBy(agent,0,0);
+      LinkedList<Point> points=new LinkedList<Point>();
+      for(Point point:PMapCells.PHashCells.keySet())
+        points.add(point);
+      for(Point point:points)
+        if((point.y<0)||(point.y>=height))
+          PMapCells.PHashCells.remove(point);
+
+/*      for (DSCell cell : PMapCells.getCells()) {
+        if((cell.getY()<0)||(cell.getY()>=height))
+          PMapCells.PHashCells.remove(cell.getPosition());*/
+//        cell.setY(Math.floorMod(cell.getY(), height));
+//        PMapCells.put(cell);
+//        PMapCells.newHeight(height);
+      return(true);
+      }
+    return(false);
     }
 
-  }
+
 
   synchronized public boolean moveBy(DSAgent agent, int x, int y) {
 

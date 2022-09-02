@@ -14,7 +14,7 @@ public class DSGDetachAll extends DSGGoal {
   @Override
   public boolean revisePlans(DSAgent agent) {
     LinkedList<String> directions = agent.getBody().getAllDirectionsAttached();
-    DSPlan detachAllPlan = new DSPlan("detachAllaGoal", 2);
+    DSPlan detachAllPlan = new DSPlan("detachAllaGoal", 2,false);
     DSDetach detach;
     if (PPlans.containsKey("detachAllGoal")) {
       return false;

@@ -326,7 +326,7 @@ public class DSBeliefBase {
   }
 
 
-  public void rempveAttached(Collection<Parameter> parameters){
+  public void removeAttached(Collection<Parameter> parameters){
     Iterator i = parameters.iterator();
     int x = Integer.parseInt(i.next().toString());
     int y = Integer.parseInt(i.next().toString());

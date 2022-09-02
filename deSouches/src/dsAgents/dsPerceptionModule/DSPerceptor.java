@@ -241,7 +241,7 @@ public class DSPerceptor {
           break;
 
         case DSBeliefsIndexes.__attached:
-          BB.rempveAttached(perceptParams);
+          BB.removeAttached(perceptParams);
           break;
 
         case DSBeliefsIndexes.__energy:

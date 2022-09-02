@@ -12,6 +12,9 @@ public class DSCells {
   HashMap<Point, Integer> revisitedNewestEvent = new HashMap<>();
   HashMap<Point, Integer> revisitedTime = new HashMap<>();
 
+
+
+
   public synchronized LinkedList<DSCell> getCells() {
 
     LinkedList<DSCell> cells = new LinkedList();
@@ -167,6 +170,8 @@ public class DSCells {
   }
 
   public boolean isDestructibleAt(Point point){
+    if((LinkedList<DSCell>)getAllAt(point)==null)
+      return(false);
     LinkedList<DSCell> cells=(LinkedList<DSCell>)getAllAt(point).clone();
     if(cells!=null)
       for(DSCell c: cells){

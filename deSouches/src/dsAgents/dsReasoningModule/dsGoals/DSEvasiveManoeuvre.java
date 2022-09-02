@@ -77,6 +77,14 @@ public class DSEvasiveManoeuvre extends DSGGoal{
         int dx = (int) Math.round(Math.random() * _distance-(_distance/2));
         int dy = (int) Math.round(Math.random() * _distance-(_distance/2));
         _destination=new Point(dx,dy);
-
     }
+
+
+    public DSEvasiveManoeuvre(int distance) {
+        super();
+        int dx = (int) Math.round(Math.random() * distance-(distance/2));
+        int dy = (int) Math.round(Math.random() * distance-(distance/2));
+        _destination=new Point(dx,dy);
+    }
+
 }

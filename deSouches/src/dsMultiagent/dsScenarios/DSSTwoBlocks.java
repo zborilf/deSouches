@@ -4,6 +4,7 @@ import deSouches.utils.HorseRider;
 import dsAgents.*;
 import dsAgents.DeSouches;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsReasoningModule.dsGoals.*;
 import dsMultiagent.dsTasks.DSTask;
 import java.awt.*;
@@ -233,6 +234,15 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
     }
     return (false);
   }
+
+
+  public void calibrateScenario(DSMap map){
+    PMasterDispenserPos=map.centralizeCoords(PMasterDispenserPos);
+    PMasterGoalPos=map.centralizeCoords(PMasterGoalPos);
+    PSlaveDispenserPos=map.centralizeCoords(PSlaveDispenserPos);
+    PSlaveGoalPos=map.centralizeCoords(PSlaveGoalPos);
+  }
+
 
   boolean allocateAgents() {
 

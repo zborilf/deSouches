@@ -15,6 +15,8 @@ package dsAgents.dsReasoningModule.dsGoals;
 
 import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCells;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsExecutionModule.dsActions.DSAdopt;
 import dsAgents.dsExecutionModule.dsActions.DSClear;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
@@ -93,9 +95,16 @@ public class DSGoalExplore extends DSGGoal {
 
 
 
-    // exploration
+    // SMAZ NIZE, POKUD SE TO ROZBILO
 
-    LinkedList<Point> neigbours =
+    if(agent.getGroup().getMap().sizeEstimated())
+    {
+      setSubgoal(new DSEvasiveManoeuvre(10));
+      return(true);
+    }
+
+
+      LinkedList<Point> neigbours =
         agent.getMap().getNeighboursExactDistance(agent.getMapPosition(), agent.getVisionRange());
     List<DSCell> neigbourCells =
         neigbours.stream()
@@ -105,7 +114,10 @@ public class DSGoalExplore extends DSGGoal {
 
     if (neigbourCells.isEmpty())
       System.err.println("CELL HAS NO NEIGHBOURS step: " + agent.getStep());
+
     else {
+
+
       double min =
           neigbourCells.stream()
               .min(Comparator.comparingDouble(DSCell::getPheromone))
@@ -151,6 +163,13 @@ public class DSGoalExplore extends DSGGoal {
                     LARGE_N,
                     agent, true);
       }
+
+      /*
+              End Ant Map
+       */
+
+
+
 
       if (plan != null && plan.getLength() != 0) {
         // shorter plan only from first action for more reactive approach

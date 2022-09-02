@@ -3,6 +3,7 @@ package dsMultiagent.dsScenarios;
 import dsAgents.DSAgent;
 import dsAgents.DeSouches;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsReasoningModule.dsGoals.*;
 import dsMultiagent.dsTasks.DSTask;
 import dsMultiagent.dsTasks.DSTaskType;
@@ -292,6 +293,18 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
     }
     return (false);
   }
+
+
+
+  public void calibrateScenario(DSMap map){
+    PMasterDispenserPos=map.centralizeCoords(PMasterDispenserPos);
+    PMasterGoalPos=map.centralizeCoords(PMasterGoalPos);
+    PLeutnant1DispenserPos=map.centralizeCoords(PLeutnant1DispenserPos);
+    PLeutnant1GoalPos=map.centralizeCoords(PLeutnant1GoalPos);
+    PLeutnant2DispenserPos=map.centralizeCoords(PLeutnant2DispenserPos);
+    PLeutnant2GoalPos=map.centralizeCoords(PLeutnant2GoalPos);
+  }
+
 
   boolean allocateAgents() {
 
