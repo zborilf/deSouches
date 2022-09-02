@@ -4,7 +4,6 @@ import dsAgents.DSAgent;
 import dsAgents.DeSouches;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsReasoningModule.dsGoals.*;
-import dsAgents.dsTaskGUI;
 import dsMultiagent.dsTasks.DSTask;
 import dsMultiagent.dsTasks.DSTaskType;
 import java.awt.*;
@@ -45,6 +44,7 @@ public class DSSFourBlocks extends DSSBlockScenarios {
 
   @Override
   public synchronized void goalCompleted(DSAgent agent, DSGGoal goal) {
+
 
    agent.getCommander().printOutput(
         "goalCompleted: "
@@ -171,16 +171,19 @@ public class DSSFourBlocks extends DSSBlockScenarios {
         PStateL3 = 4;
       }
     }
-    if((PStateM==3)&&(PStateL1==3)&&(PStateL2==3)){
+    if((PStateM==3)&&(PStateL1==3)&&(PStateL2==3)&&(PStateL3==3)){
       PMaster.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
       PLeutnant1.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
       PLeutnant2.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
       PLeutnant3.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
     }
+    super.goalCompleted(agent,goal);
   }
 
   @Override
   public synchronized void goalFailed(DSAgent agent, DSGGoal goal) {
+
+    super.goalFailed(agent,goal);
 
     agent.getCommander().printOutput(
             "goalFailed: "
@@ -376,7 +379,7 @@ public class DSSFourBlocks extends DSSBlockScenarios {
     PType1 = PTask.getTypesNeeded().get(0);
     PType2 = PTask.getTypesNeeded().get(1);
     PType3 = PTask.getTypesNeeded().get(2);
-    PType3 = PTask.getTypesNeeded().get(3);
+    PType4 = PTask.getTypesNeeded().get(3);
 
     PLeutnant1GoalPos = PTaskType.formationPosition(PLeutnant1, PMasterGoalPos);
     PLeutnant2GoalPos = PTaskType.formationPosition(PLeutnant2, PMasterGoalPos);
@@ -493,7 +496,5 @@ public class DSSFourBlocks extends DSSBlockScenarios {
     super(commander, task);
     PPriority = 2;
     PTaskType = task.getTaskType();
-    PGUI=dsTaskGUI.createGUI();
-   // PGUI.setDsgTaskText(task);
   }
 }

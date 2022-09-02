@@ -5,7 +5,6 @@ import dsAgents.dsBeliefBase.DSBeliefBase;
 import dsAgents.dsBeliefBase.dsBeliefs.DSBeliefsIndexes;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.*;
 import dsAgents.dsPerceptionModule.dsSyntax.DSPercepts;
-import dsMultiagent.dsTasks.DSTask;
 import eis.PerceptUpdate;
 import eis.iilang.*;
 import java.awt.*;
@@ -70,6 +69,7 @@ public class DSPerceptor {
         return(outlook.seesBlockBy(new Point(0,0),DSCell.__DSBlock, DSCell.__DSBlock+20));
   }
 
+
   public DSBody getBodyFromPercepts(Collection<Percept> percepts) {
     Iterator<Percept> perceptI =
         percepts.stream()
@@ -119,22 +119,26 @@ public class DSPerceptor {
         if (Math.abs(i) + Math.abs(j) > vision) continue;
 
         List<DSCell> old = new LinkedList<>();
-        var allAt = map.getMap().getAllAt(new Point(i + agentPos.x, j + agentPos.y));
+
+
+        var allAt = map.getMapCells().getAllAt(map.shiftPosition(agent, new Point(i,j)));
         if (allAt != null && !allAt.isEmpty()) {
           old = allAt.stream().filter(x -> x.getTimestamp() <= step).toList();
         }
 
-        map.removeOlder(new Point(i + agentPos.x, j + agentPos.y), step);
+        map.removeOlder(map.shiftPosition(agent, new Point(i,j)), step);
+
+
         LinkedList<DSCell> cells = newOutlook.getAllAt(new Point(i, j));
         if (cells != null) {
           for (DSCell cell : cells) {
             DSCell newCell =
                 new DSCell(
-                    cell.getX() + agentPos.x,
-                    cell.getY() + agentPos.y,
-                    cell.getType(),
-                    cell.getTimestamp(),
-                    agent);
+                        map.shiftPosition(agent, cell.getPosition()).x,
+                        map.shiftPosition(agent, cell.getPosition()).y,
+                        cell.getType(),
+                        cell.getTimestamp(),
+                        agent);
 
             var ncell =
                 old.stream()
@@ -158,9 +162,11 @@ public class DSPerceptor {
         if (Math.abs(x) + Math.abs(y) > vision) continue;
 
         DSCell clearCell =
-            new DSCell(x + agentPos.x, y + agentPos.y, DSCell.__DSClear, step, agent);
+            new DSCell(map.shiftPosition(agent, new Point(x,y)).x,
+                      map.shiftPosition(agent, new Point(x,y)).y,
+                      DSCell.__DSClear, step, agent);
 
-        LinkedList<DSCell> cells = map.getMap().getAllAt(clearCell.getPosition());
+        LinkedList<DSCell> cells = map.getMapCells().getAllAt(clearCell.getPosition());
         if (cells == null
             || cells.stream()
                 .noneMatch(
@@ -170,7 +176,7 @@ public class DSPerceptor {
                                 && (pCell.getType() < DSCell.__DSDispenser)))) {
           map.updateCell(clearCell);
         } else {
-          map.getMap().removeCell(clearCell.getX(), clearCell.getY(), DSCell.__DSClear);
+          map.getMapCells().removeCell(clearCell.getX(), clearCell.getY(), DSCell.__DSClear);
         }
       }
   }

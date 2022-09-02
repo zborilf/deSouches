@@ -1,0 +1,2631 @@
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+agentA9 needs job
+agentA18 needs job
+agentA8 needs job
+agentA17 needs job
+agentA20 needs job
+agentA10 needs job
+agentA15 needs job
+agentA3 needs job
+agentA1 needs job
+agentA16 needs job
+agentA4 needs job
+agentA14 needs job
+agentA6 needs job
+agentA11 needs job
+agentA19 needs job
+agentA5 needs job
+agentA2 needs job
+agentA7 needs job
+agentA12 needs job
+ --------------------------------- 
+Step 1
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+agentA13 needs job
+>>agentA17 sees agentA6 disp java.awt.Point[x=0,y=-1] token true
+groupExtended: Leader {agentA17}agentA17,  by group Leader {agentA6}agentA6,  step 2
+>>agentA19 sees agentA20 disp java.awt.Point[x=-1,y=1] token false
+>>agentA6 sees agentA3 disp java.awt.Point[x=-1,y=0] token false
+>>agentA17 sees agentA3 disp java.awt.Point[x=-1,y=0] token false
+ --------------------------------- 
+Step 2
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA20 sees agentA5 disp java.awt.Point[x=0,y=-1] token true
+groupExtended: Leader {agentA20}agentA20,  by group Leader {agentA5}agentA5,  step 3
+>>agentA10 sees agentA14 disp java.awt.Point[x=-5,y=-2] token false
+>>agentA19 sees agentA20 disp java.awt.Point[x=-1,y=1] token false
+>>agentA6 sees agentA3 disp java.awt.Point[x=-1,y=0] token false
+>>agentA17 sees agentA3 disp java.awt.Point[x=-1,y=0] token false
+ --------------------------------- 
+Step 3
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA16 sees agentA12 disp java.awt.Point[x=1,y=-1] token true
+groupExtended: Leader {agentA16}agentA16,  by group Leader {agentA12}agentA12,  step 4
+>>agentA10 sees agentA14 disp java.awt.Point[x=-5,y=-2] token false
+>>agentA19 sees agentA20 disp java.awt.Point[x=-1,y=1] token false
+>>agentA2 sees agentA4 disp java.awt.Point[x=0,y=-1] token false
+>>agentA4 sees agentA8 disp java.awt.Point[x=-8,y=-1] token false
+>>agentA6 sees agentA3 disp java.awt.Point[x=-1,y=0] token false
+ --------------------------------- 
+Step 4
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA1 sees agentA8 disp java.awt.Point[x=0,y=-1] token true
+groupExtended: Leader {agentA1}agentA1,  by group Leader {agentA8}agentA8,  step 5
+>>agentA6 sees agentA3 disp java.awt.Point[x=-1,y=0] token false
+>>agentA19 sees agentA20 disp java.awt.Point[x=-1,y=1] token false
+>>agentA11 sees agentA13 disp java.awt.Point[x=0,y=1] token false
+ --------------------------------- 
+Step 5
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA8 sees agentA4 disp java.awt.Point[x=8,y=0] token true
+groupExtended: Leader {agentA1}agentA1, agentA8,  by group Leader {agentA4}agentA4,  step 6
+>>agentA4 sees agentA2 disp java.awt.Point[x=8,y=1] token false
+>>agentA10 sees agentA14 disp java.awt.Point[x=-5,y=-2] token false
+ --------------------------------- 
+Step 6
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA2 sees agentA3 disp java.awt.Point[x=6,y=-4] token true
+groupExtended: Leader {agentA2}agentA2,  by group Leader {agentA3}agentA3,  step 7
+>>agentA4 sees agentA2 disp java.awt.Point[x=8,y=1] token false
+>>agentA4 sees agentA3 disp java.awt.Point[x=8,y=1] token false
+>>agentA10 sees agentA14 disp java.awt.Point[x=-5,y=-2] token false
+>>agentA1 sees agentA2 disp java.awt.Point[x=8,y=1] token false
+>>agentA6 sees agentA3 disp java.awt.Point[x=-7,y=4] token false
+>>agentA11 sees agentA13 disp java.awt.Point[x=0,y=1] token false
+ --------------------------------- 
+Step 7
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA4 sees agentA2 disp java.awt.Point[x=8,y=1] token true
+groupExtended: Leader {agentA1}agentA1, agentA8, agentA4,  by group Leader {agentA2}agentA2, agentA3,  step 8
+>>agentA6 sees agentA3 disp java.awt.Point[x=-15,y=3] token false
+>>agentA11 sees agentA13 disp java.awt.Point[x=0,y=1] token false
+ --------------------------------- 
+Step 8
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA6 sees agentA3 disp java.awt.Point[x=-15,y=3] token true
+groupExtended: Leader {agentA17}agentA17, agentA6,  by group Leader {agentA1}agentA1, agentA8, agentA4, agentA2, agentA3,  step 9
+ --------------------------------- 
+Step 9
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA11 sees agentA13 disp java.awt.Point[x=0,y=1] token true
+groupExtended: Leader {agentA11}agentA11,  by group Leader {agentA13}agentA13,  step 10
+>>agentA19 sees agentA5 disp java.awt.Point[x=-1,y=1] token false
+ --------------------------------- 
+Step 10
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA19 sees agentA5 disp java.awt.Point[x=-1,y=1] token true
+groupExtended: Leader {agentA19}agentA19,  by group Leader {agentA20}agentA20, agentA5,  step 11
+>>agentA10 sees agentA14 disp java.awt.Point[x=-5,y=-2] token false
+ --------------------------------- 
+Step 11
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 12
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 13
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 14
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 15
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 16
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 17
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 18
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA3 sees agentA10 disp java.awt.Point[x=12,y=-4] token true
+groupExtended: Leader {agentA17}agentA17, agentA6, agentA1, agentA8, agentA4, agentA2, agentA3,  by group Leader {agentA10}agentA10,  step 19
+ --------------------------------- 
+Step 19
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 20
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 21
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 22
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 23
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA13 sees agentA9 disp java.awt.Point[x=4,y=-7] token true
+groupExtended: Leader {agentA11}agentA11, agentA13,  by group Leader {agentA9}agentA9,  step 24
+ --------------------------------- 
+Step 24
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 25
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 26
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 27
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 28
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 29
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 30
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 31
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 32
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 33
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 34
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 35
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 36
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 37
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 38
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 39
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 40
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 41
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 42
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 43
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 44
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 45
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 46
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 47
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 48
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 49
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA3 sees agentA11 disp java.awt.Point[x=4,y=-20] token true
+groupExtended: Leader {agentA17}agentA17, agentA6, agentA1, agentA8, agentA4, agentA2, agentA3, agentA10,  by group Leader {agentA11}agentA11, agentA13, agentA9,  step 50
+ --------------------------------- 
+Step 50
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+> ! > 51 MASTERGRUPA agentA17!!!
+
+ --------------------------------- 
+Step 51
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 52
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 53
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 54
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 55
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 56
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 57
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 58
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 59
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA1 sees agentA16 disp java.awt.Point[x=-25,y=6] token true
+MasterGroupExtended: Leader {agentA17}agentA17, agentA6, agentA1, agentA8, agentA4, agentA2, agentA3, agentA10, agentA11, agentA13, agentA9,  by group Leader {agentA16}agentA16, agentA12,  step 60
+ --------------------------------- 
+Step 60
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 61
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 62
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 63
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 64
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 65
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 66
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA20 sees agentA7 disp java.awt.Point[x=20,y=37] token true
+groupExtended: Leader {agentA19}agentA19, agentA20, agentA5,  by group Leader {agentA7}agentA7,  step 67
+ --------------------------------- 
+Step 67
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 68
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 69
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 70
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 71
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 72
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 73
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 74
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 75
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task2
+group option task3
+group option task4
+---------------
+75: Task : task4 type 6 deadline 192
+>> 0:::- agentA2:[-22,-9] -> [-29,-16] -> [-2,-23] sup. price 48
+>> 1:::- agentA6:[-18,-3] -> [-10,-23] -> [-2,-23] sup. price 36
+>> 0:::- agentA4:[-29,-11] -> [-29,-16] -> [-2,-23] sup. price 39
+Checkuju pozici golu java.awt.Point[x=-2,y=-23]
+Vysledek je true
+---------------
+Budou trojicky
+TT:6/0agentA2/1agentA6/0agentA4/
+ --------------------------------- 
+Step 76
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task0
+group option task2
+group option task3
+group option task4
+goalCompleted: SCEN: Task te chvali, agente agentA6 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentA2 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentA4 za detachAllGoal
+ --------------------------------- 
+Step 77
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task0
+group option task2
+group option task3
+group option task4
+ --------------------------------- 
+Step 78
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task0
+group option task2
+group option task3
+group option task4
+ --------------------------------- 
+Step 79
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task0
+group option task2
+group option task3
+group option task4
+ --------------------------------- 
+Step 80
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task0
+group option task2
+group option task3
+group option task4
+ --------------------------------- 
+Step 81
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task0
+group option task2
+group option task3
+group option task4
+ --------------------------------- 
+Step 82
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task0
+group option task2
+group option task3
+group option task4
+ --------------------------------- 
+Step 83
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task0
+group option task2
+group option task3
+group option task4
+ --------------------------------- 
+Step 84
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+group option task0
+group option task3
+group option task4
+goalFailed: SCEN: Task to je smula agente agentA4 kvuli get block 2022
+>>agentA1 sees agentA20 disp java.awt.Point[x=-54,y=-25] token true
+MasterGroupExtended: Leader {agentA17}agentA17, agentA6, agentA1, agentA8, agentA4, agentA2, agentA3, agentA10, agentA11, agentA13, agentA9, agentA16, agentA12,  by group Leader {agentA19}agentA19, agentA20, agentA5, agentA7,  step 85
+ --------------------------------- 
+Step 85
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+85: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-44,-15] -> [-34,-12] -> [-55,-21] sup. price 43
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+goalFailed: SCEN: Task to je smula agente agentA4 kvuli get block 2022
+ --------------------------------- 
+Step 86
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+86: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-44,-15] -> [-34,-12] -> [-55,-21] sup. price 43
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+goalFailed: SCEN: Task to je smula agente agentA4 kvuli get block 2022
+ --------------------------------- 
+Step 87
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+87: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-44,-15] -> [-34,-12] -> [-55,-21] sup. price 43
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 88
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+88: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-45,-15] -> [-34,-12] -> [-55,-21] sup. price 44
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 89
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+89: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-44,-15] -> [-34,-12] -> [-55,-21] sup. price 43
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+goalCompleted: SCEN: Task te chvali, agente agentA4 za get block 2022
+ --------------------------------- 
+Step 90
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+90: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-44,-14] -> [-34,-12] -> [-55,-21] sup. price 42
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 91
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+91: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-44,-15] -> [-34,-12] -> [-55,-21] sup. price 43
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 92
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+92: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-44,-14] -> [-34,-12] -> [-55,-21] sup. price 42
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 93
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+93: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-44,-15] -> [-34,-12] -> [-55,-21] sup. price 43
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 94
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+94: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-45,-15] -> [-34,-12] -> [-55,-21] sup. price 44
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+>>agentA14 sees agentA15 disp java.awt.Point[x=42,y=36] token true
+groupExtended: Leader {agentA14}agentA14,  by group Leader {agentA15}agentA15,  step 95
+ --------------------------------- 
+Step 95
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+95: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-44,-15] -> [-34,-12] -> [-55,-21] sup. price 43
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+goalFailed: SCEN: Task to je smula agente agentA6 kvuli get block 2022
+ --------------------------------- 
+Step 96
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+96: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-44,-14] -> [-34,-12] -> [-55,-21] sup. price 42
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+goalFailed: SCEN: Task to je smula agente agentA6 kvuli get block 2022
+ --------------------------------- 
+Step 97
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+97: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-44,-14] -> [-34,-12] -> [-55,-21] sup. price 42
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 98
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+98: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-44,-15] -> [-34,-12] -> [-55,-21] sup. price 43
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 99
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+99: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-45,-15] -> [-34,-12] -> [-55,-21] sup. price 44
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+goalCompleted: SCEN: Task te chvali, agente agentA2 za get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentA6 za get block 2022
+ --------------------------------- 
+Step 100
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+100: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-45,-14] -> [-34,-12] -> [-55,-21] sup. price 43
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 101
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+101: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-45,-14] -> [-34,-12] -> [-55,-21] sup. price 43
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+>>agentA19 sees agentA18 disp java.awt.Point[x=-85,y=-21] token true
+MasterGroupExtended: Leader {agentA17}agentA17, agentA6, agentA1, agentA8, agentA4, agentA2, agentA3, agentA10, agentA11, agentA13, agentA9, agentA16, agentA12, agentA19, agentA20, agentA5, agentA7,  by group Leader {agentA18}agentA18,  step 102
+ --------------------------------- 
+Step 102
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+102: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-45,-14] -> [-34,-12] -> [-55,-21] sup. price 43
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 103
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+103: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-46,-14] -> [-34,-12] -> [-55,-21] sup. price 44
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 104
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+104: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-46,-14] -> [-34,-12] -> [-55,-21] sup. price 44
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 105
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+105: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-46,-13] -> [-34,-12] -> [-55,-21] sup. price 43
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 106
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+106: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-46,-13] -> [-34,-12] -> [-55,-21] sup. price 43
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 107
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+107: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-45,-13] -> [-34,-12] -> [-55,-21] sup. price 42
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 108
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+108: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-44,-13] -> [-34,-12] -> [-55,-21] sup. price 41
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 109
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+109: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-44,-13] -> [-34,-12] -> [-55,-21] sup. price 41
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 110
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+110: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-43,-13] -> [-34,-12] -> [-55,-21] sup. price 40
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 111
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+111: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-43,-14] -> [-34,-12] -> [-55,-21] sup. price 41
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 112
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+112: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[-25,-11] -> [-34,-12] -> [-55,-21] sup. price 40
+Checkuju pozici golu java.awt.Point[x=-55,y=-21]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 113
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+113: Task : task5 type 43 deadline 190
+>> 0:::- agentA7:[-42,-14] -> [41,-16] -> [46,-32] sup. price 10
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+goalCompleted: SCEN: Task te chvali, agente agentA6 za goToPosition
+ --------------------------------- 
+Step 114
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+114: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[44,-11] -> [41,-16] -> [46,-32] sup. price 29
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 115
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+115: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[44,-11] -> [41,-16] -> [46,-32] sup. price 29
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 116
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+116: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[44,-11] -> [41,-16] -> [46,-32] sup. price 29
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 117
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+117: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[44,-12] -> [41,-16] -> [46,-32] sup. price 28
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 118
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+118: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[44,-12] -> [41,-16] -> [46,-32] sup. price 28
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 119
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+119: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[44,-12] -> [41,-16] -> [46,-32] sup. price 28
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 120
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+120: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[43,-12] -> [41,-16] -> [46,-32] sup. price 27
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 121
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+121: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[43,-12] -> [41,-16] -> [46,-32] sup. price 27
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 122
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+122: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[43,-12] -> [41,-16] -> [46,-32] sup. price 27
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 123
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+123: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[42,-12] -> [41,-16] -> [46,-32] sup. price 26
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 124
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+124: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[42,-12] -> [41,-16] -> [46,-32] sup. price 26
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 125
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+125: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[41,-12] -> [41,-16] -> [46,-32] sup. price 25
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 126
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+126: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-12] -> [41,-16] -> [46,-32] sup. price 26
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 127
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+127: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-13] -> [41,-16] -> [46,-32] sup. price 25
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 128
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+128: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-14] -> [41,-16] -> [46,-32] sup. price 24
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 129
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+129: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-15] -> [41,-16] -> [46,-32] sup. price 23
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 130
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+130: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-16] -> [41,-16] -> [46,-32] sup. price 22
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 131
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+131: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-16] -> [41,-16] -> [46,-32] sup. price 22
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+goalFailed: SCEN: Task to je smula agente agentA2 kvuli goToPosition
+ --------------------------------- 
+Step 132
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+132: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-16] -> [41,-16] -> [46,-32] sup. price 22
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+goalCompleted: SCEN: Task te chvali, agente agentA4 za goToPosition
+ --------------------------------- 
+Step 133
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+133: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-16] -> [41,-16] -> [30,-19] sup. price 15
+Checkuju pozici golu java.awt.Point[x=30,y=-19]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 134
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+134: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-16] -> [41,-16] -> [30,-19] sup. price 15
+Checkuju pozici golu java.awt.Point[x=30,y=-19]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 135
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+135: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-16] -> [41,-16] -> [30,-19] sup. price 15
+Checkuju pozici golu java.awt.Point[x=30,y=-19]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 136
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+136: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-16] -> [41,-16] -> [30,-19] sup. price 15
+Checkuju pozici golu java.awt.Point[x=30,y=-19]
+Vysledek je true
+---------------
+goalFailed: SCEN: Task to je smula agente agentA2 kvuli evasiveManoeuvre
+ --------------------------------- 
+Step 137
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+137: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-16] -> [41,-16] -> [30,-19] sup. price 15
+Checkuju pozici golu java.awt.Point[x=30,y=-19]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 138
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+138: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-16] -> [41,-16] -> [30,-19] sup. price 15
+Checkuju pozici golu java.awt.Point[x=30,y=-19]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 139
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+139: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-17] -> [41,-16] -> [30,-19] sup. price 16
+Checkuju pozici golu java.awt.Point[x=30,y=-19]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 140
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+140: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-17] -> [41,-16] -> [30,-19] sup. price 16
+Checkuju pozici golu java.awt.Point[x=30,y=-19]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 141
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+141: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-18] -> [41,-16] -> [30,-19] sup. price 17
+Checkuju pozici golu java.awt.Point[x=30,y=-19]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 142
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+142: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-18] -> [41,-16] -> [30,-19] sup. price 17
+Checkuju pozici golu java.awt.Point[x=30,y=-19]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 143
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+143: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-19] -> [41,-16] -> [30,-19] sup. price 18
+Checkuju pozici golu java.awt.Point[x=30,y=-19]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 144
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+144: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-19] -> [41,-16] -> [30,-19] sup. price 18
+Checkuju pozici golu java.awt.Point[x=30,y=-19]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 145
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+---------------
+145: Task : task5 type 43 deadline 190
+>> 0:::- agentA10:[40,-19] -> [41,-16] -> [30,-19] sup. price 18
+Checkuju pozici golu java.awt.Point[x=30,y=-19]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 146
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 147
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 148
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 149
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 150
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 151
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 152
+Active tasks: [task4_75]
+Active scenarios [dsMultiagent.dsScenarios.DSSThreeBlocks@56d84905]
+for task task4
+ -- agentA2,agentA6,agentA4,
+Goal positions allocated: task4 / java.awt.Point[x=-2,y=-23]
+Score: 0
+@@! Scenario failed due to timeout task4
+152:scenario failed: task4 reason:  TIMEOUT
+Removing scenario for agentA2
+Removing scenario for agentA6
+Removing scenario for agentA4
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 153
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 154
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 155
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+agentA2 needs job
+agentA6 needs job
+agentA4 needs job
+ --------------------------------- 
+Step 156
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 157
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 158
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 159
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 160
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 161
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 162
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 163
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 164
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 165
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 166
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 167
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 168
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 169
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 170
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 171
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 172
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 173
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 174
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 175
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 176
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 177
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 178
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 179
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 180
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 181
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 182
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 183
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 184
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 185
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 186
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 187
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 188
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 189
+Active tasks: []
+Active scenarios []
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task8
+---------------
+189: Task : task8 type 1 deadline 261
+>> 0:::- agentA2:[35,-17] -> [36,-12] -> [30,-19] sup. price 19
+>> 0:::- agentA17:[29,-13] -> [36,-12] -> [30,-19] sup. price 21
+Checkuju pozici golu java.awt.Point[x=30,y=-19]
+Vysledek je true
+---------------
+---------------
+initScenario: 
+!@!  TASK:task8 type 1 / , Group masteragentA17
+@@Master agentA2  pujde na java.awt.Point[x=36,y=-12] pro 0 a do golu java.awt.Point[x=30,y=-19] body is  [0,0:1003] [0,1:0],
+@@ Leutnant1 agentA17  pujde na java.awt.Point[x=36,y=-12] pro 0 a do golu java.awt.Point[x=30,y=-16] body is  [0,0:1003] [0,-1:0]
+ --------------------------------- 
+Step 190
+Active tasks: [task8_188]
+Active scenarios [dsMultiagent.dsScenarios.DSSTwoBlocks@1e3340f7]
+for task task8
+ -- agentA2,agentA17,
+Goal positions allocated: task8 / java.awt.Point[x=30,y=-19]
+Score: 0
+group option task5
+group option task6
+group option task8
+group option task4
+goalCompleted: SCEN: Task te chvali, agente agentA2 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentA17 za detachAllGoal
+ --------------------------------- 
+Step 191
+Active tasks: [task8_188]
+Active scenarios [dsMultiagent.dsScenarios.DSSTwoBlocks@1e3340f7]
+for task task8
+ -- agentA2,agentA17,
+Goal positions allocated: task8 / java.awt.Point[x=30,y=-19]
+Score: 0
+group option task6
+group option task8
+group option task9
+---------------
+191: Task : task9 type 43 deadline 311
+>> 0:::- agentA11:[-18,-3] -> [63,5] -> [67,-24] sup. price 30
+Checkuju pozici golu java.awt.Point[x=67,y=-24]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 192
+Active tasks: [task8_188]
+Active scenarios [dsMultiagent.dsScenarios.DSSTwoBlocks@1e3340f7]
+for task task8
+ -- agentA2,agentA17,
+Goal positions allocated: task8 / java.awt.Point[x=30,y=-19]
+Score: 0
+group option task6
+group option task8
+group option task9
+---------------
+192: Task : task9 type 43 deadline 311
+>> 0:::- agentA11:[-18,-3] -> [63,5] -> [67,-24] sup. price 30
+Checkuju pozici golu java.awt.Point[x=67,y=-24]
+Vysledek je true
+---------------
+ --------------------------------- 
+Step 193
+Active tasks: [task8_188]
+Active scenarios [dsMultiagent.dsScenarios.DSSTwoBlocks@1e3340f7]
+for task task8
+ -- agentA2,agentA17,
+Goal positions allocated: task8 / java.awt.Point[x=30,y=-19]
+Score: 0
+group option task6
+group option task10
+---------------
+193: Task : task10 type 29 deadline 283
+>> 1:::- agentA4:[66,-22] -> [60,-23] -> [46,-32] sup. price 30
+>> 0:::- agentA9:[41,4] -> [41,-5] -> [46,-32] sup. price 41
+>> 0:::- agentA10:[46,-24] -> [41,-16] -> [46,-32] sup. price 34
+>> 1:::- agentA6:[57,-27] -> [58,-30] -> [46,-32] sup. price 18
+Checkuju pozici golu java.awt.Point[x=46,y=-32]
+Vysledek je true
+---------------
+Budou ctvericky
+TT:29/1agentA4/0agentA9/0agentA10/1agentA6/

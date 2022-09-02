@@ -3,7 +3,7 @@ package dsMultiagent.dsScenarios;
 import dsAgents.DSAgent;
 import dsAgents.DeSouches;
 import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
-import dsAgents.dsTaskGUI;
+import dsAgents.dsGUI.DSTaskGUI;
 import dsMultiagent.dsTasks.DSTask;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -29,7 +29,7 @@ public abstract class DSScenario {
     return (PAgentsAllocated);
   }
 
-  protected dsTaskGUI PGUI=null;
+  protected DSTaskGUI PGUI=null;
 
   public void updateGUI(int step){};
 
@@ -48,8 +48,8 @@ public abstract class DSScenario {
     return (agents);
   }
 
-  public void scenarioFailed(){
-    PGUI.failed();
+  public void scenarioFailed(String reason){
+    PGUI.failed(reason);
   }
 
 

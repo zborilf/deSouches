@@ -43,8 +43,8 @@ public class AntMapUpdateSingleton {
     }
 
     DSMap groupMap = agent.getMap();
-    Point tlc = groupMap.getMap().getTLC();
-    Point brc = groupMap.getMap().getBRC();
+    Point tlc = groupMap.getMapCells().getTLC();
+    Point brc = groupMap.getMapCells().getBRC();
 
     if (tlc == null || brc == null) {
       System.err.println("ANT: map empty");
@@ -112,11 +112,11 @@ public class AntMapUpdateSingleton {
     for (int x = tlc.x; x <= brc.x; x++) {
       for (int y = tlc.y; y <= brc.y; y++) {
         Point p = new Point(x, y);
-        DSCell newestAtp = groupMap.getMap().getNewestAt(p);
+        DSCell newestAtp = groupMap.getMapCells().getNewestAt(p);
 
         if (newestAtp != null && nextGenPheromone.get(p) != null) {
           // newestAtp.setPheromone(nextGenPheromone.get(p));
-          LinkedList<DSCell> cellsAtPoint = groupMap.getMap().getAllAt(p);
+          LinkedList<DSCell> cellsAtPoint = groupMap.getMapCells().getAllAt(p);
 
           if (cellsAtPoint == null || cellsAtPoint.isEmpty()) {
             continue;
@@ -146,7 +146,7 @@ public class AntMapUpdateSingleton {
   protected DSCell getNewestCellAt(DSMap map, HashMap<Point, DSCell> emptyCells, Point atPoint) {
     // get cells from map if present otherwise fetch emptyCell
     // using newest as all cells should have synchronized pheromone levels
-    DSCell cellsAtPoint = map.getMap().getNewestAt(atPoint);
+    DSCell cellsAtPoint = map.getMapCells().getNewestAt(atPoint);
     if (cellsAtPoint == null) {
       // beyond border > null
       cellsAtPoint = emptyCells.getOrDefault(atPoint, null);

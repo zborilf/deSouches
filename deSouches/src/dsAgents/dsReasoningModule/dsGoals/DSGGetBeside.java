@@ -2,8 +2,7 @@ package dsAgents.dsReasoningModule.dsGoals;
 
 import dsAgents.DSAgent;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
-import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSHybridPathPlanner;
-import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSOneStepGreedy;
+import dsAgents.dsReasoningModule.dsPlans.dsPlanningMethods.DSHybridPathPlanner;
 
 import java.awt.*;
 
@@ -30,6 +29,7 @@ public class DSGGetBeside extends DSGGoal{
         Point objectPosition = agent.getOutlook().seenNearest(PObjectType);
         if (objectPosition == null) {
             // object not seeen -> goal failed
+            agent.printOutput("!!! Chci get beside a nevidim v outlooku objekt "+PObjectType);
             setGoalToFail();
             return (true);
         }
@@ -47,8 +47,11 @@ public class DSGGetBeside extends DSGGoal{
         DSPlan plan= DSHybridPathPlanner.getOneStep("get beside", agent.getMap(),1, agent,
                                     objectMapPosition, agent.getBody(),PTimeout-agent.getStep(), false);
 
-        PPlans.put(plan.getName(),plan);
-        return(true);
+        if(plan!=null) {
+            PPlans.put(plan.getName(), plan);
+            return (true);
+        }
+        return(false);
     }
 
     public DSGGetBeside(int objectType, int timeout){

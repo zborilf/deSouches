@@ -2,25 +2,21 @@ package dsAgents.dsReasoningModule.dsGoals;
 
 import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSAgentOutlook;
-import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
-import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSHybridPathPlanner;
-import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSOneStepGreedy;
+import dsAgents.dsReasoningModule.dsPlans.dsPlanningMethods.DSHybridPathPlanner;
 
 import java.awt.*;
-import java.util.LinkedList;
 
 public class DSGApproachTypes extends DSGGoal {
 
     int PTimeout;
     Point PSupposedPosition;
-    LinkedList<Integer> PDesiredTypes;
+    //    LinkedList<Integer> PDesiredTypes;
 
 
     @Override
     public String getGoalDescription() {
-        return ("approachGoal "+PDesiredTypes+" pos "+PSupposedPosition);
+        return ("approachGoal  pos "+PSupposedPosition);
     }
 
     @Override
@@ -74,9 +70,9 @@ public class DSGApproachTypes extends DSGGoal {
 
     }
 
-    public DSGApproachTypes(LinkedList<Integer> what, Point where, int timeout){
+    public DSGApproachTypes( Point where, int timeout){
         PTimeout = timeout;
         PSupposedPosition = where;
-        PDesiredTypes = what;
     }
 }
+

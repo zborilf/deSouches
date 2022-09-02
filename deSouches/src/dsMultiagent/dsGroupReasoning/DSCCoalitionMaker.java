@@ -1,6 +1,7 @@
 package dsMultiagent.dsGroupReasoning;
 
 import dsAgents.DSAgent;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -78,13 +79,7 @@ public class DSCCoalitionMaker {
                     new Point(84, 85)
             ));
 
-    public static void printCompleteCoalitions(ArrayList<DSCCoalition> coals){
-        for(DSCCoalition coal:coals)
-            if(coal.completeCoalition()) {
-                coal.printCoalition();
-                System.out.println();
-            }
-    }
+
 
     /*
             find optimal coallition
@@ -95,9 +90,9 @@ public class DSCCoalitionMaker {
         return(Math.abs(a.x-b.x)+Math.abs(a.y-b.y));
     }
 
-    public int computePrice(Point start, Point through, Point end){
-        int d1=distanceManhattan(start,through);
-        int d2=distanceManhattan(through,end);
+    public int computePrice(DSMap map, Point start, Point through, Point end){
+        int d1=map.distance(start,through);
+        int d2=map.distance(through,end);
         return(d1+ d2);
     }
 
@@ -114,7 +109,7 @@ public class DSCCoalitionMaker {
         }
 
         int noSubtasks = subtasks.size();
-        System.out.println("Pocet poduloh " + noSubtasks);
+    //    System.out.println("Pocet poduloh " + noSubtasks);
         DSCCoalitionStructures coalition = new DSCCoalitionStructures(noSubtasks);
         DSCCoalitionMember taskItem;
         Point bestDispenser;
@@ -130,15 +125,15 @@ public class DSCCoalitionMaker {
                 for (LinkedList<Point> subtask : subtasks) {
                     bestDispenser = subtask.get(0);
                     for (Point dispenser : subtask) {
-                        price = computePrice(worker, dispenser, goal);
+                        price = computePrice(agents.getFirst().getMap(), worker, dispenser, goal);
                         if ((bestPrice == -1) || (price < bestPrice)) {
                             bestPrice = price;
                             bestDispenser = dispenser;
                         }
                     }
 
-                    System.out.println(subtaskNumber + ": " + worker + "/" + bestDispenser + "/" + goal + " = " + bestPrice+
-                            " nlt "+notLongerThan);
+       //             System.out.println(subtaskNumber + ": " + worker + "/" + bestDispenser + "/" + goal + " = " + bestPrice+
+       //                     " nlt "+notLongerThan);
                     DSAgent workerAgent=null;
 
                     // find agent from 'agents' by position 'worker'
@@ -180,7 +175,7 @@ public class DSCCoalitionMaker {
             }
         }
 
-        System.out.println("HOTOVO");
+    //    System.out.println("HOTOVO");
         for (DSCCoalition coal3 : PCoalitions)
             coal3.printCoalition();
 

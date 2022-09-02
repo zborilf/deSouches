@@ -6,7 +6,7 @@ import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
-import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
+import dsAgents.dsReasoningModule.dsPlans.dsPlanningMethods.DSAStarItem;
 import eis.exceptions.ActException;
 import eis.iilang.Action;
 import eis.iilang.Identifier;

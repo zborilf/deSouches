@@ -11,7 +11,7 @@ import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import java.awt.*;
 import java.util.LinkedList;
 
-import static dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell.__DSDispenser;
+import static dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell.*;
 
 public class DSGGetBlock2022 extends DSGGoal {
 
@@ -20,6 +20,7 @@ public class DSGGetBlock2022 extends DSGGoal {
     Point PDispenserLocation;
     int PTimeout;
     int PStage=1;
+
 
     // napad, kdyz nevidi depod, sestavi plan jit k nejblizsimu 'neprekazkovemu' okraji sve mapy
     // pokud depot vidi, snazi se k nemu dojit, sestavi cestu k nemu, pokud by nahodou spadl,
@@ -90,7 +91,7 @@ public class DSGGetBlock2022 extends DSGGoal {
                     if (ap.y < PDispenserLocation.y)
                         dy=1;
 
-        DSMap map = agent.getMap();
+                    DSMap map = agent.getMap();
 
         DSAgentOutlook ol=agent.getOutlook();
 
@@ -138,9 +139,48 @@ public class DSGGetBlock2022 extends DSGGoal {
     @Override
     public boolean revisePlans(DSAgent agent) { // true -> plans modified
 
+        if (agent.getBody().blockAttached(PBlockType) != null) {
+            DSPlan plan = new DSPlan("blockAttached", 3, true);
+            agent.printOutput("Get block ... block attached");
+            PPlans.put(plan.getName(), plan);
+        }
+
+
+        Point nearestBlock = agent.getOutlook().seenNearest(__DSBlock + PBlockType);
+        if (nearestBlock != null)
+            if(!agent.isAttacchedAt(nearestBlock)){
+             if (!PPlans.containsKey("attachBlockPlan")) {
+                    if (agent.getMap().distance(nearestBlock, new Point(0, 0)) == 1) {
+               //         if (!agent.getOutlook().getCells().isObjectAround(__DSEntity_Friend, nearestBlock)) {
+                        if(agent.getOutlook().getCells().rightHandPriority(nearestBlock)){
+
+                            DSPlan p = new DSPlan("attachBlockPlan", 2);
+                            DSAttach newAttach = new DSAttach(DSPerceptor.getDirectionFromPosition(nearestBlock), PBlockType);
+                            p.appendAction(newAttach);
+                            agent.printOutput("Get block ... block beside");
+                            PPlans.put(p.getName(), p);
+                            return (true);
+                        }
+                    }
+/*                    else {                    // sees block in some distance (agentpos+nearestdistance), go for it!
+                        int bx = nearestBlock.x + agent.getMapPosition().x;
+                        int by = nearestBlock.y + agent.getMapPosition().y;
+                        Point blockPosition = new Point(bx, by);
+                        DSGGoal subGoal = new DSGApproachTypes(blockPosition, PTimeout); // ... area!);
+                        setSubgoal(subGoal);
+                        agent.printOutput("Get block ... block nearby -> approach");
+                        return (true);
+                    }*/
+            }
+   //         return (false);
+        }
+
+
+
         Point nearest=agent.getOutlook().seenNearest(__DSDispenser + PBlockType);
         if(nearest!=null)
-            if(DSMap.distance(nearest, new Point(0,0))==1){
+            if(agent.getMap().distance(nearest, new Point(0,0))==1){
+                if(Math.random()<0.5)       // try to skip sometime
                 if(!PPlans.containsKey("attachPlan")) {
                     DSPlan p = new DSPlan("attachPlan", 2);
                     Point dd = agent.getOutlook().seenNearest(__DSDispenser + PBlockType);
@@ -149,13 +189,21 @@ public class DSGGetBlock2022 extends DSGGoal {
                     DSAttach newAttach = new DSAttach(DSPerceptor.getDirectionFromPosition(dd), PBlockType);
                     p.appendAction(newAttach);
                     PPlans.put(p.getName(), p);
+                    agent.printOutput("Get block ... dispenser beside beside");
+
                     return (true);
+                }
+                else
+                {
+                    DSPlan p = new DSPlan("attachPlanSkip", 2,false);
+                    PPlans.put(p.getName(),p);
+                    return(true);
                 }
                 return(false);
         }
 
         if((agent.getOutlook().isObjectAt(__DSDispenser + PBlockType, new Point(0,0)))){
-            agent.printOutput("Doing step beside");
+            agent.printOutput("Get block ... stadnding on dispenser");
             DSPlan plan=new DSPlan("step beside",1,false);
             DSAction action;
             if(agent.getOutlook().isFree(new Point(0,-1)))
@@ -189,10 +237,12 @@ public class DSGGetBlock2022 extends DSGGoal {
         }
 
         if(PStage==1) {
-            LinkedList<Integer> l = new LinkedList<>();
-            l.add(DSCell.__DSDispenser + PBlockType);
-            DSGGoal subGoal = new DSGApproachTypes(l, PDispenserLocation, PTimeout); // ... area!);
+            //           LinkedList<Integer> l = new LinkedList<>();
+            //  l.add(DSCell.__DSDispenser + PBlockType);
+            DSGGoal subGoal = new DSGApproachTypes(PDispenserLocation, PTimeout); // ... area!);
             setSubgoal(subGoal);
+            agent.printOutput("Get block ... go for block, approaching");
+
 
             //       DSPlan p = new DSPlan("okplan", 1,false);
             //      PPlans.put(p.getName(), p);
@@ -203,6 +253,7 @@ public class DSGGetBlock2022 extends DSGGoal {
 
         if(PStage==2) {
             DSGGoal subGoal = new DSGGetBeside(__DSDispenser+PBlockType,PTimeout);
+            agent.printOutput("Get block ... get beside by plan");
             setSubgoal(subGoal);
             PStage = 3;
             return(true);

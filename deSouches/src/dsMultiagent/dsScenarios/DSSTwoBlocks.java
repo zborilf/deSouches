@@ -37,6 +37,8 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
 
   @Override
   public synchronized void goalCompleted(DSAgent agent, DSGGoal goal) {
+
+    super.goalCompleted(agent,goal);
     agent.getCommander().printOutput(
         "goalCompleted: "
             + "SCEN: Task te chvali, agente "
@@ -124,10 +126,13 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
       if (PTaskType == 3)
         PLeutnant1.hearOrder(new DSGConnectAndDetach("s", PMaster.getEntityName()));
     }
+    super.goalCompleted(agent,goal);
   }
 
   @Override
   public synchronized void goalFailed(DSAgent agent, DSGGoal goal) {
+
+    super.goalFailed(agent,goal);
     agent.getCommander().printOutput(
         "goalFailed: "
             + "SCEN: Task to je smula agente "
@@ -182,13 +187,16 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
     if ((PStateM == 3) && (PStateL1 == 3)) {
       PGUI.addText2Terminal(agent.getEntityName()+" -> ConnectAndDetach");
       // zde ma byt dance pro vsechny cleny, vysledkem je vhodny plan
-      PMaster.hearOrder(new DSGConnectAndDetach("s", PLeutnant1.getEntityName()));
-      if (PTaskType == 1)
-        PLeutnant1.hearOrder(new DSGConnectAndDetach("n", PMaster.getEntityName()));
-      if (PTaskType == 2)
-        PLeutnant1.hearOrder(new DSGConnectAndDetach("s", PMaster.getEntityName()));
-      if (PTaskType == 3)
-        PLeutnant1.hearOrder(new DSGConnectAndDetach("s", PMaster.getEntityName()));
+      if(agent == PMaster)
+          PMaster.hearOrder(new DSGConnectAndDetach("s", PLeutnant1.getEntityName()));
+      if(agent == PLeutnant1) {
+        if (PTaskType == 1)
+          PLeutnant1.hearOrder(new DSGConnectAndDetach("n", PMaster.getEntityName()));
+        if (PTaskType == 2)
+          PLeutnant1.hearOrder(new DSGConnectAndDetach("s", PMaster.getEntityName()));
+        if (PTaskType == 3)
+          PLeutnant1.hearOrder(new DSGConnectAndDetach("s", PMaster.getEntityName()));
+      }
     }
   }
 
@@ -360,7 +368,6 @@ public class DSSTwoBlocks extends DSSBlockScenarios {
   public DSSTwoBlocks(DeSouches commander, DSTask task) {
     super(commander, task);
     PPriority = 2;
-    PGUI=dsTaskGUI.createGUI();
   }
 
 

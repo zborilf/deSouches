@@ -1,0 +1,2391 @@
+agentFIT_BUT8 needs job
+agentFIT_BUT4 needs job
+agentFIT_BUT16 needs job
+agentFIT_BUT1 needs job
+agentFIT_BUT15 needs job
+agentFIT_BUT11 needs job
+agentFIT_BUT17 needs job
+agentFIT_BUT10 needs job
+agentFIT_BUT5 needs job
+agentFIT_BUT18 needs job
+agentFIT_BUT19 needs job
+agentFIT_BUT14 needs job
+agentFIT_BUT2 needs job
+agentFIT_BUT13 needs job
+agentFIT_BUT6 needs job
+agentFIT_BUT9 needs job
+agentFIT_BUT7 needs job
+agentFIT_BUT20 needs job
+agentFIT_BUT12 needs job
+ --------------------------------- 
+Step 0
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+agentFIT_BUT3 needs job
+>>agentFIT_BUT5 sees agentFIT_BUT9 disp java.awt.Point[x=0,y=2] token true
+groupExtended: Leader {agentFIT_BUT5}agentFIT_BUT5,  by group Leader {agentFIT_BUT9}agentFIT_BUT9,  step 2
+>>agentFIT_BUT16 sees agentFIT_BUT1 disp java.awt.Point[x=-1,y=-2] token false
+ --------------------------------- 
+Step 2
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT15 sees agentFIT_BUT1 disp java.awt.Point[x=-1,y=-1] token true
+groupExtended: Leader {agentFIT_BUT15}agentFIT_BUT15,  by group Leader {agentFIT_BUT1}agentFIT_BUT1,  step 3
+>>agentFIT_BUT16 sees agentFIT_BUT1 disp java.awt.Point[x=0,y=-1] token false
+>>agentFIT_BUT14 sees agentFIT_BUT7 disp java.awt.Point[x=-1,y=-1] token false
+ --------------------------------- 
+Step 3
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT12 sees agentFIT_BUT16 disp java.awt.Point[x=1,y=1] token true
+groupExtended: Leader {agentFIT_BUT12}agentFIT_BUT12,  by group Leader {agentFIT_BUT16}agentFIT_BUT16,  step 4
+>>agentFIT_BUT16 sees agentFIT_BUT15 disp java.awt.Point[x=1,y=0] token false
+ --------------------------------- 
+Step 4
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT12 sees agentFIT_BUT15 disp java.awt.Point[x=1,y=0] token true
+groupExtended: Leader {agentFIT_BUT12}agentFIT_BUT12, agentFIT_BUT16,  by group Leader {agentFIT_BUT15}agentFIT_BUT15, agentFIT_BUT1,  step 5
+>>agentFIT_BUT11 sees agentFIT_BUT19 disp java.awt.Point[x=1,y=-1] token false
+>>agentFIT_BUT14 sees agentFIT_BUT8 disp java.awt.Point[x=-1,y=0] token false
+>>agentFIT_BUT10 sees agentFIT_BUT17 disp java.awt.Point[x=0,y=-1] token false
+ --------------------------------- 
+Step 5
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT14 sees agentFIT_BUT7 disp java.awt.Point[x=-1,y=-1] token true
+groupExtended: Leader {agentFIT_BUT14}agentFIT_BUT14,  by group Leader {agentFIT_BUT7}agentFIT_BUT7,  step 6
+>>agentFIT_BUT11 sees agentFIT_BUT19 disp java.awt.Point[x=1,y=-1] token false
+>>agentFIT_BUT13 sees agentFIT_BUT9 disp java.awt.Point[x=0,y=-1] token false
+ --------------------------------- 
+Step 6
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT13 sees agentFIT_BUT9 disp java.awt.Point[x=0,y=-1] token true
+groupExtended: Leader {agentFIT_BUT13}agentFIT_BUT13,  by group Leader {agentFIT_BUT5}agentFIT_BUT5, agentFIT_BUT9,  step 7
+>>agentFIT_BUT14 sees agentFIT_BUT8 disp java.awt.Point[x=-1,y=0] token false
+>>agentFIT_BUT11 sees agentFIT_BUT19 disp java.awt.Point[x=1,y=-1] token false
+ --------------------------------- 
+Step 7
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 8
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT14 sees agentFIT_BUT8 disp java.awt.Point[x=-1,y=0] token true
+groupExtended: Leader {agentFIT_BUT14}agentFIT_BUT14, agentFIT_BUT7,  by group Leader {agentFIT_BUT8}agentFIT_BUT8,  step 9
+ --------------------------------- 
+Step 9
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT2 sees agentFIT_BUT6 disp java.awt.Point[x=-1,y=1] token true
+groupExtended: Leader {agentFIT_BUT2}agentFIT_BUT2,  by group Leader {agentFIT_BUT6}agentFIT_BUT6,  step 10
+>>agentFIT_BUT3 sees agentFIT_BUT18 disp java.awt.Point[x=-1,y=1] token false
+ --------------------------------- 
+Step 10
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT3 sees agentFIT_BUT18 disp java.awt.Point[x=-1,y=1] token true
+groupExtended: Leader {agentFIT_BUT3}agentFIT_BUT3,  by group Leader {agentFIT_BUT18}agentFIT_BUT18,  step 11
+>>agentFIT_BUT11 sees agentFIT_BUT19 disp java.awt.Point[x=1,y=-1] token false
+ --------------------------------- 
+Step 11
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT11 sees agentFIT_BUT19 disp java.awt.Point[x=1,y=-1] token true
+groupExtended: Leader {agentFIT_BUT11}agentFIT_BUT11,  by group Leader {agentFIT_BUT19}agentFIT_BUT19,  step 12
+ --------------------------------- 
+Step 12
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 13
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 14
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 15
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 16
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 17
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 18
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 19
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 20
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 21
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 22
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT10 sees agentFIT_BUT11 disp java.awt.Point[x=-9,y=12] token true
+groupExtended: Leader {agentFIT_BUT10}agentFIT_BUT10,  by group Leader {agentFIT_BUT11}agentFIT_BUT11, agentFIT_BUT19,  step 23
+ --------------------------------- 
+Step 23
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 24
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 25
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 26
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 27
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 28
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT16 sees agentFIT_BUT14 disp java.awt.Point[x=-22,y=1] token true
+groupExtended: Leader {agentFIT_BUT12}agentFIT_BUT12, agentFIT_BUT16, agentFIT_BUT15, agentFIT_BUT1,  by group Leader {agentFIT_BUT14}agentFIT_BUT14, agentFIT_BUT7, agentFIT_BUT8,  step 29
+ --------------------------------- 
+Step 29
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 30
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 31
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 32
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 33
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 34
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 35
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT2 sees agentFIT_BUT5 disp java.awt.Point[x=18,y=3] token true
+groupExtended: Leader {agentFIT_BUT2}agentFIT_BUT2, agentFIT_BUT6,  by group Leader {agentFIT_BUT13}agentFIT_BUT13, agentFIT_BUT5, agentFIT_BUT9,  step 36
+ --------------------------------- 
+Step 36
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 37
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 38
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 39
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 40
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 41
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 42
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT12 sees agentFIT_BUT18 disp java.awt.Point[x=14,y=-25] token true
+groupExtended: Leader {agentFIT_BUT12}agentFIT_BUT12, agentFIT_BUT16, agentFIT_BUT15, agentFIT_BUT1, agentFIT_BUT14, agentFIT_BUT7, agentFIT_BUT8,  by group Leader {agentFIT_BUT3}agentFIT_BUT3, agentFIT_BUT18,  step 43
+ --------------------------------- 
+Step 43
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 44
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 45
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 46
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 47
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 48
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 49
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 50
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 51
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 52
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 53
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 54
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 55
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 56
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 57
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT5 sees agentFIT_BUT4 disp java.awt.Point[x=28,y=-19] token true
+groupExtended: Leader {agentFIT_BUT2}agentFIT_BUT2, agentFIT_BUT6, agentFIT_BUT13, agentFIT_BUT5, agentFIT_BUT9,  by group Leader {agentFIT_BUT4}agentFIT_BUT4,  step 58
+ --------------------------------- 
+Step 58
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 59
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT10 sees agentFIT_BUT7 disp java.awt.Point[x=36,y=23] token true
+groupExtended: Leader {agentFIT_BUT10}agentFIT_BUT10, agentFIT_BUT11, agentFIT_BUT19,  by group Leader {agentFIT_BUT12}agentFIT_BUT12, agentFIT_BUT16, agentFIT_BUT15, agentFIT_BUT1, agentFIT_BUT14, agentFIT_BUT7, agentFIT_BUT8, agentFIT_BUT3, agentFIT_BUT18,  step 60
+ --------------------------------- 
+Step 60
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+> ! > 61 MASTERGRUPA agentFIT_BUT10!!!
+
+ --------------------------------- 
+Step 61
+Active tasks: []
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+---------------
+61: Task : task0 type 43 deadline 99
+>> 0:::- agentFIT_BUT11:[9,6] -> [8,15] -> [6,9] sup. price 18
+---------------
+ --------------------------------- 
+Step 62
+Active tasks: [task0]
+Goal positions allocated: 
+Score: 0
+group option task1
+ --------------------------------- 
+Step 63
+Active tasks: [task0]
+Goal positions allocated: 
+Score: 0
+group option task1
+>>agentFIT_BUT1 sees agentFIT_BUT17 disp java.awt.Point[x=0,y=-1] token true
+MasterGroupExtended: Leader {agentFIT_BUT10}agentFIT_BUT10, agentFIT_BUT11, agentFIT_BUT19, agentFIT_BUT12, agentFIT_BUT16, agentFIT_BUT15, agentFIT_BUT1, agentFIT_BUT14, agentFIT_BUT7, agentFIT_BUT8, agentFIT_BUT3, agentFIT_BUT18,  by group Leader {agentFIT_BUT17}agentFIT_BUT17,  step 64
+ --------------------------------- 
+Step 64
+Active tasks: [task0]
+Goal positions allocated: 
+Score: 0
+group option task1
+ --------------------------------- 
+Step 65
+Active tasks: [task0]
+Goal positions allocated: 
+Score: 0
+group option task2
+---------------
+65: Task : task2 type 43 deadline 140
+>> 0:::- agentFIT_BUT11:[10,5] -> [8,15] -> [6,9] sup. price 20
+---------------
+ --------------------------------- 
+Step 66
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 67
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 68
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 69
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 70
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 71
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 72
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 73
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 74
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 75
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 76
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 77
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 78
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 79
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 80
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 81
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 82
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 83
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 84
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+>>agentFIT_BUT8 sees agentFIT_BUT20 disp java.awt.Point[x=-6,y=18] token true
+MasterGroupExtended: Leader {agentFIT_BUT10}agentFIT_BUT10, agentFIT_BUT11, agentFIT_BUT19, agentFIT_BUT12, agentFIT_BUT16, agentFIT_BUT15, agentFIT_BUT1, agentFIT_BUT14, agentFIT_BUT7, agentFIT_BUT8, agentFIT_BUT3, agentFIT_BUT18, agentFIT_BUT17,  by group Leader {agentFIT_BUT20}agentFIT_BUT20,  step 85
+ --------------------------------- 
+Step 85
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 86
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 87
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 88
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 89
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 90
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 91
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 92
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 93
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 94
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 95
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 96
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 97
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 98
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 99
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 100
+Active tasks: [task0, task2]
+Goal positions allocated: 
+Score: 0
+group option task3
+---------------
+100: Task : task3 type 12 deadline 162
+>> 1:::- agentFIT_BUT19:[-16,6] -> [-2,10] -> [6,9] sup. price 27
+>> 0:::- agentFIT_BUT11:[11,5] -> [15,7] -> [6,9] sup. price 17
+>> 1:::- agentFIT_BUT10:[-14,14] -> [-2,10] -> [6,9] sup. price 25
+---------------
+Budou trojicky
+TT:12/1agentFIT_BUT19/0agentFIT_BUT11/1agentFIT_BUT10/
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za detachAllGoal
+ --------------------------------- 
+Step 101
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT10 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT19 za detachAllGoal
+ --------------------------------- 
+Step 102
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 103
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 104
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 105
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 106
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 107
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+>>agentFIT_BUT17 sees agentFIT_BUT6 disp java.awt.Point[x=34,y=-19] token true
+MasterGroupExtended: Leader {agentFIT_BUT10}agentFIT_BUT10, agentFIT_BUT11, agentFIT_BUT19, agentFIT_BUT12, agentFIT_BUT16, agentFIT_BUT15, agentFIT_BUT1, agentFIT_BUT14, agentFIT_BUT7, agentFIT_BUT8, agentFIT_BUT3, agentFIT_BUT18, agentFIT_BUT17, agentFIT_BUT20,  by group Leader {agentFIT_BUT2}agentFIT_BUT2, agentFIT_BUT6, agentFIT_BUT13, agentFIT_BUT5, agentFIT_BUT9, agentFIT_BUT4,  step 108
+ --------------------------------- 
+Step 108
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 109
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za get block 2022
+ --------------------------------- 
+Step 110
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 111
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 112
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 113
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 114
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 115
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT19 kvuli get block 2022
+ --------------------------------- 
+Step 116
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT19 kvuli get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT10 za get block 2022
+ --------------------------------- 
+Step 117
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT19 kvuli get block 2022
+ --------------------------------- 
+Step 118
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT19 kvuli get block 2022
+ --------------------------------- 
+Step 119
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 120
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 121
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT19 za get block 2022
+ --------------------------------- 
+Step 122
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 123
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 124
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 125
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 126
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 127
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 128
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 129
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 130
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 131
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 132
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT10 za goToPosition
+ --------------------------------- 
+Step 133
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 134
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za goToPosition
+ --------------------------------- 
+Step 135
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 136
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 137
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 138
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 139
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 140
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+ --------------------------------- 
+Step 141
+Active tasks: [task0, task2, task3]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]
+Score: 0
+group option task4
+---------------
+141: Task : task4 type 9 deadline 209
+>> 1:::- agentFIT_BUT9:[59,-5] -> [45,-6] -> [49,2] sup. price 27
+>> 0:::- agentFIT_BUT13:[38,-4] -> [41,-18] -> [49,2] sup. price 45
+>> 0:::- agentFIT_BUT4:[45,-12] -> [41,-18] -> [49,2] sup. price 38
+---------------
+Budou trojicky
+TT:9/1agentFIT_BUT9/0agentFIT_BUT13/0agentFIT_BUT4/
+ --------------------------------- 
+Step 142
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 0
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT4 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT9 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT13 za detachAllGoal
+ --------------------------------- 
+Step 143
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 0
+ --------------------------------- 
+Step 144
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 0
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT19 za goToPosition
+ --------------------------------- 
+Step 145
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 0
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT10 kvuli customGoal
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT19 kvuli customGoal
+ --------------------------------- 
+Step 146
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 0
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT19 kvuli customGoal
+ --------------------------------- 
+Step 147
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 0
+ --------------------------------- 
+Step 148
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 0
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT19 za customGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT10 za customGoal
+ --------------------------------- 
+Step 149
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 0
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za customGoal
+ --------------------------------- 
+Step 150
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 90
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT19 za submitGoal
+scenario completed: task3
+ --------------------------------- 
+Step 151
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 90
+ --------------------------------- 
+Step 152
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 90
+agentFIT_BUT10 needs job
+agentFIT_BUT19 needs job
+ --------------------------------- 
+Step 153
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 90
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT4 za get block 2022
+ --------------------------------- 
+Step 154
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 90
+agentFIT_BUT11 needs job
+ --------------------------------- 
+Step 155
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 90
+ --------------------------------- 
+Step 156
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 90
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT9 za get block 2022
+ --------------------------------- 
+Step 157
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 90
+ --------------------------------- 
+Step 158
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 90
+ --------------------------------- 
+Step 159
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 90
+ --------------------------------- 
+Step 160
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 90
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT13 za get block 2022
+ --------------------------------- 
+Step 161
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 90
+ --------------------------------- 
+Step 162
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 90
+ --------------------------------- 
+Step 163
+Active tasks: [task0, task2, task3, task4]
+Goal positions allocated: task3 / java.awt.Point[x=6,y=9]task4 / java.awt.Point[x=49,y=2]
+Score: 90
+@@! Scenario failed due to timeout task3
+163:scenario failed: task3
+group option task5
+---------------
+163: Task : task5 type 3 deadline 222
+>> 0:::- agentFIT_BUT10:[9,5] -> [15,7] -> [6,9] sup. price 19
+>> 0:::- agentFIT_BUT11:[2,9] -> [8,15] -> [6,9] sup. price 20
+---------------
+---------------
+initScenario: 
+!@!  TASK:task5 type 3 / , Group masteragentFIT_BUT10
+@@Master agentFIT_BUT10  pujde na java.awt.Point[x=15,y=7] pro 0 a do golu java.awt.Point[x=6,y=9] body is  [0,0:7] [0,1:0],
+@@ Leutnant1 agentFIT_BUT11  pujde na java.awt.Point[x=8,y=15] pro 0 a do golu java.awt.Point[x=5,y=9] body is  [0,0:7] [0,1:0]
+ --------------------------------- 
+Step 164
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT10 za detachAllGoal
+agentFIT_BUT19 needs job
+ --------------------------------- 
+Step 165
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 166
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 167
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 168
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT13 kvuli goToPosition
+ --------------------------------- 
+Step 169
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 170
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT9 za goToPosition
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT13 kvuli evasiveManoeuvre
+ --------------------------------- 
+Step 171
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 172
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 173
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 174
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT10 za get block 2022
+ --------------------------------- 
+Step 175
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 176
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 177
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 178
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 179
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 180
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 181
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 182
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 183
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 184
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 185
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 186
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 187
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 188
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za get block 2022
+ --------------------------------- 
+Step 189
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT10 za goToPosition
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT13 kvuli goToPosition
+ --------------------------------- 
+Step 190
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 191
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 192
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT13 kvuli evasiveManoeuvre
+ --------------------------------- 
+Step 193
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 194
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 195
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 196
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT4 za goToPosition
+ --------------------------------- 
+Step 197
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za goToPosition
+ --------------------------------- 
+Step 198
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 199
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 200
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT10 za connectAndDetach
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za connectAndDetach
+ --------------------------------- 
+Step 201
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 202
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 90
+ --------------------------------- 
+Step 203
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 130
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT10 za attachAndSubmit
+scenario completed: task5
+ --------------------------------- 
+Step 204
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 130
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT13 za goToPosition
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT13 kvuli customGoal
+ --------------------------------- 
+Step 205
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 130
+agentFIT_BUT10 needs job
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT4 kvuli customGoal
+agentFIT_BUT11 needs job
+ --------------------------------- 
+Step 206
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 130
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT4 kvuli customGoal
+ --------------------------------- 
+Step 207
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 130
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT13 za customGoal
+ --------------------------------- 
+Step 208
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 130
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT9 za customGoal
+ --------------------------------- 
+Step 209
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 130
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT4 za customGoal
+ --------------------------------- 
+Step 210
+Active tasks: [task0, task2, task4, task5]
+Goal positions allocated: task4 / java.awt.Point[x=49,y=2]task5 / java.awt.Point[x=6,y=9]
+Score: 220
+@@! Scenario failed due to timeout task4
+210:scenario failed: task4
+group option task6
+---------------
+210: Task : task6 type 43 deadline 278
+>> 0:::- agentFIT_BUT10:[7,7] -> [15,7] -> [0,-6] sup. price 36
+---------------
+ --------------------------------- 
+Step 211
+Active tasks: [task0, task2, task5, task6]
+Goal positions allocated: task5 / java.awt.Point[x=6,y=9]
+Score: 220
+agentFIT_BUT9 needs job
+agentFIT_BUT13 needs job
+agentFIT_BUT4 needs job
+ --------------------------------- 
+Step 212
+Active tasks: [task0, task2, task5, task6]
+Goal positions allocated: task5 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 213
+Active tasks: [task0, task2, task5, task6]
+Goal positions allocated: task5 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 214
+Active tasks: [task0, task2, task5, task6]
+Goal positions allocated: task5 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 215
+Active tasks: [task0, task2, task5, task6]
+Goal positions allocated: task5 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 216
+Active tasks: [task0, task2, task5, task6]
+Goal positions allocated: task5 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 217
+Active tasks: [task0, task2, task5, task6]
+Goal positions allocated: task5 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 218
+Active tasks: [task0, task2, task5, task6]
+Goal positions allocated: task5 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 219
+Active tasks: [task0, task2, task5, task6]
+Goal positions allocated: task5 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 220
+Active tasks: [task0, task2, task5, task6]
+Goal positions allocated: task5 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 221
+Active tasks: [task0, task2, task5, task6]
+Goal positions allocated: task5 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 222
+Active tasks: [task0, task2, task5, task6]
+Goal positions allocated: task5 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 223
+Active tasks: [task0, task2, task5, task6]
+Goal positions allocated: task5 / java.awt.Point[x=6,y=9]
+Score: 220
+@@! Scenario failed due to timeout task5
+223:scenario failed: task5
+group option task7
+---------------
+223: Task : task7 type 2 deadline 303
+>> 0:::- agentFIT_BUT10:[11,10] -> [8,15] -> [6,9] sup. price 16
+>> 0:::- agentFIT_BUT11:[-2,9] -> [8,15] -> [6,9] sup. price 24
+---------------
+---------------
+initScenario: 
+!@!  TASK:task7 type 2 / , Group masteragentFIT_BUT10
+@@Master agentFIT_BUT10  pujde na java.awt.Point[x=8,y=15] pro 0 a do golu java.awt.Point[x=6,y=9] body is  [0,0:7] [0,1:0],
+@@ Leutnant1 agentFIT_BUT11  pujde na java.awt.Point[x=8,y=15] pro 0 a do golu java.awt.Point[x=7,y=9] body is  [0,0:7] [0,1:0]
+ --------------------------------- 
+Step 224
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT10 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za detachAllGoal
+ --------------------------------- 
+Step 225
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 226
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 227
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 228
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 229
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 230
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 231
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 232
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 233
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 234
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 235
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT10 za get block 2022
+ --------------------------------- 
+Step 236
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT11 kvuli get block 2022
+ --------------------------------- 
+Step 237
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 238
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 239
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za get block 2022
+ --------------------------------- 
+Step 240
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 241
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 242
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 243
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT10 za goToPosition
+ --------------------------------- 
+Step 244
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 245
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 246
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 247
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 248
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za goToPosition
+ --------------------------------- 
+Step 249
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT11 kvuli connectAndDetach
+ --------------------------------- 
+Step 250
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 251
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 252
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT10 za connectAndDetach
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za connectAndDetach
+ --------------------------------- 
+Step 253
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 254
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 220
+ --------------------------------- 
+Step 255
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT10 za attachAndSubmit
+scenario completed: task7
+ --------------------------------- 
+Step 256
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 257
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+agentFIT_BUT10 needs job
+ --------------------------------- 
+Step 258
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 259
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 260
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 261
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+agentFIT_BUT11 needs job
+ --------------------------------- 
+Step 262
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 263
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 264
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 265
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 266
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 267
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 268
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 269
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 270
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 271
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 272
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 273
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 274
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 275
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 276
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 277
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 278
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+ --------------------------------- 
+Step 279
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+group option task8
+ --------------------------------- 
+Step 280
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+group option task8
+ --------------------------------- 
+Step 281
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+group option task8
+ --------------------------------- 
+Step 282
+Active tasks: [task0, task2, task6, task7]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]
+Score: 260
+group option task8
+---------------
+282: Task : task8 type 10 deadline 330
+>> 0:::- agentFIT_BUT11:[12,12] -> [15,7] -> [0,-6] sup. price 36
+>> 1:::- agentFIT_BUT10:[6,3] -> [-2,10] -> [0,-6] sup. price 33
+>> 1:::- agentFIT_BUT19:[-12,6] -> [-2,10] -> [0,-6] sup. price 32
+---------------
+Budou trojicky
+TT:10/0agentFIT_BUT11/1agentFIT_BUT10/1agentFIT_BUT19/
+ --------------------------------- 
+Step 283
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT19 za detachAllGoal
+ --------------------------------- 
+Step 284
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT10 za detachAllGoal
+ --------------------------------- 
+Step 285
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 286
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 287
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 288
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 289
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 290
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 291
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 292
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 293
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 294
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT10 kvuli get block 2022
+ --------------------------------- 
+Step 295
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT10 kvuli get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za get block 2022
+ --------------------------------- 
+Step 296
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT19 za get block 2022
+ --------------------------------- 
+Step 297
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT10 kvuli get block 2022
+ --------------------------------- 
+Step 298
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 299
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT10 za get block 2022
+ --------------------------------- 
+Step 300
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 301
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 302
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 303
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 304
+Active tasks: [task0, task2, task6, task7, task8]
+Goal positions allocated: task7 / java.awt.Point[x=6,y=9]task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+@@! Scenario failed due to timeout task7
+304:scenario failed: task7
+group option task9
+---------------
+304: Task : task9 type 43 deadline 396
+>> 1:::- agentFIT_BUT10:[-1,10] -> [-2,10] -> [6,9] sup. price 10
+---------------
+ --------------------------------- 
+Step 305
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+agentFIT_BUT11 needs job
+ --------------------------------- 
+Step 306
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+agentFIT_BUT10 needs job
+ --------------------------------- 
+Step 307
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 308
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 309
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 310
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 311
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 312
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT19 kvuli goToPosition
+ --------------------------------- 
+Step 313
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 314
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 315
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 316
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 317
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 318
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT19 za evasiveManoeuvre
+ --------------------------------- 
+Step 319
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 320
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 321
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 322
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 323
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 324
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 325
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 326
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 327
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 328
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 329
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 330
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+ --------------------------------- 
+Step 331
+Active tasks: [task0, task2, task6, task8, task9]
+Goal positions allocated: task8 / java.awt.Point[x=0,y=-6]
+Score: 260
+@@! Scenario failed due to timeout task8
+331:scenario failed: task8
+group option task10
+---------------
+331: Task : task10 type 43 deadline 415
+>> 1:::- agentFIT_BUT11:[12,12] -> [6,15] -> [6,9] sup. price 15
+---------------
+ --------------------------------- 
+Step 332
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+agentFIT_BUT11 needs job
+agentFIT_BUT10 needs job
+ --------------------------------- 
+Step 333
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+agentFIT_BUT19 needs job
+ --------------------------------- 
+Step 334
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 335
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 336
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 337
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 338
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 339
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 340
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 341
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 342
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 343
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 344
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 345
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 346
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 347
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 348
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 349
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 350
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 351
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 352
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 353
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 354
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 355
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 356
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 357
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 358
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 359
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 360
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 361
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 362
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 363
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 364
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 365
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 366
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 367
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 368
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 369
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 370
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 371
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 372
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 373
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 374
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 375
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 376
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 377
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 378
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 379
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 380
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 381
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 382
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 383
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 384
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 385
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 386
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 387
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 388
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 389
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 390
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 391
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 392
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 393
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 394
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 395
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 396
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 397
+Active tasks: [task0, task2, task6, task9, task10]
+Goal positions allocated: 
+Score: 260
+group option task11
+---------------
+397: Task : task11 type 43 deadline 450
+>> 0:::- agentFIT_BUT10:[-14,23] -> [-15,20] -> [-19,4] sup. price 24
+---------------
+ --------------------------------- 
+Step 398
+Active tasks: [task0, task2, task6, task9, task10, task11]
+Goal positions allocated: 
+Score: 260
+ --------------------------------- 
+Step 399
+Active tasks: [task0, task2, task6, task9, task10, task11]
+Goal positions allocated: 
+Score: 260
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1

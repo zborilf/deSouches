@@ -91,6 +91,7 @@ public class DSGroup {
       return(false);
   }
 
+  /*
   public class CustomComparator implements Comparator<Point> {
 
     @Override
@@ -103,6 +104,7 @@ public class DSGroup {
       return 1;
     }
   }
+   */
 
   LinkedList<Point> sortByObstacleDistance(LinkedList<Point> goals) {
     LinkedList<Point> sortedGoals;
@@ -193,7 +195,7 @@ public class DSGroup {
   }
 
   public LinkedList<Point> allObjects(int type) {
-    return (PGroupMap.allObjects(type));
+    return (PGroupMap.getTypePositions(type));
   }
 
   public String printGroup() {

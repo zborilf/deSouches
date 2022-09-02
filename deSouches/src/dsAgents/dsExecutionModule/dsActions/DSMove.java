@@ -7,7 +7,7 @@ import dsAgents.dsPerceptionModule.DSPerceptor;
 import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
-import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
+import dsAgents.dsReasoningModule.dsPlans.dsPlanningMethods.DSAStarItem;
 import eis.exceptions.ActException;
 import eis.iilang.Action;
 import eis.iilang.Identifier;
@@ -49,7 +49,8 @@ public class DSMove extends dsAgents.dsExecutionModule.dsActions.DSAction {
     // TODO Auto-generated method stub
     Point point = item.getPosition();
     DSBody body = item.getBody();
-    Point newPosition = new Point(point.x + PDx, point.y + PDy);
+    Point newPosition = new Point(map.centralizeXCoords(point.x + PDx),
+                                map.centralizeYCoords(point.y + PDy));
     if (map.isObstacleAt(newPosition, agentBody, body, step)) return (null);
     return (new DSAStarItem(newPosition, item, this, body, 0, 0));
   }

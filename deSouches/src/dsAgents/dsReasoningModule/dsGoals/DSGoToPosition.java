@@ -5,7 +5,7 @@ import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsExecutionModule.dsActions.DSClear;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
-import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSHybridPathPlanner;
+import dsAgents.dsReasoningModule.dsPlans.dsPlanningMethods.DSHybridPathPlanner;
 
 import java.awt.*;
 
@@ -38,11 +38,6 @@ public class DSGoToPosition extends DSGGoal {
 
 
     if (PBody == null) PBody = agent.getBody();
-
-    Point agentPos = agent.getMapPosition(); // asi zbytecne
-    //    PPlan = new DSAStar().
-    //    computePath(agent.getGroup().getGroupMap(), agent.getMap().getAgentPos(), PPosition,
-    // PBody,100, agent);
 
 
     DSPlan plan = DSHybridPathPlanner.getOneStep("goToPosition",  agent.getMap(), 1, agent,

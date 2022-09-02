@@ -4,7 +4,7 @@ import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
-import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
+import dsAgents.dsReasoningModule.dsPlans.dsPlanningMethods.DSAStarItem;
 
 public class DSRotate extends DSAction {
 

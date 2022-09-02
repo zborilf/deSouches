@@ -2,6 +2,7 @@ package dsMultiagent.dsTasks;
 
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 
 import java.awt.*;
 import java.util.LinkedList;
@@ -10,13 +11,13 @@ public class DSTask {
 
 
   protected String PTaskName;
+  String PTaskNickname;
   int PDeadline;
   int PReward;
   DSTaskType PTaskType;
   DSBody PTaskBody;
   LinkedList<Integer> PTypesNeeded;
   DSTaskMember[] PSubtaskRoutes={null,null,null,null};
-
 
 
 
@@ -34,6 +35,12 @@ public class DSTask {
     return (PTaskName);
   }
 
+
+  public String getNickName() {
+    return (PTaskNickname);
+  }
+
+
   public void setSubtaskRoute(int subtaskNumber, DSTaskMember PSubtaskRoute) {
     this.PSubtaskRoutes[subtaskNumber] = PSubtaskRoute;
   }
@@ -49,6 +56,19 @@ public class DSTask {
     t=t+">>>> deadline at: "+PDeadline+", remains: "+(PDeadline-step)+"\n";
     t=t+">>>> cost estimated to "+subtaskCostEstimation()+"\n\n";
     return(t);
+  }
+
+  public int goalDistanceMax() {
+    Point gp = PSubtaskRoutes[0].getGoalPosition();
+    DSMap map = PSubtaskRoutes[0].getAgent().getMap();
+    int gd = map.distance(PSubtaskRoutes[0].getAgent().getMapPosition(), gp);
+    int gd2 = 0;
+    for (int i = 1; i < PTypesNeeded.size(); i++) {
+      gd2 = map.distance(PSubtaskRoutes[i].getAgent().getMapPosition(), gp);
+      if (gd < gd2)
+        gd = gd2;
+    }
+    return(gd);
   }
 
   public int subtaskCostEstimation() {
@@ -396,12 +416,15 @@ public class DSTask {
     return (PTaskType.getTaskArea());
   }
 
+  /*
   public void suceeded(){
 
   }
+*/
 
   public DSTask(
       String name, int deadline, int reward, DSBody body, int step) { // , LinkedList<Integer> typesNeeded){
+    PTaskNickname = name+"_"+step;
     PTaskName = name;
     PDeadline = deadline;
     PReward = reward;

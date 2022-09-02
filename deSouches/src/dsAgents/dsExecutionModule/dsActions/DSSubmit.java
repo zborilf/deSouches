@@ -7,7 +7,7 @@ import dsAgents.dsPerceptionModule.DSPerceptor;
 import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
-import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
+import dsAgents.dsReasoningModule.dsPlans.dsPlanningMethods.DSAStarItem;
 import eis.exceptions.ActException;
 import eis.iilang.Action;
 import eis.iilang.Identifier;
@@ -42,7 +42,7 @@ public class DSSubmit extends DSAction {
 
   @Override
   public String actionText() {
-    return ("Submitting " + PTaskName);
+    return ("Submit " + PTaskName);
   }
 
   @Override

@@ -10,11 +10,10 @@ import dsAgents.DeSouches;
 import dsAgents.dsBeliefBase.dsBeliefs.DSRole;
 import dsAgents.dsBeliefBase.dsBeliefs.DSRoles;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.*;
-import dsAgents.dsGUI;
+import dsAgents.dsGUI.DSAgentGUI;
 import dsAgents.dsPerceptionModule.DSStatusIndexes;
 import dsAgents.dsPerceptionModule.dsSyntax.DSPercepts;
 import dsMultiagent.DSGroup;
-import dsMultiagent.DSSynchronize;
 import dsMultiagent.dsScenarios.DSScenario;
 import dsMultiagent.dsTasks.DSTask;
 import eis.iilang.Function;
@@ -27,7 +26,7 @@ import java.util.LinkedList;
 
 public class DSBeliefBase {
 
-  private dsGUI PGUI;
+  private DSAgentGUI PGUI;
 
   private DSMap PMap;
   private int PWidthMap;
@@ -59,16 +58,17 @@ public class DSBeliefBase {
   private String PLastGoal;
   private int PLastActionResult = DSStatusIndexes.__action_unknown_action;
   private String PLastActionResultString = "";
+  private boolean PJobDemamnded=false;
   private String PLastAction = "unknown";
   private String PLastActionParams = "success";
   private LinkedList<Point> PAttached = new LinkedList<Point>();
 
 
-  public void setGUI(dsGUI gui) {
+  public void setGUI(DSAgentGUI gui) {
     PGUI = gui;
   }
 
-  public dsGUI getGUI() {
+  public DSAgentGUI getGUI() {
     return (PGUI);
   }
 
@@ -78,6 +78,14 @@ public class DSBeliefBase {
 
   public boolean getGUIFocus() {
     return (PGUIFocus);
+  }
+
+  public void setJobDemanded(boolean value){
+    PJobDemamnded=value;
+  }
+
+  public boolean getJobDemanded(){
+    return(PJobDemamnded);
   }
 
   public void setLastGoal(String goal){
@@ -236,6 +244,7 @@ public class DSBeliefBase {
   public void setScore(Collection<Parameter> parameters) {
     int score = Integer.valueOf(parameters.iterator().next().toString());
     PScore = score;
+    PGUI.setScore(score);
   }
 
   public int getScore() {
@@ -272,10 +281,6 @@ public class DSBeliefBase {
 
 
   public void setTask(Collection<Parameter> parameters) {
-    System.out.println(parameters.toString());
-    /*
-           parameters = [taskName, deadline, reward, [req(x,y,type]*]]
-    */
 
     String name;
     int deadline;
@@ -307,6 +312,9 @@ public class DSBeliefBase {
         new DSTask(name, deadline, reward, body, PStep)); // nebo primo do GroupOptionsPool? Necht je to pres deSouches
   }
 
+
+
+
   // 16 : __attached
 
   public void addAttached(Collection<Parameter> parameters){
@@ -329,6 +337,10 @@ public class DSBeliefBase {
         newList.add(point2);
       }
     PAttached=newList;
+  }
+
+  public boolean isAttached(Point position){
+    return(PAttached.contains(position));
   }
 
   // 17 : __energy
@@ -488,7 +500,7 @@ public class DSBeliefBase {
   }
 
   public void clearDeleteOutlook() {
-    PDeleteOutlook = new DSAgentOutlook();
+    PDeleteOutlook = new DSAgentOutlook(PAgent);
   }
 
   // SOCIAL
@@ -509,10 +521,11 @@ public class DSBeliefBase {
   // AKTUALNI SCENAR
 
   public void setScenario(DSScenario scenario) {
-    if (scenario != null)
-      PAgent.printOutput("---- SCENARIO SET TO "+scenario.getName());
-
     PScenario = scenario;
+    if (PScenario != null)
+      PAgent.printOutput("---- SCENARIO SET TO "+PScenario.getName());
+    else
+      PAgent.printOutput("---- SCENARIO SET TO null");
     if (PGUIFocus) {
       if(scenario!=null)
         PGUI.setScenario(scenario.getName());
@@ -538,7 +551,7 @@ public class DSBeliefBase {
   boolean isNeighbour(Point point1, Point point2)
         // jsou tyto body sousede v ctyrokoli?
       {
-    if (DSMap.distance(point1, point2) == 1) return (true);
+    if (PMap.distance(point1, point2) == 1) return (true);
 
     return (false);
   }
@@ -579,7 +592,8 @@ public class DSBeliefBase {
   public DSBeliefBase(DSAgent agent) {
     PAgent = agent;
     PRoles = new DSRoles();
-    POutlook = new DSAgentOutlook();
-    PDeleteOutlook = new DSAgentOutlook();
+    POutlook = new DSAgentOutlook(agent);
+    PDeleteOutlook = new DSAgentOutlook(agent);
+    PHoldsBlockType = -1;
   }
 }

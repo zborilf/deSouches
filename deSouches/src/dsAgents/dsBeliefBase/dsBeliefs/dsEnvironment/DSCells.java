@@ -48,6 +48,23 @@ public class DSCells {
     return (brc);
   }
 
+  public synchronized void newWidth(int width){
+    HashMap<Point, LinkedList<DSCell>> nHashCells=new HashMap();
+    for(Point p:PHashCells.keySet())
+      if((p.x>=0)&&(p.x<width))
+        nHashCells.put(p,PHashCells.get(p));
+    PHashCells=nHashCells;
+  }
+
+
+  public synchronized void newHeight(int height){
+    HashMap<Point, LinkedList<DSCell>> nHashCells=new HashMap();
+    for(Point p:PHashCells.keySet())
+      if((p.y>=0)&&(p.y<height))
+        nHashCells.put(p,PHashCells.get(p));
+      PHashCells=nHashCells;
+  }
+
   protected synchronized void put(DSCell element) {
     Point pos = element.getPosition();
 
@@ -85,8 +102,8 @@ public class DSCells {
     if (oldList != null) {
       for (DSCell element : oldList)
         if ((element.getTimestamp() > step)
-            || (((element.getType() == DSCell.__DSGoalArea)
-                || (element.getType() == DSCell.__DSRoleArea)))) {
+      //      || (((element.getType() == DSCell.__DSGoalArea)
+                || (element.getType() == DSCell.__DSRoleArea)) {
           newList.add(element);
         }
     }
@@ -120,13 +137,71 @@ public class DSCells {
     return(false);
   }
 
-  public boolean isDestructibleAt(Point point){
-    for(DSCell c: getAllAt(point)){
-      if((c.getType()==DSCell.__DSObstacle)||
-              ((c.getType()>=DSCell.__DSBlock)&&(c.getType()<=DSCell.__DSBlock+20)))
-        return(true);
-    }
+  public boolean isObjectAround(int type, Point position){
+    if((isObjectAt(type,new Point(position.x+1, position.y)))||
+            (isObjectAt(type,new Point(position.x-1, position.y)))||
+            (isObjectAt(type,new Point(position.x, position.y+1)))||
+            (isObjectAt(type,new Point(position.x, position.y-1))))
+      return(true);
     return(false);
+  }
+
+  public boolean rightHandPriority(Point position){
+    if(isObjectAt(DSCell.__DSAgent,new Point(position.x, position.y-1)))
+      return(true);
+    if(isObjectAt(DSCell.__DSEntity_Friend,new Point(position.x, position.y-1)))
+      return(false);
+    if(isObjectAt(DSCell.__DSAgent,new Point(position.x+1, position.y)))
+      return(true);
+    if(isObjectAt(DSCell.__DSEntity_Friend,new Point(position.x+1, position.y)))
+      return(false);
+    if(isObjectAt(DSCell.__DSAgent,new Point(position.x, position.y+1)))
+      return(true);
+    if(isObjectAt(DSCell.__DSEntity_Friend,new Point(position.x, position.y+1)))
+      return(false);
+    if(isObjectAt(DSCell.__DSAgent,new Point(position.x-1, position.y)))
+      return(true);
+    if(isObjectAt(DSCell.__DSEntity_Friend,new Point(position.x-1, position.y)))
+      return(false);
+    return(false);
+  }
+
+  public boolean isDestructibleAt(Point point){
+    LinkedList<DSCell> cells=(LinkedList<DSCell>)getAllAt(point).clone();
+    if(cells!=null)
+      for(DSCell c: cells){
+        if((c.getType()==DSCell.__DSObstacle)||
+                ((c.getType()>=DSCell.__DSBlock)&&(c.getType()<=DSCell.__DSBlock+20)))
+         return(true);
+      }
+    return(false);
+  }
+
+  public synchronized boolean isEnemyAt(Point point){
+    if((LinkedList<DSCell>)getAllAt(point)==null)
+      return(false);
+    LinkedList<DSCell> cells=(LinkedList<DSCell>)getAllAt(point).clone();
+    if(cells!=null)
+      for(DSCell c: cells){
+        if(c.getType()==DSCell.__DSEntity_Enemy)
+          return(true);
+      }
+    return(false);
+  }
+
+
+  public LinkedList<DSCell> getAttackables(){
+    LinkedList<DSCell> cells=getCells();
+    LinkedList<DSCell> attackables=new LinkedList<DSCell>();
+    if(cells!=null)
+      for(DSCell cell:cells){
+        if((cell.getType()==DSCell.__DSEntity_Enemy)||
+                (cell.getType()==DSCell.__DSObstacle)||
+                ((cell.getType()>=DSCell.__DSBlock)&&(cell.getType()<=DSCell.__DSBlock+20)&&
+                        !isObjectAround(DSCell.__DSEntity_Friend,cell.getPosition())))
+        attackables.add(cell);
+    }
+    return(attackables);
   }
 
   public synchronized DSCell getNewestAt(Point point) {
@@ -177,6 +252,19 @@ public class DSCells {
     }
     return (cells);
   }
+
+
+  protected synchronized LinkedList<Point> getAllTypePositions(
+          int type) { // objekty daneho typu na vsech pozicich
+
+    LinkedList<Point> cellPos = new LinkedList();
+    for (Point position : PHashCells.keySet()) {
+      LinkedList<DSCell> cellsAt = PHashCells.get(position);
+      for (DSCell element : cellsAt) if (element.getType() == type) cellPos.add(position);
+    }
+    return (cellPos);
+  }
+
 
   public synchronized boolean containsKey(Point point) {
     return (PHashCells.containsKey(point));

@@ -4,7 +4,6 @@ import dsAgents.DSAgent;
 import dsAgents.DeSouches;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsReasoningModule.dsGoals.*;
-import dsAgents.dsTaskGUI;
 import dsMultiagent.dsTasks.DSTask;
 
 import java.awt.*;
@@ -71,11 +70,15 @@ public class DSSOneBlock extends DSSBlockScenarios{
                 PCommander.scenarioCompleted(this);
             }
         }
+        super.goalCompleted(agent,goal);
+
     }
 
 
     @Override
     public void goalFailed(DSAgent agent, DSGGoal goal) {
+
+        super.goalFailed(agent,goal);
         agent.getCommander().printOutput(
                 "goalFailed: "
                         + "SCEN: Task to je smula agente "
@@ -197,7 +200,6 @@ public class DSSOneBlock extends DSSBlockScenarios{
     public DSSOneBlock(DeSouches commander, DSTask task) {
         super(commander, task);
         PPriority = 2;
-        PGUI= dsTaskGUI.createGUI();
     }
 
 }

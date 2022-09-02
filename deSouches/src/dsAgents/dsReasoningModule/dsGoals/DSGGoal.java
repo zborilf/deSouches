@@ -5,12 +5,10 @@ import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsPerceptionModule.DSStatusIndexes;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
-import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSPAStar;
-import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSOneStepGreedy;
+import dsAgents.dsReasoningModule.dsPlans.dsPlanningMethods.DSPAStar;
 
 import java.awt.*;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.Map;
 
 

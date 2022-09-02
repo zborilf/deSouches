@@ -1,7 +1,7 @@
 
 {
   "scenario": "assemble2021",
-  "host": "agentcontest1.in.tu-clausthal.de",
+  "host": "127.0.0.1",
   "port": 12300,
   "scheduling": false,
   "timeout": 100000,
@@ -11,9 +11,9 @@
   "entities" : {},
   "multi-entities": [
     {
-      "name-prefix": "agentFIT_BUT",
-      "username-prefix": "agentFIT_BUT",
-      "password": "sl3ef7s",
+      "name-prefix": "connectionA",
+      "username-prefix": "agentA",
+      "password": "1",
       "print-iilang": false,
       "print-json": false,
       "start-index": 1,

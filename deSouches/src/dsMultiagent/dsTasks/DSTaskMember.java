@@ -25,8 +25,9 @@ public class DSTaskMember {
     }
 
     int costEstimation(){
-        return(DSMap.distance(PAgent.getMapPosition(), PDispenserPosition)+
-                DSMap.distance(PDispenserPosition, PGoalPosition));
+        int cost=PAgent.getMap().distance(PDispenserPosition, PGoalPosition);
+            cost=cost+PAgent.getMap().distance(PAgent.getMapPosition(), PDispenserPosition);
+        return(cost);
     }
 
     public Point getDispenserPosition(){

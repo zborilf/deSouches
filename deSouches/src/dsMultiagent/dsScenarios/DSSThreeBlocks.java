@@ -4,7 +4,6 @@ import dsAgents.DSAgent;
 import dsAgents.DeSouches;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsReasoningModule.dsGoals.*;
-import dsAgents.dsTaskGUI;
 import dsMultiagent.dsTasks.DSTask;
 import dsMultiagent.dsTasks.DSTaskType;
 import java.awt.*;
@@ -160,11 +159,14 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
       PLeutnant1.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
       PLeutnant2.hearOrder(new DSGConnectGoal(PTaskType, 2, PTask.getName()));
     }
+    super.goalCompleted(agent,goal);
+
   }
 
   @Override
   public synchronized  void goalFailed(DSAgent agent, DSGGoal goal) {
 
+    super.goalFailed(agent,goal);
     agent.getCommander().printOutput(
             "goalFailed: "
                     + "SCEN: Task to je smula agente "
@@ -410,6 +412,5 @@ public class DSSThreeBlocks extends DSSBlockScenarios {
     super(commander, task);
     PPriority = 2;
     PTaskType = task.getTaskType();
-    PGUI=dsTaskGUI.createGUI();
   }
 }

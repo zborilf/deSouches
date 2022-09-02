@@ -15,11 +15,11 @@ package dsAgents.dsReasoningModule.dsGoals;
 
 import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
-import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsExecutionModule.dsActions.DSAdopt;
+import dsAgents.dsExecutionModule.dsActions.DSClear;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
-import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSPAStar;
-import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSStraightPath;
+import dsAgents.dsReasoningModule.dsPlans.dsPlanningMethods.DSPAStar;
+import dsAgents.dsReasoningModule.dsPlans.dsPlanningMethods.DSStraightPath;
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -28,7 +28,6 @@ import java.util.List;
 import java.util.Objects;
 
 public class DSGoalExplore extends DSGGoal {
-  private static final String TAG = "DSGoalRoam";
 
   int PDistance;
 
@@ -49,7 +48,10 @@ public class DSGoalExplore extends DSGGoal {
 
     if (agent.getActualRole().compareTo("default") == 0) {
       // try to change role if viable
-      if (agent.getMap().getMap().getKeyType(agent.getMapPosition(), DSCell.__DSRoleArea) != null) {
+      // if (agent.getMap().getMap().getKeyType(agent.getMapPosition(), DSCell.__DSRoleArea) != null) {
+
+      if (agent.getOutlook().getCells().getKeyType(new Point(0,0), DSCell.__DSRoleArea) != null) {
+
         // standing at role zone -> set role
         String role = agent.getCommander().roleNeeded(agent);
         if(!role.contentEquals("")) {
@@ -61,13 +63,35 @@ public class DSGoalExplore extends DSGGoal {
         }
       }
 
-      Point dp = agent.getMap().nearestObject(DSCell.__DSRoleArea, agent.getMapPosition());
-      if (dp != null && DSMap.distance(dp, agent.getMapPosition()) <= agent.getVisionRange()) {
+    //  Point dp = agent.getOutlook().seenNearest(DSCell.__DSRoleArea);
+      Point roleAreaPosition=agent.getMap().nearestObject(DSCell.__DSRoleArea, agent.getMapPosition());
+
+      if (roleAreaPosition != null) {
         // zone in near proximity might as well go there -> first in list, the highest prior
-        destinations.add(new Point(dp.x, dp.y));
+     //   Point rolePosition=agent.getMap().shiftPosition(agent,dp);
+        destinations.add(roleAreaPosition);
         local_priority += PRIORITY_BOOST;
       }
+
+
     }
+
+    // try to shoot
+    if(agent.getActualRole().contentEquals("digger")){
+      LinkedList<DSCell> attackables=agent.getOutlook().getCells().getAttackables();
+      if(attackables!=null) {
+          if(agent.getNotRecentlyAttacked(attackables)!=null) {
+            Point p =
+                    agent.getNotRecentlyAttacked(attackables).getPosition();
+            DSPlan plan = new DSPlan("attack", 3, false);
+            plan.appendAction(new DSClear(p));
+            PPlans.put(plan.getName(), plan);
+            return (true);
+          }
+        }
+      }
+
+
 
     // exploration
 
@@ -75,7 +99,7 @@ public class DSGoalExplore extends DSGGoal {
         agent.getMap().getNeighboursExactDistance(agent.getMapPosition(), agent.getVisionRange());
     List<DSCell> neigbourCells =
         neigbours.stream()
-            .map(c -> agent.getMap().getMap().getNewestAt(c))
+            .map(c -> agent.getMap().getMapCells().getNewestAt(c))
             .filter(Objects::nonNull)
             .toList();
 

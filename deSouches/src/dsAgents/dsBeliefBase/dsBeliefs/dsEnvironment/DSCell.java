@@ -1,6 +1,8 @@
 package dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment;
 
 import dsAgents.DSAgent;
+import dsAgents.DSConfig;
+
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,14 +11,15 @@ public class  DSCell {
 
   public static int __DSClear = 0;
   public static int __DSObstacle = 1;
-  public static int __DSEntity_Friend = 2; // ptani na agenta zmenit na entitu
-  public static int __DSEntity_Enemy = 3;
+  public static int __DSTaskArea = 2;
+  public static int __DSRoleArea = 3;
   public static int __DSMarker = 4;
   public static int __DSBorder = 5;
   public static int __DSGoalArea = 6;
-  public static int __DSAgent = 7;
-  public static int __DSTaskArea = 8;
-  public static int __DSRoleArea = 9;
+  public static int __DSEntity_Friend = 1001; // ptani na agenta zmenit na entitu
+  public static int __DSEntity_Enemy = 1002;
+  public static int __DSAgent = 1003;
+
 
   public static int __DSBlock = 50;
 
@@ -31,8 +34,8 @@ public class  DSCell {
         {
           put("clear", __DSClear); // toto je asi spatne, clear = marker : clear
           put("obstacle", __DSObstacle);
-          put("entityFIT_BUT", __DSEntity_Friend);
-          put("entityB", __DSEntity_Enemy);
+          put(DSConfig.___ourEntityNamePrefix, __DSEntity_Friend);
+          put(DSConfig.___enemyEntityNamePrefix, __DSEntity_Enemy);
           put("markerclear", __DSMarker);
           put("taskboard", __DSTaskArea);
           put("goalZone", __DSGoalArea);
@@ -44,13 +47,18 @@ public class  DSCell {
       new HashMap<Integer, String>() {
         {
           put(__DSClear, " ..");
-          put(__DSObstacle, " ##");
-          put(__DSEntity_Friend, " FF");
-          put(__DSEntity_Enemy, " EE");
+          //put(__DSObstacle, " \u2589\u2589");
+          put(__DSObstacle, " %%");
+          put(__DSEntity_Friend, " F ");
+          put(__DSEntity_Enemy, " X ");
+          //put(__DSEntity_Friend, " \u26C4");
+          //put(__DSEntity_Enemy, " \u26D4");
           put(__DSMarker, " MM");
           put(__DSTaskArea, " TT");
-          put(__DSGoalArea, " ++");
+          put(__DSGoalArea, " VV");
+       //   put(__DSGoalArea, " \u2690\u2690");
           put(__DSRoleArea, " //");
+       //   put(__DSRoleArea, " \u25BA\u25BA");
         }
       };
 
@@ -81,11 +89,11 @@ public class  DSCell {
     if (_thingTypes.containsKey(type)) return (_thingTypes.get(type));
 
     if ((type >= __DSBlock) && (type < __DSDispenser)) {
-      return (" B" + String.valueOf(type - __DSBlock) + "");
+      return ("\u26BD" + String.valueOf(type - __DSBlock));
     }
 
     if ((type >= __DSDispenser)) {
-      return (" D" + String.valueOf(type - __DSDispenser) + "");
+      return ("\u26E8" + String.valueOf(type - __DSDispenser));
     }
 
     return (" ??");

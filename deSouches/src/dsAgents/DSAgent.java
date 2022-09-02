@@ -5,7 +5,10 @@ import deSouches.utils.HorseRider;
 import dsAgents.dsBeliefBase.DSBeliefBase;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSAgentOutlook;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
+import dsAgents.dsExecutionModule.dsActions.DSSkip;
+import dsAgents.dsGUI.DSAgentGUI;
 import dsAgents.dsPerceptionModule.DSPerceptor;
 import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import dsAgents.dsReasoningModule.dsIntention.DSIntention;
@@ -23,13 +26,11 @@ import jade.core.behaviours.CyclicBehaviour;
 import java.awt.*;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 import static dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell.*;
 import static dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell.__DSDispenser;
+// import static dsAgents.dsReasoningModule.dsIntention.DSIntention.__Intention_Finished;
 
 public class DSAgent extends Agent {
   private static final String TAG = "DSAgent";
@@ -55,6 +56,24 @@ public class DSAgent extends Agent {
 
   AntMapUpdateSingleton antmap = AntMapUpdateSingleton.getInstance();
 
+/*
+                  IMPLEMENTATION
+ */
+
+  //    I/O services
+
+  public void printOutput(String s){
+    try{
+      POutput.write(s+"\n");
+      POutput.flush();
+    }catch(Exception e){};
+  }
+
+  /*
+    Belief base interface
+  */
+
+
   public String getAgentName() {
     return (PBeliefBase.getName());
   }
@@ -62,7 +81,6 @@ public class DSAgent extends Agent {
   public int getVision() { return(PBeliefBase.getVision()); }
 
   public DSAgentOutlook getOutlook() { return(PBeliefBase.getOutlook()); }
-
 
   public String getJADEAgentName() {
     return (PBeliefBase.getJADEName());
@@ -88,8 +106,16 @@ public class DSAgent extends Agent {
     PBeliefBase.setHoldsBolockType(type);
   }
 
+  public boolean isHoldingBlock(){
+    return(getOutlook().seesBlockBy(new Point(0,0),0,10));
+  }
+
   public void holdsNothing(int type) {
     PBeliefBase.setHoldsBolockType(-1);
+  }
+
+  public boolean isAttacchedAt(Point position){
+    return(PBeliefBase.isAttached(position));
   }
 
   public int getVisionRange() {
@@ -128,11 +154,30 @@ public class DSAgent extends Agent {
     return (PBeliefBase.getScenario());
   }
 
-  protected void removeScenario() {
-    PBeliefBase.setScenario(null);
-    PScenarioPriority = 0;
-   // PBeliefBase.getCommander().needJob(this);
+  public String getScenarioName() {
+    if(getScenario()==null)
+      return("no Scenario");
+    return(getScenario().getName());
   }
+
+  /*
+        Orders and queries from deSouches
+   */
+
+  protected void removeScenario() {
+    printOutput("REMOVING SCENARIO");
+    PBeliefBase.setScenario(null);
+   // PIntentionPool.clearPool();       // TODO ... experiment
+    PScenarioPriority = 0;
+  }
+
+    public boolean isBusyTask() {
+      if(PBeliefBase.getScenario()==null)
+        return(false);
+      return(PBeliefBase.getScenario().getTask()!=null);
+    }
+
+
 
   public int getIdleSteps() {
     return (PIdleSteps);
@@ -142,11 +187,6 @@ public class DSAgent extends Agent {
     return (getScenarioPriority() >= priority);
   }
 
-  public boolean isBusyTask() {
-    if(PBeliefBase.getScenario()==null)
-      return(false);
-    return(PBeliefBase.getScenario().getTask()!=null);
-  }
 
   public DeSouches getCommander() {
     return (PBeliefBase.getCommander());
@@ -177,19 +217,32 @@ public class DSAgent extends Agent {
     return (PNumber);
   }
 
-  public void printOutput(String s){
-    try{
-      POutput.write(s+"\n");
-      POutput.flush();
-    }catch(Exception e){};
+
+  public DSCell getNotRecentlyAttacked(LinkedList<DSCell> cells){
+    LinkedList<Point> attacked=
+            PBeliefBase.getMap().getRecentlyAttackedPositions(PBeliefBase.getStep()-DSConfig.___attackInterval);
+    for(DSCell cell:cells) {
+      DSMap map= PBeliefBase.getMap();;
+      Point p2=map.centralizeCoords(map.shiftPosition(this,cell.getPosition()));
+      if (!attacked.contains(p2))
+        return (cell);
+    }
+      return(null);
   }
 
   /*
              MAS INTERFACE
   */
 
+  public void clearPerformed(Point target){
+    DSMap map=PBeliefBase.getMap();
+    Point targetAbs=map.centralizeCoords(map.shiftPosition(this, target));
+    map.positionCleared(targetAbs,PBeliefBase.getStep());
+  }
+
   public boolean hearOrder(DSGGoal goal) {
     // vytvori  intention a goal je jeji top level goal, rozsiri ni intention pool
+    PBeliefBase.setJobDemanded(false);      // if a demand is to deSouches is pending
     PIntentionPool.clearPool(); // TODO provizorne, pri vice intensnach odstranit
     printOutput("NEW COMMAND! "+goal.getGoalDescription());
     DSIntention intention = new DSIntention(goal);
@@ -212,20 +265,12 @@ public class DSAgent extends Agent {
     } else return (false);
   }
 
-  public void setActualRole(String role) {
-    PBeliefBase.setRole(role);
-  }
-
   public String getActualRole() {
     return (PBeliefBase.getAcualRole());
   }
 
   public Point getNearestGoal() {
     return (PBeliefBase.nearestGoal());
-  }
-
-  public Point getNearestDispenser(int dispenserType) {
-    return (PBeliefBase.nearestDispenser(dispenserType));
   }
 
   public Point nearestFreeBlock(int blockType) {
@@ -240,7 +285,9 @@ public class DSAgent extends Agent {
     PBeliefBase.setGUIFocus(false);
   }
 
-
+  public void executeSkip(){
+      new DSSkip().execute(this);
+  }
 
   /*
    *
@@ -255,14 +302,10 @@ public class DSAgent extends Agent {
 
 
     try{
-
       POutput.write("LAR: "+  PBeliefBase.getLastActionResultString()+"\n");
     }catch(Exception e){};
 
-
-    if (recentIntentionExecuted != null) {
-      recentIntentionExecuted.intentionExecutionFeedback(actionResult, (DSAgent) this);
-    }
+      PIntentionPool.processFeedback(actionResult, this);
   }
 
 
@@ -300,14 +343,81 @@ public class DSAgent extends Agent {
 
     DSIntention recentIntentionExecuted = null;
 
+
+
+    void drawMaps2GUI(){
+
+      if (PBeliefBase.getGUIFocus()) {
+
+        PBeliefBase.getGUI()
+                .setXY(PBeliefBase.getAgentPosition().x, PBeliefBase.getAgentPosition().y);
+        DSMap map=PBeliefBase.getMap();
+        int ga=map.getMapCells().getAllType(__DSGoalArea).size();
+        int za=map.getMapCells().getAllType(__DSRoleArea).size();
+        int d0=map.getMapCells().getAllType(__DSDispenser+0).size();
+        int d1=map.getMapCells().getAllType(__DSDispenser+1).size();
+        int d2=map.getMapCells().getAllType(__DSDispenser+2).size();
+
+
+        PBeliefBase.getGUI()
+                .setTextMap(
+                        "MAP:"
+                                + map.getOwnerName()
+                                + "\n"
+                                + map.isMasterMap()
+                                + "\n"
+                                + PBeliefBase.getAgentPosition()
+                                + "\n"
+                                + ga + "/" + za + "/"+ d0 + "/"+ d1 + "/"+ d2 + "/ \n"
+                                + map.stringMap());
+
+
+        PBeliefBase.getGUI()
+                .setPheromoneTextMap(
+                        "PHEROMONE MAP:"
+                                + PBeliefBase.getMap().getOwnerName()
+                                + "\n"
+                                + PBeliefBase.getMap().isMasterMap()
+                                + "\n"
+                                + PBeliefBase.getAgentPosition()
+                                + "\n"
+                                + PBeliefBase.getMap().stringPheroMap());
+      }
+    }
+
+    void printOutputAfterCycle(){
+      printOutput("----------------------------------------------------------");
+      printOutput("Step: " + PBeliefBase.getStep() + " , pos " + PBeliefBase.getAgentPosition().toString());
+      printOutput("Agent body "+getBody().bodyToString());
+      printOutput("Atteched "+PBeliefBase.getAttched().toString());
+      if(PBeliefBase.getScenario()!=null)
+        printOutput("Scenario: "+PBeliefBase.getScenario().getName());
+      else
+        printOutput("Scenario: none");
+      printOutput("Goal: "+PBeliefBase.getLastGoal());
+      if(recentIntentionExecuted!=null)
+        if(recentIntentionExecuted.getTLG()!=null)
+          printOutput(" desc: "+ recentIntentionExecuted.getTLG().getGoalParametersDescription());
+        else
+          printOutput("\n");
+      printOutput("Control Loop Finished");
+    }
+
+/*
+          +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+          ==========================   CONTROL LOOOP   ================================
+ */
+
+
     public void action() {
+
       Map<String, PerceptUpdate> perceptsCol = null;
+
 
 
       /*
                   SENSING
        */
-
 
       try {
         perceptsCol = PEI.getPercepts(PName, PEntity);
@@ -336,6 +446,9 @@ public class DSAgent extends Agent {
       // FEEDBACK, result of the last action performed
 
       DSPerceptor perceptor = new DSPerceptor();
+
+      // Must be before Map Update ... reflects the results of 'Move' actions ... actualizes the agent position
+
       propagateFeedback(recentIntentionExecuted);
 
       /*
@@ -359,41 +472,7 @@ public class DSAgent extends Agent {
       // UPDATE PHEROMONES for exploration purposes
       antmap.updateMap(this.agent);
 
-      if (PBeliefBase.getGUIFocus()) {
-
-        PBeliefBase.getGUI()
-            .setXY(PBeliefBase.getAgentPosition().x, PBeliefBase.getAgentPosition().y);
-        DSMap map=PBeliefBase.getMap();
-        int ga=map.getMap().getAllType(__DSGoalArea).size();
-        int za=map.getMap().getAllType(__DSRoleArea).size();
-        int d0=map.getMap().getAllType(__DSDispenser+0).size();
-        int d1=map.getMap().getAllType(__DSDispenser+1).size();
-        int d2=map.getMap().getAllType(__DSDispenser+2).size();
-
-
-        PBeliefBase.getGUI()
-            .setTextMap(
-                "MAP:"
-                    + map.getOwnerName()
-                    + "\n"
-                    + map.isMasterMap()
-                    + "\n"
-                    + PBeliefBase.getAgentPosition()
-                    + "\n"
-                    + ga + "/" + za + "/"+ d0 + "/"+ d1 + "/"+ d2 + "/ \n"
-                    + map.stringMap());
-
-        PBeliefBase.getGUI()
-            .setPheromoneTextMap(
-                "PHEROMONE MAP:"
-                    + PBeliefBase.getMap().getOwnerName()
-                    + "\n"
-                    + PBeliefBase.getMap().isMasterMap()
-                    + "\n"
-                    + PBeliefBase.getAgentPosition()
-                    + "\n"
-                    + PBeliefBase.getMap().stringPheroMap());
-      }
+      drawMaps2GUI();
 
 
 
@@ -401,18 +480,17 @@ public class DSAgent extends Agent {
       // reconsiderations
 
       if(!PBeliefBase.getCommander().salut(PBeliefBase.getStep(), PBeliefBase.getScore(), (DSAgent) this.getAgent()))
+
         // waits when it is not the last salut in the round
-  //       this.getAgent().doWait();
-
-      printOutput("\nStep: " + PBeliefBase.getStep() + " , pos " + PBeliefBase.getAgentPosition().toString()+"\n");
-
-      perceptor.getBodyFromPercepts(percepts.getAddList());
+      //       this.getAgent().doWait();
 
       /*
               C8
        */
 
-      // tady nechapu, o co jde
+      // v případě, že agent nic nenese, ověřit, jetli je to v pořádku
+      // pro jistotu, nevím, na základě čeho by agent mohl seznat, že mu byl odsteřal blok, ověřit
+
       if (!perceptor.seesBlocksInBody(agent.getOutlook()))
         if (PBeliefBase.getScenario() != null)
           PBeliefBase.getScenario()
@@ -438,30 +516,17 @@ public class DSAgent extends Agent {
       }
 
       // agent disabled? Inform and don§t execute
+      // tady to nema co delat, melo by se osetrovat pri zpracovani perceptu
+
       if (perceptor.disabled(newPercepts)) {
         PBeliefBase.getCommander().agentDisabled((DSAgent) this.getAgent());
         return;
       }
 
-
-      // report spatrenych pratel, skrz mapu -> vede na merge group
-
       /*
               C11
        */
 
-      /*
-
-       presunuto do Salutu
-
-
-      PBeliefBase.getSynchronizer()
-              .addObservation(
-                      (DSAgent) this.getAgent(),
-                      PBeliefBase.getStep(),
-                      PBeliefBase.getOutlook().getFriendsSeen(PBeliefBase.getVision()),
-                      PBeliefBase.getTeamSize());
-      */
 
       // EXECUTION
       // vyber zameru
@@ -471,59 +536,69 @@ public class DSAgent extends Agent {
       // MUSI BYT PREDTIM ZPRACOVANY VSTUPY VSECH AGENTU, KVULI SYNCHRONIZACI!!!!
 
 
-      if (recentIntentionExecuted != null) {
-        if (recentIntentionExecuted.intentionState() == DSIntention.__Intention_Finished) {
-          PIntentionPool.removeIntention(recentIntentionExecuted);
-          informCompleted(recentIntentionExecuted.getTLG());
-        } else if (recentIntentionExecuted.intentionState() == DSIntention.__Intention_Failed) {
-          informFailed(recentIntentionExecuted.getTLG());
-          PIntentionPool.removeIntention(recentIntentionExecuted);
-        }
-      }
+      /*
+            Uprava, o tom, ktera intention byla naposled odpalena a jak to dopadlo se ma starat
+            Intention pool!
+       */
 
-     if ((PIntentionPool.getIntention() == null) &&
-             (getScenario() == null))
-        PBeliefBase.getCommander().needJob((DSAgent) this.getAgent());
+    switch (PIntentionPool.checkActualIntentionPoolState()) {
+      case DSIntentionPool.__No_Intention_Left:
+        if (!followsScenario())
+          // there is no intention and no scenario is active (should send some command later)
+          // inform deSouches and skip
+          if(!PBeliefBase.getJobDemanded()) {
+            PBeliefBase.setJobDemanded(true);
+            PBeliefBase.getCommander().needJob((DSAgent) this.getAgent());
+          }
+        break;
+
+      case DSIntentionPool.__Recent_Intention_Failed:
+        informFailed(PIntentionPool.getRecentIntentionTLG());
+        break;
+
+      case DSIntentionPool.__Recent_Intention_Finished:
+        informCompleted(PIntentionPool.getRecentIntentionTLG());
+        break;
+
+      case DSIntentionPool.__Recent_Intention_Persists:
+      case DSIntentionPool.__Nothing_Executed_But_Possible:
+
+    }
 
       // EXECUTING INTENTION
 
-      recentIntentionExecuted = PIntentionPool.executeOneIntention((DSAgent) this.getAgent());
+      PIntentionPool.executeOneIntention((DSAgent) this.getAgent());
 
-      if(recentIntentionExecuted!=null){
-        if(recentIntentionExecuted.getTLG()==null)
-          PBeliefBase.setLastGoal("No goal");
-        else
-          PBeliefBase.setLastGoal(recentIntentionExecuted.getTLG().getGoalDescription());
+      // some outro ... remember last goal (could be taken from the pool, but who cares)
 
+      DSGGoal g=PIntentionPool.getRecentIntentionTLG();
+      if(g==null)
+        PBeliefBase.setLastGoal("No goal");
+      else{
+        PBeliefBase.setLastGoal(g.getGoalDescription());
         if (PBeliefBase.getGUIFocus()) {
-          PBeliefBase.getGUI().noticeLastGoal(recentIntentionExecuted.getTLG().getGoalDescription());
-          PBeliefBase.getGUI().writePlan(recentIntentionExecuted.getRecentPlan());
+          PBeliefBase.getGUI().noticeLastGoal(g.getGoalDescription());
+          PBeliefBase.getGUI().writePlan(g.getRecentPlan());
         }
       }
 
-      // PRINT recentIntention on GUI
 
-      printOutput("Agent body "+getBody().bodyToString());
-      printOutput("Atteched "+PBeliefBase.getAttched().toString());
-      if(PBeliefBase.getScenario()!=null)
-        printOutput("Scenario: "+PBeliefBase.getScenario().getName());
-      else
-        printOutput("Scenario: none");
-      printOutput("Goal: "+PBeliefBase.getLastGoal());
-      if(recentIntentionExecuted!=null)
-        if(recentIntentionExecuted.getTLG()!=null)
-          printOutput(" desc: "+ recentIntentionExecuted.getTLG().getGoalParametersDescription());
-        else
-          printOutput("\n");
-      printOutput("Control Loop Finished");
+      // PRINT recentIntention on GUI
+      printOutputAfterCycle();
 
     } // END action()
+
+
 
     public controlLoop(DSAgent agent) {
       super();
       this.agent = agent;
     }
+
+
   }
+
+
 
   public void setup() {
 
@@ -553,8 +628,7 @@ public class DSAgent extends Agent {
       DeSouches commander,
       int number,
       boolean leutnant,
-   //   DSSynchronize synchronizer,
-      dsGUI gui,
+      DSAgentGUI gui,
       boolean guiFocus) {
     super();
 

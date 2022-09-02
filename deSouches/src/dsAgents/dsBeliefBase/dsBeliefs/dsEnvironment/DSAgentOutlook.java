@@ -11,6 +11,7 @@ import java.util.LinkedList;
 
 public class DSAgentOutlook {
   DSCells POutlookCells;
+  DSAgent PAgent;
   int PStep;
 
   public int getStep() {
@@ -76,7 +77,8 @@ public class DSAgentOutlook {
     DSCell nearest=cells.getFirst();
     Point np=new Point(0,0);  // outlook, agent is always at 0,0
     for(DSCell cell:cells)
-      if(DSMap.distance(cell.getPosition(),np)<DSMap.distance(nearest.getPosition(),np))
+      if(PAgent.getMap().distance(cell.getPosition(),np)<
+              PAgent.getMap().distance(nearest.getPosition(),np))
         nearest=cell;
     return(nearest.getPosition());
   }
@@ -128,7 +130,8 @@ public class DSAgentOutlook {
     return (so);
   }
 
-  public DSAgentOutlook() {
+  public DSAgentOutlook(DSAgent agent) {
+    PAgent=agent;
     POutlookCells = new DSCells();
   }
 
