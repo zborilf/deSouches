@@ -1,0 +1,1326 @@
+>>agentA6 sees agentA7 disp java.awt.Point[x=0,y=-2] token true
+groupExtended: Leader {agentA6}agentA6,  by group Leader {agentA7}agentA7,  step 2
+>>agentA15 sees agentA5 disp java.awt.Point[x=-1,y=0] token false
+ --------------------------------- 
+Step 2
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+agentA16 needs job
+>>agentA15 sees agentA5 disp java.awt.Point[x=-1,y=0] token true
+groupExtended: Leader {agentA15}agentA15,  by group Leader {agentA5}agentA5,  step 3
+ --------------------------------- 
+Step 3
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+agentA19 needs job
+agentA20 needs job
+agentA2 needs job
+agentA3 needs job
+agentA6 needs job
+agentA10 needs job
+agentA5 needs job
+agentA14 needs job
+agentA9 needs job
+agentA15 needs job
+agentA11 needs job
+agentA1 needs job
+agentA8 needs job
+agentA18 needs job
+agentA17 needs job
+agentA4 needs job
+agentA7 needs job
+agentA13 needs job
+>>agentA16 sees agentA1 disp java.awt.Point[x=0,y=-1] token true
+groupExtended: Leader {agentA16}agentA16,  by group Leader {agentA1}agentA1,  step 4
+ --------------------------------- 
+Step 4
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+agentA12 needs job
+>>agentA18 sees agentA5 disp java.awt.Point[x=0,y=1] token true
+groupExtended: Leader {agentA18}agentA18,  by group Leader {agentA15}agentA15, agentA5,  step 5
+>>agentA10 sees agentA12 disp java.awt.Point[x=-1,y=1] token false
+>>agentA7 sees agentA9 disp java.awt.Point[x=0,y=-1] token false
+ --------------------------------- 
+Step 5
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA6 sees agentA9 disp java.awt.Point[x=0,y=-1] token true
+groupExtended: Leader {agentA6}agentA6, agentA7,  by group Leader {agentA9}agentA9,  step 6
+ --------------------------------- 
+Step 6
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA10 sees agentA12 disp java.awt.Point[x=-1,y=1] token true
+groupExtended: Leader {agentA10}agentA10,  by group Leader {agentA12}agentA12,  step 7
+>>agentA14 sees agentA3 disp java.awt.Point[x=1,y=-1] token false
+ --------------------------------- 
+Step 7
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA19 sees agentA4 disp java.awt.Point[x=0,y=-1] token true
+groupExtended: Leader {agentA19}agentA19,  by group Leader {agentA4}agentA4,  step 8
+>>agentA14 sees agentA3 disp java.awt.Point[x=1,y=-1] token false
+ --------------------------------- 
+Step 8
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 9
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA13 sees agentA2 disp java.awt.Point[x=0,y=-1] token true
+groupExtended: Leader {agentA13}agentA13,  by group Leader {agentA2}agentA2,  step 10
+ --------------------------------- 
+Step 10
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA17 sees agentA8 disp java.awt.Point[x=-1,y=1] token true
+groupExtended: Leader {agentA17}agentA17,  by group Leader {agentA8}agentA8,  step 11
+ --------------------------------- 
+Step 11
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA12 sees agentA6 disp java.awt.Point[x=-8,y=6] token true
+groupExtended: Leader {agentA10}agentA10, agentA12,  by group Leader {agentA6}agentA6, agentA7, agentA9,  step 12
+ --------------------------------- 
+Step 12
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA14 sees agentA3 disp java.awt.Point[x=1,y=-1] token true
+groupExtended: Leader {agentA14}agentA14,  by group Leader {agentA3}agentA3,  step 13
+ --------------------------------- 
+Step 13
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 14
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 15
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 16
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 17
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 18
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 19
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 20
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA5 sees agentA11 disp java.awt.Point[x=1,y=19] token true
+groupExtended: Leader {agentA18}agentA18, agentA15, agentA5,  by group Leader {agentA11}agentA11,  step 21
+ --------------------------------- 
+Step 21
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 22
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 23
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 24
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 25
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 26
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 27
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 28
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 29
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 30
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA18 sees agentA3 disp java.awt.Point[x=-10,y=-7] token true
+groupExtended: Leader {agentA18}agentA18, agentA15, agentA5, agentA11,  by group Leader {agentA14}agentA14, agentA3,  step 31
+ --------------------------------- 
+Step 31
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 32
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 33
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 34
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 35
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 36
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 37
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 38
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 39
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 40
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 41
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA11 sees agentA19 disp java.awt.Point[x=21,y=1] token true
+groupExtended: Leader {agentA18}agentA18, agentA15, agentA5, agentA11, agentA14, agentA3,  by group Leader {agentA19}agentA19, agentA4,  step 42
+>>agentA5 sees agentA20 disp java.awt.Point[x=14,y=17] token false
+ --------------------------------- 
+Step 42
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA5 sees agentA20 disp java.awt.Point[x=14,y=17] token true
+groupExtended: Leader {agentA18}agentA18, agentA15, agentA5, agentA11, agentA14, agentA3, agentA19, agentA4,  by group Leader {agentA20}agentA20,  step 43
+ --------------------------------- 
+Step 43
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 44
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 45
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 46
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 47
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 48
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA1 sees agentA2 disp java.awt.Point[x=16,y=6] token true
+groupExtended: Leader {agentA16}agentA16, agentA1,  by group Leader {agentA13}agentA13, agentA2,  step 49
+ --------------------------------- 
+Step 49
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 50
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 51
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 52
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 53
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 54
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 55
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 56
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA3 sees agentA12 disp java.awt.Point[x=-35,y=-20] token true
+groupExtended: Leader {agentA18}agentA18, agentA15, agentA5, agentA11, agentA14, agentA3, agentA19, agentA4, agentA20,  by group Leader {agentA10}agentA10, agentA12, agentA6, agentA7, agentA9,  step 57
+> ! > 57 MASTERGRUPA agentA4!!!
+
+ --------------------------------- 
+Step 57
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 58
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 59
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 60
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 61
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 62
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 63
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 64
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 65
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 66
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 67
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 68
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 69
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 70
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 71
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 72
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 73
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 74
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 75
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 76
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 77
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA15 sees agentA2 disp java.awt.Point[x=-10,y=-27] token true
+MasterGroupExtended: Leader {agentA18}agentA18, agentA15, agentA5, agentA11, agentA14, agentA3, agentA19, agentA4, agentA20, agentA10, agentA12, agentA6, agentA7, agentA9,  by group Leader {agentA16}agentA16, agentA1, agentA13, agentA2,  step 78
+ --------------------------------- 
+Step 78
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 79
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 80
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 81
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 82
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 83
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 84
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 85
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 86
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 87
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 88
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 89
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 90
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 91
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+---------------
+91: Task : task4 type 2 deadline 162
+>> 0:::- agentA13:[14,-13] -> [13,-10] -> [0,5] sup. price 32
+>> 1:::- agentA2:[-8,-8] -> [-13,-3] -> [0,5] sup. price 31
+Checkuju pozici golu java.awt.Point[x=0,y=5]
+Vysledek je true
+---------------
+---------------
+initScenario: 
+!@!  TASK:task4 type 2 / , Group masteragentA18
+@@Master agentA13  pujde na java.awt.Point[x=13,y=-10] pro 0 a do golu java.awt.Point[x=0,y=5] body is  [0,0:1003] [0,1:0],
+@@ Leutnant1 agentA2  pujde na java.awt.Point[x=-13,y=-3] pro 1 a do golu java.awt.Point[x=1,y=5] body is  [0,0:1003] [0,1:0]
+goalFailed: SCEN: Task to je smula agente agentA2 kvuli Goal explore
+ --------------------------------- 
+Step 92
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+goalCompleted: SCEN: Task te chvali, agente agentA2 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentA13 za detachAllGoal
+ --------------------------------- 
+Step 93
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+ --------------------------------- 
+Step 94
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+ --------------------------------- 
+Step 95
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+ --------------------------------- 
+Step 96
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+ --------------------------------- 
+Step 97
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+ --------------------------------- 
+Step 98
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+ --------------------------------- 
+Step 99
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+ --------------------------------- 
+Step 100
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+goalCompleted: SCEN: Task te chvali, agente agentA13 za get block 2022
+ --------------------------------- 
+Step 101
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+ --------------------------------- 
+Step 102
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+goalFailed: SCEN: Task to je smula agente agentA2 kvuli get block 2022
+ --------------------------------- 
+Step 103
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+ --------------------------------- 
+Step 104
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+goalCompleted: SCEN: Task te chvali, agente agentA2 za get block 2022
+ --------------------------------- 
+Step 105
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+ --------------------------------- 
+Step 106
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+ --------------------------------- 
+Step 107
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+ --------------------------------- 
+Step 108
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+ --------------------------------- 
+Step 109
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+ --------------------------------- 
+Step 110
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+ --------------------------------- 
+Step 111
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task0
+group option task1
+group option task3
+group option task4
+ --------------------------------- 
+Step 112
+Active tasks: [task4_90]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]
+Score: 0
+group option task5
+---------------
+112: Task : task5 type 43 deadline 207
+>> 0:::- agentA19:[-26,10] -> [6,20] -> [14,18] sup. price 52
+Checkuju pozici golu java.awt.Point[x=14,y=18]
+Vysledek je true
+---------------
+Jednickovej task
+initScenario: 
+!@!  TASK:task5 type 43 / , Group masteragentA18
+@@Master agentA19  pujde na java.awt.Point[x=6,y=20] pro 0 a do golu java.awt.Point[x=14,y=18] body is  [0,0:1003] [0,1:0]
+goalCompleted: SCEN: Task te chvali, agente agentA19 za Goal explore
+ --------------------------------- 
+Step 113
+Active tasks: [task4_90, task5_112]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@ee68f4a
+for task task5
+ -- agentA19,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]task5 / java.awt.Point[x=14,y=18]
+Score: 0
+group option task5
+---------------
+113: Task : task5 type 43 deadline 207
+>> 0:::- agentA15:[-3,-19] -> [13,-10] -> [-5,-26] sup. price 59
+Checkuju pozici golu java.awt.Point[x=-5,y=-26]
+Vysledek je true
+---------------
+Jednickovej task
+initScenario: 
+!@!  TASK:task5 type 43 / , Group masteragentA18
+@@Master agentA15  pujde na java.awt.Point[x=13,y=-10] pro 0 a do golu java.awt.Point[x=-5,y=-26] body is  [0,0:1003] [0,1:0]
+goalCompleted: SCEN: Task te chvali, agente agentA19 za detachAllGoal
+ --------------------------------- 
+Step 114
+Active tasks: [task4_90, task5_112, task5_112]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@ee68f4a
+for task task5
+ -- agentA19,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3e2f995d
+for task task5
+ -- agentA15,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]task5 / java.awt.Point[x=14,y=18]task5 / java.awt.Point[x=-5,y=-26]
+Score: 0
+group option task5
+group option task0
+group option task1
+group option task4
+goalCompleted: SCEN: Task te chvali, agente agentA15 za detachAllGoal
+ --------------------------------- 
+Step 115
+Active tasks: [task4_90, task5_112, task5_112]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@5f534518
+for task task4
+ -- agentA13,agentA2,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@ee68f4a
+for task task5
+ -- agentA19,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3e2f995d
+for task task5
+ -- agentA15,
+Goal positions allocated: task4 / java.awt.Point[x=0,y=5]task5 / java.awt.Point[x=14,y=18]task5 / java.awt.Point[x=-5,y=-26]
+Score: 0
+group option task5
+group option task0
+group option task1
+group option task4

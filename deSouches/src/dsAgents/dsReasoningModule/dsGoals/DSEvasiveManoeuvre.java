@@ -14,7 +14,7 @@ public class DSEvasiveManoeuvre extends DSGGoal{
     Point PDestination;
     DSBody PBody;
     final static int _nOAttempts=10;
-    final static int _distance=5;
+    final static int _distance=6;
     Point _destination;
 
     public String getGoalDescription() {

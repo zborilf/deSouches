@@ -14,7 +14,7 @@ import dsAgents.dsGUI.DSAgentGUI;
 import dsAgents.dsPerceptionModule.DSStatusIndexes;
 import dsAgents.dsPerceptionModule.dsSyntax.DSPercepts;
 import dsMultiagent.DSGroup;
-import dsMultiagent.dsScenarios.DSScenario;
+import dsMultiagent.dsScenarios.DSMMission;
 import dsMultiagent.dsTasks.DSTask;
 import eis.iilang.Function;
 import eis.iilang.Parameter;
@@ -50,7 +50,7 @@ public class DSBeliefBase {
   private String PName = "unknown";
   private String PJADEName = "unknown";
   private String PTeamName = "unknown";
-  private DSScenario PScenario; // active scenario
+  private DSMMission PScenario; // active scenario
   private DSBody PBody = null;
   private boolean inicialized = false;
   private int PHoldsBlockType;
@@ -520,7 +520,7 @@ public class DSBeliefBase {
 
   // AKTUALNI SCENAR
 
-  public void setScenario(DSScenario scenario) {
+  public void setScenario(DSMMission scenario) {
     PScenario = scenario;
     if (PScenario != null)
       PAgent.printOutput("---- SCENARIO SET TO "+PScenario.getName());
@@ -532,7 +532,7 @@ public class DSBeliefBase {
     }
   }
 
-  public DSScenario getScenario() {
+  public DSMMission getScenario() {
     return (PScenario);
   }
 

@@ -14,7 +14,7 @@ import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import dsAgents.dsReasoningModule.dsIntention.DSIntention;
 import dsAgents.dsReasoningModule.dsIntention.DSIntentionPool;
 import dsMultiagent.DSGroup;
-import dsMultiagent.dsScenarios.DSScenario;
+import dsMultiagent.dsScenarios.DSMMission;
 import eis.EnvironmentInterfaceStandard;
 import eis.PerceptUpdate;
 import eis.exceptions.AgentException;
@@ -91,7 +91,7 @@ public class DSAgent extends Agent {
   }
 
   public DSMap getMap() {
-    return (PBeliefBase.getMap());
+    return (PBeliefBase.getGroup().getMap());
   }
 
   public String getLastGoal() {
@@ -135,7 +135,7 @@ public class DSAgent extends Agent {
   }
 
 
-  public void setScenario(DSScenario scenario) {
+  public void setScenario(DSMMission scenario) {
     PBeliefBase.setScenario(scenario);
     PScenarioPriority = scenario.getPriority();
     HorseRider.inform(
@@ -150,7 +150,7 @@ public class DSAgent extends Agent {
     return (PScenarioPriority);
   }
 
-  protected DSScenario getScenario() {
+  protected DSMMission getScenario() {
     return (PBeliefBase.getScenario());
   }
 
@@ -494,7 +494,7 @@ public class DSAgent extends Agent {
       if (!perceptor.seesBlocksInBody(agent.getOutlook()))
         if (PBeliefBase.getScenario() != null)
           PBeliefBase.getScenario()
-              .checkEvent((DSAgent) (this.getAgent()), DSScenario._noBlockEvent);
+              .checkEvent((DSAgent) (this.getAgent()), DSMMission._noBlockEvent);
 
       //  == DEADLOCK ==
 

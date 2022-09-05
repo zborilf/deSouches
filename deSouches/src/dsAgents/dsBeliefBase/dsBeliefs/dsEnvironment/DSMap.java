@@ -61,6 +61,8 @@ public class DSMap {
 
 
   public synchronized Point centralizeCoords(Point p){
+    if(p==null)
+      return(null);
     return(new Point(centralizeXCoords(p.x),centralizeYCoords(p.y)));
   }
 

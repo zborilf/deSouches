@@ -4,6 +4,9 @@ import dsAgents.DSAgent;
 import dsMultiagent.dsTasks.DSTask;
 
 import javax.swing.*;
+import javax.swing.text.DefaultHighlighter;
+import javax.swing.text.Highlighter;
+import javax.swing.text.JTextComponent;
 import java.awt.*;
 
 
@@ -55,13 +58,21 @@ public class DSTaskGUI {
     private JTextField dsgScenarioL1;
     private JTextField dsgScenarioL2;
     private JTextField dsgScenarioL3;
+    private JFormattedTextField dsgTaskTerminalFormatted;
+
+    private JInternalFrame PFrame;
 
     static int __tasks=0;
+    int PLine=1;
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
     }
 
+
+    public JInternalFrame getFrame(){
+        return PFrame;
+    }
 
     String getAgentName(DSAgent agent){
         if(agent==null)
@@ -90,7 +101,7 @@ public class DSTaskGUI {
     }
 
     public synchronized void failed(String reason){
-        dsgRoleLabelPanel.setBackground(Color.RED);
+        dsgRoleLabelPanel.setBackground(Color.PINK);
         dsgTaskTerminal.append("FAILED: "+reason);
     }
 
@@ -149,21 +160,34 @@ public class DSTaskGUI {
 
     public void addText2Terminal(String text){
         dsgTaskTerminal.append(text+"\n");
+        try {
+            int so = dsgTaskTerminal.getLineStartOffset(PLine);
+            int eo = dsgTaskTerminal.getLineEndOffset(PLine);
+            Highlighter.HighlightPainter hp=new DefaultHighlighter.DefaultHighlightPainter(Color.GREEN);
+        }catch(Exception e){};
+        PLine++;
     }
 
-    public static DSTaskGUI createGUI() {
+    public DSTaskGUI(JInternalFrame frame){
+        PFrame=frame;
+    }
 
-        __tasks++;
-        JFrame frame = new JFrame("GUI for task");
+    public static DSTaskGUI createTaskFrame() {
 
-        DSTaskGUI gui = new DSTaskGUI();
+        JInternalFrame frame = new JInternalFrame("GUI for task", true, true, true);
+      //  frame.setPreferredSize(new Dimension(900,300));
+        frame.pack();
+        DSTaskGUI gui = new DSTaskGUI(frame);
         frame.setContentPane(gui.dsgMainPanel);
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
-        frame.setLocation(new Point(20+(__tasks/8)*300, (__tasks % 8)*80));
+        frame.setLocation(new Point((__tasks/12)*300+(__tasks % 12)*20, (__tasks % 12)*60+60));
+        __tasks++;
+
         frame.pack();
         frame.setVisible(true);
         return (gui);
+
     }
 
 

@@ -1,0 +1,95 @@
+>>agentA1 sees agentA14 disp java.awt.Point[x=0,y=2] token true
+groupExtended: Leader {agentA1}agentA1,  by group Leader {agentA14}agentA14,  step 115
+>>agentA7 sees agentA8 disp java.awt.Point[x=5,y=0] token false
+ --------------------------------- 
+Step 114
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+>>agentA7 sees agentA8 disp java.awt.Point[x=5,y=0] token true
+groupExtended: Leader {agentA7}agentA7,  by group Leader {agentA8}agentA8,  step 115
+ --------------------------------- 
+Step 115
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 116
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+agentA15 needs job
+agentA9 needs job
+ --------------------------------- 
+Step 117
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+agentA3 needs job
+agentA19 needs job
+ --------------------------------- 
+Step 118
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+agentA18 needs job
+agentA1 needs job
+agentA17 needs job
+>>agentA19 sees agentA3 disp java.awt.Point[x=1,y=-5] token true
+groupExtended: Leader {agentA19}agentA19,  by group Leader {agentA3}agentA3,  step 119
+>>agentA17 sees agentA9 disp java.awt.Point[x=-2,y=-4] token false
+ --------------------------------- 
+Step 119
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 120
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 121
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4

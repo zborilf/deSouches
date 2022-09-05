@@ -2,16 +2,12 @@ package dsMultiagent.dsScenarios;
 
 import dsAgents.DSAgent;
 import dsAgents.DeSouches;
-import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
-import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsReasoningModule.dsGoals.*;
 import dsMultiagent.dsTasks.DSTask;
 
-import java.awt.*;
+public class DSSOneBlock extends DSSBlockMission {
 
-public class DSSOneBlock extends DSSBlockScenarios{
-
-
+    /*
     int PStateM;
     DSAgent PMaster;
     Point PMasterGoalPos;
@@ -19,6 +15,7 @@ public class DSSOneBlock extends DSSBlockScenarios{
     DSBody PMasterGoalBody;
 
     int PType1;
+*/
 
     @Override
     public String getName() {
@@ -38,46 +35,51 @@ public class DSSOneBlock extends DSSBlockScenarios{
                         + " za "
                         + goal.getGoalDescription());
 
+        PGUI.addText2Terminal("Coal completed");
+
         if (agent == PMaster) {
             if (goal.getGoalDescription().contentEquals("goRandomly")) {
-                PGUI.addText2Terminal(agent.getEntityName()+" completed goRandomly -> getBlock");
+                PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" completed goRandomly -> getBlock");
                 agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
             }
             if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
-                PGUI.addText2Terminal(agent.getEntityName()+" detachAll -> getBlock");
+                PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" completed detachAll -> getBlock");
                 PStateM = 1;
                 agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
             }
 
             if (goal.getGoalDescription().contentEquals("get block 2022")) {
-                PGUI.addText2Terminal(agent.getEntityName()+" goToDispenesr -> goToPosition");
+                PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" completed getBlock -> goToPosition");
                 PStateM = 2;
                 agent.hearOrder(new DSGoToPosition(PMasterGoalPos, PMasterGoalBody, getTask().getDeadline()));
             }
 
             if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
-                PGUI.addText2Terminal(agent.getEntityName()+" evasive manoeuvre -> goToPosition");
+                PGUI.addText2Terminal(agent.getEntityName() + " failed randomRoam -> goToPosition");
                 PStateM = 2;
                 agent.hearOrder(new DSGoToPosition(PMasterGoalPos, PMasterGoalBody, getTask().getDeadline()));
             }
 
-
             if (goal.getGoalDescription().contentEquals("goToPosition")) {
-                PGUI.addText2Terminal(agent.getEntityName()+" goToPosition!!");
+                PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" completed goToPosition -> submit");
                 agent.hearOrder(new DSAttachAndSubmit(PTask.getName(), "s", PType1));
+                PStateM=3;
             }
             if (goal.getGoalDescription().contentEquals("attachAndSubmit")) {
-                PGUI.addText2Terminal(agent.getEntityName()+" attachAndSubmit!! COMPLETED");
+                PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" completed submit -> DONE");
                 PCommander.scenarioCompleted(this);
             }
         }
-        super.goalCompleted(agent,goal);
+//        super.goalCompleted(agent,goal);
 
     }
 
 
     @Override
     public void goalFailed(DSAgent agent, DSGGoal goal) {
+
+
+        PGUI.addText2Terminal("Coal failed");
 
         super.goalFailed(agent,goal);
         agent.getCommander().printOutput(
@@ -89,35 +91,40 @@ public class DSSOneBlock extends DSSBlockScenarios{
 
         if (agent == PMaster) {
             if (goal.getGoalDescription().contentEquals("get block 2022")) {
-                PGUI.addText2Terminal(agent.getEntityName()+" FAILED M: goToDispenser -> repeat");
+                PGUI.addText2Terminal(agent.getEntityName() + " failed getBlock -> getBlock");
                 agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
                 PStateM = 1;
             }
             if (goal.getGoalDescription().contentEquals("goToPosition")) {
-                PGUI.addText2Terminal(agent.getEntityName()+" FAILED M: goToPosition -> goToPosition");
+                PGUI.addText2Terminal(agent.getEntityName() + " failed goToPosition -> randomRoam");
                 PStateM = 1;
                 agent.hearOrder(new DSEvasiveManoeuvre());
             }
-            if (goal.getGoalDescription().contentEquals("goRandomly")) {
-                PGUI.addText2Terminal(agent.getEntityName() + " FAILED M: goRandomly -> getBlock");
-                agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
+            if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
+                PGUI.addText2Terminal(agent.getEntityName() + " failed randomRoam -> goToPosition");
+                agent.hearOrder(new DSGoToPosition(PMasterGoalPos, PMasterGoalBody, getTask().getDeadline()));
+
+            }
+            if (goal.getGoalDescription().contentEquals("attachAndSubmit")) {
+                PGUI.addText2Terminal(agent.getStep() + ":" + agent.getEntityName() + " failed submit -> FAILED ");
+                this.scenarioFailed("Submit failed");
             }
         }
     }
 
 
-
+/*
     public boolean checkEvent(DSAgent agent, int eventType) {
         agent.printOutput("Checking event "+eventType);
         switch (eventType) {
-            case DSScenario._disabledEvent:
+            case DSMMission._disabledEvent:
                 if (PMaster == agent) {
                     agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
                     PStateM = 1;
                 }
                 return (true);
 
-            case DSScenario._noBlockEvent:
+            case DSMMission._noBlockEvent:
                 if (PMaster == agent) {
                     PMaster.getBody().resetBody();
                     if (PStateM == 2) {
@@ -130,12 +137,13 @@ public class DSSOneBlock extends DSSBlockScenarios{
         }
         return (false);
     }
-
-
+*/
+/*
     public void calibrateScenario(DSMap map){
         PMasterDispenserPos=map.centralizeCoords(PMasterDispenserPos);
         PMasterGoalPos=map.centralizeCoords(PMasterGoalPos);
     }
+*/
 
     boolean allocateAgents() {
 
@@ -156,10 +164,13 @@ public class DSSOneBlock extends DSSBlockScenarios{
     }
 
     @Override
-    public boolean initScenario(int step) {
+    public boolean initMission(int step) {
+
 
 
         if (!allocateAgents()) return (false);
+
+        super.initMission(step);
 
         // posunout leutnanty na spravnou goalpozici
         // nastavit goalbody

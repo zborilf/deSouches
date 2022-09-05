@@ -175,9 +175,10 @@ public class DSCCoalitionMaker {
             }
         }
 
-    //    System.out.println("HOTOVO");
+    /*    System.out.println("HOTOVO");
         for (DSCCoalition coal3 : PCoalitions)
             coal3.printCoalition();
+*/
 
         return(PCoalitions);
     }

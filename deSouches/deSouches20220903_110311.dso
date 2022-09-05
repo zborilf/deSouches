@@ -1,0 +1,790 @@
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+agentA1 needs job
+agentA13 needs job
+agentA15 needs job
+agentA17 needs job
+agentA8 needs job
+agentA5 needs job
+agentA7 needs job
+agentA11 needs job
+agentA12 needs job
+agentA2 needs job
+>>agentA18 sees agentA19 disp java.awt.Point[x=1,y=1] token true
+groupExtended: Leader {agentA18}agentA18,  by group Leader {agentA19}agentA19,  step 1
+>>agentA11 sees agentA15 disp java.awt.Point[x=1,y=-1] token false
+>>agentA18 sees agentA1 disp java.awt.Point[x=1,y=0] token false
+ --------------------------------- 
+Step 1
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+agentA3 needs job
+agentA20 needs job
+agentA14 needs job
+agentA9 needs job
+agentA19 needs job
+agentA16 needs job
+agentA6 needs job
+agentA18 needs job
+agentA4 needs job
+agentA10 needs job
+>>agentA3 sees agentA4 disp java.awt.Point[x=0,y=1] token true
+groupExtended: Leader {agentA3}agentA3,  by group Leader {agentA4}agentA4,  step 2
+>>agentA18 sees agentA1 disp java.awt.Point[x=1,y=0] token false
+>>agentA14 sees agentA9 disp java.awt.Point[x=0,y=-2] token false
+ --------------------------------- 
+Step 2
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+>>agentA11 sees agentA15 disp java.awt.Point[x=1,y=-1] token true
+groupExtended: Leader {agentA11}agentA11,  by group Leader {agentA15}agentA15,  step 3
+>>agentA18 sees agentA1 disp java.awt.Point[x=1,y=0] token false
+>>agentA14 sees agentA9 disp java.awt.Point[x=0,y=-2] token false
+>>agentA20 sees agentA9 disp java.awt.Point[x=0,y=-1] token false
+>>agentA10 sees agentA3 disp java.awt.Point[x=0,y=-2] token false
+ --------------------------------- 
+Step 3
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+>>agentA10 sees agentA4 disp java.awt.Point[x=0,y=-2] token true
+groupExtended: Leader {agentA10}agentA10,  by group Leader {agentA3}agentA3, agentA4,  step 4
+>>agentA20 sees agentA14 disp java.awt.Point[x=0,y=1] token false
+>>agentA18 sees agentA1 disp java.awt.Point[x=1,y=0] token false
+>>agentA14 sees agentA9 disp java.awt.Point[x=0,y=-2] token false
+>>agentA12 sees agentA8 disp java.awt.Point[x=9,y=0] token false
+ --------------------------------- 
+Step 4
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+>>agentA2 sees agentA8 disp java.awt.Point[x=9,y=1] token true
+groupExtended: Leader {agentA2}agentA2,  by group Leader {agentA8}agentA8,  step 5
+>>agentA19 sees agentA1 disp java.awt.Point[x=1,y=0] token false
+>>agentA20 sees agentA14 disp java.awt.Point[x=0,y=1] token false
+>>agentA14 sees agentA9 disp java.awt.Point[x=0,y=-2] token false
+>>agentA17 sees agentA5 disp java.awt.Point[x=0,y=-1] token false
+>>agentA12 sees agentA8 disp java.awt.Point[x=0,y=-1] token false
+ --------------------------------- 
+Step 5
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+>>agentA20 sees agentA14 disp java.awt.Point[x=0,y=1] token true
+groupExtended: Leader {agentA20}agentA20,  by group Leader {agentA14}agentA14,  step 6
+>>agentA19 sees agentA1 disp java.awt.Point[x=1,y=0] token false
+>>agentA20 sees agentA9 disp java.awt.Point[x=0,y=-1] token false
+>>agentA17 sees agentA5 disp java.awt.Point[x=0,y=-1] token false
+>>agentA12 sees agentA8 disp java.awt.Point[x=0,y=-1] token false
+ --------------------------------- 
+Step 6
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+>>agentA14 sees agentA9 disp java.awt.Point[x=0,y=-1] token true
+groupExtended: Leader {agentA20}agentA20, agentA14,  by group Leader {agentA9}agentA9,  step 7
+>>agentA12 sees agentA8 disp java.awt.Point[x=0,y=-1] token false
+>>agentA19 sees agentA1 disp java.awt.Point[x=1,y=0] token false
+ --------------------------------- 
+Step 7
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+>>agentA10 sees agentA7 disp java.awt.Point[x=-1,y=7] token true
+groupExtended: Leader {agentA10}agentA10, agentA3, agentA4,  by group Leader {agentA7}agentA7,  step 8
+>>agentA19 sees agentA1 disp java.awt.Point[x=1,y=0] token false
+>>agentA12 sees agentA8 disp java.awt.Point[x=0,y=-1] token false
+ --------------------------------- 
+Step 8
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+>>agentA17 sees agentA5 disp java.awt.Point[x=0,y=-1] token true
+groupExtended: Leader {agentA17}agentA17,  by group Leader {agentA5}agentA5,  step 9
+>>agentA1 sees agentA8 disp java.awt.Point[x=-5,y=-9] token false
+>>agentA12 sees agentA8 disp java.awt.Point[x=0,y=-1] token false
+>>agentA19 sees agentA1 disp java.awt.Point[x=1,y=0] token false
+ --------------------------------- 
+Step 9
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+>>agentA19 sees agentA1 disp java.awt.Point[x=1,y=0] token true
+groupExtended: Leader {agentA18}agentA18, agentA19,  by group Leader {agentA1}agentA1,  step 10
+>>agentA12 sees agentA2 disp java.awt.Point[x=0,y=-1] token false
+>>agentA1 sees agentA8 disp java.awt.Point[x=-4,y=-9] token false
+ --------------------------------- 
+Step 10
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+>>agentA12 sees agentA2 disp java.awt.Point[x=0,y=-1] token true
+groupExtended: Leader {agentA12}agentA12,  by group Leader {agentA2}agentA2, agentA8,  step 11
+ --------------------------------- 
+Step 11
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 12
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+>>agentA1 sees agentA8 disp java.awt.Point[x=-4,y=-8] token true
+groupExtended: Leader {agentA18}agentA18, agentA19, agentA1,  by group Leader {agentA12}agentA12, agentA2, agentA8,  step 13
+ --------------------------------- 
+Step 13
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 14
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 15
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 16
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 17
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 18
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 19
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 20
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 21
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 22
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 23
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+> ! > 24 MASTERGRUPA agentA2!!!
+
+ --------------------------------- 
+Step 24
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 25
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 26
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 27
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 28
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 29
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+>>agentA18 sees agentA3 disp java.awt.Point[x=-1,y=13] token true
+MasterGroupExtended: Leader {agentA18}agentA18, agentA19, agentA1, agentA12, agentA2, agentA8,  by group Leader {agentA10}agentA10, agentA3, agentA4, agentA7,  step 30
+ --------------------------------- 
+Step 30
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 31
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 32
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 33
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 34
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 35
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 36
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 37
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+>>agentA17 sees agentA15 disp java.awt.Point[x=-8,y=13] token true
+groupExtended: Leader {agentA17}agentA17, agentA5,  by group Leader {agentA11}agentA11, agentA15,  step 38
+ --------------------------------- 
+Step 38
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 39
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 40
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 41
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 42
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 43
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 44
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 45
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 46
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 47
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 48
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 49
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 50
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 51
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 52
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 53
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 54
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 55
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 56
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 57
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 58
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 59
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 60
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 61
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 62
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 63
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 64
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 65
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 66
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 67
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 68
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 69
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 70
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+>>agentA4 sees agentA5 disp java.awt.Point[x=-14,y=-5] token true
+MasterGroupExtended: Leader {agentA18}agentA18, agentA19, agentA1, agentA12, agentA2, agentA8, agentA10, agentA3, agentA4, agentA7,  by group Leader {agentA17}agentA17, agentA5, agentA11, agentA15,  step 71
+ --------------------------------- 
+Step 71
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 72
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 73
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 74
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 75
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 76
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 77
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 78
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 79
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 80
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 81
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 82
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 83
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 84
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 85
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 86
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 87
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 88
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 89
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 90
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 91
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 92
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 93
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 94
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 95
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 96
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+ --------------------------------- 
+Step 97
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0

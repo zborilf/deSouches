@@ -1,0 +1,5447 @@
+>>agentA1 sees agentA7 disp java.awt.Point[x=2,y=0] token true
+groupExtended: Leader {agentA1}agentA1,  by group Leader {agentA7}agentA7,  step 483
+>>agentA5 sees agentA9 disp java.awt.Point[x=3,y=0] token false
+>>agentA16 sees agentA1 disp java.awt.Point[x=-1,y=-2] token false
+>>agentA16 sees agentA7 disp java.awt.Point[x=-1,y=-2] token false
+>>agentA10 sees agentA5 disp java.awt.Point[x=0,y=4] token false
+ --------------------------------- 
+Step 483
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task16
+group option task20
+agentA18 needs job
+agentA13 needs job
+agentA3 needs job
+agentA7 needs job
+agentA6 needs job
+>>agentA5 sees agentA9 disp java.awt.Point[x=3,y=0] token true
+groupExtended: Leader {agentA5}agentA5,  by group Leader {agentA9}agentA9,  step 484
+>>agentA16 sees agentA1 disp java.awt.Point[x=-1,y=-2] token false
+>>agentA16 sees agentA7 disp java.awt.Point[x=-1,y=-2] token false
+>>agentA10 sees agentA5 disp java.awt.Point[x=0,y=4] token false
+ --------------------------------- 
+Step 484
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task16
+group option task20
+agentA17 needs job
+agentA1 needs job
+>>agentA16 sees agentA7 disp java.awt.Point[x=-1,y=-2] token true
+groupExtended: Leader {agentA16}agentA16,  by group Leader {agentA1}agentA1, agentA7,  step 485
+>>agentA1 sees agentA6 disp java.awt.Point[x=0,y=-2] token false
+>>agentA7 sees agentA6 disp java.awt.Point[x=0,y=-2] token false
+>>agentA10 sees agentA5 disp java.awt.Point[x=0,y=4] token false
+>>agentA18 sees agentA13 disp java.awt.Point[x=0,y=2] token false
+>>agentA16 sees agentA6 disp java.awt.Point[x=0,y=-2] token false
+ --------------------------------- 
+Step 485
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task16
+group option task20
+agentA4 needs job
+>>agentA7 sees agentA6 disp java.awt.Point[x=0,y=-2] token true
+groupExtended: Leader {agentA16}agentA16, agentA1, agentA7,  by group Leader {agentA6}agentA6,  step 486
+>>agentA13 sees agentA9 disp java.awt.Point[x=-7,y=3] token false
+ --------------------------------- 
+Step 486
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task16
+group option task20
+>>agentA18 sees agentA13 disp java.awt.Point[x=0,y=2] token true
+groupExtended: Leader {agentA18}agentA18,  by group Leader {agentA13}agentA13,  step 487
+>>agentA10 sees agentA5 disp java.awt.Point[x=0,y=4] token false
+ --------------------------------- 
+Step 487
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task16
+group option task20
+>>agentA13 sees agentA9 disp java.awt.Point[x=-7,y=5] token true
+groupExtended: Leader {agentA18}agentA18, agentA13,  by group Leader {agentA5}agentA5, agentA9,  step 488
+ --------------------------------- 
+Step 488
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task16
+group option task20
+agentA14 needs job
+agentA5 needs job
+agentA19 needs job
+agentA20 needs job
+agentA11 needs job
+agentA8 needs job
+agentA10 needs job
+>>agentA5 sees agentA10 disp java.awt.Point[x=-7,y=1] token true
+groupExtended: Leader {agentA18}agentA18, agentA13, agentA5, agentA9,  by group Leader {agentA10}agentA10,  step 489
+>>agentA10 sees agentA4 disp java.awt.Point[x=-4,y=-2] token false
+ --------------------------------- 
+Step 489
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task16
+group option task20
+agentA12 needs job
+agentA9 needs job
+agentA15 needs job
+agentA2 needs job
+>>agentA10 sees agentA4 disp java.awt.Point[x=-4,y=-2] token true
+groupExtended: Leader {agentA18}agentA18, agentA13, agentA5, agentA9, agentA10,  by group Leader {agentA4}agentA4,  step 490
+ --------------------------------- 
+Step 490
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task16
+group option task20
+agentA16 needs job
+ --------------------------------- 
+Step 491
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task16
+group option task20
+ --------------------------------- 
+Step 492
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+>>agentA17 sees agentA20 disp java.awt.Point[x=5,y=-9] token true
+groupExtended: Leader {agentA17}agentA17,  by group Leader {agentA20}agentA20,  step 493
+ --------------------------------- 
+Step 493
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 494
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 495
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 496
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+>>agentA19 sees agentA12 disp java.awt.Point[x=5,y=-7] token true
+groupExtended: Leader {agentA19}agentA19,  by group Leader {agentA12}agentA12,  step 497
+ --------------------------------- 
+Step 497
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 498
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 499
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 500
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 501
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 502
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 503
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 504
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 505
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 506
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 507
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+>>agentA16 sees agentA12 disp java.awt.Point[x=6,y=13] token true
+groupExtended: Leader {agentA16}agentA16, agentA1, agentA7, agentA6,  by group Leader {agentA19}agentA19, agentA12,  step 508
+ --------------------------------- 
+Step 508
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+> ! > 509 MASTERGRUPA agentA19!!!
+
+ --------------------------------- 
+Step 509
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 310
+group option task21
+---------------
+509: Task : task21 type 1 deadline 565
+>> 0:::- agentA16:[-2,1] -> [7,2] -> [-2,2] sup. price 19
+>> 0:::- agentA7:[1,-3] -> [7,2] -> [-2,2] sup. price 20
+Checkuju pozici golu java.awt.Point[x=-2,y=2]
+Vysledek je true
+---------------
+---------------
+initScenario: 
+!@!  TASK:task21 type 1 / , Group masteragentA16
+@@Master agentA16  pujde na java.awt.Point[x=7,y=2] pro 0 a do golu java.awt.Point[x=-2,y=2] body is  [0,0:1003] [0,1:0],
+@@ Leutnant1 agentA7  pujde na java.awt.Point[x=7,y=2] pro 0 a do golu java.awt.Point[x=-2,y=5] body is  [0,0:1003] [0,-1:0]
+>>agentA14 sees agentA15 disp java.awt.Point[x=-28,y=-1] token true
+groupExtended: Leader {agentA14}agentA14,  by group Leader {agentA15}agentA15,  step 510
+ --------------------------------- 
+Step 510
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+goalCompleted: SCEN: Task te chvali, agente agentA7 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentA16 za detachAllGoal
+ --------------------------------- 
+Step 511
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 512
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 513
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 514
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 515
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 516
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task21
+group option task19
+group option task22
+group option task20
+ --------------------------------- 
+Step 517
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 518
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+>>agentA16 sees agentA8 disp java.awt.Point[x=38,y=0] token true
+MasterGroupExtended: Leader {agentA16}agentA16, agentA1, agentA7, agentA6, agentA19, agentA12,  by group Leader {agentA8}agentA8,  step 519
+ --------------------------------- 
+Step 519
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 520
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 521
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 522
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+goalCompleted: SCEN: Task te chvali, agente agentA7 za get block 2022
+ --------------------------------- 
+Step 523
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+goalFailed: SCEN: Task to je smula agente agentA16 kvuli get block 2022
+goalFailed: SCEN: Task to je smula agente agentA7 kvuli goToPosition
+goalFailed: SCEN: Task to je smula agente agentA16 kvuli get block 2022
+ --------------------------------- 
+Step 524
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+goalFailed: SCEN: Task to je smula agente agentA16 kvuli get block 2022
+ --------------------------------- 
+Step 525
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+>>agentA16 sees agentA2 disp java.awt.Point[x=46,y=3] token true
+MasterGroupExtended: Leader {agentA16}agentA16, agentA1, agentA7, agentA6, agentA19, agentA12, agentA8,  by group Leader {agentA2}agentA2,  step 526
+ --------------------------------- 
+Step 526
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 527
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+goalCompleted: SCEN: Task te chvali, agente agentA16 za get block 2022
+ --------------------------------- 
+Step 528
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+goalFailed: SCEN: Task to je smula agente agentA16 kvuli goToPosition
+ --------------------------------- 
+Step 529
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 530
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+goalFailed: SCEN: Task to je smula agente agentA7 kvuli evasiveManoeuvre
+goalFailed: SCEN: Task to je smula agente agentA16 kvuli evasiveManoeuvre
+ --------------------------------- 
+Step 531
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+goalFailed: SCEN: Task to je smula agente agentA16 kvuli goToPosition
+ --------------------------------- 
+Step 532
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 533
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+>>agentA17 sees agentA15 disp java.awt.Point[x=7,y=8] token true
+groupExtended: Leader {agentA17}agentA17, agentA20,  by group Leader {agentA14}agentA14, agentA15,  step 534
+ --------------------------------- 
+Step 534
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 535
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 536
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+goalFailed: SCEN: Task to je smula agente agentA16 kvuli evasiveManoeuvre
+ --------------------------------- 
+Step 537
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 538
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+>>agentA17 sees agentA5 disp java.awt.Point[x=11,y=-19] token true
+groupExtended: Leader {agentA17}agentA17, agentA20, agentA14, agentA15,  by group Leader {agentA18}agentA18, agentA13, agentA5, agentA9, agentA10, agentA4,  step 539
+ --------------------------------- 
+Step 539
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 540
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 541
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+goalFailed: SCEN: Task to je smula agente agentA16 kvuli goToPosition
+ --------------------------------- 
+Step 542
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 543
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 544
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 545
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+goalCompleted: SCEN: Task te chvali, agente agentA16 za evasiveManoeuvre
+ --------------------------------- 
+Step 546
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+goalCompleted: SCEN: Task te chvali, agente agentA7 za goToPosition
+ --------------------------------- 
+Step 547
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 548
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 549
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+>>agentA14 sees agentA11 disp java.awt.Point[x=12,y=12] token true
+groupExtended: Leader {agentA17}agentA17, agentA20, agentA14, agentA15, agentA18, agentA13, agentA5, agentA9, agentA10, agentA4,  by group Leader {agentA11}agentA11,  step 550
+ --------------------------------- 
+Step 550
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 551
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 552
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 553
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 554
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 555
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 556
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 557
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+goalCompleted: SCEN: Task te chvali, agente agentA16 za goToPosition
+ --------------------------------- 
+Step 558
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+goalFailed: SCEN: Task to je smula agente agentA16 kvuli connectAndDetach
+ --------------------------------- 
+Step 559
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task21
+group option task22
+group option task20
+ --------------------------------- 
+Step 560
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task24
+group option task21
+group option task22
+ --------------------------------- 
+Step 561
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task24
+group option task21
+group option task22
+goalCompleted: SCEN: Task te chvali, agente agentA7 za connectAndDetach
+goalCompleted: SCEN: Task te chvali, agente agentA16 za connectAndDetach
+ --------------------------------- 
+Step 562
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task24
+group option task21
+group option task22
+ --------------------------------- 
+Step 563
+Active tasks: [task21_0]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+Goal positions allocated: task21 / java.awt.Point[x=-2,y=2]
+Score: 310
+@@! Scenario failed due to timeout task21
+563:scenario failed: task21 reason:  TIMEOUT
+Removing scenario for agentA16
+Removing scenario for agentA7
+Removing scenario dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+Before removeScenario
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@6d1fbb7d
+for task task21
+ -- agentA16,agentA7,
+After removeScenario
+group option task23
+group option task24
+---------------
+563: Task : task24 type 43 deadline 661
+>> 0:::- agentA16:[-2,2] -> [7,2] -> [-2,2] sup. price 18
+Checkuju pozici golu java.awt.Point[x=-2,y=2]
+Vysledek je true
+---------------
+Jednickovej task
+initScenario: 
+!@!  TASK:task24 type 43 / , Group masteragentA16
+@@Master agentA16  pujde na java.awt.Point[x=7,y=2] pro 0 a do golu java.awt.Point[x=-2,y=2] body is  [0,0:1003] [0,1:0]
+ --------------------------------- 
+Step 564
+Active tasks: [task24_559]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task24
+group option task21
+group option task22
+goalCompleted: SCEN: Task te chvali, agente agentA16 za detachAllGoal
+>>agentA8 sees agentA11 disp java.awt.Point[x=34,y=-18] token true
+MasterGroupExtended: Leader {agentA16}agentA16, agentA1, agentA7, agentA6, agentA19, agentA12, agentA8, agentA2,  by group Leader {agentA17}agentA17, agentA20, agentA14, agentA15, agentA18, agentA13, agentA5, agentA9, agentA10, agentA4, agentA11,  step 565
+ --------------------------------- 
+Step 565
+Active tasks: [task24_559]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task24
+group option task21
+group option task22
+agentA7 needs job
+ --------------------------------- 
+Step 566
+Active tasks: [task24_559]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+---------------
+566: Task : task25 type 1 deadline 675
+>> 0:::- agentA7:[-4,5] -> [7,2] -> [33,-25] sup. price 67
+>> 1:::- agentA15:[10,-25] -> [26,-20] -> [33,-25] sup. price 33
+Checkuju pozici golu java.awt.Point[x=33,y=-25]
+Vysledek je true
+---------------
+---------------
+initScenario: 
+!@!  TASK:task25 type 1 / , Group masteragentA16
+@@Master agentA7  pujde na java.awt.Point[x=7,y=2] pro 0 a do golu java.awt.Point[x=33,y=-25] body is  [0,0:1003] [0,1:0],
+@@ Leutnant1 agentA15  pujde na java.awt.Point[x=26,y=-20] pro 1 a do golu java.awt.Point[x=33,y=-22] body is  [0,0:1003] [0,-1:0]
+ --------------------------------- 
+Step 567
+Active tasks: [task24_559, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+goalCompleted: SCEN: Task te chvali, agente agentA15 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentA7 za detachAllGoal
+>>agentA5 sees agentA3 disp java.awt.Point[x=30,y=29] token true
+MasterGroupExtended: Leader {agentA16}agentA16, agentA1, agentA7, agentA6, agentA19, agentA12, agentA8, agentA2, agentA17, agentA20, agentA14, agentA15, agentA18, agentA13, agentA5, agentA9, agentA10, agentA4, agentA11,  by group Leader {agentA3}agentA3,  step 568
+ --------------------------------- 
+Step 568
+Active tasks: [task24_559, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+---------------
+568: Task : task25 type 1 deadline 675
+>> 0:::- agentA3:[22,-16] -> [25,-1] -> [42,-37] sup. price 71
+>> 1:::- agentA13:[40,-31] -> [26,-35] -> [42,-37] sup. price 36
+Checkuju pozici golu java.awt.Point[x=42,y=-37]
+Vysledek je true
+---------------
+---------------
+initScenario: 
+!@!  TASK:task25 type 1 / , Group masteragentA16
+@@Master agentA3  pujde na java.awt.Point[x=25,y=-1] pro 0 a do golu java.awt.Point[x=42,y=-37] body is  [0,0:1003] [0,1:0],
+@@ Leutnant1 agentA13  pujde na java.awt.Point[x=26,y=-35] pro 1 a do golu java.awt.Point[x=42,y=-34] body is  [0,0:1003] [0,-1:0]
+ --------------------------------- 
+Step 569
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+goalCompleted: SCEN: Task te chvali, agente agentA3 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentA13 za detachAllGoal
+ --------------------------------- 
+Step 570
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+ --------------------------------- 
+Step 571
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+ --------------------------------- 
+Step 572
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+ --------------------------------- 
+Step 573
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+ --------------------------------- 
+Step 574
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+ --------------------------------- 
+Step 575
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+goalFailed: SCEN: Task to je smula agente agentA16 kvuli get block 2022
+ --------------------------------- 
+Step 576
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+goalFailed: SCEN: Task to je smula agente agentA16 kvuli get block 2022
+ --------------------------------- 
+Step 577
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+goalFailed: SCEN: Task to je smula agente agentA16 kvuli get block 2022
+ --------------------------------- 
+Step 578
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+goalFailed: SCEN: Task to je smula agente agentA16 kvuli get block 2022
+ --------------------------------- 
+Step 579
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+goalFailed: SCEN: Task to je smula agente agentA7 kvuli get block 2022
+ --------------------------------- 
+Step 580
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+goalFailed: SCEN: Task to je smula agente agentA7 kvuli get block 2022
+ --------------------------------- 
+Step 581
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+goalFailed: SCEN: Task to je smula agente agentA7 kvuli get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentA16 za get block 2022
+ --------------------------------- 
+Step 582
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+ --------------------------------- 
+Step 583
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+ --------------------------------- 
+Step 584
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+goalCompleted: SCEN: Task te chvali, agente agentA7 za get block 2022
+ --------------------------------- 
+Step 585
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+goalCompleted: SCEN: Task te chvali, agente agentA13 za get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentA15 za get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentA3 za get block 2022
+ --------------------------------- 
+Step 586
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+ --------------------------------- 
+Step 587
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+ --------------------------------- 
+Step 588
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+ --------------------------------- 
+Step 589
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task23
+group option task24
+group option task22
+group option task25
+ --------------------------------- 
+Step 590
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task24
+group option task22
+group option task25
+group option task26
+ --------------------------------- 
+Step 591
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task24
+group option task22
+group option task25
+group option task26
+ --------------------------------- 
+Step 592
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task24
+group option task22
+group option task25
+group option task26
+ --------------------------------- 
+Step 593
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task24
+group option task22
+group option task25
+group option task26
+ --------------------------------- 
+Step 594
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task24
+group option task22
+group option task25
+group option task26
+ --------------------------------- 
+Step 595
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 596
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task24
+group option task27
+group option task25
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA16 za goToPosition
+ --------------------------------- 
+Step 597
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 598
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 310
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 599
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 600
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 601
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 602
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA15 za goToPosition
+ --------------------------------- 
+Step 603
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 604
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 605
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 606
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 607
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA13 za goToPosition
+ --------------------------------- 
+Step 608
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 609
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA3 za get block 2022
+ --------------------------------- 
+Step 610
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 611
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA16 za get block 2022
+ --------------------------------- 
+Step 612
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 613
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 614
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 615
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 616
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 617
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 618
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 619
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+goalFailed: SCEN: Task to je smula agente agentA3 kvuli goToPosition
+ --------------------------------- 
+Step 620
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 621
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 622
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 623
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA3 za evasiveManoeuvre
+ --------------------------------- 
+Step 624
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 625
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 626
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 627
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 628
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 629
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 630
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 631
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 632
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 633
+Active tasks: [task24_559, task25_566, task25_566]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Goal positions allocated: task24 / java.awt.Point[x=-2,y=2]task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]
+Score: 320
+@@! Scenario failed due to timeout task24
+633:scenario failed: task24 reason:  TIMEOUT
+Removing scenario for agentA16
+Removing scenario dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+Before removeScenario
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@3765d75b
+for task task24
+ -- agentA16,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+After removeScenario
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+group option task24
+group option task27
+---------------
+633: Task : task27 type 43 deadline 714
+>> 1:::- agentA1:[66,-15] -> [65,-1] -> [67,0] sup. price 18
+Checkuju pozici golu java.awt.Point[x=67,y=0]
+Vysledek je true
+---------------
+Jednickovej task
+initScenario: 
+!@!  TASK:task27 type 43 / , Group masteragentA16
+@@Master agentA1  pujde na java.awt.Point[x=65,y=-1] pro 1 a do golu java.awt.Point[x=67,y=0] body is  [0,0:1003] [0,1:0]
+ --------------------------------- 
+Step 634
+Active tasks: [task25_566, task25_566, task27_594]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=67,y=0]
+Score: 320
+group option task24
+group option task27
+---------------
+634: Task : task27 type 43 deadline 714
+>> 1:::- agentA16:[28,1] -> [23,-3] -> [2,2] sup. price 35
+Checkuju pozici golu java.awt.Point[x=2,y=2]
+Vysledek je true
+---------------
+Jednickovej task
+initScenario: 
+!@!  TASK:task27 type 43 / , Group masteragentA16
+@@Master agentA16  pujde na java.awt.Point[x=23,y=-3] pro 1 a do golu java.awt.Point[x=2,y=2] body is  [0,0:1003] [0,1:0]
+goalCompleted: SCEN: Task te chvali, agente agentA1 za detachAllGoal
+ --------------------------------- 
+Step 635
+Active tasks: [task25_566, task25_566, task27_594, task27_633]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 636
+Active tasks: [task25_566, task25_566, task27_594, task27_633]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA16 za detachAllGoal
+ --------------------------------- 
+Step 637
+Active tasks: [task25_566, task25_566, task27_594, task27_633]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task25 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]
+Score: 320
+@@! Scenario failed due to timeout task25
+637:scenario failed: task25 reason:  TIMEOUT
+Removing scenario for agentA3
+Removing scenario for agentA13
+Removing scenario dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+Before removeScenario
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@10a446be
+for task task25
+ -- agentA3,agentA13,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+After removeScenario
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+group option task24
+group option task27
+---------------
+637: Task : task27 type 43 deadline 714
+>> 1:::- agentA4:[25,-49] -> [26,-35] -> [42,-37] sup. price 33
+Checkuju pozici golu java.awt.Point[x=42,y=-37]
+Vysledek je true
+---------------
+Jednickovej task
+initScenario: 
+!@!  TASK:task27 type 43 / , Group masteragentA16
+@@Master agentA4  pujde na java.awt.Point[x=26,y=-35] pro 1 a do golu java.awt.Point[x=42,y=-37] body is  [0,0:1003] [0,1:0]
+ --------------------------------- 
+Step 638
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA4 za detachAllGoal
+goalFailed: SCEN: Task to je smula agente agentA7 kvuli goToPosition
+ --------------------------------- 
+Step 639
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 640
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+agentA3 needs job
+agentA13 needs job
+ --------------------------------- 
+Step 641
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 642
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 643
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 644
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA7 za evasiveManoeuvre
+ --------------------------------- 
+Step 645
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 646
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA16 za get block 2022
+ --------------------------------- 
+Step 647
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 648
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 649
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA1 za get block 2022
+ --------------------------------- 
+Step 650
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+goalFailed: SCEN: Task to je smula agente agentA4 kvuli get block 2022
+ --------------------------------- 
+Step 651
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+goalFailed: SCEN: Task to je smula agente agentA4 kvuli get block 2022
+ --------------------------------- 
+Step 652
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+goalFailed: SCEN: Task to je smula agente agentA7 kvuli goToPosition
+ --------------------------------- 
+Step 653
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA1 za goToPosition
+ --------------------------------- 
+Step 654
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA4 za get block 2022
+ --------------------------------- 
+Step 655
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 320
+group option task24
+group option task27
+group option task25
+group option task26
+goalFailed: SCEN: Task to je smula agente agentA7 kvuli evasiveManoeuvre
+ --------------------------------- 
+Step 656
+Active tasks: [task27_594, task27_633, task27_634]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]
+Score: 330
+group option task24
+group option task27
+---------------
+656: Task : task27 type 43 deadline 714
+>> 1:::- agentA9:[37,-35] -> [26,-35] -> [35,-32] sup. price 23
+Checkuju pozici golu java.awt.Point[x=35,y=-32]
+Vysledek je true
+---------------
+Jednickovej task
+initScenario: 
+!@!  TASK:task27 type 43 / , Group masteragentA16
+@@Master agentA9  pujde na java.awt.Point[x=26,y=-35] pro 1 a do golu java.awt.Point[x=35,y=-32] body is  [0,0:1003] [0,1:0]
+ --------------------------------- 
+Step 657
+Active tasks: [task27_594, task27_633, task27_634, task27_637]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]
+Score: 330
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 658
+Active tasks: [task27_594, task27_633, task27_634, task27_637]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]
+Score: 330
+group option task24
+group option task27
+group option task25
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA9 za detachAllGoal
+ --------------------------------- 
+Step 659
+Active tasks: [task27_594, task27_633, task27_634, task27_637]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]
+Score: 330
+group option task24
+group option task27
+group option task25
+group option task26
+goalFailed: SCEN: Task to je smula agente agentA7 kvuli goToPosition
+ --------------------------------- 
+Step 660
+Active tasks: [task27_594, task27_633, task27_634, task27_637]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]
+Score: 330
+group option task24
+group option task27
+group option task25
+group option task26
+ --------------------------------- 
+Step 661
+Active tasks: [task27_594, task27_633, task27_634, task27_637]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]
+Score: 330
+group option task24
+group option task27
+group option task25
+group option task26
+goalFailed: SCEN: Task to je smula agente agentA1 kvuli get block 2022
+goalFailed: SCEN: Task to je smula agente agentA4 kvuli goToPosition
+ --------------------------------- 
+Step 662
+Active tasks: [task27_594, task27_633, task27_634, task27_637]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]
+Score: 330
+group option task27
+group option task28
+group option task25
+group option task26
+ --------------------------------- 
+Step 663
+Active tasks: [task27_594, task27_633, task27_634, task27_637]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]
+Score: 330
+group option task27
+group option task28
+group option task25
+group option task26
+ --------------------------------- 
+Step 664
+Active tasks: [task27_594, task27_633, task27_634, task27_637]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]
+Score: 330
+group option task27
+group option task28
+group option task25
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA1 za get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentA4 za evasiveManoeuvre
+ --------------------------------- 
+Step 665
+Active tasks: [task27_594, task27_633, task27_634, task27_637]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]
+Score: 330
+group option task27
+group option task28
+group option task25
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA7 za evasiveManoeuvre
+ --------------------------------- 
+Step 666
+Active tasks: [task27_594, task27_633, task27_634, task27_637]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]
+Score: 330
+group option task27
+group option task28
+group option task25
+group option task26
+goalFailed: SCEN: Task to je smula agente agentA16 kvuli goToPosition
+ --------------------------------- 
+Step 667
+Active tasks: [task27_594, task27_633, task27_634, task27_637]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]
+Score: 330
+group option task27
+group option task28
+group option task25
+group option task26
+ --------------------------------- 
+Step 668
+Active tasks: [task27_594, task27_633, task27_634, task27_637]
+Active scenarios 
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Goal positions allocated: task25 / java.awt.Point[x=33,y=-25]task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]
+Score: 330
+@@! Scenario failed due to timeout task25
+668:scenario failed: task25 reason:  TIMEOUT
+Removing scenario for agentA7
+Removing scenario for agentA15
+Removing scenario dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+Before removeScenario
+Scenario Two Block scenario / dsMultiagent.dsScenarios.DSSTwoBlocks@687d9315
+for task task25
+ -- agentA7,agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+After removeScenario
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+group option task27
+---------------
+668: Task : task27 type 43 deadline 714
+>> 1:::- agentA7:[31,-19] -> [26,-20] -> [33,-25] sup. price 18
+Checkuju pozici golu java.awt.Point[x=33,y=-25]
+Vysledek je true
+---------------
+Jednickovej task
+initScenario: 
+!@!  TASK:task27 type 43 / , Group masteragentA16
+@@Master agentA7  pujde na java.awt.Point[x=26,y=-20] pro 1 a do golu java.awt.Point[x=33,y=-25] body is  [0,0:1003] [0,1:0]
+ --------------------------------- 
+Step 669
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 330
+group option task27
+group option task28
+group option task25
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA1 za goToPosition
+ --------------------------------- 
+Step 670
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 330
+group option task27
+group option task28
+group option task25
+group option task26
+goalFailed: SCEN: Task to je smula agente agentA7 kvuli detachAllGoal
+ --------------------------------- 
+Step 671
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 330
+group option task27
+group option task28
+group option task25
+group option task26
+agentA15 needs job
+goalFailed: SCEN: Task to je smula agente agentA1 kvuli attachAndSubmit
+goalCompleted: SCEN: Task te chvali, agente agentA16 za evasiveManoeuvre
+ --------------------------------- 
+Step 672
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 330
+group option task27
+group option task28
+group option task25
+group option task26
+ --------------------------------- 
+Step 673
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 330
+group option task27
+group option task28
+group option task25
+group option task26
+ --------------------------------- 
+Step 674
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 330
+group option task27
+group option task28
+group option task25
+group option task26
+ --------------------------------- 
+Step 675
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 330
+group option task27
+group option task28
+group option task25
+group option task26
+ --------------------------------- 
+Step 676
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 330
+group option task29
+group option task27
+group option task28
+group option task26
+ --------------------------------- 
+Step 677
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 330
+group option task29
+group option task27
+group option task28
+group option task26
+ --------------------------------- 
+Step 678
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 330
+group option task29
+group option task27
+group option task28
+group option task26
+goalFailed: SCEN: Task to je smula agente agentA9 kvuli get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentA16 za goToPosition
+ --------------------------------- 
+Step 679
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 330
+group option task29
+group option task27
+group option task28
+group option task26
+goalFailed: SCEN: Task to je smula agente agentA9 kvuli get block 2022
+ --------------------------------- 
+Step 680
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 330
+group option task29
+group option task27
+group option task28
+group option task26
+goalFailed: SCEN: Task to je smula agente agentA9 kvuli get block 2022
+ --------------------------------- 
+Step 681
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 340
+group option task29
+group option task27
+group option task28
+group option task26
+ --------------------------------- 
+Step 682
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 340
+group option task29
+group option task27
+group option task28
+group option task26
+ --------------------------------- 
+Step 683
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 340
+group option task29
+group option task27
+group option task28
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA9 za get block 2022
+ --------------------------------- 
+Step 684
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 340
+group option task29
+group option task27
+group option task28
+group option task26
+ --------------------------------- 
+Step 685
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 340
+group option task29
+group option task27
+group option task28
+group option task26
+ --------------------------------- 
+Step 686
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 340
+group option task29
+group option task27
+group option task28
+group option task26
+ --------------------------------- 
+Step 687
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 340
+group option task29
+group option task27
+group option task28
+group option task26
+ --------------------------------- 
+Step 688
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 340
+group option task29
+group option task27
+group option task28
+group option task26
+ --------------------------------- 
+Step 689
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 340
+group option task29
+group option task27
+group option task28
+group option task26
+ --------------------------------- 
+Step 690
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 340
+group option task29
+group option task27
+group option task28
+group option task26
+ --------------------------------- 
+Step 691
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 340
+group option task29
+group option task27
+group option task28
+group option task26
+ --------------------------------- 
+Step 692
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 340
+group option task29
+group option task27
+group option task28
+group option task26
+ --------------------------------- 
+Step 693
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 340
+group option task29
+group option task27
+group option task28
+group option task26
+ --------------------------------- 
+Step 694
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 340
+group option task29
+group option task27
+group option task28
+group option task26
+ --------------------------------- 
+Step 695
+Active tasks: [task27_594, task27_633, task27_634, task27_637, task27_656]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=2,y=2]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]
+Score: 340
+@@! Scenario failed due to timeout task27
+695:scenario failed: task27 reason:  TIMEOUT
+Removing scenario for agentA16
+Removing scenario dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+Before removeScenario
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@60b2bcb
+for task task27
+ -- agentA16,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+After removeScenario
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+group option task29
+group option task27
+group option task28
+---------------
+695: Task : task28 type 11 deadline 773
+>> 0:::- agentA16:[19,-3] -> [7,2] -> [2,2] sup. price 22
+>> 0:::- agentA3:[39,11] -> [7,2] -> [2,2] sup. price 46
+>> 0:::- agentA6:[67,-25] -> [7,2] -> [2,2] sup. price 42
+Checkuju pozici golu java.awt.Point[x=2,y=2]
+Vysledek je true
+---------------
+Budou trojicky
+TT:11/0agentA16/0agentA3/0agentA6/
+ --------------------------------- 
+Step 696
+Active tasks: [task27_594, task27_634, task27_637, task27_656, task28_662]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]task28 / java.awt.Point[x=2,y=2]
+Score: 340
+group option task29
+group option task27
+group option task28
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA3 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentA16 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentA6 za detachAllGoal
+ --------------------------------- 
+Step 697
+Active tasks: [task27_594, task27_634, task27_637, task27_656, task28_662]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]task28 / java.awt.Point[x=2,y=2]
+Score: 340
+group option task29
+group option task27
+group option task28
+group option task26
+goalCompleted: SCEN: Task te chvali, agente agentA9 za goToPosition
+ --------------------------------- 
+Step 698
+Active tasks: [task27_594, task27_634, task27_637, task27_656, task28_662]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=42,y=-37]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]task28 / java.awt.Point[x=2,y=2]
+Score: 340
+@@! Scenario failed due to timeout task27
+698:scenario failed: task27 reason:  TIMEOUT
+Removing scenario for agentA4
+Removing scenario dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+Before removeScenario
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@7ec0eeb1
+for task task27
+ -- agentA4,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+After removeScenario
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+group option task29
+group option task27
+group option task28
+group option task26
+ --------------------------------- 
+Step 699
+Active tasks: [task27_594, task27_637, task27_656, task28_662]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]task28 / java.awt.Point[x=2,y=2]
+Score: 340
+group option task29
+group option task27
+group option task28
+group option task26
+ --------------------------------- 
+Step 700
+Active tasks: [task27_594, task27_637, task27_656, task28_662]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]task28 / java.awt.Point[x=2,y=2]
+Score: 350
+group option task29
+group option task27
+group option task30
+---------------
+700: Task : task30 type 43 deadline 787
+>> 0:::- agentA15:[30,-18] -> [47,-15] -> [42,-37] sup. price 47
+Checkuju pozici golu java.awt.Point[x=42,y=-37]
+Vysledek je true
+---------------
+Jednickovej task
+initScenario: 
+!@!  TASK:task30 type 43 / , Group masteragentA16
+@@Master agentA15  pujde na java.awt.Point[x=47,y=-15] pro 0 a do golu java.awt.Point[x=42,y=-37] body is  [0,0:1003] [0,1:0]
+agentA4 needs job
+ --------------------------------- 
+Step 701
+Active tasks: [task27_594, task27_637, task27_656, task28_662, task30_699]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]
+Score: 350
+group option task29
+group option task27
+group option task30
+group option task28
+goalCompleted: SCEN: Task te chvali, agente agentA15 za detachAllGoal
+ --------------------------------- 
+Step 702
+Active tasks: [task27_594, task27_637, task27_656, task28_662, task30_699]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]
+Score: 350
+group option task29
+group option task27
+group option task30
+group option task28
+ --------------------------------- 
+Step 703
+Active tasks: [task27_594, task27_637, task27_656, task28_662, task30_699]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]
+Score: 350
+group option task29
+group option task27
+group option task30
+group option task28
+ --------------------------------- 
+Step 704
+Active tasks: [task27_594, task27_637, task27_656, task28_662, task30_699]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]
+Score: 350
+group option task29
+group option task27
+group option task30
+group option task28
+ --------------------------------- 
+Step 705
+Active tasks: [task27_594, task27_637, task27_656, task28_662, task30_699]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]
+Score: 350
+group option task29
+group option task27
+group option task30
+group option task28
+ --------------------------------- 
+Step 706
+Active tasks: [task27_594, task27_637, task27_656, task28_662, task30_699]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]
+Score: 350
+group option task29
+group option task27
+group option task30
+group option task28
+ --------------------------------- 
+Step 707
+Active tasks: [task27_594, task27_637, task27_656, task28_662, task30_699]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=35,y=-32]task27 / java.awt.Point[x=33,y=-25]task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]
+Score: 350
+@@! Scenario failed due to timeout task27
+707:scenario failed: task27 reason:  TIMEOUT
+Removing scenario for agentA7
+Removing scenario dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+Before removeScenario
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@565498ec
+for task task27
+ -- agentA7,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+After removeScenario
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+group option task29
+group option task27
+group option task30
+---------------
+707: Task : task30 type 43 deadline 787
+>> 0:::- agentA7:[31,-19] -> [47,-15] -> [33,-25] sup. price 44
+Checkuju pozici golu java.awt.Point[x=33,y=-25]
+Vysledek je true
+---------------
+Jednickovej task
+initScenario: 
+!@!  TASK:task30 type 43 / , Group masteragentA16
+@@Master agentA7  pujde na java.awt.Point[x=47,y=-15] pro 0 a do golu java.awt.Point[x=33,y=-25] body is  [0,0:1003] [0,1:0]
+ --------------------------------- 
+Step 708
+Active tasks: [task27_594, task27_637, task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task27 / java.awt.Point[x=35,y=-32]task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+@@! Scenario failed due to timeout task27
+708:scenario failed: task27 reason:  TIMEOUT
+Removing scenario for agentA9
+Removing scenario dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+Before removeScenario
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@23828ff0
+for task task27
+ -- agentA9,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+After removeScenario
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+group option task29
+group option task27
+group option task30
+group option task28
+goalCompleted: SCEN: Task te chvali, agente agentA7 za detachAllGoal
+ --------------------------------- 
+Step 709
+Active tasks: [task27_594, task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task27
+group option task30
+group option task28
+ --------------------------------- 
+Step 710
+Active tasks: [task27_594, task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task27
+group option task30
+group option task28
+agentA9 needs job
+ --------------------------------- 
+Step 711
+Active tasks: [task27_594, task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task27
+group option task30
+group option task28
+ --------------------------------- 
+Step 712
+Active tasks: [task27_594, task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task27
+group option task30
+group option task28
+goalCompleted: SCEN: Task te chvali, agente agentA16 za get block 2022
+ --------------------------------- 
+Step 713
+Active tasks: [task27_594, task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task27
+group option task30
+group option task28
+ --------------------------------- 
+Step 714
+Active tasks: [task27_594, task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task27
+group option task30
+group option task28
+ --------------------------------- 
+Step 715
+Active tasks: [task27_594, task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task27 / java.awt.Point[x=67,y=0]task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+@@! Scenario failed due to timeout task27
+715:scenario failed: task27 reason:  TIMEOUT
+Removing scenario for agentA1
+Removing scenario dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+Before removeScenario
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@13ac0ad4
+for task task27
+ -- agentA1,
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+After removeScenario
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+group option task29
+group option task30
+group option task28
+group option task31
+goalFailed: SCEN: Task to je smula agente agentA15 kvuli get block 2022
+ --------------------------------- 
+Step 716
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalFailed: SCEN: Task to je smula agente agentA15 kvuli get block 2022
+ --------------------------------- 
+Step 717
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+ --------------------------------- 
+Step 718
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+agentA1 needs job
+ --------------------------------- 
+Step 719
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalCompleted: SCEN: Task te chvali, agente agentA15 za get block 2022
+ --------------------------------- 
+Step 720
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+ --------------------------------- 
+Step 721
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalFailed: SCEN: Task to je smula agente agentA7 kvuli get block 2022
+ --------------------------------- 
+Step 722
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalFailed: SCEN: Task to je smula agente agentA7 kvuli get block 2022
+ --------------------------------- 
+Step 723
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalFailed: SCEN: Task to je smula agente agentA3 kvuli get block 2022
+goalFailed: SCEN: Task to je smula agente agentA7 kvuli get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentA16 za goToPosition
+ --------------------------------- 
+Step 724
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalFailed: SCEN: Task to je smula agente agentA6 kvuli get block 2022
+goalFailed: SCEN: Task to je smula agente agentA7 kvuli get block 2022
+ --------------------------------- 
+Step 725
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalFailed: SCEN: Task to je smula agente agentA6 kvuli get block 2022
+goalFailed: SCEN: Task to je smula agente agentA7 kvuli get block 2022
+ --------------------------------- 
+Step 726
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalFailed: SCEN: Task to je smula agente agentA6 kvuli get block 2022
+goalFailed: SCEN: Task to je smula agente agentA7 kvuli get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentA3 za get block 2022
+ --------------------------------- 
+Step 727
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalFailed: SCEN: Task to je smula agente agentA3 kvuli goToPosition
+goalFailed: SCEN: Task to je smula agente agentA6 kvuli get block 2022
+ --------------------------------- 
+Step 728
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalFailed: SCEN: Task to je smula agente agentA6 kvuli get block 2022
+ --------------------------------- 
+Step 729
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalFailed: SCEN: Task to je smula agente agentA6 kvuli get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentA7 za get block 2022
+ --------------------------------- 
+Step 730
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+ --------------------------------- 
+Step 731
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalFailed: SCEN: Task to je smula agente agentA15 kvuli goToPosition
+ --------------------------------- 
+Step 732
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalFailed: SCEN: Task to je smula agente agentA3 kvuli evasiveManoeuvre
+goalCompleted: SCEN: Task te chvali, agente agentA6 za get block 2022
+ --------------------------------- 
+Step 733
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalFailed: SCEN: Task to je smula agente agentA3 kvuli goToPosition
+ --------------------------------- 
+Step 734
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+ --------------------------------- 
+Step 735
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+ --------------------------------- 
+Step 736
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+ --------------------------------- 
+Step 737
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+ --------------------------------- 
+Step 738
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+ --------------------------------- 
+Step 739
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalCompleted: SCEN: Task te chvali, agente agentA3 za evasiveManoeuvre
+ --------------------------------- 
+Step 740
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+ --------------------------------- 
+Step 741
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalCompleted: SCEN: Task te chvali, agente agentA15 za evasiveManoeuvre
+ --------------------------------- 
+Step 742
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+ --------------------------------- 
+Step 743
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalFailed: SCEN: Task to je smula agente agentA6 kvuli goToPosition
+ --------------------------------- 
+Step 744
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+ --------------------------------- 
+Step 745
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalFailed: SCEN: Task to je smula agente agentA3 kvuli goToPosition
+ --------------------------------- 
+Step 746
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+ --------------------------------- 
+Step 747
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+ --------------------------------- 
+Step 748
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+goalFailed: SCEN: Task to je smula agente agentA15 kvuli goToPosition
+goalCompleted: SCEN: Task te chvali, agente agentA3 za evasiveManoeuvre
+ --------------------------------- 
+Step 749
+Active tasks: [task28_662, task30_699, task30_700]
+Active scenarios 
+Scenario Three Block scenario / dsMultiagent.dsScenarios.DSSThreeBlocks@5c31c519
+for task task28
+ -- agentA16,agentA3,agentA6,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@57c0634b
+for task task30
+ -- agentA15,
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@15659f9b
+for task task30
+ -- agentA7,
+Goal positions allocated: task28 / java.awt.Point[x=2,y=2]task30 / java.awt.Point[x=42,y=-37]task30 / java.awt.Point[x=33,y=-25]
+Score: 350
+group option task29
+group option task30
+group option task28
+group option task31
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1
+ FINAL RANKING: 1

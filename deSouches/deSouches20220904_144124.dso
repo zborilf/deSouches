@@ -1,0 +1,4196 @@
+>>agentA16 sees agentA1 disp java.awt.Point[x=2,y=0] token true
+groupExtended: Leader {agentA16}agentA16,  by group Leader {agentA1}agentA1,  step 312
+>>agentA2 sees agentA8 disp java.awt.Point[x=-1,y=4] token false
+>>agentA13 sees agentA8 disp java.awt.Point[x=1,y=3] token false
+>>agentA12 sees agentA6 disp java.awt.Point[x=-3,y=0] token false
+>>agentA13 sees agentA2 disp java.awt.Point[x=2,y=-1] token false
+>>agentA16 sees agentA14 disp java.awt.Point[x=0,y=3] token false
+>>agentA1 sees agentA14 disp java.awt.Point[x=0,y=3] token false
+>>agentA10 sees agentA12 disp java.awt.Point[x=-2,y=-3] token false
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task11
+group option task14
+agentA3 needs job
+agentA15 needs job
+agentA17 needs job
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+agentA16 needs job
+agentA2 needs job
+agentA11 needs job
+agentA9 needs job
+agentA10 needs job
+agentA7 needs job
+agentA6 needs job
+agentA19 needs job
+agentA20 needs job
+agentA12 needs job
+agentA18 needs job
+agentA8 needs job
+agentA4 needs job
+agentA1 needs job
+agentA13 needs job
+agentA14 needs job
+>>agentA18 sees agentA11 disp java.awt.Point[x=-4,y=-1] token true
+groupExtended: Leader {agentA18}agentA18,  by group Leader {agentA11}agentA11,  step 1
+>>agentA11 sees agentA13 disp java.awt.Point[x=-4,y=-3] token false
+>>agentA3 sees agentA9 disp java.awt.Point[x=1,y=0] token false
+>>agentA2 sees agentA5 disp java.awt.Point[x=2,y=-2] token false
+>>agentA17 sees agentA14 disp java.awt.Point[x=-1,y=0] token false
+ --------------------------------- 
+Step 1
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+agentA5 needs job
+>>agentA11 sees agentA2 disp java.awt.Point[x=0,y=1] token true
+groupExtended: Leader {agentA18}agentA18, agentA11,  by group Leader {agentA2}agentA2,  step 2
+>>agentA11 sees agentA13 disp java.awt.Point[x=-4,y=-3] token false
+>>agentA3 sees agentA9 disp java.awt.Point[x=1,y=0] token false
+>>agentA1 sees agentA14 disp java.awt.Point[x=1,y=1] token false
+>>agentA4 sees agentA9 disp java.awt.Point[x=0,y=1] token false
+>>agentA17 sees agentA14 disp java.awt.Point[x=-1,y=0] token false
+>>agentA11 sees agentA15 disp java.awt.Point[x=-4,y=-2] token false
+>>agentA2 sees agentA5 disp java.awt.Point[x=2,y=-1] token false
+ --------------------------------- 
+Step 2
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA3 sees agentA4 disp java.awt.Point[x=1,y=-1] token true
+groupExtended: Leader {agentA3}agentA3,  by group Leader {agentA4}agentA4,  step 3
+>>agentA11 sees agentA15 disp java.awt.Point[x=-4,y=-2] token false
+>>agentA1 sees agentA14 disp java.awt.Point[x=1,y=1] token false
+>>agentA4 sees agentA9 disp java.awt.Point[x=1,y=0] token false
+ --------------------------------- 
+Step 3
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA12 sees agentA7 disp java.awt.Point[x=-1,y=1] token true
+groupExtended: Leader {agentA12}agentA12,  by group Leader {agentA7}agentA7,  step 4
+>>agentA11 sees agentA13 disp java.awt.Point[x=-4,y=-3] token false
+>>agentA4 sees agentA9 disp java.awt.Point[x=1,y=0] token false
+ --------------------------------- 
+Step 4
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA11 sees agentA15 disp java.awt.Point[x=-4,y=-2] token true
+groupExtended: Leader {agentA18}agentA18, agentA11, agentA2,  by group Leader {agentA15}agentA15,  step 5
+>>agentA1 sees agentA17 disp java.awt.Point[x=2,y=1] token false
+>>agentA4 sees agentA9 disp java.awt.Point[x=1,y=0] token false
+ --------------------------------- 
+Step 5
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA1 sees agentA17 disp java.awt.Point[x=2,y=1] token true
+groupExtended: Leader {agentA16}agentA16, agentA1,  by group Leader {agentA17}agentA17,  step 6
+>>agentA11 sees agentA13 disp java.awt.Point[x=-4,y=-3] token false
+>>agentA16 sees agentA10 disp java.awt.Point[x=0,y=-1] token false
+>>agentA4 sees agentA9 disp java.awt.Point[x=1,y=0] token false
+>>agentA15 sees agentA13 disp java.awt.Point[x=-4,y=-3] token false
+ --------------------------------- 
+Step 6
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA11 sees agentA13 disp java.awt.Point[x=-4,y=-3] token true
+groupExtended: Leader {agentA18}agentA18, agentA11, agentA2, agentA15,  by group Leader {agentA13}agentA13,  step 7
+>>agentA16 sees agentA10 disp java.awt.Point[x=0,y=-1] token false
+>>agentA4 sees agentA9 disp java.awt.Point[x=1,y=0] token false
+ --------------------------------- 
+Step 7
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA17 sees agentA14 disp java.awt.Point[x=1,y=1] token true
+groupExtended: Leader {agentA16}agentA16, agentA1, agentA17,  by group Leader {agentA14}agentA14,  step 8
+>>agentA3 sees agentA9 disp java.awt.Point[x=1,y=0] token false
+>>agentA4 sees agentA9 disp java.awt.Point[x=1,y=0] token false
+>>agentA18 sees agentA5 disp java.awt.Point[x=2,y=-1] token false
+ --------------------------------- 
+Step 8
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA18 sees agentA5 disp java.awt.Point[x=2,y=-1] token true
+groupExtended: Leader {agentA18}agentA18, agentA11, agentA2, agentA15, agentA13,  by group Leader {agentA5}agentA5,  step 9
+>>agentA16 sees agentA10 disp java.awt.Point[x=0,y=-1] token false
+>>agentA3 sees agentA9 disp java.awt.Point[x=1,y=0] token false
+>>agentA4 sees agentA9 disp java.awt.Point[x=1,y=0] token false
+ --------------------------------- 
+Step 9
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA16 sees agentA10 disp java.awt.Point[x=0,y=-1] token true
+groupExtended: Leader {agentA16}agentA16, agentA1, agentA17, agentA14,  by group Leader {agentA10}agentA10,  step 10
+>>agentA3 sees agentA9 disp java.awt.Point[x=1,y=0] token false
+>>agentA4 sees agentA9 disp java.awt.Point[x=1,y=0] token false
+ --------------------------------- 
+Step 10
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+>>agentA3 sees agentA9 disp java.awt.Point[x=1,y=0] token true
+groupExtended: Leader {agentA3}agentA3, agentA4,  by group Leader {agentA9}agentA9,  step 11
+ --------------------------------- 
+Step 11
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 12
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 13
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 14
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 15
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 16
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 17
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 18
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 19
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 20
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 21
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 22
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 23
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 24
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 25
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 26
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 27
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 28
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 29
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 30
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 31
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 32
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 33
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 34
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 35
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 36
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 37
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 38
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 39
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 40
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 41
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 42
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 43
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 44
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 45
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 46
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 47
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 48
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 49
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 50
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 51
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 52
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 53
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 54
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 55
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 56
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 57
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 58
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 59
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 60
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 61
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 62
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 63
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 64
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 65
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 66
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 67
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 68
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 69
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 70
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 71
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 72
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 73
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 74
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+ --------------------------------- 
+Step 75
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task2
+group option task3
+group option task4
+ --------------------------------- 
+Step 76
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task2
+group option task3
+group option task4
+ --------------------------------- 
+Step 77
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task0
+group option task2
+group option task4
+ --------------------------------- 
+Step 78
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task0
+group option task2
+group option task4
+ --------------------------------- 
+Step 79
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task0
+group option task2
+group option task4
+ --------------------------------- 
+Step 80
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task0
+group option task2
+group option task4
+ --------------------------------- 
+Step 81
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task0
+group option task2
+group option task4
+ --------------------------------- 
+Step 82
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task0
+group option task2
+group option task4
+ --------------------------------- 
+Step 83
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task0
+group option task2
+group option task4
+ --------------------------------- 
+Step 84
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task0
+group option task2
+group option task4
+ --------------------------------- 
+Step 85
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task0
+group option task2
+group option task4
+ --------------------------------- 
+Step 86
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task0
+group option task2
+group option task4
+ --------------------------------- 
+Step 87
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task0
+group option task2
+group option task4
+ --------------------------------- 
+Step 88
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task0
+group option task2
+group option task4
+ --------------------------------- 
+Step 89
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task0
+group option task2
+group option task4
+ --------------------------------- 
+Step 90
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task0
+group option task2
+group option task4
+ --------------------------------- 
+Step 91
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task0
+group option task2
+group option task4
+ --------------------------------- 
+Step 92
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task0
+group option task2
+group option task4
+ --------------------------------- 
+Step 93
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task0
+group option task2
+group option task4
+ --------------------------------- 
+Step 94
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task0
+group option task4
+ --------------------------------- 
+Step 95
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task0
+group option task4
+ --------------------------------- 
+Step 96
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task0
+group option task4
+ --------------------------------- 
+Step 97
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task0
+group option task4
+ --------------------------------- 
+Step 98
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 99
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 100
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 101
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 102
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 103
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 104
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 105
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 106
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 107
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 108
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 109
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 110
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 111
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 112
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 113
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 114
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 115
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 116
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 117
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 118
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 119
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 120
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 121
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 122
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 123
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 124
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 125
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 126
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 127
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 128
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 129
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 130
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 131
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 132
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 133
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 134
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 135
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 136
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 137
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 138
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 139
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 140
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 141
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 142
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 143
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 144
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 145
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 146
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 147
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 148
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 149
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 150
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task5
+group option task6
+group option task7
+group option task4
+ --------------------------------- 
+Step 151
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 152
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 153
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 154
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 155
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 156
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 157
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 158
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 159
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 160
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 161
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 162
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 163
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 164
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 165
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 166
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 167
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 168
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 169
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 170
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 171
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 172
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 173
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 174
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 175
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 176
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 177
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 178
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 179
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 180
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 181
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 182
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 183
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 184
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 185
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 186
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 187
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 188
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 189
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 190
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 191
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task4
+ --------------------------------- 
+Step 192
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 193
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 194
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 195
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 196
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 197
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 198
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 199
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 200
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 201
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 202
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 203
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 204
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 205
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 206
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 207
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 208
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 209
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 210
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 211
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 212
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task6
+group option task7
+group option task8
+group option task9
+ --------------------------------- 
+Step 213
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task7
+group option task10
+group option task8
+group option task9
+ --------------------------------- 
+Step 214
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task7
+group option task10
+group option task8
+group option task9
+ --------------------------------- 
+Step 215
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task10
+group option task8
+group option task11
+group option task9
+ --------------------------------- 
+Step 216
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task10
+group option task8
+group option task11
+group option task9
+ --------------------------------- 
+Step 217
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task10
+group option task8
+group option task11
+group option task9
+ --------------------------------- 
+Step 218
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task10
+group option task8
+group option task11
+group option task9
+ --------------------------------- 
+Step 219
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task10
+group option task8
+group option task11
+group option task9
+ --------------------------------- 
+Step 220
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task10
+group option task8
+group option task11
+group option task9
+ --------------------------------- 
+Step 221
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task10
+group option task8
+group option task11
+group option task9
+ --------------------------------- 
+Step 222
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task10
+group option task8
+group option task11
+group option task9
+ --------------------------------- 
+Step 223
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task10
+group option task8
+group option task11
+group option task9
+ --------------------------------- 
+Step 224
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task10
+group option task8
+group option task11
+group option task9
+ --------------------------------- 
+Step 225
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task10
+group option task8
+group option task11
+group option task9
+ --------------------------------- 
+Step 226
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task10
+group option task8
+group option task11
+group option task9
+ --------------------------------- 
+Step 227
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task10
+group option task8
+group option task11
+group option task9
+ --------------------------------- 
+Step 228
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task10
+group option task8
+group option task11
+group option task9
+ --------------------------------- 
+Step 229
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task10
+group option task8
+group option task11
+group option task9
+ --------------------------------- 
+Step 230
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task10
+group option task8
+group option task11
+group option task9
+ --------------------------------- 
+Step 231
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task10
+group option task8
+group option task11
+group option task9
+ --------------------------------- 
+Step 232
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task10
+group option task8
+group option task11
+group option task9
+ --------------------------------- 
+Step 233
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 234
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 235
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 236
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 237
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 238
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 239
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 240
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 241
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 242
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 243
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 244
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 245
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 246
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 247
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 248
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 249
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 250
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 251
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 252
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 253
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 254
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 255
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 256
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 257
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 258
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 259
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 260
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 261
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 262
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 263
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 264
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 265
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 266
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 267
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 268
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 269
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 270
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 271
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 272
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 273
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task10
+group option task11
+group option task9
+ --------------------------------- 
+Step 274
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 275
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 276
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 277
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 278
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 279
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 280
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 281
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 282
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 283
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 284
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 285
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 286
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 287
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 288
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 289
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 290
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 291
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 292
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 293
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task10
+group option task14
+ --------------------------------- 
+Step 294
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 295
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 296
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 297
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 298
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 299
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 300
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 301
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 302
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 303
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 304
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 305
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 306
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 307
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 308
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 309
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+>>agentA10 sees agentA12 disp java.awt.Point[x=-6,y=-3] token true
+groupExtended: Leader {agentA16}agentA16, agentA1, agentA17, agentA14, agentA10,  by group Leader {agentA12}agentA12, agentA7,  step 310
+ --------------------------------- 
+Step 310
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 310
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 310
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 310
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 310
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 310
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 310
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 311
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 311
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+>>agentA2 sees agentA8 disp java.awt.Point[x=-1,y=5] token true
+groupExtended: Leader {agentA18}agentA18, agentA11, agentA2, agentA15, agentA13, agentA5,  by group Leader {agentA8}agentA8,  step 311
+>>agentA12 sees agentA6 disp java.awt.Point[x=-7,y=-6] token false
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+>>agentA12 sees agentA6 disp java.awt.Point[x=-7,y=-6] token true
+groupExtended: Leader {agentA16}agentA16, agentA1, agentA17, agentA14, agentA10, agentA12, agentA7,  by group Leader {agentA6}agentA6,  step 311
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 313
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 314
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 315
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 316
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 317
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 318
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 319
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 320
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 321
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 322
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 323
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 324
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+> ! > 325 MASTERGRUPA agentA11!!!
+
+ --------------------------------- 
+Step 325
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 326
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 327
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 328
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 329
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 330
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 331
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 332
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 333
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 334
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 335
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 336
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 337
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 338
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 339
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 340
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 341
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 342
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 343
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task13
+group option task16
+group option task14
+group option task15
+ --------------------------------- 
+Step 344
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task13
+group option task16
+group option task14
+group option task15
+ --------------------------------- 
+Step 345
+Active tasks: []
+Active scenarios 
+Goal positions allocated: 
+Score: 0
+group option task16
+group option task17
+---------------
+345: Task : task17 type 43 deadline 455
+>> 0:::- agentA2:[6,10] -> [-6,3] -> [4,-10] sup. price 42
+Checkuju pozici golu java.awt.Point[x=4,y=-10]
+Vysledek je true
+---------------
+Jednickovej task
+initScenario: 
+!@!  TASK:task17 type 43 / , Group masteragentA18
+@@Master agentA2  pujde na java.awt.Point[x=-6,y=3] pro 0 a do golu java.awt.Point[x=4,y=-10] body is  [0,0:1003] [0,1:0]
+ --------------------------------- 
+Step 346
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+goalCompleted: SCEN: Task te chvali, agente agentA2 za detachAllGoal
+ --------------------------------- 
+Step 347
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 348
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 349
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 350
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 351
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 352
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 353
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 354
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 355
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 356
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 357
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 358
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 359
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 360
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 361
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 362
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+goalCompleted: SCEN: Task te chvali, agente agentA2 za get block 2022
+ --------------------------------- 
+Step 363
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 364
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 365
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 366
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 367
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 368
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 369
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 370
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 371
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task18
+group option task16
+group option task17
+group option task15
+ --------------------------------- 
+Step 372
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task18
+group option task16
+group option task17
+group option task15
+ --------------------------------- 
+Step 373
+Active tasks: [task17_344]
+Active scenarios 
+Scenario One block scenario / dsMultiagent.dsScenarios.DSSOneBlock@4c243fbc
+for task task17
+ -- agentA2,
+Goal positions allocated: task17 / java.awt.Point[x=4,y=-10]
+Score: 0
+group option task18
+group option task16
+group option task17
+group option task15

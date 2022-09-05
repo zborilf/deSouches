@@ -9,17 +9,23 @@ import dsMultiagent.dsTasks.DSTask;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public abstract class DSScenario {
+public abstract class DSMMission {
 
   public static final int _disabledEvent = 0;
   public static final int _noBlockEvent = 1;
   public static final int _areaSpoted = 2;
 
+
+  public static final int __mission_goes_well=1;
+  public static final int __mission_timeout=2;
+  public static final int __no_goal_area=3;
+
+
   int PDefaultPriority = 1;
   public static final int _idleLimit = 65;
 
   DeSouches PCommander;
-  int PTaskType;
+  int PTaskTypeNumber;
   int PScenarioType;
 
   DSTask PTask;
@@ -38,6 +44,10 @@ public abstract class DSScenario {
 
   public String getName() {
     return ("No name scenario");
+  }
+
+  public int checkConsistency(){
+    return(__mission_goes_well);
   }
 
 
@@ -72,7 +82,7 @@ public abstract class DSScenario {
 
   public abstract boolean checkEvent(DSAgent agent, int eventType);
 
-  public abstract boolean initScenario(int step);
+  public abstract boolean initMission(int step);
 
   public void calibrateScenario(DSMap map){
 
@@ -91,11 +101,11 @@ public abstract class DSScenario {
     return (true);
   }
 
-  public DSScenario(DeSouches commander, DSTask task) {
+  public DSMMission(DeSouches commander, DSTask task) {
     if(task==null)
-      PTaskType=-1;
+      PTaskTypeNumber=-1;
     else
-      PTaskType = task.getTaskTypeNumber();
+      PTaskTypeNumber = task.getTaskTypeNumber();
     PCommander = commander;
     PTask = task;
     PAgentsAllocated = new LinkedList<DSAgent>();
