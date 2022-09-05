@@ -70,50 +70,19 @@ public class DSPerceptor {
   }
 
 
-  public DSBody getBodyFromPercepts(Collection<Percept> percepts) {
-    Iterator<Percept> perceptI =
-        percepts.stream()
-            .filter(prc -> prc.getName().equals("attached"))
-            .iterator(); // .findFirst().get();
-    Percept percept;
-    DSBody body = new DSBody();
-    while (perceptI.hasNext()) {
-      percept = perceptI.next();
-
-      Point pp =
-          new Point(
-              Integer.parseInt(percept.getParameters().get(0).toString()),
-              Integer.parseInt(percept.getParameters().get(1).toString()));
-      System.out.println("body part " + pp);
-
-      //            body.addCell(new DSCell(percept.))
-    }
-    return (null);
-  }
-
 
   public synchronized void actualizeMap(
-      DSMap map,
-      DSAgentOutlook outlook,
-      Point agentPos,
-      int vision,
-      String PTeamName,
-      int step,
-      DSAgent agent) {
+          DSMap map,
+          DSAgentOutlook outlook,
+          Point agentPos,
+          int vision,
+          String PTeamName,
+          int step,
+          DSAgent agent) {
 
     clearFriendsList();
 
     DSCells newOutlook = outlook.getCells();
-
-    // for (var c : removedCells.getCells()) {
-    //  DSCell delCell =
-    //      new DSCell(
-    //          c.getX() + agentPos.x, c.getY() + agentPos.y, c.getType(), c.getTimestamp(), agent);
-    //  map.getMap().removeCell(delCell.getX(), delCell.getY(), delCell.getType());
-    // }
-
-    // outlook contains only newly seen cells -> add clear if no cell exists
-
     for (int i = -vision; i <= vision; i++)
       for (int j = -vision + Math.abs(i); Math.abs(j) + Math.abs(i) <= vision; j++) {
         if (Math.abs(i) + Math.abs(j) > vision) continue;
@@ -323,7 +292,7 @@ public class DSPerceptor {
           break;
         case DSBeliefsIndexes.__ranking:
           BB.getCommander().printOutput(" FINAL RANKING: "+perceptParams.iterator().next().toString());
-          System.exit(0);
+          //System.exit(0);
       }
     }
 

@@ -136,14 +136,14 @@ public class DSAgent extends Agent {
 
 
   public void setScenario(DSMMission scenario) {
-    PBeliefBase.setScenario(scenario);
+    PBeliefBase.setMission(scenario);
     PScenarioPriority = scenario.getPriority();
     HorseRider.inform(
         TAG, "setScenario: priority for " + PBeliefBase.getName() + " is " + PScenarioPriority);
   }
 
   public boolean followsScenario() {
-    return (PBeliefBase.getScenario() != null);
+    return (PBeliefBase.getMission() != null);
   }
 
   private int getScenarioPriority() {
@@ -151,7 +151,7 @@ public class DSAgent extends Agent {
   }
 
   protected DSMMission getScenario() {
-    return (PBeliefBase.getScenario());
+    return (PBeliefBase.getMission());
   }
 
   public String getScenarioName() {
@@ -166,15 +166,15 @@ public class DSAgent extends Agent {
 
   protected void removeScenario() {
     printOutput("REMOVING SCENARIO");
-    PBeliefBase.setScenario(null);
+    PBeliefBase.setMission(null);
    // PIntentionPool.clearPool();       // TODO ... experiment
     PScenarioPriority = 0;
   }
 
     public boolean isBusyTask() {
-      if(PBeliefBase.getScenario()==null)
+      if(PBeliefBase.getMission()==null)
         return(false);
-      return(PBeliefBase.getScenario().getTask()!=null);
+      return(PBeliefBase.getMission().getTask()!=null);
     }
 
 
@@ -251,16 +251,16 @@ public class DSAgent extends Agent {
   }
 
   public boolean informCompleted(DSGGoal goal) {
-    if (PBeliefBase.getScenario() != null) {
-      PBeliefBase.getScenario().goalCompleted(this, goal);
+    if (PBeliefBase.getMission() != null) {
+      PBeliefBase.getMission().goalCompleted(this, goal);
       return (true);
     } else return (false);
   }
 
   public boolean informFailed(DSGGoal goal) {
-    if (PBeliefBase.getScenario() != null) {
+    if (PBeliefBase.getMission() != null) {
       printOutput("Failed goal "+goal.getGoalDescription());
-      PBeliefBase.getScenario().goalFailed(this, goal);
+      PBeliefBase.getMission().goalFailed(this, goal);
       return (true);
     } else return (false);
   }
@@ -390,8 +390,8 @@ public class DSAgent extends Agent {
       printOutput("Step: " + PBeliefBase.getStep() + " , pos " + PBeliefBase.getAgentPosition().toString());
       printOutput("Agent body "+getBody().bodyToString());
       printOutput("Atteched "+PBeliefBase.getAttched().toString());
-      if(PBeliefBase.getScenario()!=null)
-        printOutput("Scenario: "+PBeliefBase.getScenario().getName());
+      if(PBeliefBase.getMission()!=null)
+        printOutput("Scenario: "+PBeliefBase.getMission().getName());
       else
         printOutput("Scenario: none");
       printOutput("Goal: "+PBeliefBase.getLastGoal());
@@ -492,8 +492,8 @@ public class DSAgent extends Agent {
       // pro jistotu, nevím, na základě čeho by agent mohl seznat, že mu byl odsteřal blok, ověřit
 
       if (!perceptor.seesBlocksInBody(agent.getOutlook()))
-        if (PBeliefBase.getScenario() != null)
-          PBeliefBase.getScenario()
+        if (PBeliefBase.getMission() != null)
+          PBeliefBase.getMission()
               .checkEvent((DSAgent) (this.getAgent()), DSMMission._noBlockEvent);
 
       //  == DEADLOCK ==

@@ -6,11 +6,6 @@ import java.util.LinkedList;
 public class DSBody {
   LinkedList<DSCell> PBody;
 
-  boolean contains(Point direction) {
-    for (DSCell cell : PBody)
-      if ((cell.getX() == direction.x) && (cell.getY() == direction.y)) return (true);
-    return (false);
-  }
 
   public static DSBody getDoubleBody(Point blockPos) {
     DSBody body = new DSBody();
@@ -43,7 +38,7 @@ public class DSBody {
   }
 
   public static synchronized DSBody shiftBody(Point displacement, DSBody body) {
-    // pouzito v A*
+    // used in A*
     DSBody shiftedBody = new DSBody();
     shiftedBody.getBodyList().clear();
     for (DSCell cell : body.getBodyList()) {
@@ -59,7 +54,7 @@ public class DSBody {
 
 
   public LinkedList<String> getAllDirectionsAttached() {
-    LinkedList<String> directions = new LinkedList<String>();
+    LinkedList<String> directions = new LinkedList<>();
     if (isCellAt(new Point(-1, 0))) directions.add("w");
     if (isCellAt(new Point(1, 0))) directions.add("e");
     if (isCellAt(new Point(0, -1))) directions.add("n");
@@ -141,7 +136,7 @@ public class DSBody {
   }
 
   public void resetBody() {
-    PBody = new LinkedList<DSCell>();
+    PBody = new LinkedList<>();
     PBody.add(new DSCell(0, 0, DSCell.__DSAgent, 0)); // at least, agent is at [0,0]
   }
 

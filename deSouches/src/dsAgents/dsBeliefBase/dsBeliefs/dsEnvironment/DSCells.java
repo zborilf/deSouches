@@ -51,22 +51,6 @@ public class DSCells {
     return (brc);
   }
 
-  public synchronized void newWidth(int width){
-    HashMap<Point, LinkedList<DSCell>> nHashCells=new HashMap();
-    for(Point p:PHashCells.keySet())
-      if((p.x>=0)&&(p.x<width))
-        nHashCells.put(p,PHashCells.get(p));
-    PHashCells=nHashCells;
-  }
-
-
-  public synchronized void newHeight(int height){
-    HashMap<Point, LinkedList<DSCell>> nHashCells=new HashMap();
-    for(Point p:PHashCells.keySet())
-      if((p.y>=0)&&(p.y<height))
-        nHashCells.put(p,PHashCells.get(p));
-      PHashCells=nHashCells;
-  }
 
   protected synchronized void put(DSCell element) {
     Point pos = element.getPosition();
@@ -105,7 +89,6 @@ public class DSCells {
     if (oldList != null) {
       for (DSCell element : oldList)
         if ((element.getTimestamp() > step)
-      //      || (((element.getType() == DSCell.__DSGoalArea)
                 || (element.getType() == DSCell.__DSRoleArea)) {
           newList.add(element);
         }
@@ -170,7 +153,7 @@ public class DSCells {
   }
 
   public boolean isDestructibleAt(Point point){
-    if((LinkedList<DSCell>)getAllAt(point)==null)
+    if(getAllAt(point)==null)
       return(false);
     LinkedList<DSCell> cells=(LinkedList<DSCell>)getAllAt(point).clone();
     if(cells!=null)
@@ -248,8 +231,7 @@ public class DSCells {
   }
 
   public synchronized LinkedList<DSCell> getAllType(
-      int type) { // objekty daneho typu na vsech pozicich
-
+      int type) {
     LinkedList<DSCell> cells = new LinkedList();
     for (Point point : PHashCells.keySet()) {
       LinkedList<DSCell> cellsAt = PHashCells.get(point);
@@ -260,9 +242,7 @@ public class DSCells {
 
 
   protected synchronized LinkedList<Point> getAllTypePositions(
-          int type) { // objekty daneho typu na vsech pozicich
-
-    LinkedList<Point> cellPos = new LinkedList();
+          int type) {     LinkedList<Point> cellPos = new LinkedList();
     for (Point position : PHashCells.keySet()) {
       LinkedList<DSCell> cellsAt = PHashCells.get(position);
       for (DSCell element : cellsAt) if (element.getType() == type) cellPos.add(position);
@@ -276,6 +256,6 @@ public class DSCells {
   }
 
   public DSCells() {
-    PHashCells = new HashMap<Point, LinkedList<DSCell>>();
+    PHashCells = new HashMap();
   }
 }

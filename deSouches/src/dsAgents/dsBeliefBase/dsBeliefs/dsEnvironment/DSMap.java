@@ -19,8 +19,6 @@ import java.util.List;
 
 public class DSMap {
 
-  private static final String TAG = "DSMap";
-
   DSCells PMapCells;
   int PWidthMap = 0;
   int PHeightMap = 0;
@@ -36,12 +34,6 @@ public class DSMap {
   // private Border border = new Border();
 
 
-  public static String pointList(LinkedList<Point> points){
-    String st="";
-    for(Point p:points)
-      st=st+"["+p.x+","+p.y+"] ";
-    return(st);
-  }
 
   public synchronized int centralizeXCoords(int x) {
     if (PWidthMap == 0) return (x);
@@ -224,37 +216,7 @@ public class DSMap {
     return;
   }
 
-  public synchronized void shiftMap(Point displacement) {
-    for (DSCell cell : PMapCells.getCells()) {
-      cell.setX(centralizeXCoords(cell.getX() + displacement.x));
-      cell.setY(centralizeYCoords(cell.getY() + displacement.y));
-    }
-    for (DSAgent agent : PAgentPosition.keySet()) {
-      Point newPosition =
-          new Point(
-              centralizeXCoords(PAgentPosition.get(agent).x + displacement.x),
-              centralizeYCoords(PAgentPosition.get(agent).y + displacement.y));
-      PAgentPosition.put(agent, newPosition);
-    }
-  }
 
-  public static synchronized boolean areasConflict(Point p1, DSBody b1, Point p2, DSBody b2) {
-    for (DSCell cell1 : b1.getBodyList())
-      for (DSCell cell2 : b2.getBodyList())
-        if ((cell1.getX() + p1.x == cell2.getX() + p2.x)
-            && (cell1.getX() + p1.y == cell2.getX() + p2.y)) return (true);
-    return (false);
-  }
-
-  boolean isFriendAt(Point position) {
-    HashMap<DSAgent, Point> agentPositions = (HashMap<DSAgent, Point>) (PAgentPosition.clone());
-    Set<DSAgent> agents = agentPositions.keySet();
-    for (DSAgent agent : agents) {
-      Point agentPos = (Point) agent.getMapPosition().clone();
-      if ((position.x == agentPos.x) && (position.y == agentPos.y)) return (true);
-    }
-    return (false);
-  }
 
   boolean isEnemyAt(Point position){
     LinkedList<DSCell> cells=PMapCells.getAllAt(position);
@@ -295,23 +257,6 @@ public class DSMap {
     }
     return(false);
   }
-
-
-  boolean isOjectAt(Point position, int objectType) {
-
-    return (!(PMapCells.getKeyType(position, objectType) == null));
-  }
-
-  public String oppositeDirection(String dir) {
-    if (dir.contentEquals("n")) return ("s");
-    if (dir.contentEquals("s")) return ("n");
-    if (dir.contentEquals("w")) return ("e");
-    if (dir.contentEquals("e")) return ("w");
-    return ("");
-  }
-
-
-
 
   public LinkedList<Point> getTypePositions(int type) {
     LinkedList<DSCell> objects = PMapCells.getAllType(type);
@@ -471,11 +416,6 @@ public class DSMap {
         mapArray[cell.getX() - lx][cell.getY() - ty] = cell;
     }
 
-    /*     System.out.println("role areas:");
-    for(DSCell cell:PMapCells.getAllType(DSCell.__DSRoleArea))
-        System.out.print(cell.getPosition()+" / ");
-    System.out.println();*/
-
     return (mapArray);
   }
 
@@ -621,7 +561,6 @@ public class DSMap {
   }
 
   public boolean sizeEstimated(){
-    //return(isMasterMap());
      return((PWidthMap!=0) || (PHeightMap!=0));
   }
 
@@ -640,14 +579,7 @@ public class DSMap {
         if((point.x<0)||(point.x>=width))
           PMapCells.PHashCells.remove(point);
 
-
-     // for(DSCell cell:PMapCells.getCells()) {
-     //   if((cell.getX()<0)||(cell.getX()>=width))
-     //     PMapCells.PHashCells.remove(cell.getPosition());
-        //cell.setX(Math.floorMod(cell.getX(), width));
-        //PMapCells.put(cell);
-        //PMapCells.newWidth(width);
-      return(true);
+        return(true);
       }
       return(false);
     }
@@ -667,12 +599,6 @@ public class DSMap {
         if((point.y<0)||(point.y>=height))
           PMapCells.PHashCells.remove(point);
 
-/*      for (DSCell cell : PMapCells.getCells()) {
-        if((cell.getY()<0)||(cell.getY()>=height))
-          PMapCells.PHashCells.remove(cell.getPosition());*/
-//        cell.setY(Math.floorMod(cell.getY(), height));
-//        PMapCells.put(cell);
-//        PMapCells.newHeight(height);
       return(true);
       }
     return(false);
@@ -683,15 +609,12 @@ public class DSMap {
   synchronized public boolean moveBy(DSAgent agent, int x, int y) {
 
     try{
-      agent.getOutput().write("Nekdo hybe agentem "+agent.getAgentName()+" na mape o "+"["+x+","+y+"]\n");
+      agent.getOutput().write("Agent "+agent.getAgentName()+" is moving by "+"["+x+","+y+"]\n");
       agent.getOutput().flush();
     }catch (Exception e){};
 
     PX = centralizeXCoords(PAgentPosition.get(agent).x + x);
     PY = centralizeYCoords(PAgentPosition.get(agent).y + y);
-    // PX=PX+x;
-    // PY=PY+y;
-    // updateXYMinMax(PX,PY);
     PAgentPosition.put(agent, new Point(PX, PY));
     return (true);
   }

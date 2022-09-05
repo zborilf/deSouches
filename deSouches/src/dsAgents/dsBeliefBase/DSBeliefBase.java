@@ -29,8 +29,6 @@ public class DSBeliefBase {
   private DSAgentGUI PGUI;
 
   private DSMap PMap;
-  private int PWidthMap;
-  private int PHeightMap;
   private boolean PGUIFocus;
   private DSAgentOutlook POutlook;
   private DSAgentOutlook PDeleteOutlook;
@@ -50,10 +48,11 @@ public class DSBeliefBase {
   private String PName = "unknown";
   private String PJADEName = "unknown";
   private String PTeamName = "unknown";
-  private DSMMission PScenario; // active scenario
+  private DSMMission PMission; // active mission
   private DSBody PBody = null;
-  private boolean inicialized = false;
   private int PHoldsBlockType;
+  private boolean inicialized = false;
+
 
   private String PLastGoal;
   private int PLastActionResult = DSStatusIndexes.__action_unknown_action;
@@ -114,15 +113,6 @@ public class DSBeliefBase {
   }
 
   // 0 : __simStart
-  // INIT
-
-  public void inicialized() {
-    inicialized = true;
-  }
-
-  public boolean needsInit() {
-    return (!inicialized);
-  }
 
   // 1 : __name
 
@@ -469,7 +459,7 @@ public class DSBeliefBase {
     return PActualRole.getSpeed(attached);
   }
 
-  // TELO AGENTA
+  // AGENT BODY
 
   public void setBody(DSBody body) {
     PBody = body;
@@ -479,7 +469,7 @@ public class DSBeliefBase {
     return (PBody);
   }
 
-  // MAPA
+  // MAP
 
   public DSMap getMap() {
     return (PMap);
@@ -489,7 +479,7 @@ public class DSBeliefBase {
     PMap = map;
   }
 
-  // ROZHLED
+  // OUTLOOK
 
   public DSAgentOutlook getOutlook() {
     return (POutlook);
@@ -514,69 +504,40 @@ public class DSBeliefBase {
     return (PGroup);
   }
 
-  public int getGroupSize() {
-    return (PGroup.getMembers().size());
-  }
 
-  // AKTUALNI SCENAR
+  // MISSIONS
 
-  public void setScenario(DSMMission scenario) {
-    PScenario = scenario;
-    if (PScenario != null)
-      PAgent.printOutput("---- SCENARIO SET TO "+PScenario.getName());
+  public void setMission(DSMMission mission) {
+    PMission = mission;
+    if (PMission != null)
+      PAgent.printOutput("---- SCENARIO SET TO "+ PMission.getName());
     else
       PAgent.printOutput("---- SCENARIO SET TO null");
     if (PGUIFocus) {
-      if(scenario!=null)
-        PGUI.setScenario(scenario.getName());
+      if(mission!=null)
+        PGUI.setScenario(mission.getName());
     }
   }
 
-  public DSMMission getScenario() {
-    return (PScenario);
+  public DSMMission getMission() {
+    return (PMission);
   }
 
   public void setHoldsBolockType(int blockType) {
     PHoldsBlockType = blockType;
   }
 
-  public int getHoldsBolockType() {
-    return PHoldsBlockType;
-  }
 
-  /*
-             FUNKCNI PREDSTAVY (vypoctove)
-  */
 
-  boolean isNeighbour(Point point1, Point point2)
-        // jsou tyto body sousede v ctyrokoli?
-      {
-    if (PMap.distance(point1, point2) == 1) return (true);
 
-    return (false);
-  }
 
-  public boolean friendAroundCell(Point position, DSAgent agent) {
-    // je pritel ze skupiny na zaklade jeho skutecne pozice v ctyrokoli?
-    // melo by stacit skontrolovat grupu, protoze blok shani jen mastergrupa, takze jej muze take
-    // jen ta drzet
 
-    LinkedList<DSAgent> members = (LinkedList<DSAgent>) PAgent.getGroup().getMembers().clone();
-    for (DSAgent friend : members) {
-      if (isNeighbour(position, friend.getMapPosition())) return (true);
-    }
-    return (true);
-  }
+
 
   public Point nearestObject(DSAgent agent, int type) {
     return (getMap().nearestObject(type, agent.getMapPosition()));
   }
 
-  public Point nearestDispenser(int type) {
-    return (nearestObject(PAgent, DSCell.__DSDispenser + type));
-    // return(PMap.nearestObject(DSCell.__DSDispenser+type,PMap.getAgentPos())); // for this agent
-    // 0,0
-  }
 
   public Point nearestFreeBlock(int type) {
     Point blockAt = getMap().nearestFreeBlock(type, PAgent.getMapPosition());
@@ -586,7 +547,6 @@ public class DSBeliefBase {
 
   public Point nearestGoal() {
     return (nearestObject(PAgent, DSCell.__DSGoalArea));
-    //        return(PMap.nearestObject(DSCell.__DSGoalArea,new Point(0,0)));
   }
 
   public DSBeliefBase(DSAgent agent) {

@@ -38,7 +38,6 @@ public class DSAdopt extends DSAction {
 
   @Override
   public void succeededEffect(DSAgent agent) {
-    //agent.setActualRole(PRole);
   }
 
   @Override

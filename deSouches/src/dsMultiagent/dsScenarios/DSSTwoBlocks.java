@@ -7,23 +7,7 @@ import dsMultiagent.dsTasks.DSTask;
 
 public class DSSTwoBlocks extends DSSBlockMission {
   private static final String TAG = "DSTwoBlocks";
-  // dostane Task a k tomu Skupinu
-  //
 
-  /*
-  int PStateM, PStateL1;
-  DSAgent PMaster;
-  DSAgent PLeutnant1;
-  Point PMasterGoalPos;
-  Point PMasterDispenserPos;
-  DSBody PMasterGoalBody;
-  Point PSlaveGoalPos;
-  Point PSlaveDispenserPos;
-  DSBody PSlaveGoalBody;
-
-  int PType1;
-  int PType2;
-   */
 
   @Override
   public String getName(){
@@ -210,51 +194,6 @@ public class DSSTwoBlocks extends DSSBlockMission {
     }
   }
 
-  /*
-  public boolean checkEvent(DSAgent agent, int eventType) {
-    agent.printOutput("Checking event "+eventType);
-    switch (eventType) {
-      case DSMMission._disabledEvent:
-        if (PMaster == agent) {
-          agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
-          PStateM = 1;
-        }
-        if (PLeutnant1 == agent) {
-          agent.hearOrder(new DSGGetBlock2022(PType2, PLeutnant1DispenserPos, getTask().getDeadline()));
-          PStateL1 = 1;
-        }
-        return (true);
-
-      case DSMMission._noBlockEvent:
-        if (PMaster == agent) {
-          PMaster.getBody().resetBody();
-          if (PStateM == 2) {
-            PStateM = 1;
-            agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
-          }
-        }
-        if (PLeutnant1 == agent) {
-          PLeutnant1.getBody().resetBody();
-          if (PStateL1 == 2) {
-            PStateL1 = 1;
-            agent.hearOrder(new DSGGetBlock2022(PType2, PLeutnant1DispenserPos, getTask().getDeadline()));
-          }
-        }
-        return (true);
-    }
-    return (false);
-  }
-*/
-
-  /*
-  public void calibrateScenario(DSMap map){
-    PMasterDispenserPos=map.centralizeCoords(PMasterDispenserPos);
-    PMasterGoalPos=map.centralizeCoords(PMasterGoalPos);
-    PSlaveDispenserPos=map.centralizeCoords(PSlaveDispenserPos);
-    PSlaveGoalPos=map.centralizeCoords(PSlaveGoalPos);
-  }
-*/
-
   boolean allocateAgents() {
 
 
@@ -342,50 +281,6 @@ public class DSSTwoBlocks extends DSSBlockMission {
 
     return (true);
   }
-
-  /*
-      @Override
-      public boolean initScenario(int step) { //(DSAgent master, Point positionM, Point positionGM, int type1, DSAgent slave, Point positionS,
-          //Point positionGS, int type2){
-
-          // Two blocks -> Three pos. configurations
-          if(PTask.getTypesNeeded().size()!=2)
-              return(false);
-
-          if(!allocateAgents(step))
-              return(false);
-
-          if (PScenarioType == 1) {
-              PSlaveGoalPos.y = PSlaveGoalPos.y + 3;
-          }
-          if (PScenarioType == 2) {
-              PSlaveGoalPos.x = PSlaveGoalPos.x + 1;
-          }
-          if (PScenarioType == 3) {
-              PSlaveGoalPos.x = PSlaveGoalPos.x - 1;
-          }
-
-          System.out.println("initScenario: " + "\n!+!  TASK:" + PTask.getName() + " type "+PTask.getTaskTypeNumber()+" / "+
-                  ", Group master"+PMaster.getGroup().getMaster()+"Master " + PMaster.getEntityName() +
-                  "  pujde na " + PMasterDispenserPos + " pro " + PType1 + " a do golu " + PMasterGoalPos +
-                  "a Slave " + PSlave.getEntityName() + "  pujde na " + PSlaveDispenserPos + " pro " + PType2 + " a do golu " + PSlaveGoalPos);
-          PMaster.hearOrder(new DSGDetachAll());
-          PSlave.hearOrder(new DSGDetachAll());
-          PMasterGoalBody = new DSBody();
-          PMasterGoalBody.addCell(new DSCell(0, 1, PType1, 0));
-          PSlaveGoalBody = new DSBody();
-          if (PScenarioType == 1)
-              PSlaveGoalBody.addCell(new DSCell(0, -1, PType2, 0));
-          if (PScenarioType == 2)
-              PSlaveGoalBody.addCell(new DSCell(0, 1, PType2, 0));
-          if (PScenarioType == 3)
-              PSlaveGoalBody.addCell(new DSCell(0, 1, PType2, 0));
-          PMaster.setScenario(this);
-          PSlave.setScenario(this);
-          PStateM=1; PStateS=1;
-          return(true);
-      }
-  */
 
 
 

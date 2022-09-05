@@ -23,9 +23,7 @@ public class DSClear extends DSAction {
   public DSGGoal execute(DSAgent agent) {
 
     Action a = new Action("clear", new Numeral(PTarget.x), new Numeral(PTarget.y));
-
     agent.printOutput("Clear action: " + a.toProlog()+"\n");
-
 
     try {
       agent.getEI().performAction(agent.getJADEAgentName(), a);
@@ -37,7 +35,6 @@ public class DSClear extends DSAction {
 
   public void succeededEffect(DSAgent agent) {
     agent.clearPerformed(PTarget);
-    // odstrani napojene veci na body
   }
 
   @Override

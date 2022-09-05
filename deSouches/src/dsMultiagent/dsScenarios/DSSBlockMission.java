@@ -174,6 +174,6 @@ public abstract class DSSBlockMission extends DSMMission {
   public DSSBlockMission(DeSouches commander, DSTask task) {
     super(commander, task);
     PGUI= DSTaskGUI.createTaskFrame();
-    PCommander.getTasksFrame().addTaskFrame(PGUI.getFrame());
+    PCommander.getTasksFrame().addTaskFrame(PGUI);
   }
 }

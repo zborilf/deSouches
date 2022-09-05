@@ -28,10 +28,6 @@ public abstract class DSAction {
         }
       };
 
-  public static Class getActionClass(String action) {
-    return (_actionMap.get(action));
-  }
-
   public abstract DSGGoal execute(DSAgent agent);
 
   public abstract boolean isExternal();

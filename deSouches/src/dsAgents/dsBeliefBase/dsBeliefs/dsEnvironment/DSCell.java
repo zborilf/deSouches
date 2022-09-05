@@ -16,7 +16,7 @@ public class  DSCell {
   public static int __DSMarker = 4;
   public static int __DSBorder = 5;
   public static int __DSGoalArea = 6;
-  public static int __DSEntity_Friend = 1001; // ptani na agenta zmenit na entitu
+  public static int __DSEntity_Friend = 1001;
   public static int __DSEntity_Enemy = 1002;
   public static int __DSAgent = 1003;
 
@@ -30,9 +30,9 @@ public class  DSCell {
   private final int MAX_PHERO = 100;
 
   static Map<String, Integer> _thingMap =
-      new HashMap<String, Integer>() {
+      new HashMap() {
         {
-          put("clear", __DSClear); // toto je asi spatne, clear = marker : clear
+          put("clear", __DSClear);
           put("obstacle", __DSObstacle);
           put(DSConfig.___ourEntityNamePrefix, __DSEntity_Friend);
           put(DSConfig.___enemyEntityNamePrefix, __DSEntity_Enemy);
@@ -44,7 +44,7 @@ public class  DSCell {
       };
 
   static Map<Integer, String> _thingTypes =
-      new HashMap<Integer, String>() {
+      new HashMap() {
         {
           put(__DSClear, " ..");
           //put(__DSObstacle, " \u2589\u2589");
@@ -147,23 +147,12 @@ public class  DSCell {
     PY = y;
   }
 
-  public boolean positionMatch(int x, int y) {
-    if ((x == PX) && (y == PY)) return (true);
-    return (false);
-  }
-
-
-  public String cellToString() {
-    String st = "Cell at [" + PX + "," + PY + "]" + "/" + PType + "/" + PTimeStamp;
-    return (st);
-  }
 
   private int startPheromoneByType(int type) {
     return MAX_PHERO; // add pheromone to exception for less likelihood of exploration eg. obstacle
   }
 
   public DSCell(int x, int y, int type, int timestamp) {
-    // bude tam pozice rel. k agentovi, objekt, casove razitko
     PX = x;
     PY = y;
     PType = type;
@@ -171,11 +160,7 @@ public class  DSCell {
     cellPheromone = startPheromoneByType(PType);
   }
 
-  // 2022, thing is from {obstacle, entity, dispenser, marker, block, taskboard}
-  //              params for block {b1, ...} marker {clear} dispeneser {b1, ...}
-
   public DSCell(int x, int y, String type, String params, int timestamp) {
-    // bude tam pozice rel. k agentovi, objekt, casove razitko
     PX = x;
     PY = y;
     PType = getThingTypeIndex(type, params);
@@ -183,7 +168,6 @@ public class  DSCell {
     cellPheromone = startPheromoneByType(PType);
   }
 
-  // bude tam pozice rel. k agentovi, objekt, casove razitko
   public DSCell(int x, int y, String type, String params, int timestamp, DSAgent foundBy) {
 
     PX = x;
@@ -201,23 +185,6 @@ public class  DSCell {
     PTimeStamp = timestamp;
     this.foundBy = foundBy;
     cellPheromone = startPheromoneByType(PType);
-  }
-
-  public static boolean isPermanentType(DSCell dsCell) {
-    return isPermanentType(dsCell.getType());
-  }
-
-  public static boolean isPermanentType(int p) {
-    return p == DSCell.__DSRoleArea
-        || p == DSCell.__DSTaskArea
-        || p == DSCell.__DSDispenser
-        || p == DSCell.__DSGoalArea;
-  }
-
-  public void evaporatePheromone(double coefficient) {
-    if (isPermanentType(PType)) return;
-
-    if (coefficient > 0.0 && coefficient < 1.0) cellPheromone *= coefficient;
   }
 
   public void setPheromone(double pheromone) {

@@ -8,6 +8,7 @@ import javax.swing.text.DefaultHighlighter;
 import javax.swing.text.Highlighter;
 import javax.swing.text.JTextComponent;
 import java.awt.*;
+import java.awt.event.KeyEvent;
 
 
 public class DSTaskGUI {
@@ -64,6 +65,18 @@ public class DSTaskGUI {
 
     static int __tasks=0;
     int PLine=1;
+    int PSubtasks=1;
+
+    public static final int __task_running=1;
+    public static final int __task_completed=2;
+    public static final int __task_failed=3;
+
+    int PState=__task_running;
+
+    public int getState(){
+        return(PState);
+    }
+
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
@@ -95,12 +108,17 @@ public class DSTaskGUI {
         return("["+point.x+","+point.y+"]");
     }
 
+    public int getNOSubtasks(){
+        return(PSubtasks);
+    }
 
     public void suceeded(){
+        PState=__task_completed;
         dsgRoleLabelPanel.setBackground(Color.GREEN);
     }
 
     public synchronized void failed(String reason){
+        PState=__task_failed;
         dsgRoleLabelPanel.setBackground(Color.PINK);
         dsgTaskTerminal.append("FAILED: "+reason);
     }
@@ -115,6 +133,7 @@ public class DSTaskGUI {
         M=task.getSubtaskRoutes(0).getAgent();
 
         if(task.getSubtaskRoutes(1)!=null) {
+            PSubtasks=2;
             L1 = task.getSubtaskRoutes(1).getAgent();
             dsgAgentL1.setText(getAgentName(L1));
             dsgDispenserL1.setText(getPosition(task.getSubtaskRoutes(1).getDispenserPosition()));
@@ -124,6 +143,7 @@ public class DSTaskGUI {
             dsgActivityL1.setText(L1.getLastGoal());
         }
         if(task.getSubtaskRoutes(2)!=null) {
+            PSubtasks=3;
             L2=task.getSubtaskRoutes(2).getAgent();
             dsgAgentL2.setText(getAgentName(L2));
             dsgDispenserL2.setText(getPosition(task.getSubtaskRoutes(2).getDispenserPosition()));
@@ -134,6 +154,7 @@ public class DSTaskGUI {
 
         }
         if(task.getSubtaskRoutes(3)!=null){
+            PSubtasks=4;
             L3=task.getSubtaskRoutes(3).getAgent();
             dsgAgentL3.setText(getAgentName(L3));
             dsgDispenserL3.setText(getPosition(task.getSubtaskRoutes(3).getDispenserPosition()));
@@ -184,6 +205,8 @@ public class DSTaskGUI {
         frame.setLocation(new Point((__tasks/12)*300+(__tasks % 12)*20, (__tasks % 12)*60+60));
         __tasks++;
 
+
+        frame.setPreferredSize(new Dimension(1200,300));
         frame.pack();
         frame.setVisible(true);
         return (gui);
