@@ -50,8 +50,12 @@ public class DSDivideAndExplore extends DSMMission {
 
     divideSpace(PAgent.getGroup().getFreeAgents(2), false);
 
-    DSGGoal newGoal = new DSGoalExplore(PRadius); // ... area!);
-    agent.hearOrder(newGoal);
+    if(!agent.getActualRole().contentEquals("digger")) {
+      DSGGoal newGoal = new DSGoalExplore(PRadius); // ... area!);
+      agent.hearOrder(newGoal);
+    }
+    else
+      PCommander.scenarioCompleted(this);
   }
 
   @Override

@@ -14,6 +14,7 @@ public abstract class DSMMission {
   public static final int _disabledEvent = 0;
   public static final int _noBlockEvent = 1;
   public static final int _areaSpoted = 2;
+  public static final int _newFighterEvent = 3;
 
 
   public static final int __mission_goes_well=1;

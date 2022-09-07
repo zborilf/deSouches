@@ -6,7 +6,7 @@ import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsGUI.DSAgentGUI;
 import dsAgents.dsGUI.DSGTaskPoolFrame;
-import dsAgents.dsGUI.DSGeneralGUI;
+import dsAgents.dsGUI.DSFightersGUI;
 import dsAgents.dsGUI.DSTaskGUI;
 import dsAgents.dsPerceptionModule.dsSyntax.DSPercepts;
 import dsAgents.dsReasoningModule.dsGoals.DSEvasiveManoeuvre;
@@ -47,7 +47,7 @@ public class DeSouches extends Agent {
 
   private int PTeamSize;
   private DSAgentGUI PGUI;
-  private DSGeneralGUI PGGUI;
+  private DSFightersGUI PGGUI;
   private DSGTaskPoolFrame PGTP;
   private DSAgent PGUIFocus;
 
@@ -56,6 +56,7 @@ public class DeSouches extends Agent {
   private DSSynchronize PSynchronizer;
   private dsMultiagent.dsGroupOptions.dsGroupOptionsPool PGroupOptions;
   private LinkedList<String> PActiveTasks;
+  DSMFightersMission PFightersMission;
   LinkedList<DSTaskGUI> PTaskGUIs;
   int PScore=0;
 
@@ -76,7 +77,13 @@ public class DeSouches extends Agent {
 
 
   public DSMap getMasterMap(){
+    if(PSynchronizer.getMasterGroup()==null)
+      return(null);
     return(PSynchronizer.getMasterGroup().getMap());
+  }
+
+  public DSGroup getMasterGroup(){
+    return(PSynchronizer.getMasterGroup());
   }
 
   public void printOutput(String s){
@@ -273,8 +280,8 @@ public class DeSouches extends Agent {
                                                               " sup. price "+task.getSubtaskRoutes(i).getPrice());
 
       Point g=task.getSubtaskRoutes(0).getGoalPosition();
-      printOutput("Checkuju pozici golu "+g);
-      printOutput("Vysledek je "+getMasterMap().getMapCells().isObjectAt(DSCell.__DSGoalArea,g));
+      printOutput("Checking goal position: "+g);
+      printOutput("Result is "+getMasterMap().getMapCells().isObjectAt(DSCell.__DSGoalArea,g));
 
       printOutput("---------------");
 
@@ -525,11 +532,6 @@ public class DeSouches extends Agent {
          INTERFACE
   */
 
-  /*  public synchronized void friendsReport(DSAgent agent, LinkedList<Point> list, int step){
-          PSynchronize.addObservation(agent,step,list);
-      }
-  */
-
   void removeScenario(DSMMission scenario){
     LinkedList<DSMMission> ns=new LinkedList();
     for(DSMMission s: PActiveMissions)
@@ -616,25 +618,29 @@ public class DeSouches extends Agent {
   }
 
   public void agentDisabled(DSAgent agent) {
-    // TODO koupil to vojak, failne asi jenom twoblocks resp viceblocks
     agent.setBody(new DSBody());
     HorseRider.inform(TAG, "agentDisabled: DISABLED " + agent.getEntityName());
-    if (agent.followsScenario()) agent.getScenario().checkEvent(agent, DSMMission._disabledEvent);
+    if (agent.followsScenario()) agent.getMission().checkEvent(agent, DSMMission._disabledEvent);
   }
 
   public synchronized void needJob(DSAgent agent) {
-    if((PSynchronizer.getMasterGroup()!=null)&&
-        (agent.getActualRole().contentEquals("default"))){
-        // an agent with default role in the stage 2 (with mastermap) -> try to change role
+    if ((PSynchronizer.getMasterGroup() != null) &&
+            (agent.getActualRole().contentEquals("default"))) {
+      // an agent with default role in the stage 2 (with mastermap) -> try to change role
       agent.hearOrder(new DSGChangeRole());
+      return;
     }
-    else {
-    printOutput(agent.getEntityName()+" needs job");
+    if (agent.getActualRole().contentEquals("digger")&&(getMasterMap()!=null)) {
+      PFightersMission.checkEvent(agent, DSMMission._newFighterEvent);
+      return;
+    }
+
+    printOutput(agent.getEntityName() + " needs job");
     DSDivideAndExplore scenario = new DSDivideAndExplore(agent, 5); // 10 je max delka prochazky
     agent.setScenario(scenario);
     scenario.initMission(agent.getStep());
-     }
   }
+
 
 
 
@@ -649,9 +655,6 @@ public class DeSouches extends Agent {
     dsGroupTaskOption taskOption = new dsGroupTaskOption(task);
 
     PGroupOptions.addOption(taskOption);
-
-  //  if (PGroupOptions.addOption(taskOption))
-  //    PGGUI.addText(task.getName() + "\\" + task.getTaskBody().bodyToString());
 
     return (false);
   }
@@ -669,15 +672,14 @@ public class DeSouches extends Agent {
       Collection<String> entities;
       entities = PEI.getEntities();
 
-      /*
-      PGGUI = DSGeneralGUI.createGUI((DeSouches) this.getAgent());
-*/
-      PGTP = new DSGTaskPoolFrame();
 
+      PGTP = new DSGTaskPoolFrame();
       PGUI = DSAgentGUI.createGUI(1, (DeSouches) this.getAgent());
+      PFightersMission= new DSMFightersMission((DeSouches)this.getAgent(),null);
+      PActiveMissions.add(PFightersMission);
+
 
       int agentNo = 0;
-      HorseRider.inform(TAG, "action: " + "Je treba vytvorit agenty pro ... ");
       boolean guiFocus = true;
 
       for (String entity : entities) {
@@ -724,8 +726,8 @@ public class DeSouches extends Agent {
       PGUIFocus.setGUIFocus();
       PGUI.setAgentName(agentName);
       PGUI.setScore(PScore);
-      if(PGUIFocus.getScenario()!=null)
-         PGUI.setScenario(PGUIFocus.getScenario().getName());
+      if(PGUIFocus.getMission()!=null)
+         PGUI.setMission(PGUIFocus.getMission().getName());
     }
   }
 
@@ -733,12 +735,12 @@ public class DeSouches extends Agent {
     super();
 
     DSPercepts.initBlocks();
-    PRegisteredAgents = new HashMap<String, DSAgent>();
+    PRegisteredAgents = new HashMap();
     PSynchronizer = new DSSynchronize();
-    PActiveTasks = new LinkedList<String>();
-    PTaskGUIs = new LinkedList<DSTaskGUI>();
-    PActiveMissions = new LinkedList<DSMMission>();
-    PBarriers = new HashMap<Integer, LinkedList<DSAgent>>();
+    PActiveTasks = new LinkedList();
+    PTaskGUIs = new LinkedList();
+    PActiveMissions = new LinkedList();
+    PBarriers = new HashMap();
     PGroupOptions = new dsGroupOptionsPool();
     PStepsDone=new HashMap();
 

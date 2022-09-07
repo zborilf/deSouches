@@ -58,17 +58,6 @@ public abstract class DSSBlockMission extends DSMMission {
 
 
   public boolean initMission(int step){
-    /*DSGTaskPoolFrame gui = PCommander.getGGUI();
-    gui.addText("Spoustim misi "+PTask.getNickName());
-    gui.addText(PMaster.getEntityName()+" disp "+PMasterDispenserPos+" goal "+PMasterGoalPos);
-    if(PLeutnant1!=null)
-      gui.addText(PLeutnant1.getEntityName()+" disp "+PLeutnant1DispenserPos+" goal "+PLeutnant1GoalPos);
-    if(PLeutnant2!=null)
-      gui.addText(PLeutnant2.getEntityName()+" disp "+PLeutnant2DispenserPos+" goal "+PLeutnant2GoalPos);
-    if(PLeutnant3!=null)
-      gui.addText(PLeutnant3.getEntityName()+" disp "+PLeutnant3DispenserPos+" goal "+PLeutnant3GoalPos);
-
-*/
     return(true);
   }
 

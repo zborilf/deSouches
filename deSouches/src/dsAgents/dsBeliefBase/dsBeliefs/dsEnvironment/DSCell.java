@@ -46,16 +46,16 @@ public class  DSCell {
   static Map<Integer, String> _thingTypes =
       new HashMap() {
         {
-          put(__DSClear, " ..");
+          put(__DSClear, "   ");
           //put(__DSObstacle, " \u2589\u2589");
           put(__DSObstacle, " %%");
           put(__DSEntity_Friend, " F ");
           put(__DSEntity_Enemy, " X ");
           //put(__DSEntity_Friend, " \u26C4");
           //put(__DSEntity_Enemy, " \u26D4");
-          put(__DSMarker, " MM");
+          put(__DSMarker, " !!");
           put(__DSTaskArea, " TT");
-          put(__DSGoalArea, " VV");
+          put(__DSGoalArea, " ++");
        //   put(__DSGoalArea, " \u2690\u2690");
           put(__DSRoleArea, " //");
        //   put(__DSRoleArea, " \u25BA\u25BA");

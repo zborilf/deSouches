@@ -216,21 +216,9 @@ public class DSGTaskPoolFrame {
 
             PFrame.setJMenuBar(menuBar);
 
+            PFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
             PFrame.setSize(new Dimension(2000, 1000));
             PFrame.show();
-        /*
-        JPanel mainPanel=new JPanel();
-        mainPanel.setBorder(new BevelBorder(BevelBorder.RAISED));
-        JButton buttonCascade=new JButton("Cascade");
-        buttonCascade.addActionListener(alButtonCascade);
-        mainPanel.add(buttonCascade,BorderLayout.WEST);
-        JButton buttonTiles=new JButton("Tiles");
-        mainPanel.add(buttonTiles,BorderLayout.WEST);
-        mainPanel.add(PDesktopPane, BorderLayout.SOUTH);
-        PFrame.add(mainPanel,BorderLayout.NORTH);
-        PFrame.setSize(new Dimension(1000,800));
-        PFrame.show();
-         */
         }
     }
 

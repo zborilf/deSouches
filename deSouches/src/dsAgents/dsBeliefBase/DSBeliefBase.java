@@ -515,7 +515,7 @@ public class DSBeliefBase {
       PAgent.printOutput("---- SCENARIO SET TO null");
     if (PGUIFocus) {
       if(mission!=null)
-        PGUI.setScenario(mission.getName());
+        PGUI.setMission(mission.getName());
     }
   }
 

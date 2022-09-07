@@ -7,19 +7,11 @@ import dsMultiagent.dsTasks.DSTask;
 
 public class DSSOneBlock extends DSSBlockMission {
 
-    /*
-    int PStateM;
-    DSAgent PMaster;
-    Point PMasterGoalPos;
-    Point PMasterDispenserPos;
-    DSBody PMasterGoalBody;
 
-    int PType1;
-*/
 
     @Override
     public String getName() {
-        return ("One block scenario");
+        return ("One block mission");
     }
 
     public void updateGUI(int step) {
@@ -90,6 +82,10 @@ public class DSSOneBlock extends DSSBlockMission {
                         + goal.getGoalDescription());
 
         if (agent == PMaster) {
+            if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
+                PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" failed detachAll -> detachAll");
+                agent.hearOrder(new DSGDetachAll());
+            }
             if (goal.getGoalDescription().contentEquals("get block 2022")) {
                 PGUI.addText2Terminal(agent.getEntityName() + " failed getBlock -> getBlock");
                 agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
@@ -112,38 +108,6 @@ public class DSSOneBlock extends DSSBlockMission {
         }
     }
 
-
-/*
-    public boolean checkEvent(DSAgent agent, int eventType) {
-        agent.printOutput("Checking event "+eventType);
-        switch (eventType) {
-            case DSMMission._disabledEvent:
-                if (PMaster == agent) {
-                    agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
-                    PStateM = 1;
-                }
-                return (true);
-
-            case DSMMission._noBlockEvent:
-                if (PMaster == agent) {
-                    PMaster.getBody().resetBody();
-                    if (PStateM == 2) {
-                        PStateM = 1;
-                        agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
-                    }
-                }
-
-                return (true);
-        }
-        return (false);
-    }
-*/
-/*
-    public void calibrateScenario(DSMap map){
-        PMasterDispenserPos=map.centralizeCoords(PMasterDispenserPos);
-        PMasterGoalPos=map.centralizeCoords(PMasterGoalPos);
-    }
-*/
 
     boolean allocateAgents() {
 

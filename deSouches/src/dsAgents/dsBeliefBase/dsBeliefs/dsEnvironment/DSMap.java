@@ -441,16 +441,18 @@ public class DSMap {
     for (DSAgent agent : PAgentPosition.keySet())
       so.append(agent.getEntityName()).append(point2String(agent.getMapPosition())).append(", ");
 
-  so.append("\nGoals: ");
-  so.append(PMapCells.getAllTypePositions(DSCell.__DSGoalArea));
+//  so.append("\nGoals: ");
+//  so.append(PMapCells.getAllTypePositions(DSCell.__DSGoalArea));
 
 
-  //  LinkedList<DSCell> cells;
+  /*  LinkedList<DSCell> cells;
     so=so.append("\n");
     for(int ii=0;ii<3;ii++) {
       String cs=printCells(PMapCells.getAllType(DSCell.__DSDispenser + ii));
       so = so.append("D"+ii+": "+cs+"\n");
     }
+    so.append("\n");
+*/
     so.append("\n");
 
     Point tlc = PMapCells.getTLC(); // top left corner

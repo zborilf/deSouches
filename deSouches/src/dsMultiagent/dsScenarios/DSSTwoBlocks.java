@@ -11,7 +11,7 @@ public class DSSTwoBlocks extends DSSBlockMission {
 
   @Override
   public String getName(){
-    return("Two Block scenario");
+    return("Two Block mission");
   }
 
   public void updateGUI(int step) {
@@ -24,9 +24,9 @@ public class DSSTwoBlocks extends DSSBlockMission {
     super.goalCompleted(agent,goal);
     agent.getCommander().printOutput(
         "goalCompleted: "
-            + "SCEN: Task te chvali, agente "
+            + "SCEN: Commander praises you,  agent "
             + agent.getEntityName()
-            + " za "
+            + " for "
             + goal.getGoalDescription());
 
     if (agent == PMaster) {
@@ -35,27 +35,27 @@ public class DSSTwoBlocks extends DSSBlockMission {
         agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
-        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" detachAll -> getBlock");
+        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" completed  detachAll -> getBlock");
         PStateM = 1;
         agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
       }
 
       if (goal.getGoalDescription().contentEquals("get block 2022")) {
-        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" getBlock -> goToPosition");
+        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" completed  getBlock -> goToPosition");
         PStateM = 2;
         agent.hearOrder(new DSGoToPosition(PMasterGoalPos, PMasterGoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("goToPosition")) {
-        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" goToPosition  -> (connect?)");
+        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" completed  goToPosition  -> (connect?)");
         PStateM = 3;
       }
       if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
-        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" evasive manoeuvre -> goToPosition");
+        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" completed  randomRoam-> goToPosition");
         PStateM = 2;
         agent.hearOrder(new DSGoToPosition(PMasterGoalPos, PMasterGoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("connectAndDetach")) {
-        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" connect -> submit");
+        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" completed  connect -> submit");
         agent.hearOrder(new DSAttachAndSubmit(PTask.getName(), "s", PType1));
         PStateM = 5;
       }
@@ -71,22 +71,22 @@ public class DSSTwoBlocks extends DSSBlockMission {
         agent.hearOrder(new DSGGetBlock2022(PType2, PLeutnant1DispenserPos, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
-        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" detachAll -> getBlock");
+        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" completed  detachAll -> getBlock");
         PStateL1 = 1;
         agent.hearOrder(new DSGGetBlock2022(PType2, PLeutnant1DispenserPos, getTask().getDeadline()));
       }
 
       if (goal.getGoalDescription().contentEquals("get block 2022")) {
-        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" getBlock -> goToPosition");
+        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" completed  getBlock -> goToPosition");
         PStateL1 = 2;
         agent.hearOrder(new DSGoToPosition(PLeutnant1GoalPos, PLeutnant1GoalBody, getTask().getDeadline()));
       }
       if (goal.getGoalDescription().contentEquals("goToPosition")){
-        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" goToPosition  -> (connect?)");
+        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" completed  goToPosition  -> (connect?)");
         PStateL1 = 3;
       }
       if (goal.getGoalDescription().contentEquals("evasiveManoeuvre")) {
-        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" evasive manoeuvre -> goToPosition");
+        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" completed  randomRoam -> goToPosition");
         PStateL1 = 2;
         agent.hearOrder(new DSGoToPosition(PLeutnant1GoalPos, PLeutnant1GoalBody, getTask().getDeadline()));
       }
@@ -131,6 +131,10 @@ public class DSSTwoBlocks extends DSSBlockMission {
             + goal.getGoalDescription());
 
     if (agent == PMaster) {
+      if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
+        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" failed detachAll -> detachAll");
+        agent.hearOrder(new DSGDetachAll());
+      }
       if (goal.getGoalDescription().contentEquals("get block 2022")) {
         PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName() + " failed getBlock -> getBlock");
         agent.hearOrder(new DSGGetBlock2022(PType1, PMasterDispenserPos, getTask().getDeadline()));
@@ -157,6 +161,10 @@ public class DSSTwoBlocks extends DSSBlockMission {
       } // Master
 
     if (agent == PLeutnant1) {
+      if (goal.getGoalDescription().contentEquals("detachAllGoal")) {
+        PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" failed detachAll -> detachAll");
+        agent.hearOrder(new DSGDetachAll());
+      }
       if (goal.getGoalDescription().contentEquals("get block 2022")) {
         PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName() + " failed getBlock -> getBlock");
         PStateL1 = 1;
@@ -180,7 +188,6 @@ public class DSSTwoBlocks extends DSSBlockMission {
 
     if ((PStateM == 4) && (PStateL1 == 4)) {
       PGUI.addText2Terminal(agent.getStep()+":"+agent.getEntityName()+" -> ConnectAndDetach");
-      // zde ma byt dance pro vsechny cleny, vysledkem je vhodny plan
       if(agent == PMaster)
           PMaster.hearOrder(new DSGConnectAndDetach("s", PLeutnant1.getEntityName()));
       if(agent == PLeutnant1) {

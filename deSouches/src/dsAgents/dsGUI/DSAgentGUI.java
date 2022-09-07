@@ -84,7 +84,7 @@ public class DSAgentGUI {
     dsgEnergyValue.setText(energy);
   }
 
-  public synchronized void setScenario(String scenario) {
+  public synchronized void setMission(String scenario) {
     dsgScenarioArea.setText(scenario);
   }
 

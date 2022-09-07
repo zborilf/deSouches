@@ -221,8 +221,6 @@ public class DSPerceptor {
 
     Iterator<Percept> newAddPercepts = percepts.getAddList().iterator();
 
-    //  System.out.println(newAddPercepts);
-
     while (newAddPercepts.hasNext()) {
       percept = newAddPercepts.next();
       perceptName = percept.getName();

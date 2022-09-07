@@ -150,14 +150,14 @@ public class DSAgent extends Agent {
     return (PScenarioPriority);
   }
 
-  protected DSMMission getScenario() {
+  protected DSMMission getMission() {
     return (PBeliefBase.getMission());
   }
 
   public String getScenarioName() {
-    if(getScenario()==null)
+    if(getMission()==null)
       return("no Scenario");
-    return(getScenario().getName());
+    return(getMission().getName());
   }
 
   /*
