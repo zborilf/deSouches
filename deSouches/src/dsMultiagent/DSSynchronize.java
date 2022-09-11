@@ -84,7 +84,7 @@ public class DSSynchronize {
 
   public synchronized boolean estimateSize(){
     HashMap<Integer, Integer> estimationsW=new HashMap<Integer, Integer>();
-    HashMap<Integer, Integer> estimationsH=new HashMap<Integer, Integer>();
+    HashMap<Integer, Integer> estimationsH=new HashMap();
     LinkedList<Point> d1= PMasterGroup.getMap().getTypePositions(DSCell.__DSDispenser + 0);
     estimationsW=estimateSize(d1,estimationsW,true);
     estimationsH=estimateSize(d1,estimationsH,false);

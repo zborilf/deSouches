@@ -260,7 +260,7 @@ public class DSMap {
 
   public LinkedList<Point> getTypePositions(int type) {
     LinkedList<DSCell> objects = PMapCells.getAllType(type);
-    LinkedList<Point> objectPositions = new LinkedList<Point>();
+    LinkedList<Point> objectPositions = new LinkedList();
     if (objects == null) return (objectPositions);
     objects = (LinkedList<DSCell>) objects.clone();
     for (DSCell cell : objects) {
