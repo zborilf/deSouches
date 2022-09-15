@@ -269,6 +269,7 @@ public class DSAgent extends Agent {
     return (PBeliefBase.getAcualRole());
   }
 
+
   public Point getNearestGoal() {
     return (PBeliefBase.nearestGoal());
   }

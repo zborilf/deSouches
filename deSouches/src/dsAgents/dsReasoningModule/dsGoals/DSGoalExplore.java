@@ -14,6 +14,7 @@ package dsAgents.dsReasoningModule.dsGoals;
 */
 
 import dsAgents.DSAgent;
+import dsAgents.dsBeliefBase.dsBeliefs.DSRoles;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCells;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
@@ -48,7 +49,7 @@ public class DSGoalExplore extends DSGGoal {
     List<Point> destinations = new ArrayList<>();
     int local_priority = ROAM_PRIORITY;
 
-    if (agent.getActualRole().compareTo("default") == 0) {
+    if (agent.getActualRole().compareTo(DSRoles._roleDefault) == 0) {
       // try to change role if viable
       // if (agent.getMap().getMap().getKeyType(agent.getMapPosition(), DSCell.__DSRoleArea) != null) {
 
@@ -79,7 +80,7 @@ public class DSGoalExplore extends DSGGoal {
     }
 
     // try to shoot
-    if(agent.getActualRole().contentEquals("digger")){
+    if(agent.getActualRole().contentEquals(DSRoles._roleDigger)){
       LinkedList<DSCell> attackables=agent.getOutlook().getCells().getAttackables();
       if(attackables!=null) {
           if(agent.getNotRecentlyAttacked(attackables)!=null) {

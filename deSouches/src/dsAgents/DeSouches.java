@@ -1,6 +1,7 @@
 package dsAgents;
 
 import deSouches.utils.HorseRider;
+import dsAgents.dsBeliefBase.dsBeliefs.DSRoles;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
@@ -114,17 +115,17 @@ public class DeSouches extends Agent {
   */
 
   public String roleNeeded(DSAgent agent) {
-    if(agent.getActualRole().contentEquals("worker") ||
-            agent.getActualRole().contentEquals("digger"))
+    if(agent.getActualRole().contentEquals(DSRoles._roleWorker) ||
+            agent.getActualRole().contentEquals(DSRoles._roleDigger))
       return("");
 
-    String role = "digger";
-    LinkedList<DSAgent> workers = agent.getGroup().getMembersByRole("worker",false);
+    String role = DSRoles._roleDigger;
+    LinkedList<DSAgent> workers = agent.getGroup().getMembersByRole(DSRoles._roleWorker,false);
     if (workers != null)
       if (workers.size() >= DSConfig.___max_workers) return (role);
-    if (Math.random() > DSConfig.___diggerRatio) role = "worker";
+    if (Math.random() > DSConfig.___diggerRatio) role = DSRoles._roleWorker;
     else
-      role = "digger";
+      role = DSRoles._roleDigger;
     return (role);
   }
 
@@ -220,12 +221,12 @@ public class DeSouches extends Agent {
 //      PGGUI.addText(st);
 
   //    st = "Diggers: ";
-      LinkedList<DSAgent> diggers = PSynchronizer.getMasterGroup().getMembersByRole("digger",false);
+      LinkedList<DSAgent> diggers = PSynchronizer.getMasterGroup().getMembersByRole(DSRoles._roleDigger,false);
     //  if (diggers != null) for (DSAgent digger : diggers) st = st + digger.getEntityName() + " / ";
     //  PGGUI.addText(st);
 
   //    st = "Not busy workers: ";
-      workers = PSynchronizer.getMasterGroup().getMembersByRole("worker",true);
+      workers = PSynchronizer.getMasterGroup().getMembersByRole(DSRoles._roleWorker,true);
       if (workers == null) possible = false;
    //   else for (DSAgent worker : workers) st = st + worker.getEntityName() + " / ";
    //   PGGUI.addText(st);
@@ -625,12 +626,12 @@ public class DeSouches extends Agent {
 
   public synchronized void needJob(DSAgent agent) {
     if ((PSynchronizer.getMasterGroup() != null) &&
-            (agent.getActualRole().contentEquals("default"))) {
+            (agent.getActualRole().contentEquals(DSRoles._roleDefault))) {
       // an agent with default role in the stage 2 (with mastermap) -> try to change role
       agent.hearOrder(new DSGChangeRole());
       return;
     }
-    if (agent.getActualRole().contentEquals("digger")&&(getMasterMap()!=null)) {
+    if (agent.getActualRole().contentEquals(DSRoles._roleDigger)&&(getMasterMap()!=null)) {
       PFightersMission.checkEvent(agent, DSMMission._newFighterEvent);
       return;
     }

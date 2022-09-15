@@ -1,6 +1,7 @@
 package dsMultiagent.dsScenarios;
 
 import dsAgents.DSAgent;
+import dsAgents.dsBeliefBase.dsBeliefs.DSRoles;
 import dsAgents.dsReasoningModule.dsGoals.*;
 import java.awt.*;
 import java.util.HashMap;
@@ -50,7 +51,7 @@ public class DSDivideAndExplore extends DSMMission {
 
     divideSpace(PAgent.getGroup().getFreeAgents(2), false);
 
-    if(!agent.getActualRole().contentEquals("digger")) {
+    if(!agent.getActualRole().contentEquals(DSRoles._roleDigger)) {
       DSGGoal newGoal = new DSGoalExplore(PRadius); // ... area!);
       agent.hearOrder(newGoal);
     }

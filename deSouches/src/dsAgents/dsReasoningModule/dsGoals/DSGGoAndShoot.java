@@ -1,6 +1,7 @@
 package dsAgents.dsReasoningModule.dsGoals;
 
 import dsAgents.DSAgent;
+import dsAgents.dsBeliefBase.dsBeliefs.DSRoles;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsExecutionModule.dsActions.DSClear;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
@@ -24,7 +25,7 @@ public class DSGGoAndShoot extends DSGGoal {
     public boolean revisePlans(DSAgent agent) {
 
         // try to shoot
-        if(agent.getActualRole().contentEquals("digger")){
+        if(agent.getActualRole().contentEquals(DSRoles._roleDigger)){
             LinkedList<DSCell> attackables=agent.getOutlook().getCells().getAttackables();
             if(attackables!=null) {
                 if(agent.getNotRecentlyAttacked(attackables)!=null) {

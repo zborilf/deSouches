@@ -2,6 +2,7 @@ package dsMultiagent.dsScenarios;
 
 import dsAgents.DSAgent;
 import dsAgents.DeSouches;
+import dsAgents.dsBeliefBase.dsBeliefs.DSRoles;
 import dsAgents.dsGUI.DSFightersGUI;
 import dsAgents.dsReasoningModule.dsGoals.DSGDetachAll;
 import dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot;
@@ -26,7 +27,7 @@ public class DSMFightersMission extends DSMMission{
         super.checkConsistency();
         if(PCommander.getMasterGroup()!=null)
         for(DSAgent agent:PCommander.getMasterGroup().getMembersList())
-            if(agent.getActualRole().contentEquals("digger"))
+            if(agent.getActualRole().contentEquals(DSRoles._roleDigger))
                 if(!agent.getScenarioName().contentEquals("Fighter Mission"))
                     this.checkEvent(agent,DSMMission._newFighterEvent);
         return(__mission_goes_well);

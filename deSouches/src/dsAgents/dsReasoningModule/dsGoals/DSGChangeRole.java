@@ -1,6 +1,7 @@
 package dsAgents.dsReasoningModule.dsGoals;
 
 import dsAgents.DSAgent;
+import dsAgents.dsBeliefBase.dsBeliefs.DSRoles;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
@@ -15,7 +16,7 @@ public class DSGChangeRole extends DSGGoal{
 
     @Override
     public boolean revisePlans(DSAgent agent) {
-        if(!agent.getActualRole().contentEquals("default"))
+        if(!agent.getActualRole().contentEquals(DSRoles._roleDefault))
             PPlans.put("role changed", new DSPlan("role changed",3));
 
 
