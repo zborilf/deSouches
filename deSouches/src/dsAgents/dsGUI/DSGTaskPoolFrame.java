@@ -22,6 +22,7 @@ public class DSGTaskPoolFrame {
     JCheckBox PTwoBlocks;
     JCheckBox PThreeBlocks;
     JCheckBox PFourBlocks;
+    JCheckBox PUpdate;
 
     int style=__cascade;
 
@@ -90,7 +91,8 @@ public class DSGTaskPoolFrame {
         PTaskGUIs.add(taskGUI);
         JInternalFrame frame=taskGUI.getFrame();
         PDesktopPane.add(frame);
-        setFrames();
+        if(PUpdate.isSelected())
+            setFrames();
     }
 
 
@@ -98,15 +100,6 @@ public class DSGTaskPoolFrame {
             public void actionPerformed(ActionEvent e) {
                 style=__tile;
                 setFrames();
-                /*    LinkedList<JInternalFrame> ilf=getRequested();
-                int i=0;
-                for(JInternalFrame frame:ilf) {
-                    PDesktopPane.getDesktopManager().
-                            setBoundsForFrame(frame,(i / 5)*300,(i % 5) *200,300,200);
-                    frame.setVisible(true);
-                    frame.toFront();
-                    i++;
-                }*/
             }
         };
 
@@ -114,15 +107,6 @@ public class DSGTaskPoolFrame {
             public void actionPerformed(ActionEvent e) {
                 style=__cascade;
                 setFrames();
-                   /*LinkedList<JInternalFrame> ilf=getRequested();
-                    int i=0;
-                    for(JInternalFrame frame:ilf) {
-                        PDesktopPane.getDesktopManager().
-                                setBoundsForFrame(frame,i*10,30+(i % 10) *60,1000,300);
-                        frame.setVisible(true);
-                        frame.toFront();
-                        i++;
-                    }*/
                 }
         };
 
@@ -179,11 +163,13 @@ public class DSGTaskPoolFrame {
             PTwoBlocks = new JCheckBox("2B");
             PThreeBlocks = new JCheckBox("3B");
             PFourBlocks = new JCheckBox("4B");
+            PUpdate = new JCheckBox("Update");
 
             POneBlock.setSelected(true);
             PTwoBlocks.setSelected(true);
             PThreeBlocks.setSelected(true);
             PFourBlocks.setSelected(true);
+            PUpdate.setSelected(true);
 
             POneBlock.setMnemonic(KeyEvent.VK_1);
             PTwoBlocks.setMnemonic(KeyEvent.VK_2);
@@ -207,6 +193,8 @@ public class DSGTaskPoolFrame {
             menuBar.add(bcascade);
             JButton btile = new JButton("Tile");
             menuBar.add(btile);
+
+            menuBar.add(PUpdate);
 
             bcascade.addActionListener(alButtonCascade);
             btile.addActionListener(alButtonTile);

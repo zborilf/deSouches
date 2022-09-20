@@ -3,14 +3,17 @@ package dsAgents.dsGUI;
 import dsAgents.DeSouches;
 
 import java.awt.*;
+import java.util.HashMap;
 import javax.swing.*;
 import javax.swing.plaf.FontUIResource;
 
 public class DSFightersGUI {
   private JPanel dsgGMainPanel;
   private JTextArea dsgFightersTerminal;
+  private JPanel dsgFightersPanel;
   private JTextArea dsgFTerminal;
 
+  HashMap<String, JPanel> PFighterPanels;
 
   DeSouches PCommander;
   JFrame PFrame;
@@ -28,14 +31,17 @@ public class DSFightersGUI {
       dsgFightersTerminal.append(text+"\n");
   }
 
+
   public void setFrame(JFrame frame){
     PFrame=frame;
   }
 
+  /*
   public void addTaskFrame(JFrame frame){
     JDesktopPane pane=(JDesktopPane) PFrame.getContentPane();
     pane.add(frame);
   }
+   */
 
   public DSFightersGUI(){
   }
@@ -59,5 +65,6 @@ public class DSFightersGUI {
 
   private void createUIComponents() {
     // TODO: place custom component creation code here
+    PFighterPanels=new HashMap<>();
   }
 }

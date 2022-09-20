@@ -227,6 +227,11 @@ public class DSPerceptor {
       perceptParams = percept.getParameters();
 
       switch (DSBeliefsIndexes.getIndex(perceptName)) {
+
+        case DSBeliefsIndexes.__ranking:
+          BB.getCommander().printOutput(" FINAL RANKING: "+perceptParams.iterator().next().toString());
+          System.exit(0);
+
         case DSBeliefsIndexes.__thing:
           BB.addThingToOutlook(perceptParams);
           break;
@@ -288,9 +293,7 @@ public class DSPerceptor {
         case DSBeliefsIndexes.__score:
           BB.setScore(perceptParams);
           break;
-        case DSBeliefsIndexes.__ranking:
-          BB.getCommander().printOutput(" FINAL RANKING: "+perceptParams.iterator().next().toString());
-          //System.exit(0);
+
       }
     }
 

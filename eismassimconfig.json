@@ -11,11 +11,11 @@
   "queued": false,
 
   "entities" : {},
-  
+
   "multi-entities": [
     {
       "name-prefix": "connectionA",
-      "username-prefix": "agentA",
+      "username-prefix": "agentFIT_BUT",
       "password": "1",
       "print-iilang": false,
       "print-json": false,

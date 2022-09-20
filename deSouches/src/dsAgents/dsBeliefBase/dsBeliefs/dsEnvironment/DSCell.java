@@ -82,6 +82,8 @@ public class  DSCell {
     }
 
     if (_thingMap.containsKey(thing + params)) return (_thingMap.get(thing + params));
+    if(thing.substring(0,6).contentEquals("entity"))
+      return(__DSEntity_Enemy);
     return (-1);
   }
 

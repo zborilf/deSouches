@@ -115,7 +115,7 @@ public class DSSynchronize {
     int d1 = group.getMap().getMapCells().getAllType(__DSDispenser + 1).size();
     int d2 = group.getMap().getMapCells().getAllType(__DSDispenser + 2).size();
 
-    if (((ga * za * d0) > 0) && (group.getMembers().size() > 5)) {
+    if (((ga * za * (d0+d1+d2)) > 0) && (group.getMembers().size() > 4)) {
       PMasterGroup = group;
       group.setMasterGroup();
       return(true);

@@ -1,0 +1,3880 @@
+NEW COMMAND! forceDetachGoal0
+LAR: success
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGForceDetach@6114e415]
+Nasleduji cil forceDetachGoal0
+HPPlan after revision forceDdetach body Detach s ; 
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 559 , pos java.awt.Point[x=0,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: none
+Goal: forceDetachGoal1
+Control Loop Finished
+LAR: failed_target
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGForceDetach@6114e415]
+Nasleduji cil forceDetachGoal1
+HPPlan after revision forceDdetach body Detach n ; 
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 560 , pos java.awt.Point[x=0,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: none
+Goal: forceDetachGoal2
+Control Loop Finished
+LAR: failed_target
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGForceDetach@6114e415]
+Nasleduji cil forceDetachGoal2
+HPPlan after revision forceDdetach body Detach e ; 
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 561 , pos java.awt.Point[x=0,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: none
+Goal: forceDetachGoal3
+Control Loop Finished
+LAR: failed_target
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGForceDetach@6114e415]
+Nasleduji cil forceDetachGoal3
+HPPlan after revision forceDdetach body Detach w ; 
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 562 , pos java.awt.Point[x=0,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: none
+Goal: forceDetachGoal4
+Control Loop Finished
+LAR: failed_target
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGForceDetach@6114e415]
+Nasleduji cil forceDetachGoal4
+Cil byl nasledovan, status cile subgoal needed
+Subgoal!! Rozsiruji o detachAllGoal
+----------------------------------------------------------
+Step: 563 , pos java.awt.Point[x=0,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: none
+Goal: forceDetachGoal5
+Control Loop Finished
+LAR: failed_random
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGDetachAll@780eef29, dsAgents.dsReasoningModule.dsGoals.DSGForceDetach@6114e415]
+Nasleduji cil detachAllGoal
+HPPlan after revision OKPlan body 
+Cil byl nasledovan, status cile goal achieved
+----------------------------------------------------------
+Step: 564 , pos java.awt.Point[x=0,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: none
+Goal: forceDetachGoal5
+Control Loop Finished
+LAR: success
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGForceDetach@6114e415]
+Nasleduji cil forceDetachGoal5
+HPPlan after revision OKPlan body 
+Cil byl nasledovan, status cile goal achieved
+----------------------------------------------------------
+Step: 565 , pos java.awt.Point[x=0,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: none
+Goal: forceDetachGoal5
+Control Loop Finished
+LAR: success
+There is no intention
+----------------------------------------------------------
+Step: 566 , pos java.awt.Point[x=0,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: none
+Goal: No goal
+Control Loop Finished
+LAR: success
+---- SCENARIO SET TO Divide and Explore Scenario
+NEW COMMAND! Goal explore
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 567 , pos java.awt.Point[x=0,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 568 , pos java.awt.Point[x=-1,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 569 , pos java.awt.Point[x=-2,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 570 , pos java.awt.Point[x=-3,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 571 , pos java.awt.Point[x=-4,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 572 , pos java.awt.Point[x=-5,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 573 , pos java.awt.Point[x=-6,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 574 , pos java.awt.Point[x=-7,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 575 , pos java.awt.Point[x=-8,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 576 , pos java.awt.Point[x=-9,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 577 , pos java.awt.Point[x=-10,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 578 , pos java.awt.Point[x=-11,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 579 , pos java.awt.Point[x=-12,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 580 , pos java.awt.Point[x=-13,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 581 , pos java.awt.Point[x=-14,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 582 , pos java.awt.Point[x=-15,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 583 , pos java.awt.Point[x=-16,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 584 , pos java.awt.Point[x=-17,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 585 , pos java.awt.Point[x=-18,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 586 , pos java.awt.Point[x=-19,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 587 , pos java.awt.Point[x=-20,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 588 , pos java.awt.Point[x=-21,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 589 , pos java.awt.Point[x=-22,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 590 , pos java.awt.Point[x=-23,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 591 , pos java.awt.Point[x=-24,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 592 , pos java.awt.Point[x=-25,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 593 , pos java.awt.Point[x=-26,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 594 , pos java.awt.Point[x=-27,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 595 , pos java.awt.Point[x=-28,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 596 , pos java.awt.Point[x=-29,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 597 , pos java.awt.Point[x=-30,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 598 , pos java.awt.Point[x=-31,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 599 , pos java.awt.Point[x=-32,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 600 , pos java.awt.Point[x=-33,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 601 , pos java.awt.Point[x=-34,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 602 , pos java.awt.Point[x=-35,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 603 , pos java.awt.Point[x=-36,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 604 , pos java.awt.Point[x=-37,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 605 , pos java.awt.Point[x=-38,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 606 , pos java.awt.Point[x=-39,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 607 , pos java.awt.Point[x=-40,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 608 , pos java.awt.Point[x=-41,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 609 , pos java.awt.Point[x=-42,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 610 , pos java.awt.Point[x=-43,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 611 , pos java.awt.Point[x=-44,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 612 , pos java.awt.Point[x=-45,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 613 , pos java.awt.Point[x=-46,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 614 , pos java.awt.Point[x=-47,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 615 , pos java.awt.Point[x=-48,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 616 , pos java.awt.Point[x=-49,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 617 , pos java.awt.Point[x=-50,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 618 , pos java.awt.Point[x=-51,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 619 , pos java.awt.Point[x=-52,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 620 , pos java.awt.Point[x=-53,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 621 , pos java.awt.Point[x=-53,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 622 , pos java.awt.Point[x=-54,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 623 , pos java.awt.Point[x=-55,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 624 , pos java.awt.Point[x=-56,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 625 , pos java.awt.Point[x=-57,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 626 , pos java.awt.Point[x=-58,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 627 , pos java.awt.Point[x=-59,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 628 , pos java.awt.Point[x=-60,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 629 , pos java.awt.Point[x=-61,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 630 , pos java.awt.Point[x=-62,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 631 , pos java.awt.Point[x=-63,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 632 , pos java.awt.Point[x=-64,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 633 , pos java.awt.Point[x=-65,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 634 , pos java.awt.Point[x=-66,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 635 , pos java.awt.Point[x=-67,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 636 , pos java.awt.Point[x=-68,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 637 , pos java.awt.Point[x=-69,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: failed_random
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore / roamAnt
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 638 , pos java.awt.Point[x=-69,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 639 , pos java.awt.Point[x=-70,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 640 , pos java.awt.Point[x=-71,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 641 , pos java.awt.Point[x=-72,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 642 , pos java.awt.Point[x=-73,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 643 , pos java.awt.Point[x=-74,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 644 , pos java.awt.Point[x=-75,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 645 , pos java.awt.Point[x=-76,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 646 , pos java.awt.Point[x=-77,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 647 , pos java.awt.Point[x=-78,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 648 , pos java.awt.Point[x=-79,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 649 , pos java.awt.Point[x=-80,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 650 , pos java.awt.Point[x=-81,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 651 , pos java.awt.Point[x=-82,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 652 , pos java.awt.Point[x=-83,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 653 , pos java.awt.Point[x=-84,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 654 , pos java.awt.Point[x=-85,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 655 , pos java.awt.Point[x=-86,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 656 , pos java.awt.Point[x=-87,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 657 , pos java.awt.Point[x=-88,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 658 , pos java.awt.Point[x=-89,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 659 , pos java.awt.Point[x=-90,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 660 , pos java.awt.Point[x=-91,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 661 , pos java.awt.Point[x=-92,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 662 , pos java.awt.Point[x=-93,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 663 , pos java.awt.Point[x=-94,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 664 , pos java.awt.Point[x=-95,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 665 , pos java.awt.Point[x=-96,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 666 , pos java.awt.Point[x=-97,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 667 , pos java.awt.Point[x=-98,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 668 , pos java.awt.Point[x=-99,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 669 , pos java.awt.Point[x=-100,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 670 , pos java.awt.Point[x=-101,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 671 , pos java.awt.Point[x=-102,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 672 , pos java.awt.Point[x=-103,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 673 , pos java.awt.Point[x=-104,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 674 , pos java.awt.Point[x=-105,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 675 , pos java.awt.Point[x=-106,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 676 , pos java.awt.Point[x=-107,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 677 , pos java.awt.Point[x=-108,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 678 , pos java.awt.Point[x=-109,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 679 , pos java.awt.Point[x=-110,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 680 , pos java.awt.Point[x=-111,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 681 , pos java.awt.Point[x=-112,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 682 , pos java.awt.Point[x=-113,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 683 , pos java.awt.Point[x=-114,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 684 , pos java.awt.Point[x=-115,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 685 , pos java.awt.Point[x=-116,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 686 , pos java.awt.Point[x=-117,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 687 , pos java.awt.Point[x=-118,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 688 , pos java.awt.Point[x=-119,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 689 , pos java.awt.Point[x=-120,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 690 , pos java.awt.Point[x=-121,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 691 , pos java.awt.Point[x=-122,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 692 , pos java.awt.Point[x=-123,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 693 , pos java.awt.Point[x=-124,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 694 , pos java.awt.Point[x=-125,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 695 , pos java.awt.Point[x=-126,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 696 , pos java.awt.Point[x=-127,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 697 , pos java.awt.Point[x=-128,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 698 , pos java.awt.Point[x=-129,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 699 , pos java.awt.Point[x=-130,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 700 , pos java.awt.Point[x=-131,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 701 , pos java.awt.Point[x=-132,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 702 , pos java.awt.Point[x=-133,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 703 , pos java.awt.Point[x=-134,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 704 , pos java.awt.Point[x=-135,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 705 , pos java.awt.Point[x=-136,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 706 , pos java.awt.Point[x=-137,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 707 , pos java.awt.Point[x=-138,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 708 , pos java.awt.Point[x=-139,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 709 , pos java.awt.Point[x=-140,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 710 , pos java.awt.Point[x=-141,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 711 , pos java.awt.Point[x=-142,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 712 , pos java.awt.Point[x=-143,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 713 , pos java.awt.Point[x=-144,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 714 , pos java.awt.Point[x=-145,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 715 , pos java.awt.Point[x=-146,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 716 , pos java.awt.Point[x=-147,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 717 , pos java.awt.Point[x=-148,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 718 , pos java.awt.Point[x=-149,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 719 , pos java.awt.Point[x=-150,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 720 , pos java.awt.Point[x=-151,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 721 , pos java.awt.Point[x=-152,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 722 , pos java.awt.Point[x=-153,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 723 , pos java.awt.Point[x=-154,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 724 , pos java.awt.Point[x=-155,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 725 , pos java.awt.Point[x=-156,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 726 , pos java.awt.Point[x=-157,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 727 , pos java.awt.Point[x=-158,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 728 , pos java.awt.Point[x=-159,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 729 , pos java.awt.Point[x=-160,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 730 , pos java.awt.Point[x=-161,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 731 , pos java.awt.Point[x=-162,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 732 , pos java.awt.Point[x=-163,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 733 , pos java.awt.Point[x=-164,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 734 , pos java.awt.Point[x=-165,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 735 , pos java.awt.Point[x=-166,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 736 , pos java.awt.Point[x=-167,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 737 , pos java.awt.Point[x=-168,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 738 , pos java.awt.Point[x=-169,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 739 , pos java.awt.Point[x=-170,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 740 , pos java.awt.Point[x=-171,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 741 , pos java.awt.Point[x=-172,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 742 , pos java.awt.Point[x=-173,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 743 , pos java.awt.Point[x=-174,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 744 , pos java.awt.Point[x=-175,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 745 , pos java.awt.Point[x=-176,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 746 , pos java.awt.Point[x=-177,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 747 , pos java.awt.Point[x=-178,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 748 , pos java.awt.Point[x=-179,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 749 , pos java.awt.Point[x=-180,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 750 , pos java.awt.Point[x=-181,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 751 , pos java.awt.Point[x=-182,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 752 , pos java.awt.Point[x=-183,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 753 , pos java.awt.Point[x=-184,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+HPPlan after revision roamAnt body Move [-1,0] ; 
+Moving action: move(w)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 754 , pos java.awt.Point[x=-185,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore / roamAnt
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [-1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGoalExplore@65d020d6]
+Nasleduji cil Goal explore
+Cil byl nasledovan, status cile planning failed
+----------------------------------------------------------
+Step: 755 , pos java.awt.Point[x=-186,y=0]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Divide and Explore Scenario
+Goal: Goal explore
+Control Loop Finished
+Absorbovan o java.awt.Point[x=282,y=-29]
+NEW COMMAND! go and shoot java.awt.Point[x=96,y=-34]
+---- SCENARIO SET TO Fighter Mission
+LAR: success
+Failed goal Goal explore
+NEW COMMAND! go and shoot java.awt.Point[x=97,y=-29]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@687bfc5f]
+Nasleduji cil go and shoot java.awt.Point[x=97,y=-29]
+HPPlan after revision OKPlan body 
+Cil byl nasledovan, status cile goal achieved
+----------------------------------------------------------
+Step: 756 , pos java.awt.Point[x=96,y=-29]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=97,y=-29]
+Control Loop Finished
+LAR: success
+NEW COMMAND! go and shoot java.awt.Point[x=99,y=-32]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@24370f05]
+Nasleduji cil go and shoot java.awt.Point[x=99,y=-32]
+HP A* More actions Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [0,-1] ; Move [0,-1] ; 
+HPPlan after revision go ahead body Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [0,-1] ; Move [0,-1] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 757 , pos java.awt.Point[x=96,y=-29]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=99,y=-32]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@24370f05]
+Nasleduji cil go and shoot java.awt.Point[x=99,y=-32]
+HP A* More actions Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [0,-1] ; 
+HPPlan after revision go ahead body Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [0,-1] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 758 , pos java.awt.Point[x=96,y=-30]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=99,y=-32]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@24370f05]
+Nasleduji cil go and shoot java.awt.Point[x=99,y=-32]
+HP A* More actions Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; 
+HPPlan after revision go ahead body Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 759 , pos java.awt.Point[x=96,y=-31]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=99,y=-32]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@24370f05]
+Nasleduji cil go and shoot java.awt.Point[x=99,y=-32]
+HP A* More actions Move [1,0] ; Move [1,0] ; Move [1,0] ; 
+HPPlan after revision go ahead body Move [1,0] ; Move [1,0] ; Move [1,0] ; 
+Moving action: move(e)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 760 , pos java.awt.Point[x=96,y=-32]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=99,y=-32]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@24370f05]
+Nasleduji cil go and shoot java.awt.Point[x=99,y=-32]
+HP A* More actions Move [1,0] ; Move [1,0] ; 
+HPPlan after revision go ahead body Move [1,0] ; Move [1,0] ; 
+Moving action: move(e)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 761 , pos java.awt.Point[x=97,y=-32]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=99,y=-32]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@24370f05]
+Nasleduji cil go and shoot java.awt.Point[x=99,y=-32]
+HPPlan after revision OKPlan body 
+Cil byl nasledovan, status cile goal achieved
+----------------------------------------------------------
+Step: 762 , pos java.awt.Point[x=98,y=-32]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=99,y=-32]
+Control Loop Finished
+LAR: success
+NEW COMMAND! go and shoot java.awt.Point[x=4,y=-38]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@44c0a8c2]
+Nasleduji cil go and shoot java.awt.Point[x=4,y=-38]
+HP A* More actions Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; 
+HPPlan after revision go ahead body Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 763 , pos java.awt.Point[x=98,y=-32]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=4,y=-38]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@44c0a8c2]
+Nasleduji cil go and shoot java.awt.Point[x=4,y=-38]
+HP A* More actions Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; 
+HPPlan after revision go ahead body Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 764 , pos java.awt.Point[x=98,y=-33]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=4,y=-38]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@44c0a8c2]
+Nasleduji cil go and shoot java.awt.Point[x=4,y=-38]
+HP A* More actions Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; 
+HPPlan after revision go ahead body Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 765 , pos java.awt.Point[x=98,y=-34]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=4,y=-38]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@44c0a8c2]
+Nasleduji cil go and shoot java.awt.Point[x=4,y=-38]
+HP A* More actions Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [0,-1] ; Move [0,-1] ; 
+HPPlan after revision go ahead body Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [0,-1] ; Move [0,-1] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 766 , pos java.awt.Point[x=98,y=-35]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=4,y=-38]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@44c0a8c2]
+Nasleduji cil go and shoot java.awt.Point[x=4,y=-38]
+HP A* More actions Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [0,-1] ; 
+HPPlan after revision go ahead body Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [0,-1] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 767 , pos java.awt.Point[x=98,y=-36]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=4,y=-38]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@44c0a8c2]
+Nasleduji cil go and shoot java.awt.Point[x=4,y=-38]
+HP A* More actions Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; 
+HPPlan after revision go ahead body Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 768 , pos java.awt.Point[x=98,y=-37]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=4,y=-38]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@44c0a8c2]
+Nasleduji cil go and shoot java.awt.Point[x=4,y=-38]
+HP A* More actions Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; 
+HPPlan after revision go ahead body Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; 
+Moving action: move(e)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 769 , pos java.awt.Point[x=98,y=-38]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=4,y=-38]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@44c0a8c2]
+Nasleduji cil go and shoot java.awt.Point[x=4,y=-38]
+HP A* More actions Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; 
+HPPlan after revision go ahead body Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; 
+Moving action: move(e)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 770 , pos java.awt.Point[x=99,y=-38]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=4,y=-38]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@44c0a8c2]
+Nasleduji cil go and shoot java.awt.Point[x=4,y=-38]
+HP A* More actions Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; 
+HPPlan after revision go ahead body Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; 
+Moving action: move(e)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 771 , pos java.awt.Point[x=0,y=-38]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=4,y=-38]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@44c0a8c2]
+Nasleduji cil go and shoot java.awt.Point[x=4,y=-38]
+HP A* More actions Move [1,0] ; Move [1,0] ; Move [1,0] ; 
+HPPlan after revision go ahead body Move [1,0] ; Move [1,0] ; Move [1,0] ; 
+Moving action: move(e)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 772 , pos java.awt.Point[x=1,y=-38]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=4,y=-38]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@44c0a8c2]
+Nasleduji cil go and shoot java.awt.Point[x=4,y=-38]
+HP A* More actions Move [1,0] ; Move [1,0] ; 
+HPPlan after revision go ahead body Move [1,0] ; Move [1,0] ; 
+Moving action: move(e)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 773 , pos java.awt.Point[x=2,y=-38]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=4,y=-38]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@44c0a8c2]
+Nasleduji cil go and shoot java.awt.Point[x=4,y=-38]
+HPPlan after revision OKPlan body 
+Cil byl nasledovan, status cile goal achieved
+----------------------------------------------------------
+Step: 774 , pos java.awt.Point[x=3,y=-38]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=4,y=-38]
+Control Loop Finished
+LAR: success
+NEW COMMAND! go and shoot java.awt.Point[x=2,y=-43]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@11fedcce]
+Nasleduji cil go and shoot java.awt.Point[x=2,y=-43]
+HP A* More actions Move [0,-1] ; Move [-1,0] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; 
+HPPlan after revision go ahead body Move [0,-1] ; Move [-1,0] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 775 , pos java.awt.Point[x=3,y=-38]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=2,y=-43]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@11fedcce]
+Nasleduji cil go and shoot java.awt.Point[x=2,y=-43]
+HP A* More actions Move [0,-1] ; Move [-1,0] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; 
+HPPlan after revision go ahead body Move [0,-1] ; Move [-1,0] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 776 , pos java.awt.Point[x=3,y=-39]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=2,y=-43]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@11fedcce]
+Nasleduji cil go and shoot java.awt.Point[x=2,y=-43]
+HP A* More actions Move [0,-1] ; Move [-1,0] ; Move [0,-1] ; Move [0,-1] ; 
+HPPlan after revision go ahead body Move [0,-1] ; Move [-1,0] ; Move [0,-1] ; Move [0,-1] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 777 , pos java.awt.Point[x=3,y=-40]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=2,y=-43]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@11fedcce]
+Nasleduji cil go and shoot java.awt.Point[x=2,y=-43]
+HP A* More actions Move [0,-1] ; Move [-1,0] ; Move [0,-1] ; 
+HPPlan after revision go ahead body Move [0,-1] ; Move [-1,0] ; Move [0,-1] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 778 , pos java.awt.Point[x=3,y=-41]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=2,y=-43]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@11fedcce]
+Nasleduji cil go and shoot java.awt.Point[x=2,y=-43]
+HP A* More actions Move [0,-1] ; Move [-1,0] ; 
+HPPlan after revision go ahead body Move [0,-1] ; Move [-1,0] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 779 , pos java.awt.Point[x=3,y=-42]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=2,y=-43]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@11fedcce]
+Nasleduji cil go and shoot java.awt.Point[x=2,y=-43]
+HPPlan after revision OKPlan body 
+Cil byl nasledovan, status cile goal achieved
+----------------------------------------------------------
+Step: 780 , pos java.awt.Point[x=3,y=-43]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=2,y=-43]
+Control Loop Finished
+LAR: success
+NEW COMMAND! go and shoot java.awt.Point[x=6,y=-48]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+HP A* More actions Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; 
+HPPlan after revision go ahead body Move [0,-1] ; Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 781 , pos java.awt.Point[x=3,y=-43]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished
+Agent agentFIT_BUT14 is moving by [0,0]
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+agent position java.awt.Point[x=3,y=56], destination java.awt.Point[x=6,y=-48] dx:1 dy1
+HP Greedy no block aposjava.awt.Point[x=3,y=56] destination=java.awt.Point[x=6,y=-48][1,1
+HPPlan after revision go ahead body Move [1,0] ; Move [1,0] ; Move [1,0] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; 
+Moving action: move(e)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 782 , pos java.awt.Point[x=3,y=56]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+agent position java.awt.Point[x=4,y=56], destination java.awt.Point[x=6,y=-48] dx:1 dy1
+HP Greedy no block aposjava.awt.Point[x=4,y=56] destination=java.awt.Point[x=6,y=-48][1,1
+HPPlan after revision go ahead body Move [1,0] ; Move [1,0] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; 
+Moving action: move(e)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 783 , pos java.awt.Point[x=4,y=56]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+agent position java.awt.Point[x=5,y=56], destination java.awt.Point[x=6,y=-48] dx:1 dy1
+HP Greedy no block aposjava.awt.Point[x=5,y=56] destination=java.awt.Point[x=6,y=-48][1,1
+HPPlan after revision go ahead body Move [1,0] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; 
+Moving action: move(e)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 784 , pos java.awt.Point[x=5,y=56]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [1,0]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+agent position java.awt.Point[x=6,y=56], destination java.awt.Point[x=6,y=-48] dx:0 dy1
+HP Greedy no block aposjava.awt.Point[x=6,y=56] destination=java.awt.Point[x=6,y=-48][0,1
+HPPlan after revision go ahead body Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 785 , pos java.awt.Point[x=6,y=56]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+agent position java.awt.Point[x=6,y=55], destination java.awt.Point[x=6,y=-48] dx:0 dy1
+HP Greedy no block aposjava.awt.Point[x=6,y=55] destination=java.awt.Point[x=6,y=-48][0,1
+HPPlan after revision go ahead body Move [0,-1] ; Move [0,-1] ; Move [0,-1] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 786 , pos java.awt.Point[x=6,y=55]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+agent position java.awt.Point[x=6,y=54], destination java.awt.Point[x=6,y=-48] dx:0 dy1
+HP Greedy no block aposjava.awt.Point[x=6,y=54] destination=java.awt.Point[x=6,y=-48][0,1
+HPPlan after revision go ahead body Move [0,-1] ; Move [0,-1] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 787 , pos java.awt.Point[x=6,y=54]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+agent position java.awt.Point[x=6,y=53], destination java.awt.Point[x=6,y=-48] dx:0 dy1
+HP Greedy no block aposjava.awt.Point[x=6,y=53] destination=java.awt.Point[x=6,y=-48][0,1
+HPPlan after revision go ahead body Move [0,-1] ; 
+Moving action: move(n)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 788 , pos java.awt.Point[x=6,y=53]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,-1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+agent position java.awt.Point[x=6,y=52], destination java.awt.Point[x=6,y=-48] dx:0 dy1
+HP Greedy no block aposjava.awt.Point[x=6,y=52] destination=java.awt.Point[x=6,y=-48][0,1
+HPPlan after revision goForBlock body Move [0,1] ; 
+Moving action: move(s)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 789 , pos java.awt.Point[x=6,y=52]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+agent position java.awt.Point[x=6,y=53], destination java.awt.Point[x=6,y=-48] dx:0 dy1
+HP Greedy no block aposjava.awt.Point[x=6,y=53] destination=java.awt.Point[x=6,y=-48][0,1
+HPPlan after revision goForBlock body Move [0,1] ; 
+Moving action: move(s)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 790 , pos java.awt.Point[x=6,y=53]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+agent position java.awt.Point[x=6,y=54], destination java.awt.Point[x=6,y=-48] dx:0 dy1
+HP Greedy no block aposjava.awt.Point[x=6,y=54] destination=java.awt.Point[x=6,y=-48][0,1
+HPPlan after revision goForBlock body Move [0,1] ; 
+Moving action: move(s)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 791 , pos java.awt.Point[x=6,y=54]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+agent position java.awt.Point[x=6,y=55], destination java.awt.Point[x=6,y=-48] dx:0 dy1
+HP Greedy no block aposjava.awt.Point[x=6,y=55] destination=java.awt.Point[x=6,y=-48][0,1
+HPPlan after revision goForBlock body Move [0,1] ; 
+Moving action: move(s)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 792 , pos java.awt.Point[x=6,y=55]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+agent position java.awt.Point[x=6,y=56], destination java.awt.Point[x=6,y=-48] dx:0 dy1
+HP Greedy no block aposjava.awt.Point[x=6,y=56] destination=java.awt.Point[x=6,y=-48][0,1
+HPPlan after revision goForBlock body Move [0,1] ; 
+Moving action: move(s)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 793 , pos java.awt.Point[x=6,y=56]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+agent position java.awt.Point[x=6,y=57], destination java.awt.Point[x=6,y=-48] dx:0 dy1
+HP Greedy no block aposjava.awt.Point[x=6,y=57] destination=java.awt.Point[x=6,y=-48][0,1
+HPPlan after revision goForBlock body Move [0,1] ; 
+Moving action: move(s)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 794 , pos java.awt.Point[x=6,y=57]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+agent position java.awt.Point[x=6,y=58], destination java.awt.Point[x=6,y=-48] dx:0 dy1
+HP Greedy no block aposjava.awt.Point[x=6,y=58] destination=java.awt.Point[x=6,y=-48][0,1
+HPPlan after revision goForBlock body Move [0,1] ; 
+Moving action: move(s)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 795 , pos java.awt.Point[x=6,y=58]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+agent position java.awt.Point[x=6,y=59], destination java.awt.Point[x=6,y=-48] dx:0 dy1
+HP Greedy no block aposjava.awt.Point[x=6,y=59] destination=java.awt.Point[x=6,y=-48][0,1
+HPPlan after revision goForBlock body Move [0,1] ; 
+Moving action: move(s)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 796 , pos java.awt.Point[x=6,y=59]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+agent position java.awt.Point[x=6,y=60], destination java.awt.Point[x=6,y=-48] dx:0 dy1
+HP Greedy no block aposjava.awt.Point[x=6,y=60] destination=java.awt.Point[x=6,y=-48][0,1
+HPPlan after revision goForBlock body Move [0,1] ; 
+Moving action: move(s)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 797 , pos java.awt.Point[x=6,y=60]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+agent position java.awt.Point[x=6,y=61], destination java.awt.Point[x=6,y=-48] dx:0 dy1
+HP Greedy no block aposjava.awt.Point[x=6,y=61] destination=java.awt.Point[x=6,y=-48][0,1
+HPPlan after revision goForBlock body Move [0,1] ; 
+Moving action: move(s)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 798 , pos java.awt.Point[x=6,y=61]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished
+LAR: success
+Agent agentFIT_BUT14 is moving by [0,1]
+Executing intention
+[dsAgents.dsReasoningModule.dsGoals.DSGGoAndShoot@19df558e]
+Nasleduji cil go and shoot java.awt.Point[x=6,y=-48]
+agent position java.awt.Point[x=6,y=62], destination java.awt.Point[x=6,y=-48] dx:0 dy1
+HP Greedy no block aposjava.awt.Point[x=6,y=62] destination=java.awt.Point[x=6,y=-48][0,1
+HPPlan after revision goForBlock body Move [0,1] ; 
+Moving action: move(s)
+
+Cil byl nasledovan, status cile feedback needed
+----------------------------------------------------------
+Step: 799 , pos java.awt.Point[x=6,y=62]
+Agent body  [0,0:1003]
+Atteched []
+Scenario: Fighter Mission
+Goal: go and shoot java.awt.Point[x=6,y=-48]
+Control Loop Finished

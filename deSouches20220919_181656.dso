@@ -1,0 +1,185 @@
+ --------------------------------- 
+Step 0
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@4818c1d4
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT25 sees agentFIT_BUT31 disp java.awt.Point[x=2,y=0] token true
+groupExtended: Leader {agentFIT_BUT25}agentFIT_BUT25,  by group Leader {agentFIT_BUT31}agentFIT_BUT31,  step 1
+>>agentFIT_BUT25 sees agentFIT_BUT13 disp java.awt.Point[x=2,y=-1] token false
+ --------------------------------- 
+Step 1
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@4818c1d4
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+agentFIT_BUT10 needs job
+agentFIT_BUT34 needs job
+agentFIT_BUT37 needs job
+agentFIT_BUT32 needs job
+agentFIT_BUT36 needs job
+agentFIT_BUT39 needs job
+agentFIT_BUT31 needs job
+agentFIT_BUT30 needs job
+agentFIT_BUT38 needs job
+agentFIT_BUT40 needs job
+agentFIT_BUT35 needs job
+agentFIT_BUT11 needs job
+agentFIT_BUT33 needs job
+agentFIT_BUT12 needs job
+agentFIT_BUT13 needs job
+agentFIT_BUT5 needs job
+agentFIT_BUT20 needs job
+agentFIT_BUT24 needs job
+agentFIT_BUT15 needs job
+agentFIT_BUT4 needs job
+agentFIT_BUT19 needs job
+agentFIT_BUT3 needs job
+agentFIT_BUT25 needs job
+agentFIT_BUT8 needs job
+agentFIT_BUT26 needs job
+agentFIT_BUT9 needs job
+agentFIT_BUT14 needs job
+agentFIT_BUT29 needs job
+agentFIT_BUT1 needs job
+agentFIT_BUT21 needs job
+agentFIT_BUT22 needs job
+agentFIT_BUT28 needs job
+agentFIT_BUT7 needs job
+agentFIT_BUT27 needs job
+agentFIT_BUT2 needs job
+agentFIT_BUT17 needs job
+agentFIT_BUT18 needs job
+agentFIT_BUT23 needs job
+>>agentFIT_BUT25 sees agentFIT_BUT13 disp java.awt.Point[x=2,y=-1] token true
+groupExtended: Leader {agentFIT_BUT25}agentFIT_BUT25, agentFIT_BUT31,  by group Leader {agentFIT_BUT13}agentFIT_BUT13,  step 2
+ --------------------------------- 
+Step 2
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@4818c1d4
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+agentFIT_BUT16 needs job
+agentFIT_BUT6 needs job
+ --------------------------------- 
+Step 3
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@4818c1d4
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 4
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@4818c1d4
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 5
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@4818c1d4
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 6
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@4818c1d4
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 7
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@4818c1d4
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 8
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@4818c1d4
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 9
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@4818c1d4
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 10
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@4818c1d4
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 11
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@4818c1d4
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 12
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@4818c1d4
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 13
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@4818c1d4
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0

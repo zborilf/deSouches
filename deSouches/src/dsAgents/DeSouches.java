@@ -119,10 +119,15 @@ public class DeSouches extends Agent {
             agent.getActualRole().contentEquals(DSRoles._roleDigger))
       return("");
 
-    String role = DSRoles._roleDigger;
     LinkedList<DSAgent> workers = agent.getGroup().getMembersByRole(DSRoles._roleWorker,false);
+    String role;
+    /* String role = DSRoles._roleDigger;
     if (workers != null)
       if (workers.size() >= DSConfig.___max_workers) return (role);
+      */
+    if (workers.size() >= DSConfig.___max_workers) return (DSRoles._roleDigger);
+    if (workers.size() <= DSConfig.___min_workers) return (DSRoles._roleWorker);
+
     if (Math.random() > DSConfig.___diggerRatio) role = DSRoles._roleWorker;
     else
       role = DSRoles._roleDigger;
@@ -409,15 +414,6 @@ public class DeSouches extends Agent {
         printOutput("@@! Scenario failed due to invalid goal destination " + mission.getTask().getName());
         scenarioFailed(mission," NO GOAL AREA");
       }
-/*      int sd=mission.getDeadline();
-      if(mission.getTask()!=null) {
-        sd = sd - mission.getTask().goalDistanceMax(); // minimal estimated time of completion
-      }
-
-      if (sd < PLastStep) {
-        printOutput("@@! Scenario failed due to timeout " + mission.getTask().getName());
-        scenarioFailed(mission," TIMEOUT");
-      }*/
     }
 
     for (dsGroupOption option : PGroupOptions.getOptions())
@@ -431,34 +427,20 @@ public class DeSouches extends Agent {
         DSTask task = ((dsGroupTaskOption) option).getTask();
 
         if (task.getDeadline() < PLastStep) PGroupOptions.removeOption(task.getName());
-        //       if(task.getTypesNeeded()!=null) {
-        //           PGGUI.addTask("Je treba resit " + task.getName() +
-        //                   " deadline " + task.getDeadline() + " pozadavky " +
-        // task.getTypesNeeded().toString());
         ArrayList<DSCCoalition> coalitions= proposeCoalitions4task(task);
         printOutput("group option "+task.getName());
         if(coalitions!=null)
           if(coalitions.size()>0){
 
-            // clone it
-/*
-            DSTask task2 = cloneTask(((dsGroupTaskOption) option).getTask(),task.getName()+"_"+PLastStep);
-            taskProposed(task2);
- */
             DSCCoalition coalition=coalitions.get(0);
             DSTaskMember tmember;
             for (DSCCoalitionMember cmember : coalition.getCoalitionMembers()) {
               tmember = new DSTaskMember(cmember.getAgent(), cmember.getPDispenser(), cmember.getGoal(), cmember.getPrice());
               task.setSubtaskRoute(cmember.getTaskID() - 1, tmember);
             }
-           // String taskString = task.task2String(PLastStep);
 
             // take a copy of proposed ... possibly multiple tasks of the same kinf
 
-
-            //PGGUI.addText(taskString);
-
-            //   if ((task.getDeadline() - PLastStep ) > (task.subtaskCostEstimation() + _timeNeeded)) {
 
             executeTask(task); // task is possible (agents, resources, time)
 
@@ -506,8 +488,10 @@ public class DeSouches extends Agent {
     //  PGGUI.addText("Step:" + PLastStep);
 
       if(PSynchronizer.getMasterGroup()==null)
-        if (PSynchronizer.masterGroupCandidate(agent.getGroup()))
+        if (PSynchronizer.masterGroupCandidate(agent.getGroup())) {
           printOutput("> ! > " + agent.getStep() + " MASTERGRUPA " + agent.getEntityName() + "!!!\n");
+          System.out.println("++++ MASTERGRUPA!! "+PLastStep);
+        }
 
       if(PSynchronizer.getMasterGroup()!=null)
         if(PSynchronizer.estimateSize()){

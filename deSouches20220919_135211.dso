@@ -1,0 +1,29 @@
+agentA4 needs job
+agentA1 needs job
+agentA7 needs job
+>>agentA5 sees agentA7 disp java.awt.Point[x=1,y=1] token true
+groupExtended: Leader {agentA5}agentA5,  by group Leader {agentA7}agentA7,  step 11
+ --------------------------------- 
+Step 11
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@14f75b11
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task0
+group option task1
+group option task2
+group option task3
+agentA10 needs job
+agentA5 needs job
+agentA3 needs job
+agentA9 needs job
+agentA15 needs job
+agentA13 needs job
+agentA11 needs job
+agentA8 needs job
+agentA14 needs job
+agentA6 needs job
+agentA2 needs job
+agentA9 needs job

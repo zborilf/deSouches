@@ -1,0 +1,1288 @@
+>>agentA13 sees agentA4 disp java.awt.Point[x=1,y=-4] token true
+groupExtended: Leader {agentA13}agentA13,  by group Leader {agentA4}agentA4,  step 223
+ --------------------------------- 
+Step 222
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 223
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 224
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+agentA10 needs job
+agentA6 needs job
+agentA14 needs job
+agentA13 needs job
+agentA11 needs job
+agentA5 needs job
+agentA8 needs job
+agentA1 needs job
+agentA4 needs job
+agentA9 needs job
+agentA7 needs job
+agentA12 needs job
+agentA2 needs job
+ --------------------------------- 
+Step 225
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+agentA15 needs job
+agentA3 needs job
+>>agentA5 sees agentA9 disp java.awt.Point[x=4,y=-3] token true
+groupExtended: Leader {agentA5}agentA5,  by group Leader {agentA9}agentA9,  step 226
+ --------------------------------- 
+Step 226
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 227
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+agentA8 needs job
+>>agentA1 sees agentA14 disp java.awt.Point[x=4,y=4] token true
+groupExtended: Leader {agentA1}agentA1,  by group Leader {agentA14}agentA14,  step 228
+ --------------------------------- 
+Step 228
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 229
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 230
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 231
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 232
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 233
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 234
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 235
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 236
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 237
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 238
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 239
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+>>agentA10 sees agentA15 disp java.awt.Point[x=2,y=-15] token true
+groupExtended: Leader {agentA10}agentA10,  by group Leader {agentA15}agentA15,  step 240
+>>agentA1 sees agentA7 disp java.awt.Point[x=-5,y=12] token false
+ --------------------------------- 
+Step 240
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+>>agentA1 sees agentA7 disp java.awt.Point[x=-5,y=12] token true
+groupExtended: Leader {agentA1}agentA1, agentA14,  by group Leader {agentA7}agentA7,  step 241
+ --------------------------------- 
+Step 241
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 242
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 243
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+>>agentA3 sees agentA8 disp java.awt.Point[x=-13,y=0] token true
+groupExtended: Leader {agentA3}agentA3,  by group Leader {agentA8}agentA8,  step 244
+ --------------------------------- 
+Step 244
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+agentA7 needs job
+>>agentA11 sees agentA2 disp java.awt.Point[x=0,y=-13] token true
+groupExtended: Leader {agentA11}agentA11,  by group Leader {agentA2}agentA2,  step 245
+>>agentA2 sees agentA6 disp java.awt.Point[x=-17,y=-2] token false
+ --------------------------------- 
+Step 245
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+>>agentA10 sees agentA13 disp java.awt.Point[x=-6,y=-14] token true
+groupExtended: Leader {agentA10}agentA10, agentA15,  by group Leader {agentA13}agentA13, agentA4,  step 246
+ --------------------------------- 
+Step 246
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+>>agentA2 sees agentA6 disp java.awt.Point[x=-17,y=-2] token true
+groupExtended: Leader {agentA11}agentA11, agentA2,  by group Leader {agentA6}agentA6,  step 247
+ --------------------------------- 
+Step 247
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 248
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 249
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 250
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 251
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 252
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 253
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 254
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 255
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 256
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 257
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 258
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 259
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 260
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 261
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+>>agentA6 sees agentA8 disp java.awt.Point[x=19,y=-22] token true
+groupExtended: Leader {agentA11}agentA11, agentA2, agentA6,  by group Leader {agentA3}agentA3, agentA8,  step 262
+ --------------------------------- 
+Step 262
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 263
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 264
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 265
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+>>agentA13 sees agentA5 disp java.awt.Point[x=-6,y=-25] token true
+groupExtended: Leader {agentA10}agentA10, agentA15, agentA13, agentA4,  by group Leader {agentA5}agentA5, agentA9,  step 266
+ --------------------------------- 
+Step 266
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 267
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+ --------------------------------- 
+Step 268
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task11
+>>agentA6 sees agentA1 disp java.awt.Point[x=17,y=2] token true
+groupExtended: Leader {agentA11}agentA11, agentA2, agentA6, agentA3, agentA8,  by group Leader {agentA1}agentA1, agentA14, agentA7,  step 269
+> ! > 269 MASTERGRUPA agentA11!!!
+
+ --------------------------------- 
+Step 269
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- 
+Goal positions allocated: 
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task14
+---------------
+269: Task : task14 type 8 deadline 331
+>> 3:::- agentA1:[3,-9] -> [8,1] -> [16,-2] sup. price 26
+>> 1:::- agentA6:[2,-13] -> [7,-13] -> [16,-2] sup. price 25
+>> 2:::- agentA14:[15,14] -> [12,-2] -> [16,-2] sup. price 23
+Checking goal position: java.awt.Point[x=16,y=-2]
+Result is true
+---------------
+Budou trojicky
+TT:8/3agentA1/1agentA6/2agentA14/
+ --------------------------------- 
+Step 270
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task14
+goalCompleted: SCEN: Commander praises you, agent agentA1 for detachAllGoal
+goalCompleted: SCEN: Commander praises you, agent agentA6 for detachAllGoal
+goalCompleted: SCEN: Commander praises you, agent agentA14 for detachAllGoal
+ --------------------------------- 
+Step 271
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task13
+group option task10
+group option task14
+ --------------------------------- 
+Step 272
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 273
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 274
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 275
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 276
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 277
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 278
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 279
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 280
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 281
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task13
+group option task14
+group option task15
+ --------------------------------- 
+Step 282
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task16
+group option task14
+group option task15
+goalFailed: SCEN: Bad luck, agent agentA6 for get block 2022
+goalFailed: SCEN: Bad luck, agent agentA1 for get block 2022
+ --------------------------------- 
+Step 283
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task16
+group option task14
+group option task15
+goalFailed: SCEN: Bad luck, agent agentA6 for get block 2022
+ --------------------------------- 
+Step 284
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task16
+group option task14
+group option task15
+goalFailed: SCEN: Bad luck, agent agentA6 for get block 2022
+ --------------------------------- 
+Step 285
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task16
+group option task14
+group option task15
+goalCompleted: SCEN: Commander praises you, agent agentA1 for get block 2022
+ --------------------------------- 
+Step 286
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task16
+group option task14
+group option task15
+goalCompleted: SCEN: Commander praises you, agent agentA14 for get block 2022
+ --------------------------------- 
+Step 287
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task16
+group option task14
+group option task15
+goalCompleted: SCEN: Commander praises you, agent agentA6 for get block 2022
+ --------------------------------- 
+Step 288
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task16
+group option task14
+group option task15
+ --------------------------------- 
+Step 289
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task16
+group option task14
+group option task15
+ --------------------------------- 
+Step 290
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task16
+group option task14
+group option task15
+ --------------------------------- 
+Step 291
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task12
+group option task16
+group option task14
+group option task15
+ --------------------------------- 
+Step 292
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 293
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 294
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 295
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 296
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+goalCompleted: SCEN: Commander praises you, agent agentA1 for goToPosition
+ --------------------------------- 
+Step 297
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+goalCompleted: SCEN: Commander praises you, agent agentA14 for goToPosition
+ --------------------------------- 
+Step 298
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 299
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 300
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 301
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 302
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 303
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 304
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 305
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 306
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 307
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 308
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 309
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 310
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 311
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15
+ --------------------------------- 
+Step 312
+Active tasks: [task14_269]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@43c8bac4
+ -- agentA11,agentA3,agentA8,agentA7,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@17e21a75
+for task task14
+ -- agentA1,agentA6,agentA14,
+Goal positions allocated: task14 / java.awt.Point[x=16,y=-2]
+Score: 10
+group option task16
+group option task17
+group option task14
+group option task15

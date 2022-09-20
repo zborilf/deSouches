@@ -1,0 +1,3024 @@
+>>agentFIT_BUT25 sees agentFIT_BUT31 disp java.awt.Point[x=2,y=0] token true
+groupExtended: Leader {agentFIT_BUT25}agentFIT_BUT25,  by group Leader {agentFIT_BUT31}agentFIT_BUT31,  step 19
+>>agentFIT_BUT25 sees agentFIT_BUT13 disp java.awt.Point[x=2,y=-1] token false
+ --------------------------------- 
+Step 19
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT25 sees agentFIT_BUT13 disp java.awt.Point[x=2,y=-1] token true
+groupExtended: Leader {agentFIT_BUT25}agentFIT_BUT25, agentFIT_BUT31,  by group Leader {agentFIT_BUT13}agentFIT_BUT13,  step 20
+ --------------------------------- 
+Step 20
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+agentFIT_BUT29 needs job
+agentFIT_BUT8 needs job
+agentFIT_BUT1 needs job
+agentFIT_BUT6 needs job
+agentFIT_BUT26 needs job
+agentFIT_BUT35 needs job
+ --------------------------------- 
+Step 21
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+agentFIT_BUT40 needs job
+agentFIT_BUT10 needs job
+agentFIT_BUT30 needs job
+agentFIT_BUT16 needs job
+agentFIT_BUT17 needs job
+agentFIT_BUT7 needs job
+ --------------------------------- 
+Step 22
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+agentFIT_BUT23 needs job
+agentFIT_BUT31 needs job
+agentFIT_BUT37 needs job
+agentFIT_BUT13 needs job
+>>agentFIT_BUT5 sees agentFIT_BUT39 disp java.awt.Point[x=-1,y=-1] token true
+groupExtended: Leader {agentFIT_BUT5}agentFIT_BUT5,  by group Leader {agentFIT_BUT39}agentFIT_BUT39,  step 23
+>>agentFIT_BUT28 sees agentFIT_BUT26 disp java.awt.Point[x=0,y=1] token false
+>>agentFIT_BUT28 sees agentFIT_BUT6 disp java.awt.Point[x=1,y=1] token false
+>>agentFIT_BUT7 sees agentFIT_BUT17 disp java.awt.Point[x=-1,y=1] token false
+ --------------------------------- 
+Step 23
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+agentFIT_BUT11 needs job
+agentFIT_BUT15 needs job
+agentFIT_BUT12 needs job
+agentFIT_BUT20 needs job
+>>agentFIT_BUT7 sees agentFIT_BUT17 disp java.awt.Point[x=-1,y=1] token true
+groupExtended: Leader {agentFIT_BUT7}agentFIT_BUT7,  by group Leader {agentFIT_BUT17}agentFIT_BUT17,  step 24
+>>agentFIT_BUT28 sees agentFIT_BUT6 disp java.awt.Point[x=1,y=1] token false
+ --------------------------------- 
+Step 24
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT28 sees agentFIT_BUT6 disp java.awt.Point[x=1,y=1] token true
+groupExtended: Leader {agentFIT_BUT28}agentFIT_BUT28,  by group Leader {agentFIT_BUT6}agentFIT_BUT6,  step 25
+>>agentFIT_BUT28 sees agentFIT_BUT26 disp java.awt.Point[x=0,y=1] token false
+ --------------------------------- 
+Step 25
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT1 sees agentFIT_BUT37 disp java.awt.Point[x=-1,y=1] token true
+groupExtended: Leader {agentFIT_BUT1}agentFIT_BUT1,  by group Leader {agentFIT_BUT37}agentFIT_BUT37,  step 26
+ --------------------------------- 
+Step 26
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+agentFIT_BUT14 needs job
+agentFIT_BUT4 needs job
+agentFIT_BUT27 needs job
+agentFIT_BUT3 needs job
+agentFIT_BUT36 needs job
+agentFIT_BUT32 needs job
+agentFIT_BUT19 needs job
+agentFIT_BUT22 needs job
+agentFIT_BUT18 needs job
+agentFIT_BUT39 needs job
+agentFIT_BUT21 needs job
+agentFIT_BUT33 needs job
+agentFIT_BUT9 needs job
+agentFIT_BUT38 needs job
+agentFIT_BUT5 needs job
+agentFIT_BUT24 needs job
+agentFIT_BUT25 needs job
+agentFIT_BUT2 needs job
+agentFIT_BUT34 needs job
+>>agentFIT_BUT13 sees agentFIT_BUT2 disp java.awt.Point[x=1,y=0] token true
+groupExtended: Leader {agentFIT_BUT25}agentFIT_BUT25, agentFIT_BUT31, agentFIT_BUT13,  by group Leader {agentFIT_BUT2}agentFIT_BUT2,  step 27
+>>agentFIT_BUT5 sees agentFIT_BUT8 disp java.awt.Point[x=-1,y=0] token false
+>>agentFIT_BUT28 sees agentFIT_BUT26 disp java.awt.Point[x=0,y=1] token false
+>>agentFIT_BUT22 sees agentFIT_BUT35 disp java.awt.Point[x=0,y=1] token false
+ --------------------------------- 
+Step 27
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+agentFIT_BUT28 needs job
+>>agentFIT_BUT21 sees agentFIT_BUT24 disp java.awt.Point[x=0,y=1] token true
+groupExtended: Leader {agentFIT_BUT21}agentFIT_BUT21,  by group Leader {agentFIT_BUT24}agentFIT_BUT24,  step 28
+>>agentFIT_BUT4 sees agentFIT_BUT36 disp java.awt.Point[x=1,y=-1] token false
+>>agentFIT_BUT4 sees agentFIT_BUT14 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT22 sees agentFIT_BUT35 disp java.awt.Point[x=0,y=1] token false
+ --------------------------------- 
+Step 28
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT28 sees agentFIT_BUT26 disp java.awt.Point[x=0,y=1] token true
+groupExtended: Leader {agentFIT_BUT28}agentFIT_BUT28, agentFIT_BUT6,  by group Leader {agentFIT_BUT26}agentFIT_BUT26,  step 29
+>>agentFIT_BUT4 sees agentFIT_BUT36 disp java.awt.Point[x=1,y=-1] token false
+>>agentFIT_BUT10 sees agentFIT_BUT15 disp java.awt.Point[x=1,y=-1] token false
+>>agentFIT_BUT34 sees agentFIT_BUT15 disp java.awt.Point[x=0,y=-1] token false
+>>agentFIT_BUT5 sees agentFIT_BUT8 disp java.awt.Point[x=-1,y=0] token false
+>>agentFIT_BUT20 sees agentFIT_BUT12 disp java.awt.Point[x=0,y=-1] token false
+>>agentFIT_BUT10 sees agentFIT_BUT34 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT24 sees agentFIT_BUT9 disp java.awt.Point[x=-1,y=1] token false
+>>agentFIT_BUT4 sees agentFIT_BUT14 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT22 sees agentFIT_BUT35 disp java.awt.Point[x=0,y=1] token false
+ --------------------------------- 
+Step 29
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT5 sees agentFIT_BUT8 disp java.awt.Point[x=-1,y=0] token true
+groupExtended: Leader {agentFIT_BUT5}agentFIT_BUT5, agentFIT_BUT39,  by group Leader {agentFIT_BUT8}agentFIT_BUT8,  step 30
+>>agentFIT_BUT16 sees agentFIT_BUT18 disp java.awt.Point[x=2,y=-6] token false
+>>agentFIT_BUT10 sees agentFIT_BUT15 disp java.awt.Point[x=1,y=-1] token false
+>>agentFIT_BUT14 sees agentFIT_BUT36 disp java.awt.Point[x=0,y=-1] token false
+>>agentFIT_BUT19 sees agentFIT_BUT32 disp java.awt.Point[x=-1,y=1] token false
+>>agentFIT_BUT10 sees agentFIT_BUT34 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT4 sees agentFIT_BUT14 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT4 sees agentFIT_BUT36 disp java.awt.Point[x=1,y=-1] token false
+ --------------------------------- 
+Step 30
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT34 sees agentFIT_BUT15 disp java.awt.Point[x=0,y=-1] token true
+groupExtended: Leader {agentFIT_BUT34}agentFIT_BUT34,  by group Leader {agentFIT_BUT15}agentFIT_BUT15,  step 31
+>>agentFIT_BUT22 sees agentFIT_BUT35 disp java.awt.Point[x=0,y=1] token false
+>>agentFIT_BUT14 sees agentFIT_BUT36 disp java.awt.Point[x=0,y=-1] token false
+>>agentFIT_BUT20 sees agentFIT_BUT3 disp java.awt.Point[x=-7,y=-2] token false
+>>agentFIT_BUT20 sees agentFIT_BUT12 disp java.awt.Point[x=0,y=-1] token false
+>>agentFIT_BUT3 sees agentFIT_BUT12 disp java.awt.Point[x=7,y=1] token false
+>>agentFIT_BUT4 sees agentFIT_BUT14 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT10 sees agentFIT_BUT34 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT4 sees agentFIT_BUT36 disp java.awt.Point[x=1,y=-1] token false
+ --------------------------------- 
+Step 31
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT21 sees agentFIT_BUT9 disp java.awt.Point[x=-1,y=1] token true
+groupExtended: Leader {agentFIT_BUT21}agentFIT_BUT21, agentFIT_BUT24,  by group Leader {agentFIT_BUT9}agentFIT_BUT9,  step 32
+>>agentFIT_BUT22 sees agentFIT_BUT35 disp java.awt.Point[x=0,y=1] token false
+>>agentFIT_BUT14 sees agentFIT_BUT36 disp java.awt.Point[x=0,y=-1] token false
+>>agentFIT_BUT20 sees agentFIT_BUT12 disp java.awt.Point[x=0,y=-1] token false
+>>agentFIT_BUT4 sees agentFIT_BUT14 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT4 sees agentFIT_BUT36 disp java.awt.Point[x=1,y=-1] token false
+>>agentFIT_BUT10 sees agentFIT_BUT15 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT20 sees agentFIT_BUT3 disp java.awt.Point[x=-7,y=-2] token false
+ --------------------------------- 
+Step 32
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT19 sees agentFIT_BUT32 disp java.awt.Point[x=-1,y=1] token true
+groupExtended: Leader {agentFIT_BUT19}agentFIT_BUT19,  by group Leader {agentFIT_BUT32}agentFIT_BUT32,  step 33
+>>agentFIT_BUT22 sees agentFIT_BUT35 disp java.awt.Point[x=0,y=1] token false
+>>agentFIT_BUT16 sees agentFIT_BUT18 disp java.awt.Point[x=2,y=-6] token false
+>>agentFIT_BUT20 sees agentFIT_BUT12 disp java.awt.Point[x=0,y=-1] token false
+>>agentFIT_BUT4 sees agentFIT_BUT14 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT3 sees agentFIT_BUT12 disp java.awt.Point[x=7,y=1] token false
+>>agentFIT_BUT14 sees agentFIT_BUT36 disp java.awt.Point[x=0,y=-1] token false
+>>agentFIT_BUT10 sees agentFIT_BUT15 disp java.awt.Point[x=1,y=0] token false
+ --------------------------------- 
+Step 33
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT30 sees agentFIT_BUT33 disp java.awt.Point[x=-1,y=0] token true
+groupExtended: Leader {agentFIT_BUT30}agentFIT_BUT30,  by group Leader {agentFIT_BUT33}agentFIT_BUT33,  step 34
+>>agentFIT_BUT4 sees agentFIT_BUT14 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT20 sees agentFIT_BUT12 disp java.awt.Point[x=0,y=-1] token false
+>>agentFIT_BUT3 sees agentFIT_BUT12 disp java.awt.Point[x=7,y=1] token false
+>>agentFIT_BUT10 sees agentFIT_BUT15 disp java.awt.Point[x=1,y=0] token false
+ --------------------------------- 
+Step 34
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT14 sees agentFIT_BUT36 disp java.awt.Point[x=0,y=-1] token true
+groupExtended: Leader {agentFIT_BUT14}agentFIT_BUT14,  by group Leader {agentFIT_BUT36}agentFIT_BUT36,  step 35
+>>agentFIT_BUT20 sees agentFIT_BUT12 disp java.awt.Point[x=0,y=-1] token false
+>>agentFIT_BUT29 sees agentFIT_BUT1 disp java.awt.Point[x=9,y=11] token false
+>>agentFIT_BUT16 sees agentFIT_BUT18 disp java.awt.Point[x=2,y=-6] token false
+>>agentFIT_BUT10 sees agentFIT_BUT15 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT3 sees agentFIT_BUT12 disp java.awt.Point[x=7,y=1] token false
+ --------------------------------- 
+Step 35
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT20 sees agentFIT_BUT12 disp java.awt.Point[x=0,y=-1] token true
+groupExtended: Leader {agentFIT_BUT20}agentFIT_BUT20,  by group Leader {agentFIT_BUT12}agentFIT_BUT12,  step 36
+>>agentFIT_BUT4 sees agentFIT_BUT36 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT27 sees agentFIT_BUT38 disp java.awt.Point[x=-1,y=1] token false
+>>agentFIT_BUT10 sees agentFIT_BUT34 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT16 sees agentFIT_BUT18 disp java.awt.Point[x=2,y=-6] token false
+>>agentFIT_BUT10 sees agentFIT_BUT15 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT12 sees agentFIT_BUT3 disp java.awt.Point[x=-7,y=-2] token false
+ --------------------------------- 
+Step 36
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT16 sees agentFIT_BUT18 disp java.awt.Point[x=2,y=-6] token true
+groupExtended: Leader {agentFIT_BUT16}agentFIT_BUT16,  by group Leader {agentFIT_BUT18}agentFIT_BUT18,  step 37
+>>agentFIT_BUT27 sees agentFIT_BUT38 disp java.awt.Point[x=-1,y=1] token false
+>>agentFIT_BUT29 sees agentFIT_BUT1 disp java.awt.Point[x=9,y=11] token false
+>>agentFIT_BUT4 sees agentFIT_BUT36 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT4 sees agentFIT_BUT14 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT10 sees agentFIT_BUT15 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT12 sees agentFIT_BUT3 disp java.awt.Point[x=-7,y=-2] token false
+ --------------------------------- 
+Step 37
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT10 sees agentFIT_BUT15 disp java.awt.Point[x=1,y=0] token true
+groupExtended: Leader {agentFIT_BUT10}agentFIT_BUT10,  by group Leader {agentFIT_BUT34}agentFIT_BUT34, agentFIT_BUT15,  step 38
+>>agentFIT_BUT4 sees agentFIT_BUT14 disp java.awt.Point[x=1,y=0] token false
+>>agentFIT_BUT27 sees agentFIT_BUT38 disp java.awt.Point[x=-1,y=1] token false
+>>agentFIT_BUT4 sees agentFIT_BUT36 disp java.awt.Point[x=1,y=0] token false
+ --------------------------------- 
+Step 38
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT4 sees agentFIT_BUT14 disp java.awt.Point[x=1,y=0] token true
+groupExtended: Leader {agentFIT_BUT4}agentFIT_BUT4,  by group Leader {agentFIT_BUT14}agentFIT_BUT14, agentFIT_BUT36,  step 39
+>>agentFIT_BUT22 sees agentFIT_BUT35 disp java.awt.Point[x=0,y=1] token false
+>>agentFIT_BUT29 sees agentFIT_BUT1 disp java.awt.Point[x=9,y=11] token false
+>>agentFIT_BUT27 sees agentFIT_BUT38 disp java.awt.Point[x=-1,y=1] token false
+ --------------------------------- 
+Step 39
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT27 sees agentFIT_BUT38 disp java.awt.Point[x=-1,y=1] token true
+groupExtended: Leader {agentFIT_BUT27}agentFIT_BUT27,  by group Leader {agentFIT_BUT38}agentFIT_BUT38,  step 40
+ --------------------------------- 
+Step 40
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 41
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT37 sees agentFIT_BUT33 disp java.awt.Point[x=-9,y=11] token true
+groupExtended: Leader {agentFIT_BUT1}agentFIT_BUT1, agentFIT_BUT37,  by group Leader {agentFIT_BUT30}agentFIT_BUT30, agentFIT_BUT33,  step 42
+ --------------------------------- 
+Step 42
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 43
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT23 sees agentFIT_BUT5 disp java.awt.Point[x=-10,y=-8] token true
+groupExtended: Leader {agentFIT_BUT23}agentFIT_BUT23,  by group Leader {agentFIT_BUT5}agentFIT_BUT5, agentFIT_BUT39, agentFIT_BUT8,  step 44
+ --------------------------------- 
+Step 44
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 45
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 46
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT26 sees agentFIT_BUT40 disp java.awt.Point[x=-8,y=12] token true
+groupExtended: Leader {agentFIT_BUT28}agentFIT_BUT28, agentFIT_BUT6, agentFIT_BUT26,  by group Leader {agentFIT_BUT40}agentFIT_BUT40,  step 47
+ --------------------------------- 
+Step 47
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT9 sees agentFIT_BUT1 disp java.awt.Point[x=-14,y=7] token true
+groupExtended: Leader {agentFIT_BUT21}agentFIT_BUT21, agentFIT_BUT24, agentFIT_BUT9,  by group Leader {agentFIT_BUT1}agentFIT_BUT1, agentFIT_BUT37, agentFIT_BUT30, agentFIT_BUT33,  step 48
+>>agentFIT_BUT31 sees agentFIT_BUT32 disp java.awt.Point[x=12,y=-10] token false
+ --------------------------------- 
+Step 48
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT40 sees agentFIT_BUT17 disp java.awt.Point[x=10,y=24] token true
+groupExtended: Leader {agentFIT_BUT28}agentFIT_BUT28, agentFIT_BUT6, agentFIT_BUT26, agentFIT_BUT40,  by group Leader {agentFIT_BUT7}agentFIT_BUT7, agentFIT_BUT17,  step 49
+ --------------------------------- 
+Step 49
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT38 sees agentFIT_BUT26 disp java.awt.Point[x=11,y=-2] token true
+groupExtended: Leader {agentFIT_BUT27}agentFIT_BUT27, agentFIT_BUT38,  by group Leader {agentFIT_BUT28}agentFIT_BUT28, agentFIT_BUT6, agentFIT_BUT26, agentFIT_BUT40, agentFIT_BUT7, agentFIT_BUT17,  step 50
+ --------------------------------- 
+Step 50
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT30 sees agentFIT_BUT11 disp java.awt.Point[x=-7,y=15] token true
+groupExtended: Leader {agentFIT_BUT21}agentFIT_BUT21, agentFIT_BUT24, agentFIT_BUT9, agentFIT_BUT1, agentFIT_BUT37, agentFIT_BUT30, agentFIT_BUT33,  by group Leader {agentFIT_BUT11}agentFIT_BUT11,  step 51
+>>agentFIT_BUT29 sees agentFIT_BUT30 disp java.awt.Point[x=23,y=4] token false
+>>agentFIT_BUT31 sees agentFIT_BUT32 disp java.awt.Point[x=12,y=-10] token false
+ --------------------------------- 
+Step 51
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT29 sees agentFIT_BUT11 disp java.awt.Point[x=23,y=4] token true
+groupExtended: Leader {agentFIT_BUT29}agentFIT_BUT29,  by group Leader {agentFIT_BUT21}agentFIT_BUT21, agentFIT_BUT24, agentFIT_BUT9, agentFIT_BUT1, agentFIT_BUT37, agentFIT_BUT30, agentFIT_BUT33, agentFIT_BUT11,  step 52
+>>agentFIT_BUT31 sees agentFIT_BUT32 disp java.awt.Point[x=12,y=-10] token false
+ --------------------------------- 
+Step 52
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT31 sees agentFIT_BUT32 disp java.awt.Point[x=12,y=-10] token true
+groupExtended: Leader {agentFIT_BUT25}agentFIT_BUT25, agentFIT_BUT31, agentFIT_BUT13, agentFIT_BUT2,  by group Leader {agentFIT_BUT19}agentFIT_BUT19, agentFIT_BUT32,  step 53
+ --------------------------------- 
+Step 53
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT36 sees agentFIT_BUT10 disp java.awt.Point[x=12,y=9] token true
+groupExtended: Leader {agentFIT_BUT4}agentFIT_BUT4, agentFIT_BUT14, agentFIT_BUT36,  by group Leader {agentFIT_BUT10}agentFIT_BUT10, agentFIT_BUT34, agentFIT_BUT15,  step 54
+ --------------------------------- 
+Step 54
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 55
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 56
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 57
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 58
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 59
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT23 sees agentFIT_BUT36 disp java.awt.Point[x=-20,y=5] token true
+groupExtended: Leader {agentFIT_BUT23}agentFIT_BUT23, agentFIT_BUT5, agentFIT_BUT39, agentFIT_BUT8,  by group Leader {agentFIT_BUT4}agentFIT_BUT4, agentFIT_BUT14, agentFIT_BUT36, agentFIT_BUT10, agentFIT_BUT34, agentFIT_BUT15,  step 60
+>>agentFIT_BUT13 sees agentFIT_BUT18 disp java.awt.Point[x=-4,y=-22] token false
+>>agentFIT_BUT22 sees agentFIT_BUT34 disp java.awt.Point[x=28,y=-17] token false
+ --------------------------------- 
+Step 60
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT22 sees agentFIT_BUT34 disp java.awt.Point[x=28,y=-17] token true
+groupExtended: Leader {agentFIT_BUT22}agentFIT_BUT22,  by group Leader {agentFIT_BUT23}agentFIT_BUT23, agentFIT_BUT5, agentFIT_BUT39, agentFIT_BUT8, agentFIT_BUT4, agentFIT_BUT14, agentFIT_BUT36, agentFIT_BUT10, agentFIT_BUT34, agentFIT_BUT15,  step 61
+>>agentFIT_BUT37 sees agentFIT_BUT32 disp java.awt.Point[x=-27,y=14] token false
+> ! > 61 MASTERGRUPA agentFIT_BUT9!!!
+
+ --------------------------------- 
+Step 61
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT13 sees agentFIT_BUT18 disp java.awt.Point[x=-4,y=-22] token true
+groupExtended: Leader {agentFIT_BUT25}agentFIT_BUT25, agentFIT_BUT31, agentFIT_BUT13, agentFIT_BUT2, agentFIT_BUT19, agentFIT_BUT32,  by group Leader {agentFIT_BUT16}agentFIT_BUT16, agentFIT_BUT18,  step 62
+>>agentFIT_BUT37 sees agentFIT_BUT32 disp java.awt.Point[x=-27,y=14] token false
+ --------------------------------- 
+Step 62
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 63
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT8 sees agentFIT_BUT2 disp java.awt.Point[x=30,y=-33] token true
+groupExtended: Leader {agentFIT_BUT22}agentFIT_BUT22, agentFIT_BUT23, agentFIT_BUT5, agentFIT_BUT39, agentFIT_BUT8, agentFIT_BUT4, agentFIT_BUT14, agentFIT_BUT36, agentFIT_BUT10, agentFIT_BUT34, agentFIT_BUT15,  by group Leader {agentFIT_BUT25}agentFIT_BUT25, agentFIT_BUT31, agentFIT_BUT13, agentFIT_BUT2, agentFIT_BUT19, agentFIT_BUT32, agentFIT_BUT16, agentFIT_BUT18,  step 64
+>>agentFIT_BUT27 sees agentFIT_BUT2 disp java.awt.Point[x=-37,y=25] token false
+ --------------------------------- 
+Step 64
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT27 sees agentFIT_BUT2 disp java.awt.Point[x=-37,y=25] token true
+groupExtended: Leader {agentFIT_BUT27}agentFIT_BUT27, agentFIT_BUT38, agentFIT_BUT28, agentFIT_BUT6, agentFIT_BUT26, agentFIT_BUT40, agentFIT_BUT7, agentFIT_BUT17,  by group Leader {agentFIT_BUT22}agentFIT_BUT22, agentFIT_BUT23, agentFIT_BUT5, agentFIT_BUT39, agentFIT_BUT8, agentFIT_BUT4, agentFIT_BUT14, agentFIT_BUT36, agentFIT_BUT10, agentFIT_BUT34, agentFIT_BUT15, agentFIT_BUT25, agentFIT_BUT31, agentFIT_BUT13, agentFIT_BUT2, agentFIT_BUT19, agentFIT_BUT32, agentFIT_BUT16, agentFIT_BUT18,  step 65
+>>agentFIT_BUT37 sees agentFIT_BUT19 disp java.awt.Point[x=-20,y=22] token false
+ --------------------------------- 
+Step 65
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT37 sees agentFIT_BUT19 disp java.awt.Point[x=-20,y=22] token true
+MasterGroupExtended: Leader {agentFIT_BUT29}agentFIT_BUT29, agentFIT_BUT21, agentFIT_BUT24, agentFIT_BUT9, agentFIT_BUT1, agentFIT_BUT37, agentFIT_BUT30, agentFIT_BUT33, agentFIT_BUT11,  by group Leader {agentFIT_BUT27}agentFIT_BUT27, agentFIT_BUT38, agentFIT_BUT28, agentFIT_BUT6, agentFIT_BUT26, agentFIT_BUT40, agentFIT_BUT7, agentFIT_BUT17, agentFIT_BUT22, agentFIT_BUT23, agentFIT_BUT5, agentFIT_BUT39, agentFIT_BUT8, agentFIT_BUT4, agentFIT_BUT14, agentFIT_BUT36, agentFIT_BUT10, agentFIT_BUT34, agentFIT_BUT15, agentFIT_BUT25, agentFIT_BUT31, agentFIT_BUT13, agentFIT_BUT2, agentFIT_BUT19, agentFIT_BUT32, agentFIT_BUT16, agentFIT_BUT18,  step 66
+ --------------------------------- 
+Step 66
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 67
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 68
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 69
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 70
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 71
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 72
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 73
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 74
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 75
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 76
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 77
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,
+Goal positions allocated: 
+Score: 0
+group option task2
+---------------
+77: Task : task2 type 20 deadline 143
+>> 1:::- agentFIT_BUT9:[2,2] -> [2,-3] -> [0,2] sup. price 12
+>> 0:::- agentFIT_BUT30:[1,4] -> [-4,13] -> [0,2] sup. price 29
+>> 0:::- agentFIT_BUT11:[5,10] -> [-4,13] -> [0,2] sup. price 27
+>> 0:::- agentFIT_BUT37:[-10,10] -> [-4,13] -> [0,2] sup. price 24
+Checking goal position: java.awt.Point[x=0,y=2]
+Result is true
+---------------
+Budou ctvericky
+TT:20/1agentFIT_BUT9/0agentFIT_BUT30/0agentFIT_BUT11/0agentFIT_BUT37/
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT9 kvuli Goal explore
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT37 kvuli Goal explore
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT11 kvuli Goal explore
+ --------------------------------- 
+Step 78
+Active tasks: [task2_76]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]
+Score: 0
+group option task2
+---------------
+78: Task : task2 type 20 deadline 143
+>> 1:::- agentFIT_BUT17:[-8,32] -> [-1,31] -> [-14,44] sup. price 34
+>> 0:::- agentFIT_BUT7:[-14,49] -> [-19,51] -> [-14,44] sup. price 19
+>> 0:::- agentFIT_BUT26:[-20,28] -> [-19,51] -> [-14,44] sup. price 36
+>> 0:::- agentFIT_BUT40:[-20,44] -> [-19,51] -> [-14,44] sup. price 20
+Checking goal position: java.awt.Point[x=-14,y=44]
+Result is true
+---------------
+Budou ctvericky
+TT:20/1agentFIT_BUT17/0agentFIT_BUT7/0agentFIT_BUT26/0agentFIT_BUT40/
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT7 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT30 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT37 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT9 za detachAllGoal
+ --------------------------------- 
+Step 79
+Active tasks: [task2_76, task2_77]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]
+Score: 0
+group option task2
+group option task0
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT17 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT40 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT26 za detachAllGoal
+ --------------------------------- 
+Step 80
+Active tasks: [task2_76, task2_77]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]
+Score: 0
+group option task2
+group option task0
+ --------------------------------- 
+Step 81
+Active tasks: [task2_76, task2_77]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]
+Score: 0
+group option task2
+group option task0
+ --------------------------------- 
+Step 82
+Active tasks: [task2_76, task2_77]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]
+Score: 0
+group option task2
+group option task0
+ --------------------------------- 
+Step 83
+Active tasks: [task2_76, task2_77]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]
+Score: 0
+group option task2
+group option task0
+>>agentFIT_BUT10 sees agentFIT_BUT20 disp java.awt.Point[x=-53,y=31] token true
+MasterGroupExtended: Leader {agentFIT_BUT29}agentFIT_BUT29, agentFIT_BUT21, agentFIT_BUT24, agentFIT_BUT9, agentFIT_BUT1, agentFIT_BUT37, agentFIT_BUT30, agentFIT_BUT33, agentFIT_BUT11, agentFIT_BUT27, agentFIT_BUT38, agentFIT_BUT28, agentFIT_BUT6, agentFIT_BUT26, agentFIT_BUT40, agentFIT_BUT7, agentFIT_BUT17, agentFIT_BUT22, agentFIT_BUT23, agentFIT_BUT5, agentFIT_BUT39, agentFIT_BUT8, agentFIT_BUT4, agentFIT_BUT14, agentFIT_BUT36, agentFIT_BUT10, agentFIT_BUT34, agentFIT_BUT15, agentFIT_BUT25, agentFIT_BUT31, agentFIT_BUT13, agentFIT_BUT2, agentFIT_BUT19, agentFIT_BUT32, agentFIT_BUT16, agentFIT_BUT18,  by group Leader {agentFIT_BUT20}agentFIT_BUT20, agentFIT_BUT12,  step 84
+ --------------------------------- 
+Step 84
+Active tasks: [task2_76, task2_77]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]
+Score: 0
+group option task2
+group option task0
+ --------------------------------- 
+Step 85
+Active tasks: [task2_76, task2_77]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]
+Score: 0
+group option task2
+group option task0
+ --------------------------------- 
+Step 86
+Active tasks: [task2_76, task2_77]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]
+Score: 0
+group option task2
+group option task0
+ --------------------------------- 
+Step 87
+Active tasks: [task2_76, task2_77]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]
+Score: 0
+group option task2
+group option task0
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT37 kvuli get block 2022
+ --------------------------------- 
+Step 88
+Active tasks: [task2_76, task2_77]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]
+Score: 0
+group option task2
+group option task0
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT9 za get block 2022
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT37 kvuli get block 2022
+ --------------------------------- 
+Step 89
+Active tasks: [task2_76, task2_77]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]
+Score: 0
+group option task2
+group option task0
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT37 kvuli get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT7 za get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za get block 2022
+ --------------------------------- 
+Step 90
+Active tasks: [task2_76, task2_77]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]
+Score: 0
+group option task2
+group option task0
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT17 kvuli get block 2022
+ --------------------------------- 
+Step 91
+Active tasks: [task2_76, task2_77]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]
+Score: 0
+group option task2
+group option task0
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT30 kvuli get block 2022
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT17 kvuli get block 2022
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT30 kvuli get block 2022
+ --------------------------------- 
+Step 92
+Active tasks: [task2_76, task2_77]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]
+Score: 0
+group option task2
+group option task0
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT37 za get block 2022
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT17 kvuli get block 2022
+ --------------------------------- 
+Step 93
+Active tasks: [task2_76, task2_77]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]
+Score: 0
+group option task2
+group option task3
+---------------
+93: Task : task3 type 21 deadline 190
+>> 1:::- agentFIT_BUT15:[-51,44] -> [-45,47] -> [-33,21] sup. price 47
+>> 0:::- agentFIT_BUT27:[-36,30] -> [-24,20] -> [-33,21] sup. price 32
+>> 0:::- agentFIT_BUT38:[-20,25] -> [-24,20] -> [-33,21] sup. price 19
+>> 1:::- agentFIT_BUT34:[-42,58] -> [-38,57] -> [-33,21] sup. price 46
+Checking goal position: java.awt.Point[x=-33,y=21]
+Result is true
+---------------
+Budou ctvericky
+TT:21/1agentFIT_BUT15/0agentFIT_BUT27/0agentFIT_BUT38/1agentFIT_BUT34/
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT30 kvuli get block 2022
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT38 kvuli Goal explore
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT30 kvuli get block 2022
+ --------------------------------- 
+Step 94
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT34 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT27 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT15 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT38 za detachAllGoal
+ --------------------------------- 
+Step 95
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT17 za get block 2022
+ --------------------------------- 
+Step 96
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT30 za get block 2022
+ --------------------------------- 
+Step 97
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT9 za goToPosition
+ --------------------------------- 
+Step 98
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+ --------------------------------- 
+Step 99
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT40 kvuli get block 2022
+ --------------------------------- 
+Step 100
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT40 kvuli get block 2022
+ --------------------------------- 
+Step 101
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT40 kvuli get block 2022
+ --------------------------------- 
+Step 102
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+ --------------------------------- 
+Step 103
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za goToPosition
+ --------------------------------- 
+Step 104
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT40 za get block 2022
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT38 kvuli get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT15 za get block 2022
+ --------------------------------- 
+Step 105
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT38 kvuli get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT37 za goToPosition
+ --------------------------------- 
+Step 106
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT34 kvuli get block 2022
+ --------------------------------- 
+Step 107
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT34 kvuli get block 2022
+ --------------------------------- 
+Step 108
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT34 kvuli get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT38 za get block 2022
+ --------------------------------- 
+Step 109
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT30 za goToPosition
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT34 kvuli get block 2022
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT27 kvuli get block 2022
+ --------------------------------- 
+Step 110
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT30 kvuli customGoal
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT27 kvuli get block 2022
+ --------------------------------- 
+Step 111
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT9 kvuli customGoal
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT27 kvuli get block 2022
+ --------------------------------- 
+Step 112
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT34 za get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT37 za customGoal
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT27 kvuli get block 2022
+ --------------------------------- 
+Step 113
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za customGoal
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT27 kvuli get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT9 za customGoal
+ --------------------------------- 
+Step 114
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 0
+group option task2
+group option task3
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT30 za customGoal
+ --------------------------------- 
+Step 115
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2b5e3489
+for task task2
+ -- agentFIT_BUT9,agentFIT_BUT30,agentFIT_BUT11,agentFIT_BUT37,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=0,y=2]task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 160
+group option task2
+group option task3
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT9 za submitGoal
+scenario completed: task2
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT7 za goToPosition
+ --------------------------------- 
+Step 116
+Active tasks: [task2_76, task2_77, task3_92]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]
+Score: 160
+group option task2
+group option task3
+---------------
+116: Task : task3 type 21 deadline 190
+>> 1:::- agentFIT_BUT11:[-1,3] -> [2,-3] -> [0,2] sup. price 16
+>> 0:::- agentFIT_BUT29:[-3,6] -> [-4,13] -> [0,2] sup. price 23
+>> 0:::- agentFIT_BUT24:[2,14] -> [-4,13] -> [0,2] sup. price 22
+>> 1:::- agentFIT_BUT9:[0,2] -> [2,-3] -> [0,2] sup. price 14
+Checking goal position: java.awt.Point[x=0,y=2]
+Result is true
+---------------
+Budou ctvericky
+TT:21/1agentFIT_BUT11/0agentFIT_BUT29/0agentFIT_BUT24/1agentFIT_BUT9/
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT27 za get block 2022
+ --------------------------------- 
+Step 117
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT9 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT29 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT24 za detachAllGoal
+ --------------------------------- 
+Step 118
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+ --------------------------------- 
+Step 119
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT40 za goToPosition
+agentFIT_BUT30 needs job
+ --------------------------------- 
+Step 120
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+agentFIT_BUT37 needs job
+ --------------------------------- 
+Step 121
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+ --------------------------------- 
+Step 122
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+ --------------------------------- 
+Step 123
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+ --------------------------------- 
+Step 124
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT9 kvuli get block 2022
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT29 kvuli get block 2022
+>>agentFIT_BUT20 sees agentFIT_BUT3 disp java.awt.Point[x=-60,y=29] token true
+MasterGroupExtended: Leader {agentFIT_BUT29}agentFIT_BUT29, agentFIT_BUT21, agentFIT_BUT24, agentFIT_BUT9, agentFIT_BUT1, agentFIT_BUT37, agentFIT_BUT30, agentFIT_BUT33, agentFIT_BUT11, agentFIT_BUT27, agentFIT_BUT38, agentFIT_BUT28, agentFIT_BUT6, agentFIT_BUT26, agentFIT_BUT40, agentFIT_BUT7, agentFIT_BUT17, agentFIT_BUT22, agentFIT_BUT23, agentFIT_BUT5, agentFIT_BUT39, agentFIT_BUT8, agentFIT_BUT4, agentFIT_BUT14, agentFIT_BUT36, agentFIT_BUT10, agentFIT_BUT34, agentFIT_BUT15, agentFIT_BUT25, agentFIT_BUT31, agentFIT_BUT13, agentFIT_BUT2, agentFIT_BUT19, agentFIT_BUT32, agentFIT_BUT16, agentFIT_BUT18, agentFIT_BUT20, agentFIT_BUT12,  by group Leader {agentFIT_BUT3}agentFIT_BUT3,  step 125
+ --------------------------------- 
+Step 125
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT24 kvuli get block 2022
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT27 kvuli goToPosition
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT9 kvuli get block 2022
+ --------------------------------- 
+Step 126
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT24 kvuli get block 2022
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT9 kvuli get block 2022
+ --------------------------------- 
+Step 127
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT9 kvuli get block 2022
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT24 kvuli get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT26 za get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT29 za get block 2022
+ --------------------------------- 
+Step 128
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT9 kvuli get block 2022
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT24 kvuli get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT38 za goToPosition
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT27 za evasiveManoeuvre
+ --------------------------------- 
+Step 129
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT9 kvuli get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za get block 2022
+ --------------------------------- 
+Step 130
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT9 kvuli get block 2022
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT17 za goToPosition
+>>agentFIT_BUT30 sees agentFIT_BUT35 disp java.awt.Point[x=13,y=-22] token true
+MasterGroupExtended: Leader {agentFIT_BUT29}agentFIT_BUT29, agentFIT_BUT21, agentFIT_BUT24, agentFIT_BUT9, agentFIT_BUT1, agentFIT_BUT37, agentFIT_BUT30, agentFIT_BUT33, agentFIT_BUT11, agentFIT_BUT27, agentFIT_BUT38, agentFIT_BUT28, agentFIT_BUT6, agentFIT_BUT26, agentFIT_BUT40, agentFIT_BUT7, agentFIT_BUT17, agentFIT_BUT22, agentFIT_BUT23, agentFIT_BUT5, agentFIT_BUT39, agentFIT_BUT8, agentFIT_BUT4, agentFIT_BUT14, agentFIT_BUT36, agentFIT_BUT10, agentFIT_BUT34, agentFIT_BUT15, agentFIT_BUT25, agentFIT_BUT31, agentFIT_BUT13, agentFIT_BUT2, agentFIT_BUT19, agentFIT_BUT32, agentFIT_BUT16, agentFIT_BUT18, agentFIT_BUT20, agentFIT_BUT12, agentFIT_BUT3,  by group Leader {agentFIT_BUT35}agentFIT_BUT35,  step 131
+ --------------------------------- 
+Step 131
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT24 za get block 2022
+ --------------------------------- 
+Step 132
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+ --------------------------------- 
+Step 133
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT9 za get block 2022
+ --------------------------------- 
+Step 134
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+ --------------------------------- 
+Step 135
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT11 kvuli goToPosition
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT27 za goToPosition
+ --------------------------------- 
+Step 136
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT26 kvuli goToPosition
+ --------------------------------- 
+Step 137
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+ --------------------------------- 
+Step 138
+Active tasks: [task2_76, task2_77, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task2 / java.awt.Point[x=-14,y=44]task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+@@! Scenario failed due to timeout task2
+@@! Scenario failed due to timeout task2
+138:scenario failed: task2 reason:  TIMEOUT
+Removing scenario for agentFIT_BUT17
+Removing scenario for agentFIT_BUT7
+Removing scenario for agentFIT_BUT26
+Removing scenario for agentFIT_BUT40
+Removing scenario dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+Before removeScenario
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@46581347
+for task task2
+ -- agentFIT_BUT17,agentFIT_BUT7,agentFIT_BUT26,agentFIT_BUT40,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+After removeScenario
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+group option task2
+group option task3
+ --------------------------------- 
+Step 139
+Active tasks: [task2_76, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT9 kvuli goToPosition
+ --------------------------------- 
+Step 140
+Active tasks: [task2_76, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za evasiveManoeuvre
+ --------------------------------- 
+Step 141
+Active tasks: [task2_76, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+agentFIT_BUT7 needs job
+agentFIT_BUT26 needs job
+agentFIT_BUT17 needs job
+agentFIT_BUT40 needs job
+ --------------------------------- 
+Step 142
+Active tasks: [task2_76, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT29 za goToPosition
+ --------------------------------- 
+Step 143
+Active tasks: [task2_76, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task2
+group option task3
+ --------------------------------- 
+Step 144
+Active tasks: [task2_76, task3_92, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task3
+group option task4
+---------------
+144: Task : task4 type 11 deadline 242
+>> 0:::- agentFIT_BUT40:[-17,47] -> [-19,51] -> [-14,44] sup. price 18
+>> 1:::- agentFIT_BUT30:[-9,7] -> [-9,16] -> [-14,44] sup. price 42
+>> 0:::- agentFIT_BUT26:[-18,48] -> [-19,51] -> [-14,44] sup. price 16
+Checking goal position: java.awt.Point[x=-14,y=44]
+Result is true
+---------------
+Budou trojicky
+TT:11/0agentFIT_BUT40/1agentFIT_BUT30/0agentFIT_BUT26/
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT9 za evasiveManoeuvre
+ --------------------------------- 
+Step 145
+Active tasks: [task2_76, task3_92, task3_93, task4_143]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@2780d9e1
+for task task4
+ -- agentFIT_BUT40,agentFIT_BUT30,agentFIT_BUT26,
+Goal positions allocated: task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=-14,y=44]
+Score: 160
+group option task3
+group option task4
+---------------
+145: Task : task4 type 11 deadline 242
+>> 0:::- agentFIT_BUT17:[-12,43] -> [-24,20] -> [-37,10] sup. price 58
+>> 1:::- agentFIT_BUT35:[-13,0] -> [-13,-1] -> [-37,10] sup. price 36
+>> 0:::- agentFIT_BUT37:[-17,9] -> [-24,20] -> [-37,10] sup. price 41
+Checking goal position: java.awt.Point[x=-37,y=10]
+Result is true
+---------------
+Budou trojicky
+TT:11/0agentFIT_BUT17/1agentFIT_BUT35/0agentFIT_BUT37/
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT15 kvuli goToPosition
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT40 for detachAllGoal
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT26 for detachAllGoal
+ --------------------------------- 
+Step 146
+Active tasks: [task2_76, task3_92, task3_93, task4_143, task4_144]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@2780d9e1
+for task task4
+ -- agentFIT_BUT40,agentFIT_BUT30,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@7ec54a15
+for task task4
+ -- agentFIT_BUT17,agentFIT_BUT35,agentFIT_BUT37,
+Goal positions allocated: task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=-14,y=44]task4 / java.awt.Point[x=-37,y=10]
+Score: 160
+group option task3
+group option task4
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT30 for detachAllGoal
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT9 kvuli goToPosition
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT17 for detachAllGoal
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT37 for detachAllGoal
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT35 for detachAllGoal
+ --------------------------------- 
+Step 147
+Active tasks: [task2_76, task3_92, task3_93, task4_143, task4_144]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@2780d9e1
+for task task4
+ -- agentFIT_BUT40,agentFIT_BUT30,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@7ec54a15
+for task task4
+ -- agentFIT_BUT17,agentFIT_BUT35,agentFIT_BUT37,
+Goal positions allocated: task3 / java.awt.Point[x=-33,y=21]task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=-14,y=44]task4 / java.awt.Point[x=-37,y=10]
+Score: 160
+@@! Scenario failed due to invalid goal destination task3
+147:scenario failed: task3 reason:  NO GOAL AREA
+Removing scenario for agentFIT_BUT15
+Removing scenario for agentFIT_BUT27
+Removing scenario for agentFIT_BUT38
+Removing scenario for agentFIT_BUT34
+Removing scenario dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+Before removeScenario
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@2a6522df
+for task task3
+ -- agentFIT_BUT15,agentFIT_BUT27,agentFIT_BUT38,agentFIT_BUT34,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@2780d9e1
+for task task4
+ -- agentFIT_BUT40,agentFIT_BUT30,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@7ec54a15
+for task task4
+ -- agentFIT_BUT17,agentFIT_BUT35,agentFIT_BUT37,
+After removeScenario
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@2780d9e1
+for task task4
+ -- agentFIT_BUT40,agentFIT_BUT30,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@7ec54a15
+for task task4
+ -- agentFIT_BUT17,agentFIT_BUT35,agentFIT_BUT37,
+@@! Scenario failed due to invalid goal destination task4
+147:scenario failed: task4 reason:  NO GOAL AREA
+Removing scenario for agentFIT_BUT40
+Removing scenario for agentFIT_BUT30
+Removing scenario for agentFIT_BUT26
+Removing scenario dsMultiagent.dsScenarios.DSSThreeBlocks@2780d9e1
+Before removeScenario
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@2780d9e1
+for task task4
+ -- agentFIT_BUT40,agentFIT_BUT30,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@7ec54a15
+for task task4
+ -- agentFIT_BUT17,agentFIT_BUT35,agentFIT_BUT37,
+After removeScenario
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@7ec54a15
+for task task4
+ -- agentFIT_BUT17,agentFIT_BUT35,agentFIT_BUT37,
+@@! Scenario failed due to invalid goal destination task4
+147:scenario failed: task4 reason:  NO GOAL AREA
+Removing scenario for agentFIT_BUT17
+Removing scenario for agentFIT_BUT35
+Removing scenario for agentFIT_BUT37
+Removing scenario dsMultiagent.dsScenarios.DSSThreeBlocks@7ec54a15
+Before removeScenario
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@7ec54a15
+for task task4
+ -- agentFIT_BUT17,agentFIT_BUT35,agentFIT_BUT37,
+After removeScenario
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+group option task3
+group option task4
+ --------------------------------- 
+Step 148
+Active tasks: [task2_76, task3_93]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]
+Score: 160
+group option task3
+group option task4
+---------------
+148: Task : task4 type 11 deadline 242
+>> 0:::- agentFIT_BUT1:[16,6] -> [16,16] -> [37,21] sup. price 36
+>> 1:::- agentFIT_BUT35:[57,-2] -> [57,-1] -> [37,21] sup. price 43
+>> 0:::- agentFIT_BUT26:[51,49] -> [51,51] -> [37,21] sup. price 46
+Checking goal position: java.awt.Point[x=37,y=21]
+Result is true
+---------------
+Budou trojicky
+TT:11/0agentFIT_BUT1/1agentFIT_BUT35/0agentFIT_BUT26/
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za goToPosition
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT35 for detachAllGoal
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT26 for detachAllGoal
+ --------------------------------- 
+Step 149
+Active tasks: [task2_76, task3_93, task4_145]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]
+Score: 160
+group option task3
+group option task4
+---------------
+149: Task : task4 type 11 deadline 242
+>> 0:::- agentFIT_BUT7:[55,47] -> [51,51] -> [56,44] sup. price 20
+>> 1:::- agentFIT_BUT10:[20,55] -> [32,57] -> [56,44] sup. price 51
+>> 0:::- agentFIT_BUT40:[52,48] -> [51,51] -> [56,44] sup. price 16
+Checking goal position: java.awt.Point[x=56,y=44]
+Result is true
+---------------
+Budou trojicky
+TT:11/0agentFIT_BUT7/1agentFIT_BUT10/0agentFIT_BUT40/
+agentFIT_BUT37 needs job
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT1 for detachAllGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT24 za goToPosition
+agentFIT_BUT30 needs job
+agentFIT_BUT17 needs job
+ --------------------------------- 
+Step 150
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT10 for detachAllGoal
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT40 for detachAllGoal
+agentFIT_BUT34 needs job
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT7 for detachAllGoal
+agentFIT_BUT38 needs job
+agentFIT_BUT15 needs job
+ --------------------------------- 
+Step 151
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+agentFIT_BUT27 needs job
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT9 kvuli evasiveManoeuvre
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT35 for get block 2022
+ --------------------------------- 
+Step 152
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+ --------------------------------- 
+Step 153
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT9 kvuli goToPosition
+ --------------------------------- 
+Step 154
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+ --------------------------------- 
+Step 155
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT26 for get block 2022
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT9 kvuli evasiveManoeuvre
+ --------------------------------- 
+Step 156
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+ --------------------------------- 
+Step 157
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT9 kvuli goToPosition
+ --------------------------------- 
+Step 158
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT9 kvuli evasiveManoeuvre
+ --------------------------------- 
+Step 159
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT40 for get block 2022
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT9 kvuli goToPosition
+ --------------------------------- 
+Step 160
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT1 for get block 2022
+goalFailed: SCEN: Bad luck, agent agentFIT_BUT26 for goToPosition
+ --------------------------------- 
+Step 161
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalFailed: SCEN: Bad luck, agent agentFIT_BUT35 for goToPosition
+ --------------------------------- 
+Step 162
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalFailed: SCEN: Bad luck, agent agentFIT_BUT7 for get block 2022
+ --------------------------------- 
+Step 163
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT9 za evasiveManoeuvre
+ --------------------------------- 
+Step 164
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT10 for get block 2022
+ --------------------------------- 
+Step 165
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT7 for get block 2022
+ --------------------------------- 
+Step 166
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+ --------------------------------- 
+Step 167
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT35 for evasiveManoeuvre
+ --------------------------------- 
+Step 168
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+ --------------------------------- 
+Step 169
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT40 for goToPosition
+ --------------------------------- 
+Step 170
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalCompleted: SCEN: Commander praises you, agent agentFIT_BUT26 for evasiveManoeuvre
+ --------------------------------- 
+Step 171
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT9 za goToPosition
+ --------------------------------- 
+Step 172
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+ --------------------------------- 
+Step 173
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalFailed: SCEN: Task to je smula agente agentFIT_BUT11 kvuli customGoal
+goalFailed: SCEN: Bad luck, agent agentFIT_BUT10 for goToPosition
+ --------------------------------- 
+Step 174
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT9 za customGoal
+ --------------------------------- 
+Step 175
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za customGoal
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT24 za customGoal
+ --------------------------------- 
+Step 176
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 160
+group option task3
+group option task4
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT29 za customGoal
+ --------------------------------- 
+Step 177
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Four Block mission / dsMultiagent.dsScenarios.DSSFourBlocks@3cdf452e
+for task task3
+ -- agentFIT_BUT11,agentFIT_BUT29,agentFIT_BUT24,agentFIT_BUT9,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task3 / java.awt.Point[x=0,y=2]task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 320
+group option task3
+group option task4
+goalCompleted: SCEN: Task te chvali, agente agentFIT_BUT11 za submitGoal
+scenario completed: task3
+ --------------------------------- 
+Step 178
+Active tasks: [task2_76, task3_93, task4_145, task4_148]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Goal positions allocated: task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]
+Score: 320
+group option task3
+group option task4
+---------------
+178: Task : task4 type 11 deadline 242
+>> 0:::- agentFIT_BUT9:[69,4] -> [66,13] -> [0,2] sup. price 27
+>> 1:::- agentFIT_BUT11:[0,2] -> [2,-3] -> [0,2] sup. price 14
+>> 0:::- agentFIT_BUT37:[65,9] -> [66,13] -> [0,2] sup. price 20
+Checking goal position: java.awt.Point[x=0,y=2]
+Result is true
+---------------
+Budou trojicky
+TT:11/0agentFIT_BUT9/1agentFIT_BUT11/0agentFIT_BUT37/
+ --------------------------------- 
+Step 179
+Active tasks: [task2_76, task3_93, task4_145, task4_148, task4_149]
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@3a4c00e5
+ -- agentFIT_BUT22,agentFIT_BUT6,agentFIT_BUT21,agentFIT_BUT19,agentFIT_BUT2,agentFIT_BUT33,agentFIT_BUT28,agentFIT_BUT12,agentFIT_BUT23,agentFIT_BUT8,agentFIT_BUT31,agentFIT_BUT39,agentFIT_BUT32,agentFIT_BUT4,agentFIT_BUT16,agentFIT_BUT14,agentFIT_BUT20,agentFIT_BUT25,agentFIT_BUT13,agentFIT_BUT3,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@25bf40d5
+for task task4
+ -- agentFIT_BUT1,agentFIT_BUT35,agentFIT_BUT26,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@74dbff23
+for task task4
+ -- agentFIT_BUT7,agentFIT_BUT10,agentFIT_BUT40,
+Scenario Three Block mission / dsMultiagent.dsScenarios.DSSThreeBlocks@24494f5
+for task task4
+ -- agentFIT_BUT9,agentFIT_BUT11,agentFIT_BUT37,
+Goal positions allocated: task4 / java.awt.Point[x=37,y=21]task4 / java.awt.Point[x=56,y=44]task4 / java.awt.Point[x=0,y=2]
+Score: 320
+group option task3
+group option task4
+---------------
+179: Task : task4 type 11 deadline 242
+>> 0:::- agentFIT_BUT34:[22,27] -> [16,16] -> [29,12] sup. price 34
+>> 1:::- agentFIT_BUT15:[35,31] -> [24,16] -> [29,12] sup. price 35
+>> 0:::- agentFIT_BUT27:[45,20] -> [46,20] -> [29,12] sup. price 26
+Checking goal position: java.awt.Point[x=29,y=12]
+Result is true
+---------------
+Budou trojicky
+TT:11/0agentFIT_BUT34/1agentFIT_BUT15/0agentFIT_BUT27/

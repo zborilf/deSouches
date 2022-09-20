@@ -486,7 +486,7 @@ public class DSMap {
         if (node != null) {
           if ((j == getOwnerAgentPos().y) && (i == getOwnerAgentPos().x)
               || node.getPosition().equals(masterPos)) {
-            so.append(" **");
+            so.append(" AA");
           } else {
             so.append(DSCell.getTypeSign(node.getType()));
           }

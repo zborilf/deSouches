@@ -1,0 +1,90 @@
+>>agentFIT_BUT17 sees agentFIT_BUT7 disp java.awt.Point[x=0,y=2] token true
+groupExtended: Leader {agentFIT_BUT17}agentFIT_BUT17,  by group Leader {agentFIT_BUT7}agentFIT_BUT7,  step 21
+ --------------------------------- 
+Step 21
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@5974a749
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+ --------------------------------- 
+Step 22
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@5974a749
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+agentFIT_BUT9 needs job
+agentFIT_BUT5 needs job
+ --------------------------------- 
+Step 23
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@5974a749
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+agentFIT_BUT14 needs job
+ --------------------------------- 
+Step 24
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@5974a749
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+agentFIT_BUT17 needs job
+agentFIT_BUT2 needs job
+agentFIT_BUT20 needs job
+>>agentFIT_BUT12 sees agentFIT_BUT5 disp java.awt.Point[x=0,y=1] token true
+groupExtended: Leader {agentFIT_BUT12}agentFIT_BUT12,  by group Leader {agentFIT_BUT5}agentFIT_BUT5,  step 25
+ --------------------------------- 
+Step 25
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@5974a749
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+agentFIT_BUT18 needs job
+agentFIT_BUT10 needs job
+agentFIT_BUT6 needs job
+agentFIT_BUT4 needs job
+agentFIT_BUT11 needs job
+>>agentFIT_BUT1 sees agentFIT_BUT9 disp java.awt.Point[x=-1,y=0] token true
+groupExtended: Leader {agentFIT_BUT1}agentFIT_BUT1,  by group Leader {agentFIT_BUT9}agentFIT_BUT9,  step 26
+ --------------------------------- 
+Step 26
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@5974a749
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0
+>>agentFIT_BUT17 sees agentFIT_BUT6 disp java.awt.Point[x=0,y=1] token true
+groupExtended: Leader {agentFIT_BUT17}agentFIT_BUT17, agentFIT_BUT7,  by group Leader {agentFIT_BUT6}agentFIT_BUT6,  step 27
+>>agentFIT_BUT14 sees agentFIT_BUT15 disp java.awt.Point[x=-1,y=1] token false
+ --------------------------------- 
+Step 27
+Active tasks: []
+Active scenarios 
+Scenario Fighter Mission / dsMultiagent.dsScenarios.DSMFightersMission@5974a749
+ -- 
+Goal positions allocated: 
+Score: 0
+group option task1
+group option task0

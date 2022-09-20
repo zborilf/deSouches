@@ -28,13 +28,13 @@ public class DSRoles {
     ) {
       if(getWorkerAbility(role)>PWorkerAbility){
         PWorkerAbility=getWorkerAbility(role);
-        System.out.println("Role " + role.getRoleName() + " muze pracovat, ab:"+PWorkerAbility);
+        System.out.println("Role " + role.getRoleName() + " can work, ab:"+PWorkerAbility);
         _roleWorker=role.getRoleName();
       }
     }
     if(getDiggerAbility(role)>PDiggerAbility){
       PDiggerAbility=getDiggerAbility(role);
-      System.out.println("Role " + role.getRoleName() + " muze valcit, ab:"+PDiggerAbility);
+      System.out.println("Role " + role.getRoleName() + " can fight, ab:"+PDiggerAbility);
       _roleDigger=role.getRoleName();
   }
 

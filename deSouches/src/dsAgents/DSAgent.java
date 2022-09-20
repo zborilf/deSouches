@@ -442,6 +442,8 @@ public class DSAgent extends Agent {
 
       Collection<Percept> newPercepts = percepts.getAddList(); // TODO ??
 
+      // System.out.println(newPercepts);
+
       //              DSPerceptor.processPercepts(PBeliefBase,percepts);
 
       // FEEDBACK, result of the last action performed

@@ -61,7 +61,8 @@ public class DSGroup {
   }
 
   public boolean standsMemberAt(Point position){
-    for(DSAgent agent:PMembers)
+    LinkedList<DSAgent> members=(LinkedList<DSAgent>)PMembers.clone();
+    for(DSAgent agent:members)
       if(agent.getMap().isAgentBodyAt(position,agent))
         return(true);
       return(false);

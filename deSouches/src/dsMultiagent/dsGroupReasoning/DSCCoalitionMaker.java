@@ -109,7 +109,6 @@ public class DSCCoalitionMaker {
         }
 
         int noSubtasks = subtasks.size();
-    //    System.out.println("Pocet poduloh " + noSubtasks);
         DSCCoalitionStructures coalition = new DSCCoalitionStructures(noSubtasks);
         DSCCoalitionMember taskItem;
         Point bestDispenser;
@@ -132,8 +131,6 @@ public class DSCCoalitionMaker {
                         }
                     }
 
-       //             System.out.println(subtaskNumber + ": " + worker + "/" + bestDispenser + "/" + goal + " = " + bestPrice+
-       //                     " nlt "+notLongerThan);
                     DSAgent workerAgent=null;
 
                     // find agent from 'agents' by position 'worker'
@@ -170,15 +167,9 @@ public class DSCCoalitionMaker {
             for (DSCCoalition coal2 : coalitions) {
                 if (coal2.addMember(task))       // coal extended
                     if (coal2.completeCoalition())   // and become complete
-                        //                  coal2.printCoalition();
                         PCoalitions.add(coal2);
             }
         }
-
-    /*    System.out.println("HOTOVO");
-        for (DSCCoalition coal3 : PCoalitions)
-            coal3.printCoalition();
-*/
 
         return(PCoalitions);
     }
