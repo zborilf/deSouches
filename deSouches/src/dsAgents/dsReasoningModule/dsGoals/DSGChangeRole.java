@@ -1,30 +1,30 @@
 package dsAgents.dsReasoningModule.dsGoals;
 
 import dsAgents.DSAgent;
+import dsAgents.dsBeliefBase.dsBeliefs.DSRoles;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
+import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 
-public class DSGChangeRole extends DSGoal {
+public class DSGChangeRole extends DSGGoal{
 
-  String PRole;
+    static final int __timeprovided=100;
 
-  public boolean goalAchieved() {
-    return (PLastStatus == __DSGGoalAchieved);
-  }
-
-  @Override
-  public String getGoalDescription() {
-    return null;
-  }
-
-  @Override
-  public boolean revisePlans(DSAgent agent) {
-    if (agent.getActualRole().compareTo(PRole) == 0) {
-      PLastStatus = __DSGGoalAchieved;
+    public String getGoalDescription(){
+        return("Goal change role");
     }
-    //        if(if(PPlans.containsKey("changeRole"))
-    return false;
-  }
 
-  public DSGChangeRole(String role) {
-    PRole = role;
-  }
+    @Override
+    public boolean revisePlans(DSAgent agent) {
+        if(!agent.getActualRole().contentEquals(DSRoles._roleDefault))
+            PPlans.put("role changed", new DSPlan("role changed",3));
+
+
+        agent.getMap().nearestObject(DSCell.__DSRoleArea, agent.getMapPosition());
+        DSGGoal subGoal = new DSGApproachTypes(
+                agent.getMap().nearestObject(DSCell.__DSRoleArea, agent.getMapPosition()),
+                agent.getStep()+__timeprovided);
+        setSubgoal(subGoal);
+        return(true);
+    }
 }

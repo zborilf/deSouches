@@ -5,7 +5,6 @@ import dsAgents.dsBeliefBase.DSBeliefBase;
 import dsAgents.dsBeliefBase.dsBeliefs.DSBeliefsIndexes;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.*;
 import dsAgents.dsPerceptionModule.dsSyntax.DSPercepts;
-import dsMultiagent.dsTasks.DSTask;
 import eis.PerceptUpdate;
 import eis.iilang.*;
 import java.awt.*;
@@ -66,124 +65,49 @@ public class DSPerceptor {
     return ("");
   }
 
-  public boolean seesBlocksInBody(Collection<Percept> percepts) {
-    Iterator<Percept> perceptI =
-        percepts.stream().filter(prc -> prc.getName().equals("attached")).iterator();
-    return (perceptI.hasNext());
+  public boolean seesBlocksInBody(DSAgentOutlook outlook) {
+        return(outlook.seesBlockBy(new Point(0,0),DSCell.__DSBlock, DSCell.__DSBlock+20));
   }
 
-  public DSBody getBodyFromPercepts(Collection<Percept> percepts) {
-    Iterator<Percept> perceptI =
-        percepts.stream()
-            .filter(prc -> prc.getName().equals("attached"))
-            .iterator(); // .findFirst().get();
-    Percept percept;
-    DSBody body = new DSBody();
-    while (perceptI.hasNext()) {
-      percept = perceptI.next();
 
-      Point pp =
-          new Point(
-              Integer.parseInt(percept.getParameters().get(0).toString()),
-              Integer.parseInt(percept.getParameters().get(1).toString()));
-      System.out.println("body part " + pp);
-
-      //            body.addCell(new DSCell(percept.))
-    }
-    return (null);
-  }
-
-  public LinkedList<DSTask> getTasksFromPercepts(Collection<Percept> percepts) {
-    Iterator<Percept> perceptI;
-    LinkedList<DSTask> taskList = new LinkedList<DSTask>();
-    LinkedList<Integer> typesNeeded;
-    Percept percept;
-    DSTask task;
-    String name;
-    int deadline;
-    int reward;
-    DSBody body;
-    DSCell cell;
-    ParameterList parameters;
-
-    perceptI =
-        percepts.stream()
-            .filter(prc -> prc.getName().equals("task"))
-            .iterator(); // .findFirst().get();
-    while (perceptI.hasNext()) {
-      percept = perceptI.next();
-      name = percept.getParameters().get(0).toString();
-      deadline = Integer.parseInt(percept.getParameters().get(1).toString());
-      reward = Integer.parseInt(percept.getParameters().get(2).toString());
-      parameters = (ParameterList) percept.getParameters().get(3);
-      body = new DSBody();
-      typesNeeded = new LinkedList<Integer>();
-      for (Parameter parameter : parameters) {
-        Function pl = (Function) parameter;
-        int x = Integer.parseInt(((Function) parameter).getParameters().get(0).toString());
-        int y = Integer.parseInt(((Function) parameter).getParameters().get(1).toString());
-        String typeS = ((Function) parameter).getParameters().get(2).toString();
-        int type = PPercepts.blockTypeByName(typeS);
-        cell = new DSCell(x, y, type + DSCell.__DSBlock, 0);
-        if (Math.abs(x) + Math.abs(y) == 1) {
-          body.insertFirstCell(cell);
-          typesNeeded.add(0, type);
-        } else {
-          body.addCell(cell);
-          //       typesNeeded.add(type);
-        }
-      }
-      task = new DSTask(name, deadline, reward, body); // ,typesNeeded);
-      taskList.add(task);
-    }
-    return (taskList);
-  }
 
   public synchronized void actualizeMap(
-      DSMap map,
-      DSAgentOutlook outlook,
-      DSAgentOutlook deleteOutlook,
-      Point agentPos,
-      int vision,
-      String PTeamName,
-      int step,
-      DSAgent agent) {
+          DSMap map,
+          DSAgentOutlook outlook,
+          Point agentPos,
+          int vision,
+          String PTeamName,
+          int step,
+          DSAgent agent) {
 
     clearFriendsList();
 
-    DSCells removedCells = deleteOutlook.getCells();
     DSCells newOutlook = outlook.getCells();
-
-    // for (var c : removedCells.getCells()) {
-    //  DSCell delCell =
-    //      new DSCell(
-    //          c.getX() + agentPos.x, c.getY() + agentPos.y, c.getType(), c.getTimestamp(), agent);
-    //  map.getMap().removeCell(delCell.getX(), delCell.getY(), delCell.getType());
-    // }
-
-    // outlook contains only newly seen cells -> add clear if no cell exists
-
     for (int i = -vision; i <= vision; i++)
       for (int j = -vision + Math.abs(i); Math.abs(j) + Math.abs(i) <= vision; j++) {
         if (Math.abs(i) + Math.abs(j) > vision) continue;
 
         List<DSCell> old = new LinkedList<>();
-        var allAt = map.getMap().getAllAt(new Point(i + agentPos.x, j + agentPos.y));
+
+
+        var allAt = map.getMapCells().getAllAt(map.shiftPosition(agent, new Point(i,j)));
         if (allAt != null && !allAt.isEmpty()) {
           old = allAt.stream().filter(x -> x.getTimestamp() <= step).toList();
         }
 
-        map.removeOlder(new Point(i + agentPos.x, j + agentPos.y), step);
+        map.removeOlder(map.shiftPosition(agent, new Point(i,j)), step);
+
+
         LinkedList<DSCell> cells = newOutlook.getAllAt(new Point(i, j));
         if (cells != null) {
           for (DSCell cell : cells) {
             DSCell newCell =
                 new DSCell(
-                    cell.getX() + agentPos.x,
-                    cell.getY() + agentPos.y,
-                    cell.getType(),
-                    cell.getTimestamp(),
-                    agent);
+                        map.shiftPosition(agent, cell.getPosition()).x,
+                        map.shiftPosition(agent, cell.getPosition()).y,
+                        cell.getType(),
+                        cell.getTimestamp(),
+                        agent);
 
             var ncell =
                 old.stream()
@@ -207,9 +131,11 @@ public class DSPerceptor {
         if (Math.abs(x) + Math.abs(y) > vision) continue;
 
         DSCell clearCell =
-            new DSCell(x + agentPos.x, y + agentPos.y, DSCell.__DSClear, step, agent);
+            new DSCell(map.shiftPosition(agent, new Point(x,y)).x,
+                      map.shiftPosition(agent, new Point(x,y)).y,
+                      DSCell.__DSClear, step, agent);
 
-        LinkedList<DSCell> cells = map.getMap().getAllAt(clearCell.getPosition());
+        LinkedList<DSCell> cells = map.getMapCells().getAllAt(clearCell.getPosition());
         if (cells == null
             || cells.stream()
                 .noneMatch(
@@ -219,7 +145,7 @@ public class DSPerceptor {
                                 && (pCell.getType() < DSCell.__DSDispenser)))) {
           map.updateCell(clearCell);
         } else {
-          map.getMap().removeCell(clearCell.getX(), clearCell.getY(), DSCell.__DSClear);
+          map.getMapCells().removeCell(clearCell.getX(), clearCell.getY(), DSCell.__DSClear);
         }
       }
   }
@@ -283,6 +209,10 @@ public class DSPerceptor {
           BB.removeTask(perceptParams);
           break;
 
+        case DSBeliefsIndexes.__attached:
+          BB.removeAttached(perceptParams);
+          break;
+
         case DSBeliefsIndexes.__energy:
           break;
         case DSBeliefsIndexes.__score:
@@ -291,14 +221,17 @@ public class DSPerceptor {
 
     Iterator<Percept> newAddPercepts = percepts.getAddList().iterator();
 
-    //  System.out.println(newAddPercepts);
-
     while (newAddPercepts.hasNext()) {
       percept = newAddPercepts.next();
       perceptName = percept.getName();
       perceptParams = percept.getParameters();
 
       switch (DSBeliefsIndexes.getIndex(perceptName)) {
+
+        case DSBeliefsIndexes.__ranking:
+          BB.getCommander().printOutput(" FINAL RANKING: "+perceptParams.iterator().next().toString());
+          System.exit(0);
+
         case DSBeliefsIndexes.__thing:
           BB.addThingToOutlook(perceptParams);
           break;
@@ -348,11 +281,19 @@ public class DSPerceptor {
           BB.setTask(perceptParams);
           break;
 
+        case DSBeliefsIndexes.__attached:
+          BB.addAttached(perceptParams);
+          break;
+
+
         case DSBeliefsIndexes.__energy:
           BB.setEnergy(perceptParams);
           break;
 
         case DSBeliefsIndexes.__score:
+          BB.setScore(perceptParams);
+          break;
+
       }
     }
 

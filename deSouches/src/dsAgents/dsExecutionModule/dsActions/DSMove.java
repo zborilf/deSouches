@@ -4,10 +4,10 @@ import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import dsAgents.dsPerceptionModule.DSPerceptor;
-import dsAgents.dsReasoningModule.dsGoals.DSGoal;
+import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
-import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
+import dsAgents.dsReasoningModule.dsPlans.dsPlanningMethods.DSAStarItem;
 import eis.exceptions.ActException;
 import eis.iilang.Action;
 import eis.iilang.Identifier;
@@ -19,11 +19,14 @@ public class DSMove extends dsAgents.dsExecutionModule.dsActions.DSAction {
   private ArrayList<String> PDirection = new ArrayList<>();
   int PDx = 0;
   int PDy = 0;
+  int PDxO = 0;
+  int PDyO = 0;
 
+  boolean PPartial=false;
   int PLAStep = 0;
 
   @Override
-  public DSGoal execute(DSAgent agent) {
+  public DSGGoal execute(DSAgent agent) {
     Action a =
         new Action(
             "move",
@@ -31,6 +34,8 @@ public class DSMove extends dsAgents.dsExecutionModule.dsActions.DSAction {
                 .map(Identifier::new)
                 .collect(Collectors.toCollection(ArrayList::new)));
     PLAStep = agent.getStep();
+    agent.printOutput("Moving action: " + a.toProlog()+"\n");
+
     try {
       agent.getEI().performAction(agent.getJADEAgentName(), a);
     } catch (ActException e) {
@@ -44,7 +49,8 @@ public class DSMove extends dsAgents.dsExecutionModule.dsActions.DSAction {
     // TODO Auto-generated method stub
     Point point = item.getPosition();
     DSBody body = item.getBody();
-    Point newPosition = new Point(point.x + PDx, point.y + PDy);
+    Point newPosition = new Point(map.centralizeXCoords(point.x + PDx),
+                                map.centralizeYCoords(point.y + PDy));
     if (map.isObstacleAt(newPosition, agentBody, body, step)) return (null);
     return (new DSAStarItem(newPosition, item, this, body, 0, 0));
   }
@@ -58,7 +64,15 @@ public class DSMove extends dsAgents.dsExecutionModule.dsActions.DSAction {
               + agent.getStep()
               + " prodleva "
               + (agent.getStep() - PLAStep));
+    if (PPartial) {
+      agent.getMap().moveBy(agent, PDxO, PDyO);
+    }else
     agent.getMap().moveBy(agent, PDx, PDy);
+
+  }
+
+  public void setPartial(){
+    PPartial=true;
   }
 
   @Override
@@ -81,6 +95,8 @@ public class DSMove extends dsAgents.dsExecutionModule.dsActions.DSAction {
   public void addDirection(String direction) {
     PDirection.add(direction);
     Point pos = DSPerceptor.getPositionFromDirection(direction);
+    PDxO = pos.x;
+    PDyO = pos.y;
     PDx += pos.x;
     PDy += pos.y;
   }

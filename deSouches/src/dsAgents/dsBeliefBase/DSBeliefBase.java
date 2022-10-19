@@ -10,12 +10,11 @@ import dsAgents.DeSouches;
 import dsAgents.dsBeliefBase.dsBeliefs.DSRole;
 import dsAgents.dsBeliefBase.dsBeliefs.DSRoles;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.*;
-import dsAgents.dsGUI;
+import dsAgents.dsGUI.DSAgentGUI;
 import dsAgents.dsPerceptionModule.DSStatusIndexes;
 import dsAgents.dsPerceptionModule.dsSyntax.DSPercepts;
 import dsMultiagent.DSGroup;
-import dsMultiagent.DSSynchronize;
-import dsMultiagent.dsScenarios.DSScenario;
+import dsMultiagent.dsScenarios.DSMMission;
 import dsMultiagent.dsTasks.DSTask;
 import eis.iilang.Function;
 import eis.iilang.Parameter;
@@ -27,11 +26,9 @@ import java.util.LinkedList;
 
 public class DSBeliefBase {
 
-  private dsGUI PGUI;
+  private DSAgentGUI PGUI;
 
   private DSMap PMap;
-  private int PWidthMap;
-  private int PHeightMap;
   private boolean PGUIFocus;
   private DSAgentOutlook POutlook;
   private DSAgentOutlook PDeleteOutlook;
@@ -45,28 +42,32 @@ public class DSBeliefBase {
   private DSRoles PRoles;
   private DSRole PActualRole = null;
 
-  DSSynchronize PSynchronizer;
-
   private boolean PIsLeutnant = false; // obsolete in 2022
   private int PEnergy = 0;
   private DeSouches PCommander;
   private String PName = "unknown";
   private String PJADEName = "unknown";
   private String PTeamName = "unknown";
-  private DSScenario PScenario; // active scenario
+  private DSMMission PMission; // active mission
   private DSBody PBody = null;
-  private boolean inicialized = false;
   private int PHoldsBlockType;
+  private boolean inicialized = false;
 
+
+  private String PLastGoal;
   private int PLastActionResult = DSStatusIndexes.__action_unknown_action;
+  private String PLastActionResultString = "";
+  private boolean PJobDemamnded=false;
   private String PLastAction = "unknown";
   private String PLastActionParams = "success";
+  private LinkedList<Point> PAttached = new LinkedList<Point>();
 
-  public void setGUI(dsGUI gui) {
+
+  public void setGUI(DSAgentGUI gui) {
     PGUI = gui;
   }
 
-  public dsGUI getGUI() {
+  public DSAgentGUI getGUI() {
     return (PGUI);
   }
 
@@ -76,6 +77,26 @@ public class DSBeliefBase {
 
   public boolean getGUIFocus() {
     return (PGUIFocus);
+  }
+
+  public void setJobDemanded(boolean value){
+    PJobDemamnded=value;
+  }
+
+  public boolean getJobDemanded(){
+    return(PJobDemamnded);
+  }
+
+  public void setLastGoal(String goal){
+    PLastGoal=goal;
+  }
+
+  public String getLastGoal(){
+    return(PLastGoal);
+  }
+
+  public LinkedList<Point> getAttched(){
+    return(PAttached);
   }
 
   public boolean setRole(String role) {
@@ -91,20 +112,7 @@ public class DSBeliefBase {
     return (PActualRole.getRoleName());
   }
 
-  public DSSynchronize getSynchronizer() {
-    return (PSynchronizer);
-  }
-
   // 0 : __simStart
-  // INIT
-
-  public void inicialized() {
-    inicialized = true;
-  }
-
-  public boolean needsInit() {
-    return (!inicialized);
-  }
 
   // 1 : __name
 
@@ -123,6 +131,7 @@ public class DSBeliefBase {
 
   public void setTeamName(Collection<Parameter> parameters) {
     String teamName = parameters.iterator().next().toString();
+
     PTeamName = teamName;
   }
 
@@ -134,6 +143,7 @@ public class DSBeliefBase {
 
   public void setTeamSize(Collection<Parameter> parameters) {
     int teamSize = Integer.parseInt(parameters.iterator().next().toString());
+    PCommander.setTeamSize(teamSize);
     PTeamSize = teamSize;
   }
 
@@ -208,6 +218,8 @@ public class DSBeliefBase {
   public void setLastActionResult(Collection<Parameter> parameters) {
     String actionResult = parameters.iterator().next().toString();
     PLastActionResult = DSStatusIndexes.getIndex(actionResult);
+    PLastActionResultString = actionResult;
+
     if (PGUIFocus) PGUI.setLastActionResult(actionResult);
   }
 
@@ -215,11 +227,14 @@ public class DSBeliefBase {
     return (PLastActionResult);
   }
 
+  public String getLastActionResultString() { return(PLastActionResultString); }
+
   // 13 : __score
 
   public void setScore(Collection<Parameter> parameters) {
     int score = Integer.valueOf(parameters.iterator().next().toString());
     PScore = score;
+    PGUI.setScore(score);
   }
 
   public int getScore() {
@@ -253,13 +268,10 @@ public class DSBeliefBase {
     PCommander.taskExpired(parameters.iterator().next().toString());
   }
 
-  public void setTask(Collection<Parameter> parameters) {
-    System.out.println(parameters.toString());
-    /*
-           parameters = [taskName, deadline, reward, [req(x,y,type]*]]
-    */
 
-    DSTask task;
+
+  public void setTask(Collection<Parameter> parameters) {
+
     String name;
     int deadline;
     int reward;
@@ -287,13 +299,39 @@ public class DSBeliefBase {
       else body.addCell(cell);
     }
     PCommander.taskProposed(
-        new DSTask(name, deadline, reward, body),
-        PStep); // nebo primo do GroupOptionsPool? Necht je to pres deSouches
+        new DSTask(name, deadline, reward, body, PStep)); // nebo primo do GroupOptionsPool? Necht je to pres deSouches
   }
+
+
+
 
   // 16 : __attached
 
-  // TODO
+  public void addAttached(Collection<Parameter> parameters){
+    Iterator i = parameters.iterator();
+    int x = Integer.parseInt(i.next().toString());
+    int y = Integer.parseInt(i.next().toString());
+    Point point=new Point(x,y);
+    PAttached.add(point);
+  }
+
+
+  public void removeAttached(Collection<Parameter> parameters){
+    Iterator i = parameters.iterator();
+    int x = Integer.parseInt(i.next().toString());
+    int y = Integer.parseInt(i.next().toString());
+    Point point=new Point(x,y);
+    LinkedList<Point> newList=new LinkedList();
+    for(Point point2:PAttached)
+      if (!(point2.x==point.x)||!(point2.y==point.y)) {
+        newList.add(point2);
+      }
+    PAttached=newList;
+  }
+
+  public boolean isAttached(Point position){
+    return(PAttached.contains(position));
+  }
 
   // 17 : __energy
 
@@ -421,7 +459,7 @@ public class DSBeliefBase {
     return PActualRole.getSpeed(attached);
   }
 
-  // TELO AGENTA
+  // AGENT BODY
 
   public void setBody(DSBody body) {
     PBody = body;
@@ -431,7 +469,7 @@ public class DSBeliefBase {
     return (PBody);
   }
 
-  // MAPA
+  // MAP
 
   public DSMap getMap() {
     return (PMap);
@@ -441,7 +479,7 @@ public class DSBeliefBase {
     PMap = map;
   }
 
-  // ROZHLED
+  // OUTLOOK
 
   public DSAgentOutlook getOutlook() {
     return (POutlook);
@@ -452,7 +490,7 @@ public class DSBeliefBase {
   }
 
   public void clearDeleteOutlook() {
-    PDeleteOutlook = new DSAgentOutlook();
+    PDeleteOutlook = new DSAgentOutlook(PAgent);
   }
 
   // SOCIAL
@@ -466,63 +504,40 @@ public class DSBeliefBase {
     return (PGroup);
   }
 
-  public int getGroupSize() {
-    return (PGroup.getMembers().size());
+
+  // MISSIONS
+
+  public void setMission(DSMMission mission) {
+    PMission = mission;
+    if (PMission != null)
+      PAgent.printOutput("---- SCENARIO SET TO "+ PMission.getName());
+    else
+      PAgent.printOutput("---- SCENARIO SET TO null");
+    if (PGUIFocus) {
+      if(mission!=null)
+        PGUI.setMission(mission.getName());
+    }
   }
 
-  // AKTUALNI SCENAR
-
-  public void setScenario(DSScenario scenario) {
-    if (scenario == null) return;
-    PScenario = scenario;
-    if (PGUIFocus) PGUI.setScenario(scenario.getName());
-  }
-
-  public DSScenario getScenario() {
-    return (PScenario);
+  public DSMMission getMission() {
+    return (PMission);
   }
 
   public void setHoldsBolockType(int blockType) {
     PHoldsBlockType = blockType;
   }
 
-  public int getHoldsBolockType() {
-    return PHoldsBlockType;
-  }
 
-  /*
-             FUNKCNI PREDSTAVY (vypoctove)
-  */
 
-  boolean isNeighbour(Point point1, Point point2)
-        // jsou tyto body sousede v ctyrokoli?
-      {
-    if (DSMap.distance(point1, point2) == 1) return (true);
 
-    return (false);
-  }
 
-  public boolean friendAroundCell(Point position, DSAgent agent) {
-    // je pritel ze skupiny na zaklade jeho skutecne pozice v ctyrokoli?
-    // melo by stacit skontrolovat grupu, protoze blok shani jen mastergrupa, takze jej muze take
-    // jen ta drzet
 
-    LinkedList<DSAgent> members = (LinkedList<DSAgent>) PAgent.getGroup().getMembers().clone();
-    for (DSAgent friend : members) {
-      if (isNeighbour(position, friend.getMapPosition())) return (true);
-    }
-    return (true);
-  }
+
 
   public Point nearestObject(DSAgent agent, int type) {
     return (getMap().nearestObject(type, agent.getMapPosition()));
   }
 
-  public Point nearestDispenser(int type) {
-    return (nearestObject(PAgent, DSCell.__DSDispenser + type));
-    // return(PMap.nearestObject(DSCell.__DSDispenser+type,PMap.getAgentPos())); // for this agent
-    // 0,0
-  }
 
   public Point nearestFreeBlock(int type) {
     Point blockAt = getMap().nearestFreeBlock(type, PAgent.getMapPosition());
@@ -532,14 +547,13 @@ public class DSBeliefBase {
 
   public Point nearestGoal() {
     return (nearestObject(PAgent, DSCell.__DSGoalArea));
-    //        return(PMap.nearestObject(DSCell.__DSGoalArea,new Point(0,0)));
   }
 
-  public DSBeliefBase(DSAgent agent, DSSynchronize synchronizer) {
+  public DSBeliefBase(DSAgent agent) {
     PAgent = agent;
     PRoles = new DSRoles();
-    POutlook = new DSAgentOutlook();
-    PDeleteOutlook = new DSAgentOutlook();
-    PSynchronizer = synchronizer;
+    POutlook = new DSAgentOutlook(agent);
+    PDeleteOutlook = new DSAgentOutlook(agent);
+    PHoldsBlockType = -1;
   }
 }

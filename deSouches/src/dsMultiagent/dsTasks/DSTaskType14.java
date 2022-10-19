@@ -20,8 +20,7 @@ public class DSTaskType14 extends DSTaskType {
     DSDetach detach = new DSDetach(getConnectDirection(PLeutnant1));
     plan.appendAction(detach);
     return (plan);
-  }
-  ;
+  };
 
   @Override
   DSPlan makePlanL2() {
@@ -47,14 +46,17 @@ public class DSTaskType14 extends DSTaskType {
   }
   ;
 
+  /*
   public DSBody getSoldierGoalBody() {
     return null;
   }
+   */
 
-  @Override
+
   public DSBody getTaskBody() {
     return null;
   }
+
 
   @Override
   public Point blockPosition(int agent) {

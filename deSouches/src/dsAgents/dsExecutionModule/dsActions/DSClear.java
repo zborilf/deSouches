@@ -3,10 +3,10 @@ package dsAgents.dsExecutionModule.dsActions;
 import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
-import dsAgents.dsReasoningModule.dsGoals.DSGoal;
+import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalFalse;
 import dsAgents.dsReasoningModule.dsGoals.DSGoalTrue;
-import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
+import dsAgents.dsReasoningModule.dsPlans.dsPlanningMethods.DSAStarItem;
 import eis.exceptions.ActException;
 import eis.iilang.Action;
 import eis.iilang.Numeral;
@@ -14,12 +14,17 @@ import java.awt.*;
 
 public class DSClear extends DSAction {
 
-  Point Pp;
+
+
+  Point PTarget;
+
 
   @Override
-  public DSGoal execute(DSAgent agent) {
+  public DSGGoal execute(DSAgent agent) {
 
-    Action a = new Action("clear", new Numeral(Pp.x), new Numeral(Pp.y));
+    Action a = new Action("clear", new Numeral(PTarget.x), new Numeral(PTarget.y));
+    agent.printOutput("Clear action: " + a.toProlog()+"\n");
+
     try {
       agent.getEI().performAction(agent.getJADEAgentName(), a);
     } catch (ActException e) {
@@ -29,7 +34,7 @@ public class DSClear extends DSAction {
   }
 
   public void succeededEffect(DSAgent agent) {
-    // odstrani napojene veci na body
+    agent.clearPerformed(PTarget);
   }
 
   @Override
@@ -39,7 +44,7 @@ public class DSClear extends DSAction {
 
   @Override
   public String actionText() {
-    return ("clear "+ Pp);
+    return ("clear "+ PTarget);
   }
 
   @Override
@@ -48,6 +53,8 @@ public class DSClear extends DSAction {
   }
 
   public DSClear(Point direction) {
-    Pp = direction;
+    PTarget = direction;
   }
+
+
 }

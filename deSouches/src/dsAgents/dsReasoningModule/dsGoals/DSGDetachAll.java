@@ -5,7 +5,7 @@ import dsAgents.dsExecutionModule.dsActions.DSDetach;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import java.util.LinkedList;
 
-public class DSGDetachAll extends DSGoal {
+public class DSGDetachAll extends DSGGoal {
   @Override
   public String getGoalDescription() {
     return ("detachAllGoal");
@@ -14,7 +14,7 @@ public class DSGDetachAll extends DSGoal {
   @Override
   public boolean revisePlans(DSAgent agent) {
     LinkedList<String> directions = agent.getBody().getAllDirectionsAttached();
-    DSPlan detachAllPlan = new DSPlan("detachAllaGoal", 2);
+    DSPlan detachAllPlan = new DSPlan("detachAllaGoal", 2,false);
     DSDetach detach;
     if (PPlans.containsKey("detachAllGoal")) {
       return false;

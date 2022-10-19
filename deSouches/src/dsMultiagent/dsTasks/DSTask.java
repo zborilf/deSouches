@@ -2,25 +2,86 @@ package dsMultiagent.dsTasks;
 
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
+
+import java.awt.*;
 import java.util.LinkedList;
 
 public class DSTask {
 
-  static final int __DSTMaster = 1;
-  static final int __DSTCaptain = 2;
-  static final int __DSTSoldier1 = 3;
-  static final int __DSTSoldier2 = 4;
-  static final int __DSTSoldier3 = 5;
 
   protected String PTaskName;
+  String PTaskNickname;
   int PDeadline;
   int PReward;
   DSTaskType PTaskType;
   DSBody PTaskBody;
   LinkedList<Integer> PTypesNeeded;
+  DSTaskMember[] PSubtaskRoutes={null,null,null,null};
+
+
+
+  public int getReward(){
+    return(PReward);
+  }
+
+  public Point getGoalArea(){
+    if(PSubtaskRoutes[0]!=null)
+      return(PSubtaskRoutes[0].getGoalPosition());
+    return(null);
+  }
 
   public String getName() {
     return (PTaskName);
+  }
+
+
+  public String getNickName() {
+    return (PTaskNickname);
+  }
+
+
+  public void setSubtaskRoute(int subtaskNumber, DSTaskMember PSubtaskRoute) {
+    this.PSubtaskRoutes[subtaskNumber] = PSubtaskRoute;
+  }
+
+  public String task2String(int step){
+    String t="Task type "+PTaskType+"\n";
+    t=t+">> task body "+"at "+PTaskBody.bodyToString()+"\n";
+    for(int i=0; i<PTypesNeeded.size();i++) {
+      t=t+">>> Type needed <"+PTypesNeeded.get(i)+
+              ">\n>>>> route: ";
+      t=t+PSubtaskRoutes[i].taskMember2String()+" ["+PSubtaskRoutes[i].costEstimation() +"]\n";
+    }
+    t=t+">>>> deadline at: "+PDeadline+", remains: "+(PDeadline-step)+"\n";
+    t=t+">>>> cost estimated to "+subtaskCostEstimation()+"\n\n";
+    return(t);
+  }
+
+  public int goalDistanceMax() {
+    Point gp = PSubtaskRoutes[0].getGoalPosition();
+    DSMap map = PSubtaskRoutes[0].getAgent().getGroup().getMap();
+    int gd = map.distance(PSubtaskRoutes[0].getAgent().getMapPosition(), gp);
+    int gd2 = 0;
+    for (int i = 1; i < PTypesNeeded.size(); i++) {
+      gd2 = map.distance(PSubtaskRoutes[i].getAgent().getMapPosition(), gp);
+      if (gd < gd2)
+        gd = gd2;
+    }
+    return(gd);
+  }
+
+  public int subtaskCostEstimation() {
+    int ce = PSubtaskRoutes[0].costEstimation();
+    for (int i = 1; i < PTypesNeeded.size(); i++) {
+      if (ce < PSubtaskRoutes[i].costEstimation())
+        ce = PSubtaskRoutes[i].costEstimation();
+    }
+    return(ce);
+  }
+
+  public DSTaskMember getSubtaskRoutes(int subtaskNumber) {
+    return PSubtaskRoutes[subtaskNumber];
   }
 
   public LinkedList<Integer> getTypesNeeded() {
@@ -313,6 +374,11 @@ public class DSTask {
     body.addCell(new DSCell(-1, 1, 0, 0));
     body.addCell(new DSCell(-2, 1, 0, 0));
     bodies.add(body);
+    // A na zaver jednicka
+    // 43
+    body = new DSBody();
+    body.addCell(new DSCell(0, 1, 0, 0));
+    bodies.add(body);
 
     int i = 1;
     for (DSBody bodyL : bodies) {
@@ -328,6 +394,7 @@ public class DSTask {
     if (PTaskType == null) return (0);
     return (PTaskType.getTaskType());
   }
+
 
   public DSTaskType getTaskType() {
     return (PTaskType);
@@ -349,8 +416,15 @@ public class DSTask {
     return (PTaskType.getTaskArea());
   }
 
+  /*
+  public void suceeded(){
+
+  }
+*/
+
   public DSTask(
-      String name, int deadline, int reward, DSBody body) { // , LinkedList<Integer> typesNeeded){
+      String name, int deadline, int reward, DSBody body, int step) { // , LinkedList<Integer> typesNeeded){
+    PTaskNickname = name+"_"+step;
     PTaskName = name;
     PDeadline = deadline;
     PReward = reward;
@@ -481,6 +555,9 @@ public class DSTask {
         break;
       case 42:
         PTaskType = new DSTaskType42();
+        break;
+      case 43:
+        PTaskType = new DSTaskType43();
         break;
       default:
         PTaskType = null;

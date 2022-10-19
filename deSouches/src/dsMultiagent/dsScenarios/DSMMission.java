@@ -2,24 +2,31 @@ package dsMultiagent.dsScenarios;
 
 import dsAgents.DSAgent;
 import dsAgents.DeSouches;
-import dsAgents.dsReasoningModule.dsGoals.DSGoal;
-import dsMultiagent.DSGroup;
+import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
+import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
+import dsAgents.dsGUI.DSTaskGUI;
 import dsMultiagent.dsTasks.DSTask;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public abstract class DSScenario {
+public abstract class DSMMission {
 
   public static final int _disabledEvent = 0;
   public static final int _noBlockEvent = 1;
   public static final int _areaSpoted = 2;
+  public static final int _newFighterEvent = 3;
+
+
+  public static final int __mission_goes_well=1;
+  public static final int __mission_timeout=2;
+  public static final int __no_goal_area=3;
+
 
   int PDefaultPriority = 1;
   public static final int _idleLimit = 65;
 
   DeSouches PCommander;
-  int PTaskType;
-  DSGroup PGroup;
+  int PTaskTypeNumber;
   int PScenarioType;
 
   DSTask PTask;
@@ -30,9 +37,20 @@ public abstract class DSScenario {
     return (PAgentsAllocated);
   }
 
+  protected DSTaskGUI PGUI=null;
+
+  public void updateGUI(int step){};
+
+
+
   public String getName() {
     return ("No name scenario");
   }
+
+  public int checkConsistency(){
+    return(__mission_goes_well);
+  }
+
 
   public String getAgentsAllocatedText() {
     String agents = "";
@@ -40,6 +58,15 @@ public abstract class DSScenario {
       agents = agents + ((DSAgent) i.next()).getEntityName() + ",";
     }
     return (agents);
+  }
+
+  public void scenarioFailed(String reason){
+    PGUI.failed(reason);
+  }
+
+
+  public void scenarioSuceeded(){
+    PGUI.suceeded();
   }
 
   public int getPriority() {
@@ -50,13 +77,17 @@ public abstract class DSScenario {
     return (PTask);
   }
 
-  public abstract void goalCompleted(DSAgent agent, DSGoal goal);
+  public abstract void goalCompleted(DSAgent agent, DSGGoal goal);
 
-  public abstract void goalFailed(DSAgent agent, DSGoal goal);
+  public abstract void goalFailed(DSAgent agent, DSGGoal goal);
 
   public abstract boolean checkEvent(DSAgent agent, int eventType);
 
-  public abstract boolean initScenario(int step);
+  public abstract boolean initMission(int step);
+
+  public void calibrateScenario(DSMap map){
+
+  }
 
   public int getDeadline() {
     return (PTask.getDeadline());
@@ -71,10 +102,12 @@ public abstract class DSScenario {
     return (true);
   }
 
-  public DSScenario(DeSouches commander, DSGroup group, DSTask task, int taskType) {
-    PTaskType = taskType;
+  public DSMMission(DeSouches commander, DSTask task) {
+    if(task==null)
+      PTaskTypeNumber=-1;
+    else
+      PTaskTypeNumber = task.getTaskTypeNumber();
     PCommander = commander;
-    PGroup = group;
     PTask = task;
     PAgentsAllocated = new LinkedList<DSAgent>();
     if (task != null) PScenarioType = task.getTaskTypeNumber();

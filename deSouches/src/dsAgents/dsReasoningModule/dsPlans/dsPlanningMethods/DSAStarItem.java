@@ -1,4 +1,4 @@
-package dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods;
+package dsAgents.dsReasoningModule.dsPlans.dsPlanningMethods;
 
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsExecutionModule.dsActions.DSAction;

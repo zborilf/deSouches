@@ -91,7 +91,7 @@ public class AntMapStatistics {
     ArrayList<Integer> known = new ArrayList<>();
     for (DSGroup g : agentStep.keySet()) {
       // filter unique points
-      LinkedList<DSCell> allCells = g.getMap().getMap().getCells();
+      LinkedList<DSCell> allCells = g.getMap().getMapCells().getCells();
 
       // remove duplicate points ?
       HashSet<Point> uniqueSet = new HashSet<>();
@@ -102,7 +102,7 @@ public class AntMapStatistics {
   }
 
   private ArrayList<Point> uniquePointForGroup(DSAgent agent) {
-    LinkedList<DSCell> allCells = agent.getGroup().getMap().getMap().getCells();
+    LinkedList<DSCell> allCells = agent.getGroup().getMap().getMapCells().getCells();
 
     // remove duplicate points
     HashSet<Point> uniqueSet = new HashSet<>();
@@ -123,7 +123,7 @@ public class AntMapStatistics {
 
     // due to multithreading other agents may have deleted some cells
     for (Point c : allPoints) {
-      int revisitTime = agent.getGroup().getMap().getMap().getRevisitAt(c);
+      int revisitTime = agent.getGroup().getMap().getMapCells().getRevisitAt(c);
 
       if (revisitTime != 0) {
         cellsRevisited++;
@@ -145,7 +145,7 @@ public class AntMapStatistics {
   }
 
   public void mapSizeStats(DSAgent agent) {
-    DSCells groupMap = agent.getGroup().getMap().getMap();
+    DSCells groupMap = agent.getGroup().getMap().getMapCells();
     Point tlc = groupMap.getTLC();
     Point brc = groupMap.getBRC();
     int size = (brc.x - tlc.x) * (brc.y - tlc.y);

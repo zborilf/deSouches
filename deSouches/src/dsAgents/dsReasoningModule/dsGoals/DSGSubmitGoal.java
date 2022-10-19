@@ -4,7 +4,7 @@ import dsAgents.DSAgent;
 import dsAgents.dsExecutionModule.dsActions.DSSubmit;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 
-public class DSGSubmitGoal extends DSGoal {
+public class DSGSubmitGoal extends DSGGoal {
 
   private String PTaskName;
 

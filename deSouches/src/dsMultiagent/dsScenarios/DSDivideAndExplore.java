@@ -1,13 +1,13 @@
 package dsMultiagent.dsScenarios;
 
 import dsAgents.DSAgent;
-import dsAgents.dsExecutionModule.dsActions.DSMove;
+import dsAgents.dsBeliefBase.dsBeliefs.DSRoles;
 import dsAgents.dsReasoningModule.dsGoals.*;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-public class DSDivideAndExplore extends DSScenario {
+public class DSDivideAndExplore extends DSMMission {
 
   static final int _RadiusMax = 30;
   static final int _RadiusIncrement = 30;
@@ -45,34 +45,27 @@ public class DSDivideAndExplore extends DSScenario {
   }
 
   @Override
-  public void goalCompleted(DSAgent agent, DSGoal goal) {
+  public void goalCompleted(DSAgent agent, DSGGoal goal) {
     // go on
     System.out.println(agent.getEntityName() + " DAE, Completed");
 
     divideSpace(PAgent.getGroup().getFreeAgents(2), false);
 
-    DSGoal newGoal = new DSGoalExplore(PRadius); // ... area!);
-    agent.hearOrder(newGoal);
+    if(!agent.getActualRole().contentEquals(DSRoles._roleDigger)) {
+      DSGGoal newGoal = new DSGoalExplore(PRadius); // ... area!);
+      agent.hearOrder(newGoal);
+    }
+    else
+      PCommander.scenarioCompleted(this);
   }
 
   @Override
-  public void goalFailed(DSAgent agent, DSGoal goal) {
-    // never mind, go on
-    if (goal.goalStatus() == DSGoal.__DSGMovePathFailed) {
-      DSMove mv = (DSMove) goal.getRecentPlan().getAction();
-      System.out.println(
-          agent.getEntityName()
-              + " DAE, Failed "
-              + DSGoal.getGoalStatusType(goal.goalStatus())
-              + " dir: "
-              + mv.getPlannedDirections());
-    } else {
-      System.out.println(
-          agent.getEntityName() + " DAE, Failed " + DSGoal.getGoalStatusType(goal.goalStatus()));
-    }
+  public void goalFailed(DSAgent agent, DSGGoal goal) {
+
+
     divideSpace(PAgent.getGroup().getFreeAgents(2), false);
 
-    DSGoal newGoal = new DSGoalExplore(PRadius); // ... area!);
+    DSGGoal newGoal = new DSGoalExplore(PRadius); // ... area!);
     agent.hearOrder(newGoal);
   }
 
@@ -82,7 +75,7 @@ public class DSDivideAndExplore extends DSScenario {
   }
 
   @Override
-  public boolean initScenario(int step) {
+  public boolean initMission(int step) {
     //  1, allocates all 'free' agents from the PAgent's group
     //  2, assigns them a part of the environment for exploration
     //  3, sends them orders to explore the areas
@@ -94,7 +87,7 @@ public class DSDivideAndExplore extends DSScenario {
   }
 
   public DSDivideAndExplore(DSAgent agent, int radius) {
-    super(agent.getCommander(), agent.getGroup(), null, 0);
+    super(agent.getCommander(),  null);
     PAreas = new HashMap<DSAgent, Rectangle>();
     PAgent = agent;
     PAgentsAllocated = new LinkedList<DSAgent>();

@@ -3,8 +3,8 @@ package dsAgents.dsExecutionModule.dsActions;
 import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
-import dsAgents.dsReasoningModule.dsGoals.DSGoal;
-import dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods.DSAStarItem;
+import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
+import dsAgents.dsReasoningModule.dsPlans.dsPlanningMethods.DSAStarItem;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,11 +28,7 @@ public abstract class DSAction {
         }
       };
 
-  public static Class getActionClass(String action) {
-    return (_actionMap.get(action));
-  }
-
-  public abstract DSGoal execute(DSAgent agent);
+  public abstract DSGGoal execute(DSAgent agent);
 
   public abstract boolean isExternal();
 

@@ -1,5 +1,7 @@
-package dsAgents;
+package dsAgents.dsGUI;
 
+import dsAgents.DSConfig;
+import dsAgents.DeSouches;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import java.awt.*;
 import java.awt.event.ItemEvent;
@@ -7,7 +9,7 @@ import java.awt.event.ItemListener;
 import java.util.ArrayList;
 import javax.swing.*;
 
-public class dsGUI {
+public class DSAgentGUI {
   private JTextField dsgValuePanel;
   private JPanel dsgMainPanel;
   private JLabel dsgLastActionLabel;
@@ -33,6 +35,9 @@ public class dsGUI {
   private JTextField dsgGoalArea;
   private JTextField dsgScenarioArea;
   private JCheckBox textMapSwitchCheckBox;
+  private JLabel dsgScenarioLabel;
+  private JLabel dsgScoreLabel;
+  private JTextField dsgScoreArea;
   private JTextField dsgXValue;
   private JTextField dsgYValue;
   private JTextArea dsgLogText;
@@ -40,7 +45,7 @@ public class dsGUI {
 
   private DeSouches PCommander;
 
-  public dsGUI() {
+  public DSAgentGUI() {
     dsgAgentsSelect.addItemListener(
         new ItemListener() {
           @Override
@@ -48,40 +53,44 @@ public class dsGUI {
             PCommander.changeGUIFocus(e.getItem().toString());
           }
         });
+
   }
 
   public void setAgentName(String agentName) {
     dsgAgentNameValue.setText(agentName);
   }
 
-  public void setStep(int step) {
+  public synchronized void setStep(int step) {
     dsgStepValue.setText(String.valueOf(step));
   }
 
-  public void setLastAction(String lastAction) {
+  public synchronized void setLastAction(String lastAction) {
     dsgLastActionValue.setText(lastAction);
   }
 
-  public void setLastActionParams(String laParams) {
+  public synchronized void setLastActionParams(String laParams) {
     dsgLAParamsValue.setText(laParams);
   }
 
-  public void setXY(int x, int y) {
+  public synchronized void setXY(int x, int y) {
     dsgXYValue.setText(x + " // " + y);
   }
 
-  public void setLastActionResult(String lastAction) {
+  public synchronized void setLastActionResult(String lastAction) {
     dsgLAResultValue.setText(lastAction);
   }
 
-  public void setEnergy(String energy) {
+  public synchronized void setEnergy(String energy) {
     dsgEnergyValue.setText(energy);
   }
 
-  public void setScenario(String scenario) {
+  public synchronized void setMission(String scenario) {
     dsgScenarioArea.setText(scenario);
   }
 
+  public synchronized void setScore(int score){
+      dsgScoreArea.setText(String.valueOf(score));
+  }
   public void noticeLastGoal(String goal) {
     dsgGoalArea.setText(goal);
   }
@@ -89,10 +98,6 @@ public class dsGUI {
   public void writePlan(DSPlan plan) {
     if (plan == null) dsgPlan.setText(" -- no plan -- ");
     else dsgPlan.setText(plan.plan2text());
-  }
-
-  public void textMapClear() {
-    if (!textMapSwitchCheckBox.isSelected()) dsgTextMap.setText("");
   }
 
   public void writeTextOutlook(String text) {
@@ -107,13 +112,14 @@ public class dsGUI {
     if (!textMapSwitchCheckBox.isSelected()) dsgTextMap.setText(text + "\n");
   }
 
+
   public void setPheromoneTextMap(String text) {
     if (textMapSwitchCheckBox.isSelected()) dsgTextMap.setText(text + "\n");
   }
 
   public synchronized void registerAgent(String agent) {
     // add in sorted order
-    final int BEGIN_NUMBER = 6;
+    final int BEGIN_NUMBER = DSConfig.___ourAgentsNamePrefix.length();
     int thisAgentN = Integer.parseInt(agent.substring(BEGIN_NUMBER));
     int count = dsgAgentsSelect.getItemCount();
 
@@ -142,20 +148,23 @@ public class dsGUI {
     PCommander = commander;
   }
 
-  public static dsGUI createGUI(int number, DeSouches commander) {
+  public static DSAgentGUI createGUI(int number, DeSouches commander) {
     JFrame frame = new JFrame("GUI for agent " + number);
-    frame.setSize(new Dimension(650, 100));
-    dsGUI gui = new dsGUI();
+    DSAgentGUI gui = new DSAgentGUI();
     gui.setCommander(commander);
     frame.setContentPane(gui.dsgMainPanel);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.pack();
+    frame.setSize(new Dimension(2000, 1000));
     frame.setLocation(new Point(number * 40, number * 20));
     frame.setVisible(true);
+    gui.dsgTextMap.setFont(new Font("Monospaced", Font.PLAIN, 8));
+    frame.toFront();
     return (gui);
   }
 
   private void createUIComponents() {
-    // TODO: place custom component creation code here
+
   }
+
 }

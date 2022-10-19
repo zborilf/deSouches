@@ -6,7 +6,7 @@ import dsAgents.dsExecutionModule.dsActions.DSAttach;
 import dsAgents.dsExecutionModule.dsActions.DSSubmit;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 
-public class DSAttachAndSubmit extends DSGoal {
+public class DSAttachAndSubmit extends DSGGoal {
 
   String PTaskName;
   String PDirection;

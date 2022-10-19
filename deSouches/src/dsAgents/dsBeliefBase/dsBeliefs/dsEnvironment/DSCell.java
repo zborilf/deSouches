@@ -1,22 +1,25 @@
 package dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment;
 
 import dsAgents.DSAgent;
+import dsAgents.DSConfig;
+
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DSCell {
+public class  DSCell {
 
   public static int __DSClear = 0;
   public static int __DSObstacle = 1;
-  public static int __DSEntity_Friend = 2; // ptani na agenta zmenit na entitu
-  public static int __DSEntity_Enemy = 3;
+  public static int __DSTaskArea = 2;
+  public static int __DSRoleArea = 3;
   public static int __DSMarker = 4;
   public static int __DSBorder = 5;
   public static int __DSGoalArea = 6;
-  public static int __DSAgent = 7;
-  public static int __DSTaskArea = 8;
-  public static int __DSRoleArea = 9;
+  public static int __DSEntity_Friend = 1001;
+  public static int __DSEntity_Enemy = 1002;
+  public static int __DSAgent = 1003;
+
 
   public static int __DSBlock = 50;
 
@@ -27,12 +30,12 @@ public class DSCell {
   private final int MAX_PHERO = 100;
 
   static Map<String, Integer> _thingMap =
-      new HashMap<String, Integer>() {
+      new HashMap() {
         {
-          put("clear", __DSClear); // toto je asi spatne, clear = marker : clear
+          put("clear", __DSClear);
           put("obstacle", __DSObstacle);
-          put("entityA", __DSEntity_Friend);
-          put("entityB", __DSEntity_Enemy);
+          put(DSConfig.___ourEntityNamePrefix, __DSEntity_Friend);
+          put(DSConfig.___enemyEntityNamePrefix, __DSEntity_Enemy);
           put("markerclear", __DSMarker);
           put("taskboard", __DSTaskArea);
           put("goalZone", __DSGoalArea);
@@ -41,18 +44,33 @@ public class DSCell {
       };
 
   static Map<Integer, String> _thingTypes =
-      new HashMap<Integer, String>() {
+      new HashMap() {
         {
-          put(__DSClear, " ..");
-          put(__DSObstacle, " ##");
-          put(__DSEntity_Friend, " FF");
-          put(__DSEntity_Enemy, " EE");
-          put(__DSMarker, " MM");
+          put(__DSClear, "   ");
+          //put(__DSObstacle, " \u2589\u2589");
+          put(__DSObstacle, " OO");
+          put(__DSEntity_Friend, " '\u2589");
+          put(__DSEntity_Enemy, " XX");
+          //put(__DSEntity_Friend, " \u26C4");
+          //put(__DSEntity_Enemy, " \u26D4");
+          put(__DSMarker, " !!");
           put(__DSTaskArea, " TT");
           put(__DSGoalArea, " ++");
+       //   put(__DSGoalArea, " \u2690\u2690");
           put(__DSRoleArea, " //");
+       //   put(__DSRoleArea, " \u25BA\u25BA");
         }
       };
+
+  public boolean isUnmovable(){
+    if(((PType>=__DSBlock)&&(PType<=__DSBlock+20))||
+            (PType==__DSObstacle)||
+            (PType==__DSEntity_Friend)||
+            (PType==__DSEntity_Enemy))
+      return(true);
+      else
+        return(false);
+  }
 
   protected static int getThingTypeIndex(String thing, String params) {
 
@@ -64,6 +82,8 @@ public class DSCell {
     }
 
     if (_thingMap.containsKey(thing + params)) return (_thingMap.get(thing + params));
+    if(thing.substring(0,6).contentEquals("entity"))
+      return(__DSEntity_Enemy);
     return (-1);
   }
 
@@ -71,11 +91,11 @@ public class DSCell {
     if (_thingTypes.containsKey(type)) return (_thingTypes.get(type));
 
     if ((type >= __DSBlock) && (type < __DSDispenser)) {
-      return (" B" + String.valueOf(type - __DSBlock) + "");
+      return ("\u26BD" + String.valueOf(type - __DSBlock));
     }
 
     if ((type >= __DSDispenser)) {
-      return (" D" + String.valueOf(type - __DSDispenser) + "");
+      return ("\u26E8" + String.valueOf(type - __DSDispenser));
     }
 
     return (" ??");
@@ -129,22 +149,12 @@ public class DSCell {
     PY = y;
   }
 
-  public boolean positionMatch(int x, int y) {
-    if ((x == PX) && (y == PY)) return (true);
-    return (false);
-  }
-
-  public String cellToString() {
-    String st = "Cell at [" + PX + "," + PY + "]" + "/" + PType + "/" + PTimeStamp;
-    return (st);
-  }
 
   private int startPheromoneByType(int type) {
     return MAX_PHERO; // add pheromone to exception for less likelihood of exploration eg. obstacle
   }
 
   public DSCell(int x, int y, int type, int timestamp) {
-    // bude tam pozice rel. k agentovi, objekt, casove razitko
     PX = x;
     PY = y;
     PType = type;
@@ -152,11 +162,7 @@ public class DSCell {
     cellPheromone = startPheromoneByType(PType);
   }
 
-  // 2022, thing is from {obstacle, entity, dispenser, marker, block, taskboard}
-  //              params for block {b1, ...} marker {clear} dispeneser {b1, ...}
-
   public DSCell(int x, int y, String type, String params, int timestamp) {
-    // bude tam pozice rel. k agentovi, objekt, casove razitko
     PX = x;
     PY = y;
     PType = getThingTypeIndex(type, params);
@@ -164,7 +170,6 @@ public class DSCell {
     cellPheromone = startPheromoneByType(PType);
   }
 
-  // bude tam pozice rel. k agentovi, objekt, casove razitko
   public DSCell(int x, int y, String type, String params, int timestamp, DSAgent foundBy) {
 
     PX = x;
@@ -182,23 +187,6 @@ public class DSCell {
     PTimeStamp = timestamp;
     this.foundBy = foundBy;
     cellPheromone = startPheromoneByType(PType);
-  }
-
-  public static boolean isPermanentType(DSCell dsCell) {
-    return isPermanentType(dsCell.getType());
-  }
-
-  public static boolean isPermanentType(int p) {
-    return p == DSCell.__DSRoleArea
-        || p == DSCell.__DSTaskArea
-        || p == DSCell.__DSDispenser
-        || p == DSCell.__DSGoalArea;
-  }
-
-  public void evaporatePheromone(double coefficient) {
-    if (isPermanentType(PType)) return;
-
-    if (coefficient > 0.0 && coefficient < 1.0) cellPheromone *= coefficient;
   }
 
   public void setPheromone(double pheromone) {

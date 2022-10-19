@@ -1,4 +1,4 @@
-package dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods;
+package dsAgents.dsReasoningModule.dsPlans.dsPlanningMethods;
 
 import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
@@ -9,12 +9,12 @@ import java.awt.Point;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
-public final class DSAStar {
+public final class DSPAStar {
 
   private static final String TAG = "DSAStar";
 
-  private static int heuristic(Point from, Point to) {
-    return DSMap.distance(from, to);
+  private int heuristic(Point from, Point to, DSMap map) {
+    return map.distance(from, to);
   }
 
   private static void printList(String agentName, LinkedList<DSAStarItem> lst) {
@@ -130,10 +130,10 @@ public final class DSAStar {
     while (!actions.isEmpty()) {
       DSAction action = actions.pop();
       DSAStarItem newItem =
-          action.simulate(map, item, agentBody, step); // TODO ta nula na konci je provizorka
+          action.simulate(map, item, agentBody, step);
       if (newItem != null) {
         if (!isInClosed(newItem.getPosition(), newItem.getBody(), closed)) {
-          int newHeuristic = heuristic(newItem.getPosition(), to);
+          int newHeuristic = heuristic(newItem.getPosition(), to, map);
           newItem.setHeuristic(newHeuristic);
           newItem.setGCost(item.getGCost() + 1);
           insertCheapest(open, newItem);
@@ -207,14 +207,16 @@ public final class DSAStar {
       DSBody finalBody,
       int steps,
       DSAgent agent,
-      DSBody agentBody) {
+      DSBody agentBody,
+      boolean finalPlan) {
+
     DSAStarItem goal;
     Point from = open.getFirst().getPosition();
     String AN = agent.getEntityName();
     goal = aStarIterate(map, open, close, to, finalBody, steps, agent, agentBody);
 
     if (goal != null) {
-      DSPlan path = new DSPlan(planName, priority);
+      DSPlan path = new DSPlan(planName, priority,finalPlan);
       //         printStructures(agent.getEntityName(),open,close,0);
       return (extractPath(path, goal, agent));
     } else {
@@ -234,7 +236,9 @@ public final class DSAStar {
       Point to,
       DSBody finalBody,
       int steps,
-      DSAgent agent) {
+      DSAgent agent,
+      boolean finalPlan) {
+
     // od; do; limit pocet kroku; struktura, kterou agent tahne (on+veci)
     LinkedList<DSAStarItem> open = new LinkedList<DSAStarItem>();
     LinkedList<DSAStarItem> close = new LinkedList<DSAStarItem>();
@@ -245,10 +249,10 @@ public final class DSAStar {
     //   HorseRider.inform(TAG, "computePath: agent "+agent.getEntityName()+" body shifted
     // "+agentBodyShifted.bodyToString()+" disp "+agent.getGroup().getDisplacement(agent));;
 
-    open.add(new DSAStarItem(from, null, null, agent.getBody(), 0, heuristic(from, to)));
+    open.add(new DSAStarItem(from, null, null, agent.getBody(), 0, heuristic(from, to, map)));
     //   HorseRider.inform(TAG, "computePath: "+agent.getEntityName()+" final body
     // "+finalBody.bodyToString());
     return (aStar(
-        planName, priority, map, open, close, to, finalBody, steps, agent, agentBodyShifted));
+        planName, priority, map, open, close, to, finalBody, steps, agent, agentBodyShifted, finalPlan));
   }
 }

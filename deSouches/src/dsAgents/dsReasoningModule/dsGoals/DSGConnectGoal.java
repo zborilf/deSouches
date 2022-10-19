@@ -4,7 +4,7 @@ import dsAgents.DSAgent;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import dsMultiagent.dsTasks.DSTaskType;
 
-public class DSGConnectGoal extends DSGoal {
+public class DSGConnectGoal extends DSGGoal {
 
   private DSPlan PPlan;
   private DSTaskType PTaskType;
@@ -20,6 +20,7 @@ public class DSGConnectGoal extends DSGoal {
   public boolean revisePlans(DSAgent agent) {
     if (PPlans.containsKey("customGoal")) return false;
     DSPlan plan = PTaskType.dancePlan(agent, PTaskName);
+   // plan.setTerminating(false);
     if (plan != null) {
       PPlans.put("customGoal", plan);
       return (true);

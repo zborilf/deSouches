@@ -3,7 +3,8 @@ package dsAgents.dsReasoningModule.dsPlans;
 import deSouches.utils.HorseRider;
 import dsAgents.DSAgent;
 import dsAgents.dsExecutionModule.dsActions.DSAction;
-import dsAgents.dsReasoningModule.dsGoals.DSGoal;
+import dsAgents.dsExecutionModule.dsActions.DSMove;
+import dsAgents.dsReasoningModule.dsGoals.DSGGoal;
 import java.util.LinkedList;
 
 /*
@@ -17,10 +18,11 @@ public class DSPlan {
   LinkedList<DSAction> PLinearPlan;
   int PPriority; // priorita planu
   DSAction PLastExternal = null;
-  DSGoal PSubGoal = null;
+  DSGGoal PSubGoal = null;
   String PPlanName;
   boolean PWaitingForFeedback = false;
   boolean PPlanSuceeded = false;
+  boolean PFinalPlan=true;
 
   public String plan2text() {
     if (PLinearPlan == null) return ("--- no plan ---");
@@ -44,8 +46,14 @@ public class DSPlan {
     return (PPlanName);
   }
 
+  public boolean isEmpty(){
+    return(PLinearPlan.isEmpty());
+  }
+
+  public boolean isFinal()  { return(PFinalPlan); }
+
   public boolean planSuceeded() {
-    return (PPlanSuceeded);
+    return (PPlanSuceeded&PFinalPlan);
   }
 
   public DSAction getAction() {
@@ -60,7 +68,15 @@ public class DSPlan {
     return (PSubGoal != null);
   }
 
-  public DSGoal getSubGoal() {
+  public void setSubGoal(DSGGoal subgoal){
+    PSubGoal=subgoal;
+  }
+
+  public void subgoalAchieved(){
+    PSubGoal=null;
+  }
+
+  public DSGGoal getSubGoal() {
     return (PSubGoal);
   }
 
@@ -72,6 +88,10 @@ public class DSPlan {
   public boolean insertAction(DSAction action) {
     PLinearPlan.add(0, action);
     return (true);
+  }
+
+  public void setTerminating(boolean finalPlan){
+    PFinalPlan=finalPlan;
   }
 
   public int getLength() {
@@ -87,19 +107,23 @@ public class DSPlan {
     return (action);
   }
 
-  public void effectAndDeleteAction(DSAgent agent) {
+  public void effectAndDeleteAction(DSAgent agent, boolean partial) {
     if (!PLinearPlan.isEmpty()) {
+
       DSAction action = popAction();
+      if(partial){
+        ((DSMove)action).setPartial();
+      }
       action.succeededEffect(agent);
     }
     if (PLinearPlan.isEmpty()) PPlanSuceeded = true;
   }
 
   public boolean externalActionSucceeded(
-      DSAgent agent) { // muze se rozsirit o popis akce a parametry, pro kontrolu
+      DSAgent agent, boolean partial) { // muze se rozsirit o popis akce a parametry, pro kontrolu
 
     if (PWaitingForFeedback) {
-      effectAndDeleteAction(agent);
+      effectAndDeleteAction(agent, partial);
       PWaitingForFeedback = false;
       return (true);
     } else return (false);
@@ -123,7 +147,7 @@ public class DSPlan {
       }
 
       DSAction action = PLinearPlan.getFirst();
-      DSGoal subgoal = action.execute(agent);
+      DSGGoal subgoal = action.execute(agent);
 
       // subgoal ...  co udelat, aby tato akce mohla byt odstranena
       //          ... true, vse ok, muze byt odstranena
@@ -146,11 +170,21 @@ public class DSPlan {
         return (true);
       }
     }
-    effectAndDeleteAction(agent);
+    effectAndDeleteAction(agent,false);
     return (true);
   }
 
+
   public DSPlan(String planName, int priority) {
+    PFinalPlan = true;
+    PPlanName = planName;
+    PPriority = priority;
+    PLinearPlan = new LinkedList<DSAction>();
+    PSubGoal = null;
+  }
+
+  public DSPlan(String planName, int priority, boolean finalPlan) {
+    PFinalPlan = finalPlan;
     PPlanName = planName;
     PPriority = priority;
     PLinearPlan = new LinkedList<DSAction>();

@@ -1,4 +1,4 @@
-package dsAgents.dsReasoningModule.dsPlans.dsReasoningMethods;
+package dsAgents.dsReasoningModule.dsPlans.dsPlanningMethods;
 
 import dsAgents.DSAgent;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSBody;
@@ -8,6 +8,9 @@ import dsAgents.dsExecutionModule.dsActions.DSMove;
 import dsAgents.dsPerceptionModule.DSPerceptor;
 import dsAgents.dsReasoningModule.dsPlans.DSPlan;
 import java.awt.*;
+
+
+// obsolete, one step greedy search does this
 
 public final class DSStraightPath {
   // path through obstacles -> only digger and default
@@ -54,8 +57,8 @@ public final class DSStraightPath {
 
   private boolean AgentObstacle(DSAgent agent, int x, int y) {
     Point p = new Point(x, y);
-    return (agent.getMap().getMap().getKeyType(p, DSCell.__DSAgent) != null
-        || agent.getMap().getMap().getKeyType(p, DSCell.__DSEntity_Enemy) != null
-        || agent.getMap().getMap().getKeyType(p, DSCell.__DSEntity_Friend) != null);
+    return (agent.getMap().getMapCells().getKeyType(p, DSCell.__DSAgent) != null
+        || agent.getMap().getMapCells().getKeyType(p, DSCell.__DSEntity_Enemy) != null
+        || agent.getMap().getMapCells().getKeyType(p, DSCell.__DSEntity_Friend) != null);
   }
 }
