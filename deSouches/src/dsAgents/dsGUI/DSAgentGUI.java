@@ -158,6 +158,7 @@ public class DSAgentGUI {
     frame.setSize(new Dimension(2000, 1000));
     frame.setLocation(new Point(number * 40, number * 20));
     frame.setVisible(true);
+    gui.dsgTextMap.setFont(new Font("Monospaced", Font.PLAIN, 8));
     frame.toFront();
     return (gui);
   }

@@ -363,6 +363,8 @@ public class DeSouches extends Agent {
     printOutput("Goal positions allocated: " +getTasksGoalAreasSt());
     printOutput("Score: "+PScore);
 
+    System.out.println("Step: "+PLastStep);
+
   }
 
   public synchronized void cloneTask(DSTask task, int step) {
@@ -487,11 +489,13 @@ public class DeSouches extends Agent {
       PLastStep = step;
     //  PGGUI.addText("Step:" + PLastStep);
 
-      if(PSynchronizer.getMasterGroup()==null)
+      if(PSynchronizer.getMasterGroup()==null) {
+        System.out.println("Neni mastergrupa");
         if (PSynchronizer.masterGroupCandidate(agent.getGroup())) {
           printOutput("> ! > " + agent.getStep() + " MASTERGRUPA " + agent.getEntityName() + "!!!\n");
-          System.out.println("++++ MASTERGRUPA!! "+PLastStep);
+          System.out.println("++++ MASTERGRUPA!! " + PLastStep+" "+agent.getEntityName());
         }
+      }
 
       if(PSynchronizer.getMasterGroup()!=null)
         if(PSynchronizer.estimateSize()){

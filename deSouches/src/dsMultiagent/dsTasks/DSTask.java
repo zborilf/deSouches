@@ -60,7 +60,7 @@ public class DSTask {
 
   public int goalDistanceMax() {
     Point gp = PSubtaskRoutes[0].getGoalPosition();
-    DSMap map = PSubtaskRoutes[0].getAgent().getMap();
+    DSMap map = PSubtaskRoutes[0].getAgent().getGroup().getMap();
     int gd = map.distance(PSubtaskRoutes[0].getAgent().getMapPosition(), gp);
     int gd2 = 0;
     for (int i = 1; i < PTypesNeeded.size(); i++) {

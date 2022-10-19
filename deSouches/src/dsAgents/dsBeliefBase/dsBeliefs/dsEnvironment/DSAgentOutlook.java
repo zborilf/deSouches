@@ -107,27 +107,24 @@ public class DSAgentOutlook {
         return(false);
   }
 
-
+  /*
   public LinkedList<String> getAllDirectionsAttached2022() {
     LinkedList<String> directions = new LinkedList<String>();
     if (seesBlockBy(new Point(-1, 0),0,10))
-     // if(PAgent.isAttacchedAt(PAgent.getMap().shiftPosition(PAgent,new Point(-1, 0))))
       if(PAgent.isAttacchedAt(new Point(-1, 0)))
         directions.add("w");
     if (seesBlockBy(new Point(1, 0),0,10))
-     // if(PAgent.isAttacchedAt(PAgent.getMap().shiftPosition(PAgent,new Point(1, 0))))
       if(PAgent.isAttacchedAt(new Point(1, 0)))
         directions.add("e");
     if (seesBlockBy(new Point(0, -1),0,10))
-     // if(PAgent.isAttacchedAt(PAgent.getMap().shiftPosition(PAgent,new Point(0, -1))))
       if(PAgent.isAttacchedAt(new Point(0, -1)))
         directions.add("n");
     if (seesBlockBy(new Point(0, 1),0,10))
-     // if(PAgent.isAttacchedAt(PAgent.getMap().shiftPosition(PAgent,new Point(0, 1))))
       if(PAgent.isAttacchedAt(new Point(0, 1)))
         directions.add("s");
     return (directions);
   }
+   */
 
   public synchronized String stringOutlook(int vision, String agentname) {
 
@@ -137,7 +134,7 @@ public class DSAgentOutlook {
       for (int i = -vision; i <= vision; i++) {
         if (Math.abs(i) + Math.abs(j) > vision) so = so + "   ";
         else {
-          if ((j == 0) && (i == 0)) so = so + " AA";
+          if ((j == 0) && (i == 0)) so = so + " '\u2589";
           else {
             if (POutlookCells.containsKey(new Point(i, j))) {
               DSCell cell = POutlookCells.getOneAt(new Point(i, j));

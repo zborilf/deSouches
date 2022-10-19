@@ -44,7 +44,7 @@ public abstract class DSSBlockMission extends DSMMission {
       sd = sd - getTask().goalDistanceMax(); // minimal estimated time of completion
     }
 
-    if (sd < PMaster.getStep()) {
+    if ((sd < PMaster.getStep())&&(!PMaster.getLastGoal().contentEquals("submitGoal"))) {
       PCommander.printOutput("@@! Scenario failed due to timeout " + getTask().getName());
       return (__mission_timeout);
     }

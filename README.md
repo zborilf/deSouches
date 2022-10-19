@@ -1,9 +1,9 @@
 # deSouches
-Systém pro MAPC 2019 - 2022
+System for MAPC 2019 - 2022
 
 
 
-## Instalace
+## Instalation
 
 ### Spusteni serveru
 Nejprve je nutné sestavit pomocí `mvn package`.
@@ -52,28 +52,3 @@ pokud scenar uspeje, .... reaguje  ,
 - goalCompleted
 
 
-### Prace
-
-- [ ] Upravit BB tak, aby odpovidala soucasnym pravidlum, tedy vymezit, s jakymi vsemi fakty bude agent pracovat
-- [ ] Rozsirit strukturu agenta o role a normy, ktere jsou nove. Tedy naplnit prislusne tridy pro nastavovani / editaci, zvazit, jake metody apod
-- [ ] Zapracovat na scenarich, ruzne mnoziny strategii a scenaru pro ruzne aktivni normy, zpracovat prechody mezi normami / nastaveni pravidel, 'panic' prechodne obdobi + Brainstorm pro scenare
-- [ ] Reset connection -> restart systemu, kde muzou agenti nest jiz nejake bloky apod.
-- [ ] Vycisti goal area
-- [ ] Skupinovy ... vyres deadlock s ...
-
-
-- [ ] Seber, toulej se a cekej na prilezitost  (vrstvena reaktivni)
-
-- [ ] Tymovy ... de Souches skladani bloku
-
-- [ ] jinak pro strycka prihodu najit automaticke rozdeleni roli, kolik jich pravdepodobne kdy je potreba
-
-#### AntiMLFC strategie:
-
-- [ ] Zanerad goal area
-
-- [ ] Zautoc na nepritele co stoji a drzi !! (ofenzivni)
-  role pozorovatel (i skupinky)
-  Hlida, zdali stojici a cekajici agent / rikejme mu aukl. Pokud se nehybe, je treba k nemu poslat utocnika, at jej propleskava
-  Muze jich hlidat vic, v cyklu kontrolovat, ze jsou na svych mistech
-  role utocnik

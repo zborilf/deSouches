@@ -1,6 +1,7 @@
 package dsMultiagent;
 
 import dsAgents.DSAgent;
+import dsAgents.DSConfig;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSCell;
 import dsAgents.dsBeliefBase.dsBeliefs.dsEnvironment.DSMap;
 import java.awt.*;
@@ -72,7 +73,10 @@ public class DSSynchronize {
   }
 
   public int getBiggest(HashMap<Integer, Integer> estimations,int mincount){
+
+
     int size=0;
+
     mincount--;
     for(int es:estimations.keySet())
       if(estimations.get(es)>mincount){
@@ -92,14 +96,19 @@ public class DSSynchronize {
     estimationsW=estimateSize(d1,estimationsW,true);
     estimationsH=estimateSize(d1,estimationsH,false);
 
+    if((DSConfig.__mapHeiht!=0)&&(DSConfig.__mapWidth!=0)) {
+      if ((PMasterGroup.getMap().setWidth(DSConfig.__mapWidth) ||
+              (PMasterGroup.getMap().setHeight(DSConfig.__mapHeiht))))
+        return (true);
+      else
+        return (false);
+    }
 
     if((PMasterGroup.getMap().setWidth(getBiggest(estimationsW,3)))||
             (PMasterGroup.getMap().setHeight(getBiggest(estimationsH,3))))
             return(true);
                     else
                       return(false);
-
-
 
   }
 

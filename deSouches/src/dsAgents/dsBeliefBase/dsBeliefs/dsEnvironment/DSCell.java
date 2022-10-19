@@ -48,9 +48,9 @@ public class  DSCell {
         {
           put(__DSClear, "   ");
           //put(__DSObstacle, " \u2589\u2589");
-          put(__DSObstacle, " %%");
-          put(__DSEntity_Friend, " F ");
-          put(__DSEntity_Enemy, " X ");
+          put(__DSObstacle, " OO");
+          put(__DSEntity_Friend, " '\u2589");
+          put(__DSEntity_Enemy, " XX");
           //put(__DSEntity_Friend, " \u26C4");
           //put(__DSEntity_Enemy, " \u26D4");
           put(__DSMarker, " !!");
