@@ -491,8 +491,6 @@ public class DSAgent extends Agent {
               C8
        */
 
-      // v případě, že agent nic nenese, ověřit, jetli je to v pořádku
-      // pro jistotu, nevím, na základě čeho by agent mohl seznat, že mu byl odsteřal blok, ověřit
 
       if (!perceptor.seesBlocksInBody(agent.getOutlook()))
         if (PBeliefBase.getMission() != null)
@@ -519,7 +517,6 @@ public class DSAgent extends Agent {
       }
 
       // agent disabled? Inform and don§t execute
-      // tady to nema co delat, melo by se osetrovat pri zpracovani perceptu
 
       if (perceptor.disabled(newPercepts)) {
         PBeliefBase.getCommander().agentDisabled((DSAgent) this.getAgent());
@@ -613,14 +610,13 @@ public class DSAgent extends Agent {
     try {
       PEI.associateEntity(PName, PEntity);
     } catch (RelationException ere) {
-      HorseRider.yell(TAG, "setup: " + " ####### asociace se nezdarila", ere);
     }
     PIdleSteps = 0;
     PLastPosition = new Point(0, 0);
   }
 
   protected void takeDown() {
-    HorseRider.warn(TAG, "takeDown: " + "Agent " + getAID().getName() + " umiiiraaaa.");
+    HorseRider.warn(TAG, "takeDown: " + "Agent " + getAID().getName() + " is dying.");
   }
 
   public DSAgent(
